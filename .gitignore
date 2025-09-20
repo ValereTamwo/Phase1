@@ -1,8 +1,7 @@
 venv
 venv/
 TLA+
-data/
-data/*
+
 .vscode/
 .idea/
 *.log
