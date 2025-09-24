@@ -19,10 +19,7 @@ from collections import defaultdict
 from typing import Any, Dict, List, TypedDict, Union
 IN_VIEWPORT_RATIO_THRESHOLD = 0.6
 
-# ==============================================================================
-#  TOUT VOTRE CODE get_viewport_html ET SES SOUS-FONCTIONS RESTE INCHANGÉ
-#  ... (collez ici les fonctions get_viewport_html, get_browser_info, etc.)
-# ==============================================================================
+
 
 def get_viewport_html(page: Page, client: CDPSession, viewport_size: ViewportSize) -> str:
     """
@@ -228,9 +225,6 @@ def url_to_dirname(url: str) -> str:
     return name[:100]
 
 
-# ==============================================================================
-#  Fonction Principale de Génération de Données (MODIFIÉE)
-# ==============================================================================
 
 def generate_data_for_url(page: Page, url: str, output_dir: str, client: CDPSession, viewport: ViewportSize) -> bool:
     """
