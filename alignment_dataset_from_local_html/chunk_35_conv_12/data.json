@@ -1,0 +1,203 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_12.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,5702\"><DIV data-bbox=\"0,0,88,721\"><IMG id=\"0\" title=\"Magento Admin Panel\" data-bbox=\"27,17,35,41\" src=\"https://www.vectorlogo.zone/logos/magento/magento-icon.svg\"></IMG><UL data-bbox=\"0,75,88,646\"><SPAN id=\"1\" data-bbox=\"14,112,60,13\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Dashboard</text></SPAN><LI data-bbox=\"0,137,88,62\"><SPAN id=\"2\" data-bbox=\"30,174,28,13\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Sales</text></SPAN></LI><LI data-bbox=\"-165,92,238,308\"><UL data-bbox=\"-165,92,238,308\"><LI class=\"possible-clickable-element\" data-testid=\"C\"><text>Orders</text></LI><LI class=\"possible-clickable-element\" data-testid=\"D\"><text>Invoices</text></LI><LI class=\"possible-clickable-element\" data-testid=\"E\"><text>Shipments</text></LI><SPAN data-bbox=\"-150,369,174,19\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Braintree Virtual Terminal</text></SPAN></UL></LI></UL></DIV><LI data-bbox=\"0,199,88,62\"><SPAN id=\"3\" data-bbox=\"22,236,44,13\"><text>Catalog</text></SPAN><DIV data-bbox=\"-180,0,268,812\"><STRONG data-bbox=\"-150,20,180,30\"><text>Catalog</text></STRONG></DIV></LI><LI data-bbox=\"-165,92,238,88\"><UL data-bbox=\"-165,92,238,88\"><text>Products</text><text>Categories</text></UL></LI><LI data-bbox=\"0,261,88,62\"><SPAN id=\"4\" data-bbox=\"14,298,60,13\"><text>Customers</text></SPAN><DIV data-bbox=\"-180,0,268,812\"><STRONG data-bbox=\"-150,20,180,30\"><text>Customers</text></STRONG><UL data-bbox=\"-180,92,268,720\"><text>All Customers</text><text>Now Online</text><SPAN data-bbox=\"-150,192,151,19\"><text>Login as Customer Log</text></SPAN></UL></DIV></LI><LI data-bbox=\"0,323,88,62\"><SPAN id=\"5\" data-bbox=\"14,360,60,13\"><text>Marketing</text></SPAN><DIV data-bbox=\"-448,0,536,812\"><STRONG data-bbox=\"-418,20,448,30\"><text>Marketing</text></STRONG><UL data-bbox=\"-448,92,536,720\"><UL data-bbox=\"-180,92,268,417\"><LI data-bbox=\"-165,92,238,230\"><UL data-bbox=\"-165,146,238,176\"><text>Promotions</text></UL></LI><LI data-bbox=\"-165,367,238,142\"><UL data-bbox=\"-165,421,238,88\"><text>Communications</text></UL></LI></UL></UL></DIV></LI><LI data-bbox=\"0,385,88,62\"><SPAN id=\"6\" data-bbox=\"19,422,50,13\"><text>Content</text></SPAN><DIV data-bbox=\"-180,0,268,812\"><STRONG data-bbox=\"-150,20,180,30\"><text>Content</text></STRONG><UL data-bbox=\"-180,92,268,720\"><LI data-bbox=\"-165,92,238,230\"><UL data-bbox=\"-165,146,238,176\"><text>Elements</text></UL></LI><LI data-bbox=\"-165,367,238,98\"></LI><text>Design</text><LI data-bbox=\"-165,510,238,185\"><UL data-bbox=\"-165,563,238,132\"><text>Statistics</text></UL></LI></UL></DIV></LI><LI data-bbox=\"0,447,88,62\"><SPAN id=\"7\" data-bbox=\"22,484,44,13\"><text>Reports</text></SPAN><DIV data-bbox=\"-984,0,1072,812\"><STRONG data-bbox=\"-954,20,984,30\"><text>Reports</text></STRONG><UL data-bbox=\"-984,92,1072,720\"><LI data-bbox=\"-165,92,238,142\"><SPAN data-bbox=\"-150,103,159,22\"><text>Business Intelligence</text></SPAN><UL data-bbox=\"-165,146,238,88\"><text>Advanced Reporting</text></UL></LI></UL></DIV></LI><LI data-bbox=\"0,509,88,62\"><SPAN id=\"8\" data-bbox=\"25,546,38,13\"><text>Stores</text></SPAN><DIV data-bbox=\"-448,0,536,812\"><STRONG data-bbox=\"-418,20,448,30\"><text>Stores</text></STRONG><UL data-bbox=\"-448,92,536,720\"><UL data-bbox=\"-180,92,268,373\"><LI data-bbox=\"-165,92,238,142\"><UL data-bbox=\"-165,146,238,88\"><text>Settings</text></UL></LI><LI data-bbox=\"-165,279,238,186\"><UL data-bbox=\"-165,332,238,133\"><text>Taxes</text></UL></LI></UL></UL></DIV></LI><LI data-bbox=\"0,571,88,62\"><SPAN id=\"9\" data-bbox=\"25,608,38,13\"><text>System</text></SPAN><DIV data-bbox=\"-448,0,536,812\"><STRONG data-bbox=\"-418,20,448,30\"><text>System</text></STRONG><UL data-bbox=\"-448,92,536,720\"><UL data-bbox=\"-180,92,268,559\"><LI data-bbox=\"-165,92,238,186\"><UL data-bbox=\"-165,146,238,132\"><text>Data Transfer</text></UL></LI><LI data-bbox=\"-165,323,238,98\"></LI><text>Extensions</text><LI data-bbox=\"-165,466,238,185\"><UL data-bbox=\"-165,519,238,132\"><SPAN data-bbox=\"-150,620,158,19\"><text>Manage Encryption Key</text></SPAN></UL></LI></UL></UL></DIV></LI><SPAN id=\"10\" data-bbox=\"32,670,24,13\"><text>Find Partners & Extensions</text></SPAN><H1 data-bbox=\"118,82,740,34\"><text>Orders</text></H1><DIV data-bbox=\"118,250,396,33\"><INPUT id=\"20\" type=\"text\" placeholder=\"Search by keyword\" data-bbox=\"118,250,396,33\" class=\"possible-clickable-element\" data-testid=\"G\" style=\"\"></INPUT><BUTTON id=\"21\" type=\"button\" data-bbox=\"452,251,62,31\"><I class=\"fas fa-search possible-clickable-element\" data-testid=\"H\"></I></BUTTON></DIV><SPAN data-bbox=\"118,303,76,18\"><text>Active filters:</text></SPAN><DIV data-bbox=\"118,616,164,33\"><BUTTON title=\"Select Items\" data-bbox=\"118,616,164,33\"><SPAN id=\"49\" data-bbox=\"133,623,49,19\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Actions</text></SPAN></BUTTON></DIV><DIV data-bbox=\"130,692,31,16\"><INPUT type=\"checkbox\" data-value=\"on\" data-bbox=\"145,693,13,13\" data-status=\"not-checked\" class=\"possible-clickable-element\" data-testid=\"J\" style=\"\"></INPUT><BUTTON id=\"56\" data-bbox=\"145,693,16,16\"><SPAN data-bbox=\"152,700,1,1\" class=\"possible-clickable-element\" data-testid=\"K\"><text>▼</text></SPAN></BUTTON></DIV><SPAN id=\"57\" data-bbox=\"182,691,63,18\"><text>ID</text></SPAN><SPAN data-bbox=\"266,691,125,18\"><text>Purchase Point</text></SPAN><INPUT type=\"checkbox\" class=\"possible-clickable-element\" data-testid=\"L\" style=\"\"></INPUT><text>100000308</text><text>Main Website</text><INPUT type=\"checkbox\" class=\"possible-clickable-element\" data-testid=\"M\" style=\"\"></INPUT><text>100000307</text><text>Main Website</text><INPUT type=\"checkbox\" class=\"possible-clickable-element\" data-testid=\"N\" style=\"\"></INPUT><text>100000306</text><text>Default Store</text></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    div|\n    <img| Magento Admin Panel >\n    <\n      ul|\n      <span[A]| Dashboard >\n      <span[B]| Sales >\n      <\n        ul|\n        <li[C]| Orders >\n        <li[D]| Invoices >\n        <li[E]| Shipments >\n        <span[F]| Braintree Virtual Terminal >\n      >\n    >\n  >\n  <\n    li|\n    <span| Catalog >\n    <strong| Catalog >\n  >\n  <ul| Products Categories >\n  <\n    li|\n    <span| Customers >\n    <\n      div|\n      <strong| Customers >\n      <\n        ul|\n        <text| All Customers >\n        <text| Now Online >\n        <span| Login as Customer Log >\n      >\n    >\n  >\n  <\n    li|\n    <span| Marketing >\n    <\n      div|\n      <strong| Marketing >\n      <\n        ul|\n        <ul| Promotions >\n        <ul| Communications >\n      >\n    >\n  >\n  <\n    li|\n    <span| Content >\n    <\n      div|\n      <strong| Content >\n      <\n        ul|\n        <ul| Elements >\n        <text| Design >\n        <ul| Statistics >\n      >\n    >\n  >\n  <\n    li|\n    <span| Reports >\n    <\n      div|\n      <strong| Reports >\n      <\n        li|\n        <span| Business Intelligence >\n        <ul| Advanced Reporting >\n      >\n    >\n  >\n  <\n    li|\n    <span| Stores >\n    <\n      div|\n      <strong| Stores >\n      <\n        ul|\n        <ul| Settings >\n        <ul| Taxes >\n      >\n    >\n  >\n  <\n    li|\n    <span| System >\n    <\n      div|\n      <strong| System >\n      <\n        ul|\n        <ul| Data Transfer >\n        <text| Extensions >\n        <span| Manage Encryption Key >\n      >\n    >\n  >\n  <span| Find Partners & Extensions >\n  <h1| Orders >\n  <input[G]| Search by keyword >\n  <i[H]| >\n  <span| Active filters: >\n  <\n    button| Select Items\n    <span[I]| Actions >\n  >\n  <input[J]| >\n  <span[K]| ▼ >\n  <span| ID >\n  <span| Purchase Point >\n  <input[L]| >\n  <text| 100000308 >\n  <text| Main Website >\n  <input[M]| >\n  <text| 100000307 >\n  <text| Main Website >\n  <input[N]| >\n  <text| 100000306 >\n  <text| Default Store >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 0,
+                "top": 74,
+                "right": 88,
+                "bottom": 136,
+                "width": 88,
+                "height": 62
+            },
+            "tag": "span",
+            "text": "Dashboard"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 30,
+                "top": 160,
+                "right": 58,
+                "bottom": 174,
+                "width": 28,
+                "height": 14
+            },
+            "tag": "span",
+            "text": "Sales"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 5,
+                "top": 187,
+                "right": 83,
+                "bottom": 201,
+                "width": 78,
+                "height": 14
+            },
+            "tag": "li",
+            "text": "Orders"
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 5,
+                "top": 201,
+                "right": 83,
+                "bottom": 215,
+                "width": 78,
+                "height": 14
+            },
+            "tag": "li",
+            "text": "Invoices"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 5,
+                "top": 215,
+                "right": 83,
+                "bottom": 229,
+                "width": 78,
+                "height": 14
+            },
+            "tag": "li",
+            "text": "Shipments"
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 20.5,
+                "top": 229,
+                "right": 67.5,
+                "bottom": 243,
+                "width": 47,
+                "height": 14
+            },
+            "tag": "span",
+            "text": "Braintree Virtual Terminal"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 995,
+                "top": 224.375,
+                "right": 1280,
+                "bottom": 262.5625,
+                "width": 285,
+                "height": 38.1875
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 1012,
+                "top": 275.15625,
+                "right": 1025,
+                "bottom": 288.484375,
+                "width": 13,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 1012,
+                "top": 375.84375,
+                "right": 1060,
+                "bottom": 391.84375,
+                "width": 48,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Actions"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1011,
+                "top": 445.4375,
+                "right": 1027,
+                "bottom": 461.4375,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 1049,
+                "top": 445.4375,
+                "right": 1062.203125,
+                "bottom": 461.4375,
+                "width": 13.203125,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "▼"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 1011,
+                "top": 514.4375,
+                "right": 1079.203125,
+                "bottom": 527.4375,
+                "width": 68.203125,
+                "height": 13
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 1011,
+                "top": 581.4375,
+                "right": 1079.203125,
+                "bottom": 594.4375,
+                "width": 68.203125,
+                "height": 13
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 1011,
+                "top": 648.4375,
+                "right": 1079.203125,
+                "bottom": 661.4375,
+                "width": 68.203125,
+                "height": 13
+            },
+            "tag": "input",
+            "text": ""
+        }
+    ]
+}

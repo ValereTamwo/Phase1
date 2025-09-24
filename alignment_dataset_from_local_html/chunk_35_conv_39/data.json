@@ -1,0 +1,217 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_39.html",
+    "raw_html": "<HTML lang=\"en\" data-bbox=\"0,0,1280,720\"><BODY data-bbox=\"0,0,1280,720\"><HEADER class=\"main-header\"><DIV data-bbox=\"90,0,1100,52\" class=\"container\"><B id=\"0\" data-text=\"Postmill\" data-bbox=\"120,16,58,19\"><text>Postmill</text></B><DIV data-bbox=\"194,0,148,52\"><UL data-bbox=\"194,0,148,52\"><A id=\"1\" data-text=\"Forums\" data-bbox=\"194,0,86,52\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Forums</text></A><A id=\"2\" data-text=\"Wiki\" data-bbox=\"280,0,62,52\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Wiki</text></A></UL></DIV><FORM data-bbox=\"560,0,236,52\" onsubmit=\"return false;\"><INPUT id=\"4\" type=\"search\" placeholder=\"Search forums...\" data-bbox=\"567,8,222,37\" class=\"possible-clickable-element\" data-testid=\"C\" style=\"\"></INPUT></FORM><UL data-bbox=\"1014,0,162,52\"><A id=\"5\" data-text=\"Log in\" data-bbox=\"1014,0,76,52\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Log in</text></A><A id=\"6\" data-text=\"Sign up\" data-bbox=\"1090,0,86,52\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"E\"><text>Sign up</text></A></UL></DIV></HEADER><DIV data-bbox=\"90,52,1100,103\" class=\"container\"><NAV data-bbox=\"90,80,792,49\"><UL data-bbox=\"104,80,189,35\"><A id=\"7\" data-text=\"Submissions\" data-bbox=\"104,80,100,35\" href=\"#\" class=\"active possible-clickable-element\" data-testid=\"F\"><text>Submissions</text></A><A id=\"8\" data-text=\"Comments\" data-bbox=\"204,80,89,35\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"G\"><text>Comments</text></A></UL><UL data-bbox=\"307,80,177,35\"><LI data-bbox=\"307,80,105,35\"><BUTTON type=\"button\" data-bbox=\"307,80,105,35\"><USE id=\"9\" data-bbox=\"319,92,11,11\"><I class=\"fa-solid fa-star possible-clickable-element\" data-testid=\"H\"></I></USE><SPAN id=\"10\" data-text=\"Featured\" data-bbox=\"335,89,56,16\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Featured</text></SPAN><SPAN id=\"11\" data-bbox=\"394,89,8,16\"><I class=\"fa-solid fa-chevron-down possible-clickable-element\" data-testid=\"J\"></I></SPAN></BUTTON></LI><LI data-bbox=\"412,80,72,35\"><BUTTON type=\"button\" data-bbox=\"412,80,72,35\"><svg id=\"12\" data-bbox=\"423,90,14,14\" class=\"possible-clickable-element\" data-testid=\"K\"></svg><I class=\"fa-solid fa-fire possible-clickable-element\" data-testid=\"L\"></I><SPAN id=\"13\" data-text=\"Hot\" data-bbox=\"440,89,23,16\" class=\"possible-clickable-element\" data-testid=\"M\"><text>Hot</text></SPAN><SPAN id=\"14\" data-bbox=\"466,89,8,16\"><I class=\"fa-solid fa-chevron-down possible-clickable-element\" data-testid=\"N\"></I></SPAN></BUTTON></LI></UL></NAV><SECTION data-bbox=\"910,66,280,89\"><H1 data-text=\"Featured forums\" data-bbox=\"924,80,252,26\"><text>Featured forums</text></H1><SMALL data-text=\"There are no featured forums to display.\" data-bbox=\"924,124,215,14\"><text>There are no featured forums to display.</text></SMALL></SECTION></DIV><SPAN data-text=\"Running\" data-bbox=\"598,690,43,13\"><text>Running</text><A id=\"15\" data-text=\"Postmill\" data-bbox=\"641,690,42,13\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"O\"><text>Postmill</text></A></SPAN></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    div|\n    <b| Postmill >\n    <\n      ul|\n      <a[A]| Forums >\n      <a[B]| Wiki >\n    >\n    <input[C]| Search forums... >\n    <\n      ul|\n      <a[D]| Log in >\n      <a[E]| Sign up >\n    >\n  >\n  <\n    div|\n    <\n      nav|\n      <\n        ul|\n        <a[F]| Submissions >\n        <a[G]| Comments >\n      >\n      <\n        ul|\n        <i[H]| >\n        <span[I]| Featured >\n        <i[J]| >\n        <svg[K]| >\n        <i[L]| >\n        <span[M]| Hot >\n        <i[N]| >\n      >\n    >\n    <\n      section|\n      <h1| Featured forums >\n      <small| There are no featured forums to display. >\n    >\n  >\n  <\n    span|\n    <text| Running >\n    <a[O]| Postmill >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 351.328125,
+                "top": 13,
+                "right": 416.328125,
+                "bottom": 51,
+                "width": 65,
+                "height": 38
+            },
+            "tag": "a",
+            "text": "Forums"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 440.328125,
+                "top": 13,
+                "right": 481.328125,
+                "bottom": 51,
+                "width": 41,
+                "height": 38
+            },
+            "tag": "a",
+            "text": "Wiki"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 660.65625,
+                "top": 22,
+                "right": 845.65625,
+                "bottom": 43,
+                "width": 185,
+                "height": 21
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 1024.984375,
+                "top": 13,
+                "right": 1079.984375,
+                "bottom": 51,
+                "width": 55,
+                "height": 38
+            },
+            "tag": "a",
+            "text": "Log in"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 1103.984375,
+                "top": 13,
+                "right": 1169.984375,
+                "bottom": 51,
+                "width": 66,
+                "height": 38
+            },
+            "tag": "a",
+            "text": "Sign up"
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 110,
+                "top": 105,
+                "right": 209,
+                "bottom": 152,
+                "width": 99,
+                "height": 47
+            },
+            "tag": "a",
+            "text": "Submissions"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 233,
+                "top": 105,
+                "right": 317,
+                "bottom": 152,
+                "width": 84,
+                "height": 47
+            },
+            "tag": "a",
+            "text": "Comments"
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 127,
+                "top": 187,
+                "right": 143,
+                "bottom": 201.40625,
+                "width": 16,
+                "height": 14.40625
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 151,
+                "top": 185,
+                "right": 211,
+                "bottom": 202,
+                "width": 60,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Featured"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 219,
+                "top": 190,
+                "right": 229,
+                "bottom": 200.078125,
+                "width": 10,
+                "height": 10.078125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 275,
+                "top": 185,
+                "right": 575,
+                "bottom": 335,
+                "width": 300,
+                "height": 150
+            },
+            "tag": "svg",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 583,
+                "top": 252.796875,
+                "right": 596,
+                "bottom": 267.203125,
+                "width": 13,
+                "height": 14.40625
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 604,
+                "top": 251.5,
+                "right": 629,
+                "bottom": 268.5,
+                "width": 25,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Hot"
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 637,
+                "top": 256.5,
+                "right": 647,
+                "bottom": 266.578125,
+                "width": 10,
+                "height": 10.078125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 641.5,
+                "top": 480,
+                "right": 695.5,
+                "bottom": 497,
+                "width": 54,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Postmill"
+        }
+    ]
+}

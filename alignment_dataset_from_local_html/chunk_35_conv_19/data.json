@@ -1,0 +1,357 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_19.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,55\"><HEADER data-bbox=\"0,0,1280,55\"><IMG id=\"0\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzNiODJmNiIgd2lkdGg9IjMwcHgiIGhlaWdodD0iMzBweCI+PHBhdGggZD0iTTEyIDJDOC4xMyAyIDUgNS4xMyA1IDljMCA1LjI1IDcgMTMgNyAxM3M3LTcuNzUgNy0xM0MxOSAxMyAxOSAyIDEyIDJ6bTAgMS41YzEuOTMgMCAzLjUgMS41NyAzLjUgMy41UzEzLjkzIDEwLjUgMTIgMTAuNSA4LjUgOC45MyA4LjUgNyA5LjA3IDMuNSAxMiAzLjV6Ii8+PC9zdmc+\" data-bbox=\"10,13,30,30\"></IMG><NAV data-bbox=\"178,0,227,55\"><DIV data-bbox=\"188,10,207,35\"><DIV data-bbox=\"188,10,77,35\"><A id=\"1\" href=\"#\" data-bbox=\"188,10,50,35\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Edit</text></A><BUTTON id=\"2\" type=\"button\" data-bbox=\"237,10,28,35\"><I class=\"fa-solid fa-caret-down possible-clickable-element\" data-testid=\"B\"></I></BUTTON></DIV><A id=\"3\" href=\"#\" data-bbox=\"264,10,68,35\" class=\"possible-clickable-element\" data-testid=\"C\"><text>History</text></A><A id=\"4\" href=\"#\" data-bbox=\"331,10,64,35\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Export</text></A></DIV></NAV><NAV data-bbox=\"708,0,572,55\"><UL data-bbox=\"722,13,405,27\"><A id=\"5\" href=\"#\" data-bbox=\"722,13,77,27\" class=\"possible-clickable-element\" data-testid=\"E\"><text>GPS Traces</text></A><A id=\"6\" href=\"#\" data-bbox=\"803,13,82,27\" class=\"possible-clickable-element\" data-testid=\"F\"><text>User Diaries</text></A><A id=\"7\" href=\"#\" data-bbox=\"889,13,87,27\" class=\"possible-clickable-element\" data-testid=\"G\"><text>Communities</text></A><A id=\"8\" href=\"#\" data-bbox=\"980,13,63,27\" class=\"possible-clickable-element\" data-testid=\"H\"><text>Copyright</text></A><A id=\"9\" href=\"#\" data-bbox=\"1047,13,34,27\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Help</text></A><A id=\"10\" href=\"#\" data-bbox=\"1085,13,42,27\" class=\"possible-clickable-element\" data-testid=\"J\"><text>About</text></A></UL><DIV data-bbox=\"1135,10,135,35\"><A id=\"11\" href=\"#\" data-bbox=\"1135,10,63,35\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Log In</text></A><A id=\"12\" href=\"#\" data-bbox=\"1197,10,73,35\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Sign Up</text></A></DIV></NAV></HEADER><DIV data-bbox=\"0,55,1280,665\"><DIV data-bbox=\"0,55,350,665\"><DIV data-bbox=\"0,55,350,47\"><DIV data-bbox=\"4,63,342,31\"><DIV data-bbox=\"8,63,288,31\"><DIV data-bbox=\"8,63,254,31\"><INPUT id=\"14\" type=\"text\" placeholder=\"Search\" data-value=\"Hotel near Avalon History Center\" data-bbox=\"8,63,254,31\" class=\"possible-clickable-element\" data-testid=\"M\" style=\"\"></INPUT><A id=\"13\" href=\"#\" title=\"Describe the current location using the search engine\" data-bbox=\"194,69,62,15\" class=\"possible-clickable-element\" data-testid=\"N\"><text>Where is this?</text></A></DIV><INPUT id=\"15\" value=\"Go\" type=\"submit\" data-bbox=\"261,63,35,31\" class=\"possible-clickable-element\" data-testid=\"O\" style=\"\"></INPUT></DIV><A href=\"#\" title=\"Find directions between two points\" data-bbox=\"304,63,38,31\"><IMG id=\"16\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4Ij48cGF0aCBkPSJNMjEgMy45MWwtMy43MS45My0uMjYtLjAyQzE2Ljg2IDQuNjcgMTYuMjcgNSAxNS41IDVoLTEyYy0uNTUgMC0xIC40NS0xIDF2MTBjMCAuNTUuNDUgMSAxIDFoNWMuMjggMCAuNTUtLjEyLjczLS4zMWwzLjcxLTQuNTggMi45My43My4wMi4yNmMuMTYuNjEuNjUgMS4wOSAxLjI3IDEuMDloNHYtMy41YzAtLjgyLS42Ny0xLjUtMS41LTEuNUgyM2wtMi0zLjU5VjMuOTF6bS0xNSAyLjA5aDEwLjVMMTQuNSA5SDkuMzdMMTYgNi44N3ptLTQgMTBWMTAuNTJsNC0xLjk5di42NWMwIC44My42NyAxLjUgMS41IDEuNUgxN2wxLjUgMS44OFYxNmgtMy41Yy0uNTUgMC0xIC40NS0xIDF2NGgtOHoiLz48L3N2Zz4=\" data-bbox=\"313,69,20,20\" class=\"possible-clickable-element\" data-testid=\"P\"></IMG></A></DIV></DIV><DIV data-bbox=\"0,102,350,352\"><DIV data-bbox=\"16,118,318,47\"><H2 data-bbox=\"16,118,297,39\"><text>Search Results</text></H2><BUTTON id=\"17\" type=\"button\" data-bbox=\"313,118,21,21\"><I class=\"fa-solid fa-chevron-up fa-lg possible-clickable-element\" data-testid=\"Q\"></I></BUTTON></DIV><H4 data-bbox=\"16,165,318,57\"><text>Results from</text><A id=\"18\" href=\"#\" data-bbox=\"157,164,164,30\" class=\"possible-clickable-element\" data-testid=\"R\"><text>OpenStreetMap Nominatim</text></A></H4><DIV data-bbox=\"0,230,350,192\"><UL data-bbox=\"0,230,350,138\"><LI data-bbox=\"0,230,350,59\"><text>Hotel</text><A id=\"19\" href=\"#\" data-bbox=\"52,240,268,17\" class=\"possible-clickable-element\" data-testid=\"S\"><text>79th Street, Avalon, Cape May County, New Jersey, 08202, United States</text></A></LI><LI data-bbox=\"0,289,350,79\"><text>Hotel</text><A id=\"20\" href=\"#\" data-bbox=\"52,299,272,17\" class=\"possible-clickable-element\" data-testid=\"T\"><text>The Reeds Hotel, 3rd Avenue, Stone Harbor, Cape May County, New Jersey, 08247, United States</text></A></LI></UL><DIV data-bbox=\"0,384,350,38\"><A id=\"21\" href=\"#\" data-bbox=\"118,384,114,38\" class=\"possible-clickable-element\" data-testid=\"U\"><text>More results</text></A></DIV></DIV></DIV></DIV><DIV data-bbox=\"350,55,930,665\"><DIV data-bbox=\"350,55,930,0\"><A id=\"22\" href=\"#\" title=\"Locate Me\" data-bbox=\"1240,65,40,40\"><I class=\"fa-solid fa-location-crosshairs possible-clickable-element\" data-testid=\"V\"></I></A><SPAN id=\"23\" title=\"Zoom In\" data-bbox=\"1250,115,20,20\"><I class=\"fa-solid fa-plus\"></I></SPAN><SPAN id=\"24\" title=\"Zoom Out\" data-bbox=\"1250,155,20,20\"><I class=\"fa-solid fa-minus\"></I></SPAN><SPAN id=\"25\" title=\"Layers\" data-bbox=\"1250,205,20,20\"><I class=\"fa-solid fa-layer-group\"></I></SPAN><SPAN id=\"26\" title=\"Map Key\" data-bbox=\"1250,245,20,20\"><I class=\"fa-solid fa-info-circle\"></I></SPAN><SPAN id=\"27\" title=\"Query Features\" data-bbox=\"1250,285,20,20\"><I class=\"fa-solid fa-hand-pointer\"></I></SPAN><SPAN id=\"28\" title=\"Share\" data-bbox=\"1250,335,20,20\"><I class=\"fa-solid fa-share-nodes\"></I></SPAN><SPAN id=\"29\" title=\"Help\" data-bbox=\"1250,385,20,20\"><I class=\"fa-solid fa-circle-question\"></I></SPAN><DIV data-bbox=\"355,681,86,34\"><DIV data-bbox=\"355,681,86,18\"><text>20 m</text></DIV><DIV data-bbox=\"355,697,66,18\" style=\"border-top: 2px solid #333; margin-top: 2px;\"><text>50 ft</text></DIV></DIV><DIV data-bbox=\"874,703,406,17\"><text>©</text><A id=\"30\" href=\"#\" data-bbox=\"891,704,151,14\" class=\"possible-clickable-element\" data-testid=\"W\"><text>OpenStreetMap contributors</text></A><A id=\"31\" href=\"#\" data-bbox=\"1056,704,90,14\" class=\"possible-clickable-element\" data-testid=\"X\"><text>Make a Donation</text></A><A id=\"32\" href=\"#\" data-bbox=\"1153,704,122,14\" class=\"possible-clickable-element\" data-testid=\"Y\"><text>Website and API terms</text></A></DIV></DIV></DIV></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    header|\n    <\n      div|\n      <a[A]| Edit >\n      <i[B]| >\n      <a[C]| History >\n      <a[D]| Export >\n    >\n    <\n      nav|\n      <\n        ul|\n        <a[E]| GPS Traces >\n        <a[F]| User Diaries >\n        <a[G]| Communities >\n        <a[H]| Copyright >\n        <a[I]| Help >\n        <a[J]| About >\n      >\n      <\n        div|\n        <a[K]| Log In >\n        <a[L]| Sign Up >\n      >\n    >\n  >\n  <\n    div|\n    <\n      div|\n      <\n        div|\n        <\n          div|\n          <\n            div|\n            <input[M]| Search >\n            <a[N]| Describe the current location using the search engine Where is this? >\n          >\n          <input[O]| Go >\n        >\n        <\n          a| Find directions between two points\n          <img[P]| >\n        >\n      >\n      <\n        div|\n        <h2| Search Results >\n        <i[Q]| >\n        <\n          h4|\n          <text| Results from >\n          <a[R]| OpenStreetMap Nominatim >\n        >\n        <\n          div|\n          <\n            ul|\n            <\n              li|\n              <text| Hotel >\n              <a[S]| 79th Street, Avalon, Cape May County, New Jersey, 08202, United States >\n            >\n            <\n              li|\n              <text| Hotel >\n              <a[T]| The Reeds Hotel, 3rd Avenue, Stone Harbor, Cape May County, New Jersey, 08247, United States >\n            >\n          >\n          <a[U]| More results >\n        >\n      >\n    >\n    <\n      div|\n      <\n        a| Locate Me\n        <i[V]| >\n      >\n      <span| Zoom In >\n      <span| Zoom Out >\n      <span| Layers >\n      <span| Map Key >\n      <span| Query Features >\n      <span| Share >\n      <span| Help >\n      <\n        div|\n        <div| 20 m >\n        <div| 50 ft >\n      >\n      <\n        div|\n        <text| © >\n        <a[W]| OpenStreetMap contributors >\n        <a[X]| Make a Donation >\n        <a[Y]| Website and API terms >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 202.3125,
+                "top": 10.5,
+                "right": 253.3125,
+                "bottom": 43.5,
+                "width": 51,
+                "height": 33
+            },
+            "tag": "a",
+            "text": " Edit "
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 253.3125,
+                "top": 21,
+                "right": 261.3125,
+                "bottom": 34.328125,
+                "width": 8,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 278.3125,
+                "top": 10.5,
+                "right": 353.3125,
+                "bottom": 43.5,
+                "width": 75,
+                "height": 33
+            },
+            "tag": "a",
+            "text": " History "
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 369.3125,
+                "top": 10.5,
+                "right": 439.3125,
+                "bottom": 43.5,
+                "width": 70,
+                "height": 33
+            },
+            "tag": "a",
+            "text": " Export "
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 516.96875,
+                "top": 11,
+                "right": 619.96875,
+                "bottom": 44,
+                "width": 103,
+                "height": 33
+            },
+            "tag": "a",
+            "text": " GPS Traces "
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 627.96875,
+                "top": 11,
+                "right": 736.96875,
+                "bottom": 44,
+                "width": 109,
+                "height": 33
+            },
+            "tag": "a",
+            "text": " User Diaries "
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 744.96875,
+                "top": 11,
+                "right": 861.96875,
+                "bottom": 44,
+                "width": 117,
+                "height": 33
+            },
+            "tag": "a",
+            "text": " Communities "
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 869.96875,
+                "top": 11,
+                "right": 963.96875,
+                "bottom": 44,
+                "width": 94,
+                "height": 33
+            },
+            "tag": "a",
+            "text": " Copyright "
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 971.96875,
+                "top": 11,
+                "right": 1027.96875,
+                "bottom": 44,
+                "width": 56,
+                "height": 33
+            },
+            "tag": "a",
+            "text": " Help "
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1035.96875,
+                "top": 11,
+                "right": 1101.96875,
+                "bottom": 44,
+                "width": 66,
+                "height": 33
+            },
+            "tag": "a",
+            "text": " About "
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 1101.96875,
+                "top": 10.5,
+                "right": 1168.96875,
+                "bottom": 43.5,
+                "width": 67,
+                "height": 33
+            },
+            "tag": "a",
+            "text": " Log In "
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 1184.96875,
+                "top": 10.5,
+                "right": 1263.96875,
+                "bottom": 43.5,
+                "width": 79,
+                "height": 33
+            },
+            "tag": "a",
+            "text": " Sign Up "
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 12,
+                "top": 69,
+                "right": 193,
+                "bottom": 88,
+                "width": 181,
+                "height": 19
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 198,
+                "top": 67,
+                "right": 264,
+                "bottom": 87,
+                "width": 66,
+                "height": 20
+            },
+            "tag": "a",
+            "text": " Where is this? "
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 12,
+                "top": 110,
+                "right": 33.78125,
+                "bottom": 129,
+                "width": 21.78125,
+                "height": 19
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 308,
+                "top": 88,
+                "right": 328,
+                "bottom": 108,
+                "width": 20,
+                "height": 20
+            },
+            "tag": "img",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 316,
+                "top": 170.25,
+                "right": 333,
+                "bottom": 171.078125,
+                "width": 17,
+                "height": 0.828125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 108,
+                "top": 198,
+                "right": 296,
+                "bottom": 215,
+                "width": 188,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " OpenStreetMap Nominatim "
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 16,
+                "top": 276,
+                "right": 333,
+                "bottom": 310,
+                "width": 317,
+                "height": 34
+            },
+            "tag": "a",
+            "text": " 79th Street, Avalon, Cape May County, New Jersey, 08202, United States "
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 16,
+                "top": 364,
+                "right": 333,
+                "bottom": 415,
+                "width": 317,
+                "height": 51
+            },
+            "tag": "a",
+            "text": " The Reeds Hotel, 3rd Avenue, Stone Harbor, Cape May County, New Jersey, 08247, United States "
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 16,
+                "top": 432,
+                "right": 109,
+                "bottom": 452,
+                "width": 93,
+                "height": 20
+            },
+            "tag": "a",
+            "text": " More results "
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 350,
+                "top": 57,
+                "right": 366,
+                "bottom": 73,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 849,
+                "top": 698,
+                "right": 1014,
+                "bottom": 713,
+                "width": 165,
+                "height": 15
+            },
+            "tag": "a",
+            "text": " OpenStreetMap contributors "
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 1024,
+                "top": 698,
+                "right": 1123,
+                "bottom": 713,
+                "width": 99,
+                "height": 15
+            },
+            "tag": "a",
+            "text": " Make a Donation "
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 1133,
+                "top": 698,
+                "right": 1260,
+                "bottom": 713,
+                "width": 127,
+                "height": 15
+            },
+            "tag": "a",
+            "text": " Website and API terms "
+        }
+    ]
+}

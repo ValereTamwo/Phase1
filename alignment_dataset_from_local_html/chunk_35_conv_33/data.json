@@ -1,0 +1,609 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_33.html",
+    "raw_html": "<HTML lang=\"en\" data-bbox=\"0,-1080,1263,2344\"><BODY data-bbox=\"0,-1032,1263,2296\"><HEADER class=\"app-header\"><A href=\"#\" class=\"logo-container\"><I id=\"0\" data-bbox=\"16,12,25,24\" class=\"fab fa-gitlab gitlab-logo possible-clickable-element\" data-testid=\"A\"></I></A><DIV class=\"search-container\"><I class=\"fas fa-search\"></I><INPUT id=\"5\" type=\"search\" placeholder=\"Search GitLab\" data-bbox=\"99,8,320,32\" class=\"possible-clickable-element\" data-testid=\"B\" style=\"\"></INPUT></DIV><DIV class=\"header-actions\"><DIV class=\"action-group\"><I id=\"6\" data-testid=\"C\" data-bbox=\"882,16,16,16\" class=\"fas fa-plus-square possible-clickable-element\"></I><I id=\"7\" data-testid=\"D\" data-bbox=\"902,16,16,16\" class=\"fas fa-chevron-down possible-clickable-element\"></I></DIV><DIV class=\"action-group\"><I id=\"8\" data-testid=\"E\" data-bbox=\"938,16,16,16\" class=\"fas fa-exclamation-circle possible-clickable-element\"></I><SPAN id=\"9\" data-bbox=\"953,16,29,16\" class=\"possible-clickable-element\" data-testid=\"F\"><text>30</text></SPAN></DIV><DIV class=\"action-group\"><I id=\"10\" data-testid=\"G\" data-bbox=\"1002,16,16,16\" class=\"fas fa-code-branch possible-clickable-element\"></I><SPAN id=\"11\" data-bbox=\"1017,16,22,16\" class=\"possible-clickable-element\" data-testid=\"H\"><text>6</text></SPAN><I id=\"12\" data-testid=\"I\" data-bbox=\"1039,16,16,16\" class=\"fas fa-chevron-down possible-clickable-element\"></I></DIV><DIV class=\"action-group\"><I id=\"13\" data-testid=\"J\" data-bbox=\"1075,16,16,16\" class=\"fas fa-check-square possible-clickable-element\"></I><SPAN id=\"14\" data-bbox=\"1090,16,29,16\" class=\"possible-clickable-element\" data-testid=\"K\"><text>24</text></SPAN></DIV><DIV class=\"action-group\"><I id=\"15\" data-testid=\"L\" data-bbox=\"1137,16,16,16\" class=\"fas fa-question-circle possible-clickable-element\"></I><I id=\"16\" data-testid=\"M\" data-bbox=\"1157,16,16,16\" class=\"fas fa-chevron-down possible-clickable-element\"></I></DIV><DIV class=\"user-menu\"><IMG id=\"17\" src=\"https://picsum.photos/seed/user17/24/24\" alt=\"User Avatar\" data-bbox=\"1193,12,24,24\" class=\"possible-clickable-element\" data-testid=\"N\"></IMG><I id=\"18\" data-testid=\"O\" data-bbox=\"1221,16,16,16\" class=\"fas fa-chevron-down possible-clickable-element\"></I></DIV></DIV></HEADER><DIV class=\"app-container\" data-bbox=\"0,-1032,1263,2296\"><ASIDE class=\"app-sidebar\"><DIV class=\"sidebar-header\"><IMG id=\"19\" data-testid=\"sidebar-user-avatar\" src=\"https://picsum.photos/seed/user19/32/32\" alt=\"User Avatar\" data-bbox=\"12,56,32,32\"></IMG><SPAN id=\"20\" data-bbox=\"52,64,84,16\"><text>User Settings</text></SPAN></DIV><UL class=\"sidebar-nav\"><A href=\"#\" class=\"active\"><I id=\"21\" data-bbox=\"20,104,16,16\" class=\"fas fa-user possible-clickable-element\" data-testid=\"P\"></I><SPAN id=\"22\" data-bbox=\"44,104,191,16\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>Profile</text></SPAN></A><A href=\"#\"><I id=\"23\" data-testid=\"R\" data-bbox=\"20,137,16,16\" class=\"fas fa-user-circle possible-clickable-element\"></I><SPAN id=\"24\" data-bbox=\"44,137,191,16\" class=\"possible-clickable-element\" data-testid=\"S\"><text>Account</text></SPAN></A><A href=\"#\"><I id=\"25\" data-testid=\"T\" data-bbox=\"20,170,16,16\" class=\"fas fa-th-large possible-clickable-element\"></I><SPAN id=\"26\" data-bbox=\"44,170,191,16\" class=\"possible-clickable-element\" data-testid=\"U\"><text>Applications</text></SPAN></A><A href=\"#\"><I id=\"27\" data-testid=\"V\" data-bbox=\"20,203,16,16\" class=\"fas fa-comments possible-clickable-element\"></I><SPAN id=\"28\" data-bbox=\"44,203,191,16\" class=\"possible-clickable-element\" data-testid=\"W\"><text>Chat</text></SPAN></A><A href=\"#\"><I id=\"29\" data-bbox=\"20,239,16,10\" class=\"fas fa-key possible-clickable-element\" data-testid=\"X\"></I><SPAN id=\"30\" data-bbox=\"44,236,191,16\" class=\"possible-clickable-element\" data-testid=\"Y\"><text>Access Tokens</text></SPAN></A><A href=\"#\"><I id=\"31\" data-testid=\"Z\" data-bbox=\"20,269,16,16\" class=\"fas fa-envelope possible-clickable-element\"></I><SPAN id=\"32\" data-bbox=\"44,269,191,16\" class=\"possible-clickable-element\" data-testid=\"AA\"><text>Emails</text></SPAN></A><A href=\"#\"><I id=\"33\" data-testid=\"AB\" data-bbox=\"20,302,16,16\" class=\"fas fa-lock possible-clickable-element\"></I><SPAN id=\"34\" data-bbox=\"44,302,191,16\" class=\"possible-clickable-element\" data-testid=\"AC\"><text>Password</text></SPAN></A><A href=\"#\"><I id=\"35\" data-testid=\"AD\" data-bbox=\"20,335,16,16\" class=\"fas fa-bell possible-clickable-element\"></I><SPAN id=\"36\" data-bbox=\"44,335,191,16\" class=\"possible-clickable-element\" data-testid=\"AE\"><text>Notifications</text></SPAN></A><A href=\"#\"><I id=\"37\" data-testid=\"AF\" data-bbox=\"20,368,16,16\" class=\"fas fa-key possible-clickable-element\"></I><SPAN id=\"38\" data-bbox=\"44,368,191,16\" class=\"possible-clickable-element\" data-testid=\"AG\"><text>SSH Keys</text></SPAN></A><A href=\"#\"><I id=\"39\" data-testid=\"AH\" data-bbox=\"20,401,16,16\" class=\"fas fa-key possible-clickable-element\"></I><SPAN id=\"40\" data-bbox=\"44,401,191,16\" class=\"possible-clickable-element\" data-testid=\"AI\"><text>GPG Keys</text></SPAN></A><A href=\"#\"><I id=\"41\" data-testid=\"AJ\" data-bbox=\"20,434,16,16\" class=\"fas fa-sliders-h possible-clickable-element\"></I><SPAN id=\"42\" data-bbox=\"44,434,191,16\" class=\"possible-clickable-element\" data-testid=\"AK\"><text>Preferences</text></SPAN></A><A href=\"#\"><I id=\"43\" data-bbox=\"20,468,16,14\" class=\"fas fa-desktop possible-clickable-element\" data-testid=\"AL\"></I><SPAN id=\"44\" data-bbox=\"44,467,191,16\" class=\"possible-clickable-element\" data-testid=\"AM\"><text>Active Sessions</text></SPAN></A><A href=\"#\"><I id=\"45\" data-bbox=\"22,501,12,14\" class=\"fas fa-history possible-clickable-element\" data-testid=\"AN\"></I><SPAN id=\"46\" data-bbox=\"44,500,191,16\" class=\"possible-clickable-element\" data-testid=\"AO\"><text>Authentication log</text></SPAN></A></UL><DIV class=\"sidebar-footer\"><A href=\"#\" class=\"collapse-link\"><I id=\"47\" data-bbox=\"18,692,8,8\" class=\"fas fa-angle-double-left possible-clickable-element\" data-testid=\"AP\"></I><SPAN id=\"48\" data-bbox=\"36,686,101,21\" class=\"possible-clickable-element\" data-testid=\"AQ\"><text>Collapse sidebar</text></SPAN></A></DIV></ASIDE><MAIN class=\"app-content\" data-bbox=\"256,-1032,1007,2296\"><DIV data-bbox=\"265,-968,990,2132\"><DIV class=\"profile-form-container\"><FORM data-bbox=\"281,-920,958,2084\"><DIV class=\"form-content\" data-bbox=\"266,-434,988,1517\"><DIV class=\"form-grid\" data-bbox=\"595,-434,658,1517\"><DIV data-bbox=\"266,-434,329,1517\"></DIV><DIV class=\"form-section\"><DIV class=\"form-group\"><LABEL id=\"49\" for=\"50\" data-bbox=\"610,59,89,21\"><text>Commit email</text></LABEL><SELECT id=\"50\" data-text=\"Use primary email (ericwbailey@fakegithub.com)\" data-bbox=\"610,88,320,32\"></SELECT><A id=\"51\" href=\"#\" class=\"help-link\" data-bbox=\"1079,122,73,19\"><text>Learn more.</text></A></DIV><DIV class=\"form-group\"><LABEL id=\"52\" for=\"53\" data-bbox=\"610,156,38,21\"><text>Skype</text></LABEL><INPUT id=\"53\" type=\"text\" placeholder=\"username\" data-bbox=\"610,185,320,34\" style=\"\"></INPUT></DIV><DIV class=\"form-group\"><LABEL id=\"54\" for=\"55\" data-bbox=\"610,235,53,21\"><text>Linkedin</text></LABEL><INPUT id=\"55\" type=\"text\" data-bbox=\"610,264,320,34\" style=\"\"></INPUT></DIV><DIV class=\"form-group\"><LABEL id=\"56\" for=\"57\" data-bbox=\"610,334,44,21\"><text>Twitter</text></LABEL><INPUT id=\"57\" type=\"text\" placeholder=\"@username\" data-bbox=\"610,363,320,34\" style=\"\"></INPUT></DIV><DIV class=\"form-group\"><LABEL id=\"58\" for=\"59\" data-bbox=\"610,413,72,21\"><text>Website url</text></LABEL><INPUT id=\"59\" type=\"url\" value=\"https://694.com\" placeholder=\"https://website.com\" data-bbox=\"610,442,320,34\" style=\"\"></INPUT></DIV><DIV class=\"form-group\"><LABEL id=\"60\" for=\"61\" data-bbox=\"610,492,54,21\"><text>Location</text></LABEL><INPUT id=\"61\" type=\"text\" value=\"Boston, MA\" placeholder=\"City, country\" data-bbox=\"610,521,320,34\" style=\"\"></INPUT></DIV><DIV class=\"form-group\"><LABEL id=\"62\" for=\"63\" data-bbox=\"610,571,51,21\"><text>Job title</text></LABEL><INPUT id=\"63\" type=\"text\" data-bbox=\"610,600,320,34\" style=\"\"></INPUT></DIV><DIV class=\"form-group\"><LABEL id=\"64\" for=\"65\" data-bbox=\"610,650,82,21\"><text>Organization</text></LABEL><INPUT id=\"65\" type=\"text\" value=\"@github\" data-bbox=\"610,679,320,34\" style=\"\"></INPUT></DIV></DIV></DIV></DIV><DIV class=\"form-footer\" data-bbox=\"266,1083,988,81\"><BUTTON type=\"submit\" class=\"btn-primary\" data-bbox=\"281,1132,164,32\"><SPAN data-bbox=\"293,1139,140,18\"><text>Update profile settings</text></SPAN></BUTTON><A href=\"#\" class=\"btn-link btn-secondary\" data-bbox=\"457,1132,65,32\"><SPAN data-bbox=\"469,1139,41,18\"><text>Cancel</text></SPAN></A></DIV></FORM></DIV></DIV></MAIN></DIV><DIV data-bbox=\"0,1264,1263,0\"></DIV><DIV data-bbox=\"0,1264,1263,0\"></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    header|\n    <i[A]| >\n    <input[B]| Search GitLab >\n    <\n      div|\n      <i[C]| >\n      <i[D]| >\n      <i[E]| >\n      <span[F]| 30 >\n      <i[G]| >\n      <span[H]| 6 >\n      <i[I]| >\n      <i[J]| >\n      <span[K]| 24 >\n      <i[L]| >\n      <i[M]| >\n      <img[N]| >\n      <i[O]| >\n    >\n  >\n  <\n    div|\n    <\n      aside|\n      <img[sidebar-user-avatar]| >\n      <span| User Settings >\n      <\n        ul|\n        <i[P]| >\n        <span[Q]| Profile >\n        <i[R]| >\n        <span[S]| Account >\n        <i[T]| >\n        <span[U]| Applications >\n        <i[V]| >\n        <span[W]| Chat >\n        <i[X]| >\n        <span[Y]| Access Tokens >\n        <i[Z]| >\n        <span[AA]| Emails >\n        <i[AB]| >\n        <span[AC]| Password >\n        <i[AD]| >\n        <span[AE]| Notifications >\n        <i[AF]| >\n        <span[AG]| SSH Keys >\n        <i[AH]| >\n        <span[AI]| GPG Keys >\n        <i[AJ]| >\n        <span[AK]| Preferences >\n        <i[AL]| >\n        <span[AM]| Active Sessions >\n        <i[AN]| >\n        <span[AO]| Authentication log >\n      >\n      <i[AP]| >\n      <span[AQ]| Collapse sidebar >\n    >\n    <\n      form|\n      <\n        div|\n        <\n          div|\n          <label| Commit email >\n          <a| Learn more. >\n        >\n        <\n          div|\n          <label| Skype >\n          <input| username >\n        >\n        <label| Linkedin >\n        <\n          div|\n          <label| Twitter >\n          <input| @username >\n        >\n        <\n          div|\n          <label| Website url >\n          <input| https://694.com; https://website.com >\n        >\n        <\n          div|\n          <label| Location >\n          <input| Boston, MA; City, country >\n        >\n        <label| Job title >\n        <\n          div|\n          <label| Organization >\n          <input| @github >\n        >\n      >\n      <\n        div|\n        <span| Update profile settings >\n        <span| Cancel >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 16,
+                "top": 0,
+                "right": 40,
+                "bottom": 24,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 56,
+                "top": 2.5,
+                "right": 237,
+                "bottom": 21.5,
+                "width": 181,
+                "height": 19
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 939,
+                "top": 4,
+                "right": 953,
+                "bottom": 20,
+                "width": 14,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 959,
+                "top": 4,
+                "right": 975,
+                "bottom": 20,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 991,
+                "top": 4,
+                "right": 1007,
+                "bottom": 20,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 1013,
+                "top": 4,
+                "right": 1029,
+                "bottom": 20,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "30"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 1045,
+                "top": 4,
+                "right": 1059,
+                "bottom": 20,
+                "width": 14,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 1065,
+                "top": 4,
+                "right": 1073,
+                "bottom": 20,
+                "width": 8,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "6"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 1079,
+                "top": 4,
+                "right": 1095,
+                "bottom": 20,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1111,
+                "top": 4,
+                "right": 1125,
+                "bottom": 20,
+                "width": 14,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 1131,
+                "top": 4,
+                "right": 1148,
+                "bottom": 20,
+                "width": 17,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "24"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 1164,
+                "top": 4,
+                "right": 1180,
+                "bottom": 20,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 1186,
+                "top": 4,
+                "right": 1202,
+                "bottom": 20,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 1218,
+                "top": 0,
+                "right": 1242,
+                "bottom": 24,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "img",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 1250,
+                "top": 5,
+                "right": 1264,
+                "bottom": 19,
+                "width": 14,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 20,
+                "top": 156.5,
+                "right": 36,
+                "bottom": 170.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 48,
+                "top": 155,
+                "right": 91,
+                "bottom": 172,
+                "width": 43,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Profile"
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 20,
+                "top": 193.5,
+                "right": 36,
+                "bottom": 207.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 48,
+                "top": 192,
+                "right": 103,
+                "bottom": 209,
+                "width": 55,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Account"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 20,
+                "top": 230.5,
+                "right": 36,
+                "bottom": 244.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 48,
+                "top": 229,
+                "right": 133,
+                "bottom": 246,
+                "width": 85,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Applications"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 20,
+                "top": 267.5,
+                "right": 36,
+                "bottom": 281.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 48,
+                "top": 266,
+                "right": 79,
+                "bottom": 283,
+                "width": 31,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Chat"
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 20,
+                "top": 304.5,
+                "right": 36,
+                "bottom": 318.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 48,
+                "top": 303,
+                "right": 150,
+                "bottom": 320,
+                "width": 102,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Access Tokens"
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 20,
+                "top": 341.5,
+                "right": 36,
+                "bottom": 355.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 48,
+                "top": 340,
+                "right": 92,
+                "bottom": 357,
+                "width": 44,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Emails"
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 20,
+                "top": 378.5,
+                "right": 36,
+                "bottom": 392.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 48,
+                "top": 377,
+                "right": 115,
+                "bottom": 394,
+                "width": 67,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Password"
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 20,
+                "top": 415.5,
+                "right": 36,
+                "bottom": 429.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 48,
+                "top": 414,
+                "right": 134,
+                "bottom": 431,
+                "width": 86,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Notifications"
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 20,
+                "top": 452.5,
+                "right": 36,
+                "bottom": 466.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 48,
+                "top": 451,
+                "right": 113,
+                "bottom": 468,
+                "width": 65,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "SSH Keys"
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 20,
+                "top": 489.5,
+                "right": 36,
+                "bottom": 503.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 48,
+                "top": 488,
+                "right": 114,
+                "bottom": 505,
+                "width": 66,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "GPG Keys"
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 20,
+                "top": 526.5,
+                "right": 36,
+                "bottom": 540.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AK",
+            "rects": {
+                "left": 48,
+                "top": 525,
+                "right": 128,
+                "bottom": 542,
+                "width": 80,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Preferences"
+        },
+        {
+            "keep": true,
+            "id": "AL",
+            "rects": {
+                "left": 20,
+                "top": 563.5,
+                "right": 36,
+                "bottom": 577.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AM",
+            "rects": {
+                "left": 48,
+                "top": 562,
+                "right": 156,
+                "bottom": 579,
+                "width": 108,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Active Sessions"
+        },
+        {
+            "keep": true,
+            "id": "AN",
+            "rects": {
+                "left": 20,
+                "top": 600.5,
+                "right": 36,
+                "bottom": 614.5,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AO",
+            "rects": {
+                "left": 48,
+                "top": 599,
+                "right": 170,
+                "bottom": 616,
+                "width": 122,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Authentication log"
+        },
+        {
+            "keep": true,
+            "id": "AP",
+            "rects": {
+                "left": 20,
+                "top": 660.5,
+                "right": 33,
+                "bottom": 673.5,
+                "width": 13,
+                "height": 13
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AQ",
+            "rects": {
+                "left": 45,
+                "top": 659,
+                "right": 149,
+                "bottom": 675,
+                "width": 104,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Collapse sidebar"
+        }
+    ]
+}

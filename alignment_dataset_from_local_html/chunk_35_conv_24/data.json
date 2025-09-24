@@ -1,0 +1,567 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_24.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,-312,1263,1237\"><DIV class=\"logo\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 36 36\"><path id=\"0\" data-bbox=\"16,12,25,24\" d=\"M33.2,16.4C33.2,16.4,33.2,16.4,33.2,16.4c-0.3-0.9-0.9-1.6-1.7-2.1c-0.8-0.5-1.8-0.7-2.8-0.6c-1,0.1-1.9,0.5-2.7,1.2l-1.7,1.4l-6.5-4.5c-0.5-0.3-1.1-0.5-1.8-0.5h-0.2c-0.6,0-1.2,0.2-1.7,0.5L7.6,15.8l-1.8-1.5c-0.8-0.7-1.8-1-2.8-0.9c-1,0-1.9,0.3-2.7,0.9c-0.8,0.6-1.3,1.4-1.6,2.3c-0.3,0.9-0.3,1.9,0.1,2.8l3.3,8.7c0.6,1.4,1.8,2.5,3.3,2.9c1.5,0.4,3.1,0.2,4.4-0.8l7.1-5.5l7.1,5.5c1.3,1,2.9,1.2,4.4,0.8c1.5-0.4,2.7-1.5,3.3-2.9l3.3-8.7C33.5,18.3,33.5,17.3,33.2,16.4z\"></path><path id=\"1\" data-bbox=\"28,21,13,12\" d=\"M18,22.3L7.6,30.1c-0.9,0.7-2.1,0.8-3.2,0.3c-1-0.5-1.8-1.4-2.1-2.5L-1.1,19c-0.3-0.7-0.3-1.4,0-2.1c0.2-0.7,0.7-1.3,1.3-1.7c0.6-0.4,1.3-0.6,2.1-0.6c0.8,0,1.5,0.2,2.1,0.7l0,0L6,16.8L18,22.3z\"></path><path id=\"2\" data-bbox=\"24,29,9,7\" d=\"M31.7,27.9c-0.4,1.1-1.1,1.9-2.1,2.5c-1,0.5-2.2,0.4-3.2-0.3L18,22.3l11.4-7.5l1.4-1.5l0,0c0.6-0.5,1.4-0.7,2.1-0.7c0.8,0,1.5,0.2,2.1,0.6c0.6,0.4,1.1,1,1.3,1.7c0.3,0.7,0.3,1.4,0,2.1L31.7,27.9z\"></path><path id=\"3\" data-bbox=\"16,21,12,12\" d=\"M18,22.3L7.6,30.1c-0.9,0.7-2.1,0.8-3.2,0.3c-1-0.5-1.8-1.4-2.1-2.5L-1.1,19c-0.3-0.7-0.3-1.4,0-2.1c0.2-0.7,0.7-1.3,1.3-1.7c0.6-0.4,1.3-0.6,2.1-0.6c0.8,0,1.5,0.2,2.1,0.7l0,0L6,16.8L18,22.3z\"></path></svg></DIV><INPUT id=\"5\" placeholder=\"Search GitLab\" data-bbox=\"99,8,320,32\" class=\"possible-clickable-element\" data-testid=\"A\" style=\"\"></INPUT><DIV class=\"header-actions\"><DIV class=\"action-group\"><svg id=\"6\" data-testid=\"plus-square-icon\" data-bbox=\"882,16,16,16\" viewBox=\"0 0 16 16\"><path d=\"M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z\"></path><path d=\"M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4\" class=\"possible-clickable-element\" data-testid=\"B\"></path></svg><svg id=\"7\" data-testid=\"C\" data-bbox=\"902,16,16,16\" viewBox=\"0 0 16 16\" class=\"possible-clickable-element\"><path fill-rule=\"evenodd\" d=\"M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z\"></path></svg></DIV><DIV class=\"action-group\"><svg id=\"8\" data-testid=\"issues-icon\" data-bbox=\"938,16,16,16\" viewBox=\"0 0 16 16\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16\"></path><path d=\"M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z\" class=\"possible-clickable-element\" data-testid=\"D\"></path></svg><SPAN id=\"9\" data-bbox=\"953,16,29,16\" class=\"possible-clickable-element\" data-testid=\"E\"><text>30</text></SPAN></DIV><DIV class=\"action-group\"><svg id=\"10\" data-testid=\"F\" data-bbox=\"1002,16,16,16\" viewBox=\"0 0 16 16\" class=\"possible-clickable-element\"><path fill-rule=\"evenodd\" d=\"M5 3.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m0 2.122a2.25 2.25 0 1 0-1.5 0v3.256a2.251 2.251 0 1 0 1.5 0V5.372zm-1.5 7.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m10-8.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m0 2.122a2.25 2.25 0 1 0-1.5 0v3.256a2.251 2.251 0 1 0 1.5 0V5.372z\"></path></svg><SPAN id=\"11\" data-bbox=\"1017,16,22,16\" class=\"possible-clickable-element\" data-testid=\"G\"><text>6</text></SPAN><svg id=\"12\" data-testid=\"H\" data-bbox=\"1039,16,16,16\" viewBox=\"0 0 16 16\" class=\"possible-clickable-element\"><path fill-rule=\"evenodd\" d=\"M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z\"></path></svg></DIV><DIV class=\"action-group\"><svg id=\"13\" data-testid=\"I\" data-bbox=\"1075,16,16,16\" viewBox=\"0 0 16 16\" class=\"possible-clickable-element\"><path d=\"M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0\"></path><path d=\"M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z\"></path></svg><SPAN id=\"14\" data-bbox=\"1090,16,29,16\" class=\"possible-clickable-element\" data-testid=\"J\"><text>23</text></SPAN></DIV><DIV class=\"action-group\"><svg id=\"15\" data-testid=\"question-o-icon\" data-bbox=\"1137,16,16,16\" viewBox=\"0 0 16 16\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16\"></path><path d=\"M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94\" class=\"possible-clickable-element\" data-testid=\"K\"></path></svg><svg id=\"16\" data-testid=\"L\" data-bbox=\"1157,16,16,16\" viewBox=\"0 0 16 16\" class=\"possible-clickable-element\"><path fill-rule=\"evenodd\" d=\"M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z\"></path></svg></DIV><DIV class=\"action-group\"><IMG id=\"17\" src=\"https://picsum.photos/seed/gitlab-user/24/24\" alt=\"User avatar\" data-bbox=\"1193,12,24,24\" class=\"possible-clickable-element\" data-testid=\"M\"></IMG><svg id=\"18\" data-testid=\"N\" data-bbox=\"1221,16,16,16\" viewBox=\"0 0 16 16\" class=\"possible-clickable-element\"><path fill-rule=\"evenodd\" d=\"M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z\"></path></svg></DIV></DIV><ASIDE data-bbox=\"0,48,256,672\"><DIV data-bbox=\"0,48,255,672\"><DIV class=\"sidebar-menu\"><UL data-bbox=\"0,50,238,736\"><LI class=\"project-info\"><SPAN id=\"19\" data-bbox=\"12,54,32,32\"><text>D</text></SPAN><SPAN id=\"20\" data-bbox=\"52,62,28,16\"><text>dots</text></SPAN></LI><A href=\"#\" class=\"menu-item\" data-bbox=\"0,94,238,32\"><svg id=\"21\" data-testid=\"O\" data-bbox=\"20,102,16,16\" viewBox=\"0 0 16 16\" class=\"possible-clickable-element\"><path d=\"M8.5 1.115l6 2.536a.5.5 0 0 1 .4.5v10.1a.5.5 0 0 1-.523.497L8.5 11.536V1.115zM8 12.383l5.5 2.1L8 15.426V12.383zM7.5 1.115v10.421L1.523 14.75a.5.5 0 0 1-.523-.497V4.15a.5.5 0 0 1 .4-.5l6-2.536z\"></path></svg><SPAN id=\"22\" data-bbox=\"44,102,174,16\" class=\"possible-clickable-element\" data-testid=\"P\"><text>Project information</text></SPAN></A><LI data-bbox=\"0,127,238,263\"><SPAN data-bbox=\"44,135,174,16\"><text>Repository</text></SPAN><UL data-bbox=\"0,160,238,230\"><A href=\"#\" class=\"menu-item\"><SPAN id=\"25\" data-bbox=\"44,168,27,16\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>Files</text></SPAN></A><A href=\"#\" class=\"menu-item\"><SPAN id=\"26\" data-bbox=\"44,201,55,16\" class=\"possible-clickable-element\" data-testid=\"R\"><text>Commits</text></SPAN></A><A href=\"#\" class=\"menu-item\"><SPAN id=\"27\" data-bbox=\"44,234,56,16\" class=\"possible-clickable-element\" data-testid=\"S\"><text>Branches</text></SPAN></A><A href=\"#\" class=\"menu-item\"><SPAN id=\"28\" data-bbox=\"44,267,27,16\" class=\"possible-clickable-element\" data-testid=\"T\"><text>Tags</text></SPAN></A><A href=\"#\" class=\"menu-item\"><SPAN id=\"29\" data-bbox=\"44,300,80,16\" class=\"possible-clickable-element\" data-testid=\"U\"><text>Contributors</text></SPAN></A><A href=\"#\" class=\"menu-item\"><SPAN id=\"30\" data-bbox=\"44,333,38,16\" class=\"possible-clickable-element\" data-testid=\"V\"><text>Graph</text></SPAN></A><LI data-bbox=\"0,358,238,32\"><A href=\"#\" class=\"menu-item\" data-bbox=\"8,358,222,32\"><SPAN id=\"31\" data-bbox=\"44,366,56,16\" class=\"possible-clickable-element\" data-testid=\"W\"><text>Compare</text></SPAN></A></LI></UL></LI><LI data-bbox=\"0,391,238,32\"><A href=\"#\" class=\"menu-item\" data-bbox=\"8,391,222,32\"><SPAN data-bbox=\"20,399,16,16\"><svg id=\"32\" data-testid=\"issues-icon\" data-bbox=\"20,399,16,16\" viewBox=\"0 0 16 16\"><path d=\"M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16\"></path><path d=\"M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z\" class=\"possible-clickable-element\" data-testid=\"X\"></path></svg></SPAN><SPAN id=\"33\" data-bbox=\"44,399,152,16\" class=\"possible-clickable-element\" data-testid=\"Y\"><text>Issues</text></SPAN><SPAN id=\"34\" class=\"count possible-clickable-element\" data-bbox=\"196,399,22,16\" data-testid=\"Z\"><text>0</text></SPAN></A></LI><LI data-bbox=\"0,424,238,32\"><A href=\"#\" class=\"menu-item\" data-bbox=\"8,424,222,32\"><SPAN data-bbox=\"20,432,16,16\"><svg id=\"35\" data-testid=\"AA\" data-bbox=\"20,432,16,16\" viewBox=\"0 0 16 16\" class=\"possible-clickable-element\"><path fill-rule=\"evenodd\" d=\"M5 3.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m0 2.122a2.25 2.25 0 1 0-1.5 0v3.256a2.251 2.251 0 1 0 1.5 0V5.372zm-1.5 7.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m10-8.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m0 2.122a2.25 2.25 0 1 0-1.5 0v3.256a2.251 2.251 0 1 0 1.5 0V5.372z\"></path></svg></SPAN><SPAN id=\"36\" data-bbox=\"44,432,152,16\" class=\"possible-clickable-element\" data-testid=\"AB\"><text>Merge requests</text></SPAN><SPAN id=\"37\" class=\"count possible-clickable-element\" data-bbox=\"196,432,22,16\" data-testid=\"AC\"><text>0</text></SPAN></A></LI><LI data-bbox=\"0,457,238,32\"><A href=\"#\" class=\"menu-item\" data-bbox=\"8,457,222,32\"><SPAN data-bbox=\"20,465,16,16\"><svg id=\"38\" data-testid=\"rocket-icon\" data-bbox=\"20,465,16,16\" viewBox=\"0 0 16 16\"><path d=\"M8.811 1.576A.5.5 0 0 0 8 1.5a.5.5 0 0 0-.811.076L6.064 4.34a1.5 1.5 0 0 0-1.028 1.028L2.01 7.182a.5.5 0 0 0 .076.811c.843.434 1.598.96 2.238 1.601C5.06 10.333 5.586 11.09 6.02 11.933a.5.5 0 0 0 .811.076l2.766-2.025a1.5 1.5 0 0 0 1.028-1.028L12.423 6.18a.5.5 0 0 0-.076-.811c-.843-.434-1.598-.96-2.238-1.601C9.39 3.01 8.864 2.253 8.43 1.41a.5.5 0 0 0-.076-.811L6.064 4.34a1.5 1.5 0 0 0-1.028 1.028L2.01 7.182a.5.5 0 0 0 .076.811c.843.434 1.598.96 2.238 1.601C5.06 10.333 5.586 11.09 6.02 11.933a.5.5 0 0 0 .811.076l2.766-2.025a1.5 1.5 0 0 0 1.028-1.028L12.423 6.18a.5.5 0 0 0 .076-.811z\" class=\"possible-clickable-element\" data-testid=\"AD\"></path><path d=\"M10.203 10.203c.393.393.393 1.03 0 1.424L4.368 15.632c-.393.393-1.03.393-1.424 0l-.353-.353a.5.5 0 0 1 0-.707l.353-.353L2.5 12.5a.5.5 0 0 1 .707 0l.353.353.353.354a.5.5 0 0 1 0 .707l-.353.353.353.354a.5.5 0 0 1 0 .707l-.353.353.353.354a.5.5 0 0 1 0 .707l-.353.353.353.354a.5.5 0 0 1 0 .707l-.353.353.353.354a.5.5 0 0 1 0 .707l-.353.353c-.393.393-.393 1.03 0 1.424l5.835-5.835a1.007 1.007 0 0 0 0-1.424z\" class=\"possible-clickable-element\" data-testid=\"AE\"></path></svg></SPAN><SPAN id=\"39\" data-bbox=\"44,465,174,16\" class=\"possible-clickable-element\" data-testid=\"AF\"><text>CI/CD</text></SPAN></A></LI><LI data-bbox=\"0,490,238,32\"><A href=\"#\" class=\"menu-item\" data-bbox=\"8,490,222,32\"><SPAN data-bbox=\"20,498,16,16\"><svg data-testid=\"shield-icon\" data-bbox=\"20,498,16,16\" viewBox=\"0 0 16 16\"><path d=\"M5.338 1.59a.5.5 0 0 1 .326.39l.5 2.5a.5.5 0 0 1-.337.54l-1.5 1a.5.5 0 0 1-.62-.325l-.5-2.5a.5.5 0 0 1 .337-.54l1.5-1a.5.5 0 0 1 .294 0zM10.662 1.59a.5.5 0 0 1 .294 0l1.5 1a.5.5 0 0 1 .337.54l-.5 2.5a.5.5 0 0 1-.62.325l-1.5-1a.5.5 0 0 1-.337-.54l.5-2.5a.5.5 0 0 1 .326-.39z\"></path><path d=\"M8 0c-.363 0-.704.053-1.026.155C4.004.83 1.5 2.955 1.5 6.027v2.83c0 .9.13 1.748.375 2.522l.248.775a.5.5 0 0 0 .463.345h10.828a.5.5 0 0 0 .463-.345l.248-.775C14.371 10.598 14.5 9.756 14.5 8.857v-2.83c0-3.072-2.504-5.197-5.474-5.872C8.704.053 8.363 0 8 0\" class=\"possible-clickable-element\" data-testid=\"AG\"></path></svg></SPAN><SPAN id=\"41\" data-bbox=\"44,498,174,16\" class=\"possible-clickable-element\" data-testid=\"AH\"><text>Security & Compliance</text></SPAN></A></LI><LI data-bbox=\"0,523,238,32\"><A href=\"#\" class=\"menu-item\" data-bbox=\"8,523,222,32\"><SPAN data-bbox=\"20,531,16,16\"><svg data-testid=\"deployments-icon\" data-bbox=\"20,531,16,16\" viewBox=\"0 0 16 16\"><path d=\"M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.5-3.336a.5.5 0 1 0-.416.923c.9.403 1.416 1.257 1.416 2.413a5 5 0 0 1-5 5V8a.5.5 0 0 0-1 0v4a5 5 0 0 1-5-5c0-1.156.516-2.01 1.416-2.413a.5.5 0 1 0-.416-.923C2.122 6.096 1 7.345 1 9a6 6 0 0 0 6 6z\"></path><path d=\"M8 4a5 5 0 0 0-5 5v1h10V9a5 5 0 0 0-5-5zM.5 9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V9.5A.5.5 0 0 1 .5 9zm15 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V9.5a.5.5 0 0 1 .5-.5z\" class=\"possible-clickable-element\" data-testid=\"AI\"></path></svg></SPAN><SPAN id=\"43\" data-bbox=\"44,531,174,16\" class=\"possible-clickable-element\" data-testid=\"AJ\"><text>Deployments</text></SPAN></A></LI><LI data-bbox=\"0,556,238,32\"><A href=\"#\" class=\"menu-item\" data-bbox=\"8,556,222,32\"><SPAN data-bbox=\"20,564,16,16\"><svg id=\"44\" data-testid=\"package-icon\" data-bbox=\"20,564,16,16\" viewBox=\"0 0 16 16\"><path fill-rule=\"evenodd\" d=\"M1 4.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5M1.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5m13 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M14 6.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5m-11.5 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m9.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1z\" class=\"possible-clickable-element\" data-testid=\"AK\"></path><path d=\"M3.854 8.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708-.708l1.5-1.5a.5.5 0 0 1 .708 0M5.354 9.646a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708-.708l1.5-1.5a.5.5 0 0 1 .708 0\"></path></svg></SPAN><SPAN id=\"45\" data-bbox=\"44,564,174,16\" class=\"possible-clickable-element\" data-testid=\"AL\"><text>Packages and registries</text></SPAN></A></LI></UL></DIV><A title=\"Toggle sidebar\" data-bbox=\"0,672,255,48\"><svg data-testid=\"AM\" data-bbox=\"16,690,12,12\" viewBox=\"0 0 16 16\" class=\"possible-clickable-element\"><path fill-rule=\"evenodd\" d=\"M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0m-4.5 0a.5.5 0 0 1 0 .708L.207 8l3.647 3.646a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0\"></path></svg><SPAN id=\"53\" data-bbox=\"36,686,101,21\" class=\"possible-clickable-element\" data-testid=\"AN\"><text>Collapse sidebar</text></SPAN></A></DIV></ASIDE></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <input[A]| Search GitLab >\n  <\n    div|\n    <\n      svg[plus-square-icon]|\n      <path[B]| >\n    >\n    <svg[C]| >\n    <\n      svg[issues-icon]|\n      <path[D]| >\n    >\n    <span[E]| 30 >\n    <svg[F]| >\n    <span[G]| 6 >\n    <svg[H]| >\n    <svg[I]| >\n    <span[J]| 23 >\n    <\n      svg[question-o-icon]|\n      <path[K]| >\n    >\n    <svg[L]| >\n    <img[M]| >\n    <svg[N]| >\n  >\n  <\n    div|\n    <\n      ul|\n      <\n        li|\n        <span| D >\n        <span| dots >\n      >\n      <svg[O]| >\n      <span[P]| Project information >\n      <\n        li|\n        <span| Repository >\n        <\n          ul|\n          <span[Q]| Files >\n          <span[R]| Commits >\n          <span[S]| Branches >\n          <span[T]| Tags >\n          <span[U]| Contributors >\n          <span[V]| Graph >\n          <span[W]| Compare >\n        >\n      >\n      <\n        a|\n        <\n          svg[issues-icon]|\n          <path[X]| >\n        >\n        <span[Y]| Issues >\n        <span[Z]| 0 >\n      >\n      <\n        a|\n        <svg[AA]| >\n        <span[AB]| Merge requests >\n        <span[AC]| 0 >\n      >\n      <\n        svg[rocket-icon]|\n        <path[AD]| >\n        <path[AE]| >\n      >\n      <span[AF]| CI/CD >\n      <\n        svg[shield-icon]|\n        <path[AG]| >\n      >\n      <span[AH]| Security & Compliance >\n      <\n        svg[deployments-icon]|\n        <path[AI]| >\n      >\n      <span[AJ]| Deployments >\n      <\n        svg[package-icon]|\n        <path[AK]| >\n      >\n      <span[AL]| Packages and registries >\n    >\n    <\n      a| Toggle sidebar\n      <svg[AM]| >\n      <span[AN]| Collapse sidebar >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 60,
+                "top": 8.5,
+                "right": 380,
+                "bottom": 38.5,
+                "width": 320,
+                "height": 30
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 913,
+                "top": 19.5,
+                "right": 921,
+                "bottom": 27.5,
+                "width": 8,
+                "height": 8
+            },
+            "tag": "path",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 931,
+                "top": 15.5,
+                "right": 947,
+                "bottom": 31.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "svg",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 974.0020141601562,
+                "top": 19.494997024536133,
+                "right": 976.0020141601562,
+                "bottom": 27.5,
+                "width": 2,
+                "height": 8.005002975463867
+            },
+            "tag": "path",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 989,
+                "top": 15,
+                "right": 1007,
+                "bottom": 32,
+                "width": 18,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "30"
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 1027,
+                "top": 15.5,
+                "right": 1043,
+                "bottom": 31.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "svg",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 1049,
+                "top": 15,
+                "right": 1058,
+                "bottom": 32,
+                "width": 9,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "6"
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 1064,
+                "top": 15.5,
+                "right": 1080,
+                "bottom": 31.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "svg",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 1100,
+                "top": 15.5,
+                "right": 1116,
+                "bottom": 31.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "svg",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1122,
+                "top": 15,
+                "right": 1140,
+                "bottom": 32,
+                "width": 18,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "23"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 1165.2547607421875,
+                "top": 19.000001907348633,
+                "right": 1170.677978515625,
+                "bottom": 27.97599983215332,
+                "width": 5.4232177734375,
+                "height": 8.975997924804688
+            },
+            "tag": "path",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 1182,
+                "top": 15.5,
+                "right": 1198,
+                "bottom": 31.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "svg",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 1218,
+                "top": 11.5,
+                "right": 1242,
+                "bottom": 35.5,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "img",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 1248,
+                "top": 15.5,
+                "right": 1264,
+                "bottom": 31.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "svg",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 8,
+                "top": 77.5,
+                "right": 24,
+                "bottom": 93.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "svg",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 36,
+                "top": 77,
+                "right": 170,
+                "bottom": 94,
+                "width": 134,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Project information"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 48,
+                "top": 144,
+                "right": 80,
+                "bottom": 161,
+                "width": 32,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Files"
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 48,
+                "top": 181,
+                "right": 111,
+                "bottom": 198,
+                "width": 63,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Commits"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 48,
+                "top": 218,
+                "right": 113,
+                "bottom": 235,
+                "width": 65,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Branches"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 48,
+                "top": 255,
+                "right": 81,
+                "bottom": 272,
+                "width": 33,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Tags"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 48,
+                "top": 292,
+                "right": 138,
+                "bottom": 309,
+                "width": 90,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Contributors"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 48,
+                "top": 329,
+                "right": 91,
+                "bottom": 346,
+                "width": 43,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Graph"
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 51,
+                "top": 370,
+                "right": 116,
+                "bottom": 387,
+                "width": 65,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Compare"
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 31.001998901367188,
+                "top": 414.9949951171875,
+                "right": 33.00199890136719,
+                "bottom": 423,
+                "width": 2,
+                "height": 8.0050048828125
+            },
+            "tag": "path",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 52,
+                "top": 412,
+                "right": 97,
+                "bottom": 429,
+                "width": 45,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Issues"
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 211,
+                "top": 411,
+                "right": 231,
+                "bottom": 430,
+                "width": 20,
+                "height": 19
+            },
+            "tag": "span",
+            "text": "0"
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 24,
+                "top": 450,
+                "right": 40,
+                "bottom": 466,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "svg",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 52,
+                "top": 451,
+                "right": 161,
+                "bottom": 468,
+                "width": 109,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Merge requests"
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 211,
+                "top": 450,
+                "right": 231,
+                "bottom": 469,
+                "width": 20,
+                "height": 19
+            },
+            "tag": "span",
+            "text": "0"
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 25.83677864074707,
+                "top": 489.5989990234375,
+                "right": 36.67222213745117,
+                "bottom": 501.1822204589844,
+                "width": 10.835443496704102,
+                "height": 11.583221435546875
+            },
+            "tag": "path",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 26.44460678100586,
+                "top": 499.2030029296875,
+                "right": 34.49774932861328,
+                "bottom": 510.3470153808594,
+                "width": 8.053142547607422,
+                "height": 11.144012451171875
+            },
+            "tag": "path",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 52,
+                "top": 490,
+                "right": 93,
+                "bottom": 507,
+                "width": 41,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "CI/CD"
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 25.5,
+                "top": 528,
+                "right": 38.5,
+                "bottom": 540.4990234375,
+                "width": 13,
+                "height": 12.4990234375
+            },
+            "tag": "path",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 52,
+                "top": 529,
+                "right": 209,
+                "bottom": 546,
+                "width": 157,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Security & Compliance"
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 24,
+                "top": 571,
+                "right": 40,
+                "bottom": 578,
+                "width": 16,
+                "height": 7
+            },
+            "tag": "path",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 52,
+                "top": 568,
+                "right": 143,
+                "bottom": 585,
+                "width": 91,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Deployments"
+        },
+        {
+            "keep": true,
+            "id": "AK",
+            "rects": {
+                "left": 25,
+                "top": 607,
+                "right": 39,
+                "bottom": 618,
+                "width": 14,
+                "height": 11
+            },
+            "tag": "path",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AL",
+            "rects": {
+                "left": 52,
+                "top": 607,
+                "right": 218,
+                "bottom": 624,
+                "width": 166,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Packages and registries"
+        },
+        {
+            "keep": true,
+            "id": "AM",
+            "rects": {
+                "left": 16,
+                "top": 664,
+                "right": 28,
+                "bottom": 676,
+                "width": 12,
+                "height": 12
+            },
+            "tag": "svg",
+            "text": "\n                        \n                        \n                    "
+        },
+        {
+            "keep": true,
+            "id": "AN",
+            "rects": {
+                "left": 36,
+                "top": 660,
+                "right": 163,
+                "bottom": 680,
+                "width": 127,
+                "height": 20
+            },
+            "tag": "span",
+            "text": "Collapse sidebar"
+        }
+    ]
+}

@@ -1,0 +1,329 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_41.html",
+    "raw_html": "<HTML lang=\"en\" data-bbox=\"0,0,1280,55\"><BODY data-bbox=\"0,0,1280,55\"><HEADER data-bbox=\"0,0,1280,55\"><IMG id=\"0\" data-bbox=\"10,13,30,30\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMzQjgyRjYiIGQ9Ik0xMiAyQzguMTMgMiA1IDUuMTMgNSA5YzAgNS4yNSA3IDEzIDcgMTNzNy03Ljc1IDctMTNjMC0zLjg3LTMuMTMtNy03LTdNMTAuNjIgMTMuNDFsLTEuNDEtMS40MWwyLjg2LTIuODZsMS40MSAxLjQxbC0xLjQxIDEuNDFsMS40MSAxLjQxbC0xLjQxIDEuNDFMMTAuNjIgMTMuNDFtMy41My0uNzVsMS40MS0xLjQxbDEuNDEgMS40MWwtMS40MSAxLjQxek0xMiA0YTUgNSAwIDAgMSAzLjUzNiAxLjQ2NEwxMy40MSA3LjU4NkExIDIgMCAwIDAgMTIgOGE0IDQgMCAwIDAgMy4wNiA2Ljk0bDEuNDcgMS40N0E2IDYgMCAwIDEgNiAxM2EzIDMgMCAwIDEgMy0zYzAtLjM5LjA4LS43Ni4yMi0xLjFsMS41MyAxLjUzbC0xLjA2IDEuMDZsMS40MSAxLjQxbDIuMTItMi4xMmwxLjQxIDEuNDFMMTIuMDYgMTMuMDZsMS40MSAxLjQxbDEuNDEtMS40MUwxMy40NiAxMS42bDQuMDggNC4wOEE3IDcgMCAwIDEgMTIgMThhNyA3IDAgMCAxLTctN2MwLTIuMDIuODYtMy44MyAyLjItNS4wNUExIDIgMCAwIDAgOCAxMmEzIDMgMCAwIDEgMy0zaDEuNDFsLTEuNTMtMS41M0E1IDUgMCAwIDEgMTIgNFoiLz48L3N2Zz4=\"></IMG><NAV data-bbox=\"178,0,227,55\"><DIV data-bbox=\"188,10,207,35\"><DIV data-bbox=\"188,10,77,35\"><A id=\"1\" data-bbox=\"188,10,50,35\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Edit</text></A><BUTTON id=\"2\" type=\"button\" data-bbox=\"237,10,28,35\"><I class=\"fas fa-chevron-down possible-clickable-element\" data-testid=\"B\"></I></BUTTON></DIV><A id=\"3\" data-bbox=\"264,10,68,35\" class=\"possible-clickable-element\" data-testid=\"C\"><text>History</text></A><A id=\"4\" data-bbox=\"331,10,64,35\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Export</text></A></DIV></NAV><NAV data-bbox=\"708,0,572,55\"><UL data-bbox=\"722,13,405,27\"><A id=\"7\" data-bbox=\"889,13,87,27\" class=\"possible-clickable-element\" data-testid=\"E\"><text>Communities</text></A><A id=\"8\" data-bbox=\"980,13,63,27\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Copyright</text></A><A id=\"9\" data-bbox=\"1047,13,34,27\" class=\"possible-clickable-element\" data-testid=\"G\"><text>Help</text></A><A id=\"10\" data-bbox=\"1085,13,42,27\" class=\"possible-clickable-element\" data-testid=\"H\"><text>About</text></A></UL><DIV data-bbox=\"1135,10,135,35\"><A id=\"11\" data-bbox=\"1135,10,63,35\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Log In</text></A><A id=\"12\" data-bbox=\"1197,10,73,35\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Sign Up</text></A></DIV></NAV></HEADER><DIV data-bbox=\"0,55,1280,665\"><DIV data-bbox=\"0,55,350,665\"><DIV data-bbox=\"0,55,350,47\"><DIV data-bbox=\"4,63,342,31\"><DIV data-bbox=\"8,63,288,31\"><DIV data-bbox=\"8,63,254,31\"><INPUT id=\"13\" type=\"text\" placeholder=\"Search\" data-value=\"Gas station near National Civil War Museum\" data-bbox=\"8,63,254,31\" value=\"Gas station near National Civil War Museum\" class=\"possible-clickable-element\" data-testid=\"K\" style=\"\"></INPUT></DIV><INPUT id=\"14\" value=\"Go\" type=\"submit\" data-bbox=\"261,63,35,31\" class=\"possible-clickable-element\" data-testid=\"L\" style=\"\"></INPUT></DIV><A title=\"Find directions between two points\" data-bbox=\"304,63,38,31\" class=\"possible-clickable-element\" data-testid=\"M\"><IMG id=\"15\" data-bbox=\"313,69,20,20\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTIyIDEwVjZhMiAyIDAgMCAwLTItMlgyMHY0aDJ6bS00IDBWNmEyIDIgMCAwIDAtMi0yaC00djRoNm0tOC00SDZhMiAyIDAgMCAwLTIgMnY0aDZiMi02SDJ2NGEyIDIgMCAwIDAgMiAyaDR2M2wtMy0zSDJ2NGEyIDIgMCAwIDAgMiAyaDEwVjZ6bS0xIDlsMi41IDVoLTUgWiIvPjwvc3ZnPg==\" style=\"width: 20px; height: 20px; color: #6B7280;\"></IMG></A></DIV></DIV><DIV data-bbox=\"0,102,350,950\"><DIV data-bbox=\"16,118,318,47\"><H2 data-bbox=\"16,118,297,39\"><text>Search Results</text></H2><BUTTON id=\"16\" type=\"button\" data-bbox=\"313,118,21,21\" class=\"possible-clickable-element\" data-testid=\"N\"><I class=\"fas fa-times\"></I></BUTTON></DIV><H4 data-bbox=\"16,165,318,57\"><text>Results from</text><A id=\"17\" data-bbox=\"157,164,164,30\" class=\"possible-clickable-element\" data-testid=\"O\"><text>OpenStreetMap Nominatim</text></A></H4><LI data-bbox=\"0,230,350,80\"><text>Filling Station</text><A id=\"18\" data-bbox=\"103,240,193,17\" class=\"possible-clickable-element\" data-testid=\"P\"><text>Giant Food Gas, Arch Way, East Harrisburg, Harrisburg, Dauphin County, 17103, United States</text></A></LI><LI data-bbox=\"0,310,350,80\"><text>Filling Station</text><A id=\"19\" data-bbox=\"103,320,193,17\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>6th Street Market & Gas, Basin Street, New Fox Ridge, Midtown, Harrisburg, Dauphin County, 17102, United States</text></A></LI><LI data-bbox=\"0,390,350,80\"><text>Filling Station</text><A id=\"20\" data-bbox=\"103,400,177,17\" class=\"possible-clickable-element\" data-testid=\"R\"><text>Mobil Station, Walnut Street, Glenwood, Progress, Dauphin County, 17103, United States</text></A></LI><LI data-bbox=\"0,470,350,59\"><text>Filling Station</text><A id=\"21\" data-bbox=\"103,480,203,17\" class=\"possible-clickable-element\" data-testid=\"S\"><text>Sunoco, Derry Street, Allison Hill, Harrisburg, Dauphin County, 17104, United States</text></A></LI></DIV></DIV><DIV data-bbox=\"350,55,930,665\"><DIV data-bbox=\"350,55,930,0\"><A id=\"25\" data-bbox=\"1240,65,40,40\" class=\"possible-clickable-element\" data-testid=\"T\"><I class=\"fas fa-location-crosshairs\"></I></A><SPAN id=\"26\" data-bbox=\"1250,115,20,20\"><I class=\"fas fa-plus\"></I></SPAN><SPAN id=\"27\" data-bbox=\"1250,155,20,20\"><I class=\"fas fa-minus\"></I></SPAN><SPAN id=\"28\" data-bbox=\"1250,205,20,20\"><I class=\"fas fa-layer-group\"></I></SPAN><SPAN id=\"29\" data-bbox=\"1250,245,20,20\"><I class=\"fas fa-ruler-horizontal\"></I></SPAN><SPAN id=\"30\" data-bbox=\"1250,285,20,20\"><I class=\"fas fa-share-alt\"></I></SPAN><SPAN id=\"31\" data-bbox=\"1250,335,20,20\"><I class=\"fas fa-map-marker-alt\"></I></SPAN><SPAN id=\"32\" data-bbox=\"1250,385,20,20\"><I class=\"fas fa-info-circle\"></I></SPAN><DIV data-bbox=\"355,681,88,34\"><DIV data-bbox=\"355,681,88,18\"><text>20 m</text></DIV><DIV data-bbox=\"355,697,67,18\" style=\"border-top: 2px solid #333; margin-top: 2px; padding-top: 2px;\"><text>50 ft</text></DIV></DIV><DIV data-bbox=\"874,703,406,17\"><text>©</text><A id=\"33\" data-bbox=\"891,704,151,14\" class=\"possible-clickable-element\" data-testid=\"U\"><text>OpenStreetMap contributors</text></A><A id=\"34\" data-bbox=\"1056,704,90,14\" class=\"possible-clickable-element\" data-testid=\"V\"><text>Make a Donation</text></A><A id=\"35\" data-bbox=\"1153,704,122,14\" class=\"possible-clickable-element\" data-testid=\"W\"><text>Website and API terms</text></A></DIV></DIV></DIV></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    header|\n    <\n      div|\n      <a[A]| Edit >\n      <i[B]| >\n      <a[C]| History >\n      <a[D]| Export >\n    >\n    <\n      nav|\n      <\n        ul|\n        <a[E]| Communities >\n        <a[F]| Copyright >\n        <a[G]| Help >\n        <a[H]| About >\n      >\n      <\n        div|\n        <a[I]| Log In >\n        <a[J]| Sign Up >\n      >\n    >\n  >\n  <\n    div|\n    <\n      div|\n      <\n        div|\n        <\n          div|\n          <input[K]| Gas station near National Civil War Museum; Search >\n          <input[L]| Go >\n        >\n        <a[M]| Find directions between two points >\n      >\n      <\n        div|\n        <h2| Search Results >\n        <button[N]| >\n        <\n          h4|\n          <text| Results from >\n          <a[O]| OpenStreetMap Nominatim >\n        >\n        <\n          li|\n          <text| Filling Station >\n          <a[P]| Giant Food Gas, Arch Way, East Harrisburg, Harrisburg, Dauphin County, 17103, United States >\n        >\n        <\n          li|\n          <text| Filling Station >\n          <a[Q]| 6th Street Market & Gas, Basin Street, New Fox Ridge, Midtown, Harrisburg, Dauphin County, 17102, United States >\n        >\n        <\n          li|\n          <text| Filling Station >\n          <a[R]| Mobil Station, Walnut Street, Glenwood, Progress, Dauphin County, 17103, United States >\n        >\n        <\n          li|\n          <text| Filling Station >\n          <a[S]| Sunoco, Derry Street, Allison Hill, Harrisburg, Dauphin County, 17104, United States >\n        >\n      >\n    >\n    <\n      div|\n      <a[T]| >\n      <\n        div|\n        <div| 20 m >\n        <div| 50 ft >\n      >\n      <\n        div|\n        <text| © >\n        <a[U]| OpenStreetMap contributors >\n        <a[V]| Make a Donation >\n        <a[W]| Website and API terms >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 583.65625,
+                "top": 0,
+                "right": 630.65625,
+                "bottom": 24.5,
+                "width": 47,
+                "height": 24.5
+            },
+            "tag": "a",
+            "text": "Edit"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 642.65625,
+                "top": 0,
+                "right": 656.65625,
+                "bottom": 14.203125,
+                "width": 14,
+                "height": 14.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 582.65625,
+                "top": 25.5,
+                "right": 669.65625,
+                "bottom": 44.5,
+                "width": 87,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "History"
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 582.65625,
+                "top": 44.5,
+                "right": 669.65625,
+                "bottom": 63.5,
+                "width": 87,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "Export"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 940.984375,
+                "top": 8,
+                "right": 1057.984375,
+                "bottom": 27,
+                "width": 117,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "Communities"
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 940.984375,
+                "top": 27,
+                "right": 1057.984375,
+                "bottom": 46,
+                "width": 117,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "Copyright"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 940.984375,
+                "top": 46,
+                "right": 1057.984375,
+                "bottom": 65,
+                "width": 117,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "Help"
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 940.984375,
+                "top": 65,
+                "right": 1057.984375,
+                "bottom": 84,
+                "width": 117,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "About"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 1081.984375,
+                "top": 9.5,
+                "right": 1158.984375,
+                "bottom": 44.5,
+                "width": 77,
+                "height": 35
+            },
+            "tag": "a",
+            "text": "Log In"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1166.984375,
+                "top": 9.5,
+                "right": 1255.984375,
+                "bottom": 44.5,
+                "width": 89,
+                "height": 35
+            },
+            "tag": "a",
+            "text": "Sign Up"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 17,
+                "top": 81.5,
+                "right": 198,
+                "bottom": 100.5,
+                "width": 181,
+                "height": 19
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 198,
+                "top": 79.5,
+                "right": 219.78125,
+                "bottom": 100.5,
+                "width": 21.78125,
+                "height": 21
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 295,
+                "top": 71,
+                "right": 333,
+                "bottom": 109,
+                "width": 38,
+                "height": 38
+            },
+            "tag": "a",
+            "text": "\n                        \n                    "
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 319,
+                "top": 147,
+                "right": 333,
+                "bottom": 166,
+                "width": 14,
+                "height": 19
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 108,
+                "top": 187,
+                "right": 296,
+                "bottom": 204,
+                "width": 188,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "OpenStreetMap Nominatim"
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 33,
+                "top": 286,
+                "right": 316,
+                "bottom": 337,
+                "width": 283,
+                "height": 51
+            },
+            "tag": "a",
+            "text": "Giant Food Gas, Arch Way, East Harrisburg, Harrisburg, Dauphin County, 17103, United States"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 33,
+                "top": 407,
+                "right": 316,
+                "bottom": 458,
+                "width": 283,
+                "height": 51
+            },
+            "tag": "a",
+            "text": "6th Street Market & Gas, Basin Street, New Fox Ridge, Midtown, Harrisburg, Dauphin County, 17102, United States"
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 33,
+                "top": 528,
+                "right": 316,
+                "bottom": 579,
+                "width": 283,
+                "height": 51
+            },
+            "tag": "a",
+            "text": "Mobil Station, Walnut Street, Glenwood, Progress, Dauphin County, 17103, United States"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 33,
+                "top": 649,
+                "right": 316,
+                "bottom": 700,
+                "width": 283,
+                "height": 51
+            },
+            "tag": "a",
+            "text": "Sunoco, Derry Street, Allison Hill, Harrisburg, Dauphin County, 17104, United States"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 350,
+                "top": 55,
+                "right": 366,
+                "bottom": 75,
+                "width": 16,
+                "height": 20
+            },
+            "tag": "a",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 840,
+                "top": 691,
+                "right": 1002,
+                "bottom": 706,
+                "width": 162,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "OpenStreetMap contributors"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 1018,
+                "top": 691,
+                "right": 1114,
+                "bottom": 706,
+                "width": 96,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Make a Donation"
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 1130,
+                "top": 691,
+                "right": 1257,
+                "bottom": 706,
+                "width": 127,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Website and API terms"
+        }
+    ]
+}

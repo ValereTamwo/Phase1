@@ -1,0 +1,245 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_31.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,-480,1280,2252\"><DIV data-bbox=\"0,-1,88,721\"><IMG id=\"0\" title=\"Magento Admin Panel\" data-bbox=\"27,16,35,41\"></IMG><UL data-bbox=\"0,74,88,646\"><SPAN id=\"1\" data-bbox=\"14,111,60,13\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Dashboard</text></SPAN><LI data-bbox=\"0,136,88,62\"><SPAN id=\"2\" data-bbox=\"30,173,28,13\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Sales</text></SPAN></LI><LI data-bbox=\"-165,91,238,308\"><UL data-bbox=\"-165,91,238,308\"><SPAN data-bbox=\"-150,368,174,19\" class=\"possible-clickable-element\" data-testid=\"C\"><text>Braintree Virtual Terminal</text></SPAN></UL></LI></UL></DIV><LI data-bbox=\"0,198,88,62\"><SPAN id=\"3\" data-bbox=\"22,235,44,13\"><text>Catalog</text></SPAN><DIV data-bbox=\"-180,-1,268,812\"><STRONG data-bbox=\"-150,19,180,30\"><text>Catalog</text></STRONG></DIV></LI><LI data-bbox=\"-165,91,238,88\"></LI><LI data-bbox=\"0,260,88,62\"><SPAN id=\"4\" data-bbox=\"14,297,60,13\"><text>Customers</text></SPAN><DIV data-bbox=\"-180,-1,268,812\"><STRONG data-bbox=\"-150,19,180,30\"><text>Customers</text></STRONG><UL data-bbox=\"-180,91,268,720\"><SPAN data-bbox=\"-150,192,151,19\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Login as Customer Log</text></SPAN></UL></DIV></LI><LI data-bbox=\"0,322,88,62\"><SPAN id=\"5\" data-bbox=\"14,359,60,13\"><text>Marketing</text></SPAN><DIV data-bbox=\"-448,-1,536,812\"><STRONG data-bbox=\"-418,19,448,30\"><text>Marketing</text></STRONG><UL data-bbox=\"-448,91,536,720\"><UL data-bbox=\"-180,91,268,417\"><LI data-bbox=\"-165,91,238,230\" class=\"possible-clickable-element\" data-testid=\"E\"></LI><LI data-bbox=\"-165,366,238,142\" class=\"possible-clickable-element\" data-testid=\"F\"></LI></UL></UL></DIV></LI><LI data-bbox=\"0,384,88,62\"><SPAN id=\"6\" data-bbox=\"19,421,50,13\"><text>Content</text></SPAN><DIV data-bbox=\"-180,-1,268,812\"><STRONG data-bbox=\"-150,19,180,30\"><text>Content</text></STRONG><UL data-bbox=\"-180,91,268,720\"><LI data-bbox=\"-165,91,238,230\" class=\"possible-clickable-element\" data-testid=\"G\"></LI><LI data-bbox=\"-165,366,238,98\" class=\"possible-clickable-element\" data-testid=\"H\"></LI><LI data-bbox=\"-165,509,238,186\" class=\"possible-clickable-element\" data-testid=\"I\"></LI></UL></DIV></LI><LI data-bbox=\"0,446,88,62\"><SPAN id=\"7\" data-bbox=\"22,483,44,13\"><text>Reports</text></SPAN><DIV data-bbox=\"-984,-1,1072,812\"><STRONG data-bbox=\"-954,19,984,30\"><text>Reports</text></STRONG><UL data-bbox=\"-984,91,1072,720\"><LI data-bbox=\"-165,91,238,142\"><SPAN data-bbox=\"-150,103,159,22\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Business Intelligence</text></SPAN></LI></UL></DIV></LI><LI data-bbox=\"0,508,88,62\"><SPAN id=\"8\" data-bbox=\"25,545,38,13\"><text>Stores</text></SPAN><DIV data-bbox=\"-448,-1,536,812\"><STRONG data-bbox=\"-418,19,448,30\"><text>Stores</text></STRONG><UL data-bbox=\"-448,91,536,720\"><UL data-bbox=\"-180,91,268,373\"><LI data-bbox=\"-165,91,238,142\" class=\"possible-clickable-element\" data-testid=\"K\"></LI><LI data-bbox=\"-165,278,238,186\" class=\"possible-clickable-element\" data-testid=\"L\"></LI></UL></UL></DIV></LI><LI data-bbox=\"0,570,88,62\"><SPAN id=\"9\" data-bbox=\"25,607,38,13\"><text>System</text></SPAN><DIV data-bbox=\"-448,-1,536,812\"><STRONG data-bbox=\"-418,19,448,30\"><text>System</text></STRONG><UL data-bbox=\"-448,91,536,720\"><UL data-bbox=\"-180,91,268,560\"><LI data-bbox=\"-165,91,238,186\" class=\"possible-clickable-element\" data-testid=\"M\"></LI><LI data-bbox=\"-165,322,238,98\" class=\"possible-clickable-element\" data-testid=\"N\"></LI><LI data-bbox=\"-165,465,238,186\"><UL data-bbox=\"-165,519,238,132\"><SPAN data-bbox=\"-150,619,158,19\" class=\"possible-clickable-element\" data-testid=\"O\"><text>Manage Encryption Key</text></SPAN></UL></LI></UL></UL></DIV></LI><SPAN id=\"10\" data-bbox=\"32,669,24,13\"><text>Find Partners & Extensions</text></SPAN><DIV data-bbox=\"88,-480,1192,2252\"><DIV title=\"Add Product\" data-bbox=\"1091,16,174,46\"><BUTTON title=\"Add Product\" data-bbox=\"1091,16,134,46\"><SPAN id=\"11\" data-bbox=\"1108,27,100,22\" class=\"possible-clickable-element\" data-testid=\"P\"><text>Add Product</text></SPAN></BUTTON><BUTTON id=\"12\" title=\"Add Product\" data-bbox=\"1223,16,42,46\" class=\"possible-clickable-element\" data-testid=\"Q\"></BUTTON></DIV><FIELDSET data-bbox=\"98,329,289,99\"><SPAN data-bbox=\"118,328,14,18\"><text>ID</text></SPAN><DIV data-bbox=\"118,350,249,32\"><SPAN data-bbox=\"119,356,29,18\"><text>from</text></SPAN></DIV><DIV data-bbox=\"118,397,249,31\"><SPAN data-bbox=\"119,403,13,18\"><text>to</text></SPAN></DIV></FIELDSET><FIELDSET data-bbox=\"387,329,289,99\"><SPAN data-bbox=\"407,328,33,18\"><text>Price</text></SPAN><DIV data-bbox=\"407,350,249,32\"><SPAN data-bbox=\"408,356,29,18\"><text>from</text></SPAN></DIV><DIV data-bbox=\"407,397,249,31\"><SPAN data-bbox=\"408,403,13,18\"><text>to</text></SPAN></DIV></FIELDSET><FIELDSET data-bbox=\"676,329,289,99\"><SPAN data-bbox=\"696,328,59,18\"><text>Quantity</text></SPAN><DIV data-bbox=\"696,350,249,32\"><SPAN data-bbox=\"697,356,29,18\"><text>from</text></SPAN></DIV><DIV data-bbox=\"696,397,249,31\"><SPAN data-bbox=\"697,403,13,18\"><text>to</text></SPAN></DIV></FIELDSET><FIELDSET data-bbox=\"965,329,289,99\"><SPAN data-bbox=\"985,328,104,18\"><text>Last Updated At</text></SPAN><DIV data-bbox=\"985,350,249,32\"><SPAN data-bbox=\"986,356,29,18\"><text>from</text></SPAN><DIV data-bbox=\"1047,350,187,32\"></DIV></DIV><DIV data-bbox=\"985,397,249,31\"><SPAN data-bbox=\"986,403,13,18\"><text>to</text></SPAN><DIV data-bbox=\"1047,397,187,31\"></DIV></DIV></FIELDSET></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    div|\n    <img| Magento Admin Panel >\n    <\n      ul|\n      <span[A]| Dashboard >\n      <span[B]| Sales >\n      <span[C]| Braintree Virtual Terminal >\n    >\n  >\n  <\n    li|\n    <span| Catalog >\n    <strong| Catalog >\n  >\n  <\n    li|\n    <span| Customers >\n    <\n      div|\n      <strong| Customers >\n      <span[D]| Login as Customer Log >\n    >\n  >\n  <\n    li|\n    <span| Marketing >\n    <strong| Marketing >\n    <li[E]| >\n    <li[F]| >\n  >\n  <\n    li|\n    <span| Content >\n    <strong| Content >\n    <li[G]| >\n    <li[H]| >\n    <li[I]| >\n  >\n  <\n    li|\n    <span| Reports >\n    <\n      div|\n      <strong| Reports >\n      <span[J]| Business Intelligence >\n    >\n  >\n  <\n    li|\n    <span| Stores >\n    <strong| Stores >\n    <li[K]| >\n    <li[L]| >\n  >\n  <\n    li|\n    <span| System >\n    <\n      div|\n      <strong| System >\n      <li[M]| >\n      <li[N]| >\n      <span[O]| Manage Encryption Key >\n    >\n  >\n  <span| Find Partners & Extensions >\n  <\n    div|\n    <\n      div| Add Product\n      <\n        button| Add Product\n        <span[P]| Add Product >\n      >\n      <button[Q]| Add Product >\n    >\n    <\n      fieldset|\n      <span| ID >\n      <span| from >\n      <span| to >\n    >\n    <\n      fieldset|\n      <span| Price >\n      <span| from >\n      <span| to >\n    >\n    <\n      fieldset|\n      <span| Quantity >\n      <span| from >\n      <span| to >\n    >\n    <\n      fieldset|\n      <span| Last Updated At >\n      <span| from >\n      <span| to >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 0,
+                "top": 62,
+                "right": 88,
+                "bottom": 148,
+                "width": 88,
+                "height": 86
+            },
+            "tag": "span",
+            "text": " Dashboard "
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 28.5,
+                "top": 163,
+                "right": 59.5,
+                "bottom": 219,
+                "width": 31,
+                "height": 56
+            },
+            "tag": "span",
+            "text": " Sales "
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 17.5,
+                "top": 250,
+                "right": 70.5,
+                "bottom": 265,
+                "width": 53,
+                "height": 15
+            },
+            "tag": "span",
+            "text": " Braintree Virtual Terminal "
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 161,
+                "top": 66.390625,
+                "right": 216,
+                "bottom": 99.390625,
+                "width": 55,
+                "height": 33
+            },
+            "tag": "span",
+            "text": " Login as Customer Log "
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 255,
+                "top": 72.390625,
+                "right": 341,
+                "bottom": 88.390625,
+                "width": 86,
+                "height": 16
+            },
+            "tag": "li",
+            "text": "\n                                \n                            "
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 255,
+                "top": 88.390625,
+                "right": 341,
+                "bottom": 104.390625,
+                "width": 86,
+                "height": 16
+            },
+            "tag": "li",
+            "text": "\n                                \n                            "
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 341,
+                "top": 72.390625,
+                "right": 409,
+                "bottom": 88.390625,
+                "width": 68,
+                "height": 16
+            },
+            "tag": "li",
+            "text": "\n                            \n                        "
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 341,
+                "top": 88.390625,
+                "right": 409,
+                "bottom": 104.390625,
+                "width": 68,
+                "height": 16
+            },
+            "tag": "li",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 341,
+                "top": 104.390625,
+                "right": 409,
+                "bottom": 120.390625,
+                "width": 68,
+                "height": 16
+            },
+            "tag": "li",
+            "text": "\n                            \n                        "
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 409,
+                "top": 74.390625,
+                "right": 466,
+                "bottom": 107.390625,
+                "width": 57,
+                "height": 33
+            },
+            "tag": "span",
+            "text": " Business Intelligence "
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 489.1875,
+                "top": 72.390625,
+                "right": 544.1875,
+                "bottom": 88.390625,
+                "width": 55,
+                "height": 16
+            },
+            "tag": "li",
+            "text": "\n                                \n                            "
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 489.1875,
+                "top": 88.390625,
+                "right": 544.1875,
+                "bottom": 104.390625,
+                "width": 55,
+                "height": 16
+            },
+            "tag": "li",
+            "text": "\n                                \n                            "
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 544.1875,
+                "top": 72.390625,
+                "right": 636.171875,
+                "bottom": 88.390625,
+                "width": 91.984375,
+                "height": 16
+            },
+            "tag": "li",
+            "text": "\n                                \n                            "
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 544.1875,
+                "top": 88.390625,
+                "right": 636.171875,
+                "bottom": 104.390625,
+                "width": 91.984375,
+                "height": 16
+            },
+            "tag": "li",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 544.1875,
+                "top": 106.390625,
+                "right": 598.1875,
+                "bottom": 139.390625,
+                "width": 54,
+                "height": 33
+            },
+            "tag": "span",
+            "text": " Manage Encryption Key "
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 1102,
+                "top": 46.5,
+                "right": 1186,
+                "bottom": 63.5,
+                "width": 84,
+                "height": 17
+            },
+            "tag": "span",
+            "text": " Add Product "
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 1206,
+                "top": 32,
+                "right": 1248,
+                "bottom": 78,
+                "width": 42,
+                "height": 46
+            },
+            "tag": "button",
+            "text": " "
+        }
+    ]
+}

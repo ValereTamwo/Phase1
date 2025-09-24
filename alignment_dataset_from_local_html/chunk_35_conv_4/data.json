@@ -1,0 +1,441 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_4.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,2731\"><HEADER data-bbox=\"0,0,1280,0\"><DIV data-bbox=\"90,0,1100,52\"><B id=\"0\" data-text=\"Postmill\" data-bbox=\"120,16,58,19\"><text>Postmill</text></B><NAV data-bbox=\"194,0,148,52\"><UL data-bbox=\"194,0,148,52\"><A id=\"1\" href=\"#\" data-text=\"Forums\" data-bbox=\"194,0,86,52\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Forums</text></A><A id=\"2\" href=\"#\" data-text=\"Wiki\" data-bbox=\"280,0,62,52\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Wiki</text></A></UL></NAV><FORM data-bbox=\"455,0,236,52\"><INPUT id=\"4\" type=\"search\" placeholder=\"Search Postmill\" data-bbox=\"462,8,222,37\" class=\"possible-clickable-element\" data-testid=\"C\" style=\"\"></INPUT></FORM><UL data-bbox=\"804,0,372,52\"><A href=\"#\" title=\"Notifications (0)\" data-bbox=\"804,0,48,52\"><I id=\"5\" class=\"fa-regular fa-bell possible-clickable-element\" data-bbox=\"820,19,16,13\" data-testid=\"D\"></I></A><A href=\"#\" class=\"btn btn-outline\" data-bbox=\"870,18,12,13\"><I id=\"6\" class=\"fa-solid fa-plus possible-clickable-element\" data-bbox=\"870,18,12,13\" data-testid=\"E\"></I><SPAN id=\"7\" data-text=\"Submit\" data-bbox=\"888,16,51,19\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Submit</text></SPAN></A><LI data-bbox=\"955,0,221,52\"><BUTTON type=\"button\" data-bbox=\"955,0,221,52\"><I id=\"8\" class=\"fa-regular fa-user possible-clickable-element\" data-bbox=\"973,18,12,14\" data-testid=\"G\"></I><STRONG id=\"9\" data-text=\"MarvelsGrantMan136\" data-bbox=\"991,16,157,19\" class=\"possible-clickable-element\" data-testid=\"H\"><text>MarvelsGrantMan136</text></STRONG><I class=\"fa-solid fa-chevron-down possible-clickable-element\" style=\"font-size: 0.8rem; margin-left: auto;\" data-testid=\"I\"></I></BUTTON></LI></UL></DIV></HEADER><MAIN class=\"container\" data-bbox=\"90,66,1100,2616\"><NAV data-bbox=\"90,80,1086,49\"><UL data-bbox=\"104,80,218,35\"><A id=\"11\" href=\"#\" data-text=\"Forums\" data-bbox=\"104,80,69,35\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Forums</text></A><A id=\"12\" href=\"#\" data-text=\"Tags\" data-bbox=\"173,80,51,35\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Tags</text></A><A id=\"13\" href=\"#\" data-text=\"Alphabetical\" data-bbox=\"224,80,98,35\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Alphabetical</text></A></UL><LI data-bbox=\"336,80,128,35\" style=\"list-style: none; margin-left: auto;\"><BUTTON type=\"button\" data-bbox=\"336,80,128,35\"><I id=\"14\" class=\"fa-solid fa-arrow-up-wide-short possible-clickable-element\" data-bbox=\"347,90,14,14\" data-testid=\"M\"></I><SPAN id=\"15\" data-text=\"Submissions\" data-bbox=\"364,89,79,16\" class=\"possible-clickable-element\" data-testid=\"N\"><text>Submissions</text></SPAN></BUTTON></LI></NAV><DIV data-bbox=\"90,129,1086,56\"><H1 data-text=\"List of forums\" data-bbox=\"104,129,944,42\"><text>List of forums</text></H1><A id=\"17\" href=\"#\" class=\"btn btn-primary possible-clickable-element\" data-text=\"Create forum\" data-bbox=\"1062,129,114,37\" data-testid=\"O\"><text>Create forum</text></A></DIV><DIV data-bbox=\"104,185,1072,2432\"><ARTICLE data-bbox=\"97,186,1079,103\"><DIV data-bbox=\"104,200,890,68\"><A href=\"#\" data-bbox=\"104,200,0,0\"><B id=\"18\" data-text=\"AskReddit\" data-bbox=\"121,202,65,16\" class=\"possible-clickable-element\" data-testid=\"P\"><text>f/AskReddit</text></B><B id=\"19\" data-text=\"AskReddit\" data-bbox=\"104,221,890,26\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>AskReddit</text></B></A><P data-text=\"AskReddit\" data-bbox=\"104,247,890,21\"><text>A place to ask and answer thought-provoking questions.</text></P></DIV><DIV data-bbox=\"994,202,182,72\"><FORM data-bbox=\"1001,202,175,37\"><BUTTON type=\"button\" class=\"subscribe-btn\" data-bbox=\"1001,202,175,37\"><SPAN data-bbox=\"1001,202,109,37\"><SPAN id=\"20\" data-text=\"Subscribe\" data-bbox=\"1024,212,63,16\" class=\"possible-clickable-element\" data-testid=\"R\"><text>Subscribe</text></SPAN></SPAN><B id=\"21\" data-text=\"0\" data-bbox=\"1112,202,64,37\" class=\"possible-clickable-element\" data-testid=\"S\"><text>0</text></B></BUTTON></FORM><P data-text=\"10,052 submissions\" data-bbox=\"1027,246,124,21\"><text>10,052 submissions</text></P></DIV></ARTICLE><ARTICLE data-bbox=\"97,282,1079,105\"><DIV data-bbox=\"104,297,890,69\"><A href=\"#\" data-bbox=\"104,297,0,0\"><B id=\"22\" data-text=\"relationship_advice\" data-bbox=\"121,299,125,16\" class=\"possible-clickable-element\" data-testid=\"T\"><text>f/relationship_advice</text></B><B id=\"23\" data-text=\"relationship_advice\" data-bbox=\"104,318,890,27\" class=\"possible-clickable-element\" data-testid=\"U\"><text>Relationship Advice</text></B></A><P data-text=\"relationship_advice\" data-bbox=\"104,345,890,21\"><text>Get help with your personal relationships.</text></P></DIV><DIV data-bbox=\"994,299,182,72\"><FORM data-bbox=\"1001,299,175,37\"><BUTTON type=\"button\" class=\"subscribe-btn\" data-bbox=\"1001,299,175,37\"><SPAN data-bbox=\"1001,299,109,37\"><SPAN id=\"24\" data-text=\"Subscribe\" data-bbox=\"1024,309,63,16\" class=\"possible-clickable-element\" data-testid=\"V\"><text>Subscribe</text></SPAN></SPAN><B id=\"25\" data-text=\"0\" data-bbox=\"1112,299,64,37\" class=\"possible-clickable-element\" data-testid=\"W\"><text>0</text></B></BUTTON></FORM><P data-text=\"5,729 submissions\" data-bbox=\"1031,343,116,21\"><text>5,729 submissions</text></P></DIV></ARTICLE><ARTICLE data-bbox=\"97,380,1079,104\"><DIV data-bbox=\"104,395,890,68\"><A href=\"#\" data-bbox=\"104,395,0,0\"><B id=\"26\" data-text=\"worldnews\" data-bbox=\"121,397,68,16\" class=\"possible-clickable-element\" data-testid=\"X\"><text>f/worldnews</text></B><B id=\"27\" data-text=\"worldnews\" data-bbox=\"104,416,890,26\" class=\"possible-clickable-element\" data-testid=\"Y\"><text>World News</text></B></A><P data-text=\"worldnews\" data-bbox=\"104,442,890,21\"><text>A place for major news from around the world.</text></P></DIV><DIV data-bbox=\"994,396,182,72\"><FORM data-bbox=\"1001,396,175,37\"><BUTTON type=\"button\" class=\"subscribe-btn\" data-bbox=\"1001,396,175,37\"><SPAN data-bbox=\"1001,396,109,37\"><SPAN id=\"28\" data-text=\"Subscribe\" data-bbox=\"1024,406,63,16\" class=\"possible-clickable-element\" data-testid=\"Z\"><text>Subscribe</text></SPAN></SPAN><B id=\"29\" data-text=\"0\" data-bbox=\"1112,396,64,37\" class=\"possible-clickable-element\" data-testid=\"AA\"><text>0</text></B></BUTTON></FORM><P data-text=\"3,475 submissions\" data-bbox=\"1031,440,116,21\"><text>3,475 submissions</text></P></DIV></ARTICLE><A href=\"#\" data-bbox=\"104,492,0,0\"><B id=\"30\" data-text=\"news\" data-bbox=\"121,494,33,16\" class=\"possible-clickable-element\" data-testid=\"AB\"><text>f/news</text></B></A><FORM data-bbox=\"1001,493,175,37\"><BUTTON type=\"button\" class=\"subscribe-btn\" data-bbox=\"1001,493,175,37\"><SPAN data-bbox=\"1001,493,109,37\"><SPAN id=\"32\" data-text=\"Subscribe\" data-bbox=\"1024,503,63,16\" class=\"possible-clickable-element\" data-testid=\"AD\"><text>Subscribe</text></SPAN></SPAN><B id=\"33\" data-text=\"0\" data-bbox=\"1112,493,64,37\" class=\"possible-clickable-element\" data-testid=\"AE\"><text>0</text></B></BUTTON></FORM></DIV></MAIN></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    div|\n    <b| Postmill >\n    <\n      ul|\n      <a[A]| Forums >\n      <a[B]| Wiki >\n    >\n    <input[C]| Search Postmill >\n    <\n      ul|\n      <\n        a| Notifications (0)\n        <i[D]| >\n      >\n      <i[E]| >\n      <span[F]| Submit >\n      <i[G]| >\n      <strong[H]| MarvelsGrantMan136 >\n      <i[I]| >\n    >\n  >\n  <\n    main|\n    <\n      nav|\n      <\n        ul|\n        <a[J]| Forums >\n        <a[K]| Tags >\n        <a[L]| Alphabetical >\n      >\n      <i[M]| >\n      <span[N]| Submissions >\n    >\n    <\n      div|\n      <h1| List of forums >\n      <a[O]| Create forum >\n    >\n    <\n      div|\n      <\n        article|\n        <\n          div|\n          <\n            a|\n            <b[P]| f/AskReddit >\n            <b[Q]| AskReddit >\n          >\n          <p| A place to ask and answer thought-provoking questions. >\n        >\n        <\n          div|\n          <\n            button|\n            <span[R]| Subscribe >\n            <b[S]| 0 >\n          >\n          <p| 10,052 submissions >\n        >\n      >\n      <\n        article|\n        <\n          div|\n          <\n            a|\n            <b[T]| f/relationship_advice >\n            <b[U]| Relationship Advice >\n          >\n          <p| Get help with your personal relationships. >\n        >\n        <\n          div|\n          <\n            button|\n            <span[V]| Subscribe >\n            <b[W]| 0 >\n          >\n          <p| 5,729 submissions >\n        >\n      >\n      <\n        article|\n        <\n          div|\n          <\n            a|\n            <b[X]| f/worldnews >\n            <b[Y]| World News >\n          >\n          <p| A place for major news from around the world. >\n        >\n        <\n          div|\n          <\n            button|\n            <span[Z]| Subscribe >\n            <b[AA]| 0 >\n          >\n          <p| 3,475 submissions >\n        >\n      >\n      <b[AB]| f/news >\n      <\n        button|\n        <span[AD]| Subscribe >\n        <b[AE]| 0 >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 86,
+                "top": 32.578125,
+                "right": 167,
+                "bottom": 68.578125,
+                "width": 81,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Forums"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 175,
+                "top": 32.578125,
+                "right": 232,
+                "bottom": 68.578125,
+                "width": 57,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Wiki"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 256,
+                "top": 42.578125,
+                "right": 437,
+                "bottom": 61.578125,
+                "width": 181,
+                "height": 19
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 1054.90625,
+                "top": 8,
+                "right": 1068.90625,
+                "bottom": 24,
+                "width": 14,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 1071.90625,
+                "top": 41,
+                "right": 1086.90625,
+                "bottom": 57,
+                "width": 15,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 1086.90625,
+                "top": 37,
+                "right": 1140.90625,
+                "bottom": 61,
+                "width": 54,
+                "height": 24
+            },
+            "tag": "span",
+            "text": "Submit"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 1067.90625,
+                "top": 77,
+                "right": 1079.90625,
+                "bottom": 90.328125,
+                "width": 12,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 1087.90625,
+                "top": 76.171875,
+                "right": 1222,
+                "bottom": 91.171875,
+                "width": 134.09375,
+                "height": 15
+            },
+            "tag": "strong",
+            "text": "MarvelsGrantMan136"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 1230,
+                "top": 77.265625,
+                "right": 1243,
+                "bottom": 90.0625,
+                "width": 13,
+                "height": 12.796875
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 119,
+                "top": 110.171875,
+                "right": 208,
+                "bottom": 146.171875,
+                "width": 89,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Forums"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 216,
+                "top": 110.171875,
+                "right": 286,
+                "bottom": 146.171875,
+                "width": 70,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Tags"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 294,
+                "top": 110.171875,
+                "right": 422,
+                "bottom": 146.171875,
+                "width": 128,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Alphabetical"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 1019.421875,
+                "top": 120.171875,
+                "right": 1037.421875,
+                "bottom": 136.171875,
+                "width": 18,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 1045.421875,
+                "top": 119.171875,
+                "right": 1145,
+                "bottom": 137.171875,
+                "width": 99.578125,
+                "height": 18
+            },
+            "tag": "span",
+            "text": "Submissions"
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 1035,
+                "top": 178.171875,
+                "right": 1170,
+                "bottom": 220.171875,
+                "width": 135,
+                "height": 42
+            },
+            "tag": "a",
+            "text": "Create forum"
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 131,
+                "top": 263.171875,
+                "right": 204,
+                "bottom": 278.171875,
+                "width": 73,
+                "height": 15
+            },
+            "tag": "b",
+            "text": "f/AskReddit"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 131,
+                "top": 281.171875,
+                "right": 522,
+                "bottom": 311.171875,
+                "width": 391,
+                "height": 30
+            },
+            "tag": "b",
+            "text": "AskReddit"
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 1022.40625,
+                "top": 277.375,
+                "right": 1092,
+                "bottom": 293.375,
+                "width": 69.59375,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Subscribe"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 1108,
+                "top": 269.375,
+                "right": 1148,
+                "bottom": 301.375,
+                "width": 40,
+                "height": 32
+            },
+            "tag": "b",
+            "text": "0"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 131,
+                "top": 404.78125,
+                "right": 261,
+                "bottom": 419.78125,
+                "width": 130,
+                "height": 15
+            },
+            "tag": "b",
+            "text": "f/relationship_advice"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 131,
+                "top": 422.78125,
+                "right": 444,
+                "bottom": 452.78125,
+                "width": 313,
+                "height": 30
+            },
+            "tag": "b",
+            "text": "Relationship Advice"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 1022.40625,
+                "top": 419.78125,
+                "right": 1092,
+                "bottom": 435.78125,
+                "width": 69.59375,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Subscribe"
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 1108,
+                "top": 411.78125,
+                "right": 1148,
+                "bottom": 443.78125,
+                "width": 40,
+                "height": 32
+            },
+            "tag": "b",
+            "text": "0"
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 131,
+                "top": 544.78125,
+                "right": 210,
+                "bottom": 559.78125,
+                "width": 79,
+                "height": 15
+            },
+            "tag": "b",
+            "text": "f/worldnews"
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 131,
+                "top": 562.78125,
+                "right": 487,
+                "bottom": 592.78125,
+                "width": 356,
+                "height": 30
+            },
+            "tag": "b",
+            "text": "World News"
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 1022.40625,
+                "top": 559.78125,
+                "right": 1092,
+                "bottom": 575.78125,
+                "width": 69.59375,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Subscribe"
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 1108,
+                "top": 551.78125,
+                "right": 1148,
+                "bottom": 583.78125,
+                "width": 40,
+                "height": 32
+            },
+            "tag": "b",
+            "text": "0"
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 131,
+                "top": 684.78125,
+                "right": 175,
+                "bottom": 699.78125,
+                "width": 44,
+                "height": 15
+            },
+            "tag": "b",
+            "text": "f/news"
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 131,
+                "top": 702.78125,
+                "right": 764,
+                "bottom": 720,
+                "width": 633,
+                "height": 17.21875
+            },
+            "tag": "b",
+            "text": "News"
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 1022.40625,
+                "top": 699.78125,
+                "right": 1092,
+                "bottom": 715.78125,
+                "width": 69.59375,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Subscribe"
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 1108,
+                "top": 691.78125,
+                "right": 1148,
+                "bottom": 720,
+                "width": 40,
+                "height": 28.21875
+            },
+            "tag": "b",
+            "text": "0"
+        }
+    ]
+}

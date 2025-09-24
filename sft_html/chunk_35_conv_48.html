@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap - Modern Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #0078ff;
+            --primary-hover: #0056b3;
+            --secondary-color: #e9ecef;
+            --secondary-hover: #d3d9df;
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --background-color: #f8f9fa;
+            --white: #ffffff;
+            --border-color: #dee2e6;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --header-height: 55px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: var(--header-height);
+            padding: 0 24px;
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 1000;
+        }
+
+        header source {
+            display: flex;
+            align-items: center;
+        }
+        #0 {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        nav > div, nav > ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            height: 100%;
+        }
+        nav a, nav button {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-light);
+            border: none;
+            background: none;
+            cursor: pointer;
+            position: relative;
+            white-space: nowrap;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: calc(100% - 16px);
+        }
+        nav a:hover {
+            color: var(--text-dark);
+        }
+
+        nav div[data-bbox="188,10,77,35"] {
+            display: flex;
+            align-items: center;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            padding: 0 4px;
+            transition: background-color 0.2s;
+        }
+        nav div[data-bbox="188,10,77,35"]:hover {
+            background-color: var(--secondary-color);
+        }
+        #1 {
+            font-size: 12px;
+            margin-left: 4px;
+            padding: 0;
+        }
+
+        div[data-bbox="1135,10,135,35"] a {
+            height: auto;
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+        div[data-bbox="1135,10,135,35"] a:hover::after {
+            width: 0;
+        }
+        #10:hover {
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+        }
+        #11 {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        #11:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+            color: var(--white);
+        }
+
+        div[data-bbox="0,55,1280,665"]:first-of-type {
+            position: relative;
+            height: calc(100vh - var(--header-height));
+        }
+        
+        div[data-bbox="0,55,350,350"]:first-of-type {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 350px;
+            height: 100%;
+            background-color: var(--white);
+            box-shadow: 5px 0 15px rgba(0,0,0,0.07);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        div[data-bbox="0,55,350,47"] {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        div[data-bbox="4,63,342,31"] {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        div[data-bbox="8,63,288,31"] {
+            flex-grow: 1;
+            display: flex;
+        }
+        div[data-bbox="8,63,254,31"] {
+            position: relative;
+            flex-grow: 1;
+        }
+        #13 {
+            width: 100%;
+            height: 40px;
+            padding: 0 12px 0 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px 0 0 6px;
+            font-size: 14px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        #13:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 120, 255, 0.15);
+        }
+        #12 {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            color: var(--text-light);
+            pointer-events: none;
+        }
+        #13:not(:placeholder-shown) + #12, #13:focus + #12 {
+            display: none;
+        }
+        #14 {
+            height: 40px;
+            padding: 0 12px;
+            border: 1px solid var(--primary-color);
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s;
+            margin-left: -1px;
+        }
+        #14:hover {
+            background-color: var(--primary-hover);
+        }
+        a[title="Find directions between two points"] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 18px;
+            color: var(--text-light);
+            flex-shrink: 0;
+        }
+        a[title="Find directions between two points"]:hover {
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+        }
+        #15 { display: none; }
+
+        div[data-bbox="0,102,350,303"] {
+            padding: 24px;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+        div[data-bbox="16,118,318,85"] {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.2;
+            max-width: 90%;
+        }
+        #16 {
+            border: none;
+            background: none;
+            font-size: 16px;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 4px;
+        }
+        #16:hover {
+            color: var(--text-dark);
+        }
+
+        div[data-bbox="16,203,318,186"] p {
+            font-size: 15px;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+        div[data-bbox="16,203,318,186"] p a {
+            font-weight: 500;
+            text-decoration: underline;
+            text-decoration-color: rgba(0, 120, 255, 0.2);
+        }
+        div[data-bbox="12,351,326,38"] {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 32px;
+        }
+        #21, #22 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+        }
+        #21 {
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+        }
+        #21:hover {
+            background-color: var(--secondary-hover);
+        }
+        #22 {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        #22:hover {
+            background-color: var(--primary-hover);
+        }
+
+        div[data-bbox="0,55,1280,665"]:last-of-type {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://source.unsplash.com/random/1600x900/?satellite,map');
+            background-size: cover;
+            background-position: center;
+        }
+        div[data-bbox="0,55,1280,0"] {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .map-control {
+            position: absolute;
+            right: 20px;
+            background-color: var(--white);
+            color: var(--text-dark);
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.2s, color 0.2s;
+            font-size: 18px;
+            width: 40px;
+            height: 40px;
+        }
+        .map-control:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        #23 { top: 20px; border-radius: 8px 8px 0 0;}
+        #24 { top: 61px; border-radius: 0 0 8px 8px;}
+        #25 { top: 121px; }
+        #26 { top: 171px; }
+        #27 { top: 221px; }
+        #28 { top: 271px; }
+        #29 { top: 331px; }
+        #30 { top: 381px; }
+
+        div[data-bbox="5,681,90,34"] {
+            position: absolute;
+            bottom: 40px;
+            left: 370px;
+            font-size: 12px;
+            color: var(--text-dark);
+            background: rgba(255,255,255,0.7);
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(2px);
+        }
+        div[data-bbox="5,681,56,18"] {
+            border-bottom: 2px solid var(--text-dark);
+        }
+        div[data-bbox="5,697,90,18"] {
+            border-top: 1px solid #ccc;
+            padding-top: 2px;
+            margin-top: 2px;
+        }
+
+        div[data-bbox="874,703,406,17"] {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            background-color: rgba(255,255,255,0.7);
+            padding: 4px 8px;
+            border-radius: 4px;
+            backdrop-filter: blur(2px);
+        }
+        div[data-bbox="874,703,406,17"] a {
+            color: var(--primary-color);
+            margin: 0 4px;
+        }
+        div[data-bbox="874,703,406,17"] a:hover {
+            text-decoration: underline;
+        }
+
+        .sidebar-hidden {
+            transform: translateX(-100%);
+        }
+    </style>
+</head>
+<body data-bbox="0,0,1280,55">
+    <header data-bbox="0,0,1280,55">
+        <source type="image/svg+xml" data-bbox="10,17,0,22">
+            <img id="0" data-bbox="10,13,30,30" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA3OGZmIiBzdHJva2Utd2lkdGg9IjgiLz48cGF0aCBkPSJNMjUsMzUgQzQwLDIwIDYwLDIwIDc1LDM1IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDc4ZmYiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTI1LDY1IEM0MCw4MCA2MCw4MCA3NSw2NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA3OGZmIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==">
+        </source>
+        <nav data-bbox="178,0,227,55">
+            <div data-bbox="188,10,207,35">
+                <div data-bbox="188,10,77,35">
+                    <a data-bbox="188,10,50,35">Edit</a>
+                    <button id="1" type="button" data-bbox="237,10,28,35"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <a id="2" data-bbox="264,10,68,35">History</a>
+                <a id="3" data-bbox="331,10,64,35">Export</a>
+            </div>
+        </nav>
+        <nav data-bbox="708,0,572,55">
+            <ul data-bbox="722,13,405,27">
+                <a id="4" data-bbox="722,13,77,27">GPS Traces</a>
+                <a id="5" data-bbox="803,13,82,27">User Diaries</a>
+                <a id="6" data-bbox="889,13,87,27">Communities</a>
+                <a id="7" data-bbox="980,13,63,27">Copyright</a>
+                <a id="8" data-bbox="1047,13,34,27">Help</a>
+                <a id="9" data-bbox="1085,13,42,27">About</a>
+            </ul>
+            <div data-bbox="1135,10,135,35">
+                <a id="10" data-bbox="1135,10,63,35">Log In</a>
+                <a id="11" data-bbox="1197,10,73,35">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    <div data-bbox="0,55,1280,665">
+        <div data-bbox="0,55,350,350">
+            <div data-bbox="0,55,350,47">
+                <div data-bbox="4,63,342,31">
+                    <div data-bbox="8,63,288,31">
+                        <div data-bbox="8,63,254,31">
+                            <input id="13" type="text" placeholder="Search" data-bbox="8,63,254,31">
+                            <a id="12" title="Describe the current location using the search engine" data-bbox="194,69,62,15">Where is this?</a>
+                        </div>
+                        <input id="14" value="Go" type="submit" data-bbox="261,63,35,31">
+                    </div>
+                    <a title="Find directions between two points" data-bbox="304,63,38,31">
+                        <i class="fas fa-directions"></i>
+                        <img id="15" data-bbox="313,69,20,20">
+                    </a>
+                </div>
+            </div>
+            <div data-bbox="0,102,350,303">
+                <div data-bbox="16,118,318,85">
+                    <h2 data-bbox="16,118,297,77">Welcome to OpenStreetMap!</h2>
+                    <button id="16" type="button" data-bbox="313,118,21,21"><i class="fas fa-times"></i></button>
+                </div>
+                <div data-bbox="16,203,318,186">
+                    <p data-bbox="16,203,318,70">OpenStreetMap is a map of the world, created by people like you and free to use under an open license.</p>
+                    <p data-bbox="16,289,318,46">Hosting is supported by <a id="17" data-bbox="180,290,27,20">UCL</a>, <a id="18" data-bbox="216,290,39,20">Fastly</a>, <a id="19" data-bbox="264,290,63,20">Bytemark Hosting</a> and other <a id="20" data-bbox="145,313,56,20">partners</a>.</p>
+                    <div data-bbox="12,351,326,38">
+                        <a id="21" data-bbox="16,351,155,38">Learn More</a>
+                        <a id="22" data-bbox="179,351,155,38">Start Mapping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-bbox="0,55,1280,665">
+            <div data-bbox="0,55,1280,0">
+                <span id="23" class="map-control" data-bbox="1250,75,20,20"><i class="fas fa-plus"></i></span>
+                <span id="24" class="map-control" data-bbox="1250,115,20,20"><i class="fas fa-minus"></i></span>
+                <span id="25" class="map-control" data-bbox="1250,155,20,20"><i class="fas fa-layer-group"></i></span>
+                <span id="26" class="map-control" data-bbox="1250,205,20,20"><i class="fas fa-ruler-horizontal"></i></span>
+                <span id="27" class="map-control" data-bbox="1250,245,20,20"><i class="fas fa-share-alt"></i></span>
+                <span id="28" class="map-control" data-bbox="1250,285,20,20"><i class="fas fa-info-circle"></i></span>
+                <a id="29" class="map-control" data-bbox="1240,325,40,40"><i class="fas fa-crosshairs"></i></a>
+                <a id="30" class="map-control" data-bbox="1240,375,40,40"><i class="fas fa-flag"></i></a>
+                <div data-bbox="5,681,90,34">
+                    <div data-bbox="5,681,56,18">50 km</div>
+                    <div data-bbox="5,697,90,18">50 mi</div>
+                </div>
+                <div data-bbox="874,703,406,17">Â© <a id="31" data-bbox="891,704,151,14">OpenStreetMap contributors</a> | <a id="32" data-bbox="1056,704,90,14">Make a Donation</a> | <a id="33" data-bbox="1153,704,122,14">Website and API terms</a></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const closeButton = document.getElementById('16');
+            if (closeButton) {
+                const sidebar = closeButton.closest('div[data-bbox="0,55,350,350"]');
+                if (sidebar) {
+                    closeButton.addEventListener('click', function() {
+                        sidebar.classList.toggle('sidebar-hidden');
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

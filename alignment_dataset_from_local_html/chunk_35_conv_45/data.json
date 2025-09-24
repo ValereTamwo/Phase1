@@ -1,0 +1,539 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_45.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,2268\"><ASIDE class=\"sidebar\" data-bbox=\"0,0,88,721\"><DIV class=\"sidebar-logo\"><IMG id=\"0\" title=\"Magento Admin Panel\" data-bbox=\"27,17,35,41\" src=\"https://upload.wikimedia.org/wikipedia/commons/a/a2/Magento_logo.svg\" alt=\"Magento Logo\"></IMG></DIV><UL class=\"sidebar-nav\" data-bbox=\"0,75,88,646\"><A class=\"nav-item\"><I class=\"fas fa-tachometer-alt possible-clickable-element\" data-testid=\"A\"></I><SPAN id=\"1\" data-bbox=\"14,112,60,13\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Dashboard</text></SPAN></A><LI data-bbox=\"0,137,88,62\"><A class=\"nav-item active\"><I class=\"fas fa-shopping-cart possible-clickable-element\" data-testid=\"C\"></I><SPAN id=\"2\" data-bbox=\"30,174,28,13\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Sales</text></SPAN></A></LI><LI data-bbox=\"0,199,88,62\"><A class=\"nav-item\"><I class=\"fas fa-tags possible-clickable-element\" data-testid=\"E\"></I><SPAN id=\"3\" data-bbox=\"22,236,44,13\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Catalog</text></SPAN></A></LI><LI data-bbox=\"0,261,88,62\"><A class=\"nav-item\"><I class=\"fas fa-users possible-clickable-element\" data-testid=\"G\"></I><SPAN id=\"4\" data-bbox=\"14,298,60,13\" class=\"possible-clickable-element\" data-testid=\"H\"><text>Customers</text></SPAN></A></LI><LI data-bbox=\"0,323,88,62\"><A class=\"nav-item\"><I class=\"fas fa-bullhorn possible-clickable-element\" data-testid=\"I\"></I><SPAN id=\"5\" data-bbox=\"14,360,60,13\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Marketing</text></SPAN></A></LI><LI data-bbox=\"0,385,88,62\"><A class=\"nav-item\"><I class=\"fas fa-file-alt possible-clickable-element\" data-testid=\"K\"></I><SPAN id=\"6\" data-bbox=\"19,422,50,13\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Content</text></SPAN></A></LI><LI data-bbox=\"0,447,88,62\"><A class=\"nav-item\"><I class=\"fas fa-chart-bar possible-clickable-element\" data-testid=\"M\"></I><SPAN id=\"7\" data-bbox=\"22,484,44,13\" class=\"possible-clickable-element\" data-testid=\"N\"><text>Reports</text></SPAN></A></LI><LI data-bbox=\"0,509,88,62\"><A class=\"nav-item\"><I class=\"fas fa-store possible-clickable-element\" data-testid=\"O\"></I><SPAN id=\"8\" data-bbox=\"25,546,38,13\" class=\"possible-clickable-element\" data-testid=\"P\"><text>Stores</text></SPAN></A></LI><LI data-bbox=\"0,571,88,62\"><A class=\"nav-item\"><I class=\"fas fa-cogs possible-clickable-element\" data-testid=\"Q\"></I><SPAN id=\"9\" data-bbox=\"25,608,38,13\" class=\"possible-clickable-element\" data-testid=\"R\"><text>System</text></SPAN></A></LI><LI class=\"nav-footer\"><A class=\"nav-item\"><I class=\"fas fa-puzzle-piece possible-clickable-element\" data-testid=\"S\"></I><SPAN id=\"10\" data-bbox=\"32,670,24,13\" class=\"possible-clickable-element\" data-testid=\"T\"><text>Find Partners & Extensions</text></SPAN></A></LI></UL></ASIDE><DIV class=\"main-wrapper\" data-bbox=\"88,0,1192,2268\"><DIV class=\"system-message-bar\" data-bbox=\"118,0,1132,51\"><DIV data-bbox=\"119,0,1130,50\"><DIV data-bbox=\"129,0,941,49\"><I class=\"fas fa-exclamation-triangle\"></I><text>Failed to synchronize data to the Magento Business Intelligence service.</text><A id=\"12\" data-bbox=\"649,15,147,19\" class=\"possible-clickable-element\" data-testid=\"U\"><text>Retry Synchronization</text></A></DIV></DIV><I class=\"fas fa-bell\"></I><SPAN id=\"11\" data-bbox=\"1085,15,118,19\"><text>System Messages</text></SPAN></DIV><HEADER class=\"main-header\" data-bbox=\"88,51,1192,80\"><H1 data-bbox=\"118,82,740,34\"><text>New Product</text></H1><DIV class=\"header-controls\" data-bbox=\"873,66,377,44\"><DIV class=\"search-bar\" data-bbox=\"1034,77,50,0\"><LABEL id=\"15\" for=\"global-search\" data-bbox=\"1034,77,50,33\" class=\"possible-clickable-element\" data-testid=\"V\"><I class=\"fas fa-search\"></I></LABEL><INPUT type=\"text\" id=\"global-search\" placeholder=\"Search...\" data-bbox=\"1034,77,50,35\" class=\"possible-clickable-element\" data-testid=\"W\" style=\"\"></INPUT></DIV><DIV class=\"header-icons\"><A id=\"14\" title=\"Notifications\" href=\"#\" data-bbox=\"1081,77,60,33\"><I class=\"fas fa-bell possible-clickable-element\" data-testid=\"X\"></I></A></DIV><DIV class=\"user-profile\" data-bbox=\"1144,77,106,33\"><A title=\"My Account\" href=\"#\" data-bbox=\"1144,77,106,33\"><DIV class=\"avatar possible-clickable-element\" data-testid=\"Y\"></DIV><SPAN id=\"13\" data-bbox=\"1185,85,36,18\" class=\"possible-clickable-element\" data-testid=\"Z\"><text>admin</text></SPAN><I class=\"fas fa-caret-down possible-clickable-element\" data-testid=\"AA\"></I></A></DIV></DIV></HEADER><MAIN class=\"main-content\" data-bbox=\"88,143,1192,1985\"><DIV class=\"page-actions\" data-bbox=\"818,159,417,45\"><BUTTON title=\"Back\" type=\"button\" class=\"btn\" data-bbox=\"831,159,102,45\"><SPAN id=\"18\" data-bbox=\"877,170,39,22\" class=\"possible-clickable-element\" data-testid=\"AB\"><text>Back</text></SPAN></BUTTON><BUTTON title=\"Add Attribute\" type=\"button\" class=\"btn\" data-bbox=\"946,159,143,45\"><SPAN id=\"19\" data-bbox=\"963,170,109,22\" class=\"possible-clickable-element\" data-testid=\"AC\"><text>Add Attribute</text></SPAN></BUTTON><DIV class=\"save-button-group\" data-bbox=\"1102,159,133,45\"><BUTTON title=\"Save\" class=\"btn btn-primary\" data-bbox=\"1102,159,93,45\"><SPAN id=\"16\" data-bbox=\"1130,170,37,22\" class=\"possible-clickable-element\" data-testid=\"AD\"><text>Save</text></SPAN></BUTTON><BUTTON id=\"17\" title=\"Save\" class=\"btn btn-primary btn-dropdown\" data-bbox=\"1193,159,42,45\"><I class=\"fas fa-caret-down possible-clickable-element\" data-testid=\"AE\"></I></BUTTON></DIV></DIV><DIV class=\"form-container\" data-bbox=\"118,250,1132,1848\"><FIELDSET class=\"form-section\" data-bbox=\"118,250,1132,907\"><DIV class=\"form-row\" data-bbox=\"88,280,1162,32\"><SPAN id=\"20\" data-bbox=\"274,289,105,17\"><text>Enable Product</text></SPAN><DIV class=\"form-field\"><LABEL class=\"toggle-switch\" id=\"21\" data-bbox=\"409,287,69,22\"><SPAN class=\"toggle-switch-slider possible-clickable-element\" data-testid=\"AF\"></SPAN></LABEL></DIV></DIV><DIV class=\"form-row\" data-bbox=\"88,342,1162,33\"><SPAN id=\"22\" data-bbox=\"290,351,89,17\"><text>Attribute Set</text></SPAN><DIV class=\"form-field\" data-bbox=\"409,342,551,33\"><DIV id=\"23\" data-bbox=\"410,343,513,31\" style=\"padding-top: 8px;\"><text>Default</text></DIV></DIV></DIV><DIV class=\"form-row\" data-bbox=\"88,405,1162,33\"><SPAN id=\"24\" data-bbox=\"280,414,99,17\"><text>Product Name</text></SPAN><DIV class=\"form-field\"><INPUT id=\"25\" type=\"text\" data-bbox=\"409,405,551,33\" class=\"possible-clickable-element\" data-testid=\"AG\" style=\"\"></INPUT></DIV></DIV><DIV class=\"form-row\" data-bbox=\"88,468,1162,33\"><SPAN id=\"26\" data-bbox=\"352,477,27,17\"><text>SKU</text></SPAN><DIV class=\"form-field\"><INPUT id=\"27\" type=\"text\" data-bbox=\"409,468,551,33\" class=\"possible-clickable-element\" data-testid=\"AH\" style=\"\"></INPUT></DIV></DIV><FIELDSET class=\"form-row\" data-bbox=\"88,531,1162,63\"><SPAN id=\"28\" data-bbox=\"345,540,34,17\"><text>Price</text></SPAN><DIV class=\"form-field\"><DIV class=\"input-group\" data-bbox=\"409,531,150,33\"><LABEL id=\"30\" class=\"input-group-addon\" data-bbox=\"409,531,18,32\"><SPAN data-bbox=\"419,537,8,19\"><text>$</text></SPAN></LABEL><INPUT id=\"29\" type=\"text\" data-bbox=\"428,532,130,31\" class=\"possible-clickable-element\" data-testid=\"AI\" style=\"\"></INPUT></DIV><BUTTON type=\"button\" class=\"btn-link\" data-bbox=\"409,574,116,20\" style=\"margin-top: 10px;\"><SPAN id=\"31\" data-bbox=\"409,574,116,19\" class=\"possible-clickable-element\" data-testid=\"AJ\"><text>Advanced Pricing</text></SPAN></BUTTON></DIV></FIELDSET><DIV class=\"form-row\" data-bbox=\"88,624,1162,33\"><SPAN id=\"32\" data-bbox=\"317,632,62,17\"><text>Tax Class</text></SPAN><DIV class=\"form-field\"><SELECT id=\"33\" data-value=\"2\" data-text=\"Taxable Goods\" data-bbox=\"409,624,153,33\" class=\"possible-clickable-element\" data-testid=\"AK\"></SELECT></DIV></DIV><FIELDSET class=\"form-row\" data-bbox=\"88,687,1162,62\"><SPAN id=\"34\" data-bbox=\"318,695,61,17\"><text>Quantity</text></SPAN><DIV class=\"form-field\" data-bbox=\"409,687,551,33\"><INPUT id=\"35\" type=\"text\" data-bbox=\"409,687,150,33\" class=\"possible-clickable-element\" data-testid=\"AL\" style=\"\"></INPUT></DIV></FIELDSET></FIELDSET></DIV></MAIN></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    aside|\n    <img| Magento Admin Panel >\n    <\n      ul|\n      <i[A]| >\n      <span[B]| Dashboard >\n      <i[C]| >\n      <span[D]| Sales >\n      <i[E]| >\n      <span[F]| Catalog >\n      <i[G]| >\n      <span[H]| Customers >\n      <i[I]| >\n      <span[J]| Marketing >\n      <i[K]| >\n      <span[L]| Content >\n      <i[M]| >\n      <span[N]| Reports >\n      <i[O]| >\n      <span[P]| Stores >\n      <i[Q]| >\n      <span[R]| System >\n      <i[S]| >\n      <span[T]| Find Partners & Extensions >\n    >\n  >\n  <\n    div|\n    <\n      div|\n      <\n        div|\n        <text| Failed to synchronize data to the Magento Business Intelligence service. >\n        <a[U]| Retry Synchronization >\n      >\n      <span| System Messages >\n    >\n    <\n      header|\n      <h1| New Product >\n      <\n        div|\n        <label[V]| >\n        <input[W]| Search... >\n        <\n          a| Notifications\n          <i[X]| >\n        >\n        <\n          a| My Account\n          <div[Y]| >\n          <span[Z]| admin >\n          <i[AA]| >\n        >\n      >\n    >\n    <\n      main|\n      <\n        div|\n        <\n          button| Back\n          <span[AB]| Back >\n        >\n        <\n          button| Add Attribute\n          <span[AC]| Add Attribute >\n        >\n        <\n          div|\n          <\n            button| Save\n            <span[AD]| Save >\n          >\n          <\n            button| Save\n            <i[AE]| >\n          >\n        >\n      >\n      <\n        fieldset|\n        <span| Enable Product >\n        <span[AF]| >\n        <\n          div|\n          <span| Attribute Set >\n          <div| Default >\n        >\n        <span| Product Name >\n        <input[AG]| >\n        <span| SKU >\n        <input[AH]| >\n        <\n          fieldset|\n          <span| Price >\n          <\n            div|\n            <span| $ >\n            <input[AI]| >\n            <span[AJ]| Advanced Pricing >\n          >\n        >\n        <span| Tax Class >\n        <select[AK]| >\n        <span| Quantity >\n        <input[AL]| >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 29,
+                "top": 98,
+                "right": 59,
+                "bottom": 118,
+                "width": 30,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 79,
+                "top": 99.5,
+                "right": 151,
+                "bottom": 116.5,
+                "width": 72,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Dashboard"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 29,
+                "top": 154,
+                "right": 59,
+                "bottom": 174,
+                "width": 30,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 79,
+                "top": 155.5,
+                "right": 114,
+                "bottom": 172.5,
+                "width": 35,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Sales"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 29,
+                "top": 210,
+                "right": 59,
+                "bottom": 230,
+                "width": 30,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 79,
+                "top": 211.5,
+                "right": 130,
+                "bottom": 228.5,
+                "width": 51,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Catalog"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 29,
+                "top": 266,
+                "right": 59,
+                "bottom": 286,
+                "width": 30,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 79,
+                "top": 267.5,
+                "right": 149,
+                "bottom": 284.5,
+                "width": 70,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Customers"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 29,
+                "top": 322,
+                "right": 59,
+                "bottom": 342,
+                "width": 30,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 79,
+                "top": 323.5,
+                "right": 146,
+                "bottom": 340.5,
+                "width": 67,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Marketing"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 29,
+                "top": 378,
+                "right": 59,
+                "bottom": 398,
+                "width": 30,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 79,
+                "top": 379.5,
+                "right": 131,
+                "bottom": 396.5,
+                "width": 52,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Content"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 29,
+                "top": 434,
+                "right": 59,
+                "bottom": 454,
+                "width": 30,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 79,
+                "top": 435.5,
+                "right": 130,
+                "bottom": 452.5,
+                "width": 51,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Reports"
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 29,
+                "top": 490,
+                "right": 59,
+                "bottom": 510,
+                "width": 30,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 79,
+                "top": 491.5,
+                "right": 121,
+                "bottom": 508.5,
+                "width": 42,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Stores"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 29,
+                "top": 546,
+                "right": 59,
+                "bottom": 566,
+                "width": 30,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 79,
+                "top": 547.5,
+                "right": 128,
+                "bottom": 564.5,
+                "width": 49,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "System"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 49,
+                "top": 622,
+                "right": 79,
+                "bottom": 642,
+                "width": 30,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 99,
+                "top": 623.5,
+                "right": 273,
+                "bottom": 640.5,
+                "width": 174,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Find Partners & Extensions"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 750,
+                "top": 12,
+                "right": 885,
+                "bottom": 28,
+                "width": 135,
+                "height": 16
+            },
+            "tag": "a",
+            "text": "Retry Synchronization"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 852,
+                "top": 72,
+                "right": 866,
+                "bottom": 89,
+                "width": 14,
+                "height": 17
+            },
+            "tag": "label",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 840,
+                "top": 61,
+                "right": 1076,
+                "bottom": 100,
+                "width": 236,
+                "height": 39
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 1104,
+                "top": 70.5,
+                "right": 1122,
+                "bottom": 90.5,
+                "width": 18,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 1150,
+                "top": 62.5,
+                "right": 1186,
+                "bottom": 98.5,
+                "width": 36,
+                "height": 36
+            },
+            "tag": "div",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 1196,
+                "top": 72,
+                "right": 1237,
+                "bottom": 89,
+                "width": 41,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "admin"
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 1247,
+                "top": 73.5,
+                "right": 1256,
+                "bottom": 87.5,
+                "width": 9,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 951.328125,
+                "top": 156,
+                "right": 983.203125,
+                "bottom": 171,
+                "width": 31.875,
+                "height": 15
+            },
+            "tag": "span",
+            "text": "Back"
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 1037.203125,
+                "top": 156,
+                "right": 1121.859375,
+                "bottom": 171,
+                "width": 84.65625,
+                "height": 15
+            },
+            "tag": "span",
+            "text": "Add Attribute"
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 1175.859375,
+                "top": 156,
+                "right": 1207,
+                "bottom": 171,
+                "width": 31.140625,
+                "height": 15
+            },
+            "tag": "span",
+            "text": "Save"
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 1238,
+                "top": 157,
+                "right": 1246,
+                "bottom": 170.328125,
+                "width": 8,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 525,
+                "top": 237,
+                "right": 575,
+                "bottom": 265,
+                "width": 50,
+                "height": 28
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 525,
+                "top": 338,
+                "right": 1075,
+                "bottom": 377,
+                "width": 550,
+                "height": 39
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 525,
+                "top": 401,
+                "right": 1075,
+                "bottom": 440,
+                "width": 550,
+                "height": 39
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 561,
+                "top": 466,
+                "right": 1077,
+                "bottom": 505,
+                "width": 516,
+                "height": 39
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 527,
+                "top": 515,
+                "right": 628.171875,
+                "bottom": 530,
+                "width": 101.171875,
+                "height": 15
+            },
+            "tag": "span",
+            "text": "Advanced Pricing"
+        },
+        {
+            "keep": true,
+            "id": "AK",
+            "rects": {
+                "left": 525,
+                "top": 556,
+                "right": 1075,
+                "bottom": 597,
+                "width": 550,
+                "height": 41
+            },
+            "tag": "select",
+            "text": "\n                                \n                                \n                            "
+        },
+        {
+            "keep": true,
+            "id": "AL",
+            "rects": {
+                "left": 527,
+                "top": 623,
+                "right": 1077,
+                "bottom": 662,
+                "width": 550,
+                "height": 39
+            },
+            "tag": "input",
+            "text": ""
+        }
+    ]
+}

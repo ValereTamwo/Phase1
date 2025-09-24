@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-bbox="0,0,1280,720">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitLab Sign In</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+        :root {
+            --brand-color: #FC6D26;
+            --brand-color-hover: #E24329;
+            --primary-text: #2E2E2E;
+            --secondary-text: #5E5E5E;
+            --border-color: #EAEAEA;
+            --input-bg: #F9F9F9;
+            --background: #F8F8F8;
+            --white: #FFFFFF;
+            --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--primary-text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        div[data-bbox="160,48,960,551"] {
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            padding: 48px;
+            max-width: 480px;
+            width: 100%;
+            border: 1px solid var(--border-color);
+        }
+
+        div[data-bbox="175,129,930,97"] {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        svg[data-bbox="612,129,56,54"] {
+            width: 56px;
+            height: 54px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-text);
+            margin-top: 16px;
+        }
+
+        form[data-testid="sign-in-form"] {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        form > div {
+            margin-bottom: 20px;
+        }
+        form > div:last-of-type {
+            margin-bottom: 0;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary-text);
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        input[data-testid="username-field"],
+        input[data-testid="password-field"] {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--input-bg);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input[data-testid="username-field"]:focus,
+        input[data-testid="password-field"]:focus {
+            outline: none;
+            border-color: var(--brand-color);
+            background-color: var(--white);
+            box-shadow: 0 0 0 3px rgba(252, 109, 38, 0.2);
+        }
+
+        div[data-bbox="408,401,465,26"] {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        div[data-bbox="424,403,114,24"] > div {
+             display: flex;
+             align-items: center;
+             gap: 8px;
+        }
+
+        input[value="1"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--brand-color);
+            cursor: pointer;
+        }
+
+        a {
+            color: var(--brand-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--brand-color-hover);
+            text-decoration: underline;
+        }
+
+        button[data-testid="sign-in-button"] {
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--white);
+            background-color: var(--brand-color);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            margin-top: 10px;
+        }
+
+        button[data-testid="sign-in-button"]:hover {
+            background-color: var(--brand-color-hover);
+        }
+        
+        button[data-testid="sign-in-button"]:active {
+            transform: scale(0.98);
+        }
+
+        p[data-bbox="408,499,465,19"] {
+            margin-top: 24px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--secondary-text);
+        }
+
+        hr {
+            display: none; /* Hide the original hr to create a cleaner layout */
+        }
+
+        div[data-bbox="160,680,960,40"] {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        div[data-bbox="175,680,341,20"] a {
+            font-size: 13px;
+            color: var(--secondary-text);
+            margin: 0 12px;
+        }
+    </style>
+</head>
+<body data-bbox="0,48,1280,709">
+    <div data-bbox="0,48,1280,709">
+        <div data-bbox="0,48,1280,0"></div>
+        <div data-bbox="160,48,960,551">
+            <div data-bbox="175,48,930,470">
+                <div data-bbox="175,56,930,65"></div>
+                <div data-bbox="175,129,930,97">
+                    <div data-bbox="175,129,930,97">
+                        <svg viewBox="0 0 36 36" data-bbox="612,129,56,54" xmlns="http://www.w3.org/2000/svg"><path fill="#E24329" d="M35.2,12.4L33.8,8.2C33.5,7.1,32.5,6.4,31.4,6.4H4.6c-1.1,0-2.1,0.7-2.4,1.8L0.8,12.4c-0.1,0.4,0,0.8,0.2,1.1c0.3,0.3,0.7,0.5,1.1,0.5h31.7c0.4,0,0.8-0.2,1.1-0.5C35.2,13.1,35.3,12.7,35.2,12.4z"></path><path fill="#FC6D26" d="M18,35.9L31.2,6.4H4.8L18,35.9z"></path><path fill="#FCA326" d="M18,35.9L4.8,6.4H0.9c-0.4,0-0.8,0.2-1.1,0.5c-0.3,0.3-0.4,0.7-0.2,1.1l17.6,27.8C17.4,36.1,17.7,36.1,18,35.9z"></path><path fill="#E24329" d="M35.1,6.4H4.8l-4-6.1C0.3-0.4-0.4-0.1-0.4-0.1s0.3,1,0.7,1.6L18,29.8l17.4-28.3c0.4-0.6,0.7-1.6,0.7-1.6s-0.7-0.2-1.2,0.4L35.1,6.4z"></path><path fill="#FC6D26" d="M18,35.9l13.2-29.5h-3.9L18,35.9z"></path><path fill="#FCA326" d="M18,35.9L31.2,6.4h3.9c0.4,0,0.8,0.2,1.1,0.5c0.3,0.3,0.4,0.7,0.2,1.1L18.8,35.8C18.6,36.1,18.3,36.1,18,35.9z"></path></svg>
+                        <h1 data-bbox="190,203,900,23"> GitLab Community Edition </h1>
+                    </div>
+                </div>
+                <div data-bbox="175,242,930,276">
+                    <div data-bbox="408,242,465,276">
+                        <div data-bbox="408,242,465,276">
+                            <div data-bbox="408,242,465,249">
+                                <div data-bbox="408,242,465,249">
+                                    <div data-bbox="408,242,465,249">
+                                        <form data-testid="sign-in-form" data-bbox="408,242,465,249">
+                                            <div data-bbox="408,242,465,71">
+                                                <label id="0" for="1" data-bbox="424,258,110,19"> Username or email </label>
+                                                <input id="1" type="text" title="This field is required." data-value="byteblaze" data-testid="username-field" data-bbox="424,279,433,34">
+                                            </div>
+                                            <div data-bbox="408,329,465,56">
+                                                <label id="2" for="3" data-bbox="424,329,55,20"> Password </label>
+                                                <input id="3" type="password" title="This field is required." data-testid="password-field" data-bbox="424,351,433,34">
+                                            </div>
+                                            <div data-bbox="408,401,465,26">
+                                                <div data-bbox="424,403,114,24">
+                                                    <div data-bbox="424,403,114,24">
+                                                        <input type="checkbox" value="1" data-bbox="424,403,16,20">
+                                                        <label data-bbox="448,403,90,16">
+                                                            <span id="4" data-bbox="448,401,90,19"> Remember me </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div data-bbox="725,401,132,19">
+                                                    <a id="5" href="#" data-bbox="725,402,132,17"> Forgot your password? </a>
+                                                </div>
+                                            </div>
+                                            <div data-bbox="408,427,465,0"></div>
+                                            <div data-bbox="408,443,465,48">
+                                                <button id="6" type="submit" data-testid="sign-in-button" data-bbox="424,443,433,32"> Sign in </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <p data-bbox="408,499,465,19"> Don't have an account yet? <a id="7" href="#" data-bbox="682,500,75,17"> Register now </a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr data-bbox="0,655,1280,41">
+        <div data-bbox="160,680,960,40">
+            <div data-bbox="175,680,341,20">
+                <a id="8" href="#" data-bbox="175,681,46,19"> Explore </a>
+                <a id="9" href="#" data-bbox="239,681,29,19"> Help </a>
+                <a id="10" href="#" data-bbox="287,681,82,19"> About GitLab </a>
+                <a id="11" href="#" data-bbox="388,681,113,19"> Community forum </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const signInButton = document.getElementById('6');
+
+            if (signInButton) {
+                // Example of adding subtle JS interactivity
+                signInButton.addEventListener('mouseenter', () => {
+                    signInButton.style.boxShadow = '0 6px 15px rgba(252, 109, 38, 0.3)';
+                });
+                signInButton.addEventListener('mouseleave', () => {
+                    signInButton.style.boxShadow = 'none';
+                });
+            }
+
+            // Associate labels with inputs for better accessibility
+            const label0 = document.getElementById('0');
+            if (label0) label0.setAttribute('for', '1');
+
+            const label2 = document.getElementById('2');
+            if (label2) label2.setAttribute('for', '3');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - One Stop Market</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --surface-color: #ffffff;
+            --border-color: #dee2e6;
+            --text-color: #212529;
+            --text-muted-color: #6c757d;
+            --success-color: #28a745;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Header Styles */
+        .page-header {
+            background-color: var(--surface-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header-top {
+            background-color: #f1f1f1;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-top-links li {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-top-links li:not(:last-child)::after {
+            content: '|';
+            color: var(--border-color);
+            margin-left: 20px;
+        }
+        
+        .header-top-links a {
+            color: var(--text-muted-color);
+        }
+        
+        .welcome-msg {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .header-main {
+            padding: 20px 0;
+        }
+        
+        .header-main .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo a {
+            display: block;
+        }
+        
+        .logo img {
+            display: block;
+        }
+
+        .search-form {
+            position: relative;
+            flex-grow: 1;
+            max-width: 500px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 45px 12px 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
+            font-size: 16px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+        
+        .search-button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+        
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+        
+        .advanced-search-link {
+            display: block;
+            margin-top: 8px;
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .cart-link {
+            font-size: 24px;
+            color: var(--text-color);
+            position: relative;
+        }
+        
+        .cart-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Main Navigation */
+        .main-nav {
+            background-color: var(--primary-color);
+        }
+        
+        .main-nav-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .main-nav-list li a {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+        
+        .main-nav-list li a:hover {
+            background-color: #0056b3;
+        }
+        
+        .main-nav-list .nav-arrow {
+            margin-left: 8px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+        
+        /* Main Content Area */
+        .main-content {
+            padding: 40px 0;
+        }
+
+        .main-content .container {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 30px;
+        }
+        
+        /* Sidebar Navigation */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .sidebar-block {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .sidebar-block-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .sidebar-nav-list li a, .sidebar-nav-list li strong {
+            display: block;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .sidebar-nav-list li a:hover {
+            background-color: #e9ecef;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        
+        .sidebar-nav-list li strong {
+            background-color: var(--primary-color);
+            color: white;
+            cursor: default;
+        }
+
+        /* Page Content */
+        .page-content {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        
+        /* Orders Table */
+        .orders-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .orders-table caption {
+            display: none;
+        }
+        
+        .orders-table th, .orders-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .orders-table thead th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: var(--text-muted-color);
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .orders-table tbody tr {
+            transition: background-color 0.2s;
+        }
+        
+        .orders-table tbody tr.row-hover {
+            background-color: #f1f7ff;
+        }
+
+        .orders-table td {
+            font-size: 15px;
+        }
+        
+        .order-status {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            background-color: #e4f8e9;
+            color: var(--success-color);
+        }
+        
+        .order-actions a {
+            margin-right: 15px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .order-actions a i {
+            margin-right: 5px;
+        }
+        
+    </style>
+</head>
+<body data-bbox="0,0,1280,1558">
+    <div data-bbox="0,0,1280,1558">
+        <header data-bbox="0,0,1280,128" class="page-header">
+            <div data-bbox="0,0,1280,40" class="header-top">
+                <div class="container">
+                    <span data-bbox="19,9,28,19" class="sr-only">Skip to Content</span>
+                    <ul data-bbox="808,10,452,20" class="header-top-links">
+                        <li><a id="0" data-bbox="823,10,78,19" href="#">My Account</a></li>
+                        <li><a id="1" data-bbox="916,10,84,19" href="#">My Wish List</a></li>
+                        <li data-label="or" data-bbox="1015,10,58,20"><a id="2" data-bbox="1015,10,58,19" href="#">Sign Out</a></li>
+                        <li><span data-bbox="1103,10,157,19" class="welcome-msg">Welcome, Emma Lopez!</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-bbox="0,41,1280,87" class="header-main">
+                 <div class="container">
+                    <a title="one_stop_market_logo" data-bbox="20,71,200,27" href="#" class="logo">
+                        <img id="3" title="one_stop_market_logo" data-bbox="20,71,200,27" src="https://via.placeholder.com/200x27/343A40/FFFFFF?text=OneStopMarket" alt="One Stop Market Logo">
+                    </a>
+                    <div data-bbox="947,71,265,57">
+                        <form data-bbox="962,71,250,57" class="search-form" action="#" method="get">
+                            <div data-bbox="962,71,250,57">
+                                <span data-bbox="960,102,1,1" class="sr-only">Search</span>
+                                <div data-bbox="962,71,250,57">
+                                    <input id="5" type="text" placeholder="Search entire store here..." data-bbox="962,71,250,32" class="search-input">
+                                    <button title="Search" type="submit" data-bbox="1180,71,22,32" class="search-button">
+                                        <i class="fas fa-search"></i>
+                                        <span data-bbox="1201,75,1,1" class="sr-only">Search</span>
+                                    </button>
+                                </div>
+                                <a id="6" data-bbox="962,108,116,19" href="#" class="advanced-search-link">Advanced Search</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div data-bbox="1225,71,35,33">
+                        <a id="4" data-bbox="1225,71,35,33" href="#" class="cart-link" aria-label="My Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span data-bbox="1259,70,1,1" class="sr-only">My Cart</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div data-bbox="0,128,1280,106" class="main-nav">
+            <div class="container">
+                <ul data-bbox="0,128,1280,106" class="main-nav-list">
+                    <li data-bbox="8,128,194,53"><a href="#"><span id="8" data-bbox="20,145,162,19">Beauty & Personal Care</span><span id="7" data-bbox="190,128,12,53" class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a></li>
+                    <li data-bbox="212,128,162,53"><a href="#"><span id="10" data-bbox="224,145,130,19">Sports & Outdoors</span><span id="9" data-bbox="362,128,12,53" class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a></li>
+                    <li data-bbox="384,128,209,53"><a href="#"><span id="12" data-bbox="396,145,177,19">Clothing, Shoes & Jewelry</span><span id="11" data-bbox="581,128,12,53" class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a></li>
+                    <li data-bbox="603,128,145,53"><a href="#"><span id="14" data-bbox="615,145,113,19">Home & Kitchen</span><span id="13" data-bbox="736,128,12,53" class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a></li>
+                    <li data-bbox="758,128,139,53"><a href="#"><span id="16" data-bbox="770,145,107,19">Office Products</span><span id="15" data-bbox="885,128,12,53" class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a></li>
+                    <li data-bbox="907,128,229,53"><a href="#"><span id="18" data-bbox="919,145,197,19">Tools & Home Improvement</span><span id="17" data-bbox="1124,128,12,53" class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a></li>
+                    <li data-bbox="8,181,172,53"><a href="#"><span id="20" data-bbox="20,198,140,19">Health & Household</span><span id="19" data-bbox="168,181,12,53" class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a></li>
+                    <li data-bbox="190,181,182,53"><a href="#"><span id="22" data-bbox="202,198,150,19">Patio, Lawn & Garden</span><span id="21" data-bbox="360,181,12,53" class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a></li>
+                    <li data-bbox="382,181,107,53"><a href="#"><span id="24" data-bbox="394,198,75,19">Electronics</span><span id="23" data-bbox="477,181,12,53" class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a></li>
+                    <li data-bbox="499,181,211,53"><a href="#"><span id="26" data-bbox="511,198,179,19">Cell Phones & Accessories</span><span id="25" data-bbox="698,181,12,53" class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a></li>
+                    <li data-bbox="720,181,122,53"><a href="#"><span id="28" data-bbox="732,198,90,19">Video Games</span><span id="27" data-bbox="830,181,12,53" class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a></li>
+                    <li data-bbox="852,181,206,53"><a href="#"><span id="30" data-bbox="864,198,174,19">Grocery & Gourmet Food</span><span id="29" data-bbox="1046,181,12,53" class="nav-arrow"><i class="fas fa-chevron-down"></i></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <main data-bbox="20,259,1240,1017" class="main-content">
+            <div class="container">
+                <aside class="sidebar">
+                    <div data-bbox="20,259,252,360" class="sidebar-block">
+                        <strong data-bbox="19,258,21,19" class="sidebar-block-title">My Account</strong>
+                        <ul data-bbox="20,274,252,330" class="sidebar-nav-list">
+                            <li><a id="49" data-bbox="20,274,252,30" href="#">My Account</a></li>
+                            <li><strong data-bbox="20,307,252,30">My Orders</strong></li>
+                            <li><a id="50" data-bbox="20,340,252,30" href="#">My Downloadable Products</a></li>
+                            <li><a id="51" data-bbox="20,373,252,30" href="#">My Wish List</a></li>
+                            <li><a id="52" data-bbox="20,424,252,30" href="#">Address Book</a></li>
+                            <li><a id="53" data-bbox="20,457,252,30" href="#">Account Information</a></li>
+                            <li><a id="54" data-bbox="20,490,252,30" href="#">Stored Payment Methods</a></li>
+                            <li><a id="55" data-bbox="20,541,252,30" href="#">My Product Reviews</a></li>
+                            <li><a id="56" data-bbox="20,574,252,30" href="#">Newsletter Subscriptions</a></li>
+                        </ul>
+                    </div>
+                    <div data-bbox="20,699,277,577" class="sidebar-block">
+                        <div data-bbox="20,699,277,56">
+                            <div data-bbox="20,699,277,21">
+                                <strong data-bbox="20,696,155,24" class="sidebar-block-title">Compare Products</strong>
+                            </div>
+                            <!-- Compare products content would go here -->
+                        </div>
+                    </div>
+                </aside>
+
+                <div data-bbox="297,259,963,593" class="page-content">
+                    <h1 data-bbox="321,254,190,54" class="page-title">My Orders</h1>
+                    <table data-bbox="321,343,939,397" class="orders-table">
+                        <caption data-bbox="320,379,1,1">Orders</caption>
+                        <thead>
+                            <tr data-bbox="321,343,939,37">
+                                <th data-bbox="321,343,166,37">Order #</th>
+                                <th data-bbox="487,343,141,37">Date</th>
+                                <th data-bbox="628,343,177,37">Order Total</th>
+                                <th data-bbox="805,343,152,37">Status</th>
+                                <th data-bbox="957,343,303,37">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bbox="321,380,939,360">
+                            <tr data-bbox="321,380,939,36">
+                                <td data-bbox="321,380,166,36">000000148</td>
+                                <td data-bbox="487,380,141,36">1/29/23</td>
+                                <td data-bbox="638,388,52,19">$440.64</td>
+                                <td data-bbox="805,380,152,36"><span class="order-status">Complete</span></td>
+                                <td data-bbox="957,380,303,36" class="order-actions">
+                                    <a id="31" data-bbox="967,388,75,19" href="#"><i class="fas fa-eye"></i> View Order</a>
+                                    <a id="32" data-bbox="1061,388,54,19" href="#"><i class="fas fa-redo"></i> Reorder</a>
+                                </td>
+                            </tr>
+                            <tr data-bbox="321,416,939,36">
+                                <td data-bbox="321,416,166,36">000000163</td>
+                                <td data-bbox="487,416,141,36">1/16/23</td>
+                                <td data-bbox="638,424,52,19">$132.24</td>
+                                <td data-bbox="805,416,152,36"><span class="order-status">Complete</span></td>
+                                <td data-bbox="957,416,303,36" class="order-actions">
+                                    <a id="33" data-bbox="967,424,75,19" href="#"><i class="fas fa-eye"></i> View Order</a>
+                                    <a id="34" data-bbox="1061,424,54,19" href="#"><i class="fas fa-redo"></i> Reorder</a>
+                                </td>
+                            </tr>
+                            <tr data-bbox="321,452,939,36">
+                                <td data-bbox="321,452,166,36">000000154</td>
+                                <td data-bbox="487,452,141,36">12/18/22</td>
+                                <td data-bbox="638,460,44,19">$97.15</td>
+                                <td data-bbox="805,452,152,36"><span class="order-status">Complete</span></td>
+                                <td data-bbox="957,452,303,36" class="order-actions">
+                                    <a id="35" data-bbox="967,460,75,19" href="#"><i class="fas fa-eye"></i> View Order</a>
+                                    <a id="36" data-bbox="1061,460,54,19" href="#"><i class="fas fa-redo"></i> Reorder</a>
+                                </td>
+                            </tr>
+                            <tr data-bbox="321,488,939,36">
+                                <td data-bbox="321,488,166,36">000000184</td>
+                                <td data-bbox="487,488,141,36">12/14/22</td>
+                                <td data-bbox="638,496,44,19">$20.49</td>
+                                <td data-bbox="805,488,152,36"><span class="order-status">Complete</span></td>
+                                <td data-bbox="957,488,303,36" class="order-actions">
+                                    <a id="37" data-bbox="967,496,75,19" href="#"><i class="fas fa-eye"></i> View Order</a>
+                                    <a id="38" data-bbox="1061,496,54,19" href="#"><i class="fas fa-redo"></i> Reorder</a>
+                                </td>
+                            </tr>
+                            <tr data-bbox="321,524,939,36">
+                                <td data-bbox="321,524,166,36">000000162</td>
+                                <td data-bbox="487,524,141,36">12/12/22</td>
+                                <td data-bbox="638,532,44,19">$53.29</td>
+                                <td data-bbox="805,524,152,36"><span class="order-status">Complete</span></td>
+                                <td data-bbox="957,524,303,36" class="order-actions">
+                                    <a id="39" data-bbox="967,532,75,19" href="#"><i class="fas fa-eye"></i> View Order</a>
+                                    <a id="40" data-bbox="1061,532,54,19" href="#"><i class="fas fa-redo"></i> Reorder</a>
+                                </td>
+                            </tr>
+                            <tr data-bbox="321,560,939,36">
+                                <td data-bbox="321,560,166,36">000000174</td>
+                                <td data-bbox="487,560,141,36">12/4/22</td>
+                                <td data-bbox="638,568,44,19">$32.47</td>
+                                <td data-bbox="805,560,152,36"><span class="order-status">Complete</span></td>
+                                <td data-bbox="957,560,303,36" class="order-actions">
+                                    <a id="41" data-bbox="967,568,75,19" href="#"><i class="fas fa-eye"></i> View Order</a>
+                                    <a id="42" data-bbox="1061,568,54,19" href="#"><i class="fas fa-redo"></i> Reorder</a>
+                                </td>
+                            </tr>
+                            <tr data-bbox="321,596,939,36">
+                                <td data-bbox="321,596,166,36">000000164</td>
+                                <td data-bbox="487,596,141,36">11/26/22</td>
+                                <td data-bbox="638,604,52,19">$218.17</td>
+                                <td data-bbox="805,596,152,36"><span class="order-status">Complete</span></td>
+                                <td data-bbox="957,596,303,36" class="order-actions">
+                                    <a id="43" data-bbox="967,604,75,19" href="#"><i class="fas fa-eye"></i> View Order</a>
+                                    <a id="44" data-bbox="1061,604,54,19" href="#"><i class="fas fa-redo"></i> Reorder</a>
+                                </td>
+                            </tr>
+                            <tr data-bbox="321,632,939,36">
+                                <td data-bbox="321,632,166,36">000000171</td>
+                                <td data-bbox="487,632,141,36">11/20/22</td>
+                                <td data-bbox="638,640,52,19">$133.07</td>
+                                <td data-bbox="805,632,152,36"><span class="order-status">Complete</span></td>
+                                <td data-bbox="957,632,303,36" class="order-actions">
+                                    <a id="45" data-bbox="967,640,75,19" href="#"><i class="fas fa-eye"></i> View Order</a>
+                                    <a id="46" data-bbox="1061,640,54,19" href="#"><i class="fas fa-redo"></i> Reorder</a>
+                                </td>
+                            </tr>
+                            <tr data-bbox="321,668,939,36">
+                                <td data-bbox="321,668,166,36">000000183</td>
+                                <td data-bbox="487,668,141,36">11/11/22</td>
+                                <td data-bbox="638,676,44,19">$51.94</td>
+                                <td data-bbox="805,668,152,36"><span class="order-status">Complete</span></td>
+                                <td data-bbox="957,668,303,36" class="order-actions">
+                                    <a id="47" data-bbox="967,676,75,19" href="#"><i class="fas fa-eye"></i> View Order</a>
+                                    <a id="48" data-bbox="1061,676,54,19" href="#"><i class="fas fa-redo"></i> Reorder</a>
+                                </td>
+                            </tr>
+                            <tr data-bbox="321,704,939,36">
+                                <td data-bbox="321,704,166,36">000000176</td>
+                                <td data-bbox="487,704,141,36">10/22/22</td>
+                                <td data-bbox="638,712,52,19">$845.07</td>
+                                <td data-bbox="805,704,152,36"><span class="order-status">Complete</span></td>
+                                <td data-bbox="957,704,303,36" class="order-actions">
+                                    <a data-bbox="967,712,75,19" href="#"><i class="fas fa-eye"></i> View Order</a>
+                                    <a data-bbox="1061,712,54,19" href="#"><i class="fas fa-redo"></i> Reorder</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tableRows = document.querySelectorAll('.orders-table tbody tr');
+            
+            tableRows.forEach(row => {
+                row.addEventListener('mouseover', () => {
+                    row.classList.add('row-hover');
+                });
+                row.addEventListener('mouseout', () => {
+                    row.classList.remove('row-hover');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

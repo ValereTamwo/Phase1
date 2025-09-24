@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" data-bbox="0,-1080,1263,2344">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Settings - GitLab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --font-family: 'Inter', sans-serif;
+            --header-bg: #ffffff;
+            --sidebar-bg: #2c3e50;
+            --main-bg: #f8f9fa;
+            --content-bg: #ffffff;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --text-light: #f8f9fa;
+            --border-color: #e9ecef;
+            --accent-color: #4a90e2;
+            --button-primary-bg: #2e86de;
+            --button-primary-hover-bg: #1e6ab3;
+            --button-secondary-bg: #f1f3f5;
+            --button-secondary-hover-bg: #e9ecef;
+            --input-border: #ced4da;
+            --input-focus-border: #80bdff;
+            --sidebar-width: 250px;
+            --header-height: 48px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            font-family: var(--font-family);
+            font-size: 14px;
+            color: var(--text-primary);
+            background-color: var(--main-bg);
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main";
+            grid-template-rows: var(--header-height) 1fr;
+            grid-template-columns: var(--sidebar-width) 1fr;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .app-header {
+            grid-area: header;
+            background-color: var(--header-bg);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            gap: 16px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .logo-container { display: flex; align-items: center; font-size: 24px; color: #e24329; }
+        .gitlab-logo { font-size: 24px; color: #fc6d26; }
+        .search-container { position: relative; flex-grow: 1; max-width: 320px; }
+        .search-container i { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-secondary); }
+        #5 {
+            width: 100%;
+            height: 32px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            padding: 0 12px 0 34px;
+            font-size: 14px;
+            background-color: #f8f9fa;
+        }
+        #5::placeholder { color: var(--text-secondary); }
+        #5:focus { outline: none; border-color: var(--accent-color); box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2); }
+
+        .header-actions { display: flex; align-items: center; gap: 16px; margin-left: auto; }
+        .action-group { display: flex; align-items: center; gap: 6px; color: var(--text-secondary); cursor: pointer; }
+        .action-group i { font-size: 16px; }
+        .action-group span { font-weight: 500; font-size: 13px; }
+        .action-group:hover { color: var(--text-primary); }
+        .user-menu { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+        #17 { border-radius: 50%; width: 24px; height: 24px; object-fit: cover; }
+
+        .app-sidebar {
+            grid-area: sidebar;
+            background-color: var(--sidebar-bg);
+            color: var(--text-light);
+            padding: 24px 0;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            height: calc(100vh - var(--header-height));
+            width: var(--sidebar-width);
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 20px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        #19 { border-radius: 50%; width: 32px; height: 32px; object-fit: cover; }
+        #20 { font-weight: 600; font-size: 16px; }
+
+        .sidebar-nav {
+            list-style: none;
+            padding: 16px 0;
+            flex-grow: 1;
+        }
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 20px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+        .sidebar-nav a.active {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-left: 3px solid var(--accent-color);
+            padding-left: 17px;
+        }
+        .sidebar-nav a:hover:not(.active) { background-color: var(--sidebar-hover-bg, #34495e); }
+        .sidebar-nav i { width: 16px; text-align: center; }
+
+        .sidebar-footer {
+            padding: 16px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .collapse-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-light);
+            opacity: 0.8;
+            font-size: 13px;
+        }
+        .collapse-link:hover { opacity: 1; }
+        
+        .app-content {
+            grid-area: main;
+            padding: 24px;
+            background-color: var(--main-bg);
+            margin-top: var(--header-height);
+        }
+        
+        .profile-form-container {
+            max-width: 958px;
+            margin: 0 auto;
+            background: var(--content-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .form-content {
+            padding: 24px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        @media (min-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-primary);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            max-width: 320px;
+            height: 34px;
+            padding: 0 12px;
+            border: 1px solid var(--input-border);
+            border-radius: 4px;
+            background-color: var(--input-bg);
+            font-size: 14px;
+            font-family: var(--font-family);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-group select { height: 32px; }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--input-focus-border);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.25);
+        }
+
+        .form-group .help-link {
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .form-footer {
+            padding: 16px 24px;
+            border-top: 1px solid var(--border-color);
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        button, .btn-link {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--button-primary-bg);
+            color: var(--button-primary-text);
+        }
+        .btn-primary:hover { background-color: var(--button-primary-hover-bg); }
+
+        .btn-secondary {
+            background-color: var(--button-secondary-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--input-border);
+        }
+        .btn-secondary:hover { background-color: var(--button-secondary-hover-bg); }
+
+    </style>
+</head>
+<body data-bbox="0,-1032,1263,2296">
+    <header class="app-header">
+        <a href="#" class="logo-container">
+            <i id="0" data-bbox="16,12,25,24" class="fab fa-gitlab gitlab-logo"></i>
+            <!-- Placeholder for other logo paths -->
+            <path id="1" data-bbox="28,21,13,12"></path>
+            <path id="2" data-bbox="24,29,9,7"></path>
+            <path id="3" data-bbox="16,21,12,12"></path>
+            <use id="4" data-bbox="65,19,16,10"></use>
+        </a>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input id="5" type="search" placeholder="Search GitLab" data-bbox="99,8,320,32">
+        </div>
+        <div class="header-actions">
+            <div class="action-group">
+                <i id="6" data-testid="plus-square-icon" data-bbox="882,16,16,16" class="fas fa-plus-square"></i>
+                <i id="7" data-testid="chevron-down-icon" data-bbox="902,16,16,16" class="fas fa-chevron-down"></i>
+            </div>
+            <div class="action-group">
+                <i id="8" data-testid="issues-icon" data-bbox="938,16,16,16" class="fas fa-exclamation-circle"></i>
+                <span id="9" data-bbox="953,16,29,16">30</span>
+            </div>
+            <div class="action-group">
+                <i id="10" data-testid="git-merge-icon" data-bbox="1002,16,16,16" class="fas fa-code-branch"></i>
+                <span id="11" data-bbox="1017,16,22,16">6</span>
+                <i id="12" data-testid="chevron-down-icon" data-bbox="1039,16,16,16" class="fas fa-chevron-down"></i>
+            </div>
+            <div class="action-group">
+                <i id="13" data-testid="todo-done-icon" data-bbox="1075,16,16,16" class="fas fa-check-square"></i>
+                <span id="14" data-bbox="1090,16,29,16">24</span>
+            </div>
+             <div class="action-group">
+                <i id="15" data-testid="question-o-icon" data-bbox="1137,16,16,16" class="fas fa-question-circle"></i>
+                <i id="16" data-testid="chevron-down-icon" data-bbox="1157,16,16,16" class="fas fa-chevron-down"></i>
+            </div>
+            <div class="user-menu">
+                <img id="17" src="https://picsum.photos/seed/user17/24/24" alt="User Avatar" data-bbox="1193,12,24,24">
+                <i id="18" data-testid="chevron-down-icon" data-bbox="1221,16,16,16" class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-container" data-bbox="0,-1032,1263,2296">
+        <aside class="app-sidebar">
+            <div class="sidebar-header">
+                <img id="19" data-testid="sidebar-user-avatar" src="https://picsum.photos/seed/user19/32/32" alt="User Avatar" data-bbox="12,56,32,32">
+                <span id="20" data-bbox="52,64,84,16">User Settings</span>
+            </div>
+            <nav>
+                <ul class="sidebar-nav">
+                    <li><a href="#" class="active"><i id="21" data-bbox="20,104,16,16" class="fas fa-user"></i><span id="22" data-bbox="44,104,191,16">Profile</span></a></li>
+                    <li><a href="#"><i id="23" data-testid="account-icon" data-bbox="20,137,16,16" class="fas fa-user-circle"></i><span id="24" data-bbox="44,137,191,16">Account</span></a></li>
+                    <li><a href="#"><i id="25" data-testid="applications-icon" data-bbox="20,170,16,16" class="fas fa-th-large"></i><span id="26" data-bbox="44,170,191,16">Applications</span></a></li>
+                    <li><a href="#"><i id="27" data-testid="comment-icon" data-bbox="20,203,16,16" class="fas fa-comments"></i><span id="28" data-bbox="44,203,191,16">Chat</span></a></li>
+                    <li><a href="#"><i id="29" data-bbox="20,239,16,10" class="fas fa-key"></i><span id="30" data-bbox="44,236,191,16">Access Tokens</span></a></li>
+                    <li><a href="#"><i id="31" data-testid="mail-icon" data-bbox="20,269,16,16" class="fas fa-envelope"></i><span id="32" data-bbox="44,269,191,16">Emails</span></a></li>
+                    <li><a href="#"><i id="33" data-testid="lock-icon" data-bbox="20,302,16,16" class="fas fa-lock"></i><span id="34" data-bbox="44,302,191,16">Password</span></a></li>
+                    <li><a href="#"><i id="35" data-testid="notifications-icon" data-bbox="20,335,16,16" class="fas fa-bell"></i><span id="36" data-bbox="44,335,191,16">Notifications</span></a></li>
+                    <li><a href="#"><i id="37" data-testid="key-icon" data-bbox="20,368,16,16" class="fas fa-key"></i><span id="38" data-bbox="44,368,191,16">SSH Keys</span></a></li>
+                    <li><a href="#"><i id="39" data-testid="key-icon" data-bbox="20,401,16,16" class="fas fa-key"></i><span id="40" data-bbox="44,401,191,16">GPG Keys</span></a></li>
+                    <li><a href="#"><i id="41" data-testid="preferences-icon" data-bbox="20,434,16,16" class="fas fa-sliders-h"></i><span id="42" data-bbox="44,434,191,16">Preferences</span></a></li>
+                    <li><a href="#"><i id="43" data-bbox="20,468,16,14" class="fas fa-desktop"></i><span id="44" data-bbox="44,467,191,16">Active Sessions</span></a></li>
+                    <li><a href="#"><i id="45" data-bbox="22,501,12,14" class="fas fa-history"></i><span id="46" data-bbox="44,500,191,16">Authentication log</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="collapse-link">
+                    <i id="47" data-bbox="18,692,8,8" class="fas fa-angle-double-left"></i>
+                    <span id="48" data-bbox="36,686,101,21">Collapse sidebar</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="app-content" data-bbox="256,-1032,1007,2296">
+            <div data-bbox="265,-968,990,2132">
+                <div class="profile-form-container">
+                    <form data-bbox="281,-920,958,2084">
+                        <div class="form-content" data-bbox="266,-434,988,1517">
+                            <div class="form-grid" data-bbox="595,-434,658,1517">
+                                <div data-bbox="266,-434,329,1517"></div>
+                                <div class="form-section">
+                                    <div class="form-group">
+                                        <label id="49" for="50" data-bbox="610,59,89,21">Commit email</label>
+                                        <select id="50" data-text="Use primary email (ericwbailey@fakegithub.com)" data-bbox="610,88,320,32">
+                                            <option selected="selected">Use primary email (ericwbailey@fakegithub.com)</option>
+                                            <option value="_private">Use a private email - 2330-byteblaze@users.noreply.db0150aa304d</option>
+                                            <option value="ericwbailey@fakegithub.com">ericwbailey@fakegithub.com</option>
+                                        </select>
+                                        <a id="51" href="#" class="help-link" data-bbox="1079,122,73,19">Learn more.</a>
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="52" for="53" data-bbox="610,156,38,21">Skype</label>
+                                        <input id="53" type="text" placeholder="username" data-bbox="610,185,320,34">
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="54" for="55" data-bbox="610,235,53,21">Linkedin</label>
+                                        <input id="55" type="text" data-bbox="610,264,320,34">
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="56" for="57" data-bbox="610,334,44,21">Twitter</label>
+                                        <input id="57" type="text" placeholder="@username" data-bbox="610,363,320,34">
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="58" for="59" data-bbox="610,413,72,21">Website url</label>
+                                        <input id="59" type="url" value="https://694.com" placeholder="https://website.com" data-bbox="610,442,320,34">
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="60" for="61" data-bbox="610,492,54,21">Location</label>
+                                        <input id="61" type="text" value="Boston, MA" placeholder="City, country" data-bbox="610,521,320,34">
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="62" for="63" data-bbox="610,571,51,21">Job title</label>
+                                        <input id="63" type="text" data-bbox="610,600,320,34">
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="64" for="65" data-bbox="610,650,82,21">Organization</label>
+                                        <input id="65" type="text" value="@github" data-bbox="610,679,320,34">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-footer" data-bbox="266,1083,988,81">
+                            <hr style="display:none;" data-bbox="281,1107,958,1">
+                            <button type="submit" class="btn-primary" data-bbox="281,1132,164,32">
+                                <span data-bbox="293,1139,140,18">Update profile settings</span>
+                            </button>
+                            <a href="#" class="btn-link btn-secondary" data-bbox="457,1132,65,32">
+                                <span data-bbox="469,1139,41,18">Cancel</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div data-bbox="0,1264,1263,0"></div>
+    <div data-bbox="0,1264,1263,0"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form[data-bbox="281,-920,958,2084"]');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const submitButton = form.querySelector('button[type="submit"]');
+                    const buttonSpan = submitButton.querySelector('span');
+                    
+                    if (submitButton && buttonSpan) {
+                        const originalText = buttonSpan.textContent;
+                        buttonSpan.textContent = 'Saving...';
+                        submitButton.disabled = true;
+
+                        setTimeout(() => {
+                            buttonSpan.textContent = 'Settings Saved!';
+                            submitButton.style.backgroundColor = '#28a745'; // Success color
+                        }, 1500);
+
+                        setTimeout(() => {
+                            buttonSpan.textContent = originalText;
+                            submitButton.disabled = false;
+                            submitButton.style.backgroundColor = ''; // Revert to original color
+                        }, 3500);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

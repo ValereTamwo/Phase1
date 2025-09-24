@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap Directions</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-accent: #e9ecef;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --brand-primary: #007bff;
+            --brand-secondary: #0056b3;
+            --border-color: #dee2e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --radius: 8px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: var(--text-primary);
+            background-color: var(--bg-secondary);
+            overflow: hidden;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: var(--brand-primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--brand-secondary);
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        p {
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+            height: 55px;
+            background-color: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+            flex-shrink: 0;
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+        }
+
+        header img#0 {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 30px;
+            height: 30px;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        header nav a, header nav button {
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            height: 100%;
+            border: none;
+            background: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        
+        header nav a:hover, header nav div > div:hover {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+        
+        header nav div[data-bbox="188,10,207,35"] {
+            display: flex;
+            align-items: center;
+        }
+        
+        header nav div[data-bbox="188,10,77,35"] {
+            display: flex;
+            align-items: stretch;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        header nav a#1 {
+            border-right: 1px solid var(--border-color);
+        }
+
+        header nav button#2 {
+            font-size: 0.7rem;
+            padding: 0 8px;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+            height: 100%;
+        }
+        
+        header nav div[data-bbox="1135,10,135,35"] a {
+            font-weight: 600;
+        }
+        
+        header nav a#12 {
+            background-color: var(--brand-primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: var(--radius);
+            margin-left: 12px;
+            height: auto;
+        }
+        
+        header nav a#12:hover {
+            background-color: var(--brand-secondary);
+            text-decoration: none;
+        }
+
+        /* Main Layout */
+        div[data-bbox="0,55,1280,665"] {
+            display: flex;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        div[data-bbox="0,55,350,665"] {
+            width: 375px;
+            flex-shrink: 0;
+            background-color: var(--bg-primary);
+            border-right: 1px solid var(--border-color);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Sidebar Welcome Message (Initially hidden) */
+        div[data-bbox="0,268,350,302"] {
+            display: none;
+        }
+        
+        /* Directions Form */
+        div[data-bbox="0,55,350,213"] {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        form[data-bbox="0,55,350,213"] {
+            position: relative;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px 16px 12px 40px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            background-color: var(--bg-secondary);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: var(--brand-primary);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+        
+        input[type="text"] {
+            text-overflow: ellipsis;
+        }
+        
+        form::before {
+            content: "\f3c5"; /* Start Pin */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 52px;
+            top: 57px;
+            color: var(--text-secondary);
+        }
+        
+        form::after {
+            content: "\f024"; /* End Flag */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 52px;
+            top: 92px;
+            color: var(--text-secondary);
+        }
+
+        div[data-bbox="4,182,342,31"] {
+            display: flex;
+            gap: 8px;
+        }
+
+        select#16 {
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
+
+        input#17[type="submit"] {
+            padding: 12px 16px;
+            font-weight: 600;
+            color: white;
+            background-color: var(--brand-primary);
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        
+        input#17[type="submit"]:hover {
+            background-color: var(--brand-secondary);
+        }
+
+        button#18 {
+            margin-top: 16px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-primary);
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 500;
+            width: auto;
+            transition: background-color 0.2s ease;
+        }
+        button#18:hover {
+            background-color: var(--bg-accent);
+        }
+        
+        /* Directions List */
+        div[data-bbox="0,268,350,498"] {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        div[data-bbox="16,284,318,46"] {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        p[data-bbox="16,330,318,21"] {
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            padding: 8px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius);
+        }
+
+        table[data-bbox="16,367,315,330"] {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        table tr {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 12px 4px;
+            border-bottom: 1px solid var(--bg-accent);
+            transition: background-color 0.2s ease;
+        }
+
+        table tr.hovered {
+            background-color: var(--bg-secondary);
+        }
+
+        table tr div[id^="2"], table tr div[id^="3"], table tr div[id^="4"], table tr div[id^="5"] {
+            flex-shrink: 0;
+            width: 30px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--brand-primary);
+        }
+        
+        table tr td {
+            flex-grow: 1;
+            padding: 0 4px;
+            font-size: 0.9rem;
+        }
+
+        table tr td b {
+            font-weight: 500;
+        }
+        
+        table tr td b[id*="5"], table tr td b[id*="7"], table tr td b[id*="9"] { /* Street Names */
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-left: 8px;
+        }
+
+        table tr td[id$="2"], table tr td[id$="6"], table tr td[id$="0"], table tr td[id$="4"], table tr td[id$="8"], table tr td[id$="3"], table tr td[id$="9"] {
+            flex-grow: 0;
+            flex-shrink: 0;
+            text-align: right;
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        p[data-bbox="16,713,318,21"] {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        /* Map Container */
+        div[data-bbox="350,55,930,665"] {
+            flex-grow: 1;
+            position: relative;
+            background-image: url('https://images.unsplash.com/photo-1593512403483-58079a742c35?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Map Markers */
+        img#60, img#61 {
+            position: absolute;
+            transform: translate(-50%, -100%);
+            width: 25px;
+            height: 41px;
+        }
+        img#61 { /* Start: Phipps */
+            top: 134px;
+            left: 406px;
+        }
+        img#60 { /* End: CVS */
+            top: 524px;
+            left: 496px;
+        }
+
+        /* Map Controls */
+        div[data-bbox="350,55,930,0"] {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            background-color: var(--bg-primary);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        div[data-bbox="350,55,930,0"] span {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        
+        div[data-bbox="350,55,930,0"] span:not(:last-child) {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        div[data-bbox="350,55,930,0"] span:hover {
+            background-color: var(--bg-accent);
+        }
+
+        /* Map Attribution & Scale */
+        div[data-bbox="874,703,406,17"], div[data-bbox="355,681,84,34"] {
+            position: absolute;
+            bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            backdrop-filter: blur(2px);
+        }
+        
+        div[data-bbox="874,703,406,17"] {
+            right: 10px;
+        }
+        
+        div[data-bbox="355,681,84,34"] {
+            left: 10px;
+            border: 2px solid #555;
+            border-top: none;
+            text-align: center;
+            padding: 0;
+            background: white;
+        }
+        
+        div[data-bbox="355,681,83,18"] {
+            border-bottom: 2px solid #555;
+            padding: 2px 4px;
+        }
+
+        div[data-bbox="355,697,84,18"] {
+             padding: 2px 4px;
+        }
+
+    </style>
+</head>
+<body data-bbox="0,0,1280,55">
+    <header data-bbox="0,0,1280,55">
+        <source type="image/svg+xml" data-bbox="10,17,0,22">
+            <img id="0" src="https://picsum.photos/seed/maplogo/30/30" alt="Logo" data-bbox="10,13,30,30">
+        </source>
+        <nav data-bbox="178,0,227,55">
+            <div data-bbox="188,10,207,35">
+                <div data-bbox="188,10,77,35">
+                    <a id="1" href="#" data-bbox="188,10,50,35"> Edit </a>
+                    <button id="2" type="button" data-bbox="237,10,28,35"><i class="fas fa-caret-down"></i></button>
+                </div>
+                <a id="3" href="#" data-bbox="264,10,68,35"> History </a>
+                <a id="4" href="#" data-bbox="331,10,64,35"> Export </a>
+            </div>
+        </nav>
+        <nav data-bbox="708,0,572,55">
+            <ul data-bbox="722,13,405,27">
+                <a id="5" href="#" data-bbox="722,13,77,27"> GPS Traces </a>
+                <a id="6" href="#" data-bbox="803,13,82,27"> User Diaries </a>
+                <a id="7" href="#" data-bbox="889,13,87,27"> Communities </a>
+                <a id="8" href="#" data-bbox="980,13,63,27"> Copyright </a>
+                <a id="9" href="#" data-bbox="1047,13,34,27"> Help </a>
+                <a id="10" href="#" data-bbox="1085,13,42,27"> About </a>
+            </ul>
+            <div data-bbox="1135,10,135,35">
+                <a id="11" href="#" data-bbox="1135,10,63,35"> Log In </a>
+                <a id="12" href="#" data-bbox="1197,10,73,35"> Sign Up </a>
+            </div>
+        </nav>
+    </header>
+    <div data-bbox="0,55,1280,665">
+        <div data-bbox="0,55,350,665">
+            <div data-bbox="0,55,350,213">
+                <div data-bbox="4,63,342,31">
+                    <div data-bbox="8,63,288,31">
+                        <div data-bbox="8,63,254,31"></div>
+                    </div>
+                    <a title="Find directions between two points" href="#" data-bbox="304,63,38,31"></a>
+                </div>
+                <form data-bbox="0,55,350,213">
+                    <button id="13" type="button" data-bbox="313,71,21,21"></button>
+                    <input id="14" type="text" placeholder="From" value="Phipps Conservatory, Panther Hollow Road, Squirrel Hill South, Pittsburgh, Allegheny County, 15213, United States" data-value="Phipps Conservatory, Panther Hollow Road, Squirrel Hill South, Pittsburgh, Allegheny County, 15213, United States" data-bbox="37,112,305,31">
+                    <input id="15" type="text" placeholder="To" value="CVS Pharmacy, 4610, Centre Avenue, North Oakland, Pittsburgh, Allegheny County, 15213, United States" data-value="CVS Pharmacy, 4610, Centre Avenue, North Oakland, Pittsburgh, Allegheny County, 15213, United States" data-bbox="37,147,305,31">
+                    <div data-bbox="4,182,342,31">
+                        <select id="16" data-value="1" data-text="Car (OSRM)" data-bbox="37,182,262,31">
+                            <option value="0"> Bicycle (OSRM) </option>
+                            <option value="1" selected data-status="selected"> Car (OSRM) </option>
+                            <option value="2"> Foot (OSRM) </option>
+                        </select>
+                        <input id="17" value="Go" type="submit" data-bbox="307,182,35,31">
+                    </div>
+                    <button id="18" type="button" data-bbox="37,217,132,31"><i class="fas fa-exchange-alt"></i> Reverse Directions </button>
+                </form>
+            </div>
+            <div data-bbox="0,268,350,498">
+                <div data-bbox="16,284,318,46">
+                    <h2 data-bbox="16,284,297,38"> Directions </h2>
+                    <button id="19" type="button" data-bbox="313,284,21,21"></button>
+                </div>
+                <p data-bbox="16,330,318,21"> Distance: 2.0km. Time: 0:03. </p>
+                <table data-bbox="16,367,315,330">
+                    <tr data-bbox="16,367,315,30">
+                        <div id="20" data-bbox="17,372,20,20"><i class="fa-solid fa-flag"></i></div>
+                        <b id="21" data-bbox="39,373,13,17"> 1. </b>
+                        <td>Head north</td>
+                        <td id="22" data-bbox="303,367,28,30"> 30m </td>
+                    </tr>
+                    <tr data-bbox="16,397,315,30">
+                        <div id="23" data-bbox="17,402,20,20"><i class="fa-solid fa-arrow-turn-up"></i></div>
+                        <td data-bbox="38,397,265,30">
+                            <b id="24" data-bbox="39,403,13,17"> 2. </b>
+                            <b id="25" data-bbox="151,403,127,17"> Panther Hollow Road </b>
+                        </td>
+                        <td id="26" data-bbox="303,397,28,30"> 120m </td>
+                    </tr>
+                    <tr data-bbox="16,427,315,30">
+                        <div id="27" data-bbox="17,432,20,20"><i class="fa-solid fa-arrow-turn-right"></i></div>
+                        <td data-bbox="38,427,265,30">
+                            <b id="28" data-bbox="39,433,13,17"> 3. </b>
+                            <b id="29" data-bbox="142,433,89,17"> Schenley Drive </b>
+                        </td>
+                        <td id="30" data-bbox="303,427,28,30"> 600m </td>
+                    </tr>
+                    <tr data-bbox="16,457,315,30">
+                        <div id="31" data-bbox="17,462,20,20"><i class="fa-solid fa-arrow-turn-right"></i></div>
+                        <td data-bbox="38,457,265,30">
+                            <b id="32" data-bbox="39,463,13,17"> 4. </b>
+                            <b id="33" data-bbox="149,463,153,17"> Schenley Drive Extension </b>
+                        </td>
+                        <td id="34" data-bbox="303,457,28,30"> 140m </td>
+                    </tr>
+                    <tr data-bbox="16,487,315,30">
+                        <div id="35" data-bbox="17,492,20,20"><i class="fa-solid fa-arrow-turn-left"></i></div>
+                        <td data-bbox="38,487,265,30">
+                            <b id="36" data-bbox="39,493,13,17"> 5. </b>
+                            <b id="37" data-bbox="149,493,89,17"> Forbes Avenue </b>
+                        </td>
+                        <td id="38" data-bbox="303,487,28,30"> 130m </td>
+                    </tr>
+                    <tr data-bbox="16,517,315,30">
+                        <div id="39" data-bbox="17,522,20,20"><i class="fa-solid fa-arrow-turn-right"></i></div>
+                        <td data-bbox="38,517,265,30">
+                            <b id="40" data-bbox="39,523,13,17"> 6. </b>
+                            <b id="41" data-bbox="142,523,144,17"> South Bellefield Avenue </b>
+                        </td>
+                        <td id="42" data-bbox="303,517,28,30"> 500m </td>
+                    </tr>
+                    <tr data-bbox="16,547,315,30">
+                        <div id="43" data-bbox="17,552,20,20"><i class="fa-solid fa-arrow-turn-left"></i></div>
+                        <td data-bbox="38,547,265,30">
+                            <b id="44" data-bbox="39,553,13,17"> 7. </b>
+                            <b id="45" data-bbox="149,553,83,17"> Bayard Street </b>
+                        </td>
+                        <td id="46" data-bbox="303,547,28,30"> 200m </td>
+                    </tr>
+                    <tr data-bbox="16,577,315,30">
+                        <div id="47" data-bbox="17,582,20,20"><i class="fa-solid fa-arrow-turn-right"></i></div>
+                        <td data-bbox="38,577,265,30">
+                            <b id="48" data-bbox="39,583,13,17"> 8. </b>
+                            <b id="49" data-bbox="142,583,110,17"> North Craig Street </b>
+                        </td>
+                        <td id="50" data-bbox="303,577,28,30"> 190m </td>
+                    </tr>
+                    <tr data-bbox="16,607,315,30">
+                        <div id="51" data-bbox="17,612,20,20"><i class="fa-solid fa-arrow-up"></i></div>
+                        <b id="52" data-bbox="39,613,13,17"> 9. </b>
+                        <td>Continue straight</td>
+                        <td id="53" data-bbox="303,607,28,30"> 20m </td>
+                    </tr>
+                    <tr data-bbox="16,637,315,30">
+                        <div id="54" data-bbox="17,642,20,20"><i class="fa-solid fa-arrow-up"></i></div>
+                        <b id="55" data-bbox="39,643,21,17"> 10. </b>
+                        <td>Continue straight</td>
+                        <td id="56" data-bbox="303,637,28,30"> 20m </td>
+                    </tr>
+                     <tr data-bbox="16,667,315,30">
+                        <div id="57" data-bbox="17,672,20,20"><i class="fa-solid fa-location-dot"></i></div>
+                        <b id="58" data-bbox="39,673,21,17"> 11. </b>
+                        <td>Arrive at destination</td>
+                        <td id="59" data-bbox="303,667,28,30"></td>
+                     </tr>
+                </table>
+                <p data-bbox="16,713,318,21"> Directions courtesy of <a href="#" data-bbox="191,715,105,17"> OSRM (FOSSGIS) </a></p>
+            </div>
+            <div data-bbox="0,268,350,302">
+                <div data-bbox="16,284,318,85">
+                    <h2 data-bbox="16,284,297,77"> Welcome to OpenStreetMap! </h2>
+                </div>
+                <div data-bbox="16,369,318,185">
+                    <p data-bbox="16,369,318,69"> OpenStreetMap is a map of the world, created by people like you and free to use under an open license. </p>
+                    <p data-bbox="16,454,318,46"> Hosting is supported by </p>
+                    <div data-bbox="12,516,326,38"></div>
+                </div>
+            </div>
+        </div>
+        <div data-bbox="350,55,930,665">
+            <img id="60" src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="Destination Marker" data-bbox="846,524,25,41">
+            <img id="61" src="https://maps.google.com/mapfiles/ms/icons/blue-dot.png" alt="Start Marker" data-bbox="756,134,25,41">
+            <div data-bbox="350,55,930,0">
+                <span id="62" title="Zoom In" data-bbox="1250,75,20,20"><i class="fas fa-plus"></i></span>
+                <span id="63" title="Zoom Out" data-bbox="1250,115,20,20"><i class="fas fa-minus"></i></span>
+                <span id="64" title="Layers" data-bbox="1250,155,20,20"><i class="fas fa-layer-group"></i></span>
+                <span id="65" title="Legend" data-bbox="1250,205,20,20"><i class="fas fa-list"></i></span>
+                <span id="66" title="My Location" data-bbox="1250,245,20,20"><i class="fas fa-location-crosshairs"></i></span>
+                <span id="67" title="Measure" data-bbox="1250,285,20,20"><i class="fas fa-ruler"></i></span>
+                <span id="68" data-bbox="1250,335,20,20"></span>
+                <span id="69" data-bbox="1250,385,20,20"></span>
+                <div data-bbox="355,681,84,34">
+                    <div data-bbox="355,681,83,18"> 300 m </div>
+                    <div data-bbox="355,697,84,18"> 1000 ft </div>
+                </div>
+                <div data-bbox="874,703,406,17"> © <a id="70" href="#" data-bbox="891,704,151,14"> OpenStreetMap contributors </a> <a id="71" href="#" data-bbox="1056,704,90,14"> Make a Donation </a> <a id="72" href="#" data-bbox="1153,704,122,14"> Website and API terms </a></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add hover class to table rows for directions
+            const directionRows = document.querySelectorAll('table[data-bbox="16,367,315,330"] tr');
+            directionRows.forEach(row => {
+                row.addEventListener('mouseover', () => row.classList.add('hovered'));
+                row.addEventListener('mouseout', () => row.classList.remove('hovered'));
+            });
+
+            // Example interactivity for a button
+            const signUpButton = document.getElementById('12');
+            if (signUpButton) {
+                signUpButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    alert('Thank you for your interest in signing up!');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

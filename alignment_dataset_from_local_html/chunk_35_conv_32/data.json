@@ -1,0 +1,385 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_32.html",
+    "raw_html": "<NAV data-bbox=\"0,0,1280,52\"><DIV data-bbox=\"90,0,1100,52\"><HEADER data-bbox=\"104,0,90,52\"><A href=\"#\" data-bbox=\"104,0,90,52\"><B id=\"0\" data-bbox=\"120,16,58,19\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Postmill</text></B></A></HEADER><DIV data-bbox=\"194,0,148,52\"><UL data-bbox=\"194,0,148,52\"><LI data-bbox=\"194,0,86,52\"><A id=\"1\" href=\"#\" data-bbox=\"194,0,86,52\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Forums</text></A></LI><LI data-bbox=\"280,0,62,52\"><A id=\"2\" href=\"#\" data-bbox=\"280,0,62,52\" class=\"possible-clickable-element\" data-testid=\"C\"><text>Wiki</text></A></LI></UL></DIV><FORM data-bbox=\"455,0,236,52\"><DIV data-bbox=\"462,8,222,37\"><LABEL id=\"3\" for=\"4\" data-bbox=\"462,8,37,37\" class=\"possible-clickable-element\" data-testid=\"D\"><SPAN data-bbox=\"474,18,14,16\"><I class=\"fas fa-search\"></I></SPAN></LABEL><INPUT id=\"4\" type=\"search\" placeholder=\"Search...\" data-bbox=\"462,8,222,37\" class=\"possible-clickable-element\" data-testid=\"E\" style=\"\"></INPUT></DIV></FORM><UL data-bbox=\"804,0,372,52\"><LI data-bbox=\"804,0,48,52\"><A href=\"#\" title=\"Notifications (0)\" data-bbox=\"804,0,48,52\"><SPAN data-bbox=\"820,16,16,19\"><I id=\"5\" class=\"fas fa-bell possible-clickable-element\" data-testid=\"F\"></I></SPAN></A></LI><LI data-bbox=\"852,0,103,52\"><A href=\"#\" data-bbox=\"852,0,103,52\"><SPAN data-bbox=\"868,16,16,19\"><I id=\"6\" class=\"fas fa-plus possible-clickable-element\" data-testid=\"G\"></I></SPAN><SPAN id=\"7\" data-bbox=\"888,16,51,19\" class=\"possible-clickable-element\" data-testid=\"H\"><text>Submit</text></SPAN></A></LI><LI data-bbox=\"955,0,221,52\"><BUTTON data-bbox=\"955,0,221,52\"><SPAN data-bbox=\"971,16,16,19\"><I id=\"8\" class=\"fas fa-user-circle possible-clickable-element\" data-testid=\"I\"></I></SPAN><STRONG id=\"9\" data-bbox=\"991,16,157,19\" class=\"possible-clickable-element\" data-testid=\"J\"><text>MarvelsGrantMan136</text></STRONG><SPAN id=\"10\" data-bbox=\"1152,16,8,19\"><I class=\"fas fa-caret-down possible-clickable-element\" data-testid=\"K\"></I></SPAN></BUTTON></LI></UL></DIV></NAV><H1 data-bbox=\"104,80,778,42\"><SPAN data-bbox=\"104,84,30,33\"><text>/f/</text></SPAN><STRONG data-bbox=\"134,84,139,33\"><text>Futurology</text></STRONG></H1><NAV data-bbox=\"90,136,792,49\"><UL data-bbox=\"104,136,189,35\"><LI data-bbox=\"104,136,100,35\"><A id=\"11\" href=\"#\" data-bbox=\"104,136,100,35\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Submissions</text></A></LI><LI data-bbox=\"204,136,89,35\"><A id=\"12\" href=\"#\" data-bbox=\"204,136,89,35\" class=\"possible-clickable-element\" data-testid=\"M\"><text>Comments</text></A></LI></UL><UL data-bbox=\"307,136,87,35\"><LI data-bbox=\"307,136,87,35\"><BUTTON data-bbox=\"307,136,87,35\"><SPAN data-bbox=\"318,145,14,16\"><I id=\"13\" class=\"fas fa-sort possible-clickable-element\" data-testid=\"N\"></I></SPAN><SPAN id=\"14\" data-bbox=\"335,145,38,16\" class=\"possible-clickable-element\" data-testid=\"O\"><text>Active</text></SPAN><SPAN id=\"15\" data-bbox=\"376,145,8,16\"><I class=\"fas fa-caret-down possible-clickable-element\" data-testid=\"P\"></I></SPAN></BUTTON></LI></UL></NAV><DIV data-bbox=\"104,185,48,70\"><FORM data-bbox=\"104,185,48,56\"><BUTTON title=\"Upvote\" value=\"1\" class=\"vote-button upvote\" data-bbox=\"121,192,14,14\"><I id=\"20\" class=\"fas fa-arrow-up possible-clickable-element\" data-testid=\"Q\"></I></BUTTON><SPAN data-bbox=\"116,206,24,21\"><text>987</text></SPAN><BUTTON title=\"Downvote\" value=\"-1\" class=\"vote-button downvote\" data-bbox=\"121,227,14,14\"><I id=\"21\" class=\"fas fa-arrow-down possible-clickable-element\" data-testid=\"R\"></I></BUTTON></FORM></DIV><A id=\"17\" href=\"#\" data-bbox=\"760,194,84,13\" class=\"possible-clickable-element\" data-testid=\"S\"><text>theguardian.com</text></A><SECTION data-bbox=\"910,66,280,205\"><H1 data-bbox=\"924,80,252,26\"><A id=\"48\" href=\"#\" data-bbox=\"924,83,87,20\" class=\"possible-clickable-element\" data-testid=\"T\"><text>Futurology</text></A></H1><FORM data-bbox=\"924,120,252,37\"><DIV data-bbox=\"924,120,252,37\"><BUTTON data-bbox=\"924,120,175,37\"><SPAN data-bbox=\"924,120,109,37\"><SPAN id=\"49\" data-bbox=\"939,130,79,16\" class=\"possible-clickable-element\" data-testid=\"U\"><text>Unsubscribe</text></SPAN></SPAN><B id=\"50\" data-bbox=\"1035,120,64,37\" class=\"possible-clickable-element\" data-testid=\"V\"><text>1M</text></B></BUTTON></DIV></FORM><DIV data-bbox=\"924,171,252,21\"><P data-bbox=\"924,171,252,21\"><text>t5_2t7no</text></P></DIV><HR data-bbox=\"924,206,252,1\"></HR><UL data-bbox=\"924,221,252,36\"><LI data-bbox=\"924,221,252,18\"><text>Created</text><TIME title=\"September 30, 2022 at 10:30:55 PM EDT\" data-bbox=\"969,222,63,14\"><text>2 years ago</text></TIME></LI><LI data-bbox=\"924,239,252,18\"><A href=\"#\" data-bbox=\"924,240,12,14\"><SPAN data-bbox=\"924,240,12,14\"><I id=\"51\" class=\"fas fa-rss possible-clickable-element\" data-testid=\"W\"></I></SPAN><SPAN id=\"52\" data-bbox=\"939,240,96,14\" class=\"possible-clickable-element\" data-testid=\"X\"><text>Subscribe via RSS</text></SPAN></A></LI></UL></SECTION><DETAILS data-bbox=\"910,285,280,54\"><SUMMARY id=\"53\" data-bbox=\"924,299,252,26\" class=\"possible-clickable-element\" data-testid=\"Y\"><text>Hide this forum</text></SUMMARY><P data-bbox=\"924,339,252,126\"><text>By marking forums as hidden, you won't see submissions from those forums when browsing the \"featured\" and \"all\" submission listings. You can still subscribe to and moderate forums you choose to hide.</text></P><FORM data-bbox=\"924,479,252,37\"><P data-bbox=\"924,479,252,37\"><BUTTON data-bbox=\"924,479,60,37\"><text>Hide</text></BUTTON></P></FORM></DETAILS><SECTION data-bbox=\"910,353,280,124\"><H1 data-bbox=\"924,367,252,26\"><text>Toolbox</text></H1><UL data-bbox=\"910,407,280,70\"><LI data-bbox=\"910,407,280,35\"><A id=\"54\" href=\"#\" data-bbox=\"910,407,280,35\" class=\"possible-clickable-element\" data-testid=\"Z\"><text>Bans</text></A></LI><LI data-bbox=\"910,442,280,35\"><A id=\"55\" href=\"#\" data-bbox=\"910,442,280,35\" class=\"possible-clickable-element\" data-testid=\"AA\"><text>Moderators</text></A></LI></UL></SECTION>",
+    "parsed_html": "\n<\n  div|\n  <\n    div|\n    <b[A]| Postmill >\n    <\n      ul|\n      <a[B]| Forums >\n      <a[C]| Wiki >\n    >\n    <label[D]| >\n    <input[E]| Search... >\n    <\n      ul|\n      <\n        a| Notifications (0)\n        <i[F]| >\n      >\n      <i[G]| >\n      <span[H]| Submit >\n      <i[I]| >\n      <strong[J]| MarvelsGrantMan136 >\n      <i[K]| >\n    >\n  >\n  <\n    h1|\n    <span| /f/ >\n    <strong| Futurology >\n  >\n  <\n    nav|\n    <\n      ul|\n      <a[L]| Submissions >\n      <a[M]| Comments >\n    >\n    <i[N]| >\n    <span[O]| Active >\n    <i[P]| >\n  >\n  <\n    form|\n    <\n      button| Upvote; 1\n      <i[Q]| >\n    >\n    <span| 987 >\n    <\n      button| Downvote; -1\n      <i[R]| >\n    >\n  >\n  <a[S]| theguardian.com >\n  <\n    section|\n    <a[T]| Futurology >\n    <\n      button|\n      <span[U]| Unsubscribe >\n      <b[V]| 1M >\n    >\n    <p| t5_2t7no >\n    <\n      ul|\n      <\n        li|\n        <text| Created >\n        <time| September 30, 2022 at 10:30:55 PM EDT 2 years ago >\n      >\n      <i[W]| >\n      <span[X]| Subscribe via RSS >\n    >\n  >\n  <\n    details|\n    <summary[Y]| Hide this forum >\n    <p| By marking forums as hidden, you won't see submissions from those forums when browsing the \"featured\" and \"all\" submission listings. You can still subscribe to and moderate forums you choose to hide. >\n    <button| Hide >\n  >\n  <\n    section|\n    <h1| Toolbox >\n    <\n      ul|\n      <a[Z]| Bans >\n      <a[AA]| Moderators >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 24,
+                "top": 4,
+                "right": 120,
+                "bottom": 33,
+                "width": 96,
+                "height": 29
+            },
+            "tag": "b",
+            "text": "Postmill"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 172,
+                "top": 6.390625,
+                "right": 253,
+                "bottom": 31.984375,
+                "width": 81,
+                "height": 25.59375
+            },
+            "tag": "a",
+            "text": "Forums"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 269,
+                "top": 6.390625,
+                "right": 326,
+                "bottom": 31.984375,
+                "width": 57,
+                "height": 25.59375
+            },
+            "tag": "a",
+            "text": "Wiki"
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 410,
+                "top": 8.390625,
+                "right": 426,
+                "bottom": 28.390625,
+                "width": 16,
+                "height": 20
+            },
+            "tag": "label",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 431,
+                "top": 10.390625,
+                "right": 612,
+                "bottom": 29.390625,
+                "width": 181,
+                "height": 19
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 906,
+                "top": 10.390625,
+                "right": 920,
+                "bottom": 26.390625,
+                "width": 14,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 960,
+                "top": 10.390625,
+                "right": 975,
+                "bottom": 26.390625,
+                "width": 15,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 975,
+                "top": 6.390625,
+                "right": 1028,
+                "bottom": 31.984375,
+                "width": 53,
+                "height": 25.59375
+            },
+            "tag": "span",
+            "text": "Submit"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 1068,
+                "top": 13.1875,
+                "right": 1081,
+                "bottom": 26.515625,
+                "width": 13,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1089,
+                "top": 11.1875,
+                "right": 1228,
+                "bottom": 27.1875,
+                "width": 139,
+                "height": 16
+            },
+            "tag": "strong",
+            "text": "MarvelsGrantMan136"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 1236,
+                "top": 13.1875,
+                "right": 1244,
+                "bottom": 26.515625,
+                "width": 8,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 24,
+                "top": 128.28125,
+                "right": 155,
+                "bottom": 175.28125,
+                "width": 131,
+                "height": 47
+            },
+            "tag": "a",
+            "text": "Submissions"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 155,
+                "top": 128.28125,
+                "right": 271,
+                "bottom": 175.28125,
+                "width": 116,
+                "height": 47
+            },
+            "tag": "a",
+            "text": "Comments"
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 861,
+                "top": 145.578125,
+                "right": 869,
+                "bottom": 158.90625,
+                "width": 8,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 877,
+                "top": 143.578125,
+                "right": 919,
+                "bottom": 159.578125,
+                "width": 42,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Active"
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 927,
+                "top": 145.578125,
+                "right": 935,
+                "bottom": 158.90625,
+                "width": 8,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 40,
+                "top": 235.578125,
+                "right": 55,
+                "bottom": 255.578125,
+                "width": 15,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 40,
+                "top": 293.171875,
+                "right": 55,
+                "bottom": 313.171875,
+                "width": 15,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 29.609375,
+                "top": 666.46875,
+                "right": 145.390625,
+                "bottom": 690.125,
+                "width": 115.78125,
+                "height": 23.65625
+            },
+            "tag": "a",
+            "text": "theguardian.com"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 993,
+                "top": 80.390625,
+                "right": 1239,
+                "bottom": 108.53125,
+                "width": 246,
+                "height": 28.140625
+            },
+            "tag": "a",
+            "text": "Futurology"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 1065.5,
+                "top": 143.125,
+                "right": 1145.5,
+                "bottom": 159.125,
+                "width": 80,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Unsubscribe"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 1148.5,
+                "top": 143.125,
+                "right": 1166.5,
+                "bottom": 159.125,
+                "width": 18,
+                "height": 16
+            },
+            "tag": "b",
+            "text": "1M"
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 993,
+                "top": 227.234375,
+                "right": 1006,
+                "bottom": 241.640625,
+                "width": 13,
+                "height": 14.40625
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 1014,
+                "top": 222.234375,
+                "right": 1136,
+                "bottom": 245.28125,
+                "width": 122,
+                "height": 23.046875
+            },
+            "tag": "span",
+            "text": "Subscribe via RSS"
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 993,
+                "top": 311.28125,
+                "right": 1239,
+                "bottom": 336.875,
+                "width": 246,
+                "height": 25.59375
+            },
+            "tag": "summary",
+            "text": "Hide this forum"
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 993,
+                "top": 448.015625,
+                "right": 1239,
+                "bottom": 487.0625,
+                "width": 246,
+                "height": 39.046875
+            },
+            "tag": "a",
+            "text": "Bans"
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 993,
+                "top": 495.0625,
+                "right": 1239,
+                "bottom": 534.109375,
+                "width": 246,
+                "height": 39.046875
+            },
+            "tag": "a",
+            "text": "Moderators"
+        }
+    ]
+}

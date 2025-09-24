@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap - Interactive Map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #3b82f6; /* Blue 500 */
+            --primary-hover-color: #2563eb; /* Blue 600 */
+            --secondary-text: #6b7280; /* Gray 500 */
+            --dark-text: #1f2937; /* Gray 800 */
+            --light-bg: #f9fafb; /* Gray 50 */
+            --white-bg: #ffffff;
+            --border-color: #e5e7eb; /* Gray 200 */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --border-radius: 0.375rem;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: var(--font-family);
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            font-size: 16px;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--primary-hover-color);
+            text-decoration: underline;
+        }
+
+        button {
+            cursor: pointer;
+            font-family: inherit;
+            border: none;
+            background: none;
+        }
+
+        /* Header */
+        header[data-bbox="0,0,1280,55"] {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1rem;
+            height: 55px;
+            background-color: var(--white-bg);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            z-index: 100;
+            flex-shrink: 0;
+        }
+
+        header source[data-bbox="10,17,0,22"] {
+            display: flex;
+            align-items: center;
+        }
+        
+        img#0 {
+            width: 30px;
+            height: 30px;
+        }
+
+        nav[data-bbox="178,0,227,55"], nav[data-bbox="708,0,572,55"] {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        nav div[data-bbox="188,10,207,35"], nav div[data-bbox="1135,10,135,35"] {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        div[data-bbox="188,10,77,35"] {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+        }
+
+        a#1 {
+            padding: 0.5rem 0.75rem;
+            font-weight: 500;
+            border-right: 1px solid var(--border-color);
+        }
+        a#1:hover { text-decoration: none; background-color: var(--light-bg); }
+
+        button#2 {
+            padding: 0.5rem;
+            color: var(--secondary-text);
+        }
+        button#2:hover { background-color: var(--light-bg); }
+
+        nav a[id] {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--dark-text);
+            padding: 0.5rem 0.75rem;
+            border-radius: var(--border-radius);
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        nav a[id]:hover {
+            background-color: var(--light-bg);
+            text-decoration: none;
+        }
+
+        ul[data-bbox="722,13,405,27"] {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            list-style: none;
+        }
+
+        a#11 {
+            border: 1px solid var(--border-color);
+        }
+        a#12 {
+            background-color: var(--primary-color);
+            color: var(--white-bg);
+            border: 1px solid var(--primary-color);
+        }
+        a#12:hover {
+            background-color: var(--primary-hover-color);
+            border-color: var(--primary-hover-color);
+        }
+
+        /* Main Content Area */
+        div[data-bbox="0,55,1280,665"] {
+            display: flex;
+            flex-grow: 1;
+            height: calc(100vh - 55px);
+        }
+        
+        /* Sidebar */
+        div[data-bbox="0,55,350,665"] {
+            width: 350px;
+            flex-shrink: 0;
+            background-color: var(--white-bg);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        div[data-bbox="0,55,350,47"] {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        div[data-bbox="4,63,342,31"] {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        div[data-bbox="8,63,288,31"] {
+            position: relative;
+            flex-grow: 1;
+        }
+
+        input#14 {
+            width: 100%;
+            padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 0.9rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        input#14:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+
+        a#13 {
+            position: absolute;
+            right: 3.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.75rem;
+            color: var(--secondary-text);
+        }
+
+        input#15 {
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--light-bg);
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        input#15:hover {
+            background-color: #e5e7eb;
+        }
+
+        a[title="Find directions between two points"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            color: var(--secondary-text);
+        }
+        img#16 {
+             width: 20px;
+             height: 20px;
+        }
+
+        /* Sidebar Content */
+        div[data-bbox="0,102,350,352"] {
+            padding: 1rem;
+        }
+
+        div[data-bbox="16,118,318,47"] {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        button#17 {
+            color: var(--secondary-text);
+            padding: 0.25rem;
+        }
+
+        h4[data-bbox="16,165,318,57"] {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--secondary-text);
+            margin-bottom: 1.5rem;
+        }
+        
+        ul[data-bbox="0,230,350,138"] {
+            list-style: none;
+        }
+        
+        li[data-bbox^="0,"] {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        li[data-bbox^="0,"], li[data-bbox^="0,"] a {
+             color: var(--secondary-text);
+        }
+        li[data-bbox^="0,"] a {
+            display: block;
+            color: var(--dark-text);
+            font-weight: 500;
+            margin-top: 0.25rem;
+        }
+        
+        a#21 {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: 500;
+            padding: 0.75rem;
+        }
+
+        /* Welcome Message (Hidden by default) */
+        div[data-bbox="0,102,350,303"] {
+            display: none;
+        }
+
+        /* Map Area */
+        div[data-bbox="350,55,930,665"] {
+            flex-grow: 1;
+            position: relative;
+            background-image: url('https://images.unsplash.com/photo-1614398182109-15582f854a88?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Map Controls */
+        a#22, span[id^="2"] {
+            position: absolute;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--white-bg);
+            color: var(--dark-text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.2s;
+        }
+        a#22:hover, span[id^="2"]:hover {
+            background-color: var(--light-bg);
+        }
+        a#22 { top: 10px; }
+        span#23 { top: 60px; border-radius: 0.375rem 0.375rem 0 0; }
+        span#24 { top: 100px; border-radius: 0 0 0.375rem 0.375rem; border-top: 1px solid var(--border-color); }
+        span#25 { top: 150px; }
+        span#26 { top: 190px; }
+        span#27 { top: 230px; }
+        span#28 { top: 280px; }
+        span#29 { top: 330px; }
+
+        /* Map Overlays */
+        div[data-bbox="355,681,86,34"] {
+            position: absolute;
+            bottom: 25px;
+            left: 10px;
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(2px);
+            padding: 5px 10px;
+            border-radius: var(--border-radius);
+            font-size: 0.75rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        div[data-bbox="874,703,406,17"] {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            font-size: 0.75rem;
+            color: #333;
+            background: rgba(255,255,255,0.75);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        div[data-bbox="874,703,406,17"] a {
+            color: var(--primary-color);
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body data-bbox="0,0,1280,55">
+    <header data-bbox="0,0,1280,55">
+        <source type="image/svg+xml" data-bbox="10,17,0,22">
+            <img id="0" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzNiODJmNiIgd2lkdGg9IjMwcHgiIGhlaWdodD0iMzBweCI+PHBhdGggZD0iTTEyIDJDOC4xMyAyIDUgNS4xMyA1IDljMCA1LjI1IDcgMTMgNyAxM3M3LTcuNzUgNy0xM0MxOSAxMyAxOSAyIDEyIDJ6bTAgMS41YzEuOTMgMCAzLjUgMS41NyAzLjUgMy41UzEzLjkzIDEwLjUgMTIgMTAuNSA4LjUgOC45MyA4LjUgNyA5LjA3IDMuNSAxMiAzLjV6Ii8+PC9zdmc+" data-bbox="10,13,30,30">
+        </source>
+        <nav data-bbox="178,0,227,55">
+            <div data-bbox="188,10,207,35">
+                <div data-bbox="188,10,77,35">
+                    <a id="1" href="#" data-bbox="188,10,50,35"> Edit </a>
+                    <button id="2" type="button" data-bbox="237,10,28,35"><i class="fa-solid fa-caret-down"></i></button>
+                </div>
+                <a id="3" href="#" data-bbox="264,10,68,35"> History </a>
+                <a id="4" href="#" data-bbox="331,10,64,35"> Export </a>
+            </div>
+        </nav>
+        <nav data-bbox="708,0,572,55">
+            <ul data-bbox="722,13,405,27">
+                <li><a id="5" href="#" data-bbox="722,13,77,27"> GPS Traces </a></li>
+                <li><a id="6" href="#" data-bbox="803,13,82,27"> User Diaries </a></li>
+                <li><a id="7" href="#" data-bbox="889,13,87,27"> Communities </a></li>
+                <li><a id="8" href="#" data-bbox="980,13,63,27"> Copyright </a></li>
+                <li><a id="9" href="#" data-bbox="1047,13,34,27"> Help </a></li>
+                <li><a id="10" href="#" data-bbox="1085,13,42,27"> About </a></li>
+            </ul>
+            <div data-bbox="1135,10,135,35">
+                <a id="11" href="#" data-bbox="1135,10,63,35"> Log In </a>
+                <a id="12" href="#" data-bbox="1197,10,73,35"> Sign Up </a>
+            </div>
+        </nav>
+    </header>
+    <div data-bbox="0,55,1280,665">
+        <div data-bbox="0,55,350,665">
+            <div data-bbox="0,55,350,47">
+                <div data-bbox="4,63,342,31">
+                    <div data-bbox="8,63,288,31">
+                        <div data-bbox="8,63,254,31">
+                            <input id="14" type="text" placeholder="Search" data-value="Hotel near Avalon History Center" data-bbox="8,63,254,31">
+                            <a id="13" href="#" title="Describe the current location using the search engine" data-bbox="194,69,62,15"> Where is this? </a>
+                        </div>
+                        <input id="15" value="Go" type="submit" data-bbox="261,63,35,31">
+                    </div>
+                    <a href="#" title="Find directions between two points" data-bbox="304,63,38,31">
+                        <img id="16" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iY3VycmVudENvbG9yIiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4Ij48cGF0aCBkPSJNMjEgMy45MWwtMy43MS45My0uMjYtLjAyQzE2Ljg2IDQuNjcgMTYuMjcgNSAxNS41IDVoLTEyYy0uNTUgMC0xIC40NS0xIDF2MTBjMCAuNTUuNDUgMSAxIDFoNWMuMjggMCAuNTUtLjEyLjczLS4zMWwzLjcxLTQuNTggMi45My43My4wMi4yNmMuMTYuNjEuNjUgMS4wOSAxLjI3IDEuMDloNHYtMy41YzAtLjgyLS42Ny0xLjUtMS41LTEuNUgyM2wtMi0zLjU5VjMuOTF6bS0xNSAyLjA5aDEwLjVMMTQuNSA5SDkuMzdMMTYgNi44N3ptLTQgMTBWMTAuNTJsNC0xLjk5di42NWMwIC44My42NyAxLjUgMS41IDEuNUgxN2wxLjUgMS44OFYxNmgtMy41Yy0uNTUgMC0xIC40NS0xIDF2NGgtOHoiLz48L3N2Zz4=" data-bbox="313,69,20,20">
+                    </a>
+                </div>
+            </div>
+            <div data-bbox="0,102,350,352">
+                <div data-bbox="16,118,318,47">
+                    <h2 data-bbox="16,118,297,39"> Search Results </h2>
+                    <button id="17" type="button" data-bbox="313,118,21,21"><i class="fa-solid fa-chevron-up fa-lg"></i></button>
+                </div>
+                <h4 data-bbox="16,165,318,57"> Results from <a id="18" href="#" data-bbox="157,164,164,30"> OpenStreetMap Nominatim </a> </h4>
+                <div data-bbox="0,230,350,192">
+                    <ul data-bbox="0,230,350,138">
+                        <li data-bbox="0,230,350,59"> Hotel <a id="19" href="#" data-bbox="52,240,268,17"> 79th Street, Avalon, Cape May County, New Jersey, 08202, United States </a> </li>
+                        <li data-bbox="0,289,350,79"> Hotel <a id="20" href="#" data-bbox="52,299,272,17"> The Reeds Hotel, 3rd Avenue, Stone Harbor, Cape May County, New Jersey, 08247, United States </a> </li>
+                    </ul>
+                    <div data-bbox="0,384,350,38">
+                        <a id="21" href="#" data-bbox="118,384,114,38"> More results </a>
+                    </div>
+                </div>
+            </div>
+            <div data-bbox="0,102,350,303">
+                <div data-bbox="16,118,318,85">
+                    <h2 data-bbox="16,118,297,77"> Welcome to OpenStreetMap! </h2>
+                </div>
+                <div data-bbox="16,203,318,186">
+                    <p data-bbox="16,203,318,70"> OpenStreetMap is a map of the world, created by people like you and free to use under an open license. </p>
+                    <p data-bbox="16,289,318,46"> Hosting is supported by </p>
+                    <div data-bbox="12,351,326,38"></div>
+                </div>
+            </div>
+        </div>
+        <div data-bbox="350,55,930,665">
+            <div data-bbox="350,55,930,0">
+                <a id="22" href="#" title="Locate Me" data-bbox="1240,65,40,40"><i class="fa-solid fa-location-crosshairs"></i></a>
+                <span id="23" title="Zoom In" data-bbox="1250,115,20,20"><i class="fa-solid fa-plus"></i></span>
+                <span id="24" title="Zoom Out" data-bbox="1250,155,20,20"><i class="fa-solid fa-minus"></i></span>
+                <span id="25" title="Layers" data-bbox="1250,205,20,20"><i class="fa-solid fa-layer-group"></i></span>
+                <span id="26" title="Map Key" data-bbox="1250,245,20,20"><i class="fa-solid fa-info-circle"></i></span>
+                <span id="27" title="Query Features" data-bbox="1250,285,20,20"><i class="fa-solid fa-hand-pointer"></i></span>
+                <span id="28" title="Share" data-bbox="1250,335,20,20"><i class="fa-solid fa-share-nodes"></i></span>
+                <span id="29" title="Help" data-bbox="1250,385,20,20"><i class="fa-solid fa-circle-question"></i></span>
+                <div data-bbox="355,681,86,34">
+                    <div data-bbox="355,681,86,18"> 20 m </div>
+                    <div data-bbox="355,697,66,18" style="border-top: 2px solid #333; margin-top: 2px;"> 50 ft </div>
+                </div>
+                <div data-bbox="874,703,406,17"> &copy; <a id="30" href="#" data-bbox="891,704,151,14"> OpenStreetMap contributors </a> <a id="31" href="#" data-bbox="1056,704,90,14"> Make a Donation </a> <a id="32" href="#" data-bbox="1153,704,122,14"> Website and API terms </a> </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set input value from data attribute for realism
+            const searchInput = document.getElementById('14');
+            if (searchInput && searchInput.dataset.value) {
+                searchInput.value = searchInput.dataset.value;
+            }
+            
+            // Add hover effect to search result list items
+            const searchResults = document.querySelectorAll('ul[data-bbox="0,230,350,138"] li');
+            searchResults.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.style.backgroundColor = 'var(--light-bg)';
+                });
+                item.addEventListener('mouseleave', () => {
+                    item.style.backgroundColor = 'transparent';
+                });
+            });
+
+            // Simulate a click action
+            const moreResultsBtn = document.getElementById('21');
+            if(moreResultsBtn) {
+                moreResultsBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    console.log('Action: Load more results...');
+                    alert('Functionality for "More results" is not implemented in this demo.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

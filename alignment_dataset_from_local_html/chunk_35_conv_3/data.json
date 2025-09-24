@@ -1,0 +1,609 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_3.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,3654\"><NAV class=\"sidebar\" data-bbox=\"0,0,88,721\"><DIV class=\"sidebar-logo\"><IMG id=\"0\" title=\"Magento Admin Panel\" data-bbox=\"27,17,35,41\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI0YwNTEyQyI+PHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgMThjLTQuNDEgMC04LTMuNTktOC04czMuNTktOCA4IDggOCAzLjU5IDggOC0zLjU5IDgtOCA4eiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4=\" alt=\"Magento Logo\"></IMG><text>Admin Panel</text></DIV><UL class=\"nav-menu\" data-bbox=\"0,75,88,646\"><A href=\"#\"><I class=\"fas fa-tachometer-alt possible-clickable-element\" data-testid=\"A\"></I><SPAN id=\"1\" data-text=\"Dashboard\" data-bbox=\"14,112,60,13\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Dashboard</text></SPAN></A><LI data-bbox=\"0,137,88,62\"><A href=\"#\"><I class=\"fas fa-shopping-cart possible-clickable-element\" data-testid=\"C\"></I><SPAN id=\"2\" data-text=\"Sales\" data-bbox=\"30,174,28,13\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Sales</text></SPAN></A></LI><LI data-bbox=\"-165,92,238,308\"><UL data-bbox=\"-165,92,238,308\"><SPAN data-text=\"Braintree Virtual Terminal\" data-bbox=\"-150,369,174,19\"><text>Braintree Virtual Terminal</text></SPAN></UL></LI><LI data-bbox=\"0,199,88,62\"><A href=\"#\"><I class=\"fas fa-tags possible-clickable-element\" data-testid=\"E\"></I><SPAN id=\"3\" data-text=\"Catalog\" data-bbox=\"22,236,44,13\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Catalog</text></SPAN></A></LI><LI class=\"active\" data-bbox=\"0,261,88,62\"><A href=\"#\"><I class=\"fas fa-users possible-clickable-element\" data-testid=\"G\"></I><SPAN id=\"4\" data-text=\"Customers\" data-bbox=\"14,298,60,13\" class=\"possible-clickable-element\" data-testid=\"H\"><text>Customers</text></SPAN></A></LI><LI data-bbox=\"0,323,88,62\"><A href=\"#\"><I class=\"fas fa-bullhorn possible-clickable-element\" data-testid=\"I\"></I><SPAN id=\"5\" data-text=\"Marketing\" data-bbox=\"14,360,60,13\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Marketing</text></SPAN></A></LI><LI data-bbox=\"0,385,88,62\"><A href=\"#\"><I class=\"fas fa-file-alt possible-clickable-element\" data-testid=\"K\"></I><SPAN id=\"6\" data-text=\"Content\" data-bbox=\"19,422,50,13\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Content</text></SPAN></A></LI><LI data-bbox=\"0,447,88,62\"><A href=\"#\"><I class=\"fas fa-chart-bar possible-clickable-element\" data-testid=\"M\"></I><SPAN id=\"7\" data-text=\"Reports\" data-bbox=\"22,484,44,13\" class=\"possible-clickable-element\" data-testid=\"N\"><text>Reports</text></SPAN></A></LI><LI data-bbox=\"0,509,88,62\"><A href=\"#\"><I class=\"fas fa-store possible-clickable-element\" data-testid=\"O\"></I><SPAN id=\"8\" data-text=\"Stores\" data-bbox=\"25,546,38,13\" class=\"possible-clickable-element\" data-testid=\"P\"><text>Stores</text></SPAN></A></LI><LI data-bbox=\"0,571,88,62\"><A href=\"#\"><I class=\"fas fa-cogs possible-clickable-element\" data-testid=\"Q\"></I><SPAN id=\"9\" data-text=\"System\" data-bbox=\"25,608,38,13\" class=\"possible-clickable-element\" data-testid=\"R\"><text>System</text></SPAN></A></LI></UL><DIV class=\"nav-footer\"><A href=\"#\"><I class=\"fas fa-puzzle-piece possible-clickable-element\" data-testid=\"S\"></I><SPAN id=\"10\" data-text=\"Find Partners & Extensions\" data-bbox=\"32,670,24,13\" class=\"possible-clickable-element\" data-testid=\"T\"><text>Find Partners & Extensions</text></SPAN></A></DIV></NAV><DIV class=\"main-wrapper\" data-bbox=\"88,0,1192,3654\"><DIV class=\"notification-bar\" data-bbox=\"118,0,1132,51\"><DIV class=\"message\" data-bbox=\"119,0,958,46\"><I class=\"fas fa-check-circle\"></I><DIV data-text=\"Task 'Update attributes for 13 selected products': 1 item(s) have been successfully updated.\" data-bbox=\"129,0,852,49\"><text>Task \"Update attributes for 13 selected products\": 1 item(s) have been successfully updated.</text></DIV></DIV><A id=\"12\" data-text=\"View Details\" data-bbox=\"981,0,81,34\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"U\"><text>View Details</text></A></DIV><HEADER data-bbox=\"88,51,1192,80\"><H1 data-text=\"Customers\" data-bbox=\"118,82,740,34\"><text>Customers</text></H1><DIV class=\"header-actions\" data-bbox=\"873,66,377,44\"><DIV data-bbox=\"1034,77,50,0\"><INPUT type=\"text\" placeholder=\"Search...\" id=\"global-search\" data-bbox=\"1034,77,50,35\" class=\"possible-clickable-element\" data-testid=\"V\" style=\"document.addEventListener('DOMContentLoaded', function () { // Table row hover effect const tableRows = document.querySelectorAll('.data-table tbody tr'); tableRows.forEach(row => { row.addEventListener('mouseenter', () => row.style.backgroundColor = '#f3f4f6'); row.addEventListener('mouseleave', () => row.style.backgroundColor = ''); }); // \"Select All\" checkbox functionality const selectAllCheckbox = document.querySelector('.data-table thead input[type=\"checkbox\"]'); const rowCheckboxes = document.querySelectorAll('.data-table tbody input[type=\"checkbox\"]'); if (selectAllCheckbox) { selectAllCheckbox.addEventListener('change', function () { rowCheckboxes.forEach(checkbox => { checkbox.checked = this.checked; }); }); } });\"></INPUT></DIV><BUTTON id=\"14\" title=\"Notifications\" class=\"icon-button\" data-bbox=\"1081,77,60,33\"><I class=\"fas fa-bell possible-clickable-element\" data-testid=\"W\"></I></BUTTON><DIV class=\"user-menu\" data-bbox=\"1144,77,106,33\"><A title=\"My Account\" data-bbox=\"1144,77,106,33\" href=\"#\"><IMG src=\"https://i.pravatar.cc/40?u=admin\" alt=\"Admin avatar\" class=\"possible-clickable-element\" data-testid=\"X\"></IMG><SPAN id=\"13\" data-text=\"admin\" data-bbox=\"1185,85,36,18\" class=\"possible-clickable-element\" data-testid=\"Y\"><text>admin</text></SPAN><I class=\"fas fa-chevron-down possible-clickable-element\" data-testid=\"Z\"></I></A></DIV></DIV></HEADER><DIV class=\"page-header\"><BUTTON title=\"Add New Customer\" type=\"button\" class=\"btn btn-primary\" data-bbox=\"1046,159,189,45\"><I class=\"fas fa-plus possible-clickable-element\" data-testid=\"AA\"></I><SPAN id=\"16\" data-text=\"Add New Customer\" data-bbox=\"1063,170,155,22\" class=\"possible-clickable-element\" data-testid=\"AB\"><text>Add New Customer</text></SPAN></BUTTON></DIV><DIV class=\"card-header\" data-bbox=\"118,250,1132,89\"><DIV class=\"filter-controls\"><DIV class=\"search-bar\"><I class=\"fas fa-search\"></I><INPUT id=\"20\" type=\"text\" placeholder=\"Search by keyword\" data-value=\"Fionaee\" data-bbox=\"118,250,396,33\" class=\"possible-clickable-element\" data-testid=\"AC\" style=\"document.addEventListener('DOMContentLoaded', function () { // Table row hover effect const tableRows = document.querySelectorAll('.data-table tbody tr'); tableRows.forEach(row => { row.addEventListener('mouseenter', () => row.style.backgroundColor = '#f3f4f6'); row.addEventListener('mouseleave', () => row.style.backgroundColor = ''); }); // \"Select All\" checkbox functionality const selectAllCheckbox = document.querySelector('.data-table thead input[type=\"checkbox\"]'); const rowCheckboxes = document.querySelectorAll('.data-table tbody input[type=\"checkbox\"]'); if (selectAllCheckbox) { selectAllCheckbox.addEventListener('change', function () { rowCheckboxes.forEach(checkbox => { checkbox.checked = this.checked; }); }); } });\"></INPUT></DIV><BUTTON id=\"22\" data-text=\"Filters\" class=\"btn btn-secondary\" data-bbox=\"731,250,101,33\"><I class=\"fas fa-filter possible-clickable-element\" data-testid=\"AD\"></I><text>Filters</text></BUTTON></DIV><DIV class=\"action-buttons\" data-bbox=\"843,245,407,48\"><DIV data-bbox=\"843,246,156,47\"><BUTTON type=\"button\" class=\"btn btn-secondary\" data-bbox=\"843,246,156,47\"><SPAN id=\"17\" data-text=\"Default View\" data-bbox=\"895,259,70,17\" class=\"possible-clickable-element\" data-testid=\"AE\"><text>Default View</text></SPAN><I class=\"fas fa-chevron-down possible-clickable-element\" data-testid=\"AF\"></I></BUTTON></DIV><DIV data-bbox=\"1003,245,129,48\"><BUTTON type=\"button\" class=\"btn btn-secondary\" data-bbox=\"1003,245,129,48\"><SPAN id=\"18\" data-text=\"Columns\" data-bbox=\"1047,257,51,18\" class=\"possible-clickable-element\" data-testid=\"AG\"><text>Columns</text></SPAN><I class=\"fas fa-chevron-down possible-clickable-element\" data-testid=\"AH\"></I></BUTTON></DIV><DIV data-bbox=\"1136,246,114,47\"><BUTTON type=\"button\" class=\"btn btn-secondary\" data-bbox=\"1136,246,114,47\"><I class=\"fas fa-upload possible-clickable-element\" data-testid=\"AI\"></I><SPAN id=\"19\" data-text=\"Export\" data-bbox=\"1178,258,38,18\" class=\"possible-clickable-element\" data-testid=\"AJ\"><text>Export</text></SPAN></BUTTON></DIV></DIV></DIV><DIV class=\"card-header\" data-bbox=\"103,304,1162,35\"><DIV class=\"filter-controls\" data-bbox=\"118,304,164,33\"><BUTTON title=\"Select Items\" class=\"btn btn-secondary\" data-bbox=\"118,304,164,33\"><SPAN id=\"23\" data-text=\"Actions\" data-bbox=\"133,311,49,19\" class=\"possible-clickable-element\" data-testid=\"AK\"><text>Actions</text></SPAN><I class=\"fas fa-chevron-down possible-clickable-element\" data-testid=\"AL\"></I></BUTTON><DIV data-text=\"72\" data-bbox=\"319,304,117,33\"><text>72</text><SPAN data-text=\"records found\" data-bbox=\"340,311,95,19\"><text>records found</text></SPAN></DIV></DIV></DIV><TR data-bbox=\"119,360,1131,43\"><TH style=\"width: 50px;\"><DIV data-bbox=\"130,372,31,16\"><INPUT type=\"checkbox\" data-value=\"on\" data-bbox=\"145,373,13,13\" data-status=\"not-checked\" class=\"possible-clickable-element\" data-testid=\"AM\" style=\"document.addEventListener('DOMContentLoaded', function () { // Table row hover effect const tableRows = document.querySelectorAll('.data-table tbody tr'); tableRows.forEach(row => { row.addEventListener('mouseenter', () => row.style.backgroundColor = '#f3f4f6'); row.addEventListener('mouseleave', () => row.style.backgroundColor = ''); }); // \"Select All\" checkbox functionality const selectAllCheckbox = document.querySelector('.data-table thead input[type=\"checkbox\"]'); const rowCheckboxes = document.querySelectorAll('.data-table tbody input[type=\"checkbox\"]'); if (selectAllCheckbox) { selectAllCheckbox.addEventListener('change', function () { rowCheckboxes.forEach(checkbox => { checkbox.checked = this.checked; }); }); } });\"></INPUT></DIV></TH><SPAN id=\"30\" data-text=\"Name\" data-bbox=\"182,370,106,18\"><text>Name</text></SPAN><SPAN id=\"31\" data-text=\"Email\" data-bbox=\"326,370,214,18\"><text>Email</text></SPAN><SPAN id=\"32\" data-text=\"Group\" data-bbox=\"561,370,52,18\"><text>Group</text></SPAN><SPAN id=\"33\" data-text=\"Phone\" data-bbox=\"634,370,95,18\"><text>Phone</text></SPAN><SPAN id=\"34\" data-text=\"ZIP\" data-bbox=\"750,370,75,18\"><text>ZIP</text></SPAN><SPAN id=\"35\" data-text=\"Country\" data-bbox=\"846,370,89,18\"><text>Country</text></SPAN><SPAN id=\"36\" data-text=\"State/Province\" data-bbox=\"956,370,101,18\"><text>State/Province</text></SPAN><SPAN id=\"37\" data-text=\"Customer Since\" data-bbox=\"1078,370,161,18\"><text>Customer Since</text></SPAN></TR><TR data-bbox=\"119,403,1131,43\"><INPUT id=\"38\" value=\"25\" type=\"checkbox\" data-bbox=\"137,416,13,13\" data-status=\"not-checked\" class=\"possible-clickable-element\" data-testid=\"AN\" style=\"document.addEventListener('DOMContentLoaded', function () { // Table row hover effect const tableRows = document.querySelectorAll('.data-table tbody tr'); tableRows.forEach(row => { row.addEventListener('mouseenter', () => row.style.backgroundColor = '#f3f4f6'); row.addEventListener('mouseleave', () => row.style.backgroundColor = ''); }); // \"Select All\" checkbox functionality const selectAllCheckbox = document.querySelector('.data-table thead input[type=\"checkbox\"]'); const rowCheckboxes = document.querySelectorAll('.data-table tbody input[type=\"checkbox\"]'); if (selectAllCheckbox) { selectAllCheckbox.addEventListener('change', function () { rowCheckboxes.forEach(checkbox => { checkbox.checked = this.checked; }); }); } });\"></INPUT><TD data-text=\"Adam Garcia\" data-bbox=\"182,414,123,17\"><text>Adam Garcia</text></TD><TD data-text=\"gamingpro456@gmail.com\" data-bbox=\"326,414,214,17\"><text>gamingpro456@gmail.com</text></TD><TD data-text=\"General\" data-bbox=\"561,414,52,17\"><text>General</text></TD><TD data-text=\"2065555555\" data-bbox=\"634,414,95,17\"><text>2065555555</text></TD><TD data-text=\"98122\" data-bbox=\"750,414,75,17\"><text>98122</text></TD><TD data-text=\"United States\" data-bbox=\"846,414,89,17\"><text>United States</text></TD><TD data-text=\"Washington\" data-bbox=\"956,414,101,17\"><text>Washington</text></TD><TD data-text=\"Apr 19, 2023 5:46:14 PM\" data-bbox=\"1078,414,161,17\"><text>Apr 19, 2023 5:46:14 PM</text></TD></TR><TR data-bbox=\"119,446,1131,42\"><INPUT id=\"39\" value=\"33\" type=\"checkbox\" data-bbox=\"137,458,13,13\" data-status=\"not-checked\" class=\"possible-clickable-element\" data-testid=\"AO\" style=\"document.addEventListener('DOMContentLoaded', function () { // Table row hover effect const tableRows = document.querySelectorAll('.data-table tbody tr'); tableRows.forEach(row => { row.addEventListener('mouseenter', () => row.style.backgroundColor = '#f3f4f6'); row.addEventListener('mouseleave', () => row.style.backgroundColor = ''); }); // \"Select All\" checkbox functionality const selectAllCheckbox = document.querySelector('.data-table thead input[type=\"checkbox\"]'); const rowCheckboxes = document.querySelectorAll('.data-table tbody input[type=\"checkbox\"]'); if (selectAllCheckbox) { selectAllCheckbox.addEventListener('change', function () { rowCheckboxes.forEach(checkbox => { checkbox.checked = this.checked; }); }); } });\"></INPUT><TD data-text=\"Adam Garcia\" data-bbox=\"182,456,123,18\"><text>Adam Garcia</text></TD><TD data-text=\"adam.garcia@gmail.com\" data-bbox=\"326,456,214,18\"><text>adam.garcia@gmail.com</text></TD><TD data-text=\"General\" data-bbox=\"561,456,52,18\"><text>General</text></TD><TD data-text=\"6025551212\" data-bbox=\"634,456,95,18\"><text>6025551212</text></TD><TD data-text=\"85004\" data-bbox=\"750,456,75,18\"><text>85004</text></TD><TD data-text=\"United States\" data-bbox=\"846,456,89,18\"><text>United States</text></TD><TD data-text=\"Arizona\" data-bbox=\"956,456,101,18\"><text>Arizona</text></TD><TD data-text=\"Apr 19, 2023 5:46:40 PM\" data-bbox=\"1078,456,161,18\"><text>Apr 19, 2023 5:46:40 PM</text></TD></TR><TR data-bbox=\"119,488,1131,43\"><INPUT id=\"40\" value=\"23\" type=\"checkbox\" data-bbox=\"137,500,13,13\" data-status=\"not-checked\" class=\"possible-clickable-element\" data-testid=\"AP\" style=\"document.addEventListener('DOMContentLoaded', function () { // Table row hover effect const tableRows = document.querySelectorAll('.data-table tbody tr'); tableRows.forEach(row => { row.addEventListener('mouseenter', () => row.style.backgroundColor = '#f3f4f6'); row.addEventListener('mouseleave', () => row.style.backgroundColor = ''); }); // \"Select All\" checkbox functionality const selectAllCheckbox = document.querySelector('.data-table thead input[type=\"checkbox\"]'); const rowCheckboxes = document.querySelectorAll('.data-table tbody input[type=\"checkbox\"]'); if (selectAllCheckbox) { selectAllCheckbox.addEventListener('change', function () { rowCheckboxes.forEach(checkbox => { checkbox.checked = this.checked; }); }); } });\"></INPUT><TD data-text=\"Alex Johnson\" data-bbox=\"182,498,123,18\"><text>Alex Johnson</text></TD><TD data-text=\"fitnessjunkie22@yahoo.com\" data-bbox=\"326,498,214,18\"><text>fitnessjunkie22@yahoo.com</text></TD><TD data-text=\"General\" data-bbox=\"561,498,52,18\"><text>General</text></TD><TD data-text=\"3105555555\" data-bbox=\"634,498,95,18\"><text>3105555555</text></TD><TD data-text=\"90212\" data-bbox=\"750,498,75,18\"><text>90212</text></TD><TD data-text=\"United States\" data-bbox=\"846,498,89,18\"><text>United States</text></TD><TD data-text=\"California\" data-bbox=\"956,498,101,18\"><text>California</text></TD><TD data-text=\"Apr 19, 2023 5:46:07 PM\" data-bbox=\"1078,498,161,18\"><text>Apr 19, 2023 5:46:07 PM</text></TD></TR><INPUT id=\"41\" value=\"27\" type=\"checkbox\" data-bbox=\"137,543,13,13\" data-status=\"not-checked\" class=\"possible-clickable-element\" data-testid=\"AQ\" style=\"document.addEventListener('DOMContentLoaded', function () { // Table row hover effect const tableRows = document.querySelectorAll('.data-table tbody tr'); tableRows.forEach(row => { row.addEventListener('mouseenter', () => row.style.backgroundColor = '#f3f4f6'); row.addEventListener('mouseleave', () => row.style.backgroundColor = ''); }); // \"Select All\" checkbox functionality const selectAllCheckbox = document.querySelector('.data-table thead input[type=\"checkbox\"]'); const rowCheckboxes = document.querySelectorAll('.data-table tbody input[type=\"checkbox\"]'); if (selectAllCheckbox) { selectAllCheckbox.addEventListener('change', function () { rowCheckboxes.forEach(checkbox => { checkbox.checked = this.checked; }); }); } });\"></INPUT><text>Alex Martin</text><text>alex.martin@gmail.com</text><text>General</text><text>2125551212</text><text>10001</text><text>United States</text><text>New York</text></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    nav|\n    <\n      div|\n      <img| Magento Admin Panel >\n      <text| Admin Panel >\n    >\n    <\n      ul|\n      <i[A]| >\n      <span[B]| Dashboard >\n      <i[C]| >\n      <span[D]| Sales >\n      <span| Braintree Virtual Terminal >\n      <i[E]| >\n      <span[F]| Catalog >\n      <i[G]| >\n      <span[H]| Customers >\n      <i[I]| >\n      <span[J]| Marketing >\n      <i[K]| >\n      <span[L]| Content >\n      <i[M]| >\n      <span[N]| Reports >\n      <i[O]| >\n      <span[P]| Stores >\n      <i[Q]| >\n      <span[R]| System >\n    >\n    <i[S]| >\n    <span[T]| Find Partners & Extensions >\n  >\n  <\n    div|\n    <\n      div|\n      <div| Task \"Update attributes for 13 selected products\": 1 item(s) have been successfully updated. >\n      <a[U]| View Details >\n    >\n    <\n      header|\n      <h1| Customers >\n      <\n        div|\n        <input[V]| Search... >\n        <\n          button| Notifications\n          <i[W]| >\n        >\n        <\n          a| My Account\n          <img[X]| >\n          <span[Y]| admin >\n          <i[Z]| >\n        >\n      >\n    >\n    <\n      button| Add New Customer\n      <i[AA]| >\n      <span[AB]| Add New Customer >\n    >\n    <\n      div|\n      <\n        div|\n        <input[AC]| Search by keyword >\n        <i[AD]| >\n        <text| Filters >\n      >\n      <\n        div|\n        <span[AE]| Default View >\n        <i[AF]| >\n        <span[AG]| Columns >\n        <i[AH]| >\n        <i[AI]| >\n        <span[AJ]| Export >\n      >\n    >\n    <\n      div|\n      <\n        button| Select Items\n        <span[AK]| Actions >\n        <i[AL]| >\n      >\n      <\n        div|\n        <text| 72 >\n        <span| records found >\n      >\n    >\n    <\n      tr|\n      <input[AM]| >\n      <span| Name >\n      <span| Email >\n      <span| Group >\n      <span| Phone >\n      <span| ZIP >\n      <span| Country >\n      <span| State/Province >\n      <span| Customer Since >\n    >\n    <\n      tr|\n      <input[AN]| 25 >\n      <td| Adam Garcia >\n      <td| gamingpro456@gmail.com >\n      <td| General >\n      <td| 2065555555 >\n      <td| 98122 >\n      <td| United States >\n      <td| Washington >\n      <td| Apr 19, 2023 5:46:14 PM >\n    >\n    <\n      tr|\n      <input[AO]| 33 >\n      <td| Adam Garcia >\n      <td| adam.garcia@gmail.com >\n      <td| General >\n      <td| 6025551212 >\n      <td| 85004 >\n      <td| United States >\n      <td| Arizona >\n      <td| Apr 19, 2023 5:46:40 PM >\n    >\n    <\n      tr|\n      <input[AP]| 23 >\n      <td| Alex Johnson >\n      <td| fitnessjunkie22@yahoo.com >\n      <td| General >\n      <td| 3105555555 >\n      <td| 90212 >\n      <td| United States >\n      <td| California >\n      <td| Apr 19, 2023 5:46:07 PM >\n    >\n    <input[AQ]| 27 >\n    <text| Alex Martin >\n    <text| alex.martin@gmail.com >\n    <text| General >\n    <text| 2125551212 >\n    <text| 10001 >\n    <text| United States >\n    <text| New York >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 24,
+                "top": 92.5,
+                "right": 44,
+                "bottom": 108.5,
+                "width": 20,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 59,
+                "top": 92,
+                "right": 132,
+                "bottom": 109,
+                "width": 73,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Dashboard"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 24,
+                "top": 133.5,
+                "right": 44,
+                "bottom": 149.5,
+                "width": 20,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 59,
+                "top": 133,
+                "right": 96,
+                "bottom": 150,
+                "width": 37,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Sales"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 24,
+                "top": 191.5,
+                "right": 44,
+                "bottom": 207.5,
+                "width": 20,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 59,
+                "top": 191,
+                "right": 111,
+                "bottom": 208,
+                "width": 52,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Catalog"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 24,
+                "top": 232.5,
+                "right": 44,
+                "bottom": 248.5,
+                "width": 20,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 59,
+                "top": 232,
+                "right": 131,
+                "bottom": 249,
+                "width": 72,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Customers"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 24,
+                "top": 273.5,
+                "right": 44,
+                "bottom": 289.5,
+                "width": 20,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 59,
+                "top": 273,
+                "right": 127,
+                "bottom": 290,
+                "width": 68,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Marketing"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 24,
+                "top": 314.5,
+                "right": 44,
+                "bottom": 330.5,
+                "width": 20,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 59,
+                "top": 314,
+                "right": 111,
+                "bottom": 331,
+                "width": 52,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Content"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 24,
+                "top": 355.5,
+                "right": 44,
+                "bottom": 371.5,
+                "width": 20,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 59,
+                "top": 355,
+                "right": 111,
+                "bottom": 372,
+                "width": 52,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Reports"
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 24,
+                "top": 396.5,
+                "right": 44,
+                "bottom": 412.5,
+                "width": 20,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 59,
+                "top": 396,
+                "right": 102,
+                "bottom": 413,
+                "width": 43,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Stores"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 24,
+                "top": 437.5,
+                "right": 44,
+                "bottom": 453.5,
+                "width": 20,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 59,
+                "top": 437,
+                "right": 109,
+                "bottom": 454,
+                "width": 50,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "System"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 24,
+                "top": 665.5,
+                "right": 37,
+                "bottom": 678.5,
+                "width": 13,
+                "height": 13
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 37,
+                "top": 664,
+                "right": 204,
+                "bottom": 680,
+                "width": 167,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Find Partners & Extensions"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 1171,
+                "top": 12,
+                "right": 1256,
+                "bottom": 29,
+                "width": 85,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "View Details"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 855,
+                "top": 57,
+                "right": 1091,
+                "bottom": 92,
+                "width": 236,
+                "height": 35
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 1111,
+                "top": 64,
+                "right": 1129,
+                "bottom": 84,
+                "width": 18,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 1149,
+                "top": 58.5,
+                "right": 1181,
+                "bottom": 90.5,
+                "width": 32,
+                "height": 32
+            },
+            "tag": "img",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 1191,
+                "top": 66,
+                "right": 1232,
+                "bottom": 83,
+                "width": 41,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "admin"
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 1242,
+                "top": 67.5,
+                "right": 1256,
+                "bottom": 81.5,
+                "width": 14,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 1082,
+                "top": 144.5,
+                "right": 1095,
+                "bottom": 158.5,
+                "width": 13,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 1103,
+                "top": 143,
+                "right": 1238,
+                "bottom": 160,
+                "width": 135,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Add New Customer"
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 301,
+                "top": 212,
+                "right": 537,
+                "bottom": 247,
+                "width": 236,
+                "height": 35
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 567,
+                "top": 222.5,
+                "right": 581,
+                "bottom": 236.5,
+                "width": 14,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 865,
+                "top": 221,
+                "right": 952,
+                "bottom": 238,
+                "width": 87,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Default View"
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 960,
+                "top": 222.5,
+                "right": 974,
+                "bottom": 236.5,
+                "width": 14,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 1022,
+                "top": 221,
+                "right": 1084,
+                "bottom": 238,
+                "width": 62,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Columns"
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 1092,
+                "top": 222.5,
+                "right": 1106,
+                "bottom": 236.5,
+                "width": 14,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 1154,
+                "top": 222.5,
+                "right": 1168,
+                "bottom": 236.5,
+                "width": 14,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 1176,
+                "top": 221,
+                "right": 1221,
+                "bottom": 238,
+                "width": 45,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Export"
+        },
+        {
+            "keep": true,
+            "id": "AK",
+            "rects": {
+                "left": 319,
+                "top": 291,
+                "right": 372,
+                "bottom": 308,
+                "width": 53,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Actions"
+        },
+        {
+            "keep": true,
+            "id": "AL",
+            "rects": {
+                "left": 380,
+                "top": 292.5,
+                "right": 394,
+                "bottom": 306.5,
+                "width": 14,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AM",
+            "rects": {
+                "left": 301,
+                "top": 352.5,
+                "right": 317,
+                "bottom": 368.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AN",
+            "rects": {
+                "left": 301,
+                "top": 426.5,
+                "right": 317,
+                "bottom": 442.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AO",
+            "rects": {
+                "left": 301,
+                "top": 519.5,
+                "right": 317,
+                "bottom": 535.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AP",
+            "rects": {
+                "left": 301,
+                "top": 612.5,
+                "right": 317,
+                "bottom": 628.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AQ",
+            "rects": {
+                "left": 301,
+                "top": 705.5,
+                "right": 317,
+                "bottom": 720,
+                "width": 16,
+                "height": 14.5
+            },
+            "tag": "input",
+            "text": ""
+        }
+    ]
+}

@@ -1,0 +1,693 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_36.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,55\"><HEADER data-bbox=\"0,0,1280,55\"><NAV data-bbox=\"178,0,227,55\"><DIV data-bbox=\"188,10,207,35\"><A id=\"2\" data-bbox=\"264,10,68,35\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"A\"><text>History</text></A><A id=\"3\" data-bbox=\"331,10,64,35\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Export</text></A></DIV></NAV><NAV data-bbox=\"708,0,572,55\"><UL data-bbox=\"722,13,405,27\"><A id=\"4\" data-bbox=\"722,13,77,27\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"C\"><text>GPS Traces</text></A><A id=\"5\" data-bbox=\"803,13,82,27\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"D\"><text>User Diaries</text></A><A id=\"6\" data-bbox=\"889,13,87,27\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"E\"><text>Communities</text></A><A id=\"7\" data-bbox=\"980,13,63,27\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Copyright</text></A><A id=\"8\" data-bbox=\"1047,13,34,27\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"G\"><text>Help</text></A><A id=\"9\" data-bbox=\"1085,13,42,27\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"H\"><text>About</text></A></UL><DIV data-bbox=\"1135,10,135,35\"><A id=\"10\" data-bbox=\"1135,10,63,35\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Log In</text></A><A id=\"11\" data-bbox=\"1197,10,73,35\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Sign Up</text></A></DIV></NAV></HEADER><DIV data-bbox=\"0,55,1280,665\"><DIV data-bbox=\"0,55,350,665\"><DIV data-bbox=\"0,55,350,213\"><FORM data-bbox=\"0,55,350,213\"><A title=\"Find directions between two points\" data-bbox=\"304,63,38,31\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"K\"></A><BUTTON id=\"12\" type=\"button\" data-bbox=\"313,71,21,21\" class=\"possible-clickable-element\" data-testid=\"L\"></BUTTON><INPUT id=\"13\" type=\"text\" placeholder=\"From\" data-value=\"Maid of the Mist, Prospect Point Park Observation Deck, City of Niagara Falls, Niagara County, New York, 14302, United States\" data-bbox=\"37,112,305,31\" value=\"Maid of the Mist, Niagara Falls, NY\" class=\"possible-clickable-element\" data-testid=\"M\" style=\"\"></INPUT><INPUT id=\"14\" type=\"text\" placeholder=\"To\" data-value=\"Mount Monadnock, Jaffrey, Cheshire County, New Hampshire, United States\" data-bbox=\"37,147,305,31\" value=\"Mount Monadnock, Jaffrey, NH\" class=\"possible-clickable-element\" data-testid=\"N\" style=\"\"></INPUT><DIV data-bbox=\"4,182,342,31\"><SELECT id=\"15\" data-value=\"2\" data-text=\"Foot (OSRM)\" data-bbox=\"37,182,262,31\" class=\"possible-clickable-element\" data-testid=\"O\"></SELECT><INPUT id=\"16\" value=\"Go\" type=\"submit\" data-bbox=\"307,182,35,31\" class=\"possible-clickable-element\" data-testid=\"P\" style=\"\"></INPUT></DIV><BUTTON id=\"17\" data-bbox=\"37,217,132,31\" type=\"button\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>Reverse Directions</text></BUTTON></FORM></DIV><DIV data-bbox=\"16,284,318,46\"><H2 data-bbox=\"16,284,297,38\"><text>Directions</text></H2><BUTTON id=\"18\" type=\"button\" data-bbox=\"313,284,21,21\" class=\"possible-clickable-element\" data-testid=\"R\"></BUTTON></DIV><P data-bbox=\"16,330,318,21\"><text>Distance: 651km. Time: 144:50.</text></P><TR data-bbox=\"16,367,318,30\"><DIV id=\"19\" data-bbox=\"17,372,20,20\"><I class=\"fa-solid fa-arrow-up possible-clickable-element\" data-testid=\"S\"></I></DIV><B id=\"20\" data-bbox=\"39,373,13,17\" class=\"possible-clickable-element\" data-testid=\"T\"><text>1.</text></B><SPAN class=\"possible-clickable-element\" data-testid=\"U\"><text>Head northwest on Prospect Street</text></SPAN><TD id=\"21\" data-bbox=\"300,367,34,30\" class=\"possible-clickable-element\" data-testid=\"V\"><text>20m</text></TD></TR><DIV id=\"22\" data-bbox=\"17,402,20,20\"><I class=\"fa-solid fa-arrow-turn-right possible-clickable-element\" data-testid=\"W\"></I></DIV><B id=\"23\" data-bbox=\"39,403,13,17\" class=\"possible-clickable-element\" data-testid=\"X\"><text>2.</text></B><SPAN class=\"possible-clickable-element\" data-testid=\"Y\"><text>Turn right toward Niagara Scenic Pkwy</text></SPAN><TD id=\"24\" data-bbox=\"300,397,34,30\" class=\"possible-clickable-element\" data-testid=\"Z\"><text>150m</text></TD><TR data-bbox=\"16,427,318,30\"><DIV id=\"25\" data-bbox=\"17,432,20,20\" class=\"possible-clickable-element\" data-testid=\"AA\"></DIV><B id=\"26\" data-bbox=\"39,433,13,17\" class=\"possible-clickable-element\" data-testid=\"AB\"><text>3.</text></B><SPAN class=\"possible-clickable-element\" data-testid=\"AC\"><text>Turn left onto Niagara Scenic Pkwy</text></SPAN><TD id=\"27\" data-bbox=\"300,427,34,30\" class=\"possible-clickable-element\" data-testid=\"AD\"><text>30m</text></TD></TR><DIV id=\"28\" data-bbox=\"17,462,20,20\"><I class=\"fa-solid fa-road possible-clickable-element\" data-testid=\"AE\"></I></DIV><B id=\"29\" data-bbox=\"39,463,13,17\" class=\"possible-clickable-element\" data-testid=\"AF\"><text>4.</text></B><SPAN class=\"possible-clickable-element\" data-testid=\"AG\"><text>Continue onto Robert Moses Pkwy</text></SPAN><TD id=\"30\" data-bbox=\"300,457,34,30\" class=\"possible-clickable-element\" data-testid=\"AH\"><text>2.5km</text></TD><DIV id=\"31\" data-bbox=\"17,492,20,20\"><I class=\"fa-solid fa-signs-post possible-clickable-element\" data-testid=\"AI\"></I></DIV><B id=\"32\" data-bbox=\"39,493,13,17\" class=\"possible-clickable-element\" data-testid=\"AJ\"><text>5.</text></B><SPAN class=\"possible-clickable-element\" data-testid=\"AK\"><text>Merge onto I-190 N</text></SPAN><TD id=\"33\" data-bbox=\"300,487,34,30\" class=\"possible-clickable-element\" data-testid=\"AL\"><text>15km</text></TD></DIV><DIV data-bbox=\"350,55,930,665\"><svg class=\"map-overlay\" preserveAspectRatio=\"none\"><path id=\"53\" data-bbox=\"498,367,634,41\" d=\"M 148,347 C 300,450 500,250 782,375\"></path></svg><DIV data-bbox=\"350,55,930,0\"><SPAN id=\"56\" data-bbox=\"1250,75,20,20\" class=\"possible-clickable-element\" data-testid=\"AM\"></SPAN><SPAN id=\"57\" data-bbox=\"1250,115,20,20\" class=\"possible-clickable-element\" data-testid=\"AN\"></SPAN><SPAN id=\"58\" data-bbox=\"1250,155,20,20\" class=\"possible-clickable-element\" data-testid=\"AO\"></SPAN><SPAN id=\"59\" data-bbox=\"1250,205,20,20\" class=\"possible-clickable-element\" data-testid=\"AP\"></SPAN><SPAN id=\"60\" data-bbox=\"1250,245,20,20\" class=\"possible-clickable-element\" data-testid=\"AQ\"></SPAN><SPAN id=\"61\" data-bbox=\"1250,285,20,20\" class=\"possible-clickable-element\" data-testid=\"AR\"></SPAN><A id=\"62\" data-bbox=\"1240,325,40,40\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"AS\"></A><A id=\"63\" data-bbox=\"1240,375,40,40\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"AT\"></A></DIV><DIV data-bbox=\"355,681,90,34\"><DIV data-bbox=\"355,681,56,18\"><text>50 km</text></DIV><DIV data-bbox=\"355,697,90,18\"><text>50 mi</text></DIV></DIV><DIV data-bbox=\"874,703,406,17\"><text>©</text><A id=\"64\" data-bbox=\"891,704,151,14\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"AU\"><text>OpenStreetMap contributors</text></A><A id=\"65\" data-bbox=\"1056,704,90,14\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"AV\"><text>Make a Donation</text></A><A id=\"66\" data-bbox=\"1153,704,122,14\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"AW\"><text>Website and API terms</text></A></DIV></DIV></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    header|\n    <\n      div|\n      <a[A]| History >\n      <a[B]| Export >\n    >\n    <\n      nav|\n      <\n        ul|\n        <a[C]| GPS Traces >\n        <a[D]| User Diaries >\n        <a[E]| Communities >\n        <a[F]| Copyright >\n        <a[G]| Help >\n        <a[H]| About >\n      >\n      <\n        div|\n        <a[I]| Log In >\n        <a[J]| Sign Up >\n      >\n    >\n  >\n  <\n    div|\n    <\n      div|\n      <\n        form|\n        <a[K]| Find directions between two points >\n        <button[L]| >\n        <input[M]| Maid of the Mist, Niagara Falls, NY; From >\n        <input[N]| Mount Monadnock, Jaffrey, NH; To >\n        <select[O]| >\n        <input[P]| Go >\n        <button[Q]| Reverse Directions >\n      >\n      <h2| Directions >\n      <button[R]| >\n      <p| Distance: 651km. Time: 144:50. >\n      <\n        tr|\n        <i[S]| >\n        <b[T]| 1. >\n        <span[U]| Head northwest on Prospect Street >\n        <td[V]| 20m >\n      >\n      <i[W]| >\n      <b[X]| 2. >\n      <span[Y]| Turn right toward Niagara Scenic Pkwy >\n      <td[Z]| 150m >\n      <\n        tr|\n        <div[AA]| >\n        <b[AB]| 3. >\n        <span[AC]| Turn left onto Niagara Scenic Pkwy >\n        <td[AD]| 30m >\n      >\n      <i[AE]| >\n      <b[AF]| 4. >\n      <span[AG]| Continue onto Robert Moses Pkwy >\n      <td[AH]| 2.5km >\n      <i[AI]| >\n      <b[AJ]| 5. >\n      <span[AK]| Merge onto I-190 N >\n      <td[AL]| 15km >\n    >\n    <\n      div|\n      <span[AM]| >\n      <span[AN]| >\n      <span[AO]| >\n      <span[AP]| >\n      <span[AQ]| >\n      <span[AR]| >\n      <a[AS]| >\n      <a[AT]| >\n      <\n        div|\n        <div| 50 km >\n        <div| 50 mi >\n      >\n      <\n        div|\n        <text| © >\n        <a[AU]| OpenStreetMap contributors >\n        <a[AV]| Make a Donation >\n        <a[AW]| Website and API terms >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 279,
+                "top": 10.5,
+                "right": 357,
+                "bottom": 45.5,
+                "width": 78,
+                "height": 35
+            },
+            "tag": "a",
+            "text": "History"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 279,
+                "top": 45.5,
+                "right": 357,
+                "bottom": 80.5,
+                "width": 78,
+                "height": 35
+            },
+            "tag": "a",
+            "text": "Export"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 616,
+                "top": 18.5,
+                "right": 719,
+                "bottom": 35.5,
+                "width": 103,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "GPS Traces"
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 719,
+                "top": 18.5,
+                "right": 828,
+                "bottom": 35.5,
+                "width": 109,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "User Diaries"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 828,
+                "top": 18.5,
+                "right": 945,
+                "bottom": 35.5,
+                "width": 117,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Communities"
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 945,
+                "top": 18.5,
+                "right": 1039,
+                "bottom": 35.5,
+                "width": 94,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Copyright"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 1039,
+                "top": 18.5,
+                "right": 1095,
+                "bottom": 35.5,
+                "width": 56,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Help"
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 1095,
+                "top": 18.5,
+                "right": 1161,
+                "bottom": 35.5,
+                "width": 66,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "About"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 1181,
+                "top": 10,
+                "right": 1260,
+                "bottom": 27,
+                "width": 79,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Log In"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1181,
+                "top": 27,
+                "right": 1260,
+                "bottom": 44,
+                "width": 79,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Sign Up"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 275.65625,
+                "top": 69,
+                "right": 333,
+                "bottom": 93,
+                "width": 57.34375,
+                "height": 24
+            },
+            "tag": "a",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 16,
+                "top": 97,
+                "right": 20,
+                "bottom": 101,
+                "width": 4,
+                "height": 4
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 16,
+                "top": 103,
+                "right": 333,
+                "bottom": 141,
+                "width": 317,
+                "height": 38
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 16,
+                "top": 153,
+                "right": 333,
+                "bottom": 191,
+                "width": 317,
+                "height": 38
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 16,
+                "top": 203,
+                "right": 303.21875,
+                "bottom": 243,
+                "width": 287.21875,
+                "height": 40
+            },
+            "tag": "select",
+            "text": "\n                            \n                            \n                            \n                        "
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 311.21875,
+                "top": 203,
+                "right": 333,
+                "bottom": 255,
+                "width": 21.78125,
+                "height": 52
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 16,
+                "top": 257,
+                "right": 132.59375,
+                "bottom": 276,
+                "width": 116.59375,
+                "height": 19
+            },
+            "tag": "button",
+            "text": "Reverse Directions"
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 329,
+                "top": 319,
+                "right": 333,
+                "bottom": 323,
+                "width": 4,
+                "height": 4
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 22.875,
+                "top": 400.390625,
+                "right": 34.875,
+                "bottom": 416.390625,
+                "width": 12,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 49.75,
+                "top": 387,
+                "right": 61.75,
+                "bottom": 407,
+                "width": 12,
+                "height": 20
+            },
+            "tag": "b",
+            "text": "1."
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 66.75,
+                "top": 387,
+                "right": 281.75,
+                "bottom": 407,
+                "width": 215,
+                "height": 20
+            },
+            "tag": "span",
+            "text": "Head northwest on Prospect Street"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 299,
+                "top": 400.390625,
+                "right": 333,
+                "bottom": 416.390625,
+                "width": 34,
+                "height": 16
+            },
+            "tag": "td",
+            "text": "20m"
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 19.34375,
+                "top": 470.171875,
+                "right": 35.34375,
+                "bottom": 486.171875,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 46.703125,
+                "top": 456.78125,
+                "right": 61.703125,
+                "bottom": 476.78125,
+                "width": 15,
+                "height": 20
+            },
+            "tag": "b",
+            "text": "2."
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 66.703125,
+                "top": 456.78125,
+                "right": 260.703125,
+                "bottom": 476.78125,
+                "width": 194,
+                "height": 20
+            },
+            "tag": "span",
+            "text": "Turn right toward Niagara Scenic Pkwy"
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 293,
+                "top": 470.171875,
+                "right": 333,
+                "bottom": 486.171875,
+                "width": 40,
+                "height": 16
+            },
+            "tag": "td",
+            "text": "150m"
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 16,
+                "top": 537.953125,
+                "right": 41.328125,
+                "bottom": 557.953125,
+                "width": 25.328125,
+                "height": 20
+            },
+            "tag": "div",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 49.328125,
+                "top": 526.5625,
+                "right": 64.328125,
+                "bottom": 546.5625,
+                "width": 15,
+                "height": 20
+            },
+            "tag": "b",
+            "text": "3."
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 69.328125,
+                "top": 526.5625,
+                "right": 288.328125,
+                "bottom": 546.5625,
+                "width": 219,
+                "height": 20
+            },
+            "tag": "span",
+            "text": "Turn left onto Niagara Scenic Pkwy"
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 298,
+                "top": 539.953125,
+                "right": 333,
+                "bottom": 555.953125,
+                "width": 35,
+                "height": 16
+            },
+            "tag": "td",
+            "text": "30m"
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 19.34375,
+                "top": 609.734375,
+                "right": 37.34375,
+                "bottom": 625.734375,
+                "width": 18,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 48.6875,
+                "top": 596.34375,
+                "right": 63.6875,
+                "bottom": 616.34375,
+                "width": 15,
+                "height": 20
+            },
+            "tag": "b",
+            "text": "4."
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 68.6875,
+                "top": 596.34375,
+                "right": 229.6875,
+                "bottom": 616.34375,
+                "width": 161,
+                "height": 20
+            },
+            "tag": "span",
+            "text": "Continue onto Robert Moses Pkwy"
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 288,
+                "top": 609.734375,
+                "right": 333,
+                "bottom": 625.734375,
+                "width": 45,
+                "height": 16
+            },
+            "tag": "td",
+            "text": "2.5km"
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 23,
+                "top": 668.3125,
+                "right": 39,
+                "bottom": 684.3125,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 54,
+                "top": 666.125,
+                "right": 69,
+                "bottom": 686.125,
+                "width": 15,
+                "height": 20
+            },
+            "tag": "b",
+            "text": "5."
+        },
+        {
+            "keep": true,
+            "id": "AK",
+            "rects": {
+                "left": 74,
+                "top": 666.125,
+                "right": 221,
+                "bottom": 686.125,
+                "width": 147,
+                "height": 20
+            },
+            "tag": "span",
+            "text": "Merge onto I-190 N"
+        },
+        {
+            "keep": true,
+            "id": "AL",
+            "rects": {
+                "left": 294,
+                "top": 668.3125,
+                "right": 333,
+                "bottom": 684.3125,
+                "width": 39,
+                "height": 16
+            },
+            "tag": "td",
+            "text": "15km"
+        },
+        {
+            "keep": true,
+            "id": "AM",
+            "rects": {
+                "left": 1225,
+                "top": 70,
+                "right": 1265,
+                "bottom": 110,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AN",
+            "rects": {
+                "left": 1225,
+                "top": 120,
+                "right": 1265,
+                "bottom": 160,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AO",
+            "rects": {
+                "left": 1225,
+                "top": 170,
+                "right": 1265,
+                "bottom": 210,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AP",
+            "rects": {
+                "left": 1225,
+                "top": 220,
+                "right": 1265,
+                "bottom": 260,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AQ",
+            "rects": {
+                "left": 1225,
+                "top": 270,
+                "right": 1265,
+                "bottom": 310,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AR",
+            "rects": {
+                "left": 1225,
+                "top": 320,
+                "right": 1265,
+                "bottom": 360,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AS",
+            "rects": {
+                "left": 1225,
+                "top": 370,
+                "right": 1265,
+                "bottom": 410,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "a",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AT",
+            "rects": {
+                "left": 1225,
+                "top": 420,
+                "right": 1265,
+                "bottom": 460,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "a",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AU",
+            "rects": {
+                "left": 854,
+                "top": 695,
+                "right": 1016,
+                "bottom": 710,
+                "width": 162,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "OpenStreetMap contributors"
+        },
+        {
+            "keep": true,
+            "id": "AV",
+            "rects": {
+                "left": 1029,
+                "top": 695,
+                "right": 1125,
+                "bottom": 710,
+                "width": 96,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Make a Donation"
+        },
+        {
+            "keep": true,
+            "id": "AW",
+            "rects": {
+                "left": 1138,
+                "top": 695,
+                "right": 1265,
+                "bottom": 710,
+                "width": 127,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Website and API terms"
+        }
+    ]
+}

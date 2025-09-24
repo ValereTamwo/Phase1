@@ -1,0 +1,273 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_1.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,848\"><DIV data-bbox=\"90,0,1100,52\"><B id=\"0\" data-text=\"Postmill\" data-bbox=\"120,16,58,19\"><text>Postmill</text></B><DIV data-bbox=\"194,0,148,52\"><UL data-bbox=\"194,0,148,52\"><A id=\"1\" data-text=\"Forums\" data-bbox=\"194,0,86,52\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Forums</text></A><A id=\"2\" data-text=\"Wiki\" data-bbox=\"280,0,62,52\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Wiki</text></A></UL></DIV><FORM data-bbox=\"455,0,236,52\"><INPUT id=\"4\" type=\"search\" placeholder=\"Search...\" data-bbox=\"462,8,222,37\" class=\"possible-clickable-element\" data-testid=\"C\" style=\"document.addEventListener('DOMContentLoaded', () => { // --- Interactivity for the Subscribe Button --- const subscribeButton = document.querySelector('button[data-bbox=\"924,120,175,37\"]'); if (subscribeButton) { const subscribeText = document.getElementById('18'); let isSubscribed = false; subscribeButton.addEventListener('click', (e) => { e.preventDefault(); isSubscribed = !isSubscribed; if (isSubscribed) { subscribeButton.style.backgroundColor = 'var(--secondary)'; subscribeButton.style.borderColor = 'var(--secondary)'; subscribeText.textContent = 'Subscribed'; } else { subscribeButton.style.backgroundColor = 'var(--primary)'; subscribeButton.style.borderColor = 'var(--primary)'; subscribeText.textContent = 'Subscribe'; } }); } // --- Subtle hover effect on user profile button --- const userProfileButton = document.querySelector('button[data-bbox=\"955,0,221,52\"]'); if(userProfileButton){ userProfileButton.addEventListener('mouseenter', () => { userProfileButton.style.backgroundColor = '#f3f4f6'; // A light gray }); userProfileButton.addEventListener('mouseleave', () => { userProfileButton.style.backgroundColor = 'transparent'; }); } });\"></INPUT></FORM><UL data-bbox=\"804,0,372,52\"><A title=\"Notifications (0)\" data-bbox=\"804,0,48,52\" class=\"possible-clickable-element\" data-testid=\"D\"><I id=\"5\" data-bbox=\"820,19,16,13\" class=\"far fa-bell\"></I></A><A href=\"#\" class=\"submit-button\"><I id=\"6\" data-bbox=\"870,18,12,13\" class=\"fas fa-plus possible-clickable-element\" data-testid=\"E\"></I><SPAN id=\"7\" data-text=\"Submit\" data-bbox=\"888,16,51,19\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Submit</text></SPAN></A><LI data-bbox=\"955,0,221,52\"><BUTTON type=\"button\" data-bbox=\"955,0,221,52\"><I id=\"8\" data-bbox=\"973,18,12,14\" class=\"fas fa-user-circle possible-clickable-element\" data-testid=\"G\"></I><STRONG id=\"9\" data-text=\"MarvelsGrantMan136\" data-bbox=\"991,16,157,19\" class=\"possible-clickable-element\" data-testid=\"H\"><text>MarvelsGrantMan136</text></STRONG></BUTTON></LI></UL></DIV><DIV data-bbox=\"90,52,1100,747\"><MAIN data-bbox=\"90,66,806,733\"><H1 data-text=\"Editing submission Marvel Studios Veteran Victoria Alonso Exits Company\" data-bbox=\"104,80,778,84\"><text>Editing submission: Marvel Studios Veteran Victoria Alonso Exits Company</text></H1><FORM data-bbox=\"104,178,778,607\"><DIV data-bbox=\"104,178,560,58\"><LABEL id=\"11\" for=\"url-input\" data-text=\"URL\" data-bbox=\"104,178,26,21\"><text>URL</text></LABEL><INPUT id=\"12\" value=\"https://www.hollywoodreporter.com/movies/movie-news/marvel-studios-victoria-alonso-exits-1235356853/\" type=\"text\" data-bbox=\"104,199,560,37\" class=\"possible-clickable-element\" data-testid=\"I\" style=\"document.addEventListener('DOMContentLoaded', () => { // --- Interactivity for the Subscribe Button --- const subscribeButton = document.querySelector('button[data-bbox=\"924,120,175,37\"]'); if (subscribeButton) { const subscribeText = document.getElementById('18'); let isSubscribed = false; subscribeButton.addEventListener('click', (e) => { e.preventDefault(); isSubscribed = !isSubscribed; if (isSubscribed) { subscribeButton.style.backgroundColor = 'var(--secondary)'; subscribeButton.style.borderColor = 'var(--secondary)'; subscribeText.textContent = 'Subscribed'; } else { subscribeButton.style.backgroundColor = 'var(--primary)'; subscribeButton.style.borderColor = 'var(--primary)'; subscribeText.textContent = 'Subscribe'; } }); } // --- Subtle hover effect on user profile button --- const userProfileButton = document.querySelector('button[data-bbox=\"955,0,221,52\"]'); if(userProfileButton){ userProfileButton.addEventListener('mouseenter', () => { userProfileButton.style.backgroundColor = '#f3f4f6'; // A light gray }); userProfileButton.addEventListener('mouseleave', () => { userProfileButton.style.backgroundColor = 'transparent'; }); } });\"></INPUT></DIV><DIV data-bbox=\"104,250,560,100\"><LABEL id=\"13\" for=\"title-input\" data-text=\"Title\" data-bbox=\"104,250,35,21\"><text>Title</text><B title=\"This field is required.\" data-text=\"*\" data-bbox=\"133,252,6,16\"><text>*</text></B></LABEL><TEXTAREA id=\"14\" data-value=\"Marvel Studios Veteran Victoria Alonso Exits Company\" data-bbox=\"104,271,560,79\" class=\"possible-clickable-element\" data-testid=\"J\" style=\"document.addEventListener('DOMContentLoaded', () => { // --- Interactivity for the Subscribe Button --- const subscribeButton = document.querySelector('button[data-bbox=\"924,120,175,37\"]'); if (subscribeButton) { const subscribeText = document.getElementById('18'); let isSubscribed = false; subscribeButton.addEventListener('click', (e) => { e.preventDefault(); isSubscribed = !isSubscribed; if (isSubscribed) { subscribeButton.style.backgroundColor = 'var(--secondary)'; subscribeButton.style.borderColor = 'var(--secondary)'; subscribeText.textContent = 'Subscribed'; } else { subscribeButton.style.backgroundColor = 'var(--primary)'; subscribeButton.style.borderColor = 'var(--primary)'; subscribeText.textContent = 'Subscribe'; } }); } // --- Subtle hover effect on user profile button --- const userProfileButton = document.querySelector('button[data-bbox=\"955,0,221,52\"]'); if(userProfileButton){ userProfileButton.addEventListener('mouseenter', () => { userProfileButton.style.backgroundColor = '#f3f4f6'; // A light gray }); userProfileButton.addEventListener('mouseleave', () => { userProfileButton.style.backgroundColor = 'transparent'; }); } });\"></TEXTAREA></DIV><LABEL id=\"15\" for=\"body-input\" data-text=\"Body\" data-bbox=\"104,364,560,21\"><text>Body</text></LABEL><TEXTAREA id=\"16\" data-value=\"` ` `\" data-text=\"` `\" data-bbox=\"104,385,560,226\" class=\"possible-clickable-element\" data-testid=\"K\" style=\"document.addEventListener('DOMContentLoaded', () => { // --- Interactivity for the Subscribe Button --- const subscribeButton = document.querySelector('button[data-bbox=\"924,120,175,37\"]'); if (subscribeButton) { const subscribeText = document.getElementById('18'); let isSubscribed = false; subscribeButton.addEventListener('click', (e) => { e.preventDefault(); isSubscribed = !isSubscribed; if (isSubscribed) { subscribeButton.style.backgroundColor = 'var(--secondary)'; subscribeButton.style.borderColor = 'var(--secondary)'; subscribeText.textContent = 'Subscribed'; } else { subscribeButton.style.backgroundColor = 'var(--primary)'; subscribeButton.style.borderColor = 'var(--primary)'; subscribeText.textContent = 'Subscribe'; } }); } // --- Subtle hover effect on user profile button --- const userProfileButton = document.querySelector('button[data-bbox=\"955,0,221,52\"]'); if(userProfileButton){ userProfileButton.addEventListener('mouseenter', () => { userProfileButton.style.backgroundColor = '#f3f4f6'; // A light gray }); userProfileButton.addEventListener('mouseleave', () => { userProfileButton.style.backgroundColor = 'transparent'; }); } });\"></TEXTAREA></FORM></MAIN><ASIDE data-bbox=\"910,66,280,411\"><SECTION data-bbox=\"910,66,280,205\"><A id=\"17\" data-text=\"movies\" data-bbox=\"924,83,59,20\" class=\"possible-clickable-element\" data-testid=\"L\"><text>r/movies</text></A><FORM data-bbox=\"924,120,252,37\"><BUTTON type=\"button\" data-bbox=\"924,120,175,37\"><SPAN data-bbox=\"924,120,109,37\"><SPAN id=\"18\" data-text=\"Subscribe\" data-bbox=\"947,130,63,16\" class=\"possible-clickable-element\" data-testid=\"M\"><text>Subscribe</text></SPAN></SPAN><B id=\"19\" data-text=\"0\" data-bbox=\"1035,120,64,37\" class=\"possible-clickable-element\" data-testid=\"N\"><text>12M</text></B></BUTTON></FORM><P data-text=\"t5_2qh3s\" data-bbox=\"924,171,252,21\"><text>Forum ID: t5_2qh3s</text></P><UL data-bbox=\"924,221,252,36\"><LI data-text=\"Created\" data-bbox=\"924,221,252,18\"><text>Created</text><TIME title=\"September 30, 2022 at 9:06:51 PM EDT\" data-text=\"2 years ago\" data-bbox=\"969,222,63,14\"><text>2 years ago</text></TIME></LI><A href=\"#\" type=\"application/atom+xml\" data-bbox=\"924,240,12,14\"><I id=\"20\" data-bbox=\"925,242,10,10\" class=\"fas fa-rss possible-clickable-element\" data-testid=\"O\"></I><SPAN id=\"21\" data-text=\"Subscribe via RSS\" data-bbox=\"939,240,96,14\" class=\"possible-clickable-element\" data-testid=\"P\"><text>Subscribe via RSS</text></SPAN></A></UL></SECTION><DETAILS data-bbox=\"910,285,280,54\"><SUMMARY id=\"22\" data-text=\"Hide this forum\" data-bbox=\"924,299,252,26\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>Hide this forum</text></SUMMARY><P data-text=\"By marking forums as hidden, you won't see submissions from those forums when browsing the 'featured' and 'all' submission listings. You can still subscribe to and moderate forums you choose to hide.\" data-bbox=\"924,339,252,126\"><text>By marking forums as hidden, you won't see submissions from those forums when browsing the \"featured\" and \"all\" submission listings. You can still subscribe to and moderate forums you choose to hide.</text></P><FORM data-bbox=\"924,479,252,37\"><BUTTON type=\"button\" data-text=\"Hide\" data-bbox=\"924,479,60,37\"><text>Hide</text></BUTTON></FORM></DETAILS><SECTION data-bbox=\"910,353,280,124\"><H1 data-text=\"Toolbox\" data-bbox=\"924,367,252,26\"><text>Toolbox</text></H1><UL data-bbox=\"910,407,280,70\"><A id=\"23\" data-text=\"Bans\" data-bbox=\"910,407,280,35\" class=\"possible-clickable-element\" data-testid=\"R\"><text>Bans</text></A><A id=\"24\" data-text=\"Moderation log\" data-bbox=\"910,442,280,35\" class=\"possible-clickable-element\" data-testid=\"S\"><text>Moderation log</text></A></UL></SECTION></ASIDE></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    div|\n    <b| Postmill >\n    <\n      ul|\n      <a[A]| Forums >\n      <a[B]| Wiki >\n    >\n    <input[C]| Search... >\n    <\n      ul|\n      <a[D]| Notifications (0) >\n      <i[E]| >\n      <span[F]| Submit >\n      <i[G]| >\n      <strong[H]| MarvelsGrantMan136 >\n    >\n  >\n  <\n    div|\n    <\n      main|\n      <h1| Editing submission: Marvel Studios Veteran Victoria Alonso Exits Company >\n      <\n        form|\n        <\n          div|\n          <label| URL >\n          <input[I]| https://www.hollywoodreporter.com/movies/movie-news/marvel-studios-victoria-alonso-exits-1235356853/ >\n        >\n        <\n          div|\n          <\n            label|\n            <text| Title >\n            <b| This field is required. * >\n          >\n          <textarea[J]| { e.preventDefault(); isSubscribed = !isSubscribed; if (isSubscribed) { subscribeButton.style.backgroundColor = 'var(--secondary)'; subscribeButton.style.borderColor = 'var(--secondary)'; subscribeText.textContent = 'Subscribed'; } else { subscribeButton.style.backgroundColor = 'var(--primary)'; subscribeButton.style.borderColor = 'var(--primary)'; subscribeText.textContent = 'Subscribe'; } }); } // --- Subtle hover effect on user profile button --- const userProfileButton = document.querySelect >\n        >\n        <label| Body >\n        <textarea[K]| { e.preventDefault(); isSubscribed = !isSubscribed; if (isSubscribed) { subscribeButton.style.backgroundColor = 'var(--secondary)'; subscribeButton.style.borderColor = 'var(--secondary)'; subscribeText.textContent = 'Subscribed'; } else { subscribeButton.style.backgroundColor = 'var(--primary)'; subscribeButton.style.borderColor = 'var(--primary)'; subscribeText.textContent = 'Subscribe'; } }); } // --- Subtle hover effect on user profile button --- const userProfileButton = document.querySelect >\n      >\n    >\n    <\n      aside|\n      <\n        section|\n        <a[L]| r/movies >\n        <\n          button|\n          <span[M]| Subscribe >\n          <b[N]| 12M >\n        >\n        <p| Forum ID: t5_2qh3s >\n        <\n          ul|\n          <\n            li|\n            <text| Created >\n            <time| September 30, 2022 at 9:06:51 PM EDT 2 years ago >\n          >\n          <i[O]| >\n          <span[P]| Subscribe via RSS >\n        >\n      >\n      <\n        details|\n        <summary[Q]| Hide this forum >\n        <p| By marking forums as hidden, you won't see submissions from those forums when browsing the \"featured\" and \"all\" submission listings. You can still subscribe to and moderate forums you choose to hide. >\n        <button| Hide >\n      >\n      <\n        section|\n        <h1| Toolbox >\n        <\n          ul|\n          <a[R]| Bans >\n          <a[S]| Moderation log >\n        >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 157.453125,
+                "top": 10.703125,
+                "right": 238.453125,
+                "bottom": 46.703125,
+                "width": 81,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Forums"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 254.453125,
+                "top": 10.703125,
+                "right": 311.453125,
+                "bottom": 46.703125,
+                "width": 57,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Wiki"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 343.453125,
+                "top": 20.703125,
+                "right": 524.453125,
+                "bottom": 39.703125,
+                "width": 181,
+                "height": 19
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 775.453125,
+                "top": 18.703125,
+                "right": 789.453125,
+                "bottom": 38.703125,
+                "width": 14,
+                "height": 20
+            },
+            "tag": "a",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 821.453125,
+                "top": 21.5,
+                "right": 836.453125,
+                "bottom": 37.5,
+                "width": 15,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 844.453125,
+                "top": 16.703125,
+                "right": 897.453125,
+                "bottom": 42.296875,
+                "width": 53,
+                "height": 25.59375
+            },
+            "tag": "span",
+            "text": "Submit"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 937.453125,
+                "top": 22.828125,
+                "right": 950.453125,
+                "bottom": 36.15625,
+                "width": 13,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 962.453125,
+                "top": 22,
+                "right": 1096.546875,
+                "bottom": 37,
+                "width": 134.09375,
+                "height": 15
+            },
+            "tag": "strong",
+            "text": "MarvelsGrantMan136"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 113,
+                "top": 281.78125,
+                "right": 825.28125,
+                "bottom": 327.78125,
+                "width": 712.28125,
+                "height": 46
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 113,
+                "top": 393.375,
+                "right": 825.28125,
+                "bottom": 543.375,
+                "width": 712.28125,
+                "height": 150
+            },
+            "tag": "textarea",
+            "text": "Marvel Studios Veteran Victoria Alonso Exits Company"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 113,
+                "top": 616.5625,
+                "right": 825.28125,
+                "bottom": 720,
+                "width": 712.28125,
+                "height": 103.4375
+            },
+            "tag": "textarea",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 915.28125,
+                "top": 111,
+                "right": 980.28125,
+                "bottom": 131,
+                "width": 65,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "r/movies"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 990.53125,
+                "top": 135.59375,
+                "right": 1081.8125,
+                "bottom": 169.78125,
+                "width": 91.28125,
+                "height": 34.1875
+            },
+            "tag": "span",
+            "text": "Subscribe"
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 1156.0625,
+                "top": 135.59375,
+                "right": 1182,
+                "bottom": 169.78125,
+                "width": 25.9375,
+                "height": 34.1875
+            },
+            "tag": "b",
+            "text": "12M"
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 915.28125,
+                "top": 269.1875,
+                "right": 928.28125,
+                "bottom": 283.59375,
+                "width": 13,
+                "height": 14.40625
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 936.28125,
+                "top": 264.875,
+                "right": 1058.28125,
+                "bottom": 287.921875,
+                "width": 122,
+                "height": 23.046875
+            },
+            "tag": "span",
+            "text": "Subscribe via RSS"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 915.28125,
+                "top": 361.921875,
+                "right": 1183,
+                "bottom": 387.515625,
+                "width": 267.71875,
+                "height": 25.59375
+            },
+            "tag": "summary",
+            "text": "Hide this forum"
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 915.28125,
+                "top": 509.515625,
+                "right": 1183,
+                "bottom": 560.109375,
+                "width": 267.71875,
+                "height": 50.59375
+            },
+            "tag": "a",
+            "text": "Bans"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 915.28125,
+                "top": 560.109375,
+                "right": 1183,
+                "bottom": 610.703125,
+                "width": 267.71875,
+                "height": 50.59375
+            },
+            "tag": "a",
+            "text": "Moderation log"
+        }
+    ]
+}

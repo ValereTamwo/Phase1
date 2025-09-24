@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" data-bbox="0,0,1280,720">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postmill - Create Submission</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg-color: #ffffff;
+            --text-color: #212529;
+            --text-muted-color: #6c757d;
+            --primary-color: #4f46e5;
+            --primary-hover-color: #4338ca;
+            --border-color: #dee2e6;
+            --input-bg-color: #f8f9fa;
+            --input-focus-border: #a7a2f5;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a, button {
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        h1, strong, b {
+            font-weight: 600;
+        }
+
+        /* --- Header / Navigation --- */
+        body > div[data-bbox="90,0,1100,52"] {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--card-bg-color);
+            padding: 0 2rem;
+            height: 64px;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        b#0 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        div[data-bbox="194,0,148,52"] > ul {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        div[data-bbox="194,0,148,52"] a {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        div[data-bbox="194,0,148,52"] a:hover,
+        div[data-bbox="194,0,148,52"] a.active {
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+        }
+
+        form[data-bbox="455,0,236,52"] {
+            position: relative;
+            flex-grow: 1;
+            max-width: 400px;
+            margin: 0 2rem;
+        }
+        
+        form[data-bbox="455,0,236,52"]::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f002"; /* fa-search */
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted-color);
+        }
+
+        input#4 {
+            width: 100%;
+            height: 40px;
+            padding: 0.5rem 1rem 0.5rem 2.75rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--input-bg-color);
+        }
+
+        ul[data-bbox="804,0,372,52"] {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        ul[data-bbox="804,0,372,52"] a[title="Notifications (0)"] {
+            font-size: 1.25rem;
+            color: var(--text-muted-color);
+        }
+         ul[data-bbox="804,0,372,52"] a[title="Notifications (0)"]:hover {
+             color: var(--text-color);
+         }
+
+        span#7 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        span#7:hover {
+            background-color: var(--primary-hover-color);
+        }
+        
+        li[data-bbox="955,0,221,52"] > button {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: none;
+            border: none;
+            padding: 0.25rem;
+            border-radius: 50px;
+        }
+        
+        li[data-bbox="955,0,221,52"] > button:hover {
+            background-color: var(--bg-color);
+        }
+        
+        strong#9 {
+            font-weight: 500;
+        }
+
+        /* --- Main Layout --- */
+        div[data-bbox="90,52,1100,693"] {
+            display: flex;
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        main[data-bbox="90,66,806,679"] {
+            flex: 1 1 70%;
+            background: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        aside[data-bbox="910,66,280,411"] {
+            flex: 1 1 30%;
+            max-width: 300px;
+        }
+
+        /* --- Form Elements --- */
+        main h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        form > div {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        label b {
+            color: #dc3545;
+            margin-left: 0.25rem;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--input-focus-border);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+        }
+        
+        textarea#15, textarea#17 {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        div[data-bbox="104,136,778,72"] {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+        
+        div[data-bbox="104,136,778,72"] label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+        
+        div[data-bbox="104,136,778,72"] input[type="radio"] {
+            display: none;
+        }
+        
+        div[data-bbox="104,136,778,72"] input[type="radio"]:checked + label {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        div[data-bbox="104,596,778,21"] {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted-color);
+            font-size: 0.875rem;
+        }
+        div[data-bbox="104,596,778,21"] input[type="checkbox"] {
+            width: 1rem;
+            height: 1rem;
+        }
+        
+        span#18 {
+            color: var(--primary-color);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        span[data-bbox="104,652,173,28"] {
+            display: inline-block;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: #fff;
+            position: relative;
+        }
+        
+        span[data-bbox="104,652,173,28"] > span {
+            display: block;
+            padding: 0.65rem 2.5rem 0.65rem 1rem;
+        }
+        
+        b#22 {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted-color);
+        }
+        
+        button#23 {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        button#23:hover {
+            background-color: var(--primary-hover-color);
+        }
+        
+        /* --- Sidebar Cards --- */
+        aside section, aside details {
+            background-color: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+        }
+        
+        section[data-bbox="910,66,280,205"] a#24 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        section[data-bbox="910,66,280,205"] a#24:hover {
+            color: var(--primary-color);
+        }
+        
+        section[data-bbox="910,66,280,205"] button {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 1rem;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background-color: #fff;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        section[data-bbox="910,66,280,205"] button:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        section[data-bbox="910,66,280,205"] p {
+            font-family: monospace;
+            background-color: var(--bg-color);
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-size: 0.875rem;
+            color: var(--text-muted-color);
+            word-break: break-all;
+        }
+        
+        section[data-bbox="910,66,280,205"] ul li,
+        section[data-bbox="910,66,280,205"] ul a {
+            color: var(--text-muted-color);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        section[data-bbox="910,66,280,205"] ul li time {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        details > summary {
+            font-weight: 500;
+            cursor: pointer;
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details > p {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-muted-color);
+        }
+
+        section[data-bbox="910,353,280,124"] h1 {
+            font-size: 1.125rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 0.75rem;
+        }
+        
+        section[data-bbox="910,353,280,124"] a {
+            display: block;
+            padding: 0.5rem 0;
+            font-weight: 500;
+        }
+        section[data-bbox="910,353,280,124"] a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* --- JS Added Styles --- */
+        .image-upload-container {
+            width: 100%;
+            margin-top: 1rem;
+        }
+        .image-upload-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .image-upload-label:hover {
+            border-color: var(--primary-color);
+        }
+        .image-upload-label i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .image-upload-label span {
+            font-weight: 500;
+        }
+        .image-upload-label small {
+            color: var(--text-muted-color);
+            font-size: 0.875rem;
+        }
+
+    </style>
+</head>
+
+<body data-bbox="0,0,1280,794">
+    <nav data-bbox="0,0,1280,0"></nav>
+    <div data-bbox="90,0,1100,52">
+        <b id="0" data-text="Postmill" data-bbox="120,16,58,19">Postmill</b>
+        <div data-bbox="194,0,148,52">
+            <ul data-bbox="194,0,148,52">
+                <li><a id="1" data-text="Forums" data-bbox="194,0,86,52" href="#" class="active">Forums</a></li>
+                <li><a id="2" data-text="Wiki" data-bbox="280,0,62,52" href="#">Wiki</a></li>
+            </ul>
+        </div>
+        <form data-bbox="455,0,236,52">
+            <input id="4" type="search" data-bbox="462,8,222,37" placeholder="Search...">
+        </form>
+        <ul data-bbox="804,0,372,52">
+            <a title="Notifications (0)" data-bbox="804,0,48,52" href="#">
+                <i id="5" data-bbox="820,19,16,13" class="fas fa-bell"></i>
+            </a>
+            <a href="#" id="7" data-text="Submit" data-bbox="888,16,51,19" style="text-decoration:none;">
+                <i id="6" data-bbox="870,18,12,13" class="fas fa-plus"></i>
+                <span>Submit</span>
+            </a>
+            <li data-bbox="955,0,221,52">
+                <button type="button" data-bbox="955,0,221,52">
+                    <img id="8" data-bbox="973,18,12,14" src="https://picsum.photos/32/32" alt="user avatar" style="width:32px; height:32px; border-radius: 50%;">
+                    <strong id="9" data-text="MarvelsGrantMan136" data-bbox="991,16,157,19">MarvelsGrantMan136</strong>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div data-bbox="90,52,1100,693">
+        <main data-bbox="90,66,806,679">
+            <h1 data-text="Create submission" data-bbox="104,80,778,42">Create submission</h1>
+            <form data-bbox="104,136,778,595">
+                <div data-bbox="104,136,778,72">
+                    <input value="url" type="radio" data-bbox="104,136,13,13" name="submission_type" id="radio-url" checked>
+                    <label id="11" data-text="URL" data-bbox="104,136,47,35" for="radio-url">URL</label>
+                    <input value="image" type="radio" data-bbox="151,136,13,13" name="submission_type" id="radio-image">
+                    <label id="12" data-text="Image" data-bbox="151,136,60,35" for="radio-image">Image</label>
+                    <div data-bbox="104,171,560,37">
+                        <input id="13" type="text" data-bbox="104,171,560,37" placeholder="https://example.com">
+                    </div>
+                </div>
+                <div data-bbox="104,222,560,100">
+                    <label id="14" data-text="Title" data-bbox="104,222,35,21" for="15">Title<b title="This field is required." data-text="*" data-bbox="133,224,6,16">*</b></label>
+                    <textarea id="15" data-value="A Magical Time at the Connecticut Renaissance Faire" data-bbox="104,243,560,79" placeholder="Enter a descriptive title"></textarea>
+                </div>
+                <div data-bbox="104,336,778,281">
+                    <div data-bbox="104,336,560,253">
+                        <label id="16" data-text="Body" data-bbox="104,336,560,21" for="17">Body</label>
+                        <textarea id="17" data-bbox="104,357,560,226" placeholder="Add optional text (Markdown supported)"></textarea>
+                    </div>
+                    <div data-bbox="104,596,778,21">
+                        <input type="checkbox" data-value="on" data-bbox="104,596,13,13" data-status="not-checked" id="markdown-check">
+                        <label for="markdown-check" data-text="Markdown allowed." data-bbox="104,600,105,14" style="margin-bottom: 0; font-weight: normal;">Markdown allowed.</label>
+                        <span id="18" data-text="Formatting help" data-bbox="212,600,87,14">Formatting help</span>
+                        <span id="19" data-bbox="302,600,7,14"></span>
+                    </div>
+                </div>
+                <div data-bbox="104,631,560,49">
+                    <label id="20" data-text="Forum" data-bbox="104,631,50,21">Forum<b title="This field is required." data-text="*" data-bbox="148,633,6,16">*</b></label>
+                    <span data-bbox="104,652,173,28">
+                        <span title="Connecticut" data-bbox="105,653,171,28">
+                            <span id="21" data-text="Connecticut" data-bbox="113,653,143,28">Connecticut</span>
+                        </span>
+                        <b id="22" data-bbox="262,664,8,5"><i class="fas fa-chevron-down"></i></b>
+                    </span>
+                </div>
+                <button type="submit" id="23" data-text="Create submission" data-bbox="104,694,149,37">Create submission</button>
+            </form>
+        </main>
+        <aside data-bbox="910,66,280,411">
+            <section data-bbox="910,66,280,205">
+                <a id="24" data-text="Connecticut" data-bbox="924,83,97,20" href="#">Connecticut</a>
+                <form data-bbox="924,120,252,37">
+                    <button type="button" data-bbox="924,120,175,37">
+                        <span data-bbox="924,120,109,37">
+                            <span id="25" data-text="Subscribe" data-bbox="947,130,63,16">Subscribe</span>
+                        </span>
+                        <b id="26" data-text="0" data-bbox="1035,120,64,37">0</b>
+                    </button>
+                </form>
+                <p data-text="t5_2qji0" data-bbox="924,171,252,21">t5_2qji0</p>
+                <ul data-bbox="924,221,252,36">
+                    <li data-text="Created" data-bbox="924,221,252,18">Created
+                        <time title="September 30, 2022 at 9:27:43 PM EDT" data-text="2 years ago" data-bbox="969,222,63,14">2 years ago</time>
+                    </li>
+                    <a type="application/atom+xml" data-bbox="924,240,12,14" href="#">
+                        <i id="27" data-bbox="925,242,10,10" class="fas fa-rss"></i>
+                        <span id="28" data-text="Subscribe via RSS" data-bbox="939,240,96,14">Subscribe via RSS</span>
+                    </a>
+                </ul>
+            </section>
+            <details data-bbox="910,285,280,54">
+                <summary id="29" data-text="Hide this forum" data-bbox="924,299,252,26">Hide this forum</summary>
+                <p data-text="By marking forums as hidden, you won't see submissions from those forums when browsing the "featured" and "all" submission listings. You can still subscribe to and moderate forums you choose to hide." data-bbox="924,339,252,126">By marking forums as hidden, you won't see submissions from those forums when browsing the "featured" and "all" submission listings. You can still subscribe to and moderate forums you choose to hide.</p>
+                <form data-bbox="924,479,252,37">
+                    <button type="submit" data-text="Hide" data-bbox="924,479,60,37" style="background-color:#6c757d; color:white; border:none; padding: 0.5rem 1rem; border-radius: 6px;">Hide</button>
+                </form>
+            </details>
+            <section data-bbox="910,353,280,124">
+                <h1 data-text="Toolbox" data-bbox="924,367,252,26">Toolbox</h1>
+                <ul data-bbox="910,407,280,70">
+                    <li><a id="30" data-text="Bans" data-bbox="910,407,280,35" href="#">Bans</a></li>
+                    <li><a id="31" data-text="Moderation log" data-bbox="910,442,280,35" href="#">Moderation log</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlRadio = document.getElementById('radio-url');
+            const imageRadio = document.getElementById('radio-image');
+            const urlInputContainer = document.querySelector('div[data-bbox="104,171,560,37"]');
+
+            // Create a file input for the 'Image' option for better UX
+            const imageInputContainer = document.createElement('div');
+            imageInputContainer.className = 'image-upload-container';
+            imageInputContainer.innerHTML = `
+                <label for="image-upload" class="image-upload-label">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Click to upload or drag and drop</span>
+                    <small>PNG, JPG, GIF up to 10MB</small>
+                </label>
+                <input id="image-upload" type="file" style="display: none;">
+            `;
+            imageInputContainer.style.display = 'none';
+
+            // Insert the new container after the radio button group
+            const radioContainer = document.querySelector('div[data-bbox="104,136,778,72"]');
+            radioContainer.insertAdjacentElement('afterend', imageInputContainer);
+
+            function toggleInputs() {
+                if (imageRadio.checked) {
+                    urlInputContainer.style.display = 'none';
+                    imageInputContainer.style.display = 'flex';
+                } else {
+                    urlInputContainer.style.display = 'block';
+                    imageInputContainer.style.display = 'none';
+                }
+            }
+            
+            urlRadio.addEventListener('change', toggleInputs);
+            imageRadio.addEventListener('change', toggleInputs);
+            
+            // Set initial state
+            toggleInputs();
+        });
+    </script>
+</body>
+</html>

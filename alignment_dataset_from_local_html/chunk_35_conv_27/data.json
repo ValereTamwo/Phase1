@@ -1,0 +1,371 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_27.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,-480,1280,1419\"><ASIDE class=\"sidebar\" data-bbox=\"0,-1,88,721\"><DIV class=\"sidebar-logo\"><IMG id=\"0\" title=\"Magento Admin Panel\" data-bbox=\"27,16,35,41\" src=\"https://picsum.photos/id/1025/50/50\"></IMG></DIV><UL class=\"sidebar-nav\" data-bbox=\"0,74,88,646\"><A href=\"#\"><I class=\"fa-solid fa-tachometer-alt possible-clickable-element\" data-testid=\"A\"></I><SPAN id=\"1\" data-text=\"Dashboard\" data-bbox=\"14,111,60,13\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Dashboard</text></SPAN></A><LI data-bbox=\"0,136,88,62\" class=\"active\"><A href=\"#\"><I class=\"fa-solid fa-chart-line possible-clickable-element\" data-testid=\"C\"></I><SPAN id=\"2\" data-text=\"Sales\" data-bbox=\"30,173,28,13\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Sales</text></SPAN></A></LI><LI data-bbox=\"-165,91,238,308\"><UL data-bbox=\"-165,91,238,308\"><SPAN data-text=\"Braintree Virtual Terminal\" data-bbox=\"-150,368,174,19\"><text>Braintree Virtual Terminal</text></SPAN></UL></LI><LI data-bbox=\"0,198,88,62\"><A href=\"#\"><I class=\"fa-solid fa-tags possible-clickable-element\" data-testid=\"E\"></I><SPAN id=\"3\" data-text=\"Catalog\" data-bbox=\"22,235,44,13\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Catalog</text></SPAN></A></LI><LI data-bbox=\"0,260,88,62\"><A href=\"#\"><I class=\"fa-solid fa-users possible-clickable-element\" data-testid=\"G\"></I><SPAN id=\"4\" data-text=\"Customers\" data-bbox=\"14,297,60,13\" class=\"possible-clickable-element\" data-testid=\"H\"><text>Customers</text></SPAN></A></LI><LI data-bbox=\"0,322,88,62\"><A href=\"#\"><I class=\"fa-solid fa-bullhorn possible-clickable-element\" data-testid=\"I\"></I><SPAN id=\"5\" data-text=\"Marketing\" data-bbox=\"14,359,60,13\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Marketing</text></SPAN></A></LI><LI data-bbox=\"0,384,88,62\"><A href=\"#\"><I class=\"fa-solid fa-file-alt possible-clickable-element\" data-testid=\"K\"></I><SPAN id=\"6\" data-text=\"Content\" data-bbox=\"19,421,50,13\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Content</text></SPAN></A></LI><LI data-bbox=\"0,446,88,62\"><A href=\"#\"><I class=\"fa-solid fa-chart-bar possible-clickable-element\" data-testid=\"M\"></I><SPAN id=\"7\" data-text=\"Reports\" data-bbox=\"22,483,44,13\" class=\"possible-clickable-element\" data-testid=\"N\"><text>Reports</text></SPAN></A></LI><LI data-bbox=\"0,508,88,62\"><A href=\"#\"><I class=\"fa-solid fa-store possible-clickable-element\" data-testid=\"O\"></I><SPAN id=\"8\" data-text=\"Stores\" data-bbox=\"25,545,38,13\" class=\"possible-clickable-element\" data-testid=\"P\"><text>Stores</text></SPAN></A></LI></UL></ASIDE><DIV class=\"main-content\" data-bbox=\"88,-480,1192,1419\"><HEADER class=\"page-header\"><H1 class=\"page-title\"><text>Orders Report</text></H1><DIV class=\"header-actions\"><DIV class=\"scope-selector\" data-bbox=\"133,164,178,34\"><SPAN data-text=\"Scope:\" data-bbox=\"133,172,42,18\"><text>Scope:</text></SPAN><DIV data-bbox=\"178,164,124,34\"></DIV><text>What is this?</text></DIV><BUTTON title=\"Show Report\" type=\"button\" data-bbox=\"1129,16,136,46\"><I class=\"fa-solid fa-play-circle possible-clickable-element\" data-testid=\"Q\"></I><SPAN id=\"11\" data-text=\"Show Report\" data-bbox=\"1146,27,102,22\" class=\"possible-clickable-element\" data-testid=\"R\"><text>Show Report</text></SPAN></BUTTON></DIV></HEADER><MAIN data-bbox=\"88,-337,1192,1136\"><DIV data-bbox=\"118,-99,1132,848\"><FIELDSET class=\"card\" data-bbox=\"118,-99,1132,549\"><DIV class=\"card-body\"><DIV class=\"info-bar\" data-bbox=\"88,-44,1162,59\"><DIV data-bbox=\"409,-44,551,59\"><DIV data-text=\"The Order Updated report is created in real time and does not require a refresh.\" data-bbox=\"409,-1,551,16\"><text>The Order Updated report is created in real time and does not require a refresh.</text></DIV></DIV></DIV><DIV class=\"form-grid\"><LABEL data-bbox=\"88,45,1162,33\"><SPAN data-text=\"Period\" data-bbox=\"334,54,45,17\"><text>Period</text></SPAN></LABEL><DIV class=\"form-field\"><SELECT title=\"Period\" data-value=\"month\" data-text=\"Month\" data-bbox=\"409,45,100,33\" class=\"possible-clickable-element\" data-testid=\"S\"></SELECT></DIV><LABEL id=\"12\" data-bbox=\"118,108,261,32\"><SPAN data-text=\"From\" data-bbox=\"344,117,35,17\"><text>From</text></SPAN></LABEL><DIV class=\"form-field\" data-bbox=\"409,108,150,33\"><DIV class=\"input-with-icon\"><INPUT id=\"13\" title=\"From\" value=\"10/1/22\" type=\"text\" data-bbox=\"409,108,150,33\" class=\"possible-clickable-element\" data-testid=\"T\" style=\"\"></INPUT><BUTTON id=\"14\" type=\"button\" data-bbox=\"527,108,24,32\"><I class=\"fa-solid fa-calendar-alt possible-clickable-element\" data-testid=\"U\"></I></BUTTON></DIV></DIV><LABEL id=\"15\" data-bbox=\"118,171,261,32\"><SPAN data-text=\"To\" data-bbox=\"363,180,16,17\"><text>To</text></SPAN></LABEL><DIV class=\"form-field\" data-bbox=\"409,171,150,33\"><DIV class=\"input-with-icon\"><INPUT id=\"16\" title=\"To\" value=\"12/31/22\" type=\"text\" data-bbox=\"409,171,150,33\" class=\"possible-clickable-element\" data-testid=\"V\" style=\"\"></INPUT><BUTTON id=\"17\" type=\"button\" data-bbox=\"527,171,24,32\"><I class=\"fa-solid fa-calendar-alt possible-clickable-element\" data-testid=\"W\"></I></BUTTON></DIV></DIV><LABEL id=\"18\" data-bbox=\"118,234,261,32\"><SPAN data-text=\"Order Status\" data-bbox=\"291,243,88,17\"><text>Order Status</text></SPAN></LABEL><DIV class=\"form-field\" data-bbox=\"409,234,551,60\"><SELECT id=\"19\" data-value=\"0\" data-text=\"Any\" data-bbox=\"409,234,117,33\" class=\"possible-clickable-element\" data-testid=\"X\"></SELECT><DIV class=\"field-note\" data-text=\"Applies to Any of the Specified Order Statuses except canceled orders\" data-bbox=\"409,277,551,17\"><text>Applies to Any of the Specified Order Statuses except canceled orders</text></DIV></DIV><LABEL id=\"20\" data-bbox=\"118,324,261,32\"><SPAN data-text=\"Empty Rows\" data-bbox=\"295,332,84,17\"><text>Empty Rows</text></SPAN></LABEL><DIV class=\"form-field\"><SELECT id=\"21\" title=\"Empty Rows\" data-value=\"0\" data-text=\"No\" data-bbox=\"409,324,85,33\" class=\"possible-clickable-element\" data-testid=\"Y\"></SELECT></DIV><LABEL id=\"22\" data-bbox=\"118,387,261,32\"><SPAN data-text=\"Show Actual Values\" data-bbox=\"246,396,133,16\"><text>Show Actual Values</text></SPAN></LABEL><DIV class=\"form-field\"><SELECT id=\"23\" data-value=\"0\" data-text=\"No\" data-bbox=\"409,387,85,33\" class=\"possible-clickable-element\" data-testid=\"Z\"></SELECT></DIV></DIV></DIV></FIELDSET></DIV></MAIN></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    aside|\n    <img| Magento Admin Panel >\n    <\n      ul|\n      <i[A]| >\n      <span[B]| Dashboard >\n      <i[C]| >\n      <span[D]| Sales >\n      <span| Braintree Virtual Terminal >\n      <i[E]| >\n      <span[F]| Catalog >\n      <i[G]| >\n      <span[H]| Customers >\n      <i[I]| >\n      <span[J]| Marketing >\n      <i[K]| >\n      <span[L]| Content >\n      <i[M]| >\n      <span[N]| Reports >\n      <i[O]| >\n      <span[P]| Stores >\n    >\n  >\n  <\n    div|\n    <\n      header|\n      <h1| Orders Report >\n      <\n        div|\n        <\n          div|\n          <span| Scope: >\n          <text| What is this? >\n        >\n        <\n          button| Show Report\n          <i[Q]| >\n          <span[R]| Show Report >\n        >\n      >\n    >\n    <\n      div|\n      <div| The Order Updated report is created in real time and does not require a refresh. >\n      <\n        div|\n        <span| Period >\n        <select[S]| Period >\n        <span| From >\n        <input[T]| From; 10/1/22 >\n        <i[U]| >\n        <span| To >\n        <input[V]| To; 12/31/22 >\n        <i[W]| >\n        <span| Order Status >\n        <select[X]| >\n        <div| Applies to Any of the Specified Order Statuses except canceled orders >\n        <span| Empty Rows >\n        <select[Y]| Empty Rows >\n        <span| Show Actual Values >\n        <select[Z]| >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 32,
+                "top": 98.796875,
+                "right": 56,
+                "bottom": 122.796875,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 13,
+                "top": 127.59375,
+                "right": 75,
+                "bottom": 145.59375,
+                "width": 62,
+                "height": 18
+            },
+            "tag": "span",
+            "text": "Dashboard"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 40,
+                "top": 171.1875,
+                "right": 64,
+                "bottom": 195.1875,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 36.5,
+                "top": 199.984375,
+                "right": 67.5,
+                "bottom": 217.984375,
+                "width": 31,
+                "height": 18
+            },
+            "tag": "span",
+            "text": "Sales"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 32,
+                "top": 315.578125,
+                "right": 56,
+                "bottom": 339.578125,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 22,
+                "top": 344.375,
+                "right": 66,
+                "bottom": 362.375,
+                "width": 44,
+                "height": 18
+            },
+            "tag": "span",
+            "text": "Catalog"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 29,
+                "top": 387.96875,
+                "right": 59,
+                "bottom": 411.96875,
+                "width": 30,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 13,
+                "top": 416.765625,
+                "right": 75,
+                "bottom": 434.765625,
+                "width": 62,
+                "height": 18
+            },
+            "tag": "span",
+            "text": "Customers"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 32,
+                "top": 460.359375,
+                "right": 56,
+                "bottom": 484.359375,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 15,
+                "top": 489.15625,
+                "right": 73,
+                "bottom": 507.15625,
+                "width": 58,
+                "height": 18
+            },
+            "tag": "span",
+            "text": "Marketing"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 35,
+                "top": 532.75,
+                "right": 53,
+                "bottom": 556.75,
+                "width": 18,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 21.5,
+                "top": 561.546875,
+                "right": 66.5,
+                "bottom": 579.546875,
+                "width": 45,
+                "height": 18
+            },
+            "tag": "span",
+            "text": "Content"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 32,
+                "top": 605.140625,
+                "right": 56,
+                "bottom": 629.140625,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 22,
+                "top": 633.9375,
+                "right": 66,
+                "bottom": 651.9375,
+                "width": 44,
+                "height": 18
+            },
+            "tag": "span",
+            "text": "Reports"
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 30.5,
+                "top": 677.53125,
+                "right": 57.5,
+                "bottom": 701.53125,
+                "width": 27,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 25.5,
+                "top": 706.328125,
+                "right": 62.5,
+                "bottom": 720,
+                "width": 37,
+                "height": 13.671875
+            },
+            "tag": "span",
+            "text": "Stores"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 1109,
+                "top": 66.59375,
+                "right": 1125,
+                "bottom": 82.59375,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 1133,
+                "top": 64.59375,
+                "right": 1231,
+                "bottom": 84.59375,
+                "width": 98,
+                "height": 20
+            },
+            "tag": "span",
+            "text": "Show Report"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 349,
+                "top": 251.796875,
+                "right": 1223,
+                "bottom": 294.984375,
+                "width": 874,
+                "height": 43.1875
+            },
+            "tag": "select",
+            "text": "\n                                    \n                                    \n                                    \n                                "
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 349,
+                "top": 318.984375,
+                "right": 499,
+                "bottom": 360.171875,
+                "width": 150,
+                "height": 41.1875
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 1190.5,
+                "top": 329.96875,
+                "right": 1207.5,
+                "bottom": 349.171875,
+                "width": 17,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 349,
+                "top": 384.171875,
+                "right": 499,
+                "bottom": 425.359375,
+                "width": 150,
+                "height": 41.1875
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 1190.5,
+                "top": 395.15625,
+                "right": 1207.5,
+                "bottom": 414.359375,
+                "width": 17,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 349,
+                "top": 449.359375,
+                "right": 1223,
+                "bottom": 492.546875,
+                "width": 874,
+                "height": 43.1875
+            },
+            "tag": "select",
+            "text": "\n                                    \n                                    \n                                "
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 349,
+                "top": 545.546875,
+                "right": 1223,
+                "bottom": 588.734375,
+                "width": 874,
+                "height": 43.1875
+            },
+            "tag": "select",
+            "text": "\n                                    \n                                    \n                                "
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 349,
+                "top": 612.734375,
+                "right": 1223,
+                "bottom": 655.921875,
+                "width": 874,
+                "height": 43.1875
+            },
+            "tag": "select",
+            "text": "\n                                    \n                                    \n                                "
+        }
+    ]
+}

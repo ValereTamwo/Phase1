@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - One Stop Market</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #007bff;
+            --primary-hover: #0056b3;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --text-color: #495057;
+            --border-color: #dee2e6;
+            --background-color: #ffffff;
+            --body-bg: #f4f6f9;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--body-bg);
+            color: var(--text-color);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--background-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header > div:first-child {
+            background-color: var(--light-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.875rem;
+        }
+        
+        header > div:first-child span[data-bbox="19,9,28,19"] {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        header > div:first-child ul {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        header > div:first-child ul a, header > div:first-child ul li a {
+            color: var(--secondary-color);
+        }
+
+        header > div:first-child ul li[data-label="or"] {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        header > div:first-child ul li[data-label="or"]::before {
+            content: '|';
+            position: absolute;
+            left: 0;
+            color: var(--border-color);
+        }
+
+        header > div:last-of-type {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+        }
+
+        a[title="one_stop_market_logo"] img {
+            height: 27px; /* From bbox */
+            width: 200px; /* From bbox */
+        }
+        
+        div[data-bbox="947,71,265,57"] {
+            flex-grow: 1;
+            max-width: 500px;
+            margin: 0 2rem;
+        }
+
+        form[data-bbox="962,71,250,57"] {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form[data-bbox="962,71,250,57"] div[data-bbox="962,71,250,57"] {
+            position: relative;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 0.75rem 3rem 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+        
+        a[id="6"] {
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+            color: var(--secondary-color);
+        }
+
+        form button[type="submit"] {
+            position: absolute;
+            right: 1px;
+            top: 1px;
+            height: calc(100% - 2px);
+            width: 48px;
+            border: none;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            cursor: pointer;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: var(--primary-hover);
+        }
+        
+        span[data-bbox*="Search"] {
+            display: none; /* Hide accessible text */
+        }
+
+        div[data-bbox="1225,71,35,33"] a {
+            font-size: 1.75rem;
+            color: var(--dark-color);
+            position: relative;
+        }
+
+        /* Main Navigation */
+        div[data-bbox="0,128,1280,106"] {
+            background-color: var(--background-color);
+            border-top: 1px solid var(--border-color);
+            padding: 0 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        div[data-bbox="0,128,1280,106"] > ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1rem;
+        }
+
+        div[data-bbox="0,128,1280,106"] li {
+            display: flex;
+            align-items: center;
+        }
+
+        div[data-bbox="0,128,1280,106"] li > span:last-of-type {
+            padding: 1rem 0.5rem;
+            color: var(--dark-color);
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        div[data-bbox="0,128,1280,106"] li > span:last-of-type:hover {
+            color: var(--primary-color);
+        }
+
+        div[data-bbox="0,128,1280,106"] li > span[id^="7"],
+        div[data-bbox="0,128,1280,106"] li > span[id^="9"],
+        div[data-bbox="0,128,1280,106"] li > span[id^="1"],
+        div[data-bbox="0,128,1280,106"] li > span[id^="2"] {
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+
+
+        /* Main Content Area */
+        div[data-bbox="20,259,1240,1017"] {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        /* Sidebar Navigation */
+        div[data-bbox="20,259,252,360"] {
+            background: var(--background-color);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+        }
+
+        div[data-bbox="20,259,252,360"] strong:first-child {
+            font-size: 1.25rem;
+            color: var(--dark-color);
+            display: block;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        div[data-bbox="20,259,252,360"] ul a,
+        div[data-bbox="20,259,252,360"] ul strong {
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            margin-bottom: 0.25rem;
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+            color: var(--text-color);
+        }
+
+        div[data-bbox="20,259,252,360"] ul a:hover {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+        }
+
+        div[data-bbox="20,259,252,360"] ul strong {
+            background-color: var(--primary-color);
+            color: white;
+            cursor: default;
+        }
+
+        div[data-bbox="20,699,277,577"] {
+            margin-top: 2rem;
+            background: var(--background-color);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+        }
+        
+        div[data-bbox="20,699,277,577"] strong {
+            font-size: 1.25rem;
+            color: var(--dark-color);
+        }
+
+        /* My Orders Section */
+        div[data-bbox="297,259,963,593"] {
+            background: var(--background-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            padding: 2rem;
+        }
+
+        div[data-bbox="297,259,963,593"] > span:first-child {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        
+        caption {
+            display: none; /* Hide accessible caption */
+        }
+        
+        thead, tr[data-bbox="321,343,939,37"] {
+             border-bottom: 2px solid var(--border-color);
+        }
+
+        th {
+            text-align: left;
+            padding: 1rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            background-color: var(--light-color);
+        }
+        
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s;
+        }
+        
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+        
+        tbody tr:hover {
+            background-color: #f1f6ff;
+        }
+        
+        td {
+            padding: 1rem;
+            vertical-align: middle;
+        }
+
+        td[data-bbox*="321,"] { /* Order # */
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Status Badges */
+        .status {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .status-complete {
+            background-color: #e9f7ec;
+            color: var(--success-color);
+        }
+        .status-pending {
+            background-color: #fff8e1;
+            color: #f59e0b;
+        }
+        .status-canceled {
+            background-color: #fee2e2;
+            color: var(--danger-color);
+        }
+
+        /* Table Action Links */
+        td[data-bbox*="952,"] {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        td[data-bbox*="952,"] > span {
+            cursor: pointer;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        td[data-bbox*="952,"] > span i {
+            color: var(--secondary-color);
+        }
+        
+        /* A hack to put order total price inside a table cell */
+        tr > span[data-bbox^="628,"] {
+            display: table-cell;
+            padding: 1rem;
+            vertical-align: middle;
+        }
+        
+        @media (max-width: 1024px) {
+            div[data-bbox="20,259,1240,1017"] {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header > div:last-of-type {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            div[data-bbox="947,71,265,57"] {
+                order: 3;
+                width: 100%;
+                margin: 0;
+                max-width: none;
+            }
+            div[data-bbox="0,128,1280,106"] {
+                padding: 0 1rem;
+            }
+            div[data-bbox="20,259,1240,1017"] {
+                padding: 0 1rem;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+    </style>
+</head>
+<body data-bbox="0,0,1280,1558">
+    <div data-bbox="0,0,1280,1558">
+        <header data-bbox="0,0,1280,128">
+            <div data-bbox="0,0,1280,40">
+                <span data-bbox="19,9,28,19">Skip to Content</span>
+                <ul data-bbox="808,10,452,20">
+                    <li><a id="0" data-bbox="823,10,78,19" href="#">My Account</a></li>
+                    <li><a id="1" data-bbox="916,10,84,19" href="#">My Wish List</a></li>
+                    <li data-label="or" data-bbox="1015,10,58,20">
+                        <a id="2" data-bbox="1015,10,58,19" href="#">Sign Out</a>
+                    </li>
+                    <li><span data-bbox="1103,10,157,19">Welcome, Emma Lopez!</span></li>
+                </ul>
+            </div>
+            <div data-bbox="0,41,1280,87">
+                <a title="one_stop_market_logo" href="#" data-bbox="20,71,200,27">
+                    <img id="3" title="one_stop_market_logo" src="https://placehold.co/200x27/003366/FFFFFF?text=OneStopMarket&font=inter" alt="One Stop Market Logo" data-bbox="20,71,200,27">
+                </a>
+                <div data-bbox="947,71,265,57">
+                    <form data-bbox="962,71,250,57" action="#">
+                        <div data-bbox="962,71,250,57">
+                            <span data-bbox="960,102,1,1">Search</span>
+                            <div data-bbox="962,71,250,57">
+                                <input id="5" type="text" placeholder="Search entire store here..." data-bbox="962,71,250,32">
+                                <a id="6" href="#" data-bbox="962,108,116,19">Advanced Search</a>
+                            </div>
+                        </div>
+                        <button title="Search" type="submit" data-bbox="1180,71,22,32">
+                            <span data-bbox="1201,75,1,1">Search</span>
+                        </button>
+                    </form>
+                </div>
+                <div data-bbox="1225,71,35,33">
+                    <a id="4" href="#" data-bbox="1225,71,35,33">
+                        <span data-bbox="1259,70,1,1">My Cart</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div data-bbox="0,128,1280,106">
+            <ul data-bbox="0,128,1280,106">
+                <li data-bbox="8,128,194,53">
+                    <span id="8" data-bbox="20,145,162,19">Beauty & Personal Care</span>
+                    <span id="7" data-bbox="190,128,12,53"></span>
+                </li>
+                <li data-bbox="212,128,162,53">
+                    <span id="10" data-bbox="224,145,130,19">Sports & Outdoors</span>
+                    <span id="9" data-bbox="362,128,12,53"></span>
+                </li>
+                <li data-bbox="384,128,209,53">
+                    <span id="12" data-bbox="396,145,177,19">Clothing, Shoes & Jewelry</span>
+                    <span id="11" data-bbox="581,128,12,53"></span>
+                </li>
+                <li data-bbox="603,128,145,53">
+                    <span id="14" data-bbox="615,145,113,19">Home & Kitchen</span>
+                    <span id="13" data-bbox="736,128,12,53"></span>
+                </li>
+                <li data-bbox="758,128,139,53">
+                    <span id="16" data-bbox="770,145,107,19">Office Products</span>
+                    <span id="15" data-bbox="885,128,12,53"></span>
+                </li>
+                <li data-bbox="907,128,229,53">
+                    <span id="18" data-bbox="919,145,197,19">Tools & Home Improvement</span>
+                    <span id="17" data-bbox="1124,128,12,53"></span>
+                </li>
+                <li data-bbox="8,181,172,53">
+                    <span id="20" data-bbox="20,198,140,19">Health & Household</span>
+                    <span id="19" data-bbox="168,181,12,53"></span>
+                </li>
+                <li data-bbox="190,181,182,53">
+                    <span id="22" data-bbox="202,198,150,19">Patio, Lawn & Garden</span>
+                    <span id="21" data-bbox="360,181,12,53"></span>
+                </li>
+                <li data-bbox="382,181,107,53">
+                    <span id="24" data-bbox="394,198,75,19">Electronics</span>
+                    <span id="23" data-bbox="477,181,12,53"></span>
+                </li>
+                <li data-bbox="499,181,211,53">
+                    <span id="26" data-bbox="511,198,179,19">Cell Phones & Accessories</span>
+                    <span id="25" data-bbox="698,181,12,53"></span>
+                </li>
+                <li data-bbox="720,181,122,53">
+                    <span id="28" data-bbox="732,198,90,19">Video Games</span>
+                    <span id="27" data-bbox="830,181,12,53"></span>
+                </li>
+                <li data-bbox="852,181,206,53">
+                    <span id="30" data-bbox="864,198,174,19">Grocery & Gourmet Food</span>
+                    <span id="29" data-bbox="1046,181,12,53"></span>
+                </li>
+            </ul>
+        </div>
+        <main data-bbox="20,259,1240,1017">
+            <aside data-bbox="20,259,252,360">
+                <strong data-bbox="19,258,21,19">My Account</strong>
+                <ul data-bbox="20,274,252,330">
+                    <li><a id="49" href="#" data-bbox="20,274,252,30">My Account</a></li>
+                    <li><strong data-bbox="20,307,252,30">My Orders</strong></li>
+                    <li><a id="50" href="#" data-bbox="20,340,252,30">My Downloadable Products</a></li>
+                    <li><a id="51" href="#" data-bbox="20,373,252,30">My Wish List</a></li>
+                    <li><a id="52" href="#" data-bbox="20,424,252,30">Address Book</a></li>
+                    <li><a id="53" href="#" data-bbox="20,457,252,30">Account Information</a></li>
+                    <li><a id="54" href="#" data-bbox="20,490,252,30">Stored Payment Methods</a></li>
+                    <li><a id="55" href="#" data-bbox="20,541,252,30">My Product Reviews</a></li>
+                    <li><a id="56" href="#" data-bbox="20,574,252,30">Newsletter Subscriptions</a></li>
+                </ul>
+            </aside>
+            <section data-bbox="297,259,963,593">
+                <span data-bbox="321,254,190,54">My Orders</span>
+                <table data-bbox="321,343,939,397">
+                    <caption data-bbox="320,379,1,1">Orders</caption>
+                    <thead>
+                        <tr data-bbox="321,343,939,37">
+                            <th data-bbox="321,343,169,37">Order #</th>
+                            <th data-bbox="490,343,128,37">Date</th>
+                            <th data-bbox="618,343,180,37">Order Total</th>
+                            <th data-bbox="798,343,154,37">Status</th>
+                            <th data-bbox="952,343,308,37">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bbox="321,380,939,360">
+                        <tr data-bbox="321,380,939,36">
+                            <td data-bbox="321,380,169,36">000000170</td>
+                            <td data-bbox="490,380,128,36">5/17/23</td>
+                            <span data-bbox="628,388,52,19">$365.42</span>
+                            <td data-bbox="798,380,154,36">Canceled</td>
+                            <td data-bbox="952,380,308,36">
+                                <span id="31" data-bbox="962,388,75,19">View Order</span>
+                                <span id="32" data-bbox="1056,388,54,19">Reorder</span>
+                            </td>
+                        </tr>
+                        <tr data-bbox="321,416,939,36">
+                            <td data-bbox="321,416,169,36">000000189</td>
+                            <td data-bbox="490,416,128,36">5/2/23</td>
+                            <span data-bbox="628,424,52,19">$754.99</span>
+                            <td data-bbox="798,416,154,36">Pending</td>
+                            <td data-bbox="952,416,308,36">
+                                <span id="33" data-bbox="962,424,75,19">View Order</span>
+                                <span id="34" data-bbox="1056,424,54,19">Reorder</span>
+                            </td>
+                        </tr>
+                        <tr data-bbox="321,452,939,36">
+                            <td data-bbox="321,452,169,36">000000188</td>
+                            <td data-bbox="490,452,128,36">5/2/23</td>
+                            <span data-bbox="628,460,63,19">$2,004.99</span>
+                            <td data-bbox="798,452,154,36">Pending</td>
+                            <td data-bbox="952,452,308,36">
+                                <span id="35" data-bbox="962,460,75,19">View Order</span>
+                                <span id="36" data-bbox="1056,460,54,19">Reorder</span>
+                            </td>
+                        </tr>
+                        <tr data-bbox="321,488,939,36">
+                            <td data-bbox="321,488,169,36">000000187</td>
+                            <td data-bbox="490,488,128,36">5/2/23</td>
+                            <span data-bbox="628,496,63,19">$1,004.99</span>
+                            <td data-bbox="798,488,154,36">Pending</td>
+                            <td data-bbox="952,488,308,36">
+                                <span id="37" data-bbox="962,496,75,19">View Order</span>
+                                <span id="38" data-bbox="1056,496,54,19">Reorder</span>
+                            </td>
+                        </tr>
+                        <tr data-bbox="321,524,939,36">
+                            <td data-bbox="321,524,169,36">000000180</td>
+                            <td data-bbox="490,524,128,36">3/11/23</td>
+                            <span data-bbox="628,532,44,19">$65.32</span>
+                            <td data-bbox="798,524,154,36">Complete</td>
+                            <td data-bbox="952,524,308,36">
+                                <span id="39" data-bbox="962,532,75,19">View Order</span>
+                                <span id="40" data-bbox="1056,532,54,19">Reorder</span>
+                            </td>
+                        </tr>
+                        <tr data-bbox="321,560,939,36">
+                            <td data-bbox="321,560,169,36">000000166</td>
+                            <td data-bbox="490,560,128,36">3/10/23</td>
+                            <span data-bbox="628,568,44,19">$17.99</span>
+                            <td data-bbox="798,560,154,36">Complete</td>
+                            <td data-bbox="952,560,308,36">
+                                <span id="41" data-bbox="962,568,75,19">View Order</span>
+                                <span id="42" data-bbox="1056,568,54,19">Reorder</span>
+                            </td>
+                        </tr>
+                        <tr data-bbox="321,596,939,36">
+                            <td data-bbox="321,596,169,36">000000161</td>
+                            <td data-bbox="490,596,128,36">2/27/23</td>
+                            <span data-bbox="628,604,52,19">$762.18</span>
+                            <td data-bbox="798,596,154,36">Complete</td>
+                            <td data-bbox="952,596,308,36">
+                                <span id="43" data-bbox="962,604,75,19">View Order</span>
+                                <span id="44" data-bbox="1056,604,54,19">Reorder</span>
+                            </td>
+                        </tr>
+                        <tr data-bbox="321,632,939,36">
+                            <td data-bbox="321,632,169,36">000000156</td>
+                            <td data-bbox="490,632,128,36">2/24/23</td>
+                            <span data-bbox="628,640,52,19">$231.54</span>
+                            <td data-bbox="798,632,154,36">Canceled</td>
+                            <td data-bbox="952,632,308,36">
+                                <span id="45" data-bbox="962,640,75,19">View Order</span>
+                                <span id="46" data-bbox="1056,640,54,19">Reorder</span>
+                            </td>
+                        </tr>
+                        <tr data-bbox="321,668,939,36">
+                            <td data-bbox="321,668,169,36">000000158</td>
+                            <td data-bbox="490,668,128,36">2/11/23</td>
+                            <span data-bbox="628,676,52,19">$174.99</span>
+                            <td data-bbox="798,668,154,36">Canceled</td>
+                            <td data-bbox="952,668,308,36">
+                                <span id="47" data-bbox="962,676,75,19">View Order</span>
+                                <span id="48" data-bbox="1056,676,54,19">Reorder</span>
+                            </td>
+                        </tr>
+                        <tr data-bbox="321,704,939,36">
+                            <td data-bbox="321,704,169,36">000000157</td>
+                            <td data-bbox="490,704,128,36">2/9/23</td>
+                            <span data-bbox="628,712,52,19">$185.32</span>
+                            <td data-bbox="798,704,154,36">Complete</td>
+                            <td data-bbox="952,704,308,36">
+                                <span data-bbox="962,712,75,19">View Order</span>
+                                <span data-bbox="1056,712,54,19">Reorder</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <aside data-bbox="20,699,277,577">
+                <div data-bbox="20,699,277,56">
+                    <div data-bbox="20,699,277,21">
+                        <strong data-bbox="20,696,155,24">Compare Products</strong>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inject Icons
+            const searchButton = document.querySelector('button[title="Search"]');
+            if (searchButton) {
+                searchButton.innerHTML = '<i class="fas fa-search"></i>';
+            }
+
+            const cartLink = document.querySelector('a[id="4"]');
+            if (cartLink) {
+                cartLink.innerHTML = '<i class="fas fa-shopping-cart"></i>';
+            }
+            
+            const navItems = document.querySelectorAll('div[data-bbox="0,128,1280,106"] li > span:first-of-type');
+            navItems.forEach(item => {
+               const icon = document.createElement('i');
+               icon.className = 'fas fa-chevron-down';
+               icon.style.opacity = '0.5';
+               icon.style.fontSize = '0.7em';
+               item.appendChild(icon);
+            });
+
+
+            // Style Statuses
+            const statusCells = document.querySelectorAll('td[data-bbox*="798,"]');
+            statusCells.forEach(cell => {
+                const statusText = cell.textContent.trim().toLowerCase();
+                const statusSpan = document.createElement('span');
+                statusSpan.textContent = cell.textContent.trim();
+                statusSpan.classList.add('status');
+                
+                if (statusText === 'complete') {
+                    statusSpan.classList.add('status-complete');
+                } else if (statusText === 'pending') {
+                    statusSpan.classList.add('status-pending');
+                } else if (statusText === 'canceled') {
+                    statusSpan.classList.add('status-canceled');
+                }
+                
+                cell.innerHTML = '';
+                cell.appendChild(statusSpan);
+            });
+
+            // Add icons to action links
+            const actionCells = document.querySelectorAll('td[data-bbox*="952,"]');
+            actionCells.forEach(cell => {
+                const viewSpan = cell.querySelector('span:first-child');
+                const reorderSpan = cell.querySelector('span:last-child');
+                
+                if (viewSpan) {
+                    viewSpan.innerHTML = `<i class="far fa-eye"></i> ${viewSpan.innerHTML}`;
+                }
+                if (reorderSpan) {
+                    reorderSpan.innerHTML = `<i class="fas fa-redo"></i> ${reorderSpan.innerHTML}`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

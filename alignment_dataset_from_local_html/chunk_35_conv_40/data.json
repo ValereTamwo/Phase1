@@ -1,0 +1,623 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_40.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,911\"><HEADER data-bbox=\"0,0,1280,48\"><DIV data-bbox=\"16,0,1248,48\"><DIV data-bbox=\"16,0,73,48\"><DIV data-bbox=\"16,0,35,48\"><A title=\"Dashboard\" data-bbox=\"8,4,41,40\" class=\"possible-clickable-element\" data-testid=\"A\"></A></DIV></DIV><UL data-bbox=\"97,8,324,32\"><FORM data-bbox=\"99,8,320,32\"><DIV data-bbox=\"99,8,320,32\"><I class=\"fas fa-search\" data-testid=\"search-icon\" data-bbox=\"107,16,16,16\"></I><INPUT type=\"text\" placeholder=\"Search GitLab\" data-bbox=\"99,8,320,32\" class=\"possible-clickable-element\" data-testid=\"B\" style=\"\"></INPUT></DIV><KBD title=\"Use the shortcut key <kbd>/</kbd> to start a search\" data-text=\"/\" data-bbox=\"392,15,19,18\"><text>/</text></KBD></FORM></UL><UL data-bbox=\"887,4,377,40\"><LI data-bbox=\"889,4,52,40\"><A title=\"Create new...\" data-bbox=\"889,8,52,32\" class=\"possible-clickable-element\" data-testid=\"C\"><I class=\"fas fa-plus\" data-testid=\"plus-square-icon\" data-bbox=\"897,16,16,16\"></I><I class=\"fas fa-chevron-down\" data-testid=\"chevron-down-icon\" data-bbox=\"917,16,16,16\" style=\"margin-left: 8px;\"></I></A></LI><A title=\"Issues\" data-bbox=\"945,8,61,32\" class=\"possible-clickable-element\" data-testid=\"D\"><I class=\"fas fa-exclamation-circle\" data-testid=\"issues-icon\" data-bbox=\"953,16,16,16\"></I><SPAN data-text=\"33\" data-bbox=\"968,16,30,16\" class=\"notification-badge\"><text>33</text></SPAN></A><LI data-bbox=\"1010,4,69,40\"><A title=\"Merge requests\" data-bbox=\"1010,8,69,32\" class=\"possible-clickable-element\" data-testid=\"E\"><I class=\"fas fa-code-branch\" data-testid=\"git-merge-icon\" data-bbox=\"1018,16,16,16\"></I><SPAN data-text=\"8\" data-bbox=\"1033,16,22,16\" class=\"notification-badge\"><text>8</text></SPAN></A></LI><A title=\"To-Do List\" data-bbox=\"1083,8,61,32\" class=\"possible-clickable-element\" data-testid=\"F\"><I class=\"fas fa-check-square\" data-testid=\"todo-done-icon\" data-bbox=\"1091,16,16,16\"></I><SPAN data-text=\"16\" data-bbox=\"1106,16,30,16\" class=\"notification-badge\"><text>16</text></SPAN></A><LI data-bbox=\"1146,4,52,40\"><A data-bbox=\"1146,8,52,32\" class=\"possible-clickable-element\" data-testid=\"G\"><I class=\"fas fa-question-circle\" data-testid=\"question-o-icon\" data-bbox=\"1154,16,16,16\"></I></A></LI><LI data-testid=\"user-menu\" data-bbox=\"1200,4,62,40\"><I class=\"fas fa-chevron-down possible-clickable-element\" data-testid=\"H\" data-bbox=\"1238,16,16,16\"></I></LI></UL></DIV></HEADER><DIV data-bbox=\"0,48,1280,863\"><DIV data-bbox=\"0,48,255,672\"><UL data-bbox=\"0,50,255,604\"><LI title=\"gimmiethat.space\" data-bbox=\"0,50,256,40\"><A data-bbox=\"8,50,240,40\" class=\"possible-clickable-element\" data-testid=\"I\"><SPAN data-text=\"G\" data-bbox=\"12,54,32,32\" class=\"project-avatar\"><text>G</text></SPAN><SPAN data-text=\"gimmiethat.space\" data-bbox=\"52,62,119,16\"><text>gimmiethat.space</text></SPAN></A></LI><LI data-bbox=\"0,94,255,131\"><A data-bbox=\"8,94,239,32\" class=\"possible-clickable-element\" data-testid=\"J\"><I class=\"fas fa-info-circle\" data-testid=\"project-icon\" data-bbox=\"20,102,16,16\"></I><SPAN data-text=\"Project information\" data-bbox=\"44,102,191,16\"><text>Project information</text></SPAN></A><UL data-bbox=\"0,127,255,98\"><SPAN data-text=\"Activity\" data-bbox=\"44,135,48,16\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Activity</text></SPAN><SPAN data-text=\"Labels\" data-bbox=\"44,168,41,16\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Labels</text></SPAN><SPAN data-text=\"Members\" data-bbox=\"44,201,62,16\" class=\"possible-clickable-element\" data-testid=\"M\"><text>Members</text></SPAN></UL></LI><LI data-bbox=\"0,226,255,32\"><A data-bbox=\"8,226,239,32\" class=\"possible-clickable-element\" data-testid=\"N\"><I class=\"fas fa-folder\" data-testid=\"doc-text-icon\" data-bbox=\"20,234,16,16\"></I><SPAN data-text=\"Repository\" data-bbox=\"44,234,191,16\"><text>Repository</text></SPAN></A></LI><LI data-bbox=\"0,259,255,32\"><A data-bbox=\"8,259,239,32\" class=\"possible-clickable-element\" data-testid=\"O\"><I class=\"fas fa-exclamation-circle\" data-testid=\"issues-icon\" data-bbox=\"20,267,16,16\"></I><SPAN data-text=\"Issues\" data-bbox=\"44,267,168,16\"><text>Issues</text></SPAN><SPAN data-text=\"0\" data-bbox=\"212,267,23,16\" class=\"nav-count\"><text>0</text></SPAN></A></LI><LI data-bbox=\"0,292,255,32\"><A data-bbox=\"8,292,239,32\" class=\"possible-clickable-element\" data-testid=\"P\"><I class=\"fas fa-code-branch\" data-testid=\"git-merge-icon\" data-bbox=\"20,300,16,16\"></I><SPAN data-text=\"Merge requests\" data-bbox=\"44,300,168,16\"><text>Merge requests</text></SPAN><SPAN data-text=\"0\" data-bbox=\"212,300,23,16\" class=\"nav-count\"><text>0</text></SPAN></A></LI><LI data-bbox=\"0,325,255,32\"><A data-bbox=\"8,325,239,32\" class=\"possible-clickable-element\" data-testid=\"Q\"><I class=\"fas fa-rocket\" data-testid=\"rocket-icon\" data-bbox=\"20,333,16,16\"></I><SPAN data-text=\"CI/CD\" data-bbox=\"44,333,191,16\"><text>CI/CD</text></SPAN></A></LI><LI data-bbox=\"0,358,255,32\"><A data-bbox=\"8,358,239,32\" class=\"possible-clickable-element\" data-testid=\"R\"><I class=\"fas fa-shield-alt\" data-testid=\"shield-icon\" data-bbox=\"20,366,16,16\"></I><SPAN data-text=\"Security & Compliance\" data-bbox=\"44,366,191,16\"><text>Security & Compliance</text></SPAN></A></LI><LI data-bbox=\"0,391,255,32\"><A data-bbox=\"8,391,239,32\" class=\"possible-clickable-element\" data-testid=\"S\"><I class=\"fas fa-server\" data-testid=\"deployments-icon\" data-bbox=\"20,399,16,16\"></I><SPAN data-text=\"Deployments\" data-bbox=\"44,399,191,16\"><text>Deployments</text></SPAN></A></LI><LI data-bbox=\"0,424,255,32\"><A data-bbox=\"8,424,239,32\" class=\"possible-clickable-element\" data-testid=\"T\"><I class=\"fas fa-box-open\" data-testid=\"package-icon\" data-bbox=\"20,432,16,16\"></I><SPAN data-text=\"Packages and registries\" data-bbox=\"44,432,191,16\"><text>Packages and registries</text></SPAN></A></LI><LI data-bbox=\"0,457,255,32\"><A data-bbox=\"8,457,239,32\" class=\"possible-clickable-element\" data-testid=\"U\"><I class=\"fas fa-cogs\" data-testid=\"cloud-gear-icon\" data-bbox=\"20,465,16,16\"></I><SPAN data-text=\"Infrastructure\" data-bbox=\"44,465,191,16\"><text>Infrastructure</text></SPAN></A></LI><LI data-bbox=\"0,490,255,32\"><A data-bbox=\"8,490,239,32\" class=\"possible-clickable-element\" data-testid=\"V\"><I class=\"fas fa-chart-line\" data-testid=\"monitor-icon\" data-bbox=\"20,498,16,16\"></I><SPAN data-text=\"Monitor\" data-bbox=\"44,498,191,16\"><text>Monitor</text></SPAN></A></LI><LI data-bbox=\"0,523,255,32\"><A data-bbox=\"8,523,239,32\" class=\"possible-clickable-element\" data-testid=\"W\"><I class=\"fas fa-chart-pie\" data-testid=\"chart-icon\" data-bbox=\"20,531,16,16\"></I><SPAN data-text=\"Analytics\" data-bbox=\"44,531,191,16\"><text>Analytics</text></SPAN></A></LI><LI data-bbox=\"0,556,255,32\"><A data-bbox=\"8,556,239,32\" class=\"possible-clickable-element\" data-testid=\"X\"><I class=\"fas fa-book\" data-testid=\"book-icon\" data-bbox=\"20,564,16,16\"></I><SPAN data-text=\"Wiki\" data-bbox=\"44,564,191,16\"><text>Wiki</text></SPAN></A></LI><LI data-bbox=\"0,589,255,32\"><A data-bbox=\"8,589,239,32\" class=\"possible-clickable-element\" data-testid=\"Y\"><I class=\"fas fa-file-alt\" data-testid=\"snippet-icon\" data-bbox=\"20,597,16,16\"></I><SPAN data-text=\"Snippets\" data-bbox=\"44,597,191,16\"><text>Snippets</text></SPAN></A></LI><LI data-bbox=\"0,622,255,32\"><A data-bbox=\"8,622,239,32\" class=\"possible-clickable-element\" data-testid=\"Z\"><I class=\"fas fa-cog\" data-testid=\"settings-icon\" data-bbox=\"20,630,16,16\"></I><SPAN data-text=\"Settings\" data-bbox=\"44,630,191,16\"><text>Settings</text></SPAN></A></LI></UL></DIV><DIV data-bbox=\"256,48,1024,863\"><DIV data-bbox=\"272,48,992,48\"><DIV data-testid=\"breadcrumb-links\" data-bbox=\"272,62,992,20\"><UL data-bbox=\"272,62,992,20\"><LI data-bbox=\"272,62,77,20\"><A data-text=\"Byte Blaze\" data-bbox=\"272,64,57,16\" class=\"possible-clickable-element\" data-testid=\"AA\"><text>Byte Blaze</text></A><I class=\"fas fa-chevron-right\" data-testid=\"chevron-lg-right-icon\" data-bbox=\"334,68,8,8\"></I></LI><LI data-bbox=\"349,62,117,20\"><SPAN data-text=\"gimmiethat.space\" data-bbox=\"349,65,97,13\"><text>gimmiethat.space</text></SPAN><I class=\"fas fa-chevron-right\" data-testid=\"chevron-lg-right-icon\" data-bbox=\"451,68,8,8\"></I></LI><LI data-testid=\"breadcrumb-current-link\" data-bbox=\"466,62,54,20\"><A data-text=\"Members\" data-bbox=\"466,64,54,16\" class=\"possible-clickable-element\" data-testid=\"AB\"><text>Members</text></A></LI></UL></DIV></DIV><DIV data-bbox=\"257,104,1022,707\"><DIV data-bbox=\"272,104,992,82\"><H4 data-text=\"Project members\" data-bbox=\"272,114,171,25\"><text>Project members</text></H4><P data-text=\"You can invite a new member to,or invite another group.\" data-bbox=\"272,149,992,21\"><text>You can invite a new member to</text><STRONG data-text=\"gimmiethat.space\" data-bbox=\"477,151,119,16\"><text>gimmiethat.space</text></STRONG><text>or invite another group.</text></P><DIV data-bbox=\"853,112,411,37\"><BUTTON type=\"button\" data-bbox=\"853,112,161,32\" class=\"btn\"><SPAN data-text=\"Import from a project\" data-bbox=\"865,119,137,18\" class=\"possible-clickable-element\" data-testid=\"AC\"><text>Import from a project</text></SPAN></BUTTON><BUTTON type=\"button\" data-bbox=\"1022,112,112,32\" class=\"btn\"><SPAN data-text=\"Invite a group\" data-bbox=\"1034,119,88,18\" class=\"possible-clickable-element\" data-testid=\"AD\"><text>Invite a group</text></SPAN></BUTTON><BUTTON type=\"button\" data-bbox=\"1142,112,122,32\" class=\"btn btn-primary\"><SPAN data-text=\"Invite members\" data-bbox=\"1154,119,98,18\" class=\"possible-clickable-element\" data-testid=\"AE\"><text>Invite members</text></SPAN></BUTTON></DIV></DIV><DIV data-bbox=\"272,186,992,625\"><A data-bbox=\"272,186,113,48\" class=\"possible-clickable-element\" data-testid=\"AF\"><SPAN data-text=\"Members\" data-bbox=\"284,202,62,16\"><text>Members</text></SPAN><SPAN data-text=\"5\" data-bbox=\"350,202,23,16\"><text>5</text></SPAN></A><DIV data-bbox=\"272,243,992,552\"><DIV data-bbox=\"272,243,992,64\"><DIV data-testid=\"members-filtered-search-bar\" data-bbox=\"280,251,837,48\"><DIV data-testid=\"filtered-search-input\" data-bbox=\"288,259,821,32\"><DIV data-bbox=\"288,259,52,32\"><BUTTON type=\"button\" data-bbox=\"288,259,52,32\" class=\"possible-clickable-element\" data-testid=\"AG\"></BUTTON></DIV><DIV data-testid=\"filtered-search-term\" data-bbox=\"351,263,723,24\"><DIV data-testid=\"filtered-search-token-segment\" data-bbox=\"353,263,721,24\"><INPUT placeholder=\"Filter members\" data-testid=\"AH\" data-bbox=\"353,263,240,24\" class=\"possible-clickable-element\" style=\"\"></INPUT></DIV></DIV><BUTTON type=\"button\" data-testid=\"AI\" data-bbox=\"1077,259,32,32\" class=\"possible-clickable-element\"><I class=\"fas fa-search\"></I></BUTTON></DIV></DIV><DIV data-testid=\"members-sort-dropdown\" data-bbox=\"1117,251,139,48\"><DIV data-bbox=\"1125,259,92,32\"><BUTTON type=\"button\" data-bbox=\"1125,259,92,32\" class=\"btn\"><SPAN data-text=\"Account\" data-bbox=\"1137,267,52,16\" class=\"possible-clickable-element\" data-testid=\"AJ\"><text>Account</text></SPAN></BUTTON></DIV><BUTTON title=\"Sort direction: Ascending\" type=\"button\" data-bbox=\"1216,259,32,32\" class=\"btn\"><I class=\"fas fa-sort-amount-up possible-clickable-element\" data-testid=\"AK\"></I></BUTTON></DIV></DIV><TABLE data-testid=\"members-table\" data-bbox=\"272,307,1108,488\"><TR data-bbox=\"272,308,1108,65\"><TH data-text=\"Account\" data-bbox=\"272,308,331,65\"><text>Account</text></TH><TH data-text=\"Source\" data-bbox=\"603,308,85,65\"><text>Source</text></TH><TH data-text=\"Access granted\" data-bbox=\"688,308,121,65\"><text>Access granted</text></TH><TH data-text=\"Max role\" data-bbox=\"809,308,138,65\"><text>Max role</text></TH><TH data-text=\"Expiration\" data-bbox=\"947,308,101,65\"><text>Expiration</text></TH><TH data-text=\"Created on\" data-bbox=\"1048,308,86,65\"><text>Created on</text></TH><TH data-text=\"Last activity\" data-bbox=\"1134,308,82,65\"><text>Last activity</text></TH><TH data-text=\"Actions\" data-testid=\"col-actions\" data-bbox=\"1231,323,1,1\"></TH></TR><TBODY data-bbox=\"272,373,1108,422\"><TR data-testid=\"members-table-row-192\" data-bbox=\"272,373,1108,84\"><TD data-label=\"Account\" data-bbox=\"272,373,331,84\"><DIV class=\"user-avatar avatar-bb\" aria-hidden=\"true\"></DIV><DIV data-bbox=\"344,389,155,48\" class=\"account-details\"><DIV data-bbox=\"342,395,159,21\"><SPAN data-text=\"Byte Blaze\" data-bbox=\"342,395,75,20\"><text>Byte Blaze</text></SPAN><SPAN class=\"tag\" data-text=\"It's you\" data-bbox=\"444,398,55,16\"><text>It's you</text></SPAN></DIV><SPAN data-text=\"@byteblaze\" data-bbox=\"344,414,155,16\"><text>@byteblaze</text></SPAN></DIV></TD><TD data-label=\"Source\" data-bbox=\"603,373,85,84\"><SPAN data-text=\"Direct member\" data-bbox=\"619,389,39,16\"><text>Direct member</text></SPAN></TD><TD data-label=\"Access granted\" data-bbox=\"688,373,121,84\"><SPAN data-text=\"by\" data-bbox=\"704,389,66,16\"><TIME title=\"Mar 28, 2023 3:11am GMT+0700\" data-text=\"1 year ago\" data-bbox=\"704,389,66,16\"><text>1 year ago</text></TIME><text>by</text><A data-text=\"Administrator\" data-bbox=\"704,405,89,16\" class=\"possible-clickable-element\" data-testid=\"AL\"><text>Administrator</text></A></SPAN></TD><TD data-label=\"Max role\" data-bbox=\"809,373,138,84\"><SPAN data-text=\"Owner\" data-bbox=\"825,389,53,24\"><text>Owner</text></SPAN></TD><TD data-label=\"Expiration\" data-bbox=\"947,373,101,84\"><DIV data-bbox=\"963,389,69,32\"><INPUT type=\"text\" placeholder=\"Never\" data-testid=\"AM\" data-bbox=\"963,389,69,32\" class=\"possible-clickable-element\" style=\"\"></INPUT><SPAN data-testid=\"datepicker-calendar-icon\" data-bbox=\"1004,397,24,16\"><I class=\"fas fa-calendar-alt\"></I></SPAN></DIV></TD><TD data-label=\"Created on\" data-bbox=\"1048,373,86,84\"><SPAN data-text=\"23 Mar, 2023\" data-bbox=\"1064,389,47,16\"><text>23 Mar, 2023</text></SPAN></TD><TD data-label=\"Last activity\" data-bbox=\"1134,373,82,84\"><SPAN data-text=\"20 May, 2024\" data-bbox=\"1150,389,48,16\"><text>20 May, 2024</text></SPAN></TD><TD data-label=\"Actions\" data-bbox=\"1216,373,164,84\"></TD></TR><TR data-testid=\"members-table-row-239\" data-bbox=\"272,457,1108,84\"><TD data-label=\"Account\" data-bbox=\"272,457,331,84\"><DIV class=\"user-avatar avatar-jk\" aria-hidden=\"true\"></DIV><DIV data-bbox=\"344,473,116,48\" class=\"account-details\"><SPAN data-text=\"Jakub Klinkovský\" data-bbox=\"342,479,120,20\"><text>Jakub Klinkovský</text></SPAN><SPAN data-text=\"@lahwaacz\" data-bbox=\"344,497,116,16\"><text>@lahwaacz</text></SPAN></DIV></TD><TD data-label=\"Source\" data-bbox=\"603,457,85,84\"><SPAN data-text=\"Direct member\" data-bbox=\"619,473,39,16\"><text>Direct member</text></SPAN></TD><TD data-label=\"Access granted\" data-bbox=\"688,457,121,84\"><SPAN data-text=\"by\" data-bbox=\"704,473,79,16\"><TIME title=\"May 5, 2024 12:39pm GMT+0700\" data-text=\"2 weeks ago\" data-bbox=\"704,473,79,16\"><text>2 weeks ago</text></TIME><text>by</text><A data-text=\"Byte Blaze\" data-bbox=\"723,489,67,16\" class=\"possible-clickable-element\" data-testid=\"AN\"><text>Byte Blaze</text></A></SPAN></TD><TD data-label=\"Max role\" data-bbox=\"809,457,138,84\"><DIV data-bbox=\"825,473,77,32\"><BUTTON type=\"button\" data-bbox=\"825,473,77,32\" class=\"possible-clickable-element\" data-testid=\"AO\"><SPAN data-text=\"Guest\" data-bbox=\"837,481,37,16\"><text>Guest</text></SPAN></BUTTON></DIV></TD><TD data-label=\"Expiration\" data-bbox=\"947,457,101,84\"><DIV data-bbox=\"963,473,69,32\"><INPUT type=\"text\" placeholder=\"Never\" data-testid=\"AP\" data-bbox=\"963,473,69,32\" class=\"possible-clickable-element\" style=\"\"></INPUT><SPAN data-testid=\"datepicker-calendar-icon\" data-bbox=\"1004,481,24,16\"><I class=\"fas fa-calendar-alt\"></I></SPAN></DIV></TD><TD data-label=\"Created on\" data-bbox=\"1048,457,86,84\"><SPAN data-text=\"20 Mar, 2023\" data-bbox=\"1064,473,47,16\"><text>20 Mar, 2023</text></SPAN></TD><TD data-label=\"Last activity\" data-bbox=\"1134,457,82,84\"><SPAN data-text=\"20 Mar, 2023\" data-bbox=\"1150,473,46,16\"><text>20 Mar, 2023</text></SPAN></TD><TD data-label=\"Actions\" data-bbox=\"1216,457,164,84\"><BUTTON type=\"button\" data-bbox=\"1232,473,132,32\" class=\"btn btn-danger\"><SPAN data-text=\"Remove member\" data-bbox=\"1244,480,108,18\" class=\"possible-clickable-element\" data-testid=\"AQ\"><text>Remove member</text></SPAN></BUTTON></TD></TR><TR data-testid=\"members-table-row-234\" data-bbox=\"272,541,1108,84\"><TD data-label=\"Account\" data-bbox=\"272,541,331,84\"><DIV class=\"user-avatar avatar-bbot\" aria-hidden=\"true\"><I class=\"fas fa-robot\"></I></DIV><DIV data-bbox=\"344,557,149,48\" class=\"account-details\"><DIV data-bbox=\"342,563,153,21\"><SPAN data-text=\"benoit Blanchon\" data-bbox=\"342,563,113,20\"><text>benoit Blanchon</text></SPAN><SPAN data-text=\"Bot\" data-bbox=\"457,566,36,16\" class=\"tag\"><text>Bot</text></SPAN></DIV><SPAN data-text=\"@project_184_bot1\" data-bbox=\"344,582,149,16\"><text>@project_184_bot1</text></SPAN></DIV></TD><TD data-label=\"Source\" data-bbox=\"603,541,85,84\"><SPAN data-text=\"Direct member\" data-bbox=\"619,557,39,16\"><text>Direct member</text></SPAN></TD><TD data-label=\"Access granted\" data-bbox=\"688,541,121,84\"><TIME title=\"Apr 29, 2024 10:52pm GMT+0700\" data-text=\"2 weeks ago\" data-bbox=\"704,557,79,16\"><text>2 weeks ago</text></TIME></TD><TD data-label=\"Max role\" data-bbox=\"809,541,138,84\"><SPAN data-text=\"Maintainer\" data-bbox=\"825,557,75,24\"><text>Maintainer</text></SPAN></TD><TD data-label=\"Expiration\" data-bbox=\"947,541,101,84\"><DIV data-bbox=\"963,557,69,32\"><INPUT type=\"text\" value=\"2024-05-29\" data-testid=\"AR\" data-bbox=\"963,557,69,32\" class=\"possible-clickable-element\" style=\"\"></INPUT><SPAN data-testid=\"datepicker-calendar-icon\" data-bbox=\"1004,565,24,16\"><I class=\"fas fa-calendar-alt\"></I></SPAN></DIV></TD><TD data-label=\"Created on\" data-bbox=\"1048,541,86,84\"><SPAN data-text=\"29 Apr, 2024\" data-bbox=\"1064,557,45,16\"><text>29 Apr, 2024</text></SPAN></TD><TD data-label=\"Last activity\" data-bbox=\"1134,541,82,84\"><SPAN data-text=\"Never\" data-bbox=\"1150,557,38,16\"><text>Never</text></SPAN></TD><TD data-label=\"Actions\" data-bbox=\"1216,541,164,84\"></TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    div|\n    <a[A]| Dashboard >\n    <\n      form|\n      <i[search-icon]| >\n      <input[B]| Search GitLab >\n      <\n        kbd| Use the shortcut key\n        <kbd>\n        /\n        </kbd>\n        to start a search /\n      >\n    >\n    <\n      ul|\n      <\n        a[C]| Create new...\n        <i[plus-square-icon]| >\n        <i[chevron-down-icon]| >\n      >\n      <\n        a[D]| Issues\n        <i[issues-icon]| >\n        <span| 33 >\n      >\n      <\n        a[E]| Merge requests\n        <i[git-merge-icon]| >\n        <span| 8 >\n      >\n      <\n        a[F]| To-Do List\n        <i[todo-done-icon]| >\n        <span| 16 >\n      >\n      <\n        a[G]|\n        <i[question-o-icon]| >\n      >\n      <\n        li[user-menu]|\n        <i[H]| >\n      >\n    >\n  >\n  <\n    div|\n    <\n      ul|\n      <\n        li| gimmiethat.space\n        <\n          a[I]|\n          <span| G >\n          <span| gimmiethat.space >\n        >\n      >\n      <\n        li|\n        <\n          a[J]|\n          <i[project-icon]| >\n          <span| Project information >\n        >\n        <\n          ul|\n          <span[K]| Activity >\n          <span[L]| Labels >\n          <span[M]| Members >\n        >\n      >\n      <\n        a[N]|\n        <i[doc-text-icon]| >\n        <span| Repository >\n      >\n      <\n        a[O]|\n        <i[issues-icon]| >\n        <span| Issues >\n        <span| 0 >\n      >\n      <\n        a[P]|\n        <i[git-merge-icon]| >\n        <span| Merge requests >\n        <span| 0 >\n      >\n      <\n        a[Q]|\n        <i[rocket-icon]| >\n        <span| CI/CD >\n      >\n      <\n        a[R]|\n        <i[shield-icon]| >\n        <span| Security & Compliance >\n      >\n      <\n        a[S]|\n        <i[deployments-icon]| >\n        <span| Deployments >\n      >\n      <\n        a[T]|\n        <i[package-icon]| >\n        <span| Packages and registries >\n      >\n      <\n        a[U]|\n        <i[cloud-gear-icon]| >\n        <span| Infrastructure >\n      >\n      <\n        a[V]|\n        <i[monitor-icon]| >\n        <span| Monitor >\n      >\n      <\n        a[W]|\n        <i[chart-icon]| >\n        <span| Analytics >\n      >\n      <\n        a[X]|\n        <i[book-icon]| >\n        <span| Wiki >\n      >\n      <\n        a[Y]|\n        <i[snippet-icon]| >\n        <span| Snippets >\n      >\n      <\n        a[Z]|\n        <i[settings-icon]| >\n        <span| Settings >\n      >\n    >\n    <\n      div|\n      <\n        div[breadcrumb-links]|\n        <\n          ul|\n          <a[AA]| Byte Blaze >\n          <i[chevron-lg-right-icon]| >\n          <span| gimmiethat.space >\n          <i[chevron-lg-right-icon]| >\n          <\n            li[breadcrumb-current-link]|\n            <a[AB]| Members >\n          >\n        >\n      >\n      <\n        div|\n        <\n          div|\n          <h4| Project members >\n          <\n            p|\n            <text| You can invite a new member to >\n            <strong| gimmiethat.space >\n            <text| or invite another group. >\n          >\n          <\n            div|\n            <span[AC]| Import from a project >\n            <span[AD]| Invite a group >\n            <span[AE]| Invite members >\n          >\n        >\n        <\n          div|\n          <\n            a[AF]|\n            <span| Members >\n            <span| 5 >\n          >\n          <\n            div|\n            <\n              div|\n              <\n                div[members-filtered-search-bar]|\n                <\n                  div[filtered-search-input]|\n                  <button[AG]| >\n                  <\n                    div[filtered-search-term]|\n                    <\n                      div[filtered-search-token-segment]|\n                      <input[AH]| Filter members >\n                    >\n                  >\n                  <button[AI]| >\n                >\n              >\n              <\n                div[members-sort-dropdown]|\n                <span[AJ]| Account >\n                <\n                  button| Sort direction: Ascending\n                  <i[AK]| >\n                >\n              >\n            >\n            <\n              table[members-table]|\n              <\n                tr|\n                <th| Account >\n                <th| Source >\n                <th| Access granted >\n                <th| Max role >\n                <th| Expiration >\n                <th| Created on >\n                <th| Last activity >\n                <th[col-actions]| >\n              >\n              <\n                tbody|\n                <\n                  tr[members-table-row-192]|\n                  <\n                    div|\n                    <\n                      div|\n                      <span| Byte Blaze >\n                      <span| It's you >\n                    >\n                    <span| @byteblaze >\n                  >\n                  <span| Direct member >\n                  <\n                    span|\n                    <time| Mar 28, 2023 3:11am GMT+0700 1 year ago >\n                    <text| by >\n                    <a[AL]| Administrator >\n                  >\n                  <span| Owner >\n                  <input[AM]| Never >\n                  <span[datepicker-calendar-icon]| >\n                  <span| 23 Mar, 2023 >\n                  <span| 20 May, 2024 >\n                >\n                <\n                  tr[members-table-row-239]|\n                  <\n                    div|\n                    <span| Jakub Klinkovský >\n                    <span| @lahwaacz >\n                  >\n                  <span| Direct member >\n                  <\n                    span|\n                    <time| May 5, 2024 12:39pm GMT+0700 2 weeks ago >\n                    <text| by >\n                    <a[AN]| Byte Blaze >\n                  >\n                  <\n                    button[AO]|\n                    <span| Guest >\n                  >\n                  <input[AP]| Never >\n                  <span[datepicker-calendar-icon]| >\n                  <span| 20 Mar, 2023 >\n                  <span| 20 Mar, 2023 >\n                  <span[AQ]| Remove member >\n                >\n                <\n                  tr[members-table-row-234]|\n                  <\n                    div|\n                    <\n                      div|\n                      <span| benoit Blanchon >\n                      <span| Bot >\n                    >\n                    <span| @project_184_bot1 >\n                  >\n                  <span| Direct member >\n                  <time| Apr 29, 2024 10:52pm GMT+0700 2 weeks ago >\n                  <span| Maintainer >\n                  <input[AR]| 2024-05-29 >\n                  <span[datepicker-calendar-icon]| >\n                  <span| 29 Apr, 2024 >\n                  <span| Never >\n                >\n              >\n            >\n          >\n        >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 16,
+                "top": 1,
+                "right": 56,
+                "bottom": 41,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "a",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 343,
+                "top": 7.5,
+                "right": 663,
+                "bottom": 39.5,
+                "width": 320,
+                "height": 32
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 932,
+                "top": 8.5,
+                "right": 983,
+                "bottom": 38.5,
+                "width": 51,
+                "height": 30
+            },
+            "tag": "a",
+            "text": "\n                        \n                        \n                    "
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 991,
+                "top": 6.5,
+                "right": 1053,
+                "bottom": 40.5,
+                "width": 62,
+                "height": 34
+            },
+            "tag": "a",
+            "text": "\n                    \n                    \n                "
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 1061,
+                "top": 6.5,
+                "right": 1113,
+                "bottom": 40.5,
+                "width": 52,
+                "height": 34
+            },
+            "tag": "a",
+            "text": "\n                        \n                        \n                    "
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 1121,
+                "top": 6.5,
+                "right": 1178,
+                "bottom": 40.5,
+                "width": 57,
+                "height": 34
+            },
+            "tag": "a",
+            "text": "\n                    \n                    \n                "
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 1186,
+                "top": 8.5,
+                "right": 1216,
+                "bottom": 38.5,
+                "width": 30,
+                "height": 30
+            },
+            "tag": "a",
+            "text": "\n                        \n                        \n                    "
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 1224,
+                "top": 7.5,
+                "right": 1238,
+                "bottom": 21.5,
+                "width": 14,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 0,
+                "top": 48,
+                "right": 255,
+                "bottom": 96,
+                "width": 255,
+                "height": 48
+            },
+            "tag": "a",
+            "text": "\n                        \n                        \n                    "
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 0,
+                "top": 97,
+                "right": 255,
+                "bottom": 134,
+                "width": 255,
+                "height": 37
+            },
+            "tag": "a",
+            "text": "\n                        \n                        \n                    "
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 36,
+                "top": 134,
+                "right": 255,
+                "bottom": 167,
+                "width": 219,
+                "height": 33
+            },
+            "tag": "span",
+            "text": " Activity "
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 36,
+                "top": 167,
+                "right": 255,
+                "bottom": 200,
+                "width": 219,
+                "height": 33
+            },
+            "tag": "span",
+            "text": " Labels "
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 36,
+                "top": 200,
+                "right": 255,
+                "bottom": 233,
+                "width": 219,
+                "height": 33
+            },
+            "tag": "span",
+            "text": " Members "
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 0,
+                "top": 242,
+                "right": 255,
+                "bottom": 279,
+                "width": 255,
+                "height": 37
+            },
+            "tag": "a",
+            "text": "   "
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 0,
+                "top": 279,
+                "right": 255,
+                "bottom": 317,
+                "width": 255,
+                "height": 38
+            },
+            "tag": "a",
+            "text": "    "
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 0,
+                "top": 317,
+                "right": 255,
+                "bottom": 355,
+                "width": 255,
+                "height": 38
+            },
+            "tag": "a",
+            "text": "    "
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 0,
+                "top": 355,
+                "right": 255,
+                "bottom": 392,
+                "width": 255,
+                "height": 37
+            },
+            "tag": "a",
+            "text": "   "
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 0,
+                "top": 392,
+                "right": 255,
+                "bottom": 429,
+                "width": 255,
+                "height": 37
+            },
+            "tag": "a",
+            "text": "   "
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 0,
+                "top": 429,
+                "right": 255,
+                "bottom": 466,
+                "width": 255,
+                "height": 37
+            },
+            "tag": "a",
+            "text": "   "
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 0,
+                "top": 466,
+                "right": 255,
+                "bottom": 503,
+                "width": 255,
+                "height": 37
+            },
+            "tag": "a",
+            "text": "   "
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 0,
+                "top": 503,
+                "right": 255,
+                "bottom": 540,
+                "width": 255,
+                "height": 37
+            },
+            "tag": "a",
+            "text": "   "
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 0,
+                "top": 540,
+                "right": 255,
+                "bottom": 577,
+                "width": 255,
+                "height": 37
+            },
+            "tag": "a",
+            "text": "   "
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 0,
+                "top": 577,
+                "right": 255,
+                "bottom": 614,
+                "width": 255,
+                "height": 37
+            },
+            "tag": "a",
+            "text": "   "
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 0,
+                "top": 614,
+                "right": 255,
+                "bottom": 651,
+                "width": 255,
+                "height": 37
+            },
+            "tag": "a",
+            "text": "   "
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 0,
+                "top": 651,
+                "right": 255,
+                "bottom": 688,
+                "width": 255,
+                "height": 37
+            },
+            "tag": "a",
+            "text": "   "
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 0,
+                "top": 688,
+                "right": 255,
+                "bottom": 720,
+                "width": 255,
+                "height": 32
+            },
+            "tag": "a",
+            "text": "   "
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 287,
+                "top": 74,
+                "right": 361,
+                "bottom": 91,
+                "width": 74,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " Byte Blaze "
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 516,
+                "top": 74,
+                "right": 578,
+                "bottom": 91,
+                "width": 62,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " Members "
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 797.453125,
+                "top": 92,
+                "right": 944.84375,
+                "bottom": 126,
+                "width": 147.390625,
+                "height": 34
+            },
+            "tag": "span",
+            "text": " Import from a project "
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 986.84375,
+                "top": 92,
+                "right": 1082.453125,
+                "bottom": 126,
+                "width": 95.609375,
+                "height": 34
+            },
+            "tag": "span",
+            "text": " Invite a group "
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 1124.453125,
+                "top": 92,
+                "right": 1231.015625,
+                "bottom": 126,
+                "width": 106.5625,
+                "height": 34
+            },
+            "tag": "span",
+            "text": " Invite members "
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 287,
+                "top": 223,
+                "right": 407,
+                "bottom": 271,
+                "width": 120,
+                "height": 48
+            },
+            "tag": "a",
+            "text": "   "
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 306,
+                "top": 289,
+                "right": 319,
+                "bottom": 319,
+                "width": 13,
+                "height": 30
+            },
+            "tag": "button",
+            "text": "  "
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 319,
+                "top": 294,
+                "right": 512,
+                "bottom": 318,
+                "width": 193,
+                "height": 24
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 504,
+                "top": 297,
+                "right": 529,
+                "bottom": 315,
+                "width": 25,
+                "height": 18
+            },
+            "tag": "button",
+            "text": "  "
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 1155,
+                "top": 295.5,
+                "right": 1213,
+                "bottom": 312.5,
+                "width": 58,
+                "height": 17
+            },
+            "tag": "span",
+            "text": " Account "
+        },
+        {
+            "keep": true,
+            "id": "AK",
+            "rects": {
+                "left": 1155,
+                "top": 329,
+                "right": 1171,
+                "bottom": 343,
+                "width": 16,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AL",
+            "rects": {
+                "left": 606.34375,
+                "top": 489.75,
+                "right": 691.609375,
+                "bottom": 509.25,
+                "width": 85.265625,
+                "height": 19.5
+            },
+            "tag": "a",
+            "text": " Administrator "
+        },
+        {
+            "keep": true,
+            "id": "AM",
+            "rects": {
+                "left": 829.609375,
+                "top": 464,
+                "right": 921.09375,
+                "bottom": 496,
+                "width": 91.484375,
+                "height": 32
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AN",
+            "rects": {
+                "left": 606.34375,
+                "top": 584,
+                "right": 691.609375,
+                "bottom": 603.5,
+                "width": 85.265625,
+                "height": 19.5
+            },
+            "tag": "a",
+            "text": " Byte Blaze "
+        },
+        {
+            "keep": true,
+            "id": "AO",
+            "rects": {
+                "left": 723.609375,
+                "top": 560.25,
+                "right": 797.609375,
+                "bottom": 588.25,
+                "width": 74,
+                "height": 28
+            },
+            "tag": "button",
+            "text": "  "
+        },
+        {
+            "keep": true,
+            "id": "AP",
+            "rects": {
+                "left": 829.609375,
+                "top": 558.25,
+                "right": 921.09375,
+                "bottom": 590.25,
+                "width": 91.484375,
+                "height": 32
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AQ",
+            "rects": {
+                "left": 1145.5625,
+                "top": 558.75,
+                "right": 1214,
+                "bottom": 592.75,
+                "width": 68.4375,
+                "height": 34
+            },
+            "tag": "span",
+            "text": " Remove member "
+        },
+        {
+            "keep": true,
+            "id": "AR",
+            "rects": {
+                "left": 829.609375,
+                "top": 652,
+                "right": 921.09375,
+                "bottom": 684,
+                "width": 91.484375,
+                "height": 32
+            },
+            "tag": "input",
+            "text": ""
+        }
+    ]
+}

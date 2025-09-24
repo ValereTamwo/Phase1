@@ -1,0 +1,455 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_44.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,55\"><HEADER data-bbox=\"0,0,1280,55\"><IMG id=\"0\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgOTAuMzY5IDkwLjM2OSI+PHBhdGggZD0iTTQ1LjE4NCAwQzIwLjIzIDAgMCAyMC4yMyAwIDQ1LjE4NGMwIDI0Ljk1MyAyMC4yMyA0NS4xODUgNDUuMTg0IDQ1LjE4NSA5LjEzNyAwIDE3LjU5LTEuODIgMjUuMTA0LTUuMDkzbC04Ljc0Ny0yMS44MjQtOS4zNzcgOC45OC0xMy4wNi0xMi44OTItOC4yNTcgOC4zODIgMy45MDYgOC44NDItNy4yNDcgNS4xNDItMi40Mi0yLjQyIDIuNTQ4LTYuNzExLTUuMDUxLTguNTI5LTcuNTYgNC4zMTUtOS41NjQtMS4yNjYtNC4xMzQtNi44NDItNy4zNi0xLjI0Ny0yLjczMiA2LjA3LTguNDQ2IDYuMTgyLTEuMTE2IDEuODg4LTguOTQ1IDcuMzctOC45NiAyLjM1Mi4zNzQgMS4zMy0xLjUxMyAyLjY2MS0yLjU0NyAyLjU1OC0uNjIyIDEuNTc3IDEuNjIgNC4zODIgMS4xMyA2LjY4Ny0yLjk0NyA1Ljg3NS0yLjI5IDQuOTQtNS4xNjEgNC4wMTgtOC4xNjcgMy4yOC0xMi4wODItMS45MiA3LjY0Ni01LjU1MyA0LjM1NC01LjYxNy0xLjUxOC01LjQ1My00LjM2NS03LjQ1IDQuNTg3LTEuNDQ3IDYuMDIzLTYuNDYzIDUuMDUzLTYuMDIgMS44ODMtLjEzIDQuMTEzIDEuODUzIDYuMzggMy43MzcgMi4yNjYgMS44ODQgMS41MjcgNC4zODMtLjIyIDYuMDY0LTEuNzQ1IDEuNjgxLTYuODU3IDIuMDc2LTguNjgtLjE0LTguMzcyLTEwLjMyNi0xNC40NDYtMTkuOTU0LTE0LjQ0Ni0zMi4xMTcgMC0xOS4zMzQgMTUuNzEzLTM1LjA0NyAzNS4wNDctMzUuMDQ3czM1LjA0NyAxNS43MTMgMzUuMDQ3IDM1LjA0N2MwIDguODgyLTMuMzI2IDE2LjkzNi04Ljg2MyAyMy4wN2wtNy4xODQtMjAuNjQ2IDEwLjU4OC0uNzE4LTYuNTg1LTEwLjQzLTguODQ4IDQuODM2LTMuNjczLTUuNzQ3LTUuMzcyIDYuODQ1IDEwLjQgOS4zMTktMTMuNTIgMTUuNzctMTEuNzc0LTcuMDUtNS45MzYgMTEuMDMgMS42NDIgMS4zMyA4LjAxOC03Ljg5MiAxMC40NSA4Ljg1QzY0LjQxOSA4Ni4zNzcgNTUuNDc3IDkwLjM3IDQ1LjE4NCA5MC4zNyIgZmlsbD0iIzVBRTYwMCIvPjwvc3ZnPg==\" data-bbox=\"10,13,30,30\"></IMG><NAV data-bbox=\"178,0,227,55\"><DIV data-bbox=\"188,10,207,35\"><DIV class=\"edit-button-group\" data-bbox=\"188,10,77,35\"><A id=\"1\" data-bbox=\"188,10,50,35\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Edit</text></A><BUTTON id=\"2\" type=\"button\" data-bbox=\"237,10,28,35\"><I class=\"fas fa-caret-down possible-clickable-element\" data-testid=\"B\"></I></BUTTON></DIV><A id=\"3\" data-bbox=\"264,10,68,35\" class=\"possible-clickable-element\" data-testid=\"C\"><text>History</text></A><A id=\"4\" data-bbox=\"331,10,64,35\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Export</text></A></DIV></NAV><NAV data-bbox=\"708,0,572,55\"><UL data-bbox=\"722,13,405,27\"><A id=\"5\" data-bbox=\"722,13,77,27\" class=\"possible-clickable-element\" data-testid=\"E\"><text>GPS Traces</text></A><A id=\"6\" data-bbox=\"803,13,82,27\" class=\"possible-clickable-element\" data-testid=\"F\"><text>User Diaries</text></A><A id=\"7\" data-bbox=\"889,13,87,27\" class=\"possible-clickable-element\" data-testid=\"G\"><text>Communities</text></A><A id=\"8\" data-bbox=\"980,13,63,27\" class=\"possible-clickable-element\" data-testid=\"H\"><text>Copyright</text></A><A id=\"9\" data-bbox=\"1047,13,34,27\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Help</text></A><A id=\"10\" data-bbox=\"1085,13,42,27\" class=\"possible-clickable-element\" data-testid=\"J\"><text>About</text></A></UL><DIV class=\"user-actions\" data-bbox=\"1135,10,135,35\"><A id=\"11\" data-bbox=\"1135,10,63,35\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Log In</text></A><A id=\"12\" data-bbox=\"1197,10,73,35\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Sign Up</text></A></DIV></NAV></HEADER><DIV class=\"main-container\" data-bbox=\"0,55,1280,665\"><DIV class=\"sidebar\" data-bbox=\"0,55,350,665\"><DIV class=\"sidebar-search\" data-bbox=\"0,55,350,47\"><DIV class=\"search-form\" data-bbox=\"4,63,342,31\"><DIV class=\"search-input-wrapper\" data-bbox=\"8,63,288,31\"><DIV data-bbox=\"8,63,254,31\"><A id=\"13\" title=\"Describe the current location using the search engine\" data-bbox=\"194,69,62,15\" class=\"possible-clickable-element\" data-testid=\"M\"><text>Where is this?</text></A><INPUT id=\"14\" type=\"text\" placeholder=\"Search\" data-value=\"School near Cape Cod Museum of Natural History\" data-bbox=\"8,63,254,31\" class=\"possible-clickable-element\" data-testid=\"N\" style=\"\"></INPUT></DIV><INPUT id=\"15\" value=\"Go\" type=\"submit\" data-bbox=\"261,63,35,31\" class=\"possible-clickable-element\" data-testid=\"O\" style=\"\"></INPUT></DIV><A class=\"directions-link\" title=\"Find directions between two points\" data-bbox=\"304,63,38,31\"><I id=\"16\" data-bbox=\"313,69,20,20\" class=\"fas fa-route\"></I></A></DIV></DIV><DIV class=\"sidebar-content\"><DIV class=\"sidebar-results\" data-bbox=\"0,102,350,453\"><DIV class=\"results-header\" data-bbox=\"16,118,318,47\"><H2 data-bbox=\"16,118,297,39\"><text>Search Results</text></H2><BUTTON id=\"17\" type=\"button\" data-bbox=\"313,118,21,21\" class=\"possible-clickable-element\" data-testid=\"P\"><I class=\"fas fa-times\"></I></BUTTON></DIV><H4 data-bbox=\"16,165,318,57\"><text>Results from</text><A id=\"18\" data-bbox=\"157,164,164,30\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>OpenStreetMap Nominatim</text></A></H4><DIV data-bbox=\"0,230,350,293\"><UL class=\"results-list\" data-bbox=\"0,230,350,239\"><LI data-bbox=\"0,230,350,80\"><text>School</text><A id=\"19\" data-bbox=\"62,240,258,17\" class=\"possible-clickable-element\" data-testid=\"R\"><text>Stony Brook Elementary School, Cape Cod Rail Trail, Brewster, Barnstable County, Massachusetts, 02631, United States</text></A></LI><LI data-bbox=\"0,310,350,80\"><text>School</text><A id=\"20\" data-bbox=\"62,320,217,17\" class=\"possible-clickable-element\" data-testid=\"S\"><text>Latham School, 1646, Main Street, Brewster, Barnstable County, Massachusetts, 02631, United States</text></A></LI><LI data-bbox=\"0,390,350,79\"><text>School</text><A id=\"21\" data-bbox=\"62,400,261,17\" class=\"possible-clickable-element\" data-testid=\"T\"><text>Eddy Elementary School, Main Street, East Brewster, Brewster, Barnstable County, Massachusetts, 02631, United States</text></A></LI></UL><DIV class=\"more-results-wrapper\" data-bbox=\"0,485,350,38\"><A id=\"22\" data-bbox=\"118,485,114,38\" class=\"possible-clickable-element\" data-testid=\"U\"><text>More results</text></A></DIV></DIV></DIV></DIV></DIV><DIV class=\"map-container\" data-bbox=\"350,55,930,665\"><DIV class=\"map-controls\"><SPAN id=\"23\" data-bbox=\"1250,75,20,20\"><I class=\"fas fa-plus possible-clickable-element\" data-testid=\"V\"></I></SPAN><SPAN id=\"24\" data-bbox=\"1250,115,20,20\"><I class=\"fas fa-minus possible-clickable-element\" data-testid=\"W\"></I></SPAN><SPAN id=\"25\" data-bbox=\"1250,155,20,20\"><I class=\"fas fa-crosshairs possible-clickable-element\" data-testid=\"X\"></I></SPAN><SPAN id=\"26\" data-bbox=\"1250,205,20,20\"><I class=\"fas fa-layer-group possible-clickable-element\" data-testid=\"Y\"></I></SPAN><SPAN id=\"27\" data-bbox=\"1250,245,20,20\"><I class=\"fas fa-list-ul possible-clickable-element\" data-testid=\"Z\"></I></SPAN><SPAN id=\"28\" data-bbox=\"1250,285,20,20\"><I class=\"fas fa-share-alt possible-clickable-element\" data-testid=\"AA\"></I></SPAN><SPAN id=\"29\" data-bbox=\"1250,335,20,20\"><I class=\"fas fa-ruler-horizontal possible-clickable-element\" data-testid=\"AB\"></I></SPAN><SPAN id=\"30\" data-bbox=\"1250,385,20,20\"><I class=\"fas fa-expand possible-clickable-element\" data-testid=\"AC\"></I></SPAN></DIV><DIV class=\"map-footer\"><DIV class=\"map-scale\" data-bbox=\"355,681,68,34\"><DIV data-bbox=\"355,681,56,18\"><text>50 m</text></DIV><DIV data-bbox=\"355,697,68,18\"><text>200 ft</text></DIV></DIV><DIV class=\"map-attribution\" data-bbox=\"874,703,406,17\"><text>©</text><A id=\"31\" data-bbox=\"891,704,151,14\" class=\"possible-clickable-element\" data-testid=\"AD\"><text>OpenStreetMap contributors</text></A><A id=\"32\" data-bbox=\"1056,704,90,14\" class=\"possible-clickable-element\" data-testid=\"AE\"><text>Make a Donation</text></A><A id=\"33\" data-bbox=\"1153,704,122,14\" class=\"possible-clickable-element\" data-testid=\"AF\"><text>Website and API terms</text></A></DIV></DIV></DIV></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    header|\n    <\n      div|\n      <a[A]| Edit >\n      <i[B]| >\n      <a[C]| History >\n      <a[D]| Export >\n    >\n    <\n      nav|\n      <\n        ul|\n        <a[E]| GPS Traces >\n        <a[F]| User Diaries >\n        <a[G]| Communities >\n        <a[H]| Copyright >\n        <a[I]| Help >\n        <a[J]| About >\n      >\n      <\n        div|\n        <a[K]| Log In >\n        <a[L]| Sign Up >\n      >\n    >\n  >\n  <\n    div|\n    <\n      div|\n      <\n        div|\n        <\n          div|\n          <\n            div|\n            <a[M]| Describe the current location using the search engine Where is this? >\n            <input[N]| Search >\n          >\n          <input[O]| Go >\n        >\n        <a| Find directions between two points >\n      >\n      <\n        div|\n        <h2| Search Results >\n        <button[P]| >\n        <\n          h4|\n          <text| Results from >\n          <a[Q]| OpenStreetMap Nominatim >\n        >\n        <\n          div|\n          <\n            ul|\n            <\n              li|\n              <text| School >\n              <a[R]| Stony Brook Elementary School, Cape Cod Rail Trail, Brewster, Barnstable County, Massachusetts, 02631, United States >\n            >\n            <\n              li|\n              <text| School >\n              <a[S]| Latham School, 1646, Main Street, Brewster, Barnstable County, Massachusetts, 02631, United States >\n            >\n            <\n              li|\n              <text| School >\n              <a[T]| Eddy Elementary School, Main Street, East Brewster, Brewster, Barnstable County, Massachusetts, 02631, United States >\n            >\n          >\n          <a[U]| More results >\n        >\n      >\n    >\n    <i[V]| >\n    <i[W]| >\n    <i[X]| >\n    <i[Y]| >\n    <i[Z]| >\n    <i[AA]| >\n    <i[AB]| >\n    <i[AC]| >\n    <\n      div|\n      <\n        div|\n        <div| 50 m >\n        <div| 200 ft >\n      >\n      <\n        div|\n        <text| © >\n        <a[AD]| OpenStreetMap contributors >\n        <a[AE]| Make a Donation >\n        <a[AF]| Website and API terms >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 452.3125,
+                "top": 0,
+                "right": 504.3125,
+                "bottom": 34.5,
+                "width": 52,
+                "height": 34.5
+            },
+            "tag": "a",
+            "text": "Edit"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 516.3125,
+                "top": 10.328125,
+                "right": 524.3125,
+                "bottom": 23.65625,
+                "width": 8,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 451.3125,
+                "top": 37.5,
+                "right": 502.3125,
+                "bottom": 54.5,
+                "width": 51,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "History"
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 507.3125,
+                "top": 37.5,
+                "right": 553.3125,
+                "bottom": 54.5,
+                "width": 46,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Export"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 638.96875,
+                "top": 19,
+                "right": 717.96875,
+                "bottom": 36,
+                "width": 79,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "GPS Traces"
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 722.96875,
+                "top": 19,
+                "right": 807.96875,
+                "bottom": 36,
+                "width": 85,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "User Diaries"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 812.96875,
+                "top": 19,
+                "right": 905.96875,
+                "bottom": 36,
+                "width": 93,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Communities"
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 910.96875,
+                "top": 19,
+                "right": 980.96875,
+                "bottom": 36,
+                "width": 70,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Copyright"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 985.96875,
+                "top": 19,
+                "right": 1017.96875,
+                "bottom": 36,
+                "width": 32,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Help"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1022.96875,
+                "top": 19,
+                "right": 1064.96875,
+                "bottom": 36,
+                "width": 42,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "About"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 1088.96875,
+                "top": 11,
+                "right": 1163.96875,
+                "bottom": 44,
+                "width": 75,
+                "height": 33
+            },
+            "tag": "a",
+            "text": "Log In"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 1168.96875,
+                "top": 11,
+                "right": 1255.96875,
+                "bottom": 44,
+                "width": 87,
+                "height": 33
+            },
+            "tag": "a",
+            "text": "Sign Up"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 16,
+                "top": 71,
+                "right": 121,
+                "bottom": 91,
+                "width": 105,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "Where is this?"
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 16,
+                "top": 93,
+                "right": 197,
+                "bottom": 112,
+                "width": 181,
+                "height": 19
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 16,
+                "top": 114,
+                "right": 37.78125,
+                "bottom": 133,
+                "width": 21.78125,
+                "height": 19
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 319,
+                "top": 179,
+                "right": 333,
+                "bottom": 198,
+                "width": 14,
+                "height": 19
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 108,
+                "top": 219,
+                "right": 299,
+                "bottom": 236,
+                "width": 191,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "OpenStreetMap Nominatim"
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 24,
+                "top": 301,
+                "right": 325,
+                "bottom": 361.46875,
+                "width": 301,
+                "height": 60.46875
+            },
+            "tag": "a",
+            "text": "Stony Brook Elementary School, Cape Cod Rail Trail, Brewster, Barnstable County, Massachusetts, 02631, United States"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 24,
+                "top": 418.46875,
+                "right": 325,
+                "bottom": 478.9375,
+                "width": 301,
+                "height": 60.46875
+            },
+            "tag": "a",
+            "text": "Latham School, 1646, Main Street, Brewster, Barnstable County, Massachusetts, 02631, United States"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 24,
+                "top": 535.9375,
+                "right": 325,
+                "bottom": 596.40625,
+                "width": 301,
+                "height": 60.46875
+            },
+            "tag": "a",
+            "text": "Eddy Elementary School, Main Street, East Brewster, Brewster, Barnstable County, Massachusetts, 02631, United States"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 16,
+                "top": 629.40625,
+                "right": 109,
+                "bottom": 649.40625,
+                "width": 93,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "More results"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 1234.5,
+                "top": 85,
+                "right": 1249.5,
+                "bottom": 101,
+                "width": 15,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 1234.5,
+                "top": 129,
+                "right": 1249.5,
+                "bottom": 145,
+                "width": 15,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 1234,
+                "top": 173,
+                "right": 1250,
+                "bottom": 189,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 1233,
+                "top": 217,
+                "right": 1251,
+                "bottom": 233,
+                "width": 18,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 1234,
+                "top": 261,
+                "right": 1250,
+                "bottom": 277,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 1235,
+                "top": 305,
+                "right": 1249,
+                "bottom": 321,
+                "width": 14,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 1232,
+                "top": 349,
+                "right": 1252,
+                "bottom": 365,
+                "width": 20,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 1235,
+                "top": 393,
+                "right": 1249,
+                "bottom": 409,
+                "width": 14,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 851,
+                "top": 689,
+                "right": 1013,
+                "bottom": 704,
+                "width": 162,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "OpenStreetMap contributors"
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 1021,
+                "top": 689,
+                "right": 1117,
+                "bottom": 704,
+                "width": 96,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Make a Donation"
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 1125,
+                "top": 689,
+                "right": 1252,
+                "bottom": 704,
+                "width": 127,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Website and API terms"
+        }
+    ]
+}

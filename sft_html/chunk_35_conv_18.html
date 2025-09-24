@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern E-commerce Product Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --border-color: #dee2e6;
+            --body-bg: #f4f7fc;
+            --card-bg: #ffffff;
+            --font-family-base: 'Inter', sans-serif;
+            --border-radius: 0.75rem;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            background-color: var(--body-bg);
+            color: var(--dark-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Helper class for screen readers */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-block {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .sidebar-block strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sidebar-block ol, .sidebar-block dl {
+            list-style: none;
+        }
+
+        .sidebar-block ol a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 0.5rem;
+            text-decoration: none;
+            color: #495057;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .sidebar-block ol a:hover {
+            background-color: #eef2ff;
+            color: var(--primary-color);
+        }
+        
+        .sidebar-block ol a span[id] {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            background-color: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .sidebar-block form ol li {
+            font-size: 0.9rem;
+            color: #495057;
+            padding: 0.5rem 0;
+            display: flex;
+            gap: 0.5rem;
+            align-items: flex-start;
+        }
+
+        .sidebar-block input[type="checkbox"] {
+            margin-top: 4px;
+        }
+
+        .product-grid-container {
+            width: 100%;
+        }
+
+        .product-grid {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-details {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-details a[id] {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            height: 5.4em; /* Approx 4 lines */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            transition: color 0.2s ease;
+        }
+
+        .product-details a[id]:hover {
+            color: var(--primary-color);
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0.75rem 0;
+        }
+        
+        .rating-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.75rem;
+        }
+        
+        .rating-bar {
+            width: 100px;
+            height: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .rating-bar-inner {
+            height: 100%;
+            background-color: #ffc107;
+            border-radius: 4px;
+        }
+        
+        .rating-container a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        .rating-container a:hover {
+            text-decoration: underline;
+        }
+        
+        .product-actions {
+            margin-top: auto;
+            padding-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .product-actions button {
+            flex-grow: 1;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.6rem 1rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, opacity 0.2s ease;
+        }
+
+        .product-actions button:hover {
+            background-color: #0b5ed7;
+        }
+        
+        .product-actions button.added {
+            background-color: var(--success-color);
+        }
+
+        .product-actions button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .icon-buttons a {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .icon-buttons a:hover {
+            background-color: #e9ecef;
+            color: var(--dark-color);
+        }
+
+        @media (max-width: 992px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body data-bbox="0,-480,1280,2696">
+    <div data-bbox="0,-480,1280,2696">
+        <main data-bbox="0,-183,1280,2117">
+            <aside class="sidebar" data-bbox="20,-99,207,1102">
+                 <div class="sidebar-block" data-bbox="20,-99,182,474">
+                     <div data-bbox="20,-53,182,428">
+                         <dl data-bbox="20,-23,182,398">
+                             <ol data-bbox="20,2,182,373">
+                                 <li><a href="#" data-bbox="20,2,157,19">Beauty & Personal Care <span id="22" data-bbox="177,2,4,19">537<span class="sr-only" data-bbox="43,21,1,1"> item </span></span></a></li>
+                                 <li><a href="#" data-bbox="20,45,124,19">Sports & Outdoors <span id="23" data-bbox="144,45,4,19">454<span class="sr-only" data-bbox="175,44,1,1"> item </span></span></a></li>
+                                 <li><a href="#" data-bbox="20,68,169,19">Clothing, Shoes & Jewelry <span id="24" data-bbox="189,68,4,19">5915<span class="sr-only" data-bbox="51,87,1,1"> item </span></span></a></li>
+                                 <li><a href="#" data-bbox="20,111,108,19">Home & Kitchen <span id="25" data-bbox="128,111,4,19">1761<span class="sr-only" data-bbox="167,110,1,1"> item </span></span></a></li>
+                                 <li><a href="#" data-bbox="20,134,102,19">Office Products <span id="26" data-bbox="122,134,4,19">343<span class="sr-only" data-bbox="153,133,1,1"> item </span></span></a></li>
+                                 <li><a href="#" data-bbox="20,157,91,19">Tools & Home Improvement <span id="27" data-bbox="110,177,4,19">71<span class="sr-only" data-bbox="133,176,1,1"> item </span></span></a></li>
+                                 <li><a href="#" data-bbox="20,200,134,19">Health & Household <span id="28" data-bbox="154,200,4,19">15<span class="sr-only" data-bbox="177,199,1,1"> item </span></span></a></li>
+                                 <li><a href="#" data-bbox="20,223,143,19">Patio, Lawn & Garden <span id="29" data-bbox="163,223,4,19">9<span class="sr-only" data-bbox="178,222,1,1"> item </span></span></a></li>
+                                 <li><a href="#" data-bbox="20,246,73,19">Electronics <span id="30" data-bbox="93,246,4,19">499<span class="sr-only" data-bbox="124,245,1,1"> item </span></span></a></li>
+                                 <li><a href="#" data-bbox="20,269,174,19">Cell Phones & Accessories <span id="31" data-bbox="194,269,4,19">88<span class="sr-only" data-bbox="35,288,1,1"> item </span></span></a></li>
+                                 <li><a href="#" data-bbox="20,312,87,19">Video Games <span id="32" data-bbox="107,312,4,19">93<span class="sr-only" data-bbox="130,311,1,1"> item </span></span></a></li>
+                                 <li><a href="#" data-bbox="20,335,165,19">Grocery & Gourmet Food <span id="33" data-bbox="185,335,4,19">336<span class="sr-only" data-bbox="43,354,1,1"> item </span></span></a></li>
+                                 </ol>
+                         </dl>
+                     </div>
+                 </div>
+                 <div data-bbox="20,415,207,697">
+                    <div class="sidebar-block" data-bbox="20,415,207,56">
+                        <strong data-bbox="20,412,155,24">Compare Products</strong>
+                        <div data-bbox="20,451,207,20">You have no items to compare.</div>
+                    </div>
+                    <div class="sidebar-block" data-bbox="20,511,207,445" style="margin-top: 2rem;">
+                        <strong data-bbox="20,508,144,24">Recently Ordered</strong>
+                        <form data-bbox="20,547,207,409">
+                            <ol data-bbox="20,547,207,360">
+                                <li data-bbox="20,547,207,60">
+                                    <div data-bbox="20,547,18,60">
+                                        <span class="sr-only" data-bbox="19,546,27,19">Add to Cart</span>
+                                        <input id="34" title="Add to Cart" value="489" type="checkbox" data-bbox="20,551,13,13" data-status="not-checked">
+                                    </div>
+                                    <span id="35" data-bbox="38,547,186,19">Uttermost Volterra Crackled Taupe-Gray Ceramic Table Lamp</span>
+                                </li>
+                                <li data-bbox="20,617,207,160">
+                                    <div data-bbox="20,617,18,160">
+                                        <span class="sr-only" data-bbox="19,616,27,19">Add to Cart</span>
+                                        <input id="36" title="Add to Cart" value="490" type="checkbox" data-bbox="20,621,13,13" data-status="not-checked">
+                                    </div>
+                                    <span id="37" data-bbox="38,617,185,19">NOZE Rustic Coat Rack Wall Mounted Shelf with 4 Hooks, Hanging Entryway Organizer for Mug Coffee Cup, Holding Solid Wooden Shelf with 2 Baskets for Kitchen Living Room, Bathroom and Bedroom</span>
+                                </li>
+                            </ol>
+                        </form>
+                    </div>
+                 </div>
+            </aside>
+            <div class="product-grid-container" data-bbox="227,-99,1033,2033">
+                <div data-bbox="251,-99,1009,1953">
+                    <ol class="product-grid" data-bbox="251,-19,1009,1809">
+                        <li class="product-card">
+                            <img id="0" src="https://picsum.photos/seed/a1/400/500" alt="Floral Prints For Wall Decor" data-bbox="251,-19,237,296">
+                            <div class="product-details" data-bbox="251,287,237,250">
+                                <a href="#" id="1" data-bbox="251,287,233,19">Prints For Wall Decor - Floral Prints Art, Watercolor Plant Print Which Comes In A Set Of Six (8 X 10"). These Beautiful Botanical plant wall art prints, Flower prints are not only Gorgeous and They Will Also Add Natural And Lush Touches To Your Home</a>
+                                <span class="price" data-bbox="251,457,36,19">$9.99</span>
+                                <div class="product-actions" data-bbox="251,502,237,35">
+                                    <form data-bbox="251,504,112,32">
+                                        <button title="Add to Cart" type="submit" data-bbox="251,504,112,32">
+                                            <span id="2" data-bbox="267,510,80,19">Add to Cart</span>
+                                        </button>
+                                    </form>
+                                    <div class="icon-buttons" data-bbox="363,502,74,35">
+                                        <a href="#" id="3" title="Add to Wish List" data-bbox="363,502,35,35"><i class="fa-regular fa-heart"></i><span class="sr-only" data-bbox="394,501,1,1">Add to Wish List</span></a>
+                                        <a href="#" id="4" title="Add to Compare" data-bbox="402,502,35,35"><i class="fa-solid fa-scale-balanced"></i><span class="sr-only" data-bbox="433,501,1,1">Add to Compare</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product-card">
+                            <img id="5" src="https://picsum.photos/seed/b2/400/500" alt="Custom Canvas Prints" data-bbox="509,-19,237,296">
+                            <div class="product-details" data-bbox="509,287,237,210">
+                                <a href="#" id="6" data-bbox="509,287,207,19">Canvas Prints with Your Photos Framed Custom Canvas Prints Photo Prints Personalized Canvas Pictures Wall Art for Bedroom Living Room, Wedding Family Baby Pet</a>
+                                <span class="price" data-bbox="509,417,44,19">$44.42</span>
+                                <div class="product-actions" data-bbox="509,462,237,35">
+                                    <form data-bbox="509,464,112,32">
+                                        <button title="Add to Cart" type="submit" data-bbox="509,464,112,32">
+                                            <span id="7" data-bbox="525,470,80,19">Add to Cart</span>
+                                        </button>
+                                    </form>
+                                    <div class="icon-buttons" data-bbox="621,462,74,35">
+                                        <a href="#" id="8" title="Add to Wish List" data-bbox="621,462,35,35"><i class="fa-regular fa-heart"></i><span class="sr-only" data-bbox="652,461,1,1">Add to Wish List</span></a>
+                                        <a href="#" id="9" title="Add to Compare" data-bbox="660,462,35,35"><i class="fa-solid fa-scale-balanced"></i><span class="sr-only" data-bbox="691,461,1,1">Add to Compare</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product-card">
+                            <img id="10" src="https://picsum.photos/seed/c3/400/500" alt="Women Pajama Pants" data-bbox="766,-19,237,296">
+                            <div class="product-details" data-bbox="766,287,237,170">
+                                <a href="#" id="11" data-bbox="766,287,217,19">Just Love Women Pajama Pants - Holiday Prints</a>
+                                <div class="rating-container" data-bbox="766,337,165,28">
+                                    <div data-bbox="761,337,95,28">
+                                        <span class="sr-only" data-bbox="760,336,47,19">Rating:</span>
+                                        <div class="rating-bar" title="52%" data-bbox="756,337,100,28">
+                                            <div class="rating-bar-inner" style="width: 52%;"><span class="sr-only" data-bbox="755,364,52,1">52%</span></div>
+                                        </div>
+                                    </div>
+                                    <a href="#" data-bbox="861,343,65,16">12<span id="12" data-bbox="881,343,45,16"> Reviews</span></a>
+                                </div>
+                                <span class="price" data-bbox="766,377,44,19">$14.99</span>
+                                <div class="product-actions" data-bbox="766,422,237,35">
+                                    <form data-bbox="766,424,112,32">
+                                        <button title="Add to Cart" type="submit" data-bbox="766,424,112,32">
+                                            <span id="13" data-bbox="782,430,80,19">Add to Cart</span>
+                                        </button>
+                                    </form>
+                                    <div class="icon-buttons" data-bbox="878,422,74,35">
+                                        <a href="#" id="14" title="Add to Wish List" data-bbox="878,422,35,35"><i class="fa-regular fa-heart"></i><span class="sr-only" data-bbox="909,421,1,1">Add to Wish List</span></a>
+                                        <a href="#" id="15" title="Add to Compare" data-bbox="917,422,35,35"><i class="fa-solid fa-scale-balanced"></i><span class="sr-only" data-bbox="948,421,1,1">Add to Compare</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="product-card">
+                            <img id="16" src="https://picsum.photos/seed/d4/400/500" alt="Premium Canvas Wall Art" data-bbox="1023,-19,237,296">
+                            <div class="product-details" data-bbox="1023,287,237,230">
+                                <a href="#" id="17" data-bbox="1023,287,213,19">Premium Canvas Wall Art Prints Greece Sea Nordic Style Painting Prints Home Decorative Artwork for Bedroom Living Room Office Framed Ready to Hang 12x12 Inch</a>
+                                <div class="rating-container" data-bbox="1023,397,158,28">
+                                    <div data-bbox="1018,397,95,28">
+                                        <span class="sr-only" data-bbox="1017,396,47,19">Rating:</span>
+                                        <div class="rating-bar" title="80%" data-bbox="1013,397,100,28">
+                                            <div class="rating-bar-inner" style="width: 80%;"><span class="sr-only" data-bbox="1012,424,80,1">80%</span></div>
+                                        </div>
+                                    </div>
+                                    <a href="#" data-bbox="1118,403,58,16">8<span id="18" data-bbox="1131,403,45,16"> Reviews</span></a>
+                                </div>
+                                <span class="price" data-bbox="1023,437,44,19">$34.80</span>
+                                <div class="product-actions" data-bbox="1023,482,237,35">
+                                    <form data-bbox="1023,484,112,32">
+                                        <button title="Add to Cart" type="submit" data-bbox="1023,484,112,32">
+                                            <span id="19" data-bbox="1039,490,80,19">Add to Cart</span>
+                                        </button>
+                                    </form>
+                                    <div class="icon-buttons" data-bbox="1135,482,74,35">
+                                        <a href="#" id="20" title="Add to Wish List" data-bbox="1135,482,35,35"><i class="fa-regular fa-heart"></i><span class="sr-only" data-bbox="1166,481,1,1">Add to Wish List</span></a>
+                                        <a href="#" id="21" title="Add to Compare" data-bbox="1174,482,35,35"><i class="fa-solid fa-scale-balanced"></i><span class="sr-only" data-bbox="1205,481,1,1">Add to Compare</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartButtons = document.querySelectorAll('.product-actions button[title="Add to Cart"]');
+            
+            cartButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent form submission for this demo
+                    
+                    if (button.disabled) return;
+
+                    const textSpan = button.querySelector('span');
+                    const originalText = textSpan.textContent;
+                    
+                    button.disabled = true;
+                    button.classList.add('added');
+                    textSpan.textContent = 'Added!';
+
+                    setTimeout(() => {
+                        button.disabled = false;
+                        button.classList.remove('added');
+                        textSpan.textContent = originalText;
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

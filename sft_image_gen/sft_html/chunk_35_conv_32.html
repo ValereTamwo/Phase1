@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postmill - Futurology Forum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --background-color: #f8f9fa;
+            --card-background-color: #ffffff;
+            --border-color: #dee2e6;
+            --text-primary-color: #212529;
+            --text-secondary-color: #6c757d;
+            --accent-color: #007bff;
+            --accent-hover-color: #0056b3;
+            --upvote-color: #ff4500;
+            --downvote-color: #7193ff;
+            --header-bg: #ffffff;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.12);
+            --border-radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-primary-color);
+            background-color: var(--background-color);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-hover-color);
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button {
+            font-family: 'Inter', sans-serif;
+            border: none;
+            background: none;
+            cursor: pointer;
+            padding: 0;
+            color: inherit;
+        }
+
+        /* Main Header Navigation */
+        nav[data-bbox="0,0,1280,52"] {
+            background-color: var(--header-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        nav[data-bbox="0,0,1280,52"] > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        header[data-bbox="104,0,90,52"] a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary-color);
+            text-decoration: none;
+        }
+        
+        div[data-bbox="194,0,148,52"] ul, ul[data-bbox="804,0,372,52"] {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            height: 100%;
+        }
+
+        div[data-bbox="194,0,148,52"] a, ul[data-bbox="804,0,372,52"] a, ul[data-bbox="804,0,372,52"] button {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 0.75rem;
+            font-weight: 500;
+            color: var(--text-secondary-color);
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        div[data-bbox="194,0,148,52"] a:hover, ul[data-bbox="804,0,372,52"] a:hover, ul[data-bbox="804,0,372,52"] button:hover {
+            color: var(--text-primary-color);
+            background-color: #f1f3f5;
+        }
+        
+        li[data-bbox="955,0,221,52"] button {
+            gap: 0.5rem;
+        }
+
+        /* Search Form */
+        form[data-bbox="455,0,236,52"] {
+            flex-grow: 1;
+            margin: 0 2rem;
+            max-width: 400px;
+        }
+
+        form[data-bbox="455,0,236,52"] div {
+            position: relative;
+        }
+
+        input#4 {
+            width: 100%;
+            padding: 0.5rem 1rem 0.5rem 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            background-color: #f1f3f5;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input#4:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+
+        label#3 {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translateY(-50%);
+            color: var(--text-secondary-color);
+            pointer-events: none;
+        }
+
+        /* Main Content Layout */
+        div[data-bbox="90,52,1100,2632"] {
+            display: flex;
+            gap: 1.5rem;
+            max-width: 1280px;
+            margin: 1.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        aside {
+            width: 280px;
+            flex-shrink: 0;
+        }
+
+        /* Forum Header */
+        h1[data-bbox="104,80,778,42"] {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1[data-bbox="104,80,778,42"] span {
+            color: var(--text-secondary-color);
+            font-weight: 400;
+        }
+
+        /* Submissions/Comments Tabs */
+        nav[data-bbox="90,136,792,49"] {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+
+        nav[data-bbox="90,136,792,49"] ul {
+            display: flex;
+        }
+        
+        nav[data-bbox="90,136,792,49"] a, nav[data-bbox="90,136,792,49"] button {
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            color: var(--text-secondary-color);
+            border-bottom: 3px solid transparent;
+            margin-bottom: -1px;
+        }
+        
+        a#11 { /* Submissions Tab */
+            color: var(--text-primary-color);
+            border-bottom-color: var(--accent-color);
+        }
+
+        nav[data-bbox="90,136,792,49"] a:hover {
+            color: var(--text-primary-color);
+            text-decoration: none;
+        }
+        
+        ul[data-bbox="307,136,87,35"] button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--card-background-color);
+        }
+
+        /* Article/Post Cards */
+        article {
+            background-color: var(--card-background-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        article:hover {
+            border-color: #ced4da;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.12);
+        }
+
+        article > div[data-bbox] {
+            display: flex;
+        }
+
+        /* Voting Section */
+        div[data-bbox^="104,"], div[data-bbox^="104,"] form {
+            width: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding: 0.75rem 0;
+            background-color: #f8f9fa;
+            border-right: 1px solid var(--border-color);
+            border-top-left-radius: var(--border-radius);
+            border-bottom-left-radius: var(--border-radius);
+        }
+        
+        .vote-button {
+            font-size: 1.25rem;
+            color: var(--text-secondary-color);
+            transition: color 0.2s ease, transform 0.1s ease;
+        }
+        .vote-button:hover {
+            transform: scale(1.1);
+        }
+        .vote-button.upvote:hover, .vote-button.upvote.active {
+            color: var(--upvote-color);
+        }
+        .vote-button.downvote:hover, .vote-button.downvote.active {
+            color: var(--downvote-color);
+        }
+
+        div[data-bbox^="104,"] form span[data-bbox] {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary-color);
+            margin: 0.25rem 0;
+        }
+
+        /* Post Content Section */
+        div[data-bbox^="152,"] {
+            padding: 1rem 1.5rem;
+            flex: 1;
+        }
+
+        div[data-bbox^="152,"] header h1 a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary-color);
+        }
+        div[data-bbox^="152,"] header h1 a:hover {
+            color: var(--accent-color);
+        }
+        
+        div[data-bbox^="152,"] header > div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        div[data-bbox^="152,"] header a[id^="17"], a[id^="33"], a[id^="39"] {
+            font-size: 0.8rem;
+            color: var(--text-secondary-color);
+            background-color: #e9ecef;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+        div[data-bbox^="152,"] header a[id^="17"]:hover, a[id^="33"]:hover, a[id^="39"]:hover {
+            background-color: #ced4da;
+            text-decoration: none;
+        }
+        
+        p[data-bbox] {
+            font-size: 0.8rem;
+            color: var(--text-secondary-color);
+        }
+        p[data-bbox] a {
+            color: var(--text-secondary-color);
+            font-weight: 500;
+        }
+        p[data-bbox] a:hover {
+            color: var(--text-primary-color);
+        }
+        p[data-bbox] small {
+            display: none; /* Hide internal ID */
+        }
+        
+        article nav {
+            margin-top: 1rem;
+        }
+        article nav a strong {
+            font-weight: 500;
+            color: var(--text-secondary-color);
+            font-size: 0.85rem;
+        }
+        article nav a:hover strong {
+            color: var(--accent-color);
+        }
+
+        /* Sidebar */
+        aside section, aside details {
+            background-color: var(--card-background-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        aside h1 {
+            font-size: 1.1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        aside a[id="48"] {
+            color: var(--text-primary-color);
+            text-decoration: none;
+        }
+
+        form[data-bbox="924,120,252,37"] button {
+            width: 100%;
+            padding: 0.6rem;
+            font-weight: 600;
+            color: #fff;
+            background-color: var(--accent-color);
+            border-radius: var(--border-radius);
+            transition: background-color 0.2s ease;
+        }
+        form[data-bbox="924,120,252,37"] button:hover {
+            background-color: var(--accent-hover-color);
+        }
+        b#50 {
+            background-color: rgba(0,0,0,0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+        }
+
+        aside ul li {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        aside a[data-bbox] {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-primary-color);
+        }
+        
+        details summary {
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        details p {
+            font-size: 0.9rem;
+            color: var(--text-secondary-color);
+            margin-top: 1rem;
+        }
+        
+        form[data-bbox="924,479,252,37"] button {
+             background-color: #dc3545;
+        }
+        form[data-bbox="924,479,252,37"] button:hover {
+            background-color: #c82333;
+        }
+
+        section[data-bbox="910,353,280,124"] li a {
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+        section[data-bbox="910,353,280,124"] li a:hover {
+            background-color: #f1f3f5;
+            text-decoration: none;
+        }
+
+        /* Icon styling */
+        .icon {
+            font-size: 1.1rem;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body data-bbox="0,0,1280,2733">
+    <div data-bbox="14,706,0,0"></div>
+    <nav data-bbox="0,0,1280,0"></nav>
+    <nav data-bbox="0,0,1280,52">
+        <div data-bbox="90,0,1100,52">
+            <header data-bbox="104,0,90,52">
+                <a href="#" data-bbox="104,0,90,52">
+                    <b id="0" data-bbox="120,16,58,19">Postmill</b>
+                </a>
+            </header>
+            <div data-bbox="194,0,148,52">
+                <ul data-bbox="194,0,148,52">
+                    <li data-bbox="194,0,86,52"><a id="1" href="#" data-bbox="194,0,86,52">Forums</a></li>
+                    <li data-bbox="280,0,62,52"><a id="2" href="#" data-bbox="280,0,62,52">Wiki</a></li>
+                </ul>
+            </div>
+            <form data-bbox="455,0,236,52">
+                <div data-bbox="462,8,222,37">
+                    <label id="3" for="4" data-bbox="462,8,37,37"><span data-bbox="474,18,14,16"><i class="fas fa-search"></i></span></label>
+                    <input id="4" type="search" placeholder="Search..." data-bbox="462,8,222,37">
+                </div>
+            </form>
+            <ul data-bbox="804,0,372,52">
+                <li data-bbox="804,0,48,52">
+                    <a href="#" title="Notifications (0)" data-bbox="804,0,48,52">
+                        <span data-bbox="820,16,16,19"><i id="5" class="fas fa-bell"></i></span>
+                    </a>
+                </li>
+                <li data-bbox="852,0,103,52">
+                    <a href="#" data-bbox="852,0,103,52">
+                        <span data-bbox="868,16,16,19"><i id="6" class="fas fa-plus"></i></span>
+                        <span id="7" data-bbox="888,16,51,19">Submit</span>
+                    </a>
+                </li>
+                <li data-bbox="955,0,221,52">
+                    <button data-bbox="955,0,221,52">
+                        <span data-bbox="971,16,16,19"><i id="8" class="fas fa-user-circle"></i></span>
+                        <strong id="9" data-bbox="991,16,157,19">MarvelsGrantMan136</strong>
+                        <span id="10" data-bbox="1152,16,8,19"><i class="fas fa-caret-down"></i></span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div data-bbox="90,52,1100,2632">
+        <main data-bbox="90,66,806,2618">
+            <h1 data-bbox="104,80,778,42">
+                <span data-bbox="104,84,30,33">/f/</span>
+                <strong data-bbox="134,84,139,33">Futurology</strong>
+            </h1>
+            <nav data-bbox="90,136,792,49">
+                <ul data-bbox="104,136,189,35">
+                    <li data-bbox="104,136,100,35"><a id="11" href="#" data-bbox="104,136,100,35">Submissions</a></li>
+                    <li data-bbox="204,136,89,35"><a id="12" href="#" data-bbox="204,136,89,35">Comments</a></li>
+                </ul>
+                <ul data-bbox="307,136,87,35">
+                    <li data-bbox="307,136,87,35">
+                        <button data-bbox="307,136,87,35">
+                            <span data-bbox="318,145,14,16"><i id="13" class="fas fa-sort"></i></span>
+                            <span id="14" data-bbox="335,145,38,16">Active</span>
+                            <span id="15" data-bbox="376,145,8,16"><i class="fas fa-caret-down"></i></span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <article data-bbox="104,185,778,70">
+                <div data-bbox="104,185,778,70">
+                    <div data-bbox="104,185,48,70">
+                        <form data-bbox="104,185,48,56">
+                            <button title="Upvote" value="1" class="vote-button upvote" data-bbox="121,192,14,14"><i id="20" class="fas fa-arrow-up"></i></button>
+                            <span data-bbox="116,206,24,21">987</span>
+                            <button title="Downvote" value="-1" class="vote-button downvote" data-bbox="121,227,14,14"><i id="21" class="fas fa-arrow-down"></i></button>
+                        </form>
+                    </div>
+                    <div data-bbox="152,185,730,70">
+                        <header data-bbox="152,185,730,49">
+                            <div data-bbox="152,187,692,22">
+                                <h1 data-bbox="152,187,603,22"><a id="16" href="#" data-bbox="152,187,603,22">US puts Italy-sized chunk of Gulf of Mexico up for auction for oil drilling</a></h1>
+                                <a id="17" href="#" data-bbox="760,194,84,13">theguardian.com</a>
+                            </div>
+                            <p data-bbox="152,213,730,21">
+                                <span data-bbox="152,217,75,14">Submitted by <a href="#" data-bbox="227,217,55,14"><strong id="18" data-bbox="227,217,55,14">capcaunul</strong></a> <small data-bbox="285,217,3,14">t3_12704gj</small> <time title="March 30, 2023 at 5:39:28 PM EDT" data-bbox="355,217,57,14">1 year ago</time></span>
+                            </p>
+                        </header>
+                        <nav data-bbox="152,234,730,35">
+                            <ul data-bbox="138,234,744,35">
+                                <li data-bbox="152,234,80,21"><a href="#" data-bbox="152,238,80,14"><strong id="19" data-bbox="152,238,80,14">168 comments</strong></a><span data-bbox="232,238,0,14"></span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </article>
+
+            <article data-bbox="104,269,778,70">
+                <div data-bbox="104,269,778,70">
+                    <div data-bbox="104,269,48,70">
+                        <form data-bbox="104,269,48,56">
+                            <button title="Upvote" value="1" class="vote-button upvote" data-bbox="121,276,14,14"><i id="25" class="fas fa-arrow-up"></i></button>
+                            <span data-bbox="124,290,8,21">0</span>
+                            <button title="Downvote" value="-1" class="vote-button downvote" data-bbox="121,311,14,14"><i id="26" class="fas fa-arrow-down"></i></button>
+                        </form>
+                    </div>
+                    <div data-bbox="152,269,730,70">
+                        <header data-bbox="152,269,730,49">
+                            <div data-bbox="152,271,517,22">
+                                <h1 data-bbox="152,271,517,22"><a id="22" href="#" data-bbox="152,271,517,22">How could AI actually cause the extinction of Homo sapiens?</a></h1>
+                            </div>
+                            <p data-bbox="152,297,730,21">
+                                <span data-bbox="152,301,75,14">Submitted by <a href="#" data-bbox="227,301,95,14"><strong id="23" data-bbox="227,301,95,14">BeNiceToYerMom</strong></a> <small data-bbox="325,301,3,14">t3_1280f3o</small> <time title="March 31, 2023 at 5:38:04 PM EDT" data-bbox="396,301,57,14">1 year ago</time></span>
+                            </p>
+                        </header>
+                        <nav data-bbox="152,318,730,35">
+                            <ul data-bbox="138,318,744,35">
+                                <li data-bbox="152,318,73,21"><a href="#" data-bbox="152,322,73,14"><strong id="24" data-bbox="152,322,73,14">26 comments</strong></a><span data-bbox="225,322,0,14"></span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </article>
+
+            <article data-bbox="104,353,778,70">
+                <div data-bbox="104,353,778,70">
+                    <div data-bbox="104,353,48,70">
+                        <form data-bbox="104,353,48,56">
+                            <button title="Retract upvote" value="0" class="vote-button upvote active" data-bbox="121,360,14,14"><i id="30" class="fas fa-arrow-up"></i></button>
+                            <span data-bbox="120,374,16,21">19</span>
+                            <button title="Downvote" value="-1" class="vote-button downvote" data-bbox="121,395,14,14"><i id="31" class="fas fa-arrow-down"></i></button>
+                        </form>
+                    </div>
+                    <div data-bbox="152,353,730,70">
+                        <header data-bbox="152,353,730,49">
+                            <div data-bbox="152,355,392,22">
+                                <h1 data-bbox="152,355,392,22"><a id="27" href="#" data-bbox="152,355,392,22">Is there a natural tendency in moral alignment?</a></h1>
+                            </div>
+                            <p data-bbox="152,381,730,21">
+                                <span data-bbox="152,385,75,14">Submitted by <a href="#" data-bbox="227,385,84,14"><strong id="28" data-bbox="227,385,84,14">JAREDSAVAGE</strong></a> <small data-bbox="314,385,3,14">t3_126qyqo</small> <time title="March 30, 2023 at 11:51:07 AM EDT" data-bbox="387,385,57,14">1 year ago</time></span>
+                            </p>
+                        </header>
+                        <nav data-bbox="152,402,730,35">
+                            <ul data-bbox="138,402,744,35">
+                                <li data-bbox="152,402,73,21"><a href="#" data-bbox="152,406,73,14"><strong id="29" data-bbox="152,406,73,14">34 comments</strong></a><span data-bbox="225,406,0,14"></span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </article>
+
+            <article data-bbox="104,437,778,98">
+                <div data-bbox="104,437,778,98">
+                     <div data-bbox="104,437,48,98">
+                        <form data-bbox="104,437,48,56">
+                            <button title="Upvote" value="1" class="vote-button upvote" data-bbox="121,444,14,14"><i id="36" class="fas fa-arrow-up"></i></button>
+                            <span data-bbox="108,458,40,21">11109</span>
+                            <button title="Downvote" value="-1" class="vote-button downvote" data-bbox="121,479,14,14"><i id="37" class="fas fa-arrow-down"></i></button>
+                        </form>
+                    </div>
+                    <div data-bbox="152,437,730,98">
+                        <header data-bbox="152,437,730,77">
+                            <div data-bbox="152,439,655,22">
+                                <h1 data-bbox="152,439,655,22"><a id="32" href="#" data-bbox="152,439,655,22">Inexpensive and environmentally friendly mechanochemical recycling process recovers 70% of lithium from batteries</a></h1>
+                                <a id="33" href="#" data-bbox="481,474,77,13">techxplore.com</a>
+                            </div>
+                            <p data-bbox="152,493,730,21">
+                                <span data-bbox="152,497,75,14">Submitted by <a href="#" data-bbox="227,497,54,14"><strong id="34" data-bbox="227,497,54,14">chrisdh79</strong></a> <small data-bbox="284,497,3,14">t3_127j0cr</small> <time title="March 31, 2023 at 8:03:56 AM EDT" data-bbox="350,497,57,14">1 year ago</time></span>
+                            </p>
+                        </header>
+                        <nav data-bbox="152,514,730,35">
+                            <ul data-bbox="138,514,744,35">
+                                <li data-bbox="152,514,80,21"><a href="#" data-bbox="152,518,80,14"><strong id="35" data-bbox="152,518,80,14">124 comments</strong></a><span data-bbox="232,518,0,14"></span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </article>
+            
+            <article data-bbox="104,549,778,98">
+                <div data-bbox="104,549,778,98">
+                    <div data-bbox="104,549,48,98">
+                        <form data-bbox="104,549,48,56">
+                            <button title="Upvote" value="1" class="vote-button upvote" data-bbox="121,556,14,14"><i id="42" class="fas fa-arrow-up"></i></button>
+                            <span data-bbox="120,570,16,21">17</span>
+                            <button title="Retract downvote" value="0" class="vote-button downvote active" data-bbox="121,591,14,14"><i id="43" class="fas fa-arrow-down"></i></button>
+                        </form>
+                    </div>
+                    <div data-bbox="152,549,730,98">
+                        <header data-bbox="152,549,730,77">
+                            <div data-bbox="152,551,718,22">
+                                <h1 data-bbox="152,551,718,22"><a id="38" href="#" data-bbox="152,551,718,22">IVO Ltd. to Launch Quantum Drive Pure Electric Satellite Thruster into Orbit on SpaceX Transporter 8 with partner Rogue Space Systems</a></h1>
+                                <a id="39" href="#" data-bbox="567,586,93,13">finance.yahoo.com</a>
+                            </div>
+                            <p data-bbox="152,605,730,21">
+                                <span data-bbox="152,609,75,14">Submitted by <a href="#" data-bbox="227,609,119,14"><strong id="40" data-bbox="227,609,119,14">ComfortableIntern218</strong></a> <small data-bbox="349,609,3,14">t3_11s12p9</small> <time title="March 15, 2023 at 12:15:34 PM EDT" data-bbox="422,609,57,14">1 year ago</time></span>
+                            </p>
+                        </header>
+                        <nav data-bbox="152,626,730,35">
+                            <ul data-bbox="138,626,744,35">
+                                <li data-bbox="152,626,73,21"><a href="#" data-bbox="152,630,73,14"><strong id="41" data-bbox="152,630,73,14">73 comments</strong></a><span data-bbox="225,630,0,14"></span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </article>
+
+            <article data-bbox="104,661,778,70">
+                <div data-bbox="104,661,778,70">
+                    <div data-bbox="104,661,48,70">
+                        <form data-bbox="104,661,48,56">
+                            <button title="Upvote" value="1" class="vote-button upvote" data-bbox="121,668,14,14"><i id="46" class="fas fa-arrow-up"></i></button>
+                            <span data-bbox="120,682,16,21">31</span>
+                            <button title="Retract downvote" value="0" class="vote-button downvote active" data-bbox="121,703,14,14"><i id="47" class="fas fa-arrow-down"></i></button>
+                        </form>
+                    </div>
+                    <div data-bbox="152,661,730,70">
+                        <header data-bbox="152,661,730,49">
+                            <div data-bbox="152,663,649,22">
+                                <h1 data-bbox="152,663,649,22"><a id="44" href="#" data-bbox="152,663,649,22">In a post-scarcity utopia, is there a real necessity of human labor of any kind?</a></h1>
+                            </div>
+                            <p data-bbox="152,689,730,21">
+                                <span data-bbox="152,693,75,14">Submitted by <a href="#" data-bbox="227,693,64,14"><strong id="45" data-bbox="227,693,64,14">kvothekevin</strong></a> <small data-bbox="294,693,3,14">t3_1271vpb</small> <time title="March 30, 2023 at 6:47:02 PM EDT" data-bbox="367,693,57,14">1 year ago</time></span>
+                            </p>
+                        </header>
+                        <nav data-bbox="152,710,730,35">
+                            <ul data-bbox="138,710,744,35">
+                                <li data-bbox="152,710,73,21"><a href="#" data-bbox="152,714,73,14"><strong>83 comments</strong></a><span data-bbox="225,714,0,14"></span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+        <aside data-bbox="910,66,280,411">
+            <section data-bbox="910,66,280,205">
+                <h1 data-bbox="924,80,252,26"><a id="48" href="#" data-bbox="924,83,87,20">Futurology</a></h1>
+                <form data-bbox="924,120,252,37">
+                    <div data-bbox="924,120,252,37">
+                        <button data-bbox="924,120,175,37">
+                            <span data-bbox="924,120,109,37"><span id="49" data-bbox="939,130,79,16">Unsubscribe</span></span>
+                            <b id="50" data-bbox="1035,120,64,37">1M</b>
+                        </button>
+                    </div>
+                </form>
+                <div data-bbox="924,171,252,21">
+                    <p data-bbox="924,171,252,21">t5_2t7no</p>
+                </div>
+                <hr data-bbox="924,206,252,1">
+                <ul data-bbox="924,221,252,36">
+                    <li data-bbox="924,221,252,18">Created <time title="September 30, 2022 at 10:30:55 PM EDT" data-bbox="969,222,63,14">2 years ago</time></li>
+                    <li data-bbox="924,239,252,18">
+                        <a href="#" data-bbox="924,240,12,14">
+                            <span data-bbox="924,240,12,14"><i id="51" class="fas fa-rss"></i></span>
+                            <span id="52" data-bbox="939,240,96,14">Subscribe via RSS</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <details data-bbox="910,285,280,54">
+                <summary id="53" data-bbox="924,299,252,26">Hide this forum</summary>
+                <p data-bbox="924,339,252,126">By marking forums as hidden, you won't see submissions from those forums when browsing the "featured" and "all" submission listings. You can still subscribe to and moderate forums you choose to hide.</p>
+                <form data-bbox="924,479,252,37">
+                    <p data-bbox="924,479,252,37">
+                        <button data-bbox="924,479,60,37">Hide</button>
+                    </p>
+                </form>
+            </details>
+            <section data-bbox="910,353,280,124">
+                <h1 data-bbox="924,367,252,26">Toolbox</h1>
+                <ul data-bbox="910,407,280,70">
+                    <li data-bbox="910,407,280,35"><a id="54" href="#" data-bbox="910,407,280,35">Bans</a></li>
+                    <li data-bbox="910,442,280,35"><a id="55" href="#" data-bbox="910,442,280,35">Moderators</a></li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const voteButtons = document.querySelectorAll('.vote-button');
+
+            voteButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    const form = button.closest('form');
+                    const upvoteButton = form.querySelector('.upvote');
+                    const downvoteButton = form.querySelector('.downvote');
+                    
+                    if (button.classList.contains('active')) {
+                        button.classList.remove('active');
+                    } else {
+                        if (button.classList.contains('upvote')) {
+                            downvoteButton.classList.remove('active');
+                        } else {
+                            upvoteButton.classList.remove('active');
+                        }
+                        button.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_2.html",
+    "raw_html": "<HTML lang=\"en\" data-bbox=\"0,0,1280,720\"><BODY data-bbox=\"0,0,1280,1349\"><DIV data-bbox=\"0,0,88,721\" class=\"sidebar\"><A href=\"#\" class=\"logo\" id=\"0\" title=\"Magento Admin Panel\" data-bbox=\"27,17,35,41\"><svg viewBox=\"0 0 256 256\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"#f26322\" d=\"m180.3 151.7-52.2 30.1-52.4-30.1v-60.2l52.4-30.1 52.2 30.1zm52.2-30.1-52.2-30.1-23.2 13.4v86.8l23.2 13.4 52.2-30.1zm-156.8-16.7L23.5 91.5l52.2-30.1 23.3 13.4v86.8l-23.3 13.4z\" class=\"possible-clickable-element\" data-testid=\"A\"></path></svg></A><UL data-bbox=\"0,75,88,646\" class=\"sidebar-nav\"><LI class=\"active\"><SPAN id=\"1\" data-text=\"Dashboard\" data-bbox=\"14,112,60,13\"><I class=\"fas fa-tachometer-alt possible-clickable-element\" data-testid=\"B\"></I><text>Dashboard</text></SPAN></LI><LI data-bbox=\"0,137,88,62\"><SPAN id=\"2\" data-text=\"Sales\" data-bbox=\"30,174,28,13\"><I class=\"fas fa-shopping-cart possible-clickable-element\" data-testid=\"C\"></I><text>Sales</text></SPAN></LI><LI data-bbox=\"0,199,88,62\"><SPAN id=\"3\" data-text=\"Catalog\" data-bbox=\"22,236,44,13\"><I class=\"fas fa-tags possible-clickable-element\" data-testid=\"D\"></I><text>Catalog</text></SPAN></LI><LI data-bbox=\"0,261,88,62\"><SPAN id=\"4\" data-text=\"Customers\" data-bbox=\"14,298,60,13\"><I class=\"fas fa-users possible-clickable-element\" data-testid=\"E\"></I><text>Customers</text></SPAN></LI><LI data-bbox=\"0,323,88,62\"><SPAN id=\"5\" data-text=\"Marketing\" data-bbox=\"14,360,60,13\"><I class=\"fas fa-bullhorn possible-clickable-element\" data-testid=\"F\"></I><text>Marketing</text></SPAN></LI><LI data-bbox=\"0,385,88,62\"><SPAN id=\"6\" data-text=\"Content\" data-bbox=\"19,422,50,13\"><I class=\"fas fa-file-alt possible-clickable-element\" data-testid=\"G\"></I><text>Content</text></SPAN></LI><LI data-bbox=\"0,447,88,62\"><SPAN id=\"7\" data-text=\"Reports\" data-bbox=\"22,484,44,13\"><I class=\"fas fa-chart-bar possible-clickable-element\" data-testid=\"H\"></I><text>Reports</text></SPAN></LI><LI data-bbox=\"0,509,88,62\"><SPAN id=\"8\" data-text=\"Stores\" data-bbox=\"25,546,38,13\"><I class=\"fas fa-store possible-clickable-element\" data-testid=\"I\"></I><text>Stores</text></SPAN></LI><LI data-bbox=\"0,571,88,62\"><SPAN id=\"9\" data-text=\"System\" data-bbox=\"25,608,38,13\"><I class=\"fas fa-cogs possible-clickable-element\" data-testid=\"J\"></I></SPAN></LI></UL></DIV><DIV data-bbox=\"88,0,1192,1349\" class=\"main-content-wrapper\"><DIV data-bbox=\"118,0,1132,51\"><DIV data-bbox=\"118,0,1132,51\"><DIV data-bbox=\"119,0,1130,50\" class=\"system-message-bar\"><SPAN data-text=\":,1\" data-bbox=\"1085,15,118,19\"><SPAN id=\"11\" data-text=\"System Messages\" data-bbox=\"1085,15,118,19\" style=\"font-weight: 600; margin-right: 1em;\"><text>System Messages:</text></SPAN></SPAN><DIV data-text=\"Failed to synchronize data to the Magento Business Intelligence service.\" data-bbox=\"129,0,941,49\"><text>Failed to synchronize data to the Magento Business Intelligence service.</text><A id=\"12\" data-text=\"Retry Synchronization\" data-bbox=\"649,15,147,19\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Retry Synchronization</text></A></DIV></DIV></DIV></DIV><HEADER data-bbox=\"88,51,1192,80\" class=\"page-header\"><H1 data-text=\"Orders Report\" data-bbox=\"118,82,740,34\"><text>Orders Report</text></H1><DIV data-bbox=\"873,66,377,44\" class=\"header-controls\"><DIV data-bbox=\"1034,77,50,0\" class=\"search-container\"><LABEL id=\"15\" data-bbox=\"1034,77,50,33\" for=\"search-input\"><I class=\"fas fa-search\"></I></LABEL><INPUT type=\"text\" data-bbox=\"1034,77,50,35\" placeholder=\"Search...\" id=\"search-input\" class=\"possible-clickable-element\" data-testid=\"L\" style=\"\"></INPUT></DIV><DIV class=\"notification-bell\"><A id=\"14\" title=\"Notifications\" data-bbox=\"1081,77,60,33\" href=\"#\"><I class=\"fas fa-bell possible-clickable-element\" data-testid=\"M\"></I></A></DIV><DIV data-bbox=\"1144,77,106,33\" class=\"user-profile\"><A title=\"My Account\" data-bbox=\"1144,77,106,33\" href=\"#\"><I class=\"fas fa-user-circle possible-clickable-element\" data-testid=\"N\"></I><SPAN id=\"13\" data-text=\"admin\" data-bbox=\"1185,85,36,18\" class=\"possible-clickable-element\" data-testid=\"O\"><text>admin</text></SPAN></A></DIV></DIV></HEADER><MAIN data-bbox=\"88,143,1192,1066\"><DIV data-bbox=\"118,143,1132,77\" class=\"content-section\"><DIV class=\"section-header\"><DIV data-bbox=\"133,164,178,34\" class=\"scope-selector\"><SPAN data-text=\"Scope:\" data-bbox=\"133,172,42,18\"><text>Scope:</text></SPAN><DIV data-bbox=\"178,164,124,34\"><BUTTON id=\"16\" type=\"button\" data-text=\"All Websites\" data-bbox=\"185,164,117,34\" class=\"button-secondary\"><text>All Websites</text><I class=\"fas fa-caret-down possible-clickable-element\" data-testid=\"P\"></I></BUTTON></DIV><A id=\"17\" title=\"What is this?\" data-bbox=\"311,169,25,22\" href=\"#\"><I class=\"fas fa-question-circle possible-clickable-element\" data-testid=\"Q\"></I></A></DIV><BUTTON title=\"Show Report\" type=\"button\" data-bbox=\"1099,159,136,45\" class=\"button-primary\"><SPAN id=\"18\" data-text=\"Show Report\" data-bbox=\"1116,170,102,22\" class=\"possible-clickable-element\" data-testid=\"R\"><text>Show Report</text></SPAN></BUTTON></DIV></DIV><DIV data-bbox=\"118,250,1132,111\" class=\"info-box\"><P data-text=\"For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.\" data-bbox=\"173,268,1037,19\"><text>For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.</text></P><P data-text=\"Last updated: Apr 20, 2024, 12:00:00 AM. To refresh last day's,, click,.\" data-bbox=\"173,324,1037,19\"><text>Last updated: Apr 20, 2024, 12:00:00 AM. To refresh last day's</text><A id=\"19\" data-text=\"statistics\" data-bbox=\"588,324,59,19\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"S\"><text>statistics</text></A><text>, click</text><A id=\"20\" data-text=\"here\" data-bbox=\"687,324,31,19\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"T\"><text>here</text></A><text>.</text></P></DIV><DIV data-bbox=\"118,381,1132,778\" class=\"content-section\"><FIELDSET data-bbox=\"118,381,1132,549\" class=\"section-body\"><SPAN data-text=\"Filter\" data-bbox=\"118,381,45,24\"><text>Filter</text></SPAN><DIV class=\"form-grid\"><LABEL id=\"21\" data-bbox=\"118,436,261,32\"><SPAN data-text=\"Date Used\" data-bbox=\"309,445,70,16\"><text>Date Used</text></SPAN></LABEL><DIV data-bbox=\"409,436,551,59\" class=\"input-wrapper\"><SELECT id=\"22\" data-value=\"created_at_order\" data-text=\"Order Created\" data-bbox=\"409,436,158,33\" class=\"possible-clickable-element\" data-testid=\"U\"></SELECT><DIV data-text=\"The Order Updated report is created in real time and does not require a refresh.\" data-bbox=\"409,479,551,16\"><text>The Order Updated report is created in real time and does not require a refresh.</text></DIV></DIV><LABEL id=\"23\" data-bbox=\"118,525,261,32\"><SPAN data-text=\"Period\" data-bbox=\"334,534,45,17\"><text>Period</text></SPAN></LABEL><DIV class=\"input-wrapper\"><SELECT id=\"24\" title=\"Period\" data-value=\"day\" data-text=\"Day\" data-bbox=\"409,525,100,33\" class=\"possible-clickable-element\" data-testid=\"V\"></SELECT></DIV><LABEL id=\"25\" data-bbox=\"118,588,261,32\"><SPAN data-text=\"From\" data-bbox=\"344,597,35,17\"><text>From</text></SPAN></LABEL><DIV data-bbox=\"409,588,150,33\" class=\"input-wrapper date-input-wrapper\"><INPUT id=\"26\" title=\"From\" type=\"text\" data-bbox=\"409,588,150,33\" placeholder=\"MM/DD/YYYY\" class=\"possible-clickable-element\" data-testid=\"W\" style=\"\"></INPUT><BUTTON id=\"27\" type=\"button\" data-bbox=\"527,588,24,32\"><I class=\"fas fa-calendar-alt possible-clickable-element\" data-testid=\"X\"></I></BUTTON></DIV><LABEL id=\"28\" data-bbox=\"118,651,261,32\"><SPAN data-text=\"To\" data-bbox=\"363,660,16,17\"><text>To</text></SPAN></LABEL><DIV data-bbox=\"409,651,150,33\" class=\"input-wrapper date-input-wrapper\"><INPUT id=\"29\" title=\"To\" type=\"text\" data-bbox=\"409,651,150,33\" placeholder=\"MM/DD/YYYY\" class=\"possible-clickable-element\" data-testid=\"Y\" style=\"\"></INPUT><BUTTON id=\"30\" type=\"button\" data-bbox=\"527,651,24,32\"><I class=\"fas fa-calendar-alt possible-clickable-element\" data-testid=\"Z\"></I></BUTTON></DIV></DIV></FIELDSET></DIV></MAIN></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    div|\n    <\n      a| Magento Admin Panel\n      <path[A]| >\n    >\n    <\n      ul|\n      <i[B]| >\n      <text| Dashboard >\n      <i[C]| >\n      <text| Sales >\n      <i[D]| >\n      <text| Catalog >\n      <i[E]| >\n      <text| Customers >\n      <i[F]| >\n      <text| Marketing >\n      <i[G]| >\n      <text| Content >\n      <i[H]| >\n      <text| Reports >\n      <i[I]| >\n      <text| Stores >\n      <i[J]| >\n    >\n  >\n  <\n    div|\n    <\n      div|\n      <span| System Messages: >\n      <\n        div|\n        <text| Failed to synchronize data to the Magento Business Intelligence service. >\n        <a[K]| Retry Synchronization >\n      >\n    >\n    <\n      header|\n      <h1| Orders Report >\n      <\n        div|\n        <input[L]| Search... >\n        <\n          a| Notifications\n          <i[M]| >\n        >\n        <\n          a| My Account\n          <i[N]| >\n          <span[O]| admin >\n        >\n      >\n    >\n    <\n      main|\n      <\n        div|\n        <\n          div|\n          <span| Scope: >\n          <text| All Websites >\n          <i[P]| >\n          <\n            a| What is this?\n            <i[Q]| >\n          >\n        >\n        <\n          button| Show Report\n          <span[R]| Show Report >\n        >\n      >\n      <\n        div|\n        <p| For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone. >\n        <\n          p|\n          <text| Last updated: Apr 20, 2024, 12:00:00 AM. To refresh last day's >\n          <a[S]| statistics >\n          <text| , click >\n          <a[T]| here >\n          <text| . >\n        >\n      >\n      <\n        fieldset|\n        <span| Filter >\n        <\n          div|\n          <span| Date Used >\n          <select[U]| >\n          <div| The Order Updated report is created in real time and does not require a refresh. >\n          <span| Period >\n          <select[V]| Period >\n          <span| From >\n          <input[W]| From; MM/DD/YYYY >\n          <i[X]| >\n          <span| To >\n          <input[Y]| To; MM/DD/YYYY >\n          <i[Z]| >\n        >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 27.671875,
+                "top": 25.59375,
+                "right": 60.328125,
+                "bottom": 48.046875,
+                "width": 32.65625,
+                "height": 22.453125
+            },
+            "tag": "path",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 32,
+                "top": 98.390625,
+                "right": 56,
+                "bottom": 122.390625,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 32,
+                "top": 171.953125,
+                "right": 56,
+                "bottom": 195.953125,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 32,
+                "top": 245.515625,
+                "right": 56,
+                "bottom": 269.515625,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 32,
+                "top": 319.078125,
+                "right": 56,
+                "bottom": 343.078125,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 32,
+                "top": 392.640625,
+                "right": 56,
+                "bottom": 416.640625,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 32,
+                "top": 466.203125,
+                "right": 56,
+                "bottom": 490.203125,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 32,
+                "top": 539.765625,
+                "right": 56,
+                "bottom": 563.765625,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 32,
+                "top": 613.328125,
+                "right": 56,
+                "bottom": 637.328125,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 32,
+                "top": 686.890625,
+                "right": 56,
+                "bottom": 710.890625,
+                "width": 24,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 1092,
+                "top": 17,
+                "right": 1247,
+                "bottom": 34,
+                "width": 155,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Retry Synchronization"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 859,
+                "top": 67,
+                "right": 1092,
+                "bottom": 106.1875,
+                "width": 233,
+                "height": 39.1875
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 1116,
+                "top": 76.59375,
+                "right": 1134,
+                "bottom": 96.59375,
+                "width": 18,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 1166,
+                "top": 76.59375,
+                "right": 1185,
+                "bottom": 96.59375,
+                "width": 19,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 1193,
+                "top": 76.59375,
+                "right": 1240,
+                "bottom": 96.59375,
+                "width": 47,
+                "height": 20
+            },
+            "tag": "span",
+            "text": "admin"
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 334,
+                "top": 187.1875,
+                "right": 344,
+                "bottom": 203.1875,
+                "width": 10,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 381,
+                "top": 185.1875,
+                "right": 401,
+                "bottom": 205.1875,
+                "width": 20,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 1101,
+                "top": 185.1875,
+                "right": 1199,
+                "bottom": 205.1875,
+                "width": 98,
+                "height": 20
+            },
+            "tag": "span",
+            "text": "Show Report"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 572,
+                "top": 308.1875,
+                "right": 633,
+                "bottom": 325.1875,
+                "width": 61,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "statistics"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 675,
+                "top": 308.1875,
+                "right": 705,
+                "bottom": 325.1875,
+                "width": 30,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "here"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 430,
+                "top": 464.1875,
+                "right": 981,
+                "bottom": 504.375,
+                "width": 551,
+                "height": 40.1875
+            },
+            "tag": "select",
+            "text": "\n                                    \n                                    \n                                "
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 430,
+                "top": 547.375,
+                "right": 981,
+                "bottom": 587.5625,
+                "width": 551,
+                "height": 40.1875
+            },
+            "tag": "select",
+            "text": "\n                                    \n                                    \n                                    \n                                "
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 430,
+                "top": 611.5625,
+                "right": 981,
+                "bottom": 650.75,
+                "width": 551,
+                "height": 39.1875
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 957,
+                "top": 625.5625,
+                "right": 971,
+                "bottom": 641.5625,
+                "width": 14,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 430,
+                "top": 674.75,
+                "right": 981,
+                "bottom": 713.9375,
+                "width": 551,
+                "height": 39.1875
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 957,
+                "top": 688.75,
+                "right": 971,
+                "bottom": 704.75,
+                "width": 14,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        }
+    ]
+}

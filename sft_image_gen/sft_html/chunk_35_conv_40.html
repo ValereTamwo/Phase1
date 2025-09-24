@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitLab Project Members</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --gitlab-bg: #FFFFFF;
+            --gitlab-bg-dark: #FAFAFA;
+            --sidebar-bg: #2C2A2E;
+            --sidebar-text: #EAEAEA;
+            --sidebar-text-hover: #FFFFFF;
+            --sidebar-active-bg: #3E3C40;
+            --text-primary: #1F2D3D;
+            --text-secondary: #5E6977;
+            --border-color: #E5E5E5;
+            --brand-orange: #FC6D26;
+            --brand-blue: #1F75CB;
+            --danger-red: #D9534F;
+            --success-green: #2E8B57;
+            --tag-bg: #F0F0F0;
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-family);
+            background-color: var(--gitlab-bg-dark);
+            color: var(--text-primary);
+            font-size: 14px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body > div[data-bbox="0,48,1280,863"] {
+            display: flex;
+            height: calc(100vh - 48px);
+        }
+
+        a {
+            color: var(--brand-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            color: var(--text-secondary);
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            font-family: inherit;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 16px;
+            height: 32px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+            border: 1px solid var(--border-color);
+            background-color: #FFF;
+            color: var(--text-primary);
+        }
+        .btn:hover {
+            background-color: #F5F5F5;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-blue);
+            border-color: var(--brand-blue);
+            color: #FFF;
+        }
+        .btn-primary:hover {
+            background-color: #1961A8;
+            border-color: #1961A8;
+        }
+        
+        .btn-danger {
+            background-color: var(--danger-red);
+            border-color: var(--danger-red);
+            color: #FFF;
+        }
+        .btn-danger:hover {
+            background-color: #C9302C;
+            border-color: #C9302C;
+        }
+
+        .skip-to-content {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .skip-to-content:focus {
+            position: static;
+            width: auto;
+            height: auto;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            align-items: center;
+            background-color: var(--gitlab-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 16px;
+            height: 48px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header > div[data-bbox="16,0,1248,48"] {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: space-between;
+        }
+        div[data-bbox="16,0,73,48"] { display: flex; align-items: center; }
+        a[title="Dashboard"] {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23FC6D26" d="M100 0L0 60l100 140 100-140z"/><path fill="%23E24329" d="M100 0L0 60v80l100 60z"/><path fill="%23FCA326" d="M100 0l100 60v80l-100 60z"/></svg>') center/contain no-repeat;
+        }
+        header form { position: relative; }
+        header input[type="text"] {
+            width: 320px;
+            height: 32px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            padding: 0 32px 0 36px;
+            background-color: var(--gitlab-bg-dark);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        header input[type="text"]:focus {
+            outline: none;
+            border-color: var(--brand-blue);
+            box-shadow: 0 0 0 2px rgba(31, 117, 203, 0.2);
+        }
+        header svg[data-testid="search-icon"] {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            pointer-events: none;
+        }
+        header kbd {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #FFF;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            box-shadow: inset 0 -1px 0 #CCC;
+        }
+        header ul[data-bbox="887,4,377,40"] {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        header ul[data-bbox="887,4,377,40"] a, header ul[data-bbox="887,4,377,40"] li > a {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            border-radius: 4px;
+            color: var(--text-secondary);
+            transition: background-color 0.2s;
+        }
+        header ul[data-bbox="887,4,377,40"] a:hover {
+            background-color: var(--gitlab-bg-dark);
+            text-decoration: none;
+        }
+        .notification-badge {
+            background-color: var(--gitlab-bg-dark);
+            border-radius: 8px;
+            padding: 0 6px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 4px;
+            color: var(--text-primary);
+        }
+        li[data-testid="user-menu"] {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #DDA0DD;
+            background-image: url('https://i.pravatar.cc/40?u=byteblaze');
+            background-size: cover;
+            cursor: pointer;
+            position: relative;
+        }
+        li[data-testid="user-menu"] svg {
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        /* Sidebar */
+        div[data-bbox="0,48,255,672"] {
+            width: 255px;
+            flex-shrink: 0;
+            background-color: var(--sidebar-bg);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-y: auto;
+        }
+        div[data-bbox="0,48,255,672"] ul a {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            color: var(--sidebar-text);
+            font-weight: 500;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        div[data-bbox="0,48,255,672"] ul a:hover {
+            background-color: var(--sidebar-active-bg);
+            color: var(--sidebar-text-hover);
+            text-decoration: none;
+        }
+        div[data-bbox="0,48,255,672"] ul a svg {
+            margin-right: 12px;
+            width: 16px;
+            height: 16px;
+        }
+        li[title="gimmiethat.space"] a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .project-avatar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            background-color: #6A447F;
+            color: #FFF;
+            font-weight: 700;
+            font-size: 18px;
+            margin-right: 8px;
+        }
+        .nav-count {
+            margin-left: auto;
+            background-color: #4A484D;
+            color: var(--sidebar-text);
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+        li[data-bbox="0,94,255,131"] { border-top: 1px solid #4A484D; border-bottom: 1px solid #4A484D; padding-bottom: 8px; }
+        li[data-bbox="0,94,255,131"] > ul {
+            padding-left: 36px;
+        }
+        li[data-bbox="0,94,255,131"] > ul span {
+            display: block;
+            padding: 6px 8px;
+            color: var(--sidebar-text);
+            font-weight: 500;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        li[data-bbox="0,94,255,131"] > ul span[data-text="Members"] {
+             background-color: var(--sidebar-active-bg);
+             color: var(--sidebar-text-hover);
+        }
+        a[title="Toggle sidebar"] {
+            display: flex;
+            align-items: center;
+            height: 48px;
+            padding: 0 16px;
+            color: var(--sidebar-text);
+            border-top: 1px solid #4A484D;
+            cursor: pointer;
+        }
+        a[title="Toggle sidebar"]:hover { background-color: var(--sidebar-active-bg); }
+        a[title="Toggle sidebar"] svg { margin-right: 8px; }
+
+
+        /* Main Content */
+        div[data-bbox="256,48,1024,863"] {
+            flex: 1;
+            padding: 24px 32px;
+            overflow-y: auto;
+        }
+        div[data-testid="breadcrumb-links"] ul { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+        div[data-testid="breadcrumb-links"] svg { color: var(--text-secondary); }
+        div[data-bbox="272,104,992,82"] {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+        h4[data-text="Project members"] {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0;
+        }
+        div[data-bbox="272,104,992,82"] > p { margin: 4px 0 0; }
+        div[data-bbox="853,112,411,37"] { display: flex; gap: 8px; }
+
+        /* Tabs & Filters */
+        a[data-bbox="272,186,113,48"] {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 12px;
+            height: 48px;
+            font-weight: 600;
+            border-bottom: 2px solid var(--brand-blue);
+            margin-bottom: -1px;
+            z-index: 1;
+        }
+        a[data-bbox="272,186,113,48"] span:last-child {
+            margin-left: 8px;
+            background: var(--tag-bg);
+            border-radius: 10px;
+            font-size: 12px;
+            padding: 2px 8px;
+        }
+        div[data-bbox="272,243,992,64"] {
+            display: flex;
+            gap: 8px;
+            padding: 16px;
+            border: 1px solid var(--border-color);
+            border-bottom: none;
+            background-color: var(--gitlab-bg);
+        }
+        div[data-testid="members-filtered-search-bar"] { flex: 1; }
+        div[data-testid="filtered-search-input"] { display: flex; align-items: center; border: 1px solid var(--border-color); border-radius: 4px; background-color: #FFF; }
+        div[data-testid="filtered-search-input"] > div:first-child button { border: none; background: transparent; border-right: 1px solid var(--border-color); height: 30px; }
+        input[data-testid="filtered-search-term-input"] {
+            border: none;
+            padding: 0 8px;
+            height: 24px;
+            flex-grow: 1;
+        }
+        input[data-testid="filtered-search-term-input"]:focus { outline: none; }
+        button[data-testid="search-button"] {
+            border: none;
+            background: transparent;
+        }
+
+
+        /* Table */
+        div[data-bbox="272,243,992,552"] {
+             border: 1px solid var(--border-color);
+             background-color: var(--gitlab-bg);
+             border-radius: 4px;
+             overflow: hidden;
+        }
+        table[data-testid="members-table"] {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table thead {
+            background-color: var(--gitlab-bg-dark);
+        }
+        table th {
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        table tbody tr:hover {
+            background-color: #F9FAFB;
+        }
+        table td {
+            padding: 16px;
+            vertical-align: middle;
+            border-bottom: 1px solid var(--border-color);
+        }
+        table tr:last-child td { border-bottom: none; }
+        
+        /* Table Cell Content */
+        td[data-label="Account"] {
+            display: flex;
+            align-items: center;
+        }
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 12px;
+            background-size: cover;
+            background-position: center;
+        }
+        .user-avatar.avatar-bb { background-color: #6A447F; background-image: url('https://i.pravatar.cc/40?u=byteblaze'); }
+        .user-avatar.avatar-jk { background-color: #1F75CB; background-image: url('https://i.pravatar.cc/40?u=lahwaacz'); }
+        .user-avatar.avatar-bbot { background-color: #5E6977; display: flex; align-items: center; justify-content: center; color: #FFF; }
+        
+        .account-details > div:first-child { display: flex; align-items: center; gap: 6px; font-weight: 600; }
+        .account-details span[data-text^="@"] { color: var(--text-secondary); font-size: 13px; }
+        .tag {
+            background-color: var(--tag-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            padding: 1px 6px;
+            border-radius: 3px;
+        }
+
+        td[data-label="Source"], td[data-label="Access granted"], td[data-label="Created on"], td[data-label="Last activity"] {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        td[data-label="Access granted"] span {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        td[data-label="Max role"] button, td[data-label="Max role"] > span {
+            font-weight: 600;
+        }
+        td[data-label="Max role"] button {
+             width: 100%;
+             justify-content: space-between;
+             border-color: var(--border-color);
+             background-color: #FFF;
+             padding: 4px 8px;
+        }
+         td[data-label="Max role"] button::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+         }
+
+        td[data-label="Expiration"] > div {
+            position: relative;
+        }
+        td[data-label="Expiration"] input {
+            height: 32px;
+            width: 100%;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 0 28px 0 8px;
+        }
+        td[data-label="Expiration"] span[data-testid="datepicker-calendar-icon"] {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            pointer-events: none;
+        }
+        td[data-label="Actions"] { text-align: right; }
+    </style>
+</head>
+<body data-bbox="0,0,1280,911">
+    <header data-bbox="0,0,1280,48">
+        <a data-text="Skip to content" data-bbox="15,24,1,1" class="skip-to-content"> Skip to content </a>
+        <div data-bbox="16,0,1248,48">
+            <div data-bbox="16,0,73,48">
+                <div data-bbox="16,0,35,48">
+                    <span data-text="GitLab" data-bbox="15,-1,1,1" class="skip-to-content"> GitLab </span>
+                    <a title="Dashboard" data-bbox="8,4,41,40"></a>
+                </div>
+                <div data-bbox="51,0,38,48">
+                    <li data-bbox="57,4,32,40"></li>
+                </div>
+            </div>
+            <ul data-bbox="97,8,324,32">
+                <form data-bbox="99,8,320,32">
+                    <div data-bbox="99,8,320,32">
+                        <i class="fas fa-search" data-testid="search-icon" data-bbox="107,16,16,16"></i>
+                        <input type="text" placeholder="Search GitLab" data-bbox="99,8,320,32"/>
+                    </div>
+                    <kbd title="Use the shortcut key <kbd>/</kbd> to start a search" data-text="/" data-bbox="392,15,19,18"> / </kbd>
+                </form>
+            </ul>
+            <ul data-bbox="887,4,377,40">
+                <li data-bbox="889,4,52,40">
+                    <a title="Create new..." data-bbox="889,8,52,32">
+                        <i class="fas fa-plus" data-testid="plus-square-icon" data-bbox="897,16,16,16"></i>
+                        <i class="fas fa-chevron-down" data-testid="chevron-down-icon" data-bbox="917,16,16,16" style="margin-left: 8px;"></i>
+                    </a>
+                </li>
+                <a title="Issues" data-bbox="945,8,61,32">
+                    <i class="fas fa-exclamation-circle" data-testid="issues-icon" data-bbox="953,16,16,16"></i>
+                    <span data-text="33" data-bbox="968,16,30,16" class="notification-badge"> 33 </span>
+                </a>
+                <li data-bbox="1010,4,69,40">
+                    <a title="Merge requests" data-bbox="1010,8,69,32">
+                        <i class="fas fa-code-branch" data-testid="git-merge-icon" data-bbox="1018,16,16,16"></i>
+                        <span data-text="8" data-bbox="1033,16,22,16" class="notification-badge"> 8 </span>
+                    </a>
+                </li>
+                <a title="To-Do List" data-bbox="1083,8,61,32">
+                    <i class="fas fa-check-square" data-testid="todo-done-icon" data-bbox="1091,16,16,16"></i>
+                    <span data-text="16" data-bbox="1106,16,30,16" class="notification-badge"> 16 </span>
+                </a>
+                <li data-bbox="1146,4,52,40">
+                    <a data-bbox="1146,8,52,32">
+                        <span data-text="Help" data-bbox="1172,24,1,1" class="skip-to-content"> Help </span>
+                        <i class="fas fa-question-circle" data-testid="question-o-icon" data-bbox="1154,16,16,16"></i>
+                    </a>
+                </li>
+                <li data-testid="user-menu" data-bbox="1200,4,62,40">
+                    <i class="fas fa-chevron-down" data-testid="chevron-down-icon" data-bbox="1238,16,16,16"></i>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div data-bbox="0,48,1280,863">
+        <div data-bbox="0,48,255,672">
+            <ul data-bbox="0,50,255,604">
+                <li title="gimmiethat.space" data-bbox="0,50,256,40">
+                    <a data-bbox="8,50,240,40">
+                        <span data-text="G" data-bbox="12,54,32,32" class="project-avatar"> G </span>
+                        <span data-text="gimmiethat.space" data-bbox="52,62,119,16"> gimmiethat.space </span>
+                    </a>
+                </li>
+                <li data-bbox="0,94,255,131">
+                    <a data-bbox="8,94,239,32">
+                        <i class="fas fa-info-circle" data-testid="project-icon" data-bbox="20,102,16,16"></i>
+                        <span data-text="Project information" data-bbox="44,102,191,16"> Project information </span>
+                    </a>
+                    <ul data-bbox="0,127,255,98">
+                        <span data-text="Activity" data-bbox="44,135,48,16"> Activity </span>
+                        <span data-text="Labels" data-bbox="44,168,41,16"> Labels </span>
+                        <span data-text="Members" data-bbox="44,201,62,16"> Members </span>
+                    </ul>
+                </li>
+                <li data-bbox="0,226,255,32"> <a data-bbox="8,226,239,32"> <i class="fas fa-folder" data-testid="doc-text-icon" data-bbox="20,234,16,16"></i> <span data-text="Repository" data-bbox="44,234,191,16"> Repository </span> </a> </li>
+                <li data-bbox="0,259,255,32"> <a data-bbox="8,259,239,32"> <i class="fas fa-exclamation-circle" data-testid="issues-icon" data-bbox="20,267,16,16"></i> <span data-text="Issues" data-bbox="44,267,168,16"> Issues </span> <span data-text="0" data-bbox="212,267,23,16" class="nav-count"> 0 </span> </a> </li>
+                <li data-bbox="0,292,255,32"> <a data-bbox="8,292,239,32"> <i class="fas fa-code-branch" data-testid="git-merge-icon" data-bbox="20,300,16,16"></i> <span data-text="Merge requests" data-bbox="44,300,168,16"> Merge requests </span> <span data-text="0" data-bbox="212,300,23,16" class="nav-count"> 0 </span> </a> </li>
+                <li data-bbox="0,325,255,32"> <a data-bbox="8,325,239,32"> <i class="fas fa-rocket" data-testid="rocket-icon" data-bbox="20,333,16,16"></i> <span data-text="CI/CD" data-bbox="44,333,191,16"> CI/CD </span> </a> </li>
+                <li data-bbox="0,358,255,32"> <a data-bbox="8,358,239,32"> <i class="fas fa-shield-alt" data-testid="shield-icon" data-bbox="20,366,16,16"></i> <span data-text="Security & Compliance" data-bbox="44,366,191,16"> Security & Compliance </span> </a> </li>
+                <li data-bbox="0,391,255,32"> <a data-bbox="8,391,239,32"> <i class="fas fa-server" data-testid="deployments-icon" data-bbox="20,399,16,16"></i> <span data-text="Deployments" data-bbox="44,399,191,16"> Deployments </span> </a> </li>
+                <li data-bbox="0,424,255,32"> <a data-bbox="8,424,239,32"> <i class="fas fa-box-open" data-testid="package-icon" data-bbox="20,432,16,16"></i> <span data-text="Packages and registries" data-bbox="44,432,191,16"> Packages and registries </span> </a> </li>
+                <li data-bbox="0,457,255,32"> <a data-bbox="8,457,239,32"> <i class="fas fa-cogs" data-testid="cloud-gear-icon" data-bbox="20,465,16,16"></i> <span data-text="Infrastructure" data-bbox="44,465,191,16"> Infrastructure </span> </a> </li>
+                <li data-bbox="0,490,255,32"> <a data-bbox="8,490,239,32"> <i class="fas fa-chart-line" data-testid="monitor-icon" data-bbox="20,498,16,16"></i> <span data-text="Monitor" data-bbox="44,498,191,16"> Monitor </span> </a> </li>
+                <li data-bbox="0,523,255,32"> <a data-bbox="8,523,239,32"> <i class="fas fa-chart-pie" data-testid="chart-icon" data-bbox="20,531,16,16"></i> <span data-text="Analytics" data-bbox="44,531,191,16"> Analytics </span> </a> </li>
+                <li data-bbox="0,556,255,32"> <a data-bbox="8,556,239,32"> <i class="fas fa-book" data-testid="book-icon" data-bbox="20,564,16,16"></i> <span data-text="Wiki" data-bbox="44,564,191,16"> Wiki </span> </a> </li>
+                <li data-bbox="0,589,255,32"> <a data-bbox="8,589,239,32"> <i class="fas fa-file-alt" data-testid="snippet-icon" data-bbox="20,597,16,16"></i> <span data-text="Snippets" data-bbox="44,597,191,16"> Snippets </span> </a> </li>
+                <li data-bbox="0,622,255,32"> <a data-bbox="8,622,239,32"> <i class="fas fa-cog" data-testid="settings-icon" data-bbox="20,630,16,16"></i> <span data-text="Settings" data-bbox="44,630,191,16"> Settings </span> </a> </li>
+            </ul>
+            <a title="Toggle sidebar" type="button" data-bbox="0,672,255,48"> <i class="fas fa-angle-double-left" data-testid="chevron-double-lg-left-icon" data-bbox="16,690,12,12"></i> <span data-text="Collapse sidebar" data-bbox="36,686,104,21"> Collapse sidebar </span> </a>
+        </div>
+        <div data-bbox="256,48,1024,863">
+            <div data-bbox="272,48,992,48">
+                <div data-testid="breadcrumb-links" data-bbox="272,62,992,20">
+                    <ul data-bbox="272,62,992,20">
+                        <li data-bbox="272,62,77,20"> <a data-text="Byte Blaze" data-bbox="272,64,57,16"> Byte Blaze </a> <i class="fas fa-chevron-right" data-testid="chevron-lg-right-icon" data-bbox="334,68,8,8"></i> </li>
+                        <li data-bbox="349,62,117,20"> <span data-text="gimmiethat.space" data-bbox="349,65,97,13"> gimmiethat.space </span> <i class="fas fa-chevron-right" data-testid="chevron-lg-right-icon" data-bbox="451,68,8,8"></i> </li>
+                        <li data-testid="breadcrumb-current-link" data-bbox="466,62,54,20"> <a data-text="Members" data-bbox="466,64,54,16"> Members </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <div data-bbox="257,104,1022,707">
+                <div data-bbox="272,104,992,82">
+                    <div>
+                        <h4 data-text="Project members" data-bbox="272,114,171,25"> Project members </h4>
+                        <p data-text="You can invite a new member to,or invite another group." data-bbox="272,149,992,21"> You can invite a new member to <strong data-text="gimmiethat.space" data-bbox="477,151,119,16">gimmiethat.space</strong> or invite another group. </p>
+                    </div>
+                    <div data-bbox="853,112,411,37">
+                        <button type="button" data-bbox="853,112,161,32" class="btn"> <span data-text="Import from a project" data-bbox="865,119,137,18"> Import from a project </span> </button>
+                        <button type="button" data-bbox="1022,112,112,32" class="btn"> <span data-text="Invite a group" data-bbox="1034,119,88,18"> Invite a group </span> </button>
+                        <button type="button" data-bbox="1142,112,122,32" class="btn btn-primary"> <span data-text="Invite members" data-bbox="1154,119,98,18"> Invite members </span> </button>
+                    </div>
+                </div>
+                <div data-bbox="272,186,992,625">
+                    <a data-bbox="272,186,113,48"> <span data-text="Members" data-bbox="284,202,62,16"> Members </span> <span data-text="5" data-bbox="350,202,23,16"> 5 </span> </a>
+                    <div data-bbox="272,243,992,552">
+                        <div data-bbox="272,243,992,64">
+                            <div data-testid="members-filtered-search-bar" data-bbox="280,251,837,48">
+                                <div data-testid="filtered-search-input" data-bbox="288,259,821,32">
+                                    <div data-bbox="288,259,52,32">
+                                        <button type="button" data-bbox="288,259,52,32"> <span data-text="Toggle history" data-bbox="314,275,1,1" class="skip-to-content"> Toggle history </span> </button>
+                                    </div>
+                                    <div data-testid="filtered-search-term" data-bbox="351,263,723,24">
+                                        <div data-testid="filtered-search-token-segment" data-bbox="353,263,721,24">
+                                            <input placeholder="Filter members" data-testid="filtered-search-term-input" data-bbox="353,263,240,24"/>
+                                        </div>
+                                    </div>
+                                    <button type="button" data-testid="search-button" data-bbox="1077,259,32,32"> <i class="fas fa-search"></i> </button>
+                                </div>
+                            </div>
+                            <div data-testid="members-sort-dropdown" data-bbox="1117,251,139,48">
+                                <div data-bbox="1125,259,92,32">
+                                    <button type="button" data-bbox="1125,259,92,32" class="btn"> <span data-text="Account" data-bbox="1137,267,52,16"> Account </span> </button>
+                                </div>
+                                <button title="Sort direction: Ascending" type="button" data-bbox="1216,259,32,32" class="btn"> <i class="fas fa-sort-amount-up"></i> </button>
+                            </div>
+                        </div>
+                        <table data-testid="members-table" data-bbox="272,307,1108,488">
+                            <thead>
+                                <tr data-bbox="272,308,1108,65">
+                                    <th data-text="Account" data-bbox="272,308,331,65"> Account </th>
+                                    <th data-text="Source" data-bbox="603,308,85,65"> Source </th>
+                                    <th data-text="Access granted" data-bbox="688,308,121,65"> Access granted </th>
+                                    <th data-text="Max role" data-bbox="809,308,138,65"> Max role </th>
+                                    <th data-text="Expiration" data-bbox="947,308,101,65"> Expiration </th>
+                                    <th data-text="Created on" data-bbox="1048,308,86,65"> Created on </th>
+                                    <th data-text="Last activity" data-bbox="1134,308,82,65"> Last activity </th>
+                                    <th data-text="Actions" data-testid="col-actions" data-bbox="1231,323,1,1"> </th>
+                                </tr>
+                            </thead>
+                            <tbody data-bbox="272,373,1108,422">
+                                <tr data-testid="members-table-row-192" data-bbox="272,373,1108,84">
+                                    <td data-label="Account" data-bbox="272,373,331,84">
+                                        <div class="user-avatar avatar-bb" aria-hidden="true"></div>
+                                        <div data-bbox="344,389,155,48" class="account-details">
+                                            <div data-bbox="342,395,159,21">
+                                                <span data-text="Byte Blaze" data-bbox="342,395,75,20">Byte Blaze</span>
+                                                <span class="tag" data-text="It's you" data-bbox="444,398,55,16">It's you</span>
+                                            </div>
+                                            <span data-text="@byteblaze" data-bbox="344,414,155,16"> @byteblaze </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Source" data-bbox="603,373,85,84"> <span data-text="Direct member" data-bbox="619,389,39,16"> Direct member </span> </td>
+                                    <td data-label="Access granted" data-bbox="688,373,121,84"> <span data-text="by" data-bbox="704,389,66,16"> <time title="Mar 28, 2023 3:11am GMT+0700" data-text="1 year ago" data-bbox="704,389,66,16"> 1 year ago </time> by <a data-text="Administrator" data-bbox="704,405,89,16"> Administrator </a> </span> </td>
+                                    <td data-label="Max role" data-bbox="809,373,138,84"> <span data-text="Owner" data-bbox="825,389,53,24"> Owner </span> </td>
+                                    <td data-label="Expiration" data-bbox="947,373,101,84"> <div data-bbox="963,389,69,32"> <input type="text" placeholder="Never" data-testid="gl-datepicker-input" data-bbox="963,389,69,32"/> <span data-testid="datepicker-calendar-icon" data-bbox="1004,397,24,16"><i class="fas fa-calendar-alt"></i></span> </div> </td>
+                                    <td data-label="Created on" data-bbox="1048,373,86,84"> <span data-text="23 Mar, 2023" data-bbox="1064,389,47,16"> 23 Mar, 2023 </span> </td>
+                                    <td data-label="Last activity" data-bbox="1134,373,82,84"> <span data-text="20 May, 2024" data-bbox="1150,389,48,16"> 20 May, 2024 </span> </td>
+                                    <td data-label="Actions" data-bbox="1216,373,164,84"></td>
+                                </tr>
+                                <tr data-testid="members-table-row-239" data-bbox="272,457,1108,84">
+                                    <td data-label="Account" data-bbox="272,457,331,84">
+                                        <div class="user-avatar avatar-jk" aria-hidden="true"></div>
+                                        <div data-bbox="344,473,116,48" class="account-details">
+                                            <span data-text="Jakub Klinkovský" data-bbox="342,479,120,20"> Jakub Klinkovský </span>
+                                            <span data-text="@lahwaacz" data-bbox="344,497,116,16"> @lahwaacz </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Source" data-bbox="603,457,85,84"> <span data-text="Direct member" data-bbox="619,473,39,16"> Direct member </span> </td>
+                                    <td data-label="Access granted" data-bbox="688,457,121,84"> <span data-text="by" data-bbox="704,473,79,16"> <time title="May 5, 2024 12:39pm GMT+0700" data-text="2 weeks ago" data-bbox="704,473,79,16"> 2 weeks ago </time> by <a data-text="Byte Blaze" data-bbox="723,489,67,16"> Byte Blaze </a> </span> </td>
+                                    <td data-label="Max role" data-bbox="809,457,138,84"> <div data-bbox="825,473,77,32"> <button type="button" data-bbox="825,473,77,32"> <span data-text="Guest" data-bbox="837,481,37,16"> Guest </span> </button> </div> </td>
+                                    <td data-label="Expiration" data-bbox="947,457,101,84"> <div data-bbox="963,473,69,32"> <input type="text" placeholder="Never" data-testid="gl-datepicker-input" data-bbox="963,473,69,32"/> <span data-testid="datepicker-calendar-icon" data-bbox="1004,481,24,16"><i class="fas fa-calendar-alt"></i></span> </div> </td>
+                                    <td data-label="Created on" data-bbox="1048,457,86,84"> <span data-text="20 Mar, 2023" data-bbox="1064,473,47,16"> 20 Mar, 2023 </span> </td>
+                                    <td data-label="Last activity" data-bbox="1134,457,82,84"> <span data-text="20 Mar, 2023" data-bbox="1150,473,46,16"> 20 Mar, 2023 </span> </td>
+                                    <td data-label="Actions" data-bbox="1216,457,164,84"> <button type="button" data-bbox="1232,473,132,32" class="btn btn-danger"> <span data-text="Remove member" data-bbox="1244,480,108,18"> Remove member </span> </button> </td>
+                                </tr>
+                                <tr data-testid="members-table-row-234" data-bbox="272,541,1108,84">
+                                    <td data-label="Account" data-bbox="272,541,331,84">
+                                        <div class="user-avatar avatar-bbot" aria-hidden="true"><i class="fas fa-robot"></i></div>
+                                        <div data-bbox="344,557,149,48" class="account-details">
+                                            <div data-bbox="342,563,153,21">
+                                                <span data-text="benoit Blanchon" data-bbox="342,563,113,20"> benoit Blanchon </span> <span data-text="Bot" data-bbox="457,566,36,16" class="tag"> Bot </span>
+                                            </div>
+                                            <span data-text="@project_184_bot1" data-bbox="344,582,149,16"> @project_184_bot1 </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Source" data-bbox="603,541,85,84"> <span data-text="Direct member" data-bbox="619,557,39,16"> Direct member </span> </td>
+                                    <td data-label="Access granted" data-bbox="688,541,121,84"> <time title="Apr 29, 2024 10:52pm GMT+0700" data-text="2 weeks ago" data-bbox="704,557,79,16"> 2 weeks ago </time> </td>
+                                    <td data-label="Max role" data-bbox="809,541,138,84"> <span data-text="Maintainer" data-bbox="825,557,75,24"> Maintainer </span> </td>
+                                    <td data-label="Expiration" data-bbox="947,541,101,84"> <div data-bbox="963,557,69,32"> <input type="text" value="2024-05-29" data-testid="gl-datepicker-input" data-bbox="963,557,69,32"/> <span data-testid="datepicker-calendar-icon" data-bbox="1004,565,24,16"><i class="fas fa-calendar-alt"></i></span> </div> </td>
+                                    <td data-label="Created on" data-bbox="1048,541,86,84"> <span data-text="29 Apr, 2024" data-bbox="1064,557,45,16"> 29 Apr, 2024 </span> </td>
+                                    <td data-label="Last activity" data-bbox="1134,541,82,84"> <span data-text="Never" data-bbox="1150,557,38,16"> Never </span> </td>
+                                    <td data-label="Actions" data-bbox="1216,541,164,84"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableRows = document.querySelectorAll('table[data-testid="members-table"] tbody tr');
+
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', () => {
+                    row.style.backgroundColor = '#F9FAFB';
+                });
+                row.addEventListener('mouseleave', () => {
+                    row.style.backgroundColor = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_46.html",
+    "raw_html": "<DIV data-bbox=\"90,0,1100,52\"><B id=\"0\" data-text=\"Postmill\" data-bbox=\"120,16,58,19\"><text>Postmill</text></B><DIV data-bbox=\"194,0,148,52\"><A id=\"1\" data-text=\"Forums\" data-bbox=\"194,0,86,52\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Forums</text></A><A id=\"2\" data-text=\"Wiki\" data-bbox=\"280,0,62,52\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Wiki</text></A></DIV><FORM data-bbox=\"560,0,236,52\"><INPUT id=\"4\" type=\"search\" placeholder=\"Search forums...\" data-bbox=\"567,8,222,37\" class=\"possible-clickable-element\" data-testid=\"C\" style=\"\"></INPUT></FORM><UL data-bbox=\"1014,0,162,52\"><A id=\"5\" data-text=\"Log in\" data-bbox=\"1014,0,76,52\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Log in</text></A><A id=\"6\" data-text=\"Sign up\" data-bbox=\"1090,0,86,52\" class=\"possible-clickable-element\" data-testid=\"E\"><text>Sign up</text></A></UL></DIV><UL data-bbox=\"104,80,1072,35\"><A id=\"7\" data-text=\"Forums\" data-bbox=\"104,80,69,35\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Forums</text></A><A id=\"8\" data-text=\"Tags\" data-bbox=\"173,80,51,35\" class=\"possible-clickable-element\" data-testid=\"G\"><text>Tags</text></A><A id=\"9\" data-text=\"Alphabetical\" data-bbox=\"224,80,98,35\" class=\"possible-clickable-element\" data-testid=\"H\"><text>Alphabetical</text></A></UL><H1 data-text=\"All forums\" data-bbox=\"104,129,1072,42\"><text>All forums</text></H1><DIV class=\"forum-group\" data-bbox=\"104,185,203,172\"><H2 data-text=\"A\" data-bbox=\"104,185,203,32\"><text>A</text></H2><UL data-bbox=\"104,231,203,126\"><A id=\"10\" data-text=\"allentown\" data-bbox=\"104,233,61,16\" class=\"possible-clickable-element\" data-testid=\"I\"><text>allentown</text></A><A id=\"11\" data-text=\"arlingtonva\" data-bbox=\"104,254,71,16\" class=\"possible-clickable-element\" data-testid=\"J\"><text>arlingtonva</text></A><A id=\"12\" data-text=\"Art\" data-bbox=\"104,275,19,16\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Art</text></A><A id=\"13\" data-text=\"AskReddit\" data-bbox=\"104,296,63,16\" class=\"possible-clickable-element\" data-testid=\"L\"><text>AskReddit</text></A><A id=\"14\" data-text=\"askscience\" data-bbox=\"104,317,68,16\" class=\"possible-clickable-element\" data-testid=\"M\"><text>askscience</text></A><A id=\"15\" data-text=\"aww\" data-bbox=\"104,338,30,16\" class=\"possible-clickable-element\" data-testid=\"N\"><text>aww</text></A></UL></DIV><DIV class=\"forum-group\" data-bbox=\"104,371,203,150\"><H2 data-text=\"B\" data-bbox=\"104,371,203,31\"><text>B</text></H2><UL data-bbox=\"104,416,203,105\"><A id=\"16\" data-text=\"baltimore\" data-bbox=\"104,418,59,16\" class=\"possible-clickable-element\" data-testid=\"O\"><text>baltimore</text></A><A id=\"17\" data-text=\"books\" data-bbox=\"104,439,38,16\" class=\"possible-clickable-element\" data-testid=\"P\"><text>books</text></A><A id=\"18\" data-text=\"boston\" data-bbox=\"104,460,44,16\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>boston</text></A><A id=\"19\" data-text=\"BridgeportCT\" data-bbox=\"104,481,83,16\" class=\"possible-clickable-element\" data-testid=\"R\"><text>BridgeportCT</text></A><A id=\"20\" data-text=\"BuyItForLife\" data-bbox=\"104,502,77,16\" class=\"possible-clickable-element\" data-testid=\"S\"><text>BuyItForLife</text></A></UL></DIV><DIV class=\"forum-group\" data-bbox=\"104,535,203,193\"><H2 data-text=\"C\" data-bbox=\"104,535,203,32\"><text>C</text></H2><UL data-bbox=\"104,581,203,147\"><A id=\"21\" data-text=\"CambridgeMA\" data-bbox=\"104,583,89,16\" class=\"possible-clickable-element\" data-testid=\"T\"><text>CambridgeMA</text></A><A id=\"22\" data-text=\"ColumbiaMD\" data-bbox=\"104,604,80,16\" class=\"possible-clickable-element\" data-testid=\"U\"><text>ColumbiaMD</text></A><A id=\"23\" data-text=\"Connecticut\" data-bbox=\"104,625,75,16\" class=\"possible-clickable-element\" data-testid=\"V\"><text>Connecticut</text></A><A id=\"24\" data-text=\"consoles\" data-bbox=\"104,646,55,16\" class=\"possible-clickable-element\" data-testid=\"W\"><text>consoles</text></A><A id=\"25\" data-text=\"Cooking_Adventures\" data-bbox=\"104,667,128,16\" class=\"possible-clickable-element\" data-testid=\"X\"><text>Cooking_Adventures</text></A><A id=\"26\" data-text=\"coolgithubprojects\" data-bbox=\"104,688,116,16\" class=\"possible-clickable-element\" data-testid=\"Y\"><text>coolgithubprojects</text></A><A id=\"27\" data-text=\"creepy\" data-bbox=\"104,709,41,16\" class=\"possible-clickable-element\" data-testid=\"Z\"><text>creepy</text></A></UL></DIV><DIV class=\"forum-group\"><text>D</text><A id=\"28\" data-text=\"Documentaries\" data-bbox=\"321,187,94,16\" class=\"possible-clickable-element\" data-testid=\"AA\"><text>Documentaries</text></A></DIV>",
+    "parsed_html": "\n<\n  div|\n  <\n    div|\n    <b| Postmill >\n    <\n      div|\n      <a[A]| Forums >\n      <a[B]| Wiki >\n    >\n    <input[C]| Search forums... >\n    <\n      ul|\n      <a[D]| Log in >\n      <a[E]| Sign up >\n    >\n  >\n  <\n    ul|\n    <a[F]| Forums >\n    <a[G]| Tags >\n    <a[H]| Alphabetical >\n  >\n  <h1| All forums >\n  <\n    div|\n    <h2| A >\n    <\n      ul|\n      <a[I]| allentown >\n      <a[J]| arlingtonva >\n      <a[K]| Art >\n      <a[L]| AskReddit >\n      <a[M]| askscience >\n      <a[N]| aww >\n    >\n  >\n  <\n    div|\n    <h2| B >\n    <\n      ul|\n      <a[O]| baltimore >\n      <a[P]| books >\n      <a[Q]| boston >\n      <a[R]| BridgeportCT >\n      <a[S]| BuyItForLife >\n    >\n  >\n  <\n    div|\n    <h2| C >\n    <\n      ul|\n      <a[T]| CambridgeMA >\n      <a[U]| ColumbiaMD >\n      <a[V]| Connecticut >\n      <a[W]| consoles >\n      <a[X]| Cooking_Adventures >\n      <a[Y]| coolgithubprojects >\n      <a[Z]| creepy >\n    >\n  >\n  <\n    div|\n    <text| D >\n    <a[AA]| Documentaries >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 321.328125,
+                "top": 0,
+                "right": 378.328125,
+                "bottom": 65.203125,
+                "width": 57,
+                "height": 65.203125
+            },
+            "tag": "a",
+            "text": "Forums"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 402.328125,
+                "top": 0,
+                "right": 435.328125,
+                "bottom": 65.203125,
+                "width": 33,
+                "height": 65.203125
+            },
+            "tag": "a",
+            "text": "Wiki"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 654.65625,
+                "top": 23.203125,
+                "right": 835.65625,
+                "bottom": 42.203125,
+                "width": 181,
+                "height": 19
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 1054.984375,
+                "top": 13.203125,
+                "right": 1133.984375,
+                "bottom": 49.203125,
+                "width": 79,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Log in"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 1149.984375,
+                "top": 13.203125,
+                "right": 1239.984375,
+                "bottom": 49.203125,
+                "width": 90,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Sign up"
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 72,
+                "top": 123,
+                "right": 161,
+                "bottom": 159,
+                "width": 89,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Forums"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 177,
+                "top": 123,
+                "right": 246,
+                "bottom": 159,
+                "width": 69,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Tags"
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 262,
+                "top": 123,
+                "right": 388,
+                "bottom": 159,
+                "width": 126,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Alphabetical"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 72,
+                "top": 368.78125,
+                "right": 320,
+                "bottom": 401.09375,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "allentown"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 72,
+                "top": 413.09375,
+                "right": 320,
+                "bottom": 445.40625,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "arlingtonva"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 72,
+                "top": 457.40625,
+                "right": 320,
+                "bottom": 489.71875,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "Art"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 72,
+                "top": 501.71875,
+                "right": 320,
+                "bottom": 534.03125,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "AskReddit"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 72,
+                "top": 546.03125,
+                "right": 320,
+                "bottom": 578.34375,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "askscience"
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 72,
+                "top": 590.34375,
+                "right": 320,
+                "bottom": 622.65625,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "aww"
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 368,
+                "top": 368.78125,
+                "right": 616,
+                "bottom": 401.09375,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "baltimore"
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 368,
+                "top": 413.09375,
+                "right": 616,
+                "bottom": 445.40625,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "books"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 368,
+                "top": 457.40625,
+                "right": 616,
+                "bottom": 489.71875,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "boston"
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 368,
+                "top": 501.71875,
+                "right": 616,
+                "bottom": 534.03125,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "BridgeportCT"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 368,
+                "top": 546.03125,
+                "right": 616,
+                "bottom": 578.34375,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "BuyItForLife"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 664,
+                "top": 368.78125,
+                "right": 912,
+                "bottom": 401.09375,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "CambridgeMA"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 664,
+                "top": 413.09375,
+                "right": 912,
+                "bottom": 445.40625,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "ColumbiaMD"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 664,
+                "top": 457.40625,
+                "right": 912,
+                "bottom": 489.71875,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "Connecticut"
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 664,
+                "top": 501.71875,
+                "right": 912,
+                "bottom": 534.03125,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "consoles"
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 664,
+                "top": 546.03125,
+                "right": 912,
+                "bottom": 578.34375,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "Cooking_Adventures"
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 664,
+                "top": 590.34375,
+                "right": 912,
+                "bottom": 622.65625,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "coolgithubprojects"
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 664,
+                "top": 634.65625,
+                "right": 912,
+                "bottom": 666.96875,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "creepy"
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 960,
+                "top": 368.78125,
+                "right": 1208,
+                "bottom": 401.09375,
+                "width": 248,
+                "height": 32.3125
+            },
+            "tag": "a",
+            "text": "Documentaries"
+        }
+    ]
+}

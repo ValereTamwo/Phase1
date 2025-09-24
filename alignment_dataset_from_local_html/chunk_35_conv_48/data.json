@@ -1,0 +1,49 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_48.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,55\"><HEADER data-bbox=\"0,0,1280,55\"></HEADER><DIV data-bbox=\"0,55,1280,665\"><DIV data-bbox=\"0,55,350,350\"><DIV data-bbox=\"0,55,350,47\"><DIV data-bbox=\"4,63,342,31\"><DIV data-bbox=\"8,63,288,31\"><DIV data-bbox=\"8,63,254,31\"><INPUT id=\"13\" type=\"text\" placeholder=\"Search\" data-bbox=\"8,63,254,31\" style=\"\"></INPUT><A id=\"12\" title=\"Describe the current location using the search engine\" data-bbox=\"194,69,62,15\"><text>Where is this?</text></A></DIV><INPUT id=\"14\" value=\"Go\" type=\"submit\" data-bbox=\"261,63,35,31\" style=\"\"></INPUT></DIV><A title=\"Find directions between two points\" data-bbox=\"304,63,38,31\"><I class=\"fas fa-directions\"></I></A></DIV></DIV><DIV data-bbox=\"0,102,350,303\"><DIV data-bbox=\"16,118,318,85\"><H2 data-bbox=\"16,118,297,77\"><text>Welcome to OpenStreetMap!</text></H2><BUTTON id=\"16\" type=\"button\" data-bbox=\"313,118,21,21\"><I class=\"fas fa-times\"></I></BUTTON></DIV><DIV data-bbox=\"16,203,318,186\"><P data-bbox=\"16,203,318,70\"><text>OpenStreetMap is a map of the world, created by people like you and free to use under an open license.</text></P><P data-bbox=\"16,289,318,46\"><text>Hosting is supported by</text><A id=\"17\" data-bbox=\"180,290,27,20\"><text>UCL</text></A><text>,</text><A id=\"18\" data-bbox=\"216,290,39,20\"><text>Fastly</text></A><text>,</text><A id=\"19\" data-bbox=\"264,290,63,20\"><text>Bytemark Hosting</text></A><text>and other</text><A id=\"20\" data-bbox=\"145,313,56,20\"><text>partners</text></A><text>.</text></P><DIV data-bbox=\"12,351,326,38\"><A id=\"21\" data-bbox=\"16,351,155,38\"><text>Learn More</text></A><A id=\"22\" data-bbox=\"179,351,155,38\"><text>Start Mapping</text></A></DIV></DIV></DIV></DIV><DIV data-bbox=\"0,55,1280,665\"><DIV data-bbox=\"0,55,1280,0\"><SPAN id=\"23\" class=\"map-control\" data-bbox=\"1250,75,20,20\"><I class=\"fas fa-plus\"></I></SPAN><SPAN id=\"24\" class=\"map-control\" data-bbox=\"1250,115,20,20\"><I class=\"fas fa-minus\"></I></SPAN><SPAN id=\"25\" class=\"map-control\" data-bbox=\"1250,155,20,20\"><I class=\"fas fa-layer-group\"></I></SPAN><SPAN id=\"26\" class=\"map-control\" data-bbox=\"1250,205,20,20\"><I class=\"fas fa-ruler-horizontal\"></I></SPAN><SPAN id=\"27\" class=\"map-control\" data-bbox=\"1250,245,20,20\"><I class=\"fas fa-share-alt\"></I></SPAN><SPAN id=\"28\" class=\"map-control\" data-bbox=\"1250,285,20,20\"><I class=\"fas fa-info-circle\"></I></SPAN><A id=\"29\" class=\"map-control\" data-bbox=\"1240,325,40,40\"><I class=\"fas fa-crosshairs\"></I></A><A id=\"30\" class=\"map-control\" data-bbox=\"1240,375,40,40\"><I class=\"fas fa-flag\"></I></A><DIV data-bbox=\"5,681,90,34\"><DIV data-bbox=\"5,681,56,18\"><text>50 km</text></DIV><DIV data-bbox=\"5,697,90,18\"><text>50 mi</text></DIV></DIV><DIV data-bbox=\"874,703,406,17\"><text>Â©</text><A id=\"31\" data-bbox=\"891,704,151,14\" class=\"possible-clickable-element\" data-testid=\"A\"><text>OpenStreetMap contributors</text></A><text>|</text><A id=\"32\" data-bbox=\"1056,704,90,14\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Make a Donation</text></A><text>|</text><A id=\"33\" data-bbox=\"1153,704,122,14\" class=\"possible-clickable-element\" data-testid=\"C\"><text>Website and API terms</text></A></DIV></DIV></DIV></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  div|\n  <\n    div|\n    <\n      div|\n      <\n        div|\n        <\n          div|\n          <input| Search >\n          <a| Describe the current location using the search engine Where is this? >\n        >\n        <input| Go >\n      >\n      <a| Find directions between two points >\n    >\n    <\n      div|\n      <h2| Welcome to OpenStreetMap! >\n      <\n        div|\n        <p| OpenStreetMap is a map of the world, created by people like you and free to use under an open license. >\n        <\n          p|\n          <text| Hosting is supported by >\n          <a| UCL >\n          <text| , >\n          <a| Fastly >\n          <text| , >\n          <a| Bytemark Hosting >\n          <text| and other >\n          <a| partners >\n          <text| . >\n        >\n        <\n          div|\n          <a| Learn More >\n          <a| Start Mapping >\n        >\n      >\n    >\n  >\n  <\n    div|\n    <\n      div|\n      <div| 50 km >\n      <div| 50 mi >\n    >\n    <\n      div|\n      <text| Â© >\n      <a[A]| OpenStreetMap contributors >\n      <text| | >\n      <a[B]| Make a Donation >\n      <text| | >\n      <a[C]| Website and API terms >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 837,
+                "top": 688.8125,
+                "right": 999,
+                "bottom": 703.8125,
+                "width": 162,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "OpenStreetMap contributors"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 1017,
+                "top": 688.8125,
+                "right": 1113,
+                "bottom": 703.8125,
+                "width": 96,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Make a Donation"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 1131,
+                "top": 688.8125,
+                "right": 1258,
+                "bottom": 703.8125,
+                "width": 127,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Website and API terms"
+        }
+    ]
+}

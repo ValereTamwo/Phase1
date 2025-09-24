@@ -1,0 +1,259 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_26.html",
+    "raw_html": "<HTML lang=\"en\" data-bbox=\"0,0,1280,720\"><BODY data-bbox=\"0,0,1280,720\"><HEADER class=\"main-header\" data-bbox=\"0,0,1280,0\"><NAV class=\"main-nav container\" data-bbox=\"90,0,1100,52\"><DIV class=\"nav-left\"><A href=\"#\" class=\"logo\"><B id=\"0\" data-bbox=\"120,16,58,19\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Postmill</text></B></A><DIV class=\"nav-links\" data-bbox=\"194,0,148,52\"><UL data-bbox=\"194,0,148,52\"><A id=\"1\" class=\"active possible-clickable-element\" data-bbox=\"194,0,86,52\" href=\"#\" data-testid=\"B\"><text>Forums</text></A><A id=\"2\" data-bbox=\"280,0,62,52\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"C\"><text>Wiki</text></A></UL></DIV></DIV><DIV class=\"nav-center\"><FORM data-bbox=\"455,0,236,52\" class=\"search-form\" onsubmit=\"return false;\"><I class=\"fas fa-search\"></I><INPUT id=\"4\" type=\"search\" data-bbox=\"462,8,222,37\" placeholder=\"Search Postmill...\" class=\"search-input possible-clickable-element\" data-testid=\"D\" style=\"\"></INPUT></FORM></DIV><DIV class=\"nav-right\"><UL class=\"user-controls\" data-bbox=\"804,0,372,52\"><A href=\"#\" title=\"Notifications (0)\" data-bbox=\"804,0,48,52\" class=\"icon-button\"><I id=\"5\" data-bbox=\"820,19,16,13\" class=\"fas fa-bell possible-clickable-element\" data-testid=\"E\"></I></A><A href=\"#\" class=\"btn-submit\"><I id=\"6\" data-bbox=\"870,18,12,13\" class=\"fas fa-plus possible-clickable-element\" data-testid=\"F\"></I><SPAN id=\"7\" data-bbox=\"888,16,51,19\" class=\"possible-clickable-element\" data-testid=\"G\"><text>Submit</text></SPAN></A><LI class=\"user-profile\" data-bbox=\"955,0,221,52\"><BUTTON type=\"button\" data-bbox=\"955,0,221,52\"><I id=\"8\" data-bbox=\"973,18,12,14\" class=\"fas fa-user-circle possible-clickable-element\" data-testid=\"H\"></I><STRONG id=\"9\" data-bbox=\"991,16,157,19\" class=\"possible-clickable-element\" data-testid=\"I\"><text>MarvelsGrantMan136</text></STRONG></BUTTON></LI></UL></DIV></NAV></HEADER><DIV class=\"container content-wrapper-container\" data-bbox=\"90,52,1100,137\"><DIV class=\"content-wrapper\"><MAIN data-bbox=\"90,66,806,123\" class=\"card\"><NAV data-bbox=\"90,80,792,49\" class=\"content-nav\"><UL data-bbox=\"104,80,189,35\" class=\"content-nav-tabs\"><A id=\"11\" data-bbox=\"104,80,100,35\" href=\"#\" class=\"active possible-clickable-element\" data-testid=\"J\"><text>Submissions</text></A><A id=\"12\" data-bbox=\"204,80,89,35\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Comments</text></A></UL><UL data-bbox=\"307,80,177,35\" class=\"content-nav-filters\"><LI data-bbox=\"307,80,105,35\"><BUTTON type=\"button\" data-bbox=\"307,80,105,35\" class=\"active\"><I id=\"13\" data-bbox=\"319,92,11,11\" class=\"fas fa-star possible-clickable-element\" data-testid=\"L\"></I><SPAN id=\"14\" data-bbox=\"335,89,56,16\" class=\"possible-clickable-element\" data-testid=\"M\"><text>Featured</text></SPAN><SPAN id=\"15\" data-bbox=\"394,89,8,16\"><I class=\"fas fa-caret-down possible-clickable-element\" data-testid=\"N\"></I></SPAN></BUTTON></LI><LI data-bbox=\"412,80,72,35\"><BUTTON type=\"button\" data-bbox=\"412,80,72,35\"><I id=\"16\" data-bbox=\"423,90,14,14\" class=\"fas fa-fire-alt possible-clickable-element\" data-testid=\"O\"></I><SPAN id=\"17\" data-bbox=\"440,89,23,16\" class=\"possible-clickable-element\" data-testid=\"P\"><text>Hot</text></SPAN><SPAN id=\"18\" data-bbox=\"466,89,8,16\"><I class=\"fas fa-caret-down possible-clickable-element\" data-testid=\"Q\"></I></SPAN></BUTTON></LI></UL></NAV><DIV class=\"empty-state\"><P data-bbox=\"153,141,443,21\"><text>You are not subscribed to any forum. Showing featured forums instead.</text></P></DIV></MAIN><ASIDE class=\"sidebar card\" data-bbox=\"910,66,280,89\"><H1 data-bbox=\"924,80,252,26\"><text>Featured forums</text></H1><SMALL data-bbox=\"924,124,215,14\"><text>There are no featured forums to display.</text></SMALL></ASIDE></DIV></DIV><FOOTER class=\"footer\"><SPAN data-bbox=\"598,690,43,13\"><text>Running</text><A id=\"19\" data-bbox=\"641,690,42,13\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"R\"><text>Postmill</text></A></SPAN></FOOTER></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    nav|\n    <\n      div|\n      <b[A]| Postmill >\n      <\n        ul|\n        <a[B]| Forums >\n        <a[C]| Wiki >\n      >\n    >\n    <input[D]| Search Postmill... >\n    <\n      ul|\n      <\n        a| Notifications (0)\n        <i[E]| >\n      >\n      <i[F]| >\n      <span[G]| Submit >\n      <i[H]| >\n      <strong[I]| MarvelsGrantMan136 >\n    >\n  >\n  <\n    div|\n    <\n      main|\n      <\n        nav|\n        <\n          ul|\n          <a[J]| Submissions >\n          <a[K]| Comments >\n        >\n        <\n          ul|\n          <i[L]| >\n          <span[M]| Featured >\n          <i[N]| >\n          <i[O]| >\n          <span[P]| Hot >\n          <i[Q]| >\n        >\n      >\n      <p| You are not subscribed to any forum. Showing featured forums instead. >\n    >\n    <\n      aside|\n      <h1| Featured forums >\n      <small| There are no featured forums to display. >\n    >\n  >\n  <\n    span|\n    <text| Running >\n    <a[R]| Postmill >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 40,
+                "top": 16.796875,
+                "right": 136,
+                "bottom": 45.796875,
+                "width": 96,
+                "height": 29
+            },
+            "tag": "b",
+            "text": "Postmill"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 160,
+                "top": 14.1875,
+                "right": 213,
+                "bottom": 49.1875,
+                "width": 53,
+                "height": 35
+            },
+            "tag": "a",
+            "text": "Forums"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 237,
+                "top": 14.1875,
+                "right": 268,
+                "bottom": 49.1875,
+                "width": 31,
+                "height": 35
+            },
+            "tag": "a",
+            "text": "Wiki"
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 410,
+                "top": 15.5,
+                "right": 710,
+                "bottom": 48.5,
+                "width": 300,
+                "height": 33
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 863,
+                "top": 22,
+                "right": 881,
+                "bottom": 42,
+                "width": 18,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 932,
+                "top": 24.78125,
+                "right": 946,
+                "bottom": 39.1875,
+                "width": 14,
+                "height": 14.40625
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 954,
+                "top": 20.46875,
+                "right": 1003,
+                "bottom": 43.515625,
+                "width": 49,
+                "height": 23.046875
+            },
+            "tag": "span",
+            "text": "Submit"
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 1050,
+                "top": 18,
+                "right": 1078,
+                "bottom": 46,
+                "width": 28,
+                "height": 28
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 1090,
+                "top": 24,
+                "right": 1227,
+                "bottom": 40,
+                "width": 137,
+                "height": 16
+            },
+            "tag": "strong",
+            "text": "MarvelsGrantMan136"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 65,
+                "top": 106,
+                "right": 189,
+                "bottom": 157.3125,
+                "width": 124,
+                "height": 51.3125
+            },
+            "tag": "a",
+            "text": "Submissions"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 189,
+                "top": 106,
+                "right": 300,
+                "bottom": 157.3125,
+                "width": 111,
+                "height": 51.3125
+            },
+            "tag": "a",
+            "text": "Comments"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 665,
+                "top": 122.546875,
+                "right": 682,
+                "bottom": 137.75,
+                "width": 17,
+                "height": 15.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 690,
+                "top": 120.65625,
+                "right": 755,
+                "bottom": 139.65625,
+                "width": 65,
+                "height": 19
+            },
+            "tag": "span",
+            "text": "Featured"
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 763,
+                "top": 122.65625,
+                "right": 773,
+                "bottom": 137.859375,
+                "width": 10,
+                "height": 15.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 805,
+                "top": 122.546875,
+                "right": 816,
+                "bottom": 137.75,
+                "width": 11,
+                "height": 15.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 824,
+                "top": 120.65625,
+                "right": 849,
+                "bottom": 139.65625,
+                "width": 25,
+                "height": 19
+            },
+            "tag": "span",
+            "text": "Hot"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 857,
+                "top": 122.65625,
+                "right": 867,
+                "bottom": 137.859375,
+                "width": 10,
+                "height": 15.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 642.5,
+                "top": 386.90625,
+                "right": 698.5,
+                "bottom": 403.90625,
+                "width": 56,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Postmill"
+        }
+    ]
+}

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Reviews</title>
+    <script src="https://kit.fontawesome.com/4a07a65b12.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --sidebar-bg: #2d3748;
+            --sidebar-text: #a0aec0;
+            --sidebar-text-hover: #ffffff;
+            --sidebar-active-bg: #4a5568;
+            --main-bg: #f7fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --text-primary: #2d3748;
+            --text-secondary: #718096;
+            --primary-color: #4c51bf;
+            --primary-color-hover: #434190;
+            --danger-color: #e53e3e;
+            --warning-color: #dd6b20;
+            --success-color: #38a169;
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-primary);
+            display: flex;
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- Main Layout --- */
+        .sidebar {
+            width: 240px;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            transition: width 0.3s ease;
+        }
+
+        .sidebar-header {
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #4a5568;
+        }
+
+        .sidebar-header img {
+            height: 40px;
+            width: auto;
+        }
+
+        .sidebar-nav {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .sidebar-nav ul {
+            padding: 16px 0;
+        }
+
+        .sidebar-nav li {
+            position: relative;
+        }
+
+        .sidebar-nav a, .sidebar-nav > ul > span {
+            display: flex;
+            align-items: center;
+            padding: 12px 24px;
+            color: var(--sidebar-text);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-nav a:hover, .sidebar-nav > ul > span:hover {
+            background-color: var(--sidebar-active-bg);
+            color: var(--sidebar-text-hover);
+            cursor: pointer;
+        }
+        
+        .sidebar-nav a.active {
+             background-color: var(--sidebar-active-bg);
+             color: var(--sidebar-text-hover);
+        }
+
+        .sidebar-nav a i, .sidebar-nav > ul > span i {
+            width: 20px;
+            margin-right: 12px;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .submenu {
+            display: none;
+            background-color: #1a202c;
+            padding-left: 30px;
+        }
+        
+        .sidebar-nav li:hover > .submenu {
+            display: block;
+        }
+
+        .submenu li a {
+            padding: 10px 24px 10px 45px;
+            font-size: 13px;
+        }
+        .submenu strong {
+            display: block;
+            padding: 12px 24px 12px 35px;
+            font-size: 14px;
+            color: var(--sidebar-text-hover);
+            font-weight: 600;
+        }
+
+        .content-wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        /* --- System Message Bar --- */
+        .system-message-bar {
+            background-color: #ebf8ff;
+            border-bottom: 1px solid #bee3f8;
+            color: #2c5282;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .system-message-bar i {
+            margin-right: 8px;
+        }
+        
+        .system-message-bar a {
+            font-weight: 600;
+            color: #2b6cb0;
+        }
+        
+        /* --- Main Header --- */
+        .main-header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .main-header h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-actions .icon-button {
+            font-size: 20px;
+            color: var(--text-secondary);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .search-container {
+            position: relative;
+        }
+        .search-container input {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 8px 12px 8px 32px;
+            width: 200px;
+            transition: width 0.3s ease;
+        }
+        .search-container input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(76, 81, 191, 0.2);
+            width: 250px;
+        }
+        .search-container label i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .user-menu a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        .user-menu a:hover {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+        .user-menu .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        
+        /* --- Main Content --- */
+        main {
+            padding: 24px;
+            flex-grow: 1;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+        .button i {
+            margin-right: 8px;
+        }
+
+        .button-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .button-primary:hover {
+            background-color: var(--primary-color-hover);
+        }
+        
+        .button-secondary {
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+        .button-secondary:hover {
+            background-color: #f7fafc;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .card-filters, .card-toolbar {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .card-toolbar {
+             justify-content: space-between;
+        }
+
+        .toolbar-left, .toolbar-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .record-count {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .record-count span {
+            color: var(--text-primary);
+        }
+        
+        select, input[type="text"], input[type="checkbox"] {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+        input[type="checkbox"] {
+            height: 16px;
+            width: 16px;
+            accent-color: var(--primary-color);
+        }
+        select:focus, input[type="text"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(76, 81, 191, 0.2);
+        }
+
+        .pagination {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .pagination label {
+             color: var(--text-secondary);
+        }
+        .pagination input[type="text"] {
+            width: 50px;
+            text-align: center;
+            padding: 8px;
+        }
+        .pagination button {
+            width: 36px;
+            height: 36px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .pagination button:hover {
+            background-color: var(--main-bg);
+        }
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* --- Table --- */
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        thead {
+            background-color: #f9fafb;
+        }
+
+        th {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        thead .filter-row th, thead .filter-row td {
+            padding: 12px 16px;
+            vertical-align: top;
+        }
+        
+        .filter-row .date-filter {
+            position: relative;
+        }
+        
+        .filter-row .date-filter input {
+            padding-right: 30px;
+        }
+        
+        .filter-row .date-filter button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 34px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        tbody tr {
+            transition: background-color 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #f9fafb;
+            cursor: pointer;
+        }
+        
+        tbody tr.selected {
+            background-color: #ebf4ff;
+        }
+
+        td {
+            color: var(--text-primary);
+        }
+
+        td.long-text {
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 12px;
+        }
+        .status-pending {
+            background-color: #fefcbf;
+            color: #92400e;
+        }
+    </style>
+</head>
+<body data-bbox="0,0,1280,3544">
+
+    <div class="sidebar" data-bbox="0,0,88,721">
+        <div class="sidebar-header">
+            <img id="0" title="Magento Admin Panel" data-bbox="27,17,35,41" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMzEyIj48cGF0aCBmaWxsPSIjRjE0NDAxIiBkPSJNMjUwIDgwLjVMMjU2IDg0djE0NGwtNiAzLjV2LTgxLjVsLTU1LjQgMzEuNEwxMjggMjEzbC02Ni42LTM3LjZ2NzUuMWwtNTUuNCAzMS41di0xNDlsTDMxLjQgNzJWMTg5bDM0LjYgMTkuN1Y5MS4yTDExOSA0My42bDEwNS42IDYxLjItMjUgMTQuNnoiLz48cGF0aCBmaWxsPSIjRjE0NDAxIiBkPSJNMTI4IDMwbC05Ni42IDU1djE0MC40bDEuNy45IDU3LjIgMzIuMyAzNy43LTIxLjMgMzcuNyAyMS4zIDU4LjktMzIuOUwyMjQgMjI1LjVWODVsLTk2LTU1em03My42IDE2My4zTDEyOCIDIyOS43bC03My42LTM2LjJWOTAuOGw3My42IDQxLjcgNzMuNi00MS43djEwMi41eiIvPjwvc3ZnPg==" alt="Magento Logo">
+        </div>
+        <nav class="sidebar-nav">
+            <ul data-bbox="0,75,88,646">
+                <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i><span id="1" data-bbox="14,112,60,13">Dashboard</span></a></li>
+                <li data-bbox="0,137,88,62">
+                    <a href="#"><i class="fas fa-shopping-cart"></i><span id="2" data-bbox="30,174,28,13">Sales</span></a>
+                    <div class="submenu" data-bbox="-180,0,268,812">
+                        <strong data-bbox="-150,20,180,30">Sales</strong>
+                        <ul>
+                            <li data-bbox="-165,92,238,308">
+                                <ul data-bbox="-165,92,238,308">
+                                    <li><a href="#"><span data-bbox="-150,369,174,19">Braintree Virtual Terminal</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li data-bbox="0,199,88,62">
+                    <a href="#"><i class="fas fa-tags"></i><span id="3" data-bbox="22,236,44,13">Catalog</span></a>
+                    <div class="submenu" data-bbox="-180,0,268,812">
+                         <strong data-bbox="-150,20,180,30">Catalog</strong>
+                         <ul data-bbox="-165,92,238,88">
+                             <li><a href="#">Products</a></li>
+                             <li><a href="#">Categories</a></li>
+                         </ul>
+                    </div>
+                </li>
+                <li data-bbox="0,261,88,62">
+                    <a href="#"><i class="fas fa-users"></i><span id="4" data-bbox="14,298,60,13">Customers</span></a>
+                     <div class="submenu" data-bbox="-180,0,268,812">
+                         <strong data-bbox="-150,20,180,30">Customers</strong>
+                         <ul data-bbox="-180,92,268,720">
+                             <li><a href="#"><span data-bbox="-150,192,151,19">Login as Customer Log</span></a></li>
+                         </ul>
+                     </div>
+                </li>
+                <li data-bbox="0,323,88,62">
+                    <a href="#"><i class="fas fa-bullhorn"></i><span id="5" data-bbox="14,360,60,13">Marketing</span></a>
+                    <div class="submenu" data-bbox="-448,0,536,812">
+                        <strong data-bbox="-418,20,448,30">Marketing</strong>
+                    </div>
+                </li>
+                <li data-bbox="0,385,88,62">
+                    <a href="#"><i class="fas fa-file-alt"></i><span id="6" data-bbox="19,422,50,13">Content</span></a>
+                    <div class="submenu" data-bbox="-180,0,268,812">
+                        <strong data-bbox="-150,20,180,30">Content</strong>
+                    </div>
+                </li>
+                <li data-bbox="0,447,88,62">
+                    <a href="#"><i class="fas fa-chart-bar"></i><span id="7" data-bbox="22,484,44,13">Reports</span></a>
+                    <div class="submenu" data-bbox="-984,0,1072,812">
+                        <strong data-bbox="-954,20,984,30">Reports</strong>
+                    </div>
+                </li>
+                <li data-bbox="0,509,88,62">
+                    <a href="#"><i class="fas fa-store"></i><span id="8" data-bbox="25,546,38,13">Stores</span></a>
+                    <div class="submenu" data-bbox="-448,0,536,812">
+                        <strong data-bbox="-418,20,448,30">Stores</strong>
+                    </div>
+                </li>
+                <li data-bbox="0,571,88,62">
+                    <a href="#"><i class="fas fa-cogs"></i><span id="9" data-bbox="25,608,38,13">System</span></a>
+                    <div class="submenu" data-bbox="-448,0,536,812">
+                        <strong data-bbox="-418,20,448,30">System</strong>
+                    </div>
+                </li>
+                <span data-bbox="32,670,24,13"><i class="fas fa-puzzle-piece"></i><span id="10">Find Partners & Extensions</span></span>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content-wrapper" data-bbox="88,0,1192,3544">
+        <div class="system-message-bar" data-bbox="118,0,1132,51">
+            <div data-bbox="119,0,1130,50">
+                <div data-bbox="119,0,958,46">
+                    <div data-bbox="129,0,852,49">
+                        <i class="fas fa-info-circle"></i>Task "Update attributes for 7 selected products": 1 item(s) have been successfully updated.
+                    </div>
+                </div>
+            </div>
+            <a id="12" data-bbox="981,0,81,34" href="#">View Details</a>
+            <span id="11" data-bbox="1077,15,118,19" style="display:none;">System Messages</span>
+        </div>
+        <header class="main-header" data-bbox="88,51,1192,80">
+            <h1 data-bbox="118,82,740,34">Reviews</h1>
+            <div class="header-actions" data-bbox="873,66,377,44">
+                <div class="search-container" data-bbox="1034,77,50,0">
+                     <label id="15" data-bbox="1034,77,50,33" for="header-search"><i class="fas fa-search"></i></label>
+                     <input type="text" id="header-search" data-bbox="1034,77,50,35" placeholder="Search...">
+                </div>
+                <a id="14" title="Notifications" class="icon-button" data-bbox="1081,77,60,33" href="#"><i class="fas fa-bell"></i></a>
+                <div class="user-menu" data-bbox="1144,77,106,33">
+                    <a title="My Account" data-bbox="1144,77,106,33" href="#">
+                        <div class="avatar">A</div>
+                        <span id="13" data-bbox="1185,85,36,18">admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main data-bbox="88,143,1192,3261">
+            <div class="content-header">
+                <div class="actions"></div>
+                <button title="New Review" type="button" class="button button-primary" data-bbox="1104,159,131,45">
+                    <i class="fas fa-plus"></i>
+                    <span id="16" data-bbox="1121,170,97,22">New Review</span>
+                </button>
+            </div>
+            <div class="content-card" data-bbox="118,250,1132,3104">
+                <div class="card-filters" data-bbox="118,250,1132,77">
+                    <div data-bbox="118,250,187,33">
+                        <button title="Search" type="button" class="button button-primary" data-bbox="118,250,76,33">
+                            <i class="fas fa-search"></i>
+                            <span id="17" data-bbox="133,257,46,19">Search</span>
+                        </button>
+                        <button title="Reset Filter" type="button" class="button button-secondary" data-bbox="198,250,107,33">
+                            <i class="fas fa-undo"></i>
+                            <span id="18" data-bbox="213,257,77,19">Reset Filter</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-toolbar" data-bbox="118,294,1132,33">
+                    <div class="toolbar-left" data-bbox="118,294,158,33">
+                        <div data-bbox="118,294,158,33">
+                             <select id="19" data-text="Actions" data-bbox="118,294,151,33">
+                                 <option selected>Actions</option>
+                                 <option value="delete">Delete</option>
+                                 <option value="update_status">Update Status</option>
+                             </select>
+                             <select id="20" data-bbox="119,348,52,38" style="display:none;"></select>
+                        </div>
+                        <div class="record-count" data-bbox="306,294,125,33">
+                            <span data-bbox="307,301,28,19">351</span> records found
+                        </div>
+                    </div>
+                    <div class="toolbar-right" data-bbox="832,294,418,33">
+                         <select id="21" data-value="20" data-bbox="832,294,85,33">
+                             <option value="20" selected="selected">20</option>
+                             <option value="30">30</option>
+                             <option value="50">50</option>
+                             <option value="100">100</option>
+                             <option value="200">200</option>
+                         </select>
+                         <label id="22" data-bbox="928,294,62,33">per page</label>
+                         <div class="pagination" data-bbox="1024,294,226,33">
+                             <button type="button" data-bbox="1024,294,44,33" title="Previous page" disabled><i class="fas fa-chevron-left"></i></button>
+                             <input id="23" value="1" type="text" data-bbox="1097,294,44,33">
+                             <label id="24" data-bbox="1152,294,35,33">of <span data-bbox="1170,301,16,19">18</span></label>
+                             <button id="25" title="Next page" type="button" data-bbox="1206,294,44,33"><i class="fas fa-chevron-right"></i></button>
+                         </div>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table data-bbox="118,347,1132,2997">
+                        <thead data-bbox="119,348,1131,121">
+                            <tr data-bbox="119,348,1131,39">
+                                <th><input type="checkbox"></th>
+                                <th><span id="26" data-bbox="210,357,14,18">ID</span></th>
+                                <th><span id="27" data-bbox="289,357,49,18">Created</span></th>
+                                <th><span id="28" data-bbox="432,357,39,18">Status</span></th>
+                                <th><span id="29" data-bbox="515,357,27,18">Title</span></th>
+                                <th><span id="30" data-bbox="651,357,62,18">Nickname</span></th>
+                                <th><span id="31" data-bbox="748,357,44,18">Review</span></th>
+                                <th><span data-bbox="864,357,54,18">Visibility</span></th>
+                                <th><span id="32" data-bbox="953,357,29,18">Type</span></th>
+                                <th><span id="33" data-bbox="1037,357,49,18">Product</span></th>
+                                <th><span id="34" data-bbox="1120,357,25,18">SKU</span></th>
+                                <th><span data-bbox="1199,357,40,18">Action</span></th>
+                            </tr>
+                            <tr class="filter-row" data-bbox="119,387,1131,82">
+                                <th>
+                                    <select id="35" data-text="Any" data-bbox="129,414,60,28">
+                                        <option selected>Any</option>
+                                        <option value="1">Yes</option>
+                                        <option value="0">No</option>
+                                    </select>
+                                </th>
+                                <th><input id="36" type="text" data-bbox="210,414,58,28"></th>
+                                <td data-bbox="278,387,143,82">
+                                    <div data-bbox="289,397,122,61">
+                                        <div class="date-filter" data-bbox="289,397,122,28">
+                                            <input id="37" type="text" placeholder="From" data-bbox="289,397,122,28">
+                                            <button id="38" type="button" data-bbox="379,397,28,28"><i class="fas fa-calendar-alt"></i></button>
+                                        </div>
+                                        <div class="date-filter" data-bbox="289,430,122,28" style="margin-top: 5px;">
+                                            <input id="39" type="text" placeholder="To" data-bbox="289,430,122,28">
+                                            <button id="40" type="button" data-bbox="379,430,28,28"><i class="fas fa-calendar-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>
+                                    <select id="41" data-value="2" data-text="Pending" data-bbox="432,414,62,28">
+                                        <option value="">Any</option>
+                                        <option value="1">Approved</option>
+                                        <option value="2" selected>Pending</option>
+                                        <option value="3">Not Approved</option>
+                                    </select>
+                                </th>
+                                <th><input id="42" type="text" data-bbox="515,414,115,28"></th>
+                                <th><input id="43" type="text" data-bbox="651,414,76,28"></th>
+                                <th><input id="44" type="text" data-bbox="748,414,95,28"></th>
+                                <th>
+                                    <select id="45" data-bbox="864,414,68,28">
+                                        <option selected="selected">Any</option>
+                                    </select>
+                                </th>
+                                <th>
+                                    <select id="46" data-bbox="953,414,63,28">
+                                        <option selected>Any</option>
+                                        <option value="1">Administrator</option>
+                                        <option value="2">Customer</option>
+                                        <option value="3">Guest</option>
+                                    </select>
+                                </th>
+                                <th><input id="47" type="text" data-bbox="1037,414,62,28"></th>
+                                <th><input id="48" type="text" data-bbox="1120,414,58,28"></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bbox="119,469,1131,2875">
+                            <tr title="http://localhost:7780/admin/review/product/edit/id/353/" data-bbox="119,469,1131,144">
+                                <td><input id="49" value="353" type="checkbox" data-bbox="151,531,13,13"></td>
+                                <td data-bbox="200,469,78,144">353</td>
+                                <td data-bbox="278,469,143,144">Apr 24, 2023, 2:55:10 PM</td>
+                                <td data-bbox="421,469,84,144"><span class="status-badge status-pending">Pending</span></td>
+                                <td data-bbox="505,469,135,144">Bad!</td>
+                                <td data-bbox="640,469,98,144">Hannah Lim</td>
+                                <td data-bbox="738,469,116,144" class="long-text">I was really disappointed with the Circe Hooded...</td>
+                                <td data-bbox="854,469,89,144">Main Website</td>
+                                <td data-bbox="943,469,83,144">Guest</td>
+                                <td data-bbox="1026,469,84,144">Circe Hooded Ice Fleece</td>
+                                <td data-bbox="1110,469,78,144">WH12</td>
+                                <td><a id="50" data-bbox="1199,531,23,18" href="#">Edit</a></td>
+                            </tr>
+                            <tr title="http://localhost:7780/admin/review/product/edit/id/352/" data-bbox="119,613,1131,143">
+                                <td><input id="51" value="352" type="checkbox" data-bbox="151,674,13,13"></td>
+                                <td data-bbox="200,613,78,143">352</td>
+                                <td data-bbox="278,613,143,143">Apr 24, 2023, 2:53:49 PM</td>
+                                <td data-bbox="421,613,84,143"><span class="status-badge status-pending">Pending</span></td>
+                                <td data-bbox="505,613,135,143">Good but not perfect</td>
+                                <td data-bbox="640,613,98,143">customer</td>
+                                <td data-bbox="738,613,116,143" class="long-text">I recently purchased the Circe Hooded Ice Fleec...</td>
+                                <td data-bbox="854,613,89,143">Main Website</td>
+                                <td data-bbox="943,613,83,143">Guest</td>
+                                <td data-bbox="1026,613,84,143">Circe Hooded Ice Fleece</td>
+                                <td data-bbox="1110,613,78,143">WH12</td>
+                                <td><a id="52" data-bbox="1199,675,23,18" href="#">Edit</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tableRows = document.querySelectorAll('tbody tr');
+            
+            tableRows.forEach(row => {
+                const checkbox = row.querySelector('input[type="checkbox"]');
+
+                // Toggle row selection class on checkbox change
+                if (checkbox) {
+                    checkbox.addEventListener('change', function() {
+                        if (this.checked) {
+                            row.classList.add('selected');
+                        } else {
+                            row.classList.remove('selected');
+                        }
+                    });
+                }
+                
+                // Navigate on row click, but not if clicking on a checkbox or link
+                row.addEventListener('click', function(e) {
+                    if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'A') {
+                        const link = row.getAttribute('title');
+                        if (link) {
+                            // In a real app, you might navigate: window.location.href = link;
+                            console.log('Navigating to:', link);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

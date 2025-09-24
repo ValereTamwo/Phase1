@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Stop Market - Your Online Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --surface-color: #ffffff;
+            --text-color: #212529;
+            --text-muted-color: #6c757d;
+            --border-color: #dee2e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Overall Container */
+        div[data-bbox="0,0,1280,2425"] {
+            max-width: 1280px;
+            margin: 0 auto;
+            background-color: var(--surface-color);
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+
+        /* Header Styling */
+        header {
+            background-color: var(--surface-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Top Bar */
+        header div[data-bbox="0,0,1280,40"] {
+            background-color: #343a40;
+            color: #e9ecef;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        header div[data-bbox="0,0,1280,40"] ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        header div[data-bbox="0,0,1280,40"] a,
+        header div[data-bbox="0,0,1280,40"] span {
+            color: #e9ecef;
+            transition: color 0.2s ease;
+        }
+
+        header div[data-bbox="0,0,1280,40"] a:hover {
+            color: #ffffff;
+        }
+
+        header div[data-bbox="0,0,1280,40"] li {
+            position: relative;
+            padding: 0 10px;
+        }
+        
+        header div[data-bbox="0,0,1280,40"] li::before {
+            content: '|';
+            position: absolute;
+            left: -5px;
+            color: #6c757d;
+        }
+
+        /* Main Header */
+        header div[data-bbox="0,41,1280,87"] {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        a[title="one_stop_market_logo"] img {
+            width: 200px;
+            height: auto;
+        }
+
+        /* Search Bar */
+        div[data-bbox="913,71,265,57"] form {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        div[data-bbox="913,71,265,57"] input[type="text"] {
+            width: 250px;
+            height: 40px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 0 45px 0 15px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        div[data-bbox="913,71,265,57"] input[type="text"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+        
+        div[data-bbox="913,71,265,57"] a#6 {
+            font-size: 12px;
+            position: absolute;
+            bottom: -20px;
+            left: 5px;
+            color: var(--text-muted-color);
+        }
+
+        div[data-bbox="913,71,265,57"] button[type="submit"] {
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div[data-bbox="913,71,265,57"] button[type="submit"]:hover {
+            color: var(--primary-color);
+        }
+        div[data-bbox="913,71,265,57"] span[data-bbox="1167,75,1,1"] {
+            display: none; /* Hide placeholder text for icon */
+        }
+        
+        /* My Cart */
+        div[data-bbox="1191,71,69,33"] > a {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            position: relative;
+        }
+        
+        div[data-bbox="1191,71,69,33"] > a:hover {
+            color: var(--primary-color);
+        }
+
+        div[data-bbox="1191,71,69,33"] span[data-bbox="1229,70,1,1"] {
+            display: none; /* Hide placeholder text for icon */
+        }
+        
+        div[data-bbox="1191,71,69,33"] span[data-bbox="1230,74,30,24"] {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            background-color: #dc3545;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+        
+        div[data-bbox="1191,71,69,33"] span[data-bbox="1256,73,1,1"] {
+           display: none; /* Hide duplicate numbers */
+        }
+
+
+        /* Navigation Menu */
+        div[data-bbox="0,128,1280,106"] {
+            background-color: var(--surface-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 10px;
+        }
+
+        div[data-bbox="0,128,1280,106"] > ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        div[data-bbox="0,128,1280,106"] li {
+            cursor: pointer;
+        }
+
+        div[data-bbox="0,128,1280,106"] li > span:last-child {
+            display: block;
+            padding: 15px 20px;
+            color: var(--text-muted-color);
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s ease-in-out;
+        }
+
+        div[data-bbox="0,128,1280,106"] li:hover > span:last-child {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        div[data-bbox="0,128,1280,106"] li > span:first-child {
+            display: none; /* Hide decorative spans */
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 20px;
+        }
+
+        main > span[data-bbox="20,254,304,54"] {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, var(--primary-color), #00c6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        strong[data-bbox="20,340,161,24"] {
+            display: block;
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        /* Product Grid */
+        ol[data-bbox="20,379,1240,1656"] {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        ol[data-bbox="20,379,1240,1656"] > * {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        
+        /* Product Card Styling - using adjacent sibling selector due to flat structure */
+        ol[data-bbox="20,379,1240,1656"] > img {
+            border: 1px solid var(--border-color);
+            border-bottom: none;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            background-color: #fff;
+            object-fit: cover;
+            aspect-ratio: 1 / 1.25;
+            width: 100%;
+        }
+
+        ol[data-bbox="20,379,1240,1656"] > div {
+            border: 1px solid var(--border-color);
+            border-top: none;
+            background-color: var(--surface-color);
+            padding: 15px;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px; /* Provides vertical gap in grid */
+        }
+        
+        ol[data-bbox="20,379,1240,1656"] > div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        
+        ol[data-bbox="20,379,1240,1656"] > img:hover + div {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        
+        ol[data-bbox="20,379,1240,1656"] > div a {
+            font-weight: 500;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        ol[data-bbox="20,379,1240,1656"] > div a:hover {
+            color: var(--primary-color);
+        }
+
+
+        /* Hide empty/utility elements */
+        span[data-bbox="926,102,1,1"], /* Search label */
+        span[data-bbox="19,9,28,19"] { /* Skip to Content */
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body data-bbox="0,0,1280,2425">
+    <div data-bbox="0,0,1280,2425">
+        <header data-bbox="0,0,1280,128">
+            <div data-bbox="0,0,1280,40">
+                <span data-bbox="19,9,28,19">Skip to Content</span>
+                <ul data-bbox="755,10,505,20">
+                    <a id="0" data-bbox="770,10,78,19"><i class="fas fa-user-circle"></i> My Account </a>
+                    <a data-bbox="863,10,88,19"><i class="fas fa-heart"></i> My Wish List <span id="1" data-bbox="951,10,49,19">(7)</span> </a>
+                    <li data-label="or" data-bbox="1015,10,58,20">
+                        <a id="2" data-bbox="1015,10,58,19"><i class="fas fa-sign-out-alt"></i> Sign Out </a>
+                    </li>
+                    <span data-bbox="1103,10,157,19">Welcome, Emma Lopez!</span>
+                </ul>
+            </div>
+            <div data-bbox="0,41,1280,87">
+                <a title="one_stop_market_logo" data-bbox="20,71,200,27">
+                    <img id="3" title="one_stop_market_logo" data-bbox="20,71,200,27" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjciIGZpbGw9Im5vbmUiPgogIDxwYXRoIGZpbGw9IiMwMDdiZmYiIGQ9Ik0wIDI3VjBoMjcuMDQxdjI3SDBaTTMuNDEgMjMuNmgxOS45MTVWMGwtOS45NTcgOS42NjVMMi4yNzUgMEwzLjQxIDIxLjY0NVYyMy42WiIgLz4KICA8dGV4dCB4PSI0MCIgeT0iMjEiIGZvbnQtZmFtaWx5PSInSW50ZXInLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMjEyNTI5Ij5PbmUgU3RvcDwvdGV4dD4KICA8dGV4dCB4PSIxNDUiIHk9IjIxIiBmb250LWZhbWlseT0iJ0ludGVyJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzZjN2U3ZCI+TWFya2V0PC90ZXh0Pgo8L3N2Zz4K">
+                </a>
+                <div data-bbox="913,71,265,57">
+                    <form data-bbox="928,71,250,57">
+                        <div data-bbox="928,71,250,57">
+                            <span data-bbox="926,102,1,1">Search</span>
+                            <div data-bbox="928,71,250,57">
+                                <input id="5" type="text" placeholder="Search entire store here..." data-bbox="928,71,250,32">
+                                <a id="6" data-bbox="928,108,116,19">Advanced Search</a>
+                            </div>
+                        </div>
+                        <button title="Search" type="submit" data-bbox="1146,71,22,32">
+                            <i class="fas fa-search"></i>
+                            <span data-bbox="1167,75,1,1">Search</span>
+                        </button>
+                    </form>
+                </div>
+                <div data-bbox="1191,71,69,33">
+                    <a data-bbox="1191,71,69,33">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span data-bbox="1229,70,1,1">My Cart</span>
+                        <span data-bbox="1230,74,30,24">
+                            <span id="4" data-bbox="1233,76,24,19">925</span>
+                            <span data-bbox="1256,73,1,1">925 <span data-bbox="1256,99,37,19">items</span></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div data-bbox="0,128,1280,106">
+            <ul data-bbox="0,128,1280,106">
+                <li data-bbox="8,128,194,53">
+                    <span id="7" data-bbox="190,128,12,53"></span>
+                    <span id="8" data-bbox="20,145,162,19">Beauty & Personal Care</span>
+                </li>
+                <li data-bbox="212,128,162,53">
+                    <span id="9" data-bbox="362,128,12,53"></span>
+                    <span id="10" data-bbox="224,145,130,19">Sports & Outdoors</span>
+                </li>
+                <li data-bbox="384,128,209,53">
+                    <span id="11" data-bbox="581,128,12,53"></span>
+                    <span id="12" data-bbox="396,145,177,19">Clothing, Shoes & Jewelry</span>
+                </li>
+                <li data-bbox="603,128,145,53">
+                    <span id="13" data-bbox="736,128,12,53"></span>
+                    <span id="14" data-bbox="615,145,113,19">Home & Kitchen</span>
+                </li>
+                <li data-bbox="758,128,139,53">
+                    <span id="15" data-bbox="885,128,12,53"></span>
+                    <span id="16" data-bbox="770,145,107,19">Office Products</span>
+                </li>
+                <li data-bbox="907,128,229,53">
+                    <span id="17" data-bbox="1124,128,12,53"></span>
+                    <span id="18" data-bbox="919,145,197,19">Tools & Home Improvement</span>
+                </li>
+                <li data-bbox="8,181,172,53">
+                    <span id="19" data-bbox="168,181,12,53"></span>
+                    <span id="20" data-bbox="20,198,140,19">Health & Household</span>
+                </li>
+                <li data-bbox="190,181,182,53">
+                    <span id="21" data-bbox="360,181,12,53"></span>
+                    <span id="22" data-bbox="202,198,150,19">Patio, Lawn & Garden</span>
+                </li>
+                <li data-bbox="382,181,107,53">
+                    <span id="23" data-bbox="477,181,12,53"></span>
+                    <span id="24" data-bbox="394,198,75,19">Electronics</span>
+                </li>
+                <li data-bbox="499,181,211,53">
+                    <span id="25" data-bbox="698,181,12,53"></span>
+                    <span id="26" data-bbox="511,198,179,19">Cell Phones & Accessories</span>
+                </li>
+                <li data-bbox="720,181,122,53">
+                    <span id="27" data-bbox="830,181,12,53"></span>
+                    <span id="28" data-bbox="732,198,90,19">Video Games</span>
+                </li>
+                <li data-bbox="852,181,206,53">
+                    <span id="29" data-bbox="1046,181,12,53"></span>
+                    <span id="30" data-bbox="864,198,174,19">Grocery & Gourmet Food</span>
+                </li>
+            </ul>
+        </div>
+        <main data-bbox="0,259,1280,1884">
+            <span data-bbox="20,254,304,54">One Stop Market</span>
+            <div data-bbox="20,343,1240,1800">
+                <div data-bbox="20,343,1240,1760">
+                    <strong data-bbox="20,340,161,24">Product Showcases</strong>
+                    <div data-bbox="20,379,1240,1724">
+                        <ol data-bbox="20,379,1240,1656">
+                            <img id="31" data-bbox="20,379,228,285" src="https://picsum.photos/seed/gingerbread/228/285">
+                            <div data-bbox="20,674,228,190">
+                                <a id="32" title="Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz." data-bbox="20,674,225,19">Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz.</a>
+                            </div>
+                            <img id="33" data-bbox="273,379,228,285" src="https://picsum.photos/seed/v8energy/228/285">
+                            <div data-bbox="273,674,228,230">
+                                <a id="34" title="V8 +Energy, Healthy Energy Drink, Steady Energy from Black and Green Tea, Pomegranate Blueberry, 8 Ounce Can ,Pack of 24" data-bbox="273,674,224,19">V8 +Energy, Healthy Energy Drink, Steady Energy from Black and Green Tea, Pomegranate Blueberry, 8 Ounce Can ,Pack of 24</a>
+                            </div>
+                            <img id="35" data-bbox="526,379,228,285" src="https://picsum.photos/seed/elmwoodtea/228/285">
+                            <div data-bbox="526,674,228,190">
+                                <a id="36" title="Elmwood Inn Fine Teas, Orange Vanilla Caffeine-free Fruit Infusion, 16-Ounce Pouch" data-bbox="526,674,210,19">Elmwood Inn Fine Teas, Orange Vanilla Caffeine-free Fruit Infusion, 16-Ounce Pouch</a>
+                            </div>
+                            <img id="37" data-bbox="779,379,228,285" src="https://picsum.photos/seed/sprinkles/228/285">
+                            <div data-bbox="779,674,228,270">
+                                <a id="38" title="Belle Of The Ball Princess Sprinkle Mix| Wedding Colorful Sprinkles| Cake Cupcake Cookie Sprinkles| Ice cream Candy Sprinkles| Yellow Gold Red Royal Red Rose Icing Flowers Decorating Sprinkles, 8OZ" data-bbox="779,674,171,19">Belle Of The Ball Princess Sprinkle Mix| Wedding Colorful Sprinkles| Cake Cupcake Cookie Sprinkles| Ice cream Candy Sprinkles| Yellow Gold Red Royal Red Rose Icing Flowers Decorating Sprinkles, 8OZ</a>
+                            </div>
+                            <img id="39" data-bbox="1032,379,228,285" src="https://picsum.photos/seed/cocowhip/228/285">
+                            <div data-bbox="1032,674,228,190">
+                                <a id="40" title="So Delicious Dairy Free CocoWhip Light, Vegan, Non-GMO Project Verified, 9 oz. Tub" data-bbox="1032,674,224,19">So Delicious Dairy Free CocoWhip Light, Vegan, Non-GMO Project Verified, 9 oz. Tub</a>
+                            </div>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add subtle interactive class to navigation items on hover
+            const navItems = document.querySelectorAll('div[data-bbox="0,128,1280,106"] li');
+            
+            navItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.style.transform = 'translateY(-2px)';
+                    item.style.transition = 'transform 0.2s ease-out';
+                });
+                item.addEventListener('mouseleave', () => {
+                    item.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Log to confirm script is running
+            console.log('UI Enhancements Loaded.');
+        });
+    </script>
+</body>
+</html>

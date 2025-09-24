@@ -1,0 +1,749 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_25.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,55\"><HEADER data-bbox=\"0,0,1280,55\"><DIV class=\"logo-wrapper\" data-bbox=\"10,17,0,22\"><IMG id=\"0\" src=\"https://www.openstreetmap.org/assets/osm_logo_256-c42880757823ee248967586fe5f29d2f623e59046d1fdf8a3c9071c0b396e987.png\" alt=\"OpenStreetMap Logo\" data-bbox=\"10,13,30,30\"></IMG></DIV><NAV data-bbox=\"178,0,227,55\"><DIV data-bbox=\"188,10,207,35\"><DIV class=\"edit-group\" data-bbox=\"188,10,77,35\"><A data-bbox=\"188,10,50,35\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Edit</text></A><BUTTON id=\"1\" type=\"button\" data-bbox=\"237,10,28,35\" class=\"possible-clickable-element\" data-testid=\"B\"></BUTTON></DIV><A id=\"2\" data-bbox=\"264,10,68,35\" class=\"possible-clickable-element\" data-testid=\"C\"><text>History</text></A><A id=\"3\" data-bbox=\"331,10,64,35\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Export</text></A></DIV></NAV><NAV data-bbox=\"708,0,572,55\"><UL data-bbox=\"722,13,405,27\"><A id=\"6\" data-bbox=\"889,13,87,27\" class=\"possible-clickable-element\" data-testid=\"E\"><text>Communities</text></A><A id=\"7\" data-bbox=\"980,13,63,27\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Copyright</text></A><A id=\"8\" data-bbox=\"1047,13,34,27\" class=\"possible-clickable-element\" data-testid=\"G\"><text>Help</text></A><A id=\"9\" data-bbox=\"1085,13,42,27\" class=\"possible-clickable-element\" data-testid=\"H\"><text>About</text></A></UL><DIV class=\"user-actions\" data-bbox=\"1135,10,135,35\"><A id=\"10\" data-bbox=\"1135,10,63,35\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Log In</text></A><A id=\"11\" data-bbox=\"1197,10,73,35\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Sign Up</text></A></DIV></NAV></HEADER><DIV class=\"main-content\" data-bbox=\"0,55,1280,665\"><DIV class=\"sidebar\" data-bbox=\"0,55,350,665\"><DIV class=\"directions-form\" data-bbox=\"0,55,350,213\"><FORM data-bbox=\"0,55,350,213\"><DIV class=\"input-wrapper\"><INPUT id=\"13\" type=\"text\" placeholder=\"From\" value=\"Kancamagus Highway, Livermore, Lincoln, Grafton County, New Hampshire, United States\" data-value=\"Kancamagus Highway, Livermore, Lincoln, Grafton County, New Hampshire, United States\" data-bbox=\"37,112,305,31\" class=\"possible-clickable-element\" data-testid=\"K\" style=\"\"></INPUT></DIV><DIV class=\"input-wrapper\"><INPUT id=\"14\" type=\"text\" placeholder=\"To\" value=\"Mount Washington, Coös County, New Hampshire, United States\" data-value=\"Mount Washington, CoÃ¶s County, New Hampshire, United States\" data-bbox=\"37,147,305,31\" class=\"possible-clickable-element\" data-testid=\"L\" style=\"\"></INPUT></DIV><DIV class=\"form-footer\" data-bbox=\"4,182,342,31\"><SELECT id=\"15\" data-value=\"0\" data-text=\"Bicycle (OSRM)\" data-bbox=\"37,182,262,31\" class=\"possible-clickable-element\" data-testid=\"M\"></SELECT><INPUT id=\"16\" value=\"Go\" type=\"submit\" data-bbox=\"307,182,35,31\" class=\"possible-clickable-element\" data-testid=\"N\" style=\"\"></INPUT></DIV><BUTTON id=\"17\" type=\"button\" data-bbox=\"37,217,132,31\" class=\"possible-clickable-element\" data-testid=\"O\"><text>Reverse Directions</text></BUTTON></FORM></DIV><DIV class=\"directions-panel\" data-bbox=\"0,268,350,912\"><DIV class=\"directions-panel-header\" data-bbox=\"16,284,318,46\"><H2 data-bbox=\"16,284,297,38\"><text>Directions</text></H2></DIV><P class=\"directions-summary\" data-bbox=\"16,330,318,21\"><text>Distance: 56km. Time: 4:17.</text></P><TABLE class=\"directions-table\" data-bbox=\"16,367,318,744\"><TR data-bbox=\"16,367,318,51\"><TD class=\"possible-clickable-element\" data-testid=\"P\"></TD><TD class=\"direction-details\" data-bbox=\"38,367,262,51\"><B id=\"20\" data-bbox=\"39,373,13,17\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>1.</text></B><B id=\"21\" data-bbox=\"109,373,160,17\" class=\"possible-clickable-element\" data-testid=\"R\"><text>Kancamagus Highway (NH 112)</text></B></TD><TD class=\"distance possible-clickable-element\" id=\"22\" data-bbox=\"300,367,34,51\" data-testid=\"S\"><text>5km</text></TD></TR><TR data-bbox=\"16,418,318,30\"><TD class=\"possible-clickable-element\" data-testid=\"T\"></TD><TD class=\"direction-details\" data-bbox=\"38,418,262,30\"><B id=\"24\" data-bbox=\"39,424,13,17\" class=\"possible-clickable-element\" data-testid=\"U\"><text>2.</text></B><B id=\"25\" data-bbox=\"142,424,107,17\" class=\"possible-clickable-element\" data-testid=\"V\"><text>Sawyer River Trail</text></B></TD><TD class=\"distance possible-clickable-element\" id=\"26\" data-bbox=\"300,418,34,30\" data-testid=\"W\"><text>1000m</text></TD></TR><TR data-bbox=\"16,448,318,30\"><TD class=\"possible-clickable-element\" data-testid=\"X\"></TD><TD class=\"direction-details\"><B id=\"28\" data-bbox=\"39,454,13,17\" class=\"possible-clickable-element\" data-testid=\"Y\"><text>3.</text></B></TD><TD class=\"distance possible-clickable-element\" id=\"29\" data-bbox=\"300,448,34,30\" data-testid=\"Z\"><text>1000m</text></TD></TR><TR data-bbox=\"16,478,318,30\"><TD class=\"possible-clickable-element\" data-testid=\"AA\"></TD><TD class=\"direction-details\"><B id=\"31\" data-bbox=\"39,484,13,17\" class=\"possible-clickable-element\" data-testid=\"AB\"><text>4.</text></B></TD><TD class=\"distance possible-clickable-element\" id=\"32\" data-bbox=\"300,478,34,30\" data-testid=\"AC\"><text>6km</text></TD></TR><TR data-bbox=\"16,508,318,30\"><TD class=\"possible-clickable-element\" data-testid=\"AD\"></TD><TD class=\"direction-details\"><B id=\"34\" data-bbox=\"39,514,13,17\" class=\"possible-clickable-element\" data-testid=\"AE\"><text>5.</text></B></TD><TD class=\"distance possible-clickable-element\" id=\"35\" data-bbox=\"300,508,34,30\" data-testid=\"AF\"><text>1.5km</text></TD></TR><TR data-bbox=\"16,538,318,51\"><TD class=\"possible-clickable-element\" data-testid=\"AG\"></TD><TD class=\"direction-details\" data-bbox=\"38,538,262,51\"><B id=\"37\" data-bbox=\"39,544,13,17\" class=\"possible-clickable-element\" data-testid=\"AH\"><text>6.</text></B><B id=\"38\" data-bbox=\"149,544,148,17\" class=\"possible-clickable-element\" data-testid=\"AI\"><text>Brunel Trail / Rob Brook Road</text></B></TD><TD class=\"distance possible-clickable-element\" id=\"39\" data-bbox=\"300,538,34,51\" data-testid=\"AJ\"><text>150m</text></TD></TR><TR data-bbox=\"16,589,318,30\"><TD class=\"possible-clickable-element\" data-testid=\"AK\"></TD><TD class=\"direction-details\"><B id=\"41\" data-bbox=\"39,595,13,17\" class=\"possible-clickable-element\" data-testid=\"AL\"><text>7.</text></B></TD><TD class=\"distance possible-clickable-element\" id=\"42\" data-bbox=\"300,589,34,30\" data-testid=\"AM\"><text>800m</text></TD></TR><TR data-bbox=\"16,619,318,30\"><TD class=\"possible-clickable-element\" data-testid=\"AN\"></TD><TD class=\"direction-details\"><B id=\"44\" data-bbox=\"39,625,13,17\" class=\"possible-clickable-element\" data-testid=\"AO\"><text>8.</text></B></TD><TD class=\"distance possible-clickable-element\" id=\"45\" data-bbox=\"300,619,34,30\" data-testid=\"AP\"><text>800m</text></TD></TR></TABLE></DIV></DIV><DIV class=\"map-area\" data-bbox=\"350,55,930,665\"><IMG id=\"53\" class=\"map-marker\" src=\"https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png\" style=\"left: 315px; top: 593px;\" data-bbox=\"665,593,25,41\"></IMG><IMG id=\"54\" class=\"map-marker\" src=\"https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png\" style=\"left: 591px; top: 96px;\" data-bbox=\"941,96,25,41\"></IMG><DIV class=\"map-controls\" data-bbox=\"350,55,930,0\"><SPAN id=\"55\" data-bbox=\"1250,75,20,20\" class=\"possible-clickable-element\" data-testid=\"AQ\"></SPAN><SPAN id=\"56\" data-bbox=\"1250,115,20,20\" class=\"possible-clickable-element\" data-testid=\"AR\"></SPAN><SPAN id=\"57\" data-bbox=\"1250,155,20,20\" class=\"possible-clickable-element\" data-testid=\"AS\"></SPAN><SPAN id=\"58\" data-bbox=\"1250,205,20,20\" class=\"possible-clickable-element\" data-testid=\"AT\"></SPAN><SPAN id=\"59\" data-bbox=\"1250,245,20,20\" class=\"possible-clickable-element\" data-testid=\"AU\"></SPAN><SPAN id=\"60\" data-bbox=\"1250,285,20,20\" class=\"possible-clickable-element\" data-testid=\"AV\"></SPAN><A id=\"61\" data-bbox=\"1240,325,40,40\" class=\"possible-clickable-element\" data-testid=\"AW\"></A><A id=\"62\" data-bbox=\"1240,375,40,40\" class=\"possible-clickable-element\" data-testid=\"AX\"></A></DIV><DIV class=\"map-scale\" data-bbox=\"355,681,91,34\"><DIV data-bbox=\"355,681,91,18\"><text>5 km</text></DIV><DIV data-bbox=\"355,697,88,18\"><text>3 mi</text></DIV></DIV><DIV class=\"map-attribution\" data-bbox=\"874,703,406,17\"><text>©</text><A id=\"63\" data-bbox=\"891,704,151,14\" class=\"possible-clickable-element\" data-testid=\"AY\"><text>OpenStreetMap contributors</text></A><A id=\"64\" data-bbox=\"1056,704,90,14\" class=\"possible-clickable-element\" data-testid=\"AZ\"><text>Make a Donation</text></A><A id=\"65\" data-bbox=\"1153,704,122,14\" class=\"possible-clickable-element\" data-testid=\"BA\"><text>Website and API terms</text></A></DIV></DIV></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    header|\n    <\n      div|\n      <a[A]| Edit >\n      <button[B]| >\n      <a[C]| History >\n      <a[D]| Export >\n    >\n    <\n      nav|\n      <\n        ul|\n        <a[E]| Communities >\n        <a[F]| Copyright >\n        <a[G]| Help >\n        <a[H]| About >\n      >\n      <\n        div|\n        <a[I]| Log In >\n        <a[J]| Sign Up >\n      >\n    >\n  >\n  <\n    div|\n    <\n      div|\n      <\n        form|\n        <input[K]| Kancamagus Highway, Livermore, Lincoln, Grafton County, New Hampshire, United States; From >\n        <input[L]| Mount Washington, Coös County, New Hampshire, United States; To >\n        <select[M]| >\n        <input[N]| Go >\n        <button[O]| Reverse Directions >\n      >\n      <\n        div|\n        <h2| Directions >\n        <p| Distance: 56km. Time: 4:17. >\n        <\n          table|\n          <\n            tr|\n            <td[P]| >\n            <\n              td|\n              <b[Q]| 1. >\n              <b[R]| Kancamagus Highway (NH 112) >\n            >\n            <td[S]| 5km >\n          >\n          <\n            tr|\n            <td[T]| >\n            <\n              td|\n              <b[U]| 2. >\n              <b[V]| Sawyer River Trail >\n            >\n            <td[W]| 1000m >\n          >\n          <\n            tr|\n            <td[X]| >\n            <b[Y]| 3. >\n            <td[Z]| 1000m >\n          >\n          <\n            tr|\n            <td[AA]| >\n            <b[AB]| 4. >\n            <td[AC]| 6km >\n          >\n          <\n            tr|\n            <td[AD]| >\n            <b[AE]| 5. >\n            <td[AF]| 1.5km >\n          >\n          <\n            tr|\n            <td[AG]| >\n            <\n              td|\n              <b[AH]| 6. >\n              <b[AI]| Brunel Trail / Rob Brook Road >\n            >\n            <td[AJ]| 150m >\n          >\n          <\n            tr|\n            <td[AK]| >\n            <b[AL]| 7. >\n            <td[AM]| 800m >\n          >\n          <\n            tr|\n            <td[AN]| >\n            <b[AO]| 8. >\n            <td[AP]| 800m >\n          >\n        >\n      >\n    >\n    <\n      div|\n      <span[AQ]| >\n      <span[AR]| >\n      <span[AS]| >\n      <span[AT]| >\n      <span[AU]| >\n      <span[AV]| >\n      <a[AW]| >\n      <a[AX]| >\n      <\n        div|\n        <div| 5 km >\n        <div| 3 mi >\n      >\n      <\n        div|\n        <text| © >\n        <a[AY]| OpenStreetMap contributors >\n        <a[AZ]| Make a Donation >\n        <a[BA]| Website and API terms >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 508.5,
+                "top": 0,
+                "right": 564.5,
+                "bottom": 16.5,
+                "width": 56,
+                "height": 16.5
+            },
+            "tag": "a",
+            "text": "Edit"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 564.5,
+                "top": 0,
+                "right": 589.5,
+                "bottom": 25.5,
+                "width": 25,
+                "height": 25.5
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 507.5,
+                "top": 26.5,
+                "right": 590.5,
+                "bottom": 45.5,
+                "width": 83,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "History"
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 507.5,
+                "top": 45.5,
+                "right": 590.5,
+                "bottom": 64.5,
+                "width": 83,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "Export"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 1048,
+                "top": 8,
+                "right": 1165,
+                "bottom": 27,
+                "width": 117,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "Communities"
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 1048,
+                "top": 27,
+                "right": 1165,
+                "bottom": 46,
+                "width": 117,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "Copyright"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 1048,
+                "top": 46,
+                "right": 1165,
+                "bottom": 65,
+                "width": 117,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "Help"
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 1048,
+                "top": 65,
+                "right": 1165,
+                "bottom": 84,
+                "width": 117,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "About"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 1173,
+                "top": 0,
+                "right": 1260,
+                "bottom": 27,
+                "width": 87,
+                "height": 27
+            },
+            "tag": "a",
+            "text": "Log In"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1173,
+                "top": 27,
+                "right": 1260,
+                "bottom": 62,
+                "width": 87,
+                "height": 35
+            },
+            "tag": "a",
+            "text": "Sign Up"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 16,
+                "top": 83,
+                "right": 334,
+                "bottom": 121,
+                "width": 318,
+                "height": 38
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 16,
+                "top": 131,
+                "right": 334,
+                "bottom": 169,
+                "width": 318,
+                "height": 38
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 16,
+                "top": 179,
+                "right": 279.484375,
+                "bottom": 217,
+                "width": 263.484375,
+                "height": 38
+            },
+            "tag": "select",
+            "text": "\n                            \n                            \n                            \n                        "
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 287.484375,
+                "top": 185.5,
+                "right": 334,
+                "bottom": 220.5,
+                "width": 46.515625,
+                "height": 35
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 181.734375,
+                "top": 101,
+                "right": 326,
+                "bottom": 135,
+                "width": 144.265625,
+                "height": 34
+            },
+            "tag": "button",
+            "text": "Reverse Directions"
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 16,
+                "top": 325,
+                "right": 54.59375,
+                "bottom": 383.5,
+                "width": 38.59375,
+                "height": 58.5
+            },
+            "tag": "td",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 58.59375,
+                "top": 337,
+                "right": 268.125,
+                "bottom": 354,
+                "width": 209.53125,
+                "height": 17
+            },
+            "tag": "b",
+            "text": "1."
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 58.59375,
+                "top": 354,
+                "right": 276.125,
+                "bottom": 371,
+                "width": 217.53125,
+                "height": 17
+            },
+            "tag": "b",
+            "text": "Kancamagus Highway (NH 112)"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 280.125,
+                "top": 325,
+                "right": 334,
+                "bottom": 383.5,
+                "width": 53.875,
+                "height": 58.5
+            },
+            "tag": "td",
+            "text": "5km"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 16,
+                "top": 383.5,
+                "right": 54.59375,
+                "bottom": 442.5,
+                "width": 38.59375,
+                "height": 59
+            },
+            "tag": "td",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 58.59375,
+                "top": 396,
+                "right": 268.125,
+                "bottom": 413,
+                "width": 209.53125,
+                "height": 17
+            },
+            "tag": "b",
+            "text": "2."
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 58.59375,
+                "top": 413,
+                "right": 276.125,
+                "bottom": 430,
+                "width": 217.53125,
+                "height": 17
+            },
+            "tag": "b",
+            "text": "Sawyer River Trail"
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 280.125,
+                "top": 383.5,
+                "right": 334,
+                "bottom": 442.5,
+                "width": 53.875,
+                "height": 59
+            },
+            "tag": "td",
+            "text": "1000m"
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 16,
+                "top": 442.5,
+                "right": 54.59375,
+                "bottom": 484.5,
+                "width": 38.59375,
+                "height": 42
+            },
+            "tag": "td",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 58.59375,
+                "top": 455,
+                "right": 268.125,
+                "bottom": 472,
+                "width": 209.53125,
+                "height": 17
+            },
+            "tag": "b",
+            "text": "3."
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 280.125,
+                "top": 442.5,
+                "right": 334,
+                "bottom": 484.5,
+                "width": 53.875,
+                "height": 42
+            },
+            "tag": "td",
+            "text": "1000m"
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 16,
+                "top": 484.5,
+                "right": 54.59375,
+                "bottom": 526.5,
+                "width": 38.59375,
+                "height": 42
+            },
+            "tag": "td",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 58.59375,
+                "top": 497,
+                "right": 268.125,
+                "bottom": 514,
+                "width": 209.53125,
+                "height": 17
+            },
+            "tag": "b",
+            "text": "4."
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 280.125,
+                "top": 484.5,
+                "right": 334,
+                "bottom": 526.5,
+                "width": 53.875,
+                "height": 42
+            },
+            "tag": "td",
+            "text": "6km"
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 16,
+                "top": 526.5,
+                "right": 54.59375,
+                "bottom": 568.5,
+                "width": 38.59375,
+                "height": 42
+            },
+            "tag": "td",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 58.59375,
+                "top": 539,
+                "right": 268.125,
+                "bottom": 556,
+                "width": 209.53125,
+                "height": 17
+            },
+            "tag": "b",
+            "text": "5."
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 280.125,
+                "top": 526.5,
+                "right": 334,
+                "bottom": 568.5,
+                "width": 53.875,
+                "height": 42
+            },
+            "tag": "td",
+            "text": "1.5km"
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 16,
+                "top": 568.5,
+                "right": 54.59375,
+                "bottom": 627.5,
+                "width": 38.59375,
+                "height": 59
+            },
+            "tag": "td",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 58.59375,
+                "top": 581,
+                "right": 268.125,
+                "bottom": 598,
+                "width": 209.53125,
+                "height": 17
+            },
+            "tag": "b",
+            "text": "6."
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 58.59375,
+                "top": 598,
+                "right": 276.125,
+                "bottom": 615,
+                "width": 217.53125,
+                "height": 17
+            },
+            "tag": "b",
+            "text": "Brunel Trail / Rob Brook Road"
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 280.125,
+                "top": 568.5,
+                "right": 334,
+                "bottom": 627.5,
+                "width": 53.875,
+                "height": 59
+            },
+            "tag": "td",
+            "text": "150m"
+        },
+        {
+            "keep": true,
+            "id": "AK",
+            "rects": {
+                "left": 16,
+                "top": 627.5,
+                "right": 54.59375,
+                "bottom": 669.5,
+                "width": 38.59375,
+                "height": 42
+            },
+            "tag": "td",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AL",
+            "rects": {
+                "left": 58.59375,
+                "top": 640,
+                "right": 268.125,
+                "bottom": 657,
+                "width": 209.53125,
+                "height": 17
+            },
+            "tag": "b",
+            "text": "7."
+        },
+        {
+            "keep": true,
+            "id": "AM",
+            "rects": {
+                "left": 280.125,
+                "top": 627.5,
+                "right": 334,
+                "bottom": 669.5,
+                "width": 53.875,
+                "height": 42
+            },
+            "tag": "td",
+            "text": "800m"
+        },
+        {
+            "keep": true,
+            "id": "AN",
+            "rects": {
+                "left": 16,
+                "top": 669.5,
+                "right": 54.59375,
+                "bottom": 711.5,
+                "width": 38.59375,
+                "height": 42
+            },
+            "tag": "td",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AO",
+            "rects": {
+                "left": 58.59375,
+                "top": 682,
+                "right": 268.125,
+                "bottom": 699,
+                "width": 209.53125,
+                "height": 17
+            },
+            "tag": "b",
+            "text": "8."
+        },
+        {
+            "keep": true,
+            "id": "AP",
+            "rects": {
+                "left": 280.125,
+                "top": 669.5,
+                "right": 334,
+                "bottom": 711.5,
+                "width": 53.875,
+                "height": 42
+            },
+            "tag": "td",
+            "text": "800m"
+        },
+        {
+            "keep": true,
+            "id": "AQ",
+            "rects": {
+                "left": 1220,
+                "top": 80,
+                "right": 1260,
+                "bottom": 120,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AR",
+            "rects": {
+                "left": 1220,
+                "top": 130,
+                "right": 1260,
+                "bottom": 170,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AS",
+            "rects": {
+                "left": 1220,
+                "top": 180,
+                "right": 1260,
+                "bottom": 220,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AT",
+            "rects": {
+                "left": 1220,
+                "top": 230,
+                "right": 1260,
+                "bottom": 270,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AU",
+            "rects": {
+                "left": 1220,
+                "top": 280,
+                "right": 1260,
+                "bottom": 320,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AV",
+            "rects": {
+                "left": 1220,
+                "top": 330,
+                "right": 1260,
+                "bottom": 370,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AW",
+            "rects": {
+                "left": 1220,
+                "top": 380,
+                "right": 1260,
+                "bottom": 420,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "a",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AX",
+            "rects": {
+                "left": 1220,
+                "top": 430,
+                "right": 1260,
+                "bottom": 470,
+                "width": 40,
+                "height": 40
+            },
+            "tag": "a",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AY",
+            "rects": {
+                "left": 848,
+                "top": 691,
+                "right": 1010,
+                "bottom": 706,
+                "width": 162,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "OpenStreetMap contributors"
+        },
+        {
+            "keep": true,
+            "id": "AZ",
+            "rects": {
+                "left": 1023,
+                "top": 691,
+                "right": 1119,
+                "bottom": 706,
+                "width": 96,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Make a Donation"
+        },
+        {
+            "keep": true,
+            "id": "BA",
+            "rects": {
+                "left": 1132,
+                "top": 691,
+                "right": 1259,
+                "bottom": 706,
+                "width": 127,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Website and API terms"
+        }
+    ]
+}

@@ -1,0 +1,217 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_28.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,1618\"><DIV data-bbox=\"0,0,88,717\"><IMG id=\"0\" title=\"Magento Admin Panel\" data-bbox=\"27,17,35,41\" src=\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgdmlld0JveD0iMCAwIDI1NiAyNTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiPjxwYXRoIGQ9Im0xNzQgNzZsLTMxIDIwbC0xNy0xMmw0OC0zMmMxLTIgMS0zIDEtNmMwLTEzLTExLTI0LTI0LTI0bC0xMiAwYy0yIDAtMyAxLTMgM2wtMTkgMTNsLTMxLTIwYy0yLTEtNC0xLTUgMGwtNDggMzJjLTIgMS0zIDMtMyA1bDAgNzRjMCAyIDEgNCAzIDVsNDggMzJjMiAxIDQgMSA1IDBsMzEtMjBsMTcgMTJsLTQ4IDMyYy0yIDEtMyAzLTIgNWwwIDEyYzAgMiAxIDMgMyAzbDg2IDBjMiAwIDMtMSA0LTNsMC03NGMwLTQgLTEtNS0zLTZ6IiBmaWxsPSIjZjA1ZTMyIi8+PC9zdmc+\"></IMG><UL data-bbox=\"0,75,88,646\"><SPAN id=\"1\" data-bbox=\"14,112,60,13\" class=\"possible-clickable-element\"><text>Dashboard</text></SPAN><LI data-bbox=\"0,137,88,62\"><SPAN id=\"2\" data-bbox=\"30,174,28,13\" class=\"possible-clickable-element\"><text>Sales</text></SPAN></LI><LI data-bbox=\"0,199,88,62\"><SPAN id=\"3\" data-bbox=\"22,236,44,13\" class=\"possible-clickable-element\"><text>Catalog</text></SPAN></LI><LI data-bbox=\"-165,92,238,88\" class=\"possible-clickable-element\" data-testid=\"A\"></LI></UL></DIV><LI data-bbox=\"0,261,88,62\"><SPAN id=\"4\" data-bbox=\"14,298,60,13\"><text>Customers</text></SPAN></LI><LI data-bbox=\"0,323,88,62\"><SPAN id=\"5\" data-bbox=\"14,360,60,13\"><text>Marketing</text></SPAN></LI><LI data-bbox=\"0,385,88,62\"><SPAN id=\"19\" data-bbox=\"19,422,50,13\"><text>Content</text></SPAN></LI><LI data-bbox=\"0,447,88,62\"><SPAN id=\"20\" data-bbox=\"22,484,44,13\"><text>Reports</text></SPAN></LI><LI data-bbox=\"0,509,88,62\"><SPAN id=\"21\" data-bbox=\"25,546,38,13\"><text>Stores</text></SPAN></LI><LI data-bbox=\"0,571,88,62\"><SPAN id=\"22\" data-bbox=\"25,608,38,13\"><text>System</text></SPAN></LI><SPAN id=\"23\" data-bbox=\"32,670,24,13\"><text>Find Partners & Extensions</text></SPAN><DIV data-bbox=\"88,0,1192,1618\"><DIV data-bbox=\"118,0,1132,51\"><DIV data-bbox=\"118,0,1132,51\"><DIV data-bbox=\"119,0,1130,50\"><SPAN data-bbox=\"1077,15,118,19\"><I class=\"fas fa-info-circle\"></I><text>System Messages</text></SPAN><DIV data-bbox=\"119,0,958,46\"><A data-bbox=\"981,0,81,34\" class=\"possible-clickable-element\" data-testid=\"B\"><text>View Details</text></A><DIV data-bbox=\"129,0,852,49\"><text>Task \"Update attributes for 16 selected products\": 1 item(s) have been successfully updated.</text></DIV></DIV></DIV></DIV></DIV><HEADER data-bbox=\"88,51,1192,80\"><H1 data-bbox=\"118,82,740,34\"><text>Dashboard</text></H1><A title=\"Notifications\" data-bbox=\"1081,77,60,33\" class=\"possible-clickable-element\" data-testid=\"C\"><I class=\"fas fa-bell\"></I></A></HEADER><MAIN data-bbox=\"88,143,1192,1335\"><DIV data-bbox=\"118,143,1132,77\"><DIV data-bbox=\"133,164,192,34\"><SPAN data-bbox=\"133,172,42,18\"><text>Scope:</text></SPAN><DIV data-bbox=\"178,164,138,34\"><BUTTON type=\"button\" data-bbox=\"185,164,131,34\"><text>All Store Views</text><I class=\"fas fa-caret-down possible-clickable-element\" data-testid=\"D\"></I></BUTTON></DIV><A title=\"What is this?\" data-bbox=\"325,169,25,22\" class=\"possible-clickable-element\" data-testid=\"E\"><I class=\"far fa-question-circle\"></I></A></DIV><I class=\"fas fa-sync-alt possible-clickable-element\" data-testid=\"F\"></I></DIV><DIV data-bbox=\"118,250,1132,1198\"><SECTION data-bbox=\"118,250,1132,134\"><DIV data-bbox=\"118,276,833,82\"><HEADER data-bbox=\"118,276,833,25\"><text>Advanced Reporting</text></HEADER><DIV data-bbox=\"118,311,833,47\"><text>Gain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.</text></DIV></DIV><SPAN data-bbox=\"993,306,210,22\"><text>Go to Advanced Reporting</text></SPAN></SECTION><DIV data-bbox=\"118,414,377,1034\"><DIV data-bbox=\"118,414,342,58\"><DIV data-bbox=\"118,414,342,25\"><text>Lifetime Sales</text></DIV><SPAN data-bbox=\"118,439,63,32\"><text>$0.00</text></SPAN></DIV><DIV data-bbox=\"118,502,342,57\"><DIV data-bbox=\"118,502,342,24\"><text>Average Order</text></DIV><SPAN data-bbox=\"118,526,63,32\"><text>$0.00</text></SPAN></DIV><DIV data-bbox=\"118,589,342,24\"><text>Last Orders</text></DIV></DIV><DIV data-bbox=\"495,414,755,44\"><text>Chart is disabled. To enable the chart, click</text><A data-bbox=\"807,419,31,19\" class=\"possible-clickable-element\" data-testid=\"G\"><text>here</text></A></DIV><UL data-bbox=\"515,468,715,51\"><LI data-bbox=\"515,468,179,51\"><SPAN data-bbox=\"515,468,169,18\"><text>Revenue</text></SPAN><SPAN data-bbox=\"515,486,63,32\"><text>$0.00</text></SPAN></LI><LI data-bbox=\"694,468,179,51\"><SPAN data-bbox=\"694,468,169,18\"><text>Tax</text></SPAN><SPAN data-bbox=\"694,486,63,32\"><text>$0.00</text></SPAN></LI><LI data-bbox=\"873,468,178,51\"><SPAN data-bbox=\"873,468,168,18\"><text>Shipping</text></SPAN><SPAN data-bbox=\"873,486,63,32\"><text>$0.00</text></SPAN></LI></UL><DIV data-bbox=\"495,579,755,321\"><UL class=\"dashboard-tabs\" data-bbox=\"495,579,755,49\"><A title=\"Bestsellers\" data-bbox=\"496,580,110,48\" class=\"active possible-clickable-element\" data-testid=\"H\"><text>Bestsellers</text></A><A title=\"Most Viewed Products\" data-bbox=\"613,580,189,47\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Most Viewed</text></A><A title=\"New Customers\" data-bbox=\"809,580,146,47\" class=\"possible-clickable-element\" data-testid=\"J\"><text>New Customers</text></A></UL><SPAN data-bbox=\"515,657,52,18\"><text>Product</text></SPAN><SPAN data-bbox=\"1090,657,33,18\"><text>Price</text></SPAN><SPAN data-bbox=\"1171,657,59,18\"><text>Quantity</text></SPAN><TR data-bbox=\"515,648,715,38\"></TR><TD data-bbox=\"515,686,501,39\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Quest Lumaflex™ Band</text></TD><TD data-bbox=\"1016,686,107,39\" class=\"possible-clickable-element\" data-testid=\"L\"><text>$19.00</text></TD></DIV></DIV></MAIN></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    div|\n    <img| Magento Admin Panel >\n    <\n      ul|\n      <span| Dashboard >\n      <span| Sales >\n      <span| Catalog >\n      <li[A]| >\n    >\n  >\n  <span| Customers >\n  <span| Marketing >\n  <span| Content >\n  <span| Reports >\n  <span| Stores >\n  <span| System >\n  <span| Find Partners & Extensions >\n  <\n    div|\n    <\n      div|\n      <span| System Messages >\n      <\n        div|\n        <a[B]| View Details >\n        <div| Task \"Update attributes for 16 selected products\": 1 item(s) have been successfully updated. >\n      >\n    >\n    <\n      header|\n      <h1| Dashboard >\n      <a[C]| Notifications >\n    >\n    <\n      main|\n      <\n        div|\n        <span| Scope: >\n        <text| All Store Views >\n        <i[D]| >\n        <a[E]| What is this? >\n      >\n      <i[F]| >\n      <\n        div|\n        <\n          section|\n          <\n            div|\n            <header| Advanced Reporting >\n            <div| Gain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data. >\n          >\n          <span| Go to Advanced Reporting >\n        >\n        <\n          div|\n          <\n            div|\n            <div| Lifetime Sales >\n            <span| $0.00 >\n          >\n          <\n            div|\n            <div| Average Order >\n            <span| $0.00 >\n          >\n          <div| Last Orders >\n        >\n        <\n          div|\n          <text| Chart is disabled. To enable the chart, click >\n          <a[G]| here >\n        >\n        <\n          ul|\n          <\n            li|\n            <span| Revenue >\n            <span| $0.00 >\n          >\n          <\n            li|\n            <span| Tax >\n            <span| $0.00 >\n          >\n          <\n            li|\n            <span| Shipping >\n            <span| $0.00 >\n          >\n        >\n        <\n          div|\n          <\n            ul|\n            <a[H]| Bestsellers Bestsellers >\n            <a[I]| Most Viewed Products Most Viewed >\n            <a[J]| New Customers New Customers >\n          >\n          <span| Product >\n          <span| Price >\n          <span| Quantity >\n          <td[K]| Quest Lumaflex™ Band >\n          <td[L]| $19.00 >\n        >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": -1,
+            "rects": {
+                "left": 44,
+                "top": 271,
+                "right": 44,
+                "bottom": 271,
+                "width": 0,
+                "height": 0
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": -1,
+            "rects": {
+                "left": 44,
+                "top": 332,
+                "right": 44,
+                "bottom": 332,
+                "width": 0,
+                "height": 0
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": -1,
+            "rects": {
+                "left": 44,
+                "top": 406,
+                "right": 44,
+                "bottom": 406,
+                "width": 0,
+                "height": 0
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 0,
+                "top": 465,
+                "right": 88,
+                "bottom": 495,
+                "width": 88,
+                "height": 30
+            },
+            "tag": "li",
+            "text": "\n                        \n                    "
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 593,
+                "top": 47,
+                "right": 673,
+                "bottom": 64,
+                "width": 80,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "View Details"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 1254,
+                "top": 118,
+                "right": 1272,
+                "bottom": 142,
+                "width": 18,
+                "height": 24
+            },
+            "tag": "a",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 736,
+                "top": 187,
+                "right": 744,
+                "bottom": 200.328125,
+                "width": 8,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 767,
+                "top": 184.5,
+                "right": 781,
+                "bottom": 201.5,
+                "width": 14,
+                "height": 17
+            },
+            "tag": "a",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 1265,
+                "top": 187,
+                "right": 1278,
+                "bottom": 200.328125,
+                "width": 13,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 1233,
+                "top": 428,
+                "right": 1262,
+                "bottom": 445,
+                "width": 29,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "here"
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 931,
+                "top": 572,
+                "right": 1046,
+                "bottom": 638,
+                "width": 115,
+                "height": 66
+            },
+            "tag": "a",
+            "text": "Bestsellers"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 1046,
+                "top": 572,
+                "right": 1137,
+                "bottom": 638,
+                "width": 91,
+                "height": 66
+            },
+            "tag": "a",
+            "text": "Most Viewed"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1137,
+                "top": 572,
+                "right": 1249,
+                "bottom": 638,
+                "width": 112,
+                "height": 66
+            },
+            "tag": "a",
+            "text": "New Customers"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 941,
+                "top": 686,
+                "right": 1175,
+                "bottom": 720,
+                "width": 234,
+                "height": 34
+            },
+            "tag": "td",
+            "text": "Quest Lumaflex™ Band"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 1185,
+                "top": 686,
+                "right": 1263,
+                "bottom": 720,
+                "width": 78,
+                "height": 34
+            },
+            "tag": "td",
+            "text": "$19.00"
+        }
+    ]
+}

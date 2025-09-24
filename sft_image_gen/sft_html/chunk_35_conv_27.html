@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magento Admin - Sales Report</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+        :root {
+            --sidebar-bg: #2d3748;
+            --sidebar-text: #e2e8f0;
+            --sidebar-hover-bg: #4a5568;
+            --sidebar-active-bg: #1a202c;
+            --sidebar-active-border: #f68b1e;
+            --main-bg: #f7fafc;
+            --card-bg: #ffffff;
+            --text-primary: #2d3748;
+            --text-secondary: #718096;
+            --border-color: #e2e8f0;
+            --primary-color: #f68b1e;
+            --primary-color-hover: #dd7b18;
+            --secondary-color: #4a5568;
+            --secondary-color-hover: #2d3748;
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --border-radius: 8px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            background-color: var(--main-bg);
+            color: var(--text-primary);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body[data-bbox="0,-480,1280,1419"] {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            width: 88px;
+            background-color: var(--sidebar-bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 1rem;
+            transition: width 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .sidebar-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            padding: 5px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .sidebar-nav {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .sidebar-nav li {
+            position: relative;
+        }
+        
+        .sidebar-nav a {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            color: var(--sidebar-text);
+            text-decoration: none;
+            padding: 0.8rem 0;
+            text-align: center;
+            font-size: 0.75rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .sidebar-nav a:hover {
+            background-color: var(--sidebar-hover-bg);
+        }
+        
+        .sidebar-nav li.active a {
+             background-color: var(--sidebar-active-bg);
+             border-left: 4px solid var(--primary-color);
+             padding-left: calc(1rem - 4px);
+        }
+        .sidebar-nav li.active a span {
+            color: var(--primary-color);
+        }
+
+        .sidebar-nav a i {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        /* Hide submenus (not implemented for this view) */
+        .sidebar-nav li > div {
+            display: none;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex-grow: 1;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .scope-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .scope-selector div[data-bbox="178,164,124,34"] {
+             width: 124px;
+             height: 34px;
+             background: var(--border-color);
+             border-radius: var(--border-radius);
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-style: italic;
+             font-size: 0.9rem;
+        }
+         .scope-selector div[data-bbox="178,164,124,34"]::before {
+             content: 'All Store Views';
+         }
+
+        button, input[type="text"], select {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            padding: 0.6rem 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        input[type="text"], select {
+            background-color: var(--card-bg);
+        }
+
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(246, 139, 30, 0.3);
+        }
+        
+        button {
+            cursor: pointer;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        button[title="Show Report"] {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        button[title="Show Report"]:hover {
+            background-color: var(--primary-color-hover);
+            border-color: var(--primary-color-hover);
+        }
+        
+        button[title="Export"] {
+            background-color: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+            padding: 0.5rem 1rem;
+        }
+        button[title="Export"]:hover {
+            background-color: var(--secondary-color-hover);
+            border-color: var(--secondary-color-hover);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .card-header, .card-body, .card-footer {
+            padding: 1.5rem;
+        }
+        .card-header {
+            border-bottom: 1px solid var(--border-color);
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+        .card-header::before {
+            content: 'Filter Report';
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        .form-grid > label {
+            text-align: right;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .form-grid .form-field {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-grid .input-with-icon {
+            position: relative;
+            display: flex;
+        }
+
+        .form-grid .input-with-icon input {
+            padding-right: 2.5rem;
+            width: 150px;
+        }
+        
+        .form-grid .input-with-icon button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 40px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            padding: 0;
+        }
+        .form-grid .input-with-icon button:hover {
+            color: var(--primary-color);
+        }
+
+        .form-grid .field-note {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+        
+        .info-bar {
+            background-color: #e6f4ff;
+            color: #005a9e;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* Table styles */
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .results-count {
+            font-weight: 500;
+        }
+
+        .export-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .export-controls label {
+            font-weight: 500;
+        }
+        
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .data-table thead th {
+            font-weight: 600;
+            background-color: #f8f9fa;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
+        
+        .data-table tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .data-table tfoot {
+            font-weight: 600;
+            background-color: #f8f9fa;
+            border-top: 2px solid var(--border-color);
+        }
+        
+        .data-table td, .data-table tfoot th:not(:first-child) {
+            text-align: right;
+        }
+        .data-table thead th:first-child, .data-table tbody th, .data-table tfoot th:first-child {
+            text-align: left;
+        }
+
+        .row-hover {
+            background-color: #f1f5f9;
+        }
+
+    </style>
+</head>
+<body data-bbox="0,-480,1280,1419">
+    <aside class="sidebar" data-bbox="0,-1,88,721">
+        <div class="sidebar-logo">
+            <img id="0" title="Magento Admin Panel" data-bbox="27,16,35,41" src="https://picsum.photos/id/1025/50/50">
+        </div>
+        <ul class="sidebar-nav" data-bbox="0,74,88,646">
+            <li><a href="#"><i class="fa-solid fa-tachometer-alt"></i><span id="1" data-text="Dashboard" data-bbox="14,111,60,13">Dashboard</span></a></li>
+            <li data-bbox="0,136,88,62" class="active">
+                <a href="#"><i class="fa-solid fa-chart-line"></i><span id="2" data-text="Sales" data-bbox="30,173,28,13">Sales</span></a>
+                <div data-bbox="-180,-1,268,812"> <strong data-text="Sales" data-bbox="-150,19,180,30"> Sales </strong> <li data-bbox="-165,91,238,308"> <ul data-bbox="-165,91,238,308"> <span data-text="Braintree Virtual Terminal" data-bbox="-150,368,174,19"> Braintree Virtual Terminal </span> </ul> </li> </div>
+            </li>
+            <li data-bbox="0,198,88,62">
+                <a href="#"><i class="fa-solid fa-tags"></i><span id="3" data-text="Catalog" data-bbox="22,235,44,13">Catalog</span></a>
+                <div data-bbox="-180,-1,268,812"> <strong data-text="Catalog" data-bbox="-150,19,180,30"> Catalog </strong> <li data-bbox="-165,91,238,88"> <ul data-bbox="-165,91,238,88"> </ul> </li> </div>
+            </li>
+            <li data-bbox="0,260,88,62">
+                <a href="#"><i class="fa-solid fa-users"></i><span id="4" data-text="Customers" data-bbox="14,297,60,13">Customers</span></a>
+                <div data-bbox="-180,-1,268,812"> <strong data-text="Customers" data-bbox="-150,19,180,30"> Customers </strong> <ul data-bbox="-180,91,268,720"> <span data-text="Login as Customer Log" data-bbox="-150,192,151,19"> Login as Customer Log </span> </ul> </div>
+            </li>
+            <li data-bbox="0,322,88,62">
+                <a href="#"><i class="fa-solid fa-bullhorn"></i><span id="5" data-text="Marketing" data-bbox="14,359,60,13">Marketing</span></a>
+                <div data-bbox="-448,-1,536,812"> <strong data-text="Marketing" data-bbox="-418,19,448,30"> Marketing </strong> <ul data-bbox="-448,91,536,720"> <ul data-bbox="-180,91,268,417"> <li data-bbox="-165,91,238,230"> <ul data-bbox="-165,145,238,176"> </ul> </li> <li data-bbox="-165,366,238,142"> <ul data-bbox="-165,420,238,88"> </ul> </li> </ul> </ul> </div>
+            </li>
+            <li data-bbox="0,384,88,62">
+                <a href="#"><i class="fa-solid fa-file-alt"></i><span id="6" data-text="Content" data-bbox="19,421,50,13">Content</span></a>
+                <div data-bbox="-180,-1,268,812"> <strong data-text="Content" data-bbox="-150,19,180,30"> Content </strong> <ul data-bbox="-180,91,268,720"> <li data-bbox="-165,91,238,230"> <ul data-bbox="-165,145,238,176"> </ul> </li> <li data-bbox="-165,366,238,98"> </li> <li data-bbox="-165,509,238,186"> <ul data-bbox="-165,563,238,132"> </ul> </li> </ul> </div>
+            </li>
+            <li data-bbox="0,446,88,62">
+                <a href="#"><i class="fa-solid fa-chart-bar"></i><span id="7" data-text="Reports" data-bbox="22,483,44,13">Reports</span></a>
+                <div data-bbox="-984,-1,1072,812"> <strong data-text="Reports" data-bbox="-954,19,984,30"> Reports </strong> <ul data-bbox="-984,91,1072,720"> <li data-bbox="-165,91,238,142"> <span data-text="Business Intelligence" data-bbox="-150,103,159,22"> Business Intelligence </span> <ul data-bbox="-165,145,238,88"> </ul> </li> </ul> </div>
+            </li>
+            <li data-bbox="0,508,88,62">
+                <a href="#"><i class="fa-solid fa-store"></i><span id="8" data-text="Stores" data-bbox="25,545,38,13">Stores</span></a>
+                <div data-bbox="-448,-1,536,812"> <strong data-text="Stores" data-bbox="-418,19,448,30"> Stores </strong> <ul data-bbox="-448,91,536,720"> <ul data-bbox="-180,91,268,373"> <li data-bbox="-165,91,238,142"> <ul data-bbox="-165,145,238,88"> </ul> </li> <li data-bbox="-165,278,238,186"> <ul data-bbox="-165,332,238,132"> </ul> </li> </ul> </ul> </div>
+            </li>
+            <li data-bbox="0,570,88,62">
+                <a href="#"><i class="fa-solid fa-cogs"></i><span id="9" data-text="System" data-bbox="25,607,38,13">System</span></a>
+                <div data-bbox="-448,-1,536,812"> <strong data-text="System" data-bbox="-418,19,448,30"> System </strong> <ul data-bbox="-448,91,536,720"> <ul data-bbox="-180,91,268,560"> <li data-bbox="-165,91,238,186"> <ul data-bbox="-165,145,238,132"> </ul> </li> <li data-bbox="-165,322,238,98"> </li> <li data-bbox="-165,465,238,186"> <ul data-bbox="-165,519,238,132"> <span data-text="Manage Encryption Key" data-bbox="-150,619,158,19"> Manage Encryption Key </span> </ul> </li> </ul> </ul> </div>
+            </li>
+            <li><a href="#"><i class="fa-solid fa-puzzle-piece"></i><span id="10" data-text="Find Partners & Extensions" data-bbox="32,669,24,13">Partners</span></a></li>
+        </ul>
+    </aside>
+
+    <div class="main-content" data-bbox="88,-480,1192,1419">
+        <header class="page-header">
+            <h1 class="page-title">Orders Report</h1>
+            <div class="header-actions">
+                <div class="scope-selector" data-bbox="133,164,178,34">
+                    <span data-text="Scope:" data-bbox="133,172,42,18">Scope:</span>
+                    <div data-bbox="178,164,124,34"></div>
+                    <span data-text="What is this?" data-bbox="335,168,1,1" style="opacity:0; width:0; height:0;">What is this?</span>
+                </div>
+                <button title="Show Report" type="button" data-bbox="1129,16,136,46">
+                    <i class="fa-solid fa-play-circle"></i>
+                    <span id="11" data-text="Show Report" data-bbox="1146,27,102,22">Show Report</span>
+                </button>
+            </div>
+        </header>
+
+        <main data-bbox="88,-337,1192,1136">
+            <div data-bbox="118,-99,1132,848">
+                <fieldset class="card" data-bbox="118,-99,1132,549">
+                    <div class="card-body">
+                        <div class="info-bar" data-bbox="88,-44,1162,59">
+                            <div data-bbox="409,-44,551,59">
+                                <div data-text="The Order Updated report is created in real time and does not require a refresh." data-bbox="409,-1,551,16">The Order Updated report is created in real time and does not require a refresh.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <label data-bbox="88,45,1162,33">
+                                <span data-text="Period" data-bbox="334,54,45,17">Period</span>
+                            </label>
+                            <div class="form-field">
+                                <select title="Period" data-value="month" data-text="Month" data-bbox="409,45,100,33">
+                                    <option value="day" data-text="Day">Day</option>
+                                    <option value="month" selected="selected" data-text="Month">Month</option>
+                                    <option value="year" data-text="Year">Year</option>
+                                </select>
+                            </div>
+
+                            <label id="12" data-bbox="118,108,261,32">
+                                <span data-text="From" data-bbox="344,117,35,17">From</span>
+                            </label>
+                            <div class="form-field" data-bbox="409,108,150,33">
+                                <div class="input-with-icon">
+                                    <input id="13" title="From" value="10/1/22" type="text" data-bbox="409,108,150,33">
+                                    <button id="14" type="button" data-bbox="527,108,24,32"><i class="fa-solid fa-calendar-alt"></i><span data-text="undefined" data-bbox="526,107,1,1" style="opacity:0; width:0; height:0;"></span></button>
+                                </div>
+                            </div>
+
+                            <label id="15" data-bbox="118,171,261,32">
+                                <span data-text="To" data-bbox="363,180,16,17">To</span>
+                            </label>
+                            <div class="form-field" data-bbox="409,171,150,33">
+                                <div class="input-with-icon">
+                                    <input id="16" title="To" value="12/31/22" type="text" data-bbox="409,171,150,33">
+                                    <button id="17" type="button" data-bbox="527,171,24,32"><i class="fa-solid fa-calendar-alt"></i><span data-text="undefined" data-bbox="526,170,1,1" style="opacity:0; width:0; height:0;"></span></button>
+                                </div>
+                            </div>
+
+                            <label id="18" data-bbox="118,234,261,32">
+                                <span data-text="Order Status" data-bbox="291,243,88,17">Order Status</span>
+                            </label>
+                            <div class="form-field" data-bbox="409,234,551,60">
+                                <select id="19" data-value="0" data-text="Any" data-bbox="409,234,117,33">
+                                    <option value="0" selected="selected" data-text="Any">Any</option>
+                                    <option value="1" data-text="Specified">Specified</option>
+                                </select>
+                                <div class="field-note" data-text="Applies to Any of the Specified Order Statuses except canceled orders" data-bbox="409,277,551,17">Applies to Any of the Specified Order Statuses except canceled orders</div>
+                            </div>
+
+                            <label id="20" data-bbox="118,324,261,32">
+                                <span data-text="Empty Rows" data-bbox="295,332,84,17">Empty Rows</span>
+                            </label>
+                            <div class="form-field">
+                                <select id="21" title="Empty Rows" data-value="0" data-text="No" data-bbox="409,324,85,33">
+                                    <option value="1" data-text="Yes">Yes</option>
+                                    <option value="0" selected="selected" data-text="No">No</option>
+                                </select>
+                            </div>
+
+                            <label id="22" data-bbox="118,387,261,32">
+                                <span data-text="Show Actual Values" data-bbox="246,396,133,16">Show Actual Values</span>
+                            </label>
+                            <div class="form-field">
+                                <select id="23" data-value="0" data-text="No" data-bbox="409,387,85,33">
+                                    <option value="1" data-text="Yes">Yes</option>
+                                    <option value="0" selected="selected" data-text="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="card" data-bbox="118,450,1132,299">
+                    <div class="results-header" data-bbox="118,450,1132,77">
+                        <div class="results-count" data-text="records found" data-bbox="118,494,109,33">
+                            <span data-text="3" data-bbox="119,501,12,19">3</span> records found
+                        </div>
+                        <div class="export-controls" data-bbox="957,450,293,33">
+                            <label id="24" data-text="Export to:" data-bbox="964,450,66,33">Export to:</label>
+                            <select id="25" data-value="http://localhost:7780/admin/reports/report_sales/exportSalesCsv/filter/cmVwb3J0X3R5cGU9Y3JlYXRlZF9hdF9vcmRlciZwZXJpb2RfdHlwZT1tb250aCZmcm9tPTEwJTJGMDElMkYyMDIyJnRvPTEyJTJGMzElMkYyMDIyJnNob3dfb3JkZXJfc3RhdHVzZXM9MCZzaG93X2VtcHR5X3Jvd3M9MCZzaG93X2FjdHVhbF9jb2x1bW5zPTA%3D/" data-text="CSV" data-bbox="1041,450,122,33">
+                                <option value="http://localhost:7780/admin/reports/report_sales/exportSalesCsv/filter/cmVwb3J0X3R5cGU9Y3JlYXRlZF9hdF9vcmRlciZwZXJpb2RfdHlwZT1tb250aCZmcm9tPTEwJTJGMDElMkYyMDIyJnRvPTEyJTJGMzElMkYyMDIyJnNob3dfb3JkZXJfc3RhdHVzZXM9MCZzaG93X2VtcHR5X3Jvd3M9MCZzaG93X2FjdHVhbF9jb2x1bW5zPTA%3D/" data-text="CSV" data-status="selected">CSV</option>
+                                <option value="http://localhost:7780/admin/reports/report_sales/exportSalesExcel/filter/cmVwb3J0X3R5cGU9Y3JlYXRlZF9hdF9vcmRlciZwZXJpb2RfdHlwZT1tb250aCZmcm9tPTEwJTJGMDElMkYyMDIyJnRvPTEyJTJGMzElMkYyMDIyJnNob3dfb3JkZXJfc3RhdHVzZXM9MCZzaG93X2VtcHR5X3Jvd3M9MCZzaG93X2FjdHVhbF9jb2x1bW5zPTA%3D/" data-text="Excel XML">Excel XML</option>
+                            </select>
+                            <button title="Export" type="button" data-bbox="1174,450,76,33">
+                                <span id="26" data-text="Export" data-bbox="1189,457,46,19">Export</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="data-table" data-bbox="118,547,1132,192">
+                            <thead>
+                                <tr data-bbox="119,547,1131,39">
+                                    <th><span data-text="Interval" data-bbox="129,557,49,18">Interval</span></th>
+                                    <th><span data-text="Orders" data-bbox="223,557,43,18">Orders</span></th>
+                                    <th><span data-text="Sales Items" data-bbox="310,557,69,18">Items</span></th>
+                                    <th><span data-text="Sales Total" data-bbox="431,557,66,18">Total</span></th>
+                                    <th><span data-text="Invoiced" data-bbox="548,557,52,18">Invoiced</span></th>
+                                    <th><span data-text="Refunded" data-bbox="647,557,59,18">Refunded</span></th>
+                                    <th><span data-text="Sales Tax" data-bbox="754,557,56,18">Tax</span></th>
+                                    <th><span data-text="Sales Shipping" data-bbox="858,557,89,18">Shipping</span></th>
+                                    <th><span data-text="Sales Discount" data-bbox="1007,557,90,18">Discount</span></th>
+                                    <th><span data-text="Canceled" data-bbox="1156,557,56,18">Canceled</span></th>
+                                </tr>
+                            </thead>
+                            <tbody data-bbox="119,586,1131,114">
+                                <tr title="#" data-bbox="119,586,1131,38">
+                                    <th><span data-text="10/2022" data-bbox="129,595,47,18">10/2022</span></th>
+                                    <td data-text="4" data-bbox="213,586,86,38">4</td>
+                                    <td data-text="11" data-bbox="299,586,121,38">11</td>
+                                    <td data-text="$444.80" data-bbox="420,586,118,38">$444.80</td>
+                                    <td data-text="$0.00" data-bbox="538,586,98,38">$0.00</td>
+                                    <td data-text="$0.00" data-bbox="636,586,108,38">$0.00</td>
+                                    <td data-text="$0.00" data-bbox="744,586,104,38">$0.00</td>
+                                    <td data-text="$55.00" data-bbox="848,586,148,38">$55.00</td>
+                                    <td data-text="$0.00" data-bbox="996,586,150,38">$0.00</td>
+                                    <td data-text="$0.00" data-bbox="1146,586,104,38">$0.00</td>
+                                </tr>
+                                <tr title="#" data-bbox="119,624,1131,38">
+                                    <th><span data-text="11/2022" data-bbox="129,633,47,18">11/2022</span></th>
+                                    <td data-text="5" data-bbox="213,624,86,38">5</td>
+                                    <td data-text="15" data-bbox="299,624,121,38">15</td>
+                                    <td data-text="$550.74" data-bbox="420,624,118,38">$550.74</td>
+                                    <td data-text="$0.00" data-bbox="538,624,98,38">$0.00</td>
+                                    <td data-text="$0.00" data-bbox="636,624,108,38">$0.00</td>
+                                    <td data-text="$0.00" data-bbox="744,624,104,38">$0.00</td>
+                                    <td data-text="$75.00" data-bbox="848,624,148,38">$75.00</td>
+                                    <td data-text="$43.41" data-bbox="996,624,150,38">$43.41</td>
+                                    <td data-text="$0.00" data-bbox="1146,624,104,38">$0.00</td>
+                                </tr>
+                                <tr title="#" data-bbox="119,662,1131,38">
+                                    <th><span data-text="12/2022" data-bbox="129,671,47,18">12/2022</span></th>
+                                    <td data-text="10" data-bbox="213,662,86,38">10</td>
+                                    <td data-text="37" data-bbox="299,662,121,38">37</td>
+                                    <td data-text="$1,612.36" data-bbox="420,662,118,38">$1,612.36</td>
+                                    <td data-text="$0.00" data-bbox="538,662,98,38">$0.00</td>
+                                    <td data-text="$0.00" data-bbox="636,662,108,38">$0.00</td>
+                                    <td data-text="$0.00" data-bbox="744,662,104,38">$0.00</td>
+                                    <td data-text="$185.00" data-bbox="848,662,148,38">$185.00</td>
+                                    <td data-text="$121.04" data-bbox="996,662,150,38">$121.04</td>
+                                    <td data-text="$0.00" data-bbox="1146,662,104,38">$0.00</td>
+                                </tr>
+                            </tbody>
+                             <tfoot>
+                                <tr data-bbox="119,700,1131,39">
+                                    <th data-text="Total" data-bbox="119,700,94,39">Total</th>
+                                    <th data-text="19" data-bbox="213,700,86,39">19</th>
+                                    <th data-text="63" data-bbox="299,700,121,39">63</th>
+                                    <th data-text="$2,607.90" data-bbox="420,700,118,39">$2,607.90</th>
+                                    <th data-text="$0.00" data-bbox="538,700,98,39">$0.00</th>
+                                    <th data-text="$0.00" data-bbox="636,700,108,39">$0.00</th>
+                                    <th data-text="$0.00" data-bbox="744,700,104,39">$0.00</th>
+                                    <th data-text="$315.00" data-bbox="848,700,148,39">$315.00</th>
+                                    <th data-text="$164.45" data-bbox="996,700,150,39">$164.45</th>
+                                    <th data-text="$0.00" data-bbox="1146,700,104,39">$0.00</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableRows = document.querySelectorAll('.data-table tbody tr');
+            tableRows.forEach(row => {
+                row.addEventListener('mouseover', () => {
+                    row.classList.add('row-hover');
+                });
+                row.addEventListener('mouseout', () => {
+                    row.classList.remove('row-hover');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

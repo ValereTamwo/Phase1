@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" data-bbox="0,0,1280,55">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap - Interactive Map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #3B82F6;
+            --primary-hover: #2563EB;
+            --secondary-color: #10B981;
+            --secondary-hover: #059669;
+            --text-primary: #1F2937;
+            --text-secondary: #6B7280;
+            --bg-main: #F9FAFB;
+            --bg-panel: #FFFFFF;
+            --border-color: #E5E7EB;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            color: var(--text-primary);
+            background-color: var(--bg-main);
+            overflow: hidden;
+        }
+
+        body>div {
+            display: flex;
+            height: calc(100vh - 55px);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+            height: 55px;
+            background-color: var(--bg-panel);
+            border-bottom: 1px solid var(--border-color);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header img#0 {
+            height: 30px;
+            width: 30px;
+            object-fit: contain;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            height: 100%;
+        }
+
+        header nav a,
+        header nav button {
+            display: flex;
+            align-items: center;
+            padding: 0 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            height: 100%;
+            border: none;
+            background: none;
+            cursor: pointer;
+            transition: color 0.2s ease, border-bottom 0.2s ease;
+            border-bottom: 2px solid transparent;
+        }
+        
+        header nav a:hover,
+        header nav button:hover {
+            color: var(--text-primary);
+            text-decoration: none;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        header nav div[data-bbox="188,10,77,35"] {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            height: 35px;
+        }
+        
+        header nav div[data-bbox="188,10,77,35"] a {
+            border: none;
+            padding-right: 0.5rem;
+        }
+        
+        header nav div[data-bbox="188,10,77,35"] a:hover {
+            border: none;
+            background-color: #f9fafb;
+        }
+
+        header nav button#2 {
+            border-left: 1px solid var(--border-color);
+            padding: 0 0.5rem;
+            border-radius: 0;
+        }
+
+        header nav button#2:hover {
+             border-left: 1px solid var(--border-color);
+        }
+
+        header div[data-bbox="1135,10,135,35"] {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        header div[data-bbox="1135,10,135,35"] a {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            font-weight: 600;
+            height: auto;
+        }
+
+        header div[data-bbox="1135,10,135,35"] a:hover {
+            border-bottom: 1px solid transparent;
+        }
+
+        header a#11 {
+            color: var(--primary-color);
+        }
+
+        header a#11:hover {
+            background-color: #EFF6FF;
+        }
+
+        header a#12 {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        header a#12:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+            text-decoration: none;
+        }
+
+        /* Main Content Area */
+        div[data-bbox="0,55,1280,665"] {
+            margin-top: 55px;
+            width: 100%;
+            height: calc(100vh - 55px);
+        }
+        
+        /* Sidebar */
+        div[data-bbox="0,55,350,665"] {
+            width: 350px;
+            flex-shrink: 0;
+            background-color: var(--bg-panel);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        
+        /* Search Bar */
+        div[data-bbox="0,55,350,47"] {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        div[data-bbox="4,63,342,31"] {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        div[data-bbox="8,63,288,31"] {
+            display: flex;
+            flex-grow: 1;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        input#13 {
+            flex-grow: 1;
+            border: none;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.9rem;
+            outline: none;
+        }
+        
+        input#14 {
+            border: none;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+        
+        input#14:hover {
+            background-color: var(--primary-hover);
+        }
+        
+        a[title="Find directions between two points"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+        }
+        
+        a[title="Find directions between two points"]:hover {
+            background-color: #f3f4f6;
+        }
+        
+        /* Results / Welcome Panel */
+        div[data-bbox="0,102,350,950"] {
+            padding: 1rem;
+            flex-grow: 1;
+        }
+        
+        div[data-bbox="16,118,318,47"] {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        button#16 {
+            width: 30px;
+            height: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            background-color: var(--bg-panel);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        button#16:hover {
+            background-color: var(--bg-main);
+            transform: rotate(90deg);
+        }
+
+        h4 {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+        
+        ul[data-bbox="0,230,350,736"] {
+            list-style: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        ul[data-bbox="0,230,350,736"].collapsed {
+            display: none;
+        }
+        
+        ul li {
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            background-color: var(--bg-panel);
+        }
+        
+        ul li.list-item-hover {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
+            transform: translateY(-2px);
+        }
+        
+        ul li a {
+            display: block;
+            margin-top: 0.25rem;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Welcome Message */
+        div[data-bbox="0,102,350,303"] {
+            padding: 1rem;
+        }
+
+        div[data-bbox="16,203,318,186"] p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Map Area */
+        div[data-bbox="350,55,930,665"] {
+            flex-grow: 1;
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1563442602-08502394858a?q=80&w=2560&auto=format&fit=crop') center center/cover;
+            overflow: hidden;
+        }
+
+        /* Map Controls */
+        a#25, span[id^="2"], span[id^="3"] {
+            position: absolute;
+            right: 15px;
+            background-color: var(--bg-panel);
+            color: var(--text-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+            font-size: 1.1rem;
+        }
+
+        a#25:hover, span[id^="2"]:hover, span[id^="3"]:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-hover);
+        }
+        
+        a#25 { top: 15px; }
+        span#26 { top: 75px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-bottom: none; }
+        span#27 { top: 114px; border-top-left-radius: 0; border-top-right-radius: 0; }
+        span#28 { top: 175px; }
+        span#29 { top: 215px; }
+        span#30 { top: 255px; }
+        span#31 { top: 315px; }
+        span#32 { top: 355px; }
+
+        /* Map Scale & Footer */
+        div[data-bbox="355,681,88,34"] {
+            position: absolute;
+            bottom: 30px;
+            left: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            backdrop-filter: blur(2px);
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        
+        div[data-bbox="874,703,406,17"] {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            font-size: 0.75rem;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 4px 8px;
+            border-radius: 4px;
+            backdrop-filter: blur(2px);
+        }
+        
+        div[data-bbox="874,703,406,17"] a {
+            margin-left: 1rem;
+        }
+
+    </style>
+</head>
+
+<body data-bbox="0,0,1280,55">
+    <header data-bbox="0,0,1280,55">
+        <source type="image/svg+xml" data-bbox="10,17,0,22">
+            <img id="0" data-bbox="10,13,30,30" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMzQjgyRjYiIGQ9Ik0xMiAyQzguMTMgMiA1IDUuMTMgNSA5YzAgNS4yNSA3IDEzIDcgMTNzNy03Ljc1IDctMTNjMC0zLjg3LTMuMTMtNy03LTdNMTAuNjIgMTMuNDFsLTEuNDEtMS40MWwyLjg2LTIuODZsMS40MSAxLjQxbC0xLjQxIDEuNDFsMS40MSAxLjQxbC0xLjQxIDEuNDFMMTAuNjIgMTMuNDFtMy41My0uNzVsMS40MS0xLjQxbDEuNDEgMS40MWwtMS40MSAxLjQxek0xMiA0YTUgNSAwIDAgMSAzLjUzNiAxLjQ2NEwxMy40MSA3LjU4NkExIDIgMCAwIDAgMTIgOGE0IDQgMCAwIDAgMy4wNiA2Ljk0bDEuNDcgMS40N0E2IDYgMCAwIDEgNiAxM2EzIDMgMCAwIDEgMy0zYzAtLjM5LjA4LS43Ni4yMi0xLjFsMS41MyAxLjUzbC0xLjA2IDEuMDZsMS40MSAxLjQxbDIuMTItMi4xMmwxLjQxIDEuNDFMMTIuMDYgMTMuMDZsMS40MSAxLjQxbDEuNDEtMS40MUwxMy40NiAxMS42bDQuMDggNC4wOEE3IDcgMCAwIDEgMTIgMThhNyA3IDAgMCAxLTctN2MwLTIuMDIuODYtMy44MyAyLjItNS4wNUExIDIgMCAwIDAgOCAxMmEzIDMgMCAwIDEgMy0zaDEuNDFsLTEuNTMtMS41M0E1IDUgMCAwIDEgMTIgNFoiLz48L3N2Zz4=">
+        </source>
+        <nav data-bbox="178,0,227,55">
+            <div data-bbox="188,10,207,35">
+                <div data-bbox="188,10,77,35">
+                    <a id="1" data-bbox="188,10,50,35">Edit</a>
+                    <button id="2" type="button" data-bbox="237,10,28,35"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <a id="3" data-bbox="264,10,68,35">History</a>
+                <a id="4" data-bbox="331,10,64,35">Export</a>
+            </div>
+        </nav>
+        <nav data-bbox="708,0,572,55">
+            <ul data-bbox="722,13,405,27">
+                <a id="5" data-bbox="722,13,77,27">GPS Traces</a>
+                <a id="6" data-bbox="803,13,82,27">User Diaries</a>
+                <a id="7" data-bbox="889,13,87,27">Communities</a>
+                <a id="8" data-bbox="980,13,63,27">Copyright</a>
+                <a id="9" data-bbox="1047,13,34,27">Help</a>
+                <a id="10" data-bbox="1085,13,42,27">About</a>
+            </ul>
+            <div data-bbox="1135,10,135,35">
+                <a id="11" data-bbox="1135,10,63,35">Log In</a>
+                <a id="12" data-bbox="1197,10,73,35">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    <div data-bbox="0,55,1280,665">
+        <div data-bbox="0,55,350,665">
+            <div data-bbox="0,55,350,47">
+                <div data-bbox="4,63,342,31">
+                    <div data-bbox="8,63,288,31">
+                        <div data-bbox="8,63,254,31">
+                            <input id="13" type="text" placeholder="Search" data-value="Gas station near National Civil War Museum" data-bbox="8,63,254,31" value="Gas station near National Civil War Museum">
+                        </div>
+                        <input id="14" value="Go" type="submit" data-bbox="261,63,35,31">
+                    </div>
+                    <a title="Find directions between two points" data-bbox="304,63,38,31">
+                        <img id="15" data-bbox="313,69,20,20" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTIyIDEwVjZhMiAyIDAgMCAwLTItMlgyMHY0aDJ6bS00IDBWNmEyIDIgMCAwIDAtMi0yaC00djRoNm0tOC00SDZhMiAyIDAgMCAwLTIgMnY0aDZiMi02SDJ2NGEyIDIgMCAwIDAgMiAyaDR2M2wtMy0zSDJ2NGEyIDIgMCAwIDAgMiAyaDEwVjZ6bS0xIDlsMi41IDVoLTUgWiIvPjwvc3ZnPg==" style="width: 20px; height: 20px; color: #6B7280;">
+                    </a>
+                </div>
+            </div>
+            <div data-bbox="0,102,350,950">
+                <div data-bbox="16,118,318,47">
+                    <h2 data-bbox="16,118,297,39">Search Results</h2>
+                    <button id="16" type="button" data-bbox="313,118,21,21"><i class="fas fa-times"></i></button>
+                </div>
+                <h4 data-bbox="16,165,318,57">Results from <a id="17" data-bbox="157,164,164,30">OpenStreetMap Nominatim</a></h4>
+                <div data-bbox="0,230,350,790">
+                    <ul data-bbox="0,230,350,736">
+                        <li data-bbox="0,230,350,80">Filling Station<a id="18" data-bbox="103,240,193,17">Giant Food Gas, Arch Way, East Harrisburg, Harrisburg, Dauphin County, 17103, United States</a></li>
+                        <li data-bbox="0,310,350,80">Filling Station<a id="19" data-bbox="103,320,193,17">6th Street Market & Gas, Basin Street, New Fox Ridge, Midtown, Harrisburg, Dauphin County, 17102, United States</a></li>
+                        <li data-bbox="0,390,350,80">Filling Station<a id="20" data-bbox="103,400,177,17">Mobil Station, Walnut Street, Glenwood, Progress, Dauphin County, 17103, United States</a></li>
+                        <li data-bbox="0,470,350,59">Filling Station<a id="21" data-bbox="103,480,203,17">Sunoco, Derry Street, Allison Hill, Harrisburg, Dauphin County, 17104, United States</a></li>
+                        <li data-bbox="0,529,350,80">Filling Station<a id="22" data-bbox="103,539,174,17">Sunoco, Derry Street, Mount Pleasant, Allison Hill, Harrisburg, Dauphin County, 17104, United States</a></li>
+                        <li data-bbox="0,609,350,80">Filling Station<a id="23" data-bbox="103,619,227,17">State Street, Summit Terrace, Allison Hill, Harrisburg, Dauphin County, 17101, United States</a></li>
+                        <li data-bbox="0,689,350,80">Filling Station<a id="24" data-bbox="103,699,200,17">Speedway, 1100, Market Street, Summit Terrace, Allison Hill, Harrisburg, Dauphin County, 17103, United States</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-bbox="0,102,350,303" style="display:none;">
+                <div data-bbox="16,118,318,85">
+                    <h2 data-bbox="16,118,297,77">Welcome to OpenStreetMap!</h2>
+                </div>
+                <div data-bbox="16,203,318,186">
+                    <p data-bbox="16,203,318,70">OpenStreetMap is a map of the world, created by people like you and free to use under an open license.</p>
+                    <p data-bbox="16,289,318,46">Hosting is supported by</p>
+                    <div data-bbox="12,351,326,38"></div>
+                </div>
+            </div>
+        </div>
+        <div data-bbox="350,55,930,665">
+            <div data-bbox="350,55,930,0">
+                <a id="25" data-bbox="1240,65,40,40"><i class="fas fa-location-crosshairs"></i></a>
+                <span id="26" data-bbox="1250,115,20,20"><i class="fas fa-plus"></i></span>
+                <span id="27" data-bbox="1250,155,20,20"><i class="fas fa-minus"></i></span>
+                <span id="28" data-bbox="1250,205,20,20"><i class="fas fa-layer-group"></i></span>
+                <span id="29" data-bbox="1250,245,20,20"><i class="fas fa-ruler-horizontal"></i></span>
+                <span id="30" data-bbox="1250,285,20,20"><i class="fas fa-share-alt"></i></span>
+                <span id="31" data-bbox="1250,335,20,20"><i class="fas fa-map-marker-alt"></i></span>
+                <span id="32" data-bbox="1250,385,20,20"><i class="fas fa-info-circle"></i></span>
+                <div data-bbox="355,681,88,34">
+                    <div data-bbox="355,681,88,18">20 m</div>
+                    <div data-bbox="355,697,67,18" style="border-top: 2px solid #333; margin-top: 2px; padding-top: 2px;">50 ft</div>
+                </div>
+                <div data-bbox="874,703,406,17">© <a id="33" data-bbox="891,704,151,14">OpenStreetMap contributors</a><a id="34" data-bbox="1056,704,90,14">Make a Donation</a><a id="35" data-bbox="1153,704,122,14">Website and API terms</a></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hover effect for list items
+            const resultItems = document.querySelectorAll('ul[data-bbox="0,230,350,736"] li');
+            resultItems.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.classList.add('list-item-hover');
+                });
+                item.addEventListener('mouseleave', () => {
+                    item.classList.remove('list-item-hover');
+                });
+            });
+
+            // Toggle for search results visibility
+            const toggleButton = document.getElementById('16');
+            const resultsList = document.querySelector('ul[data-bbox="0,230,350,736"]');
+            if (toggleButton && resultsList) {
+                toggleButton.addEventListener('click', () => {
+                    resultsList.classList.toggle('collapsed');
+                    const icon = toggleButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-times');
+                        icon.classList.toggle('fa-chevron-down');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Bestsellers Report</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg-body: #f1f5f9;
+            --bg-sidebar: #1e293b;
+            --bg-sidebar-hover: #334155;
+            --bg-content: #ffffff;
+            --bg-header: #ffffff;
+            --text-sidebar: #cbd5e1;
+            --text-sidebar-hover: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --primary-color: #4f46e5;
+            --primary-color-dark: #4338ca;
+            --border-color: #e2e8f0;
+            --danger-color: #fef2f2;
+            --danger-text: #b91c1c;
+            --danger-border: #fecaca;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --border-radius: 0.5rem;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            display: flex;
+            font-size: 14px;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* --- Main Layout --- */
+        div[data-bbox="0,0,88,721"] { /* Sidebar */
+            width: 88px;
+            background-color: var(--bg-sidebar);
+            color: var(--text-sidebar);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            transition: width 0.3s ease;
+            position: relative;
+            z-index: 100;
+        }
+        
+        div[data-bbox="0,0,88,721"]:hover {
+            width: 250px;
+        }
+
+        div[data-bbox="88,0,1192,1108"] { /* Main Content Wrapper */
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            max-height: 100vh;
+            overflow-y: auto;
+        }
+
+        /* --- Sidebar Styling --- */
+        #0 { /* Logo */
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 1.5rem auto;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+        }
+
+        .sidebar-nav-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.75rem;
+            color: var(--text-sidebar);
+            text-decoration: none;
+            white-space: nowrap;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .sidebar-nav-item i {
+            font-size: 1.25rem;
+            width: 32px;
+            text-align: center;
+            flex-shrink: 0;
+            margin-right: 1.5rem;
+            transition: color 0.2s ease;
+        }
+        
+        .sidebar-nav-item span {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            font-weight: 500;
+        }
+        
+        div[data-bbox="0,0,88,721"]:hover .sidebar-nav-item span {
+            opacity: 1;
+        }
+        
+        ul[data-bbox="0,75,88,646"] {
+            list-style-type: none;
+        }
+        
+        ul[data-bbox="0,75,88,646"] > span { /* Dashboard link */
+             display: flex;
+             align-items: center;
+             padding: 1rem 1.75rem;
+             color: var(--text-sidebar);
+        }
+
+        ul[data-bbox="0,75,88,646"] li, ul[data-bbox="0,75,88,646"] > span#10 {
+            transition: background-color 0.2s ease;
+            position: relative;
+        }
+
+        ul[data-bbox="0,75,88,646"] li:hover, ul[data-bbox="0,75,88,646"] > span#10:hover {
+            background-color: var(--bg-sidebar-hover);
+            color: var(--text-sidebar-hover);
+        }
+        
+        /* Active State for Reports */
+        li[data-bbox="0,447,88,62"] {
+            background-color: var(--primary-color);
+            color: var(--text-sidebar-hover);
+        }
+        
+        li[data-bbox="0,447,88,62"] > span {
+            color: var(--text-sidebar-hover) !important;
+        }
+        
+        /* Submenus */
+        li[data-bbox] > div[data-bbox] {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #334155;
+            min-width: 220px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            box-shadow: var(--shadow-md);
+            padding: 1rem;
+            z-index: 101;
+            list-style: none;
+        }
+
+        li[data-bbox]:hover > div[data-bbox] {
+            display: block;
+        }
+
+        div[data-bbox] strong {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            display: block;
+            border-bottom: 1px solid #475569;
+            padding-bottom: 0.5rem;
+        }
+        
+        div[data-bbox] ul, div[data-bbox] li {
+            list-style: none;
+        }
+
+        div[data-bbox] ul span, div[data-bbox] li a {
+            color: var(--text-sidebar);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0;
+            border-radius: 0.25rem;
+        }
+        
+        div[data-bbox] ul span:hover, div[data-bbox] li a:hover {
+            color: #fff;
+            background-color: var(--primary-color);
+        }
+
+        /* --- Header Styling --- */
+        div[data-bbox="118,0,1132,51"] { /* System Messages Bar */
+            background-color: var(--danger-color);
+            border: 1px solid var(--danger-border);
+            color: var(--danger-text);
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+        }
+
+        div[data-bbox="118,0,1132,51"] a {
+            color: var(--danger-text);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        
+        div[data-bbox="118,0,1132,51"] span#11 {
+            float: right;
+            font-weight: 600;
+        }
+
+        header[data-bbox="88,51,1192,80"] {
+            background-color: var(--bg-header);
+            padding: 0 2rem;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+
+        h1[data-bbox="118,82,740,34"] {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        div[data-bbox="873,66,377,44"] {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .search-container {
+            position: relative;
+        }
+        
+        .search-container label {
+             position: absolute;
+             left: 0.75rem;
+             top: 50%;
+             transform: translateY(-50%);
+             color: var(--text-secondary);
+             pointer-events: none;
+        }
+
+        .search-container input[type="text"] {
+            padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            min-width: 200px;
+            transition: border-color 0.2s ease;
+        }
+        
+        .search-container input[type="text"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        a[title="Notifications"] {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            transition: color 0.2s ease;
+        }
+
+        a[title="Notifications"]:hover {
+            color: var(--text-primary);
+        }
+
+        a[title="My Account"] {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        a[title="My Account"] i {
+            font-size: 1.75rem;
+            color: var(--primary-color);
+        }
+
+        /* --- Main Content --- */
+        main[data-bbox="88,143,1192,824"] {
+            padding: 2rem;
+            flex-grow: 1;
+        }
+        
+        div[data-bbox="118,143,1192,77"] {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        button, select, input[type="text"] {
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            padding: 0.6rem 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            background-color: #fff;
+            transition: all 0.2s ease;
+        }
+        
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+        }
+
+        button {
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        button[title="Show Report"] {
+            background-color: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+        
+        button[title="Show Report"]:hover {
+            background-color: var(--primary-color-dark);
+            border-color: var(--primary-color-dark);
+        }
+        
+        button[title="Export"] {
+            background-color: #fff;
+            color: var(--text-primary);
+        }
+        button[title="Export"]:hover {
+             background-color: #f8fafc;
+        }
+
+        div[data-bbox="133,164,178,34"] {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        a[title="What is this?"] {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
+        div[data-bbox="118,250,1132,111"] {
+            background-color: #eff6ff;
+            color: #1e40af;
+            border: 1px solid #bfdbfe;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        div[data-bbox="118,250,1132,111"] a {
+            color: #1d4ed8;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+
+        /* --- Filter Form --- */
+        fieldset[data-bbox="118,381,1132,307"] {
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        fieldset[data-bbox="118,381,1132,307"] > span {
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0 0.5rem;
+            background-color: var(--bg-body);
+            position: relative;
+            top: -2.5rem;
+            left: -0.5rem;
+        }
+
+        fieldset[data-bbox="118,381,1132,307"] > div {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        fieldset label span {
+            font-weight: 500;
+            text-align: right;
+            padding-right: 1rem;
+        }
+        
+        .date-input-container {
+            position: relative;
+            display: flex;
+        }
+        
+        .date-input-container input {
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+        }
+
+        .date-input-container button {
+            border-left: 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            padding: 0.6rem;
+            width: 40px;
+        }
+
+        /* --- Export Section --- */
+        div[data-bbox="118,688,1132,229"] {
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-content);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        div[data-bbox="957,688,293,33"] {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+        
+        div[data-bbox="957,688,293,33"] label {
+            font-weight: 500;
+        }
+        
+    </style>
+</head>
+<html data-bbox="0,0,1280,720"> <body data-bbox="0,0,1280,1108"> <div data-bbox="0,0,88,721"> <img id="0" title="Magento Admin Panel" data-bbox="27,17,35,41" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNMTAgOTAgVjIwbDIwIDIwIDIwLTIwIDIwIDIwIDIwLTIwIDAgNzBILjcwbDAgLTM1bC0yMCAyMGwtMjAgLTIwbC0yMCAyMFY5MFoiIGZpbGw9IiM0ZjQ2ZTUiLz48L3N2Zz4=">  <ul data-bbox="0,75,88,646" class="sidebar-nav"> <span id="1" data-bbox="14,112,60,13" class="sidebar-nav-item"> <i class="fas fa-tachometer-alt"></i><span>Dashboard</span> </span> <li data-bbox="0,137,88,62" class="sidebar-nav-item"> <i class="fas fa-chart-line"></i><span id="2" data-bbox="30,174,28,13"> Sales </span> <div data-bbox="-180,0,268,812"> <strong data-bbox="-150,20,180,30"> Sales </strong> <li data-bbox="-165,92,238,308"> <ul data-bbox="-165,92,238,308"> <span data-bbox="-150,369,174,19"> Braintree Virtual Terminal </span> </ul> </li> </div> </li> <li data-bbox="0,199,88,62" class="sidebar-nav-item"> <i class="fas fa-tags"></i><span id="3" data-bbox="22,236,44,13"> Catalog </span> <div data-bbox="-180,0,268,812"> <strong data-bbox="-150,20,180,30"> Catalog </strong> <li data-bbox="-165,92,238,88"> <ul data-bbox="-165,92,238,88"> </ul> </li> </div> </li> <li data-bbox="0,261,88,62" class="sidebar-nav-item"> <i class="fas fa-users"></i><span id="4" data-bbox="14,298,60,13"> Customers </span> <div data-bbox="-180,0,268,812"> <strong data-bbox="-150,20,180,30"> Customers </strong> <ul data-bbox="-180,92,268,720"> <span data-bbox="-150,192,151,19"> Login as Customer Log </span> </ul> </div> </li> <li data-bbox="0,323,88,62" class="sidebar-nav-item"> <i class="fas fa-bullhorn"></i><span id="5" data-bbox="14,360,60,13"> Marketing </span> <div data-bbox="-448,0,536,812"> <strong data-bbox="-418,20,448,30"> Marketing </strong> <ul data-bbox="-448,92,536,720"> <ul data-bbox="-180,92,268,417"> <li data-bbox="-165,92,238,230"> <ul data-bbox="-165,146,238,176"> </ul> </li> <li data-bbox="-165,367,238,142"> <ul data-bbox="-165,421,238,88"> </ul> </li> </ul> </ul> </div> </li> <li data-bbox="0,385,88,62" class="sidebar-nav-item"> <i class="fas fa-file-alt"></i><span id="6" data-bbox="19,422,50,13"> Content </span> <div data-bbox="-180,0,268,812"> <strong data-bbox="-150,20,180,30"> Content </strong> <ul data-bbox="-180,92,268,720"> <li data-bbox="-165,92,238,230"> <ul data-bbox="-165,146,238,176"> </ul> </li> <li data-bbox="-165,367,238,98"> </li> <li data-bbox="-165,510,238,185"> <ul data-bbox="-165,563,238,132"> </ul> </li> </ul> </div> </li> <li data-bbox="0,447,88,62" class="sidebar-nav-item"> <i class="fas fa-chart-pie"></i><span id="7" data-bbox="22,484,44,13"> Reports </span> <div data-bbox="-984,0,1072,812"> <strong data-bbox="-954,20,984,30"> Reports </strong> <ul data-bbox="-984,92,1072,720"> <li data-bbox="-165,92,238,142"> <span data-bbox="-150,103,159,22"> Business Intelligence </span> <ul data-bbox="-165,146,238,88"> </ul> </li> </ul> </div> </li> <li data-bbox="0,509,88,62" class="sidebar-nav-item"> <i class="fas fa-store"></i><span id="8" data-bbox="25,546,38,13"> Stores </span> <div data-bbox="-448,0,536,812"> <strong data-bbox="-418,20,448,30"> Stores </strong> <ul data-bbox="-448,92,536,720"> <ul data-bbox="-180,92,268,373"> <li data-bbox="-165,92,238,142"> <ul data-bbox="-165,146,238,88"> </ul> </li> <li data-bbox="-165,279,238,186"> <ul data-bbox="-165,332,238,133"> </ul> </li> </ul> </ul> </div> </li> <li data-bbox="0,571,88,62" class="sidebar-nav-item"> <i class="fas fa-cogs"></i><span id="9" data-bbox="25,608,38,13"> System </span> <div data-bbox="-448,0,536,812"> <strong data-bbox="-418,20,448,30"> System </strong> <ul data-bbox="-448,92,536,720"> <ul data-bbox="-180,92,268,559"> <li data-bbox="-165,92,238,186"> <ul data-bbox="-165,146,238,132"> </ul> </li> <li data-bbox="-165,323,238,98"> </li> <li data-bbox="-165,466,238,185"> <ul data-bbox="-165,519,238,132"> <span data-bbox="-150,620,158,19"> Manage Encryption Key </span> </ul> </li> </ul> </ul> </div> </li> <span id="10" data-bbox="32,670,24,13" class="sidebar-nav-item"> <i class="fas fa-puzzle-piece"></i><span>Find Partners & Extensions</span> </span> </ul> </div> <div data-bbox="88,0,1192,1108"> <div data-bbox="118,0,1132,51"> <div data-bbox="118,0,1132,51"> <div data-bbox="119,0,1130,50"> <span id="11" data-bbox="1085,15,118,19"> <i class="fas fa-exclamation-circle"></i> System Messages </span> <div data-bbox="129,0,941,49"> One or more <a id="12" data-bbox="251,15,133,19"> indexers are invalid </a>. View details or manage the <a id="13" data-bbox="500,15,118,19"> Magento cron job </a>. </div> </div> </div> </div> <header data-bbox="88,51,1192,80"> <h1 data-bbox="118,82,740,34"> Bestsellers Report </h1> <div data-bbox="873,66,377,44"> <div data-bbox="1034,77,50,0" class="search-container"> <label id="16" data-bbox="1034,77,50,33"><i class="fas fa-search"></i> </label> <input type="text" data-bbox="1034,77,50,35" placeholder="Search..."> </div> <a id="15" title="Notifications" data-bbox="1081,77,60,33"> <i class="fas fa-bell"></i> </a> <a title="My Account" data-bbox="1144,77,106,33"> <i class="fas fa-user-circle"></i> <span id="14" data-bbox="1185,85,36,18"> admin </span> </a> </div> </header> <main data-bbox="88,143,1192,824"> <div data-bbox="118,143,1192,77"> <div data-bbox="133,164,178,34"> <span data-bbox="133,172,42,18"> Scope: </span> <div data-bbox="178,164,124,34"> <button id="17" type="button" data-bbox="185,164,117,34"> All Websites </button> </div> <a id="18" title="What is this?" data-bbox="311,169,25,22"> <span data-bbox="335,168,1,1"><i class="fas fa-question-circle"></i></span> </a> </div> <button title="Show Report" type="button" data-bbox="1099,159,136,45"> <span id="19" data-bbox="1116,170,102,22"> Show Report </span> </button> </div> <div data-bbox="118,250,1132,111"> <div data-bbox="173,268,1037,19"> For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone. </div> <div data-bbox="173,324,1037,19"> Last updated: Apr 12, 2024, 12:00:01 AM. To refresh last day's <a id="20" data-bbox="588,324,59,19"> statistics </a> click <a id="21" data-bbox="687,324,31,19"> here </a>. </div> </div> <div data-bbox="118,381,1132,536"> <fieldset data-bbox="118,381,1132,307"> <span data-bbox="118,381,45,24"> Filter </span> <div data-bbox="88,436,1162,33"> <label id="22" data-bbox="118,436,261,32"> <span data-bbox="334,445,45,16"> Period </span> </label> <select id="23" title="Period" data-value="month" data-text="Month" data-bbox="409,436,100,33"> <option value="day"> Day </option> <option value="month" selected> Month </option> <option value="year"> Year </option> </select> </div> <div data-bbox="88,499,1162,33"> <label id="24" data-bbox="118,499,261,32"> <span data-bbox="344,508,35,17"> From </span> </label> <div data-bbox="409,499,150,33" class="date-input-container"> <input id="25" title="From" type="text" data-value="08/28/2022" data-bbox="409,499,150,33" value="08/28/2022"> <button id="26" type="button" data-bbox="527,499,24,32"> <span data-bbox="526,498,1,1"><i class="fas fa-calendar-alt"></i></span> </button> </div> </div> <div data-bbox="88,562,1162,33"> <label id="27" data-bbox="118,562,261,32"> <span data-bbox="363,571,16,17"> To </span> </label> <div data-bbox="409,562,150,33" class="date-input-container"> <input id="28" title="To" type="text" data-value="08/31/2022" data-bbox="409,562,150,33" value="08/31/2022"> <button id="29" type="button" data-bbox="527,562,24,32"> <span data-bbox="526,561,1,1"><i class="fas fa-calendar-alt"></i></span> </button> </div> </div> <div data-bbox="88,625,1162,33"> <label id="30" data-bbox="118,625,261,32"> <span data-bbox="295,634,84,17"> Empty Rows </span> </label> <select id="31" title="Empty Rows" data-value="0" data-text="No" data-bbox="409,625,85,33"> <option value="1"> Yes </option> <option value="0" selected="selected"> No </option> </select> </div> </fieldset> <div data-bbox="118,688,1132,229"> <div data-bbox="118,688,1132,77"> <div data-bbox="957,688,293,33"> <label id="32" data-bbox="964,688,66,33"> Export to: </label> <select id="33" data-value="http://localhost:7780/admin/reports/report_sales/exportBestsellersCsv/" data-text="CSV" data-bbox="1041,688,122,33"> <option value="http://localhost:7780/admin/reports/report_sales/exportBestsellersCsv/"> CSV </option> <option value="http://localhost:7780/admin/reports/report_sales/exportBestsellersExcel/"> Excel XML </option> </select> <button title="Export" type="button" data-bbox="1174,688,76,33"> <span id="34" data-bbox="1189,695,46,19"> Export </span> </button> </div> </div> </div> </div> </main> </div> </body> </html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Add interactivity to the "Show Report" button
+        const showReportButton = document.querySelector('button[title="Show Report"]');
+        if (showReportButton) {
+            showReportButton.addEventListener('click', () => {
+                alert('Generating report with the selected filters...');
+            });
+        }
+
+        // Add interactivity to the "Export" button
+        const exportButton = document.querySelector('button[title="Export"]');
+        if (exportButton) {
+            exportButton.addEventListener('click', () => {
+                const exportSelect = document.getElementById('33');
+                const format = exportSelect.options[exportSelect.selectedIndex].text;
+                alert(`Exporting report as ${format}...`);
+            });
+        }
+    });
+</script>
+</html>

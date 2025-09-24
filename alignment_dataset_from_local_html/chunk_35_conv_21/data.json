@@ -1,0 +1,525 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_21.html",
+    "raw_html": "<HEADER data-bbox=\"0,0,1280,128\"><DIV class=\"header-top\" data-bbox=\"0,0,1280,40\"><DIV class=\"container\"><SPAN data-bbox=\"19,9,28,19\"><text>Skip to Content</text></SPAN><UL data-bbox=\"808,10,452,20\"><A id=\"0\" data-bbox=\"823,10,78,19\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"A\"><text>My Account</text></A><A id=\"1\" data-bbox=\"916,10,84,19\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"B\"><text>My Wish List</text></A><LI data-label=\"or\" data-bbox=\"1015,10,58,20\"><A id=\"2\" data-bbox=\"1015,10,58,19\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"C\"><text>Sign Out</text></A></LI><SPAN data-bbox=\"1103,10,157,19\"><text>Welcome, Emma Lopez!</text></SPAN></UL></DIV></DIV><DIV class=\"header-main\" data-bbox=\"0,41,1280,87\"><DIV class=\"container\"><A title=\"one_stop_market_logo\" href=\"/\" data-bbox=\"20,71,200,27\"><IMG id=\"3\" title=\"one_stop_market_logo\" data-bbox=\"20,71,200,27\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjciIHZpZXdCb3g9IjAgMCAyMDAgMjciPgo8dGV4dCB4PSIwIiB5PSIyMiIgZm9udC1mYW1pbHk9IidJbnRlcicsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMwMDdCRkYiPk9uZVN0b3BNYXJrZXQ8L3RleHQ+Cjwvc3ZnPg==\" alt=\"One Stop Market Logo\" class=\"possible-clickable-element\" data-testid=\"D\"></IMG></A><DIV data-bbox=\"947,71,265,57\"><FORM data-bbox=\"962,71,250,57\"><DIV data-bbox=\"962,71,250,57\"><SPAN data-bbox=\"960,102,1,1\"><text>Search</text></SPAN><DIV data-bbox=\"962,71,250,57\"><INPUT id=\"5\" type=\"text\" placeholder=\"Search entire store here...\" data-bbox=\"962,71,250,32\" class=\"possible-clickable-element\" data-testid=\"E\" style=\"\"></INPUT><A id=\"6\" href=\"#\" data-bbox=\"962,108,116,19\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Advanced Search</text></A></DIV></DIV><BUTTON title=\"Search\" type=\"submit\" data-bbox=\"1180,71,22,32\"><I class=\"fa-solid fa-magnifying-glass possible-clickable-element\" data-testid=\"G\"></I><SPAN data-bbox=\"1201,75,1,1\"><text>Search</text></SPAN></BUTTON></FORM></DIV><DIV class=\"header-actions\" data-bbox=\"1225,71,35,33\"><A id=\"4\" href=\"#\" data-bbox=\"1225,71,35,33\"><I class=\"fa-solid fa-cart-shopping possible-clickable-element\" data-testid=\"H\"></I><SPAN data-bbox=\"1259,70,1,1\"></SPAN></A></DIV></DIV></DIV></HEADER><NAV class=\"main-nav\" data-bbox=\"0,128,1280,109\"><DIV class=\"container\"><UL data-bbox=\"0,128,1280,109\"><LI data-bbox=\"8,128,194,53\"><SPAN id=\"8\" data-bbox=\"20,145,162,19\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Beauty & Personal Care</text></SPAN><SPAN id=\"7\" data-bbox=\"190,128,12,53\" class=\"possible-clickable-element\" data-testid=\"J\"></SPAN></LI><LI data-bbox=\"212,128,162,53\"><SPAN id=\"10\" data-bbox=\"224,145,130,19\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Sports & Outdoors</text></SPAN><SPAN id=\"9\" data-bbox=\"362,128,12,53\" class=\"possible-clickable-element\" data-testid=\"L\"></SPAN></LI><LI data-bbox=\"384,128,209,53\"><SPAN id=\"12\" data-bbox=\"396,145,177,19\" class=\"possible-clickable-element\" data-testid=\"M\"><text>Clothing, Shoes & Jewelry</text></SPAN><SPAN id=\"11\" data-bbox=\"581,128,12,53\" class=\"possible-clickable-element\" data-testid=\"N\"></SPAN></LI><LI data-bbox=\"603,128,145,53\"><SPAN id=\"14\" data-bbox=\"615,145,113,19\" class=\"possible-clickable-element\" data-testid=\"O\"><text>Home & Kitchen</text></SPAN><SPAN id=\"13\" data-bbox=\"736,128,12,53\" class=\"possible-clickable-element\" data-testid=\"P\"></SPAN></LI><LI data-bbox=\"758,128,139,53\"><SPAN id=\"16\" data-bbox=\"770,145,107,19\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>Office Products</text></SPAN><SPAN id=\"15\" data-bbox=\"885,128,12,53\" class=\"possible-clickable-element\" data-testid=\"R\"></SPAN></LI><LI data-bbox=\"907,128,229,56\"><SPAN id=\"18\" data-bbox=\"919,145,197,19\" class=\"possible-clickable-element\" data-testid=\"S\"><text>Tools & Home Improvement</text></SPAN><SPAN id=\"17\" data-bbox=\"1124,128,12,53\" class=\"possible-clickable-element\" data-testid=\"T\"></SPAN></LI><LI data-bbox=\"8,184,172,53\"><SPAN id=\"20\" data-bbox=\"20,201,140,19\" class=\"possible-clickable-element\" data-testid=\"U\"><text>Health & Household</text></SPAN><SPAN id=\"19\" data-bbox=\"168,184,12,53\" class=\"possible-clickable-element\" data-testid=\"V\"></SPAN></LI><LI data-bbox=\"190,184,182,53\"><SPAN id=\"22\" data-bbox=\"202,201,150,19\" class=\"possible-clickable-element\" data-testid=\"W\"><text>Patio, Lawn & Garden</text></SPAN><SPAN id=\"21\" data-bbox=\"360,184,12,53\" class=\"possible-clickable-element\" data-testid=\"X\"></SPAN></LI><LI data-bbox=\"382,184,107,53\"><SPAN id=\"24\" data-bbox=\"394,201,75,19\" class=\"possible-clickable-element\" data-testid=\"Y\"><text>Electronics</text></SPAN><SPAN id=\"23\" data-bbox=\"477,184,12,53\" class=\"possible-clickable-element\" data-testid=\"Z\"></SPAN></LI><LI data-bbox=\"499,184,211,53\"><SPAN id=\"26\" data-bbox=\"511,201,179,19\" class=\"possible-clickable-element\" data-testid=\"AA\"><text>Cell Phones & Accessories</text></SPAN><SPAN id=\"25\" data-bbox=\"698,184,12,53\" class=\"possible-clickable-element\" data-testid=\"AB\"></SPAN></LI><LI data-bbox=\"720,184,122,53\"><SPAN id=\"28\" data-bbox=\"732,201,90,19\" class=\"possible-clickable-element\" data-testid=\"AC\"><text>Video Games</text></SPAN><SPAN id=\"27\" data-bbox=\"830,184,12,53\" class=\"possible-clickable-element\" data-testid=\"AD\"></SPAN></LI><LI data-bbox=\"852,184,206,53\"><SPAN id=\"30\" data-bbox=\"864,201,174,19\" class=\"possible-clickable-element\" data-testid=\"AE\"><text>Grocery & Gourmet Food</text></SPAN><SPAN id=\"29\" data-bbox=\"1046,184,12,53\" class=\"possible-clickable-element\" data-testid=\"AF\"></SPAN></LI></UL></DIV></NAV><DIV class=\"breadcrumbs\"><DIV class=\"container\"><UL data-bbox=\"20,262,1240,18\"><A id=\"31\" title=\"Go to Home Page\" data-bbox=\"20,262,37,16\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"AG\"><text>Home</text></A><STRONG data-bbox=\"84,262,156,16\"><text>Tools & Home Improvement</text></STRONG></UL></DIV></DIV><SPAN data-bbox=\"20,295,500,54\"><text>Tools & Home Improvement</text></SPAN><STRONG data-bbox=\"20,430,124,20\"><text>Shopping Options</text></STRONG><DT data-bbox=\"20,460,182,15\"><text>Category</text></DT><A href=\"#\" data-bbox=\"20,485,153,19\"><text>Lighting & Ceiling Fans</text><SPAN id=\"40\" data-bbox=\"173,485,4,19\" class=\"possible-clickable-element\" data-testid=\"AH\"><text>2531</text><SPAN data-bbox=\"51,504,1,1\"><text>item</text></SPAN></SPAN></A><DIV class=\"product-toolbar\" data-bbox=\"251,384,1009,40\"><DIV class=\"view-mode\" data-bbox=\"261,384,91,40\"><STRONG title=\"Grid\" data-value=\"grid\" data-bbox=\"261,384,45,40\"><I class=\"fas fa-th\"></I><SPAN data-bbox=\"295,391,1,1\"><text>Grid</text></SPAN></STRONG><A id=\"32\" title=\"List\" href=\"#\" data-value=\"list\" data-bbox=\"306,384,46,40\"><I class=\"fas fa-list possible-clickable-element\" data-testid=\"AI\"></I><SPAN data-bbox=\"340,391,1,1\"><text>List</text></SPAN></A></DIV><P data-bbox=\"372,384,123,34\"><text>Items</text><SPAN data-bbox=\"413,395,8,19\"><text>1</text></SPAN><text>-</text><SPAN data-bbox=\"426,395,16,19\"><text>12</text></SPAN><text>of</text><SPAN data-bbox=\"463,395,32,19\"><text>2718</text></SPAN></P><DIV class=\"sort-by\" data-bbox=\"1022,384,228,36\"><LABEL id=\"33\" data-bbox=\"1022,395,47,19\" for=\"sorter\"><text>Sort By</text></LABEL><SELECT id=\"34\" name=\"sorter\" data-value=\"position\" data-text=\"Position\" data-bbox=\"1080,388,138,32\" class=\"possible-clickable-element\" data-testid=\"AJ\"></SELECT><A id=\"35\" title=\"Set Descending Direction\" href=\"#\" data-value=\"desc\" data-bbox=\"1222,386,28,32\"><I class=\"fas fa-arrow-up possible-clickable-element\" data-testid=\"AK\"></I><SPAN data-bbox=\"1249,385,1,1\"></SPAN></A></DIV></DIV>",
+    "parsed_html": "\n<\n  div|\n  <\n    header|\n    <\n      div|\n      <span| Skip to Content >\n      <\n        ul|\n        <a[A]| My Account >\n        <a[B]| My Wish List >\n        <a[C]| Sign Out >\n        <span| Welcome, Emma Lopez! >\n      >\n    >\n    <\n      div|\n      <\n        a| one_stop_market_logo\n        <img[D]| one_stop_market_logo >\n      >\n      <\n        form|\n        <\n          div|\n          <span| Search >\n          <\n            div|\n            <input[E]| Search entire store here... >\n            <a[F]| Advanced Search >\n          >\n        >\n        <\n          button| Search\n          <i[G]| >\n          <span| Search >\n        >\n      >\n      <i[H]| >\n    >\n  >\n  <\n    ul|\n    <span[I]| Beauty & Personal Care >\n    <span[J]| >\n    <span[K]| Sports & Outdoors >\n    <span[L]| >\n    <span[M]| Clothing, Shoes & Jewelry >\n    <span[N]| >\n    <span[O]| Home & Kitchen >\n    <span[P]| >\n    <span[Q]| Office Products >\n    <span[R]| >\n    <span[S]| Tools & Home Improvement >\n    <span[T]| >\n    <span[U]| Health & Household >\n    <span[V]| >\n    <span[W]| Patio, Lawn & Garden >\n    <span[X]| >\n    <span[Y]| Electronics >\n    <span[Z]| >\n    <span[AA]| Cell Phones & Accessories >\n    <span[AB]| >\n    <span[AC]| Video Games >\n    <span[AD]| >\n    <span[AE]| Grocery & Gourmet Food >\n    <span[AF]| >\n  >\n  <\n    ul|\n    <a[AG]| Go to Home Page Home >\n    <strong| Tools & Home Improvement >\n  >\n  <span| Tools & Home Improvement >\n  <strong| Shopping Options >\n  <dt| Category >\n  <\n    a|\n    <text| Lighting & Ceiling Fans >\n    <\n      span[AH]|\n      <text| 2531 >\n      <span| item >\n    >\n  >\n  <\n    div|\n    <\n      div|\n      <\n        strong| Grid\n        <span| Grid >\n      >\n      <\n        a| List\n        <i[AI]| >\n        <span| List >\n      >\n    >\n    <\n      p|\n      <text| Items >\n      <span| 1 >\n      <text| - >\n      <span| 12 >\n      <text| of >\n      <span| 2718 >\n    >\n    <\n      div|\n      <label| Sort By >\n      <select[AJ]| >\n      <\n        a| Set Descending Direction\n        <i[AK]| >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 846,
+                "top": 10,
+                "right": 920,
+                "bottom": 26,
+                "width": 74,
+                "height": 16
+            },
+            "tag": "a",
+            "text": "My Account"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 940,
+                "top": 10,
+                "right": 1019,
+                "bottom": 26,
+                "width": 79,
+                "height": 16
+            },
+            "tag": "a",
+            "text": "My Wish List"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 1039,
+                "top": 10,
+                "right": 1092,
+                "bottom": 26,
+                "width": 53,
+                "height": 16
+            },
+            "tag": "a",
+            "text": "Sign Out"
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 20,
+                "top": 76.09375,
+                "right": 220,
+                "bottom": 103.09375,
+                "width": 200,
+                "height": 27
+            },
+            "tag": "img",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 540.5,
+                "top": 56.796875,
+                "right": 912.5,
+                "bottom": 94.796875,
+                "width": 372,
+                "height": 38
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 555.5,
+                "top": 99.796875,
+                "right": 664.5,
+                "bottom": 120.59375,
+                "width": 109,
+                "height": 20.796875
+            },
+            "tag": "a",
+            "text": "Advanced Search"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 882,
+                "top": 68.796875,
+                "right": 898,
+                "bottom": 84.796875,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 1233,
+                "top": 76.390625,
+                "right": 1260,
+                "bottom": 100.390625,
+                "width": 27,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 138.5,
+                "top": 143.390625,
+                "right": 367.5,
+                "bottom": 195.78125,
+                "width": 229,
+                "height": 52.390625
+            },
+            "tag": "span",
+            "text": "Beauty & Personal Care"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 138.5,
+                "top": 195.78125,
+                "right": 367.5,
+                "bottom": 241.78125,
+                "width": 229,
+                "height": 46
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 367.5,
+                "top": 143.390625,
+                "right": 560.5,
+                "bottom": 195.78125,
+                "width": 193,
+                "height": 52.390625
+            },
+            "tag": "span",
+            "text": "Sports & Outdoors"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 367.5,
+                "top": 195.78125,
+                "right": 560.5,
+                "bottom": 241.78125,
+                "width": 193,
+                "height": 46
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 560.5,
+                "top": 143.390625,
+                "right": 810.5,
+                "bottom": 195.78125,
+                "width": 250,
+                "height": 52.390625
+            },
+            "tag": "span",
+            "text": "Clothing, Shoes & Jewelry"
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 560.5,
+                "top": 195.78125,
+                "right": 810.5,
+                "bottom": 241.78125,
+                "width": 250,
+                "height": 46
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 810.5,
+                "top": 143.390625,
+                "right": 971.5,
+                "bottom": 195.78125,
+                "width": 161,
+                "height": 52.390625
+            },
+            "tag": "span",
+            "text": "Home & Kitchen"
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 810.5,
+                "top": 195.78125,
+                "right": 971.5,
+                "bottom": 241.78125,
+                "width": 161,
+                "height": 46
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 971.5,
+                "top": 143.390625,
+                "right": 1141.5,
+                "bottom": 195.78125,
+                "width": 170,
+                "height": 52.390625
+            },
+            "tag": "span",
+            "text": "Office Products"
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 971.5,
+                "top": 195.78125,
+                "right": 1141.5,
+                "bottom": 241.78125,
+                "width": 170,
+                "height": 46
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 49.5,
+                "top": 241.78125,
+                "right": 304.5,
+                "bottom": 294.171875,
+                "width": 255,
+                "height": 52.390625
+            },
+            "tag": "span",
+            "text": "Tools & Home Improvement"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 49.5,
+                "top": 294.171875,
+                "right": 304.5,
+                "bottom": 340.171875,
+                "width": 255,
+                "height": 46
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 304.5,
+                "top": 241.78125,
+                "right": 502.5,
+                "bottom": 294.171875,
+                "width": 198,
+                "height": 52.390625
+            },
+            "tag": "span",
+            "text": "Health & Household"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 304.5,
+                "top": 294.171875,
+                "right": 502.5,
+                "bottom": 340.171875,
+                "width": 198,
+                "height": 46
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 502.5,
+                "top": 241.78125,
+                "right": 707.5,
+                "bottom": 294.171875,
+                "width": 205,
+                "height": 52.390625
+            },
+            "tag": "span",
+            "text": "Patio, Lawn & Garden"
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 502.5,
+                "top": 294.171875,
+                "right": 707.5,
+                "bottom": 340.171875,
+                "width": 205,
+                "height": 46
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 707.5,
+                "top": 241.78125,
+                "right": 844.5,
+                "bottom": 294.171875,
+                "width": 137,
+                "height": 52.390625
+            },
+            "tag": "span",
+            "text": "Electronics"
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 707.5,
+                "top": 294.171875,
+                "right": 844.5,
+                "bottom": 340.171875,
+                "width": 137,
+                "height": 46
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 844.5,
+                "top": 241.78125,
+                "right": 1093.5,
+                "bottom": 294.171875,
+                "width": 249,
+                "height": 52.390625
+            },
+            "tag": "span",
+            "text": "Cell Phones & Accessories"
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 844.5,
+                "top": 294.171875,
+                "right": 1093.5,
+                "bottom": 340.171875,
+                "width": 249,
+                "height": 46
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 1093.5,
+                "top": 241.78125,
+                "right": 1230.5,
+                "bottom": 294.171875,
+                "width": 137,
+                "height": 52.390625
+            },
+            "tag": "span",
+            "text": "Video Games"
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 1093.5,
+                "top": 294.171875,
+                "right": 1230.5,
+                "bottom": 340.171875,
+                "width": 137,
+                "height": 46
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 521,
+                "top": 340.171875,
+                "right": 759,
+                "bottom": 392.5625,
+                "width": 238,
+                "height": 52.390625
+            },
+            "tag": "span",
+            "text": "Grocery & Gourmet Food"
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 521,
+                "top": 392.5625,
+                "right": 759,
+                "bottom": 438.5625,
+                "width": 238,
+                "height": 46
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 20,
+                "top": 461.5625,
+                "right": 71,
+                "bottom": 478.5625,
+                "width": 51,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Home"
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 197,
+                "top": 663.9375,
+                "right": 239,
+                "bottom": 686.328125,
+                "width": 42,
+                "height": 22.390625
+            },
+            "tag": "span",
+            "text": "2531"
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 340,
+                "top": 558.546875,
+                "right": 354,
+                "bottom": 572.546875,
+                "width": 14,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 1082,
+                "top": 548.046875,
+                "right": 1214,
+                "bottom": 583.046875,
+                "width": 132,
+                "height": 35
+            },
+            "tag": "select",
+            "text": "\n                                    \n                                    \n                                    \n                                "
+        },
+        {
+            "keep": true,
+            "id": "AK",
+            "rects": {
+                "left": 1236.5,
+                "top": 558.546875,
+                "right": 1247.5,
+                "bottom": 572.546875,
+                "width": 11,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        }
+    ]
+}

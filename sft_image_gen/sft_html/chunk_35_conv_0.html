@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postmill - Modern Forum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --primary-hover: #0056b3;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --surface-color: #ffffff;
+            --text-color: #212529;
+            --text-muted: #6c757d;
+            --border-color: #dee2e6;
+            --border-radius: 0.5rem;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Navigation */
+        .main-nav-wrapper {
+            background-color: var(--surface-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+
+        .nav-left, .nav-center, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-logo b {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .nav-links ul, .nav-auth ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a, .nav-auth a {
+            font-weight: 500;
+            color: var(--text-muted);
+            padding: 0.5rem 0;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            transform: scaleX(1);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-color);
+        }
+        
+        .search-form {
+            position: relative;
+            width: 250px;
+        }
+        
+        .search-form .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .search-form input[type="search"] {
+            width: 100%;
+            padding: 0.6rem 0.75rem 0.6rem 2.5rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            background-color: #f1f3f5;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+        
+        .search-form input[type="search"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background-color: var(--surface-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            color: white;
+            text-decoration: none;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+        }
+        .btn-secondary:hover {
+            background-color: #e9ecef;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        /* Main Content Area */
+        .content-wrapper {
+            padding: 2rem 0;
+            flex-grow: 1;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .filter-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--surface-color);
+            padding: 0.5rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+        }
+
+        .filter-tabs ul, .filter-dropdowns ul {
+            list-style: none;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .filter-tabs a {
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .filter-tabs a.active, .filter-tabs a:hover {
+            background-color: #e9ecef;
+            color: var(--text-color);
+        }
+
+        .filter-dropdowns button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .filter-dropdowns button:hover {
+            background-color: #e9ecef;
+            border-color: #adb5bd;
+        }
+        
+        .filter-dropdowns button i {
+            color: var(--text-muted);
+        }
+
+        /* Sidebar */
+        .sidebar-section {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+        }
+
+        .sidebar-section h1 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+        
+        .sidebar-section small {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: auto;
+        }
+
+        .footer a {
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+        .footer a:hover {
+            color: var(--text-color);
+        }
+
+    </style>
+</head>
+<body data-bbox="0,0,1280,720">
+
+    <nav class="main-nav-wrapper" data-bbox="0,0,1280,0">
+        <div class="container main-nav" data-bbox="90,0,1100,52">
+            <div class="nav-left">
+                <div class="nav-logo">
+                    <b id="0" data-text="Postmill" data-bbox="120,16,58,19">Postmill</b>
+                </div>
+                <div class="nav-links" data-bbox="194,0,148,52">
+                    <ul data-bbox="194,0,148,52">
+                        <li><a id="1" href="#" class="active" data-text="Forums" data-bbox="194,0,86,52">Forums</a></li>
+                        <li><a id="2" href="#" data-text="Wiki" data-bbox="280,0,62,52">Wiki</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="nav-center">
+                 <form class="search-form" data-bbox="560,0,236,52" onsubmit="return false;">
+                    <i class="fas fa-search search-icon"></i>
+                    <input id="4" type="search" placeholder="Search forums..." data-bbox="567,8,222,37">
+                </form>
+            </div>
+
+            <div class="nav-right">
+                <div class="nav-auth">
+                    <ul data-bbox="1014,0,162,52">
+                        <li><a id="5" href="#" class="btn btn-secondary" data-text="Log in" data-bbox="1014,0,76,52">Log in</a></li>
+                        <li><a id="6" href="#" class="btn btn-primary" data-text="Sign up" data-bbox="1090,0,86,52">Sign up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-wrapper container">
+        <div class="content-grid" data-bbox="90,52,1100,103">
+            <div class="main-content">
+                <nav class="filter-nav" data-bbox="90,80,792,49">
+                    <div class="filter-tabs">
+                        <ul data-bbox="104,80,189,35">
+                            <li><a id="7" href="#" class="active" data-text="Submissions" data-bbox="104,80,100,35">Submissions</a></li>
+                            <li><a id="8" href="#" data-text="Comments" data-bbox="204,80,89,35">Comments</a></li>
+                        </ul>
+                    </div>
+                    <div class="filter-dropdowns">
+                        <ul data-bbox="307,80,177,35">
+                            <li data-bbox="307,80,105,35">
+                                <button type="button" data-bbox="307,80,105,35">
+                                    <i id="9" class="fas fa-star" data-bbox="319,92,11,11"></i>
+                                    <span id="10" data-text="Featured" data-bbox="335,89,56,16">Featured</span>
+                                    <i id="11" class="fas fa-chevron-down" data-bbox="394,89,8,16"></i>
+                                </button>
+                            </li>
+                            <li data-bbox="412,80,72,35">
+                                <button type="button" data-bbox="412,80,72,35">
+                                    <i id="12" class="fas fa-fire" data-bbox="423,90,14,14"></i>
+                                    <span id="13" data-text="Hot" data-bbox="440,89,23,16">Hot</span>
+                                    <i id="14" class="fas fa-chevron-down" data-bbox="466,89,8,16"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- Placeholder for main content like forum posts -->
+            </div>
+            <aside class="sidebar">
+                <section class="sidebar-section" data-bbox="910,66,280,89">
+                    <h1 data-text="Featured forums" data-bbox="924,80,252,26">Featured forums</h1>
+                    <small data-text="There are no featured forums to display." data-bbox="924,124,215,14">There are no featured forums to display.</small>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span data-text="Running" data-bbox="598,690,43,13">Running <a id="15" href="#" data-text="Postmill" data-bbox="641,690,42,13">Postmill</a></span>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Interactive hover effect for filter buttons
+            const filterButtons = document.querySelectorAll('.filter-dropdowns button');
+            filterButtons.forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    button.style.transform = 'translateY(-2px)';
+                    button.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+                });
+                button.addEventListener('mouseleave', () => {
+                    button.style.transform = 'translateY(0)';
+                    button.style.boxShadow = 'none';
+                });
+            });
+
+            // Simple alert on sign up click for demonstration
+            const signUpButton = document.getElementById('6');
+            if (signUpButton) {
+                signUpButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    alert('Sign up functionality coming soon!');
+                });
+            }
+
+            // Tab switching logic for main nav and filter nav
+            const setActiveTab = (selector) => {
+                const links = document.querySelectorAll(selector);
+                links.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        links.forEach(l => l.classList.remove('active'));
+                        e.currentTarget.classList.add('active');
+                    });
+                });
+            };
+            
+            setActiveTab('.nav-links a');
+            setActiveTab('.filter-tabs a');
+        });
+    </script>
+</body>
+</html>

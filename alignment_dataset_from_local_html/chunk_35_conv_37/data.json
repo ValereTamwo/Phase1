@@ -1,0 +1,343 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_37.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,55\"><HEADER data-bbox=\"0,0,1280,55\"><IMG id=\"0\" src=\"https://picsum.photos/seed/maplogo/30/30\" alt=\"Logo\" data-bbox=\"10,13,30,30\"></IMG><NAV data-bbox=\"178,0,227,55\"><DIV data-bbox=\"188,10,207,35\"><DIV data-bbox=\"188,10,77,35\"><A id=\"1\" href=\"#\" data-bbox=\"188,10,50,35\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Edit</text></A><BUTTON id=\"2\" type=\"button\" data-bbox=\"237,10,28,35\"><I class=\"fas fa-caret-down possible-clickable-element\" data-testid=\"B\"></I></BUTTON></DIV><A id=\"3\" href=\"#\" data-bbox=\"264,10,68,35\" class=\"possible-clickable-element\" data-testid=\"C\"><text>History</text></A><A id=\"4\" href=\"#\" data-bbox=\"331,10,64,35\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Export</text></A></DIV></NAV><NAV data-bbox=\"708,0,572,55\"><UL data-bbox=\"722,13,405,27\"><A id=\"5\" href=\"#\" data-bbox=\"722,13,77,27\" class=\"possible-clickable-element\" data-testid=\"E\"><text>GPS Traces</text></A><A id=\"6\" href=\"#\" data-bbox=\"803,13,82,27\" class=\"possible-clickable-element\" data-testid=\"F\"><text>User Diaries</text></A><A id=\"7\" href=\"#\" data-bbox=\"889,13,87,27\" class=\"possible-clickable-element\" data-testid=\"G\"><text>Communities</text></A><A id=\"8\" href=\"#\" data-bbox=\"980,13,63,27\" class=\"possible-clickable-element\" data-testid=\"H\"><text>Copyright</text></A><A id=\"9\" href=\"#\" data-bbox=\"1047,13,34,27\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Help</text></A><A id=\"10\" href=\"#\" data-bbox=\"1085,13,42,27\" class=\"possible-clickable-element\" data-testid=\"J\"><text>About</text></A></UL><DIV data-bbox=\"1135,10,135,35\"><A id=\"11\" href=\"#\" data-bbox=\"1135,10,63,35\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Log In</text></A><A id=\"12\" href=\"#\" data-bbox=\"1197,10,73,35\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Sign Up</text></A></DIV></NAV></HEADER><DIV data-bbox=\"0,55,1280,665\"><DIV data-bbox=\"0,55,350,665\"><DIV data-bbox=\"0,55,350,213\"><FORM data-bbox=\"0,55,350,213\"><BUTTON id=\"13\" type=\"button\" data-bbox=\"313,71,21,21\" class=\"possible-clickable-element\" data-testid=\"M\"></BUTTON><INPUT id=\"14\" type=\"text\" placeholder=\"From\" value=\"Phipps Conservatory, Panther Hollow Road, Squirrel Hill South, Pittsburgh, Allegheny County, 15213, United States\" data-value=\"Phipps Conservatory, Panther Hollow Road, Squirrel Hill South, Pittsburgh, Allegheny County, 15213, United States\" data-bbox=\"37,112,305,31\" class=\"possible-clickable-element\" data-testid=\"N\" style=\"\"></INPUT><INPUT id=\"15\" type=\"text\" placeholder=\"To\" value=\"CVS Pharmacy, 4610, Centre Avenue, North Oakland, Pittsburgh, Allegheny County, 15213, United States\" data-value=\"CVS Pharmacy, 4610, Centre Avenue, North Oakland, Pittsburgh, Allegheny County, 15213, United States\" data-bbox=\"37,147,305,31\" class=\"possible-clickable-element\" data-testid=\"O\" style=\"\"></INPUT><DIV data-bbox=\"4,182,342,31\"><SELECT id=\"16\" data-value=\"1\" data-text=\"Car (OSRM)\" data-bbox=\"37,182,262,31\" class=\"possible-clickable-element\" data-testid=\"P\"></SELECT><INPUT id=\"17\" value=\"Go\" type=\"submit\" data-bbox=\"307,182,35,31\" class=\"possible-clickable-element\" data-testid=\"Q\" style=\"\"></INPUT></DIV><BUTTON id=\"18\" type=\"button\" data-bbox=\"37,217,132,31\" class=\"possible-clickable-element\" data-testid=\"R\"><I class=\"fas fa-exchange-alt\"></I><text>Reverse Directions</text></BUTTON></FORM></DIV><DIV data-bbox=\"16,284,318,46\"><H2 data-bbox=\"16,284,297,38\"><text>Directions</text></H2><BUTTON id=\"19\" type=\"button\" data-bbox=\"313,284,21,21\" class=\"possible-clickable-element\" data-testid=\"S\"></BUTTON></DIV><P data-bbox=\"16,330,318,21\"><text>Distance: 2.0km. Time: 0:03.</text></P><DIV id=\"20\" data-bbox=\"17,372,20,20\"><I class=\"fa-solid fa-flag\"></I></DIV><B id=\"21\" data-bbox=\"39,373,13,17\"><text>1.</text></B><DIV id=\"23\" data-bbox=\"17,402,20,20\"><I class=\"fa-solid fa-arrow-turn-up\"></I></DIV><DIV id=\"27\" data-bbox=\"17,432,20,20\"></DIV><DIV id=\"31\" data-bbox=\"17,462,20,20\"></DIV><DIV id=\"35\" data-bbox=\"17,492,20,20\"></DIV><DIV id=\"39\" data-bbox=\"17,522,20,20\"></DIV><DIV id=\"43\" data-bbox=\"17,552,20,20\"></DIV><DIV id=\"47\" data-bbox=\"17,582,20,20\"></DIV><DIV id=\"51\" data-bbox=\"17,612,20,20\"><I class=\"fa-solid fa-arrow-up\"></I></DIV><B id=\"52\" data-bbox=\"39,613,13,17\"><text>9.</text></B><DIV id=\"54\" data-bbox=\"17,642,20,20\"><I class=\"fa-solid fa-arrow-up\"></I></DIV><B id=\"55\" data-bbox=\"39,643,21,17\"><text>10.</text></B><DIV id=\"57\" data-bbox=\"17,672,20,20\"><I class=\"fa-solid fa-location-dot\"></I></DIV><B id=\"58\" data-bbox=\"39,673,21,17\"><text>11.</text></B></DIV><DIV data-bbox=\"350,55,930,665\"><IMG id=\"60\" src=\"https://maps.google.com/mapfiles/ms/icons/red-dot.png\" alt=\"Destination Marker\" data-bbox=\"846,524,25,41\"></IMG><IMG id=\"61\" src=\"https://maps.google.com/mapfiles/ms/icons/blue-dot.png\" alt=\"Start Marker\" data-bbox=\"756,134,25,41\"></IMG><DIV data-bbox=\"350,55,930,0\"><SPAN id=\"62\" title=\"Zoom In\" data-bbox=\"1250,75,20,20\"><I class=\"fas fa-plus possible-clickable-element\" data-testid=\"T\"></I></SPAN><SPAN id=\"63\" title=\"Zoom Out\" data-bbox=\"1250,115,20,20\"><I class=\"fas fa-minus possible-clickable-element\" data-testid=\"U\"></I></SPAN><SPAN id=\"64\" title=\"Layers\" data-bbox=\"1250,155,20,20\"><I class=\"fas fa-layer-group possible-clickable-element\" data-testid=\"V\"></I></SPAN><SPAN id=\"65\" title=\"Legend\" data-bbox=\"1250,205,20,20\"><I class=\"fas fa-list possible-clickable-element\" data-testid=\"W\"></I></SPAN><SPAN id=\"66\" title=\"My Location\" data-bbox=\"1250,245,20,20\"><I class=\"fas fa-location-crosshairs possible-clickable-element\" data-testid=\"X\"></I></SPAN><SPAN id=\"67\" title=\"Measure\" data-bbox=\"1250,285,20,20\"><I class=\"fas fa-ruler\"></I></SPAN><SPAN id=\"68\" data-bbox=\"1250,335,20,20\"></SPAN><SPAN id=\"69\" data-bbox=\"1250,385,20,20\"></SPAN><DIV data-bbox=\"355,681,84,34\"><DIV data-bbox=\"355,681,83,18\"><text>300 m</text></DIV><DIV data-bbox=\"355,697,84,18\"><text>1000 ft</text></DIV></DIV><DIV data-bbox=\"874,703,406,17\"><text>©</text><A id=\"70\" href=\"#\" data-bbox=\"891,704,151,14\"><text>OpenStreetMap contributors</text></A><A id=\"71\" href=\"#\" data-bbox=\"1056,704,90,14\"><text>Make a Donation</text></A><A id=\"72\" href=\"#\" data-bbox=\"1153,704,122,14\"><text>Website and API terms</text></A></DIV></DIV></DIV></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    header|\n    <\n      div|\n      <a[A]| Edit >\n      <i[B]| >\n      <a[C]| History >\n      <a[D]| Export >\n    >\n    <\n      nav|\n      <\n        ul|\n        <a[E]| GPS Traces >\n        <a[F]| User Diaries >\n        <a[G]| Communities >\n        <a[H]| Copyright >\n        <a[I]| Help >\n        <a[J]| About >\n      >\n      <\n        div|\n        <a[K]| Log In >\n        <a[L]| Sign Up >\n      >\n    >\n  >\n  <\n    div|\n    <\n      div|\n      <\n        form|\n        <button[M]| >\n        <input[N]| Phipps Conservatory, Panther Hollow Road, Squirrel Hill South, Pittsburgh, Allegheny County, 15213, United States; From >\n        <input[O]| CVS Pharmacy, 4610, Centre Avenue, North Oakland, Pittsburgh, Allegheny County, 15213, United States; To >\n        <select[P]| >\n        <input[Q]| Go >\n        <button[R]| Reverse Directions >\n      >\n      <h2| Directions >\n      <button[S]| >\n      <p| Distance: 2.0km. Time: 0:03. >\n      <b| 1. >\n      <b| 9. >\n      <b| 10. >\n      <b| 11. >\n    >\n    <\n      div|\n      <\n        span| Zoom In\n        <i[T]| >\n      >\n      <\n        span| Zoom Out\n        <i[U]| >\n      >\n      <\n        span| Layers\n        <i[V]| >\n      >\n      <\n        span| Legend\n        <i[W]| >\n      >\n      <\n        span| My Location\n        <i[X]| >\n      >\n      <span| Measure >\n      <\n        div|\n        <div| 300 m >\n        <div| 1000 ft >\n      >\n      <\n        div|\n        <text| © >\n        <a| OpenStreetMap contributors >\n        <a| Make a Donation >\n        <a| Website and API terms >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 286.3125,
+                "top": 18.5,
+                "right": 337.3125,
+                "bottom": 35.5,
+                "width": 51,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " Edit "
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 349.3125,
+                "top": 18.5,
+                "right": 358.3125,
+                "bottom": 32.90625,
+                "width": 9,
+                "height": 14.40625
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 371.3125,
+                "top": 18.5,
+                "right": 446.3125,
+                "bottom": 35.5,
+                "width": 75,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " History "
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 446.3125,
+                "top": 18.5,
+                "right": 516.3125,
+                "bottom": 35.5,
+                "width": 70,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " Export "
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 631.96875,
+                "top": 0,
+                "right": 734.96875,
+                "bottom": 54,
+                "width": 103,
+                "height": 54
+            },
+            "tag": "a",
+            "text": " GPS Traces "
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 734.96875,
+                "top": 0,
+                "right": 843.96875,
+                "bottom": 54,
+                "width": 109,
+                "height": 54
+            },
+            "tag": "a",
+            "text": " User Diaries "
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 843.96875,
+                "top": 0,
+                "right": 960.96875,
+                "bottom": 54,
+                "width": 117,
+                "height": 54
+            },
+            "tag": "a",
+            "text": " Communities "
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 960.96875,
+                "top": 0,
+                "right": 1054.96875,
+                "bottom": 54,
+                "width": 94,
+                "height": 54
+            },
+            "tag": "a",
+            "text": " Copyright "
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 1054.96875,
+                "top": 0,
+                "right": 1110.96875,
+                "bottom": 54,
+                "width": 56,
+                "height": 54
+            },
+            "tag": "a",
+            "text": " Help "
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1110.96875,
+                "top": 0,
+                "right": 1176.96875,
+                "bottom": 54,
+                "width": 66,
+                "height": 54
+            },
+            "tag": "a",
+            "text": " About "
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 1176.96875,
+                "top": 10,
+                "right": 1255.96875,
+                "bottom": 27,
+                "width": 79,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " Log In "
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 1176.96875,
+                "top": 27,
+                "right": 1255.96875,
+                "bottom": 44,
+                "width": 79,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " Sign Up "
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 20,
+                "top": 89,
+                "right": 24,
+                "bottom": 93,
+                "width": 4,
+                "height": 4
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 20,
+                "top": 95,
+                "right": 354,
+                "bottom": 138,
+                "width": 334,
+                "height": 43
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 20,
+                "top": 150,
+                "right": 354,
+                "bottom": 193,
+                "width": 334,
+                "height": 43
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 20,
+                "top": 205,
+                "right": 324.21875,
+                "bottom": 250,
+                "width": 304.21875,
+                "height": 45
+            },
+            "tag": "select",
+            "text": "\n                            \n                            \n                            \n                        "
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 332.21875,
+                "top": 205,
+                "right": 354,
+                "bottom": 262,
+                "width": 21.78125,
+                "height": 57
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 20,
+                "top": 264,
+                "right": 153.296875,
+                "bottom": 283,
+                "width": 133.296875,
+                "height": 19
+            },
+            "tag": "button",
+            "text": " Reverse Directions "
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 350,
+                "top": 336.5,
+                "right": 354,
+                "bottom": 340.5,
+                "width": 4,
+                "height": 4
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 1232,
+                "top": 85.703125,
+                "right": 1248,
+                "bottom": 103.296875,
+                "width": 16,
+                "height": 17.59375
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 1232,
+                "top": 126.703125,
+                "right": 1248,
+                "bottom": 144.296875,
+                "width": 16,
+                "height": 17.59375
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 1230,
+                "top": 167.703125,
+                "right": 1250,
+                "bottom": 185.296875,
+                "width": 20,
+                "height": 17.59375
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 1231,
+                "top": 208.703125,
+                "right": 1249,
+                "bottom": 226.296875,
+                "width": 18,
+                "height": 17.59375
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 1231,
+                "top": 249.703125,
+                "right": 1249,
+                "bottom": 267.296875,
+                "width": 18,
+                "height": 17.59375
+            },
+            "tag": "i",
+            "text": ""
+        }
+    ]
+}

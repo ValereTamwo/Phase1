@@ -1,0 +1,511 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_34.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,55\"><HEADER data-bbox=\"0,0,1280,55\"><IMG id=\"0\" data-bbox=\"10,13,30,30\" src=\"https://picsum.photos/seed/maplogo/30\" alt=\"Map Logo\"></IMG><NAV data-bbox=\"178,0,227,55\"><DIV data-bbox=\"188,10,207,35\"><DIV data-bbox=\"188,10,77,35\" class=\"edit-group\"><A id=\"1\" data-bbox=\"188,10,50,35\" class=\"possible-clickable-element\" data-testid=\"A\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Edit</text></A><BUTTON id=\"2\" type=\"button\" data-bbox=\"237,10,28,35\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><I class=\"fas fa-chevron-down possible-clickable-element\" data-testid=\"B\"></I></BUTTON></DIV><A id=\"3\" data-bbox=\"264,10,68,35\" class=\"possible-clickable-element\" data-testid=\"C\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>History</text></A><A id=\"4\" data-bbox=\"331,10,64,35\" class=\"possible-clickable-element\" data-testid=\"D\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Export</text></A></DIV></NAV><NAV data-bbox=\"708,0,572,55\"><UL data-bbox=\"722,13,405,27\"><A id=\"5\" data-bbox=\"722,13,77,27\" class=\"possible-clickable-element\" data-testid=\"E\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>GPS Traces</text></A><A id=\"6\" data-bbox=\"803,13,82,27\" class=\"possible-clickable-element\" data-testid=\"F\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>User Diaries</text></A><A id=\"7\" data-bbox=\"889,13,87,27\" class=\"possible-clickable-element\" data-testid=\"G\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Communities</text></A><A id=\"8\" data-bbox=\"980,13,63,27\" class=\"possible-clickable-element\" data-testid=\"H\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Copyright</text></A><A id=\"9\" data-bbox=\"1047,13,34,27\" class=\"possible-clickable-element\" data-testid=\"I\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Help</text></A><A id=\"10\" data-bbox=\"1085,13,42,27\" class=\"possible-clickable-element\" data-testid=\"J\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>About</text></A></UL><DIV data-bbox=\"1135,10,135,35\"><A id=\"11\" data-bbox=\"1135,10,63,35\" class=\"possible-clickable-element\" data-testid=\"K\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Log In</text></A><A id=\"12\" data-bbox=\"1197,10,73,35\" class=\"possible-clickable-element\" data-testid=\"L\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Sign Up</text></A></DIV></NAV></HEADER><DIV class=\"main-container\" data-bbox=\"0,55,1280,665\"><DIV class=\"sidebar\" data-bbox=\"0,55,350,515\"><DIV class=\"panel\" data-bbox=\"0,55,350,213\"><DIV class=\"panel-header directions-header\" data-bbox=\"4,63,342,31\"><DIV data-bbox=\"8,63,288,31\"><DIV data-bbox=\"8,63,254,31\"><H2 style=\"font-size: 1.25rem; font-weight: 700;\"><text>Directions</text></H2></DIV></DIV><A title=\"Find directions between two points\" data-bbox=\"304,63,38,31\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><I class=\"fas fa-directions possible-clickable-element\" data-testid=\"M\"></I></A></DIV><FORM data-bbox=\"0,55,350,213\"><DIV class=\"input-group from-input\"><INPUT id=\"14\" type=\"text\" placeholder=\"From\" data-value=\"Lake George\" data-bbox=\"37,112,305,31\" class=\"possible-clickable-element\" data-testid=\"N\" style=\"\"></INPUT></DIV><DIV class=\"input-group to-input\"><INPUT id=\"15\" type=\"text\" placeholder=\"To\" data-bbox=\"37,147,305,31\" class=\"possible-clickable-element\" data-testid=\"O\" style=\"\"></INPUT></DIV><DIV class=\"route-options\" data-bbox=\"4,182,342,31\"><SELECT id=\"16\" data-value=\"1\" data-text=\"Car (OSRM)\" data-bbox=\"37,182,262,31\" class=\"possible-clickable-element\" data-testid=\"P\"></SELECT><INPUT id=\"17\" value=\"Go\" type=\"submit\" data-bbox=\"307,182,35,31\" class=\"possible-clickable-element\" data-testid=\"Q\" style=\"\"></INPUT></DIV><BUTTON id=\"18\" data-bbox=\"37,217,132,31\" type=\"button\" class=\"possible-clickable-element\" data-testid=\"R\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><I class=\"fas fa-exchange-alt\"></I><text>Reverse Directions</text></BUTTON></FORM></DIV><DIV class=\"panel welcome-panel\" data-bbox=\"0,268,350,302\"><DIV class=\"panel-header\" data-bbox=\"16,284,318,85\"><H2 data-bbox=\"16,284,297,77\"><text>Welcome to OpenStreetMap!</text></H2><BUTTON id=\"19\" type=\"button\" data-bbox=\"313,284,21,21\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><I class=\"fas fa-times possible-clickable-element\" data-testid=\"S\"></I></BUTTON></DIV><DIV data-bbox=\"16,369,318,185\"><P data-bbox=\"16,369,318,69\"><text>OpenStreetMap is a map of the world, created by people like you and free to use under an open license.</text></P><P data-bbox=\"16,454,318,46\"><text>Hosting is supported by</text><A id=\"20\" data-bbox=\"180,455,27,20\" class=\"possible-clickable-element\" data-testid=\"T\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>UCL</text></A><text>,</text><A id=\"21\" data-bbox=\"216,455,39,20\" class=\"possible-clickable-element\" data-testid=\"U\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Fastly</text></A><text>,</text><A id=\"22\" data-bbox=\"264,455,63,20\" class=\"possible-clickable-element\" data-testid=\"V\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Bytemark Hosting</text></A><text>and other</text><A id=\"23\" data-bbox=\"145,478,56,20\" class=\"possible-clickable-element\" data-testid=\"W\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>partners</text></A><text>.</text></P><DIV class=\"welcome-buttons\" data-bbox=\"12,516,326,38\"><A id=\"24\" data-bbox=\"16,516,155,38\" class=\"possible-clickable-element\" data-testid=\"X\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Learn More</text></A><A id=\"25\" data-bbox=\"179,516,155,38\" class=\"possible-clickable-element\" data-testid=\"Y\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Start Mapping</text></A></DIV></DIV></DIV><DIV class=\"panel-header\" data-bbox=\"16,118,318,47\"><H2 data-bbox=\"16,118,297,39\"><text>Search Results</text></H2></DIV></DIV><DIV class=\"map-area\" data-bbox=\"0,55,1280,665\"><DIV class=\"map-controls\"><SPAN id=\"26\" data-bbox=\"1250,75,20,20\" title=\"Zoom In\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><I class=\"fas fa-plus possible-clickable-element\" data-testid=\"Z\"></I></SPAN><SPAN id=\"27\" data-bbox=\"1250,115,20,20\" title=\"Zoom Out\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><I class=\"fas fa-minus possible-clickable-element\" data-testid=\"AA\"></I></SPAN><SPAN id=\"28\" data-bbox=\"1250,155,20,20\" title=\"Locate Me\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><I class=\"fas fa-crosshairs possible-clickable-element\" data-testid=\"AB\"></I></SPAN><SPAN id=\"29\" data-bbox=\"1250,205,20,20\" title=\"Layers\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><I class=\"fas fa-layer-group possible-clickable-element\" data-testid=\"AC\"></I></SPAN><SPAN id=\"30\" data-bbox=\"1250,245,20,20\" title=\"Map Key\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><I class=\"fas fa-key possible-clickable-element\" data-testid=\"AD\"></I></SPAN><SPAN id=\"31\" data-bbox=\"1250,285,20,20\" title=\"Query Features\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><I class=\"fas fa-info-circle possible-clickable-element\" data-testid=\"AE\"></I></SPAN><SPAN id=\"32\" data-bbox=\"1250,335,20,20\" title=\"Share\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><I class=\"fas fa-share-alt possible-clickable-element\" data-testid=\"AF\"></I></SPAN><SPAN id=\"33\" data-bbox=\"1250,385,20,20\" title=\"Add a Note\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><I class=\"fas fa-map-pin possible-clickable-element\" data-testid=\"AG\"></I></SPAN></DIV><DIV class=\"map-footer\"><DIV class=\"scale-bar\" data-bbox=\"5,681,70,34\"><DIV data-bbox=\"5,681,69,18\"><text>30 m</text></DIV><DIV data-bbox=\"5,697,70,18\" style=\"border-top: 1px solid var(--text-secondary); margin-top: 2px; padding-top: 2px;\"><text>100 ft</text></DIV></DIV><DIV class=\"attribution\" data-bbox=\"874,703,406,17\"><text>©</text><A id=\"34\" data-bbox=\"891,704,151,14\" class=\"possible-clickable-element\" data-testid=\"AH\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>OpenStreetMap contributors</text></A><text>|</text><A id=\"35\" data-bbox=\"1056,704,90,14\" class=\"possible-clickable-element\" data-testid=\"AI\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Make a Donation</text></A><text>|</text><A id=\"36\" data-bbox=\"1153,704,122,14\" class=\"possible-clickable-element\" data-testid=\"AJ\" style=\"transition: transform 0.1s ease-in-out, box-shadow 0.2s;\"><text>Website and API terms</text></A></DIV></DIV></DIV></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    header|\n    <\n      div|\n      <a[A]| Edit >\n      <i[B]| >\n      <a[C]| History >\n      <a[D]| Export >\n    >\n    <\n      nav|\n      <\n        ul|\n        <a[E]| GPS Traces >\n        <a[F]| User Diaries >\n        <a[G]| Communities >\n        <a[H]| Copyright >\n        <a[I]| Help >\n        <a[J]| About >\n      >\n      <\n        div|\n        <a[K]| Log In >\n        <a[L]| Sign Up >\n      >\n    >\n  >\n  <\n    div|\n    <\n      div|\n      <\n        div|\n        <\n          div|\n          <h2| Directions >\n          <\n            a| Find directions between two points\n            <i[M]| >\n          >\n        >\n        <\n          form|\n          <input[N]| From >\n          <input[O]| To >\n          <select[P]| >\n          <input[Q]| Go >\n          <button[R]| Reverse Directions >\n        >\n      >\n      <\n        div|\n        <h2| Welcome to OpenStreetMap! >\n        <i[S]| >\n        <\n          div|\n          <p| OpenStreetMap is a map of the world, created by people like you and free to use under an open license. >\n          <\n            p|\n            <text| Hosting is supported by >\n            <a[T]| UCL >\n            <text| , >\n            <a[U]| Fastly >\n            <text| , >\n            <a[V]| Bytemark Hosting >\n            <text| and other >\n            <a[W]| partners >\n            <text| . >\n          >\n          <\n            div|\n            <a[X]| Learn More >\n            <a[Y]| Start Mapping >\n          >\n        >\n      >\n      <h2| Search Results >\n    >\n    <\n      div|\n      <\n        div|\n        <\n          span| Zoom In\n          <i[Z]| >\n        >\n        <\n          span| Zoom Out\n          <i[AA]| >\n        >\n        <\n          span| Locate Me\n          <i[AB]| >\n        >\n        <\n          span| Layers\n          <i[AC]| >\n        >\n        <\n          span| Map Key\n          <i[AD]| >\n        >\n        <\n          span| Query Features\n          <i[AE]| >\n        >\n        <\n          span| Share\n          <i[AF]| >\n        >\n        <\n          span| Add a Note\n          <i[AG]| >\n        >\n      >\n      <\n        div|\n        <\n          div|\n          <div| 30 m >\n          <div| 100 ft >\n        >\n        <\n          div|\n          <text| © >\n          <a[AH]| OpenStreetMap contributors >\n          <text| | >\n          <a[AI]| Make a Donation >\n          <text| | >\n          <a[AJ]| Website and API terms >\n        >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 223.65625,
+                "top": 9.5,
+                "right": 275.65625,
+                "bottom": 44.5,
+                "width": 52,
+                "height": 35
+            },
+            "tag": "a",
+            "text": "Edit"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 283.65625,
+                "top": 20.5,
+                "right": 296.65625,
+                "bottom": 33.828125,
+                "width": 13,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 329.65625,
+                "top": 0,
+                "right": 388.65625,
+                "bottom": 54,
+                "width": 59,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "History"
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 412.65625,
+                "top": 0,
+                "right": 466.65625,
+                "bottom": 54,
+                "width": 54,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "Export"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 552.984375,
+                "top": 0,
+                "right": 639.984375,
+                "bottom": 54,
+                "width": 87,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "GPS Traces"
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 663.984375,
+                "top": 0,
+                "right": 756.984375,
+                "bottom": 54,
+                "width": 93,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "User Diaries"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 780.984375,
+                "top": 0,
+                "right": 881.984375,
+                "bottom": 54,
+                "width": 101,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "Communities"
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 905.984375,
+                "top": 0,
+                "right": 983.984375,
+                "bottom": 54,
+                "width": 78,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "Copyright"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 1007.984375,
+                "top": 0,
+                "right": 1047.984375,
+                "bottom": 54,
+                "width": 40,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "Help"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1071.984375,
+                "top": 0,
+                "right": 1121.984375,
+                "bottom": 54,
+                "width": 50,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "About"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 1121.984375,
+                "top": 0,
+                "right": 1172.984375,
+                "bottom": 54,
+                "width": 51,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "Log In"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 1196.984375,
+                "top": 0,
+                "right": 1259.984375,
+                "bottom": 54,
+                "width": 63,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "Sign Up"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 293,
+                "top": 95,
+                "right": 309,
+                "bottom": 111,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 33,
+                "top": 134,
+                "right": 316,
+                "bottom": 172,
+                "width": 283,
+                "height": 38
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 33,
+                "top": 184,
+                "right": 316,
+                "bottom": 222,
+                "width": 283,
+                "height": 38
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 33,
+                "top": 234,
+                "right": 257.484375,
+                "bottom": 274,
+                "width": 224.484375,
+                "height": 40
+            },
+            "tag": "select",
+            "text": "\n                            \n                            \n                            \n                        "
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 265.484375,
+                "top": 234,
+                "right": 316,
+                "bottom": 274,
+                "width": 50.515625,
+                "height": 40
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 33,
+                "top": 286,
+                "right": 316,
+                "bottom": 305,
+                "width": 283,
+                "height": 19
+            },
+            "tag": "button",
+            "text": " Reverse Directions"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 296.390625,
+                "top": 370,
+                "right": 308.390625,
+                "bottom": 386,
+                "width": 12,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 219,
+                "top": 539.375,
+                "right": 252,
+                "bottom": 559.375,
+                "width": 33,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "UCL"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 262,
+                "top": 539.375,
+                "right": 305,
+                "bottom": 559.375,
+                "width": 43,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "Fastly"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 33,
+                "top": 564.96875,
+                "right": 167,
+                "bottom": 584.96875,
+                "width": 134,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "Bytemark Hosting"
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 249,
+                "top": 564.96875,
+                "right": 311,
+                "bottom": 584.96875,
+                "width": 62,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "partners"
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 33,
+                "top": 604.5625,
+                "right": 168.5,
+                "bottom": 644.5625,
+                "width": 135.5,
+                "height": 40
+            },
+            "tag": "a",
+            "text": "Learn More"
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 180.5,
+                "top": 604.5625,
+                "right": 316,
+                "bottom": 644.5625,
+                "width": 135.5,
+                "height": 40
+            },
+            "tag": "a",
+            "text": "Start Mapping"
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 1235.5,
+                "top": 83.5,
+                "right": 1250.5,
+                "bottom": 99.5,
+                "width": 15,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 1235.5,
+                "top": 117.5,
+                "right": 1250.5,
+                "bottom": 133.5,
+                "width": 15,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 1235,
+                "top": 151.5,
+                "right": 1251,
+                "bottom": 167.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 1234,
+                "top": 185.5,
+                "right": 1252,
+                "bottom": 201.5,
+                "width": 18,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 1235,
+                "top": 219.5,
+                "right": 1251,
+                "bottom": 235.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 1235,
+                "top": 253.5,
+                "right": 1251,
+                "bottom": 269.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 1236,
+                "top": 287.5,
+                "right": 1250,
+                "bottom": 303.5,
+                "width": 14,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 1238,
+                "top": 322,
+                "right": 1248,
+                "bottom": 338,
+                "width": 10,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 856,
+                "top": 691,
+                "right": 1018,
+                "bottom": 706,
+                "width": 162,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "OpenStreetMap contributors"
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 1028,
+                "top": 691,
+                "right": 1124,
+                "bottom": 706,
+                "width": 96,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Make a Donation"
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 1134,
+                "top": 691,
+                "right": 1262,
+                "bottom": 706,
+                "width": 128,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Website and API terms"
+        }
+    ]
+}

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitLab Project Analytics</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --bg-body: #18181B;
+            --bg-surface-1: #27272A;
+            --bg-surface-2: #3F3F46;
+            --bg-surface-3: #52525B;
+            --text-primary: #F4F4F5;
+            --text-secondary: #A1A1AA;
+            --text-tertiary: #71717A;
+            --border-color: #3f3f46;
+            --accent-orange: #f9612b;
+            --accent-purple: #6b4fbb;
+            --accent-blue: #3b82f6;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            display: grid;
+            grid-template-columns: 256px 1fr;
+            grid-template-rows: 48px 1fr;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            background-color: var(--bg-surface-1);
+            border-bottom: 1px solid var(--border-color);
+            gap: 16px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        #0 { fill: #e24329; }
+        #1 { fill: #fc6d26; }
+        #2 { fill: #fca326; }
+
+        input[placeholder="Search GitLab"] {
+            background-color: var(--bg-body);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 6px 12px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            width: 320px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        input[placeholder="Search GitLab"]:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+        }
+
+        .header-actions {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-secondary);
+        }
+
+        .action-group {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .action-group:hover {
+            color: var(--text-primary);
+        }
+        
+        .action-group svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .action-group span {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        #17 {
+            border-radius: 50%;
+            object-fit: cover;
+            width: 24px;
+            height: 24px;
+        }
+
+        aside {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            background-color: var(--bg-surface-1);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+        
+        .project-info {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        #19 {
+            display: grid;
+            place-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: var(--accent-purple);
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        #20 {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .sidebar-menu {
+            padding: 8px 0;
+            flex-grow: 1;
+        }
+        
+        .sidebar-menu > ul > li, .sidebar-menu > ul > a {
+            padding: 0 8px;
+        }
+
+        .menu-item, .menu-item a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .menu-item:hover, .menu-item a:hover {
+            background-color: var(--bg-surface-2);
+            color: var(--text-primary);
+        }
+
+        .menu-item svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .menu-item .count {
+            margin-left: auto;
+            background-color: var(--bg-surface-3);
+            color: var(--text-primary);
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 10px;
+        }
+        
+        li[data-bbox="0,127,238,263"] > span {
+            font-weight: 600;
+            color: var(--text-primary);
+            padding: 10px 16px;
+            display: block;
+        }
+
+        li[data-bbox="0,127,238,263"] > ul {
+            padding-left: 24px;
+        }
+
+        li[data-bbox="0,358,238,32"] {
+            background-color: rgba(59, 130, 246, 0.15);
+            border-left: 3px solid var(--accent-blue);
+            margin: 4px 0;
+        }
+        
+        li[data-bbox="0,358,238,32"] a {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        [title="Toggle sidebar"] {
+            padding: 16px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        [title="Toggle sidebar"]:hover {
+            color: var(--text-primary);
+        }
+
+        [title="Toggle sidebar"] svg {
+            width: 12px;
+            height: 12px;
+            fill: currentColor;
+        }
+
+        main {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            overflow-y: auto;
+            padding: 32px;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 24px;
+        }
+        
+        .chart-card {
+            background-color: var(--bg-surface-1);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .chart-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .chart-header #55, .chart-header #61 {
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: var(--text-primary);
+        }
+
+        .chart-header #56, .chart-header #62, .chart-card > p {
+            font-size: 0.875rem;
+            color: var(--text-tertiary);
+        }
+        
+        .chart-card > h4 {
+            font-size: 1.125rem;
+            margin-bottom: 4px;
+        }
+
+        .chart-card svg {
+            font-family: var(--font-main);
+            font-size: 0.75rem;
+        }
+
+        .chart-card svg text {
+            fill: var(--text-tertiary);
+        }
+        
+        .chart-card svg > g > path:first-of-type, .chart-card svg > g > path:nth-of-type(2) {
+             stroke: var(--border-color);
+             stroke-width: 1px;
+        }
+        
+        .chart-card svg > g > g > path:first-of-type {
+            fill: url(#area-gradient);
+            stroke: none;
+        }
+        
+        .chart-card svg > g > g > path:last-of-type {
+            fill: none;
+            stroke: var(--accent-orange);
+            stroke-width: 2px;
+        }
+
+    </style>
+</head>
+<body data-bbox="0,-312,1263,1237">
+    <header>
+        <div class="logo">
+            <svg width="28" height="28" viewBox="0 0 36 36">
+                <path id="0" data-bbox="16,12,25,24" d="M33.2,16.4C33.2,16.4,33.2,16.4,33.2,16.4c-0.3-0.9-0.9-1.6-1.7-2.1c-0.8-0.5-1.8-0.7-2.8-0.6c-1,0.1-1.9,0.5-2.7,1.2l-1.7,1.4l-6.5-4.5c-0.5-0.3-1.1-0.5-1.8-0.5h-0.2c-0.6,0-1.2,0.2-1.7,0.5L7.6,15.8l-1.8-1.5c-0.8-0.7-1.8-1-2.8-0.9c-1,0-1.9,0.3-2.7,0.9c-0.8,0.6-1.3,1.4-1.6,2.3c-0.3,0.9-0.3,1.9,0.1,2.8l3.3,8.7c0.6,1.4,1.8,2.5,3.3,2.9c1.5,0.4,3.1,0.2,4.4-0.8l7.1-5.5l7.1,5.5c1.3,1,2.9,1.2,4.4,0.8c1.5-0.4,2.7-1.5,3.3-2.9l3.3-8.7C33.5,18.3,33.5,17.3,33.2,16.4z"></path>
+                <path id="1" data-bbox="28,21,13,12" d="M18,22.3L7.6,30.1c-0.9,0.7-2.1,0.8-3.2,0.3c-1-0.5-1.8-1.4-2.1-2.5L-1.1,19c-0.3-0.7-0.3-1.4,0-2.1c0.2-0.7,0.7-1.3,1.3-1.7c0.6-0.4,1.3-0.6,2.1-0.6c0.8,0,1.5,0.2,2.1,0.7l0,0L6,16.8L18,22.3z"></path>
+                <path id="2" data-bbox="24,29,9,7" d="M31.7,27.9c-0.4,1.1-1.1,1.9-2.1,2.5c-1,0.5-2.2,0.4-3.2-0.3L18,22.3l11.4-7.5l1.4-1.5l0,0c0.6-0.5,1.4-0.7,2.1-0.7c0.8,0,1.5,0.2,2.1,0.6c0.6,0.4,1.1,1,1.3,1.7c0.3,0.7,0.3,1.4,0,2.1L31.7,27.9z"></path>
+                <path id="3" data-bbox="16,21,12,12" d="M18,22.3L7.6,30.1c-0.9,0.7-2.1,0.8-3.2,0.3c-1-0.5-1.8-1.4-2.1-2.5L-1.1,19c-0.3-0.7-0.3-1.4,0-2.1c0.2-0.7,0.7-1.3,1.3-1.7c0.6-0.4,1.3-0.6,2.1-0.6c0.8,0,1.5,0.2,2.1,0.7l0,0L6,16.8L18,22.3z"></path>
+                <use id="4" data-bbox="65,19,16,10"></use>
+            </svg>
+        </div>
+        <input id="5" placeholder="Search GitLab" data-bbox="99,8,320,32">
+        <div class="header-actions">
+            <div class="action-group">
+                <svg id="6" data-testid="plus-square-icon" data-bbox="882,16,16,16" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/><path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/></svg>
+                <svg id="7" data-testid="chevron-down-icon" data-bbox="902,16,16,16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+            </div>
+            <div class="action-group">
+                <svg id="8" data-testid="issues-icon" data-bbox="938,16,16,16" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/></svg>
+                <span id="9" data-bbox="953,16,29,16">30</span>
+            </div>
+            <div class="action-group">
+                <svg id="10" data-testid="git-merge-icon" data-bbox="1002,16,16,16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5 3.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m0 2.122a2.25 2.25 0 1 0-1.5 0v3.256a2.251 2.251 0 1 0 1.5 0V5.372zm-1.5 7.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m10-8.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m0 2.122a2.25 2.25 0 1 0-1.5 0v3.256a2.251 2.251 0 1 0 1.5 0V5.372z"/></svg>
+                <span id="11" data-bbox="1017,16,22,16">6</span>
+                <svg id="12" data-testid="chevron-down-icon" data-bbox="1039,16,16,16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+            </div>
+            <div class="action-group">
+                <svg id="13" data-testid="todo-done-icon" data-bbox="1075,16,16,16" viewBox="0 0 16 16"><path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/><path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/></svg>
+                <span id="14" data-bbox="1090,16,29,16">23</span>
+            </div>
+            <div class="action-group">
+                <svg id="15" data-testid="question-o-icon" data-bbox="1137,16,16,16" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/></svg>
+                <svg id="16" data-testid="chevron-down-icon" data-bbox="1157,16,16,16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+            </div>
+            <div class="action-group">
+                <img id="17" src="https://picsum.photos/seed/gitlab-user/24/24" alt="User avatar" data-bbox="1193,12,24,24">
+                <svg id="18" data-testid="chevron-down-icon" data-bbox="1221,16,16,16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>
+            </div>
+        </div>
+    </header>
+    <div data-bbox="0,-312,1263,1237">
+        <aside data-bbox="0,48,256,672">
+            <div data-bbox="0,48,255,672">
+                <div class="sidebar-menu">
+                    <ul data-bbox="0,50,238,736">
+                        <li class="project-info">
+                            <span id="19" data-bbox="12,54,32,32">D</span>
+                            <span id="20" data-bbox="52,62,28,16">dots</span>
+                        </li>
+
+                        <a href="#" class="menu-item" data-bbox="0,94,238,32">
+                             <svg id="21" data-testid="project-icon" data-bbox="20,102,16,16" viewBox="0 0 16 16"><path d="M8.5 1.115l6 2.536a.5.5 0 0 1 .4.5v10.1a.5.5 0 0 1-.523.497L8.5 11.536V1.115zM8 12.383l5.5 2.1L8 15.426V12.383zM7.5 1.115v10.421L1.523 14.75a.5.5 0 0 1-.523-.497V4.15a.5.5 0 0 1 .4-.5l6-2.536z"/></svg>
+                             <span id="22" data-bbox="44,102,174,16">Project information</span>
+                        </a>
+
+                        <li data-bbox="0,127,238,263">
+                            <span data-bbox="44,135,174,16">
+                                <use id="23" data-bbox="22,135,12,16"></use>
+                                Repository
+                            </span>
+                            <ul data-bbox="0,160,238,230">
+                                <li><a href="#" class="menu-item"><span id="25" data-bbox="44,168,27,16">Files</span></a></li>
+                                <li><a href="#" class="menu-item"><span id="26" data-bbox="44,201,55,16">Commits</span></a></li>
+                                <li><a href="#" class="menu-item"><span id="27" data-bbox="44,234,56,16">Branches</span></a></li>
+                                <li><a href="#" class="menu-item"><span id="28" data-bbox="44,267,27,16">Tags</span></a></li>
+                                <li><a href="#" class="menu-item"><span id="29" data-bbox="44,300,80,16">Contributors</span></a></li>
+                                <li><a href="#" class="menu-item"><span id="30" data-bbox="44,333,38,16">Graph</span></a></li>
+                                <li data-bbox="0,358,238,32">
+                                    <a href="#" class="menu-item" data-bbox="8,358,222,32">
+                                        <span id="31" data-bbox="44,366,56,16">Compare</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-bbox="0,391,238,32">
+                            <a href="#" class="menu-item" data-bbox="8,391,222,32">
+                                <span data-bbox="20,399,16,16">
+                                    <svg id="32" data-testid="issues-icon" data-bbox="20,399,16,16" viewBox="0 0 16 16"><use data-bbox="21,400,14,14"></use><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/></svg>
+                                </span>
+                                <span id="33" data-bbox="44,399,152,16">Issues</span>
+                                <span id="34" class="count" data-bbox="196,399,22,16">0</span>
+                            </a>
+                        </li>
+                        <li data-bbox="0,424,238,32">
+                            <a href="#" class="menu-item" data-bbox="8,424,222,32">
+                                <span data-bbox="20,432,16,16">
+                                    <svg id="35" data-testid="git-merge-icon" data-bbox="20,432,16,16" viewBox="0 0 16 16"><use data-bbox="21,433,14,14"></use><path fill-rule="evenodd" d="M5 3.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m0 2.122a2.25 2.25 0 1 0-1.5 0v3.256a2.251 2.251 0 1 0 1.5 0V5.372zm-1.5 7.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5m10-8.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m0 2.122a2.25 2.25 0 1 0-1.5 0v3.256a2.251 2.251 0 1 0 1.5 0V5.372z"/></svg>
+                                </span>
+                                <span id="36" data-bbox="44,432,152,16">Merge requests</span>
+                                <span id="37" class="count" data-bbox="196,432,22,16">0</span>
+                            </a>
+                        </li>
+                        <li data-bbox="0,457,238,32">
+                            <a href="#" class="menu-item" data-bbox="8,457,222,32">
+                                <span data-bbox="20,465,16,16">
+                                    <svg id="38" data-testid="rocket-icon" data-bbox="20,465,16,16" viewBox="0 0 16 16"><use data-bbox="20,465,16,16"></use><path d="M8.811 1.576A.5.5 0 0 0 8 1.5a.5.5 0 0 0-.811.076L6.064 4.34a1.5 1.5 0 0 0-1.028 1.028L2.01 7.182a.5.5 0 0 0 .076.811c.843.434 1.598.96 2.238 1.601C5.06 10.333 5.586 11.09 6.02 11.933a.5.5 0 0 0 .811.076l2.766-2.025a1.5 1.5 0 0 0 1.028-1.028L12.423 6.18a.5.5 0 0 0-.076-.811c-.843-.434-1.598-.96-2.238-1.601C9.39 3.01 8.864 2.253 8.43 1.41a.5.5 0 0 0-.076-.811L6.064 4.34a1.5 1.5 0 0 0-1.028 1.028L2.01 7.182a.5.5 0 0 0 .076.811c.843.434 1.598.96 2.238 1.601C5.06 10.333 5.586 11.09 6.02 11.933a.5.5 0 0 0 .811.076l2.766-2.025a1.5 1.5 0 0 0 1.028-1.028L12.423 6.18a.5.5 0 0 0 .076-.811z"/><path d="M10.203 10.203c.393.393.393 1.03 0 1.424L4.368 15.632c-.393.393-1.03.393-1.424 0l-.353-.353a.5.5 0 0 1 0-.707l.353-.353L2.5 12.5a.5.5 0 0 1 .707 0l.353.353.353.354a.5.5 0 0 1 0 .707l-.353.353.353.354a.5.5 0 0 1 0 .707l-.353.353.353.354a.5.5 0 0 1 0 .707l-.353.353.353.354a.5.5 0 0 1 0 .707l-.353.353.353.354a.5.5 0 0 1 0 .707l-.353.353c-.393.393-.393 1.03 0 1.424l5.835-5.835a1.007 1.007 0 0 0 0-1.424z"/></svg>
+                                </span>
+                                <span id="39" data-bbox="44,465,174,16">CI/CD</span>
+                            </a>
+                        </li>
+                        <li data-bbox="0,490,238,32">
+                            <a href="#" class="menu-item" data-bbox="8,490,222,32">
+                                <span data-bbox="20,498,16,16">
+                                    <svg data-testid="shield-icon" data-bbox="20,498,16,16" viewBox="0 0 16 16"><use id="40" data-bbox="21,498,14,16"></use><path d="M5.338 1.59a.5.5 0 0 1 .326.39l.5 2.5a.5.5 0 0 1-.337.54l-1.5 1a.5.5 0 0 1-.62-.325l-.5-2.5a.5.5 0 0 1 .337-.54l1.5-1a.5.5 0 0 1 .294 0zM10.662 1.59a.5.5 0 0 1 .294 0l1.5 1a.5.5 0 0 1 .337.54l-.5 2.5a.5.5 0 0 1-.62.325l-1.5-1a.5.5 0 0 1-.337-.54l.5-2.5a.5.5 0 0 1 .326-.39z"/><path d="M8 0c-.363 0-.704.053-1.026.155C4.004.83 1.5 2.955 1.5 6.027v2.83c0 .9.13 1.748.375 2.522l.248.775a.5.5 0 0 0 .463.345h10.828a.5.5 0 0 0 .463-.345l.248-.775C14.371 10.598 14.5 9.756 14.5 8.857v-2.83c0-3.072-2.504-5.197-5.474-5.872C8.704.053 8.363 0 8 0"/></svg>
+                                </span>
+                                <span id="41" data-bbox="44,498,174,16">Security & Compliance</span>
+                            </a>
+                        </li>
+                        <li data-bbox="0,523,238,32">
+                            <a href="#" class="menu-item" data-bbox="8,523,222,32">
+                                <span data-bbox="20,531,16,16">
+                                    <svg data-testid="deployments-icon" data-bbox="20,531,16,16" viewBox="0 0 16 16"><use id="42" data-bbox="21,532,14,14"></use><path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.5-3.336a.5.5 0 1 0-.416.923c.9.403 1.416 1.257 1.416 2.413a5 5 0 0 1-5 5V8a.5.5 0 0 0-1 0v4a5 5 0 0 1-5-5c0-1.156.516-2.01 1.416-2.413a.5.5 0 1 0-.416-.923C2.122 6.096 1 7.345 1 9a6 6 0 0 0 6 6z"/><path d="M8 4a5 5 0 0 0-5 5v1h10V9a5 5 0 0 0-5-5zM.5 9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V9.5A.5.5 0 0 1 .5 9zm15 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V9.5a.5.5 0 0 1 .5-.5z"/></svg>
+                                </span>
+                                <span id="43" data-bbox="44,531,174,16">Deployments</span>
+                            </a>
+                        </li>
+                        <li data-bbox="0,556,238,32">
+                            <a href="#" class="menu-item" data-bbox="8,556,222,32">
+                                <span data-bbox="20,564,16,16">
+                                    <svg id="44" data-testid="package-icon" data-bbox="20,564,16,16" viewBox="0 0 16 16"><use data-bbox="21,565,14,14"></use><path fill-rule="evenodd" d="M1 4.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5M1.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5m13 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M14 6.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5m-11.5 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m9.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1z"/><path d="M3.854 8.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708-.708l1.5-1.5a.5.5 0 0 1 .708 0M5.354 9.646a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708-.708l1.5-1.5a.5.5 0 0 1 .708 0"/></svg>
+                                </span>
+                                <span id="45" data-bbox="44,564,174,16">Packages and registries</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a title="Toggle sidebar" data-bbox="0,672,255,48">
+                    <svg data-testid="chevron-double-lg-left-icon" data-bbox="16,690,12,12" viewBox="0 0 16 16">
+                        <use id="52" data-bbox="18,692,8,8"></use>
+                        <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0m-4.5 0a.5.5 0 0 1 0 .708L.207 8l3.647 3.646a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0"/>
+                    </svg>
+                    <span id="53" data-bbox="36,686,101,21">Collapse sidebar</span>
+                </a>
+            </div>
+        </aside>
+        <div data-bbox="256,-312,1007,1237">
+            <div data-bbox="256,-264,1007,1089">
+                <main data-bbox="272,-264,975,1089">
+                    <div data-bbox="272,-181,975,1006">
+                        <div class="charts-grid" data-bbox="272,-181,975,1006">
+                            
+                            <div class="chart-card" data-bbox="257,171,1005,654">
+                                <div class="chart-header">
+                                    <path id="54" data-bbox="336,143,16,4"></path>
+                                    <span id="55" data-bbox="360,134,63,21">Commits</span>
+                                    <span id="56" data-bbox="431,135,109,18">Avg: 270m · Max: 8</span>
+                                </div>
+                                <svg viewBox="270 240 480 230" data-bbox="272,245,473,216">
+                                    <defs>
+                                        <linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#f9612b" stop-opacity="0.4"/>
+                                            <stop offset="100%" stop-color="#f9612b" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <g data-bbox="272,245,456,211">
+                                        <path class="grid-line" d="M336 434 H 725" data-bbox="336,434,389,0"></path>
+                                        <path class="grid-line" d="M336 389 H 725" data-bbox="336,389,389,0"></path>
+                                        <path class="grid-line" d="M336 344 H 725"></path>
+                                        <path class="grid-line" d="M336 299 H 725"></path>
+                                        <path class="grid-line" d="M336 254 H 725"></path>
+                                        
+                                        <text class="axis-label" x="321" y="430" data-bbox="321,426,7,16">0</text>
+                                        <text class="axis-label" x="321" y="385" data-bbox="321,381,7,16">2</text>
+                                        <text class="axis-label" x="321" y="340">4</text>
+                                        <text class="axis-label" x="321" y="295">6</text>
+                                        <text class="axis-label" x="321" y="250">8</text>
+                                        
+                                        <text class="axis-label" x="326" y="450" data-bbox="326,440,25,16">Aug</text>
+                                        <text class="axis-label" x="404" y="450" data-bbox="404,440,21,16">Feb</text>
+                                        <text class="axis-label" x="478" y="450" data-bbox="478,440,24,16">Aug</text>
+                                        <text class="axis-label" x="555" y="450" data-bbox="555,440,21,16">Feb</text>
+                                        <text class="axis-label" x="629" y="450" data-bbox="629,440,25,16">Aug</text>
+                                        <text class="axis-label" x="707" y="450" data-bbox="707,440,21,16">Feb</text>
+                                        
+                                        <g data-bbox="336,253,389,181">
+                                            <path class="area-path" d="M336 411 L 370 380 L 410 320 L 450 390 L 480 400 L 520 253 L 570 340 L 610 395 L 650 360 L 690 410 L 725 350 L 725 434 Z" data-bbox="336,253,389,181"></path>
+                                            <path class="line-path" d="M336 411 L 370 380 L 410 320 L 450 390 L 480 400 L 520 253 L 570 340 L 610 395 L 650 360 L 690 410 L 725 350" data-bbox="336,253,389,181"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="chart-card" data-bbox="760,187,502,295">
+                                 <div class="chart-header">
+                                    <span id="61" data-bbox="863,461,63,21">Commits</span>
+                                    <span id="62" data-bbox="934,462,111,18">Avg: 5.33m · Max: 4</span>
+                                </div>
+                                <svg viewBox="770 240 480 230" data-bbox="775,245,473,216">
+                                    <g data-bbox="775,245,455,211">
+                                        <path class="grid-line" d="M839 434 H 1228" data-bbox="839,434,389,0"></path>
+                                        <path class="grid-line" d="M839 389 H 1228" data-bbox="839,389,389,0"></path>
+                                        <path class="grid-line" d="M839 344 H 1228"></path>
+                                        <path class="grid-line" d="M839 299 H 1228"></path>
+                                        
+                                        <text class="axis-label" x="824" y="430" data-bbox="824,426,7,16">0</text>
+                                        <text class="axis-label" x="824" y="385" data-bbox="824,381,7,16">2</text>
+                                        <text class="axis-label" x="824" y="340" >4</text>
+                                        
+                                        <text class="axis-label" x="829" y="450" data-bbox="829,440,24,16">Aug</text>
+                                        <text class="axis-label" x="906" y="450" data-bbox="906,440,21,16">Feb</text>
+                                        <text class="axis-label" x="980" y="450" data-bbox="980,440,25,16">Aug</text>
+                                        <text class="axis-label" x="1058" y="450" data-bbox="1058,440,21,16">Feb</text>
+                                        <text class="axis-label" x="1132" y="450" data-bbox="1132,440,24,16">Aug</text>
+                                        <text class="axis-label" x="1209" y="450" data-bbox="1209,440,21,16">Feb</text>
+                                        
+                                        <g data-bbox="839,343,389,91">
+                                            <path class="area-path" d="M839 434 L 880 400 L 920 380 L 960 410 L 1000 343 L 1050 390 L 1090 380 L 1140 400 L 1180 410 L 1228 390 L 1228 434 Z" data-bbox="839,343,389,91"></path>
+                                            <path class="line-path" d="M839 434 L 880 400 L 920 380 L 960 410 L 1000 343 L 1050 390 L 1090 380 L 1140 400 L 1180 410 L 1228 390" data-bbox="839,343,389,91"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                             <div class="chart-card" data-bbox="257,514,503,295">
+                                <h4 data-bbox="272,514,473,25">Ashish Panigrahi</h4>
+                                <p data-bbox="272,543,473,21">2 commits (ashish.panigrahi@protonmail.com)</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuItems = document.querySelectorAll('.sidebar-menu .menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('mouseenter', () => item.style.backgroundColor = 'var(--bg-surface-2)');
+                item.addEventListener('mouseleave', () => item.style.backgroundColor = '');
+            });
+        });
+    </script>
+</body>
+</html>

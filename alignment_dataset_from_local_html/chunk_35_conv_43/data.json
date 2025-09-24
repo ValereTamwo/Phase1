@@ -1,0 +1,315 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_43.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,2425\"><DIV data-bbox=\"0,0,1280,2425\"><HEADER data-bbox=\"0,0,1280,128\"><DIV data-bbox=\"0,0,1280,40\"><UL data-bbox=\"755,10,505,20\"><A id=\"0\" data-bbox=\"770,10,78,19\" class=\"possible-clickable-element\" data-testid=\"A\"><I class=\"fas fa-user-circle\"></I><text>My Account</text></A><A data-bbox=\"863,10,88,19\" class=\"possible-clickable-element\" data-testid=\"B\"><I class=\"fas fa-heart\"></I><text>My Wish List</text><SPAN id=\"1\" data-bbox=\"951,10,49,19\"><text>(7)</text></SPAN></A><LI data-label=\"or\" data-bbox=\"1015,10,58,20\"><A id=\"2\" data-bbox=\"1015,10,58,19\" class=\"possible-clickable-element\" data-testid=\"C\"><I class=\"fas fa-sign-out-alt\"></I><text>Sign Out</text></A></LI><SPAN data-bbox=\"1103,10,157,19\"><text>Welcome, Emma Lopez!</text></SPAN></UL></DIV><DIV data-bbox=\"0,41,1280,87\"><A title=\"one_stop_market_logo\" data-bbox=\"20,71,200,27\" class=\"possible-clickable-element\" data-testid=\"D\"><IMG id=\"3\" title=\"one_stop_market_logo\" data-bbox=\"20,71,200,27\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjciIGZpbGw9Im5vbmUiPgogIDxwYXRoIGZpbGw9IiMwMDdiZmYiIGQ9Ik0wIDI3VjBoMjcuMDQxdjI3SDBaTTMuNDEgMjMuNmgxOS45MTVWMGwtOS45NTcgOS42NjVMMi4yNzUgMEwzLjQxIDIxLjY0NVYyMy42WiIgLz4KICA8dGV4dCB4PSI0MCIgeT0iMjEiIGZvbnQtZmFtaWx5PSInSW50ZXInLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMjEyNTI5Ij5PbmUgU3RvcDwvdGV4dD4KICA8dGV4dCB4PSIxNDUiIHk9IjIxIiBmb250LWZhbWlseT0iJ0ludGVyJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjQwMCIgZmlsbD0iIzZjN2U3ZCI+TWFya2V0PC90ZXh0Pgo8L3N2Zz4K\"></IMG></A><DIV data-bbox=\"913,71,265,57\"><FORM data-bbox=\"928,71,250,57\"><DIV data-bbox=\"928,71,250,57\"><DIV data-bbox=\"928,71,250,57\"><INPUT id=\"5\" type=\"text\" placeholder=\"Search entire store here...\" data-bbox=\"928,71,250,32\" class=\"possible-clickable-element\" data-testid=\"E\" style=\"\"></INPUT><A id=\"6\" data-bbox=\"928,108,116,19\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Advanced Search</text></A></DIV></DIV><BUTTON title=\"Search\" type=\"submit\" data-bbox=\"1146,71,22,32\"><I class=\"fas fa-search possible-clickable-element\" data-testid=\"G\"></I></BUTTON></FORM></DIV><DIV data-bbox=\"1191,71,69,33\"><A data-bbox=\"1191,71,69,33\" class=\"possible-clickable-element\" data-testid=\"H\"><I class=\"fas fa-shopping-cart\"></I><SPAN data-bbox=\"1230,74,30,24\"><SPAN id=\"4\" data-bbox=\"1233,76,24,19\"><text>925</text></SPAN></SPAN></A></DIV></DIV></HEADER><DIV data-bbox=\"0,128,1280,106\"><UL data-bbox=\"0,128,1280,106\"><LI data-bbox=\"8,128,194,53\"><SPAN id=\"8\" data-bbox=\"20,145,162,19\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Beauty & Personal Care</text></SPAN></LI><LI data-bbox=\"212,128,162,53\"><SPAN id=\"10\" data-bbox=\"224,145,130,19\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Sports & Outdoors</text></SPAN></LI><LI data-bbox=\"384,128,209,53\"><SPAN id=\"12\" data-bbox=\"396,145,177,19\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Clothing, Shoes & Jewelry</text></SPAN></LI><LI data-bbox=\"603,128,145,53\"><SPAN id=\"14\" data-bbox=\"615,145,113,19\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Home & Kitchen</text></SPAN></LI><LI data-bbox=\"758,128,139,53\"><SPAN id=\"16\" data-bbox=\"770,145,107,19\" class=\"possible-clickable-element\" data-testid=\"M\"><text>Office Products</text></SPAN></LI><LI data-bbox=\"907,128,229,53\"><SPAN id=\"18\" data-bbox=\"919,145,197,19\" class=\"possible-clickable-element\" data-testid=\"N\"><text>Tools & Home Improvement</text></SPAN></LI><LI data-bbox=\"8,181,172,53\"><SPAN id=\"20\" data-bbox=\"20,198,140,19\" class=\"possible-clickable-element\" data-testid=\"O\"><text>Health & Household</text></SPAN></LI><LI data-bbox=\"190,181,182,53\"><SPAN id=\"22\" data-bbox=\"202,198,150,19\" class=\"possible-clickable-element\" data-testid=\"P\"><text>Patio, Lawn & Garden</text></SPAN></LI><LI data-bbox=\"382,181,107,53\"><SPAN id=\"24\" data-bbox=\"394,198,75,19\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>Electronics</text></SPAN></LI><LI data-bbox=\"499,181,211,53\"><SPAN id=\"26\" data-bbox=\"511,198,179,19\" class=\"possible-clickable-element\" data-testid=\"R\"><text>Cell Phones & Accessories</text></SPAN></LI><LI data-bbox=\"720,181,122,53\"><SPAN id=\"28\" data-bbox=\"732,198,90,19\" class=\"possible-clickable-element\" data-testid=\"S\"><text>Video Games</text></SPAN></LI><LI data-bbox=\"852,181,206,53\"><SPAN id=\"30\" data-bbox=\"864,198,174,19\" class=\"possible-clickable-element\" data-testid=\"T\"><text>Grocery & Gourmet Food</text></SPAN></LI></UL></DIV><SPAN data-bbox=\"20,254,304,54\"><text>One Stop Market</text></SPAN><STRONG data-bbox=\"20,340,161,24\"><text>Product Showcases</text></STRONG><IMG id=\"31\" data-bbox=\"20,379,228,285\" src=\"https://picsum.photos/seed/gingerbread/228/285\"></IMG><DIV data-bbox=\"20,674,228,190\"><A id=\"32\" title=\"Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz.\" data-bbox=\"20,674,225,19\" class=\"possible-clickable-element\" data-testid=\"U\"><text>Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz.</text></A></DIV><IMG id=\"33\" data-bbox=\"273,379,228,285\" src=\"https://picsum.photos/seed/v8energy/228/285\"></IMG><DIV data-bbox=\"273,674,228,230\"><A id=\"34\" title=\"V8 +Energy, Healthy Energy Drink, Steady Energy from Black and Green Tea, Pomegranate Blueberry, 8 Ounce Can ,Pack of 24\" data-bbox=\"273,674,224,19\" class=\"possible-clickable-element\" data-testid=\"V\"><text>V8 +Energy, Healthy Energy Drink, Steady Energy from Black and Green Tea, Pomegranate Blueberry, 8 Ounce Can ,Pack of 24</text></A></DIV><IMG id=\"35\" data-bbox=\"526,379,228,285\" src=\"https://picsum.photos/seed/elmwoodtea/228/285\"></IMG></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  div|\n  <\n    header|\n    <\n      ul|\n      <a[A]| My Account >\n      <\n        a[B]|\n        <text| My Wish List >\n        <span| (7) >\n      >\n      <a[C]| Sign Out >\n      <span| Welcome, Emma Lopez! >\n    >\n    <\n      div|\n      <\n        a[D]| one_stop_market_logo\n        <img| one_stop_market_logo >\n      >\n      <\n        form|\n        <\n          div|\n          <input[E]| Search entire store here... >\n          <a[F]| Advanced Search >\n        >\n        <\n          button| Search\n          <i[G]| >\n        >\n      >\n      <\n        a[H]|\n        <span| 925 >\n      >\n    >\n  >\n  <\n    ul|\n    <span[I]| Beauty & Personal Care >\n    <span[J]| Sports & Outdoors >\n    <span[K]| Clothing, Shoes & Jewelry >\n    <span[L]| Home & Kitchen >\n    <span[M]| Office Products >\n    <span[N]| Tools & Home Improvement >\n    <span[O]| Health & Household >\n    <span[P]| Patio, Lawn & Garden >\n    <span[Q]| Electronics >\n    <span[R]| Cell Phones & Accessories >\n    <span[S]| Video Games >\n    <span[T]| Grocery & Gourmet Food >\n  >\n  <span| One Stop Market >\n  <strong| Product Showcases >\n  <a[U]| Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz. Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz. >\n  <a[V]| V8 +Energy, Healthy Energy Drink, Steady Energy from Black and Green Tea, Pomegranate Blueberry, 8 Ounce Can ,Pack of 24 V8 +Energy, Healthy Energy Drink, Steady Energy from Black and Green Tea, Pomegranate Blueberry, 8 Ounce Can ,Pack of 24 >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 20,
+                "top": 8,
+                "right": 118,
+                "bottom": 30.390625,
+                "width": 98,
+                "height": 22.390625
+            },
+            "tag": "a",
+            "text": " My Account "
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 138,
+                "top": 8,
+                "right": 262,
+                "bottom": 30.390625,
+                "width": 124,
+                "height": 22.390625
+            },
+            "tag": "a",
+            "text": " My Wish List  "
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 292,
+                "top": 10,
+                "right": 367,
+                "bottom": 27,
+                "width": 75,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " Sign Out "
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 20,
+                "top": 64.890625,
+                "right": 220,
+                "bottom": 91.890625,
+                "width": 200,
+                "height": 27
+            },
+            "tag": "a",
+            "text": "\n                    \n                "
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 532.5,
+                "top": 58.390625,
+                "right": 782.5,
+                "bottom": 98.390625,
+                "width": 250,
+                "height": 40
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 787.5,
+                "top": 67.390625,
+                "right": 920.5,
+                "bottom": 87.390625,
+                "width": 133,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "Advanced Search"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 891,
+                "top": 68.78125,
+                "right": 910,
+                "bottom": 87.984375,
+                "width": 19,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 1233,
+                "top": 66.390625,
+                "right": 1260,
+                "bottom": 90.390625,
+                "width": 27,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "\n                        \n                        \n                        \n                    "
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 10,
+                "top": 119.390625,
+                "right": 228,
+                "bottom": 177.984375,
+                "width": 218,
+                "height": 58.59375
+            },
+            "tag": "span",
+            "text": "Beauty & Personal Care"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 228,
+                "top": 119.390625,
+                "right": 408,
+                "bottom": 177.984375,
+                "width": 180,
+                "height": 58.59375
+            },
+            "tag": "span",
+            "text": "Sports & Outdoors"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 408,
+                "top": 119.390625,
+                "right": 647,
+                "bottom": 177.984375,
+                "width": 239,
+                "height": 58.59375
+            },
+            "tag": "span",
+            "text": "Clothing, Shoes & Jewelry"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 647,
+                "top": 119.390625,
+                "right": 808,
+                "bottom": 177.984375,
+                "width": 161,
+                "height": 58.59375
+            },
+            "tag": "span",
+            "text": "Home & Kitchen"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 808,
+                "top": 119.390625,
+                "right": 966,
+                "bottom": 177.984375,
+                "width": 158,
+                "height": 58.59375
+            },
+            "tag": "span",
+            "text": "Office Products"
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 966,
+                "top": 119.390625,
+                "right": 1215,
+                "bottom": 177.984375,
+                "width": 249,
+                "height": 58.59375
+            },
+            "tag": "span",
+            "text": "Tools & Home Improvement"
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 10,
+                "top": 177.984375,
+                "right": 201,
+                "bottom": 236.578125,
+                "width": 191,
+                "height": 58.59375
+            },
+            "tag": "span",
+            "text": "Health & Household"
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 201,
+                "top": 177.984375,
+                "right": 403,
+                "bottom": 236.578125,
+                "width": 202,
+                "height": 58.59375
+            },
+            "tag": "span",
+            "text": "Patio, Lawn & Garden"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 403,
+                "top": 177.984375,
+                "right": 528,
+                "bottom": 236.578125,
+                "width": 125,
+                "height": 58.59375
+            },
+            "tag": "span",
+            "text": "Electronics"
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 528,
+                "top": 177.984375,
+                "right": 771,
+                "bottom": 236.578125,
+                "width": 243,
+                "height": 58.59375
+            },
+            "tag": "span",
+            "text": "Cell Phones & Accessories"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 771,
+                "top": 177.984375,
+                "right": 912,
+                "bottom": 236.578125,
+                "width": 141,
+                "height": 58.59375
+            },
+            "tag": "span",
+            "text": "Video Games"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 912,
+                "top": 177.984375,
+                "right": 1139,
+                "bottom": 236.578125,
+                "width": 227,
+                "height": 58.59375
+            },
+            "tag": "span",
+            "text": "Grocery & Gourmet Food"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 289,
+                "top": 467.375,
+                "right": 485,
+                "bottom": 531.21875,
+                "width": 196,
+                "height": 63.84375
+            },
+            "tag": "a",
+            "text": "Pre-baked Gingerbread House Kit Value Pack, 17 oz., Pack of 2, Total 34 oz."
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 795,
+                "top": 467.375,
+                "right": 991,
+                "bottom": 595.0625,
+                "width": 196,
+                "height": 127.6875
+            },
+            "tag": "a",
+            "text": "V8 +Energy, Healthy Energy Drink, Steady Energy from Black and Green Tea, Pomegranate Blueberry, 8 Ounce Can ,Pack of 24"
+        }
+    ]
+}

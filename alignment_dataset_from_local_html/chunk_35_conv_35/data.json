@@ -1,0 +1,553 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_35.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,0,1280,1618\"><DIV class=\"admin-sidebar\" data-bbox=\"0,0,88,721\"><DIV class=\"logo-container\"><IMG id=\"0\" title=\"Magento Admin Panel\" data-bbox=\"27,17,35,41\" src=\"https://picsum.photos/seed/magento/40/40\" alt=\"Logo\"></IMG></DIV><UL class=\"main-nav\" data-bbox=\"0,75,88,646\"><A href=\"#\"><I class=\"nav-icon fas fa-tachometer-alt possible-clickable-element\" data-testid=\"A\"></I><SPAN id=\"1\" data-text=\"Dashboard\" data-bbox=\"14,112,60,13\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Dashboard</text></SPAN></A><LI data-bbox=\"0,137,88,62\"><I class=\"nav-icon fas fa-shopping-cart possible-clickable-element\" data-testid=\"C\"></I><SPAN id=\"2\" data-text=\"Sales\" data-bbox=\"30,174,28,13\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Sales</text></SPAN></LI><LI data-bbox=\"0,199,88,62\"><I class=\"nav-icon fas fa-tags possible-clickable-element\" data-testid=\"E\"></I><SPAN id=\"3\" data-text=\"Catalog\" data-bbox=\"22,236,44,13\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Catalog</text></SPAN></LI><LI data-bbox=\"0,261,88,62\"><I class=\"nav-icon fas fa-users possible-clickable-element\" data-testid=\"G\"></I><SPAN id=\"4\" data-text=\"Customers\" data-bbox=\"14,298,60,13\" class=\"possible-clickable-element\" data-testid=\"H\"><text>Customers</text></SPAN></LI><LI data-bbox=\"0,323,88,62\"><I class=\"nav-icon fas fa-bullhorn possible-clickable-element\" data-testid=\"I\"></I><SPAN id=\"5\" data-text=\"Marketing\" data-bbox=\"14,360,60,13\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Marketing</text></SPAN></LI><LI data-bbox=\"0,385,88,62\"><I class=\"nav-icon fas fa-file-alt possible-clickable-element\" data-testid=\"K\"></I><SPAN id=\"6\" data-text=\"Content\" data-bbox=\"19,422,50,13\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Content</text></SPAN></LI><LI data-bbox=\"0,447,88,62\"><I class=\"nav-icon fas fa-chart-bar possible-clickable-element\" data-testid=\"M\"></I><SPAN id=\"7\" data-text=\"Reports\" data-bbox=\"22,484,44,13\" class=\"possible-clickable-element\" data-testid=\"N\"><text>Reports</text></SPAN></LI><LI data-bbox=\"0,509,88,62\"><I class=\"nav-icon fas fa-store possible-clickable-element\" data-testid=\"O\"></I><SPAN id=\"8\" data-text=\"Stores\" data-bbox=\"25,546,38,13\" class=\"possible-clickable-element\" data-testid=\"P\"><text>Stores</text></SPAN></LI><LI data-bbox=\"0,571,88,62\"><I class=\"nav-icon fas fa-cogs possible-clickable-element\" data-testid=\"Q\"></I><SPAN id=\"9\" data-text=\"System\" data-bbox=\"25,608,38,13\" class=\"possible-clickable-element\" data-testid=\"R\"><text>System</text></SPAN></LI><I class=\"nav-icon fas fa-puzzle-piece possible-clickable-element\" data-testid=\"S\"></I><SPAN id=\"10\" data-text=\"Find Partners & Extensions\" data-bbox=\"32,670,24,13\" class=\"possible-clickable-element\" data-testid=\"T\"><text>Find Partners & Extensions</text></SPAN></UL></DIV><DIV class=\"admin-main-wrapper\" data-bbox=\"88,0,1192,1618\"><DIV class=\"notification-bar\" data-bbox=\"118,0,1132,51\"><DIV data-bbox=\"119,0,1130,50\"><DIV data-bbox=\"119,0,958,46\"><DIV data-text=\"Task Update attributes for 7 selected products: 1 item(s) have been successfully updated.\" data-bbox=\"129,0,852,49\"><I class=\"fas fa-check-circle\" style=\"margin-right: 8px;\"></I><text>Task \"Update attributes for 7 selected products\": 1 item(s) have been successfully updated.</text><A id=\"12\" data-text=\"View Details\" data-bbox=\"981,0,81,34\" href=\"#\" style=\"margin-left: 16px;\" class=\"possible-clickable-element\" data-testid=\"U\"><text>View Details</text></A></DIV></DIV><SPAN data-text=\":,11\" data-bbox=\"1077,15,118,19\" style=\"font-weight: 500;\"><SPAN id=\"11\" data-text=\"System Messages\" data-bbox=\"1077,15,118,19\"><text>System Messages: 1</text></SPAN></SPAN></DIV></DIV><HEADER class=\"admin-header\" data-bbox=\"88,51,1192,80\"><H1 data-text=\"Dashboard\" data-bbox=\"118,82,740,34\"><text>Dashboard</text></H1><DIV class=\"header-controls\" data-bbox=\"873,66,377,44\"><DIV class=\"search-container\" data-bbox=\"1034,77,50,0\"><LABEL id=\"15\" for=\"search-input\" data-bbox=\"1034,77,50,33\" class=\"possible-clickable-element\" data-testid=\"V\"><I class=\"fas fa-search\"></I></LABEL><INPUT type=\"text\" id=\"search-input\" placeholder=\"Search...\" data-bbox=\"1034,77,50,35\" class=\"possible-clickable-element\" data-testid=\"W\" style=\"document.addEventListener('DOMContentLoaded', () => { const tableRows = document.querySelectorAll('.data-table tbody tr'); tableRows.forEach(row => { row.addEventListener('mouseenter', () => row.classList.add('hovered')); row.addEventListener('mouseleave', () => row.classList.remove('hovered')); }); });\"></INPUT></DIV><A id=\"14\" title=\"Notifications\" href=\"#\" class=\"icon-button\" data-bbox=\"1081,77,60,33\"><I class=\"fas fa-bell possible-clickable-element\" data-testid=\"X\"></I></A><DIV class=\"user-account\" data-bbox=\"1144,77,106,33\"><A title=\"My Account\" href=\"#\" data-bbox=\"1144,77,106,33\"><SPAN class=\"avatar possible-clickable-element\" data-testid=\"Y\"><text>A</text></SPAN><SPAN id=\"13\" data-text=\"admin\" data-bbox=\"1185,85,36,18\" class=\"possible-clickable-element\" data-testid=\"Z\"><text>admin</text></SPAN><I class=\"fas fa-chevron-down possible-clickable-element\" style=\"font-size: 0.7em;\" data-testid=\"AA\"></I></A></DIV></DIV></HEADER><MAIN data-bbox=\"88,143,1192,1335\"><DIV class=\"content-header\" data-bbox=\"118,143,1132,77\"><DIV class=\"scope-selector\" data-bbox=\"133,164,192,34\"><SPAN data-text=\"Scope:\" data-bbox=\"133,172,42,18\"><text>Scope:</text></SPAN><DIV data-bbox=\"178,164,138,34\"><BUTTON id=\"16\" type=\"button\" data-text=\"All Store Views\" data-bbox=\"185,164,131,34\" class=\"btn btn-secondary\"><text>All Store Views</text><I class=\"fas fa-chevron-down possible-clickable-element\" style=\"margin-left: 8px; font-size: 0.7em;\" data-testid=\"AB\"></I></BUTTON></DIV><A id=\"17\" title=\"What is this?\" href=\"#\" data-bbox=\"325,169,25,22\" style=\"color: var(--text-secondary);\"><I class=\"fas fa-question-circle possible-clickable-element\" data-testid=\"AC\"></I><SPAN data-text=\"What is this?\" data-bbox=\"349,168,1,1\" class=\"sr-only\"><text>What is this?</text></SPAN></A></DIV><FORM data-bbox=\"1105,159,130,45\"><BUTTON id=\"18\" title=\"Reload Data\" type=\"submit\" data-bbox=\"1105,159,130,45\" class=\"btn btn-secondary\"><I class=\"fas fa-sync-alt possible-clickable-element\" style=\"margin-right: 8px;\" data-testid=\"AD\"></I><text>Reload Data</text></BUTTON></FORM></DIV><SECTION class=\"card advanced-reporting\" data-bbox=\"118,250,1132,134\"><DIV data-bbox=\"118,276,833,82\"><HEADER data-text=\"Advanced Reporting\" data-bbox=\"118,276,833,25\"><text>Advanced Reporting</text></HEADER><DIV data-text=\"Gain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.\" data-bbox=\"118,311,833,47\"><text>Gain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.</text></DIV></DIV><A title=\"Go to Advanced Reporting\" href=\"#\" class=\"btn btn-primary\" data-bbox=\"976,295,259,45\"><SPAN id=\"19\" data-text=\"Go to Advanced Reporting\" data-bbox=\"993,306,210,22\" class=\"possible-clickable-element\" data-testid=\"AE\"><text>Go to Advanced Reporting</text></SPAN></A></SECTION><DIV class=\"dashboard-grid\" data-bbox=\"118,414,1132,1034\"><DIV class=\"left-column\" data-bbox=\"118,414,377,1034\"><DIV class=\"card stat-card\" data-bbox=\"118,414,342,58\"><H3 data-text=\"Lifetime Sales\" data-bbox=\"118,414,342,25\"><text>Lifetime Sales</text></H3><SPAN class=\"amount\" data-text=\"$0.00\" data-bbox=\"118,439,63,32\"><text>$0.00</text></SPAN></DIV><DIV class=\"card stat-card\" data-bbox=\"118,502,342,57\"><H3 data-text=\"Average Order\" data-bbox=\"118,502,342,24\"><text>Average Order</text></H3><SPAN class=\"amount\" data-text=\"$0.00\" data-bbox=\"118,526,63,32\"><text>$0.00</text></SPAN></DIV></DIV><DIV class=\"right-column card\" data-bbox=\"495,414,755,486\"><DIV class=\"disabled-message\" data-text=\"Chart is disabled. To enable the chart, click,.\" data-bbox=\"495,414,755,44\"><text>Chart is disabled. To enable the chart, click</text><A id=\"20\" data-text=\"here\" data-bbox=\"807,419,31,19\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"AF\"><text>here</text></A><text>.</text></DIV><UL class=\"chart-stats\" data-bbox=\"515,468,715,51\"><LI data-bbox=\"515,468,179,51\"><SPAN data-text=\"Revenue\" data-bbox=\"515,468,169,18\"><text>Revenue</text></SPAN><SPAN data-text=\"$0.00\" data-bbox=\"515,486,63,32\"><text>$0.00</text></SPAN></LI><LI data-bbox=\"694,468,179,51\"><SPAN data-text=\"Tax\" data-bbox=\"694,468,169,18\"><text>Tax</text></SPAN><SPAN data-text=\"$0.00\" data-bbox=\"694,486,63,32\"><text>$0.00</text></SPAN></LI><LI data-bbox=\"873,468,178,51\"><SPAN data-text=\"Shipping\" data-bbox=\"873,468,168,18\"><text>Shipping</text></SPAN><SPAN data-text=\"$0.00\" data-bbox=\"873,486,63,32\"><text>$0.00</text></SPAN></LI><LI data-bbox=\"1051,468,179,51\"><SPAN data-text=\"Quantity\" data-bbox=\"1051,468,169,18\"><text>Quantity</text></SPAN><STRONG data-text=\"0\" data-bbox=\"1051,486,14,32\"><text>0</text></STRONG></LI></UL><DIV class=\"tabs-container\" data-bbox=\"495,579,755,321\"><UL class=\"tabs\" data-bbox=\"495,579,755,49\"><A href=\"#\" title=\"Bestsellers\" class=\"active\" data-bbox=\"496,580,110,48\"><SPAN id=\"21\" data-text=\"Bestsellers\" data-bbox=\"514,595,0,19\" class=\"possible-clickable-element\" data-testid=\"AG\"><text>Bestsellers</text></SPAN></A><A href=\"#\" title=\"Most Viewed Products\" data-bbox=\"613,580,189,47\"><SPAN id=\"22\" data-text=\"Most Viewed Products\" data-bbox=\"631,595,0,19\" class=\"possible-clickable-element\" data-testid=\"AH\"><text>Most Viewed Products</text></SPAN></A><A href=\"#\" title=\"New Customers\" data-bbox=\"809,580,146,47\"><SPAN id=\"23\" data-text=\"New Customers\" data-bbox=\"827,595,0,19\" class=\"possible-clickable-element\" data-testid=\"AI\"><text>New Customers</text></SPAN></A><A href=\"#\" title=\"Customers\" data-bbox=\"962,580,110,47\"><SPAN id=\"24\" data-text=\"Customers\" data-bbox=\"980,595,0,19\" class=\"possible-clickable-element\" data-testid=\"AJ\"><text>Customers</text></SPAN></A></UL><TABLE class=\"data-table\" data-bbox=\"515,648,715,232\"><TR class=\"table-header\" data-bbox=\"515,648,715,38\"><SPAN data-text=\"Product\" data-bbox=\"515,657,52,18\"><text>Product</text></SPAN><SPAN data-text=\"Price\" data-bbox=\"1090,657,33,18\"><text>Price</text></SPAN><SPAN data-text=\"Quantity\" data-bbox=\"1171,657,59,18\"><text>Quantity</text></SPAN></TR><TBODY data-bbox=\"515,686,715,193\"><TR title=\"http://localhost:7780/admin/catalog/product/edit/id/20/\" data-bbox=\"515,686,715,39\"><TD data-text=\"Quest Lumaflex™ Band\" data-bbox=\"515,686,501,39\" class=\"possible-clickable-element\" data-testid=\"AK\"><text>Quest Lumaflex™ Band</text></TD><TD data-text=\"$19.00\" data-bbox=\"1016,686,107,39\" class=\"possible-clickable-element\" data-testid=\"AL\"><text>$19.00</text></TD><TD data-text=\"6\" data-bbox=\"1123,686,107,39\" class=\"possible-clickable-element\" data-testid=\"AM\"><text>6</text></TD></TR></TBODY></TABLE></DIV></DIV></DIV></MAIN></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    div|\n    <img| Magento Admin Panel >\n    <\n      ul|\n      <i[A]| >\n      <span[B]| Dashboard >\n      <i[C]| >\n      <span[D]| Sales >\n      <i[E]| >\n      <span[F]| Catalog >\n      <i[G]| >\n      <span[H]| Customers >\n      <i[I]| >\n      <span[J]| Marketing >\n      <i[K]| >\n      <span[L]| Content >\n      <i[M]| >\n      <span[N]| Reports >\n      <i[O]| >\n      <span[P]| Stores >\n      <i[Q]| >\n      <span[R]| System >\n      <i[S]| >\n      <span[T]| Find Partners & Extensions >\n    >\n  >\n  <\n    div|\n    <\n      div|\n      <\n        div|\n        <text| Task \"Update attributes for 7 selected products\": 1 item(s) have been successfully updated. >\n        <a[U]| View Details >\n      >\n      <span| System Messages: 1 >\n    >\n    <\n      header|\n      <h1| Dashboard >\n      <\n        div|\n        <label[V]| >\n        <input[W]| Search... >\n        <\n          a| Notifications\n          <i[X]| >\n        >\n        <\n          a| My Account\n          <span[Y]| A >\n          <span[Z]| admin >\n          <i[AA]| >\n        >\n      >\n    >\n    <\n      main|\n      <\n        div|\n        <\n          div|\n          <span| Scope: >\n          <text| All Store Views >\n          <i[AB]| >\n          <\n            a| What is this?\n            <i[AC]| >\n            <span| What is this? >\n          >\n        >\n        <\n          button| Reload Data\n          <i[AD]| >\n          <text| Reload Data >\n        >\n      >\n      <\n        section|\n        <\n          div|\n          <header| Advanced Reporting >\n          <div| Gain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data. >\n        >\n        <\n          a| Go to Advanced Reporting\n          <span[AE]| Go to Advanced Reporting >\n        >\n      >\n      <\n        div|\n        <\n          div|\n          <\n            div|\n            <h3| Lifetime Sales >\n            <span| $0.00 >\n          >\n          <\n            div|\n            <h3| Average Order >\n            <span| $0.00 >\n          >\n        >\n        <\n          div|\n          <\n            div|\n            <text| Chart is disabled. To enable the chart, click >\n            <a[AF]| here >\n            <text| . >\n          >\n          <\n            ul|\n            <\n              li|\n              <span| Revenue >\n              <span| $0.00 >\n            >\n            <\n              li|\n              <span| Tax >\n              <span| $0.00 >\n            >\n            <\n              li|\n              <span| Shipping >\n              <span| $0.00 >\n            >\n            <\n              li|\n              <span| Quantity >\n              <strong| 0 >\n            >\n          >\n          <\n            div|\n            <\n              ul|\n              <\n                a| Bestsellers\n                <span[AG]| Bestsellers >\n              >\n              <\n                a| Most Viewed Products\n                <span[AH]| Most Viewed Products >\n              >\n              <\n                a| New Customers\n                <span[AI]| New Customers >\n              >\n              <\n                a| Customers\n                <span[AJ]| Customers >\n              >\n            >\n            <\n              table|\n              <\n                tr|\n                <span| Product >\n                <span| Price >\n                <span| Quantity >\n              >\n              <\n                tr| http://localhost:7780/admin/catalog/product/edit/id/20/\n                <td[AK]| Quest Lumaflex™ Band >\n                <td[AL]| $19.00 >\n                <td[AM]| 6 >\n              >\n            >\n          >\n        >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 28,
+                "top": 93.890625,
+                "right": 52,
+                "bottom": 113.09375,
+                "width": 24,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 72,
+                "top": 93,
+                "right": 144,
+                "bottom": 114,
+                "width": 72,
+                "height": 21
+            },
+            "tag": "span",
+            "text": "Dashboard"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 28,
+                "top": 150.890625,
+                "right": 52,
+                "bottom": 170.09375,
+                "width": 24,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 72,
+                "top": 150,
+                "right": 107,
+                "bottom": 171,
+                "width": 35,
+                "height": 21
+            },
+            "tag": "span",
+            "text": "Sales"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 28,
+                "top": 207.890625,
+                "right": 52,
+                "bottom": 227.09375,
+                "width": 24,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 72,
+                "top": 207,
+                "right": 123,
+                "bottom": 228,
+                "width": 51,
+                "height": 21
+            },
+            "tag": "span",
+            "text": "Catalog"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 28,
+                "top": 264.890625,
+                "right": 52,
+                "bottom": 284.09375,
+                "width": 24,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 72,
+                "top": 264,
+                "right": 142,
+                "bottom": 285,
+                "width": 70,
+                "height": 21
+            },
+            "tag": "span",
+            "text": "Customers"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 28,
+                "top": 321.890625,
+                "right": 52,
+                "bottom": 341.09375,
+                "width": 24,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 72,
+                "top": 321,
+                "right": 139,
+                "bottom": 342,
+                "width": 67,
+                "height": 21
+            },
+            "tag": "span",
+            "text": "Marketing"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 28,
+                "top": 378.890625,
+                "right": 52,
+                "bottom": 398.09375,
+                "width": 24,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 72,
+                "top": 378,
+                "right": 124,
+                "bottom": 399,
+                "width": 52,
+                "height": 21
+            },
+            "tag": "span",
+            "text": "Content"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 28,
+                "top": 435.890625,
+                "right": 52,
+                "bottom": 455.09375,
+                "width": 24,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 72,
+                "top": 435,
+                "right": 123,
+                "bottom": 456,
+                "width": 51,
+                "height": 21
+            },
+            "tag": "span",
+            "text": "Reports"
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 28,
+                "top": 492.890625,
+                "right": 52,
+                "bottom": 512.09375,
+                "width": 24,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 72,
+                "top": 492,
+                "right": 114,
+                "bottom": 513,
+                "width": 42,
+                "height": 21
+            },
+            "tag": "span",
+            "text": "Stores"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 28,
+                "top": 549.890625,
+                "right": 52,
+                "bottom": 569.09375,
+                "width": 24,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 72,
+                "top": 549,
+                "right": 121,
+                "bottom": 570,
+                "width": 49,
+                "height": 21
+            },
+            "tag": "span",
+            "text": "System"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 28,
+                "top": 606.890625,
+                "right": 47,
+                "bottom": 626.09375,
+                "width": 19,
+                "height": 19.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 67,
+                "top": 606,
+                "right": 241,
+                "bottom": 627,
+                "width": 174,
+                "height": 21
+            },
+            "tag": "span",
+            "text": "Find Partners & Extensions"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 856,
+                "top": 13,
+                "right": 929,
+                "bottom": 28,
+                "width": 73,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "View Details"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 903,
+                "top": 91.78125,
+                "right": 917,
+                "bottom": 112.78125,
+                "width": 14,
+                "height": 21
+            },
+            "tag": "label",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 888,
+                "top": 85.78125,
+                "right": 1088,
+                "bottom": 118.78125,
+                "width": 200,
+                "height": 33
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 1108,
+                "top": 89.28125,
+                "right": 1129,
+                "bottom": 113.28125,
+                "width": 21,
+                "height": 24
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 1149,
+                "top": 84.28125,
+                "right": 1185,
+                "bottom": 120.28125,
+                "width": 36,
+                "height": 36
+            },
+            "tag": "span",
+            "text": "A"
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 1195,
+                "top": 91.78125,
+                "right": 1236,
+                "bottom": 112.78125,
+                "width": 41,
+                "height": 21
+            },
+            "tag": "span",
+            "text": "admin"
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 1246,
+                "top": 97.375,
+                "right": 1256,
+                "bottom": 107.171875,
+                "width": 10,
+                "height": 9.796875
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 438.390625,
+                "top": 180.609375,
+                "right": 447.390625,
+                "bottom": 189.9375,
+                "width": 9,
+                "height": 9.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 478.390625,
+                "top": 178.78125,
+                "right": 492.390625,
+                "bottom": 192.78125,
+                "width": 14,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 1139.90625,
+                "top": 178.609375,
+                "right": 1152.90625,
+                "bottom": 191.9375,
+                "width": 13,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 1034,
+                "top": 280.78125,
+                "right": 1210,
+                "bottom": 301.78125,
+                "width": 176,
+                "height": 21
+            },
+            "tag": "span",
+            "text": "Go to Advanced Reporting"
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 922.65625,
+                "top": 405.78125,
+                "right": 951.65625,
+                "bottom": 422.78125,
+                "width": 29,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "here"
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 655.65625,
+                "top": 513.78125,
+                "right": 725.65625,
+                "bottom": 530.78125,
+                "width": 70,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Bestsellers"
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 765.65625,
+                "top": 513.78125,
+                "right": 914.65625,
+                "bottom": 530.78125,
+                "width": 149,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Most Viewed Products"
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 954.65625,
+                "top": 513.78125,
+                "right": 1058.65625,
+                "bottom": 530.78125,
+                "width": 104,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "New Customers"
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 1098.65625,
+                "top": 513.78125,
+                "right": 1168.65625,
+                "bottom": 530.78125,
+                "width": 70,
+                "height": 17
+            },
+            "tag": "span",
+            "text": "Customers"
+        },
+        {
+            "keep": true,
+            "id": "AK",
+            "rects": {
+                "left": 635.65625,
+                "top": 602.96875,
+                "right": 1082.15625,
+                "bottom": 647.96875,
+                "width": 446.5,
+                "height": 45
+            },
+            "tag": "td",
+            "text": "Quest Lumaflex™ Band"
+        },
+        {
+            "keep": true,
+            "id": "AL",
+            "rects": {
+                "left": 1082.15625,
+                "top": 602.96875,
+                "right": 1206.625,
+                "bottom": 647.96875,
+                "width": 124.46875,
+                "height": 45
+            },
+            "tag": "td",
+            "text": "$19.00"
+        },
+        {
+            "keep": true,
+            "id": "AM",
+            "rects": {
+                "left": 1206.625,
+                "top": 602.96875,
+                "right": 1231,
+                "bottom": 647.96875,
+                "width": 24.375,
+                "height": 45
+            },
+            "tag": "td",
+            "text": "6"
+        }
+    ]
+}

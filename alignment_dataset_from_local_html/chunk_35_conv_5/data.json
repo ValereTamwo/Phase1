@@ -1,0 +1,511 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_5.html",
+    "raw_html": "<NAV data-bbox=\"0,0,1280,0\"><DIV data-bbox=\"90,0,1100,52\"><B id=\"0\" data-bbox=\"120,16,58,19\"><text>Postmill</text></B><DIV data-bbox=\"194,0,148,52\"><UL data-bbox=\"194,0,148,52\"><A id=\"1\" href=\"#\" data-bbox=\"194,0,86,52\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Forums</text></A><A id=\"2\" href=\"#\" data-bbox=\"280,0,62,52\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Wiki</text></A></UL></DIV><FORM data-bbox=\"455,0,236,52\" action=\"#\" method=\"get\"><INPUT id=\"4\" type=\"search\" placeholder=\"Search Postmill\" data-bbox=\"462,8,222,37\" class=\"possible-clickable-element\" data-testid=\"C\" style=\"\"></INPUT></FORM><UL data-bbox=\"804,0,372,52\"><A title=\"Notifications (0)\" href=\"#\" class=\"icon-link\" data-bbox=\"804,0,48,52\"><I id=\"5\" class=\"fas fa-bell possible-clickable-element\" data-bbox=\"820,19,16,13\" data-testid=\"D\"></I></A><A href=\"#\" id=\"7\" data-bbox=\"888,16,51,19\"><I id=\"6\" class=\"fas fa-plus possible-clickable-element\" data-bbox=\"870,18,12,13\" data-testid=\"E\"></I><text>Submit</text></A><LI data-bbox=\"955,0,221,52\"><BUTTON type=\"button\" data-bbox=\"955,0,221,52\"><I id=\"8\" class=\"fas fa-user-circle possible-clickable-element\" data-bbox=\"973,18,12,14\" data-testid=\"F\"></I><STRONG id=\"9\" data-bbox=\"991,16,157,19\" class=\"possible-clickable-element\" data-testid=\"G\"><text>MarvelsGrantMan136</text></STRONG><I class=\"fas fa-chevron-down possible-clickable-element\" style=\"margin-left: auto; font-size: 12px; color: var(--text-secondary);\" data-testid=\"H\"></I></BUTTON></LI></UL></DIV></NAV><UL data-bbox=\"104,80,1072,35\"><A id=\"11\" href=\"#\" data-bbox=\"104,80,69,35\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Forums</text></A><A id=\"12\" href=\"#\" data-bbox=\"173,80,51,35\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Tags</text></A><A id=\"13\" href=\"#\" data-bbox=\"224,80,98,35\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Alphabetical</text></A></UL><H1 data-bbox=\"104,129,1072,42\"><text>All forums</text></H1><DIV class=\"forum-group\" data-bbox=\"104,185,203,172\"><H2 data-bbox=\"104,185,203,32\"><text>A</text></H2><UL data-bbox=\"104,231,203,126\"><A id=\"14\" href=\"#\" data-bbox=\"104,233,61,16\" class=\"possible-clickable-element\" data-testid=\"L\"><text>allentown</text></A><A id=\"15\" href=\"#\" data-bbox=\"104,254,71,16\" class=\"possible-clickable-element\" data-testid=\"M\"><text>arlingtonva</text></A><A id=\"16\" href=\"#\" data-bbox=\"104,275,19,16\" class=\"possible-clickable-element\" data-testid=\"N\"><text>Art</text></A><A id=\"17\" href=\"#\" data-bbox=\"104,296,63,16\" class=\"possible-clickable-element\" data-testid=\"O\"><text>AskReddit</text></A><A id=\"18\" href=\"#\" data-bbox=\"104,317,68,16\" class=\"possible-clickable-element\" data-testid=\"P\"><text>askscience</text></A><A id=\"19\" href=\"#\" data-bbox=\"104,338,30,16\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>aww</text></A></UL></DIV><DIV class=\"forum-group\" data-bbox=\"104,371,203,150\"><H2 data-bbox=\"104,371,203,31\"><text>B</text></H2><UL data-bbox=\"104,416,203,105\"><A id=\"20\" href=\"#\" data-bbox=\"104,418,59,16\" class=\"possible-clickable-element\" data-testid=\"R\"><text>baltimore</text></A><A id=\"21\" href=\"#\" data-bbox=\"104,439,38,16\" class=\"possible-clickable-element\" data-testid=\"S\"><text>books</text></A><A id=\"22\" href=\"#\" data-bbox=\"104,460,44,16\" class=\"possible-clickable-element\" data-testid=\"T\"><text>boston</text></A><A id=\"23\" href=\"#\" data-bbox=\"104,481,83,16\" class=\"possible-clickable-element\" data-testid=\"U\"><text>BridgeportCT</text></A><A id=\"24\" href=\"#\" data-bbox=\"104,502,77,16\" class=\"possible-clickable-element\" data-testid=\"V\"><text>BuyItForLife</text></A></UL></DIV><DIV class=\"forum-group\" data-bbox=\"104,535,203,172\"><H2 data-bbox=\"104,535,203,32\"><text>C</text></H2><UL data-bbox=\"104,581,203,126\"><A id=\"25\" href=\"#\" data-bbox=\"104,583,89,16\" class=\"possible-clickable-element\" data-testid=\"W\"><text>CambridgeMA</text></A><A id=\"26\" href=\"#\" data-bbox=\"104,604,80,16\" class=\"possible-clickable-element\" data-testid=\"X\"><text>ColumbiaMD</text></A><A id=\"27\" href=\"#\" data-bbox=\"104,625,75,16\" class=\"possible-clickable-element\" data-testid=\"Y\"><text>Connecticut</text></A><A id=\"28\" href=\"#\" data-bbox=\"104,646,55,16\" class=\"possible-clickable-element\" data-testid=\"Z\"><text>consoles</text></A><A id=\"29\" href=\"#\" data-bbox=\"104,667,116,16\" class=\"possible-clickable-element\" data-testid=\"AA\"><text>coolgithubprojects</text></A><A id=\"30\" href=\"#\" data-bbox=\"104,688,41,16\" class=\"possible-clickable-element\" data-testid=\"AB\"><text>creepy</text></A></UL></DIV><DIV class=\"forum-group\" data-bbox=\"321,185,203,88\"><H2 data-bbox=\"321,185,203,32\"><text>E</text></H2><UL data-bbox=\"321,231,203,42\"><A id=\"31\" href=\"#\" data-bbox=\"321,233,64,16\" class=\"possible-clickable-element\" data-testid=\"AC\"><text>EarthPorn</text></A><A id=\"32\" href=\"#\" data-bbox=\"321,254,101,16\" class=\"possible-clickable-element\" data-testid=\"AD\"><text>explainlikeimfive</text></A></UL></DIV><DIV class=\"forum-group\" data-bbox=\"321,287,203,108\"><H2 data-bbox=\"321,287,203,31\"><text>F</text></H2><UL data-bbox=\"321,332,203,63\"><A id=\"33\" href=\"#\" data-bbox=\"321,334,29,16\" class=\"possible-clickable-element\" data-testid=\"AE\"><text>food</text></A><A id=\"34\" href=\"#\" data-bbox=\"321,355,36,16\" class=\"possible-clickable-element\" data-testid=\"AF\"><text>funny</text></A></UL></DIV><DIV class=\"forum-group\" data-bbox=\"321,409,203,130\"><H2 data-bbox=\"321,409,203,32\"><text>G</text></H2><A id=\"36\" href=\"#\" data-bbox=\"321,457,51,16\" class=\"possible-clickable-element\" data-testid=\"AG\"><text>gadgets</text></A><A id=\"37\" href=\"#\" data-bbox=\"321,478,47,16\" class=\"possible-clickable-element\" data-testid=\"AH\"><text>gaming</text></A></DIV><DIV class=\"forum-group\" data-bbox=\"321,553,203,108\"><H2 data-bbox=\"321,553,203,31\"><text>H</text></H2><UL data-bbox=\"321,598,203,63\"><A id=\"40\" href=\"#\" data-bbox=\"321,600,54,16\" class=\"possible-clickable-element\" data-testid=\"AI\"><text>Hartford</text></A><A id=\"41\" href=\"#\" data-bbox=\"321,621,77,16\" class=\"possible-clickable-element\" data-testid=\"AJ\"><text>headphones</text></A></UL></DIV><DIV class=\"forum-group\" data-bbox=\"321,675,203,109\"><H2 data-bbox=\"321,675,203,32\"><text>I</text></H2></DIV>",
+    "parsed_html": "\n<\n  div|\n  <\n    div|\n    <b| Postmill >\n    <\n      ul|\n      <a[A]| Forums >\n      <a[B]| Wiki >\n    >\n    <input[C]| Search Postmill >\n    <\n      ul|\n      <\n        a| Notifications (0)\n        <i[D]| >\n      >\n      <i[E]| >\n      <text| Submit >\n      <i[F]| >\n      <strong[G]| MarvelsGrantMan136 >\n      <i[H]| >\n    >\n  >\n  <\n    ul|\n    <a[I]| Forums >\n    <a[J]| Tags >\n    <a[K]| Alphabetical >\n  >\n  <h1| All forums >\n  <\n    div|\n    <h2| A >\n    <\n      ul|\n      <a[L]| allentown >\n      <a[M]| arlingtonva >\n      <a[N]| Art >\n      <a[O]| AskReddit >\n      <a[P]| askscience >\n      <a[Q]| aww >\n    >\n  >\n  <\n    div|\n    <h2| B >\n    <\n      ul|\n      <a[R]| baltimore >\n      <a[S]| books >\n      <a[T]| boston >\n      <a[U]| BridgeportCT >\n      <a[V]| BuyItForLife >\n    >\n  >\n  <\n    div|\n    <h2| C >\n    <\n      ul|\n      <a[W]| CambridgeMA >\n      <a[X]| ColumbiaMD >\n      <a[Y]| Connecticut >\n      <a[Z]| consoles >\n      <a[AA]| coolgithubprojects >\n      <a[AB]| creepy >\n    >\n  >\n  <\n    div|\n    <h2| E >\n    <\n      ul|\n      <a[AC]| EarthPorn >\n      <a[AD]| explainlikeimfive >\n    >\n  >\n  <\n    div|\n    <h2| F >\n    <\n      ul|\n      <a[AE]| food >\n      <a[AF]| funny >\n    >\n  >\n  <\n    div|\n    <h2| G >\n    <a[AG]| gadgets >\n    <a[AH]| gaming >\n  >\n  <\n    div|\n    <h2| H >\n    <\n      ul|\n      <a[AI]| Hartford >\n      <a[AJ]| headphones >\n    >\n  >\n  <h2| I >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 86,
+                "top": 13.203125,
+                "right": 167,
+                "bottom": 38.796875,
+                "width": 81,
+                "height": 25.59375
+            },
+            "tag": "a",
+            "text": "Forums"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 179,
+                "top": 13.203125,
+                "right": 236,
+                "bottom": 38.796875,
+                "width": 57,
+                "height": 25.59375
+            },
+            "tag": "a",
+            "text": "Wiki"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 260,
+                "top": 17.203125,
+                "right": 441,
+                "bottom": 36.203125,
+                "width": 181,
+                "height": 19
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 898.15625,
+                "top": 16,
+                "right": 916.15625,
+                "bottom": 36,
+                "width": 18,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 952.15625,
+                "top": 18,
+                "right": 966.15625,
+                "bottom": 34,
+                "width": 14,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 1056.15625,
+                "top": 16,
+                "right": 1075.15625,
+                "bottom": 36,
+                "width": 19,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 1083.15625,
+                "top": 18,
+                "right": 1224,
+                "bottom": 34,
+                "width": 140.84375,
+                "height": 16
+            },
+            "tag": "strong",
+            "text": "MarvelsGrantMan136"
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 1232,
+                "top": 20,
+                "right": 1243,
+                "bottom": 32,
+                "width": 11,
+                "height": 12
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 65,
+                "top": 104,
+                "right": 154,
+                "bottom": 140,
+                "width": 89,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Forums"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 162,
+                "top": 104,
+                "right": 231,
+                "bottom": 140,
+                "width": 69,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Tags"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 239,
+                "top": 104,
+                "right": 365,
+                "bottom": 140,
+                "width": 126,
+                "height": 36
+            },
+            "tag": "a",
+            "text": "Alphabetical"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 65,
+                "top": 329.96875,
+                "right": 134,
+                "bottom": 353.96875,
+                "width": 69,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "allentown"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 65,
+                "top": 367.5625,
+                "right": 144,
+                "bottom": 391.5625,
+                "width": 79,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "arlingtonva"
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 65,
+                "top": 405.15625,
+                "right": 86,
+                "bottom": 429.15625,
+                "width": 21,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "Art"
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 65,
+                "top": 442.75,
+                "right": 137,
+                "bottom": 466.75,
+                "width": 72,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "AskReddit"
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 65,
+                "top": 480.34375,
+                "right": 146,
+                "bottom": 504.34375,
+                "width": 81,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "askscience"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 65,
+                "top": 517.9375,
+                "right": 97,
+                "bottom": 541.9375,
+                "width": 32,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "aww"
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 360.5,
+                "top": 329.96875,
+                "right": 427.5,
+                "bottom": 353.96875,
+                "width": 67,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "baltimore"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 360.5,
+                "top": 367.5625,
+                "right": 403.5,
+                "bottom": 391.5625,
+                "width": 43,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "books"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 360.5,
+                "top": 405.15625,
+                "right": 409.5,
+                "bottom": 429.15625,
+                "width": 49,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "boston"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 360.5,
+                "top": 442.75,
+                "right": 457.5,
+                "bottom": 466.75,
+                "width": 97,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "BridgeportCT"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 360.5,
+                "top": 480.34375,
+                "right": 446.5,
+                "bottom": 504.34375,
+                "width": 86,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "BuyItForLife"
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 656,
+                "top": 329.96875,
+                "right": 758,
+                "bottom": 353.96875,
+                "width": 102,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "CambridgeMA"
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 656,
+                "top": 367.5625,
+                "right": 748,
+                "bottom": 391.5625,
+                "width": 92,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "ColumbiaMD"
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 656,
+                "top": 405.15625,
+                "right": 744,
+                "bottom": 429.15625,
+                "width": 88,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "Connecticut"
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 656,
+                "top": 442.75,
+                "right": 721,
+                "bottom": 466.75,
+                "width": 65,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "consoles"
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 656,
+                "top": 480.34375,
+                "right": 791,
+                "bottom": 504.34375,
+                "width": 135,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "coolgithubprojects"
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 656,
+                "top": 517.9375,
+                "right": 706,
+                "bottom": 541.9375,
+                "width": 50,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "creepy"
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 951.5,
+                "top": 329.96875,
+                "right": 1022.5,
+                "bottom": 353.96875,
+                "width": 71,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "EarthPorn"
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 951.5,
+                "top": 367.5625,
+                "right": 1071.5,
+                "bottom": 391.5625,
+                "width": 120,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "explainlikeimfive"
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 65,
+                "top": 647.59375,
+                "right": 98,
+                "bottom": 671.59375,
+                "width": 33,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "food"
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 65,
+                "top": 685.1875,
+                "right": 106,
+                "bottom": 709.1875,
+                "width": 41,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "funny"
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 360.5,
+                "top": 647.59375,
+                "right": 417.5,
+                "bottom": 671.59375,
+                "width": 57,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "gadgets"
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 360.5,
+                "top": 685.1875,
+                "right": 412.5,
+                "bottom": 709.1875,
+                "width": 52,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "gaming"
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 656,
+                "top": 647.59375,
+                "right": 716,
+                "bottom": 671.59375,
+                "width": 60,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "Hartford"
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 656,
+                "top": 685.1875,
+                "right": 744,
+                "bottom": 709.1875,
+                "width": 88,
+                "height": 24
+            },
+            "tag": "a",
+            "text": "headphones"
+        }
+    ]
+}

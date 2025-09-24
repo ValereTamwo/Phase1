@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap - Interactive Map</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #3282F6;
+            --primary-hover: #2868c4;
+            --secondary-color: #6c757d;
+            --text-color: #343a40;
+            --text-light: #6c757d;
+            --background-color: #F8F9FA;
+            --panel-bg: #FFFFFF;
+            --border-color: #dee2e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-size: 16px;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+        
+        p {
+            line-height: 1.6;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        button, input[type="submit"] {
+            cursor: pointer;
+            border: none;
+            border-radius: var(--border-radius);
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--panel-bg);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            height: 55px;
+            width: 100%;
+            z-index: 1000;
+            flex-shrink: 0;
+        }
+
+        header #0 {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        header nav a {
+            color: var(--text-light);
+            font-weight: 500;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            font-size: 0.9rem;
+            position: relative;
+        }
+        
+        header nav a:hover, header nav a.active {
+            color: var(--primary-color);
+        }
+
+        header nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            right: 15px;
+            height: 3px;
+            background-color: var(--primary-color);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        header nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        header nav div[data-bbox="188,10,207,35"],
+        header nav ul,
+        header nav div[data-bbox="1135,10,135,35"] {
+            display: flex;
+            align-items: center;
+        }
+
+        div[data-bbox="188,10,77,35"] {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+        }
+
+        div[data-bbox="188,10,77,35"] a {
+            padding: 6px 12px;
+            border-right: 1px solid var(--border-color);
+        }
+
+        div[data-bbox="188,10,77,35"] a:hover::after {
+            transform: scaleX(0);
+        }
+
+        button#1 {
+            background: none;
+            padding: 6px 10px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        a#10 {
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        a#11 {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 18px;
+            border-radius: var(--border-radius);
+            margin-left: 10px;
+            height: auto;
+        }
+        a#11:hover {
+            background-color: var(--primary-hover);
+            color: white;
+        }
+        a#11::after { display: none; }
+
+        /* --- Main Content --- */
+        .page-container {
+            display: flex;
+            flex-grow: 1;
+            height: calc(100vh - 55px);
+            position: relative;
+        }
+
+        /* --- Sidebar --- */
+        .sidebar {
+            width: 350px;
+            background: var(--background-color);
+            padding: 20px;
+            overflow-y: auto;
+            flex-shrink: 0;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .sidebar-panel {
+            background: var(--panel-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .directions-form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .directions-form-header a {
+            color: var(--text-light);
+            font-size: 1.5rem;
+        }
+
+        form[data-bbox="0,55,350,213"] {
+            position: relative;
+        }
+
+        form input[type="text"], form select {
+            width: 100%;
+            padding: 12px 15px 12px 40px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            margin-bottom: 12px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        form input[type="text"]:focus, form select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(50, 130, 246, 0.2);
+        }
+        
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+        
+        .input-wrapper.from::before { content: '\f192'; } /* dot-circle */
+        .input-wrapper.to::before { content: '\f3c5'; } /* map-marker-alt */
+
+        button#12 {
+            position: absolute;
+            top: 48px;
+            right: -10px;
+            width: 32px;
+            height: 32px;
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            color: var(--primary-color);
+            font-size: 1rem;
+            box-shadow: var(--shadow);
+        }
+        button#12:hover { background-color: #e9ecef; }
+
+        div[data-bbox="4,182,342,31"] {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        select#15 { flex-grow: 1; margin: 0; padding-left: 15px; }
+
+        input#16 {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 15px;
+        }
+        input#16:hover { background-color: #218838; }
+
+        button#17 {
+            width: 100%;
+            padding: 12px;
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+        }
+        button#17:hover { background-color: #e9ecef; }
+        
+        .welcome-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        button#18 {
+            background: none;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        button#18:hover { background-color: #e9ecef; }
+        
+        div[data-bbox="12,516,326,38"] {
+            display: flex;
+            gap: 15px;
+            margin-top: 2rem;
+        }
+
+        div[data-bbox="12,516,326,38"] a {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+        }
+        
+        a#23 {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        a#23:hover { background-color: var(--primary-hover); }
+
+        a#24 {
+            background: none;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+        a#24:hover { background-color: rgba(50, 130, 246, 0.1); }
+
+
+        /* --- Map Area --- */
+        .map-container {
+            flex-grow: 1;
+            background-image: url('https://tile.openstreetmap.org/13/4195/2807.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .map-controls {
+            position: absolute;
+            right: 15px;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 5px;
+        }
+
+        .map-controls span, .map-controls a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .map-controls span:hover, .map-controls a:hover {
+            background-color: #e9ecef;
+            color: var(--primary-color);
+        }
+
+        .map-controls span:first-child { border-radius: 5px 5px 0 0; }
+        .map-controls span:nth-child(3) { border-bottom: 1px solid var(--border-color); }
+        .map-controls span:nth-child(6) { border-radius: 0 0 5px 5px; }
+
+        .map-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 8px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #555;
+            background: linear-gradient(to top, rgba(255,255,255,0.8), rgba(255,255,255,0));
+        }
+        
+        div[data-bbox="5,681,90,34"] {
+            background: rgba(255,255,255,0.7);
+            border: 1px solid #999;
+            border-top: none;
+            padding: 2px 5px;
+            text-align: center;
+        }
+        
+        div[data-bbox="874,703,406,17"] {
+            background: rgba(255,255,255,0.7);
+            padding: 4px 8px;
+            border-radius: var(--border-radius);
+        }
+
+        div[data-bbox="874,703,406,17"] a {
+            margin: 0 5px;
+            color: var(--primary-color);
+        }
+        div[data-bbox="874,703,406,17"] a:hover { text-decoration: underline; }
+
+    </style>
+</head>
+<body>
+
+    <header data-bbox="0,0,1280,55">
+        <source type="image/svg+xml" data-bbox="10,17,0,22">
+            <img id="0" data-bbox="10,13,30,30" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzMyODJGNyIgd2lkdGg9IjMwcHgiIGhlaWdodD0iMzBweCI+PHBhdGggZD0iTTEyIDJDNi40OCA MiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem02LjM2IDEzLjU1Yy0xLjQ0LS41Mi0yLjQ0LTEuNzgtMi40NC0zLjE5IDAtMS4wMy41Ni0yLjI5IDEuNDEtMy4xMi0uNDQtMi44Ny0yLjQ4LTMuODQtMy44Mi0zLjg0LTIuMyAwLTMuNjMgMi4wNi0zLjY2IDQuMjYtLjQxLS4xMy0uODctLjE5LTEuMzYtLjE5LTEuMzggMC0yLjYxLjc0LTMuNDcgMi4xNi4zNSAxLjU5IDEuNTQgMi43MyAzLjQxIDIuNzMgMS4yMyAwIDIuMTYtLjYgMi43Ny0xLjQ0LjM5IDEuMTIgMS41NSAyLjYxIDMuMzggMi42MS44NSAwIDEuNjUtLjIgMi4zNS0uNTN6Ii8+PC9zdmc+">
+        </source>
+        <nav data-bbox="178,0,227,55">
+            <div data-bbox="188,10,207,35">
+                <div data-bbox="188,10,77,35">
+                    <a data-bbox="188,10,50,35">Edit</a>
+                    <button id="1" type="button" data-bbox="237,10,28,35"><i class="fas fa-caret-down"></i></button>
+                </div>
+                <a id="2" data-bbox="264,10,68,35">History</a>
+                <a id="3" data-bbox="331,10,64,35">Export</a>
+            </div>
+        </nav>
+        <nav data-bbox="708,0,572,55">
+            <ul data-bbox="722,13,405,27">
+                <a id="4" data-bbox="722,13,77,27">GPS Traces</a>
+                <a id="5" data-bbox="803,13,82,27">User Diaries</a>
+                <a id="6" data-bbox="889,13,87,27">Communities</a>
+                <a id="7" data-bbox="980,13,63,27">Copyright</a>
+                <a id="8" data-bbox="1047,13,34,27">Help</a>
+                <a id="9" data-bbox="1085,13,42,27">About</a>
+            </ul>
+            <div data-bbox="1135,10,135,35">
+                <a id="10" data-bbox="1135,10,63,35">Log In</a>
+                <a id="11" data-bbox="1197,10,73,35">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page-container" data-bbox="0,55,1280,665">
+        <div class="sidebar" data-bbox="0,55,350,515">
+            <div class="sidebar-panel" data-bbox="0,55,350,213">
+                <div class="directions-form-header" data-bbox="4,63,342,31">
+                    <div data-bbox="8,63,288,31">
+                        <div data-bbox="8,63,254,31">
+                            <h3>Directions</h3>
+                        </div>
+                    </div>
+                    <a title="Find directions between two points" data-bbox="304,63,38,31"><i class="fas fa-directions"></i></a>
+                </div>
+                <form data-bbox="0,55,350,213">
+                    <button id="12" type="button" data-bbox="313,71,21,21"><i class="fas fa-exchange-alt"></i></button>
+                    <div class="input-wrapper from">
+                        <input id="13" type="text" placeholder="From" data-value="Jordan Pond" data-bbox="37,112,305,31">
+                    </div>
+                    <div class="input-wrapper to">
+                         <input id="14" type="text" placeholder="To" data-bbox="37,147,305,31">
+                    </div>
+                    <div data-bbox="4,182,342,31">
+                        <select id="15" data-value="1" data-text="Car (OSRM)" data-bbox="37,182,262,31">
+                            <option value="0">Bicycle (OSRM)</option>
+                            <option value="1" data-status="selected" selected>Car (OSRM)</option>
+                            <option value="2">Foot (OSRM)</option>
+                        </select>
+                        <input id="16" value="Go" type="submit" data-bbox="307,182,35,31">
+                    </div>
+                    <button id="17" type="button" data-bbox="37,217,132,31">Reverse Directions</button>
+                </form>
+            </div>
+            <div class="sidebar-panel" data-bbox="0,268,350,302">
+                <div class="welcome-header" data-bbox="16,284,318,85">
+                    <h2 data-bbox="16,284,297,77">Welcome to OpenStreetMap!</h2>
+                    <button id="18" type="button" data-bbox="313,284,21,21"><i class="fas fa-times"></i></button>
+                </div>
+                <div data-bbox="16,369,318,185">
+                    <p data-bbox="16,369,318,69">OpenStreetMap is a map of the world, created by people like you and free to use under an open license.</p>
+                    <p data-bbox="16,454,318,46">Hosting is supported by <a id="19" data-bbox="180,455,27,20">UCL</a>, <a id="20" data-bbox="216,455,39,20">Fastly</a>, <a id="21" data-bbox="264,455,63,20">Bytemark Hosting</a> and other <a id="22" data-bbox="145,478,56,20">partners</a>.</p>
+                    <div data-bbox="12,516,326,38">
+                        <a id="23" data-bbox="16,516,155,38">Learn More</a>
+                        <a id="24" data-bbox="179,516,155,38">Start Mapping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-container" data-bbox="0,55,1280,665">
+            <div class="map-controls" data-bbox="0,55,1280,0">
+                <span id="25" data-bbox="1250,75,20,20" title="Layers"><i class="fas fa-layer-group"></i></span>
+                <span id="26" data-bbox="1250,115,20,20" title="Map Key"><i class="fas fa-map-marked-alt"></i></span>
+                <span id="27" data-bbox="1250,155,20,20" title="Query Features"><i class="fas fa-info-circle"></i></span>
+                <span id="28" data-bbox="1250,205,20,20" title="Zoom In"><i class="fas fa-plus"></i></span>
+                <span id="29" data-bbox="1250,245,20,20" title="Zoom Out"><i class="fas fa-minus"></i></span>
+                <span id="30" data-bbox="1250,285,20,20" title="Locate Me"><i class="fas fa-crosshairs"></i></span>
+                <a id="31" data-bbox="1240,325,40,40" title="Share"><i class="fas fa-share-alt"></i></a>
+                <a id="32" data-bbox="1240,375,40,40" title="Measure"><i class="fas fa-ruler"></i></a>
+            </div>
+             <div class="map-footer">
+                <div data-bbox="5,681,90,34">
+                    <div data-bbox="5,681,56,18">50 km</div>
+                    <div data-bbox="5,697,90,18">50 mi</div>
+                </div>
+                <div data-bbox="874,703,406,17">
+                    Â© <a id="33" data-bbox="891,704,151,14">OpenStreetMap contributors</a>
+                    <a id="34" data-bbox="1056,704,90,14">Make a Donation</a>
+                    <a id="35" data-bbox="1153,704,122,14">Website and API terms</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const interactiveElements = document.querySelectorAll('button, a, input[type="submit"], .map-controls span, .map-controls a');
+
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseover', () => el.style.transform = 'scale(1.03)');
+                el.addEventListener('mouseout', () => el.style.transform = 'scale(1)');
+                el.style.transition = 'transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            });
+            
+            // Set initial value for input field
+            const fromInput = document.getElementById('13');
+            if(fromInput && fromInput.dataset.value) {
+                fromInput.value = fromInput.dataset.value;
+            }
+        });
+    </script>
+</body>
+</html>

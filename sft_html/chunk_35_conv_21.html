@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Stop Market - Tools & Home Improvement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #007BFF;
+            --primary-hover-color: #0056b3;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --surface-color: #ffffff;
+            --text-color: #343a40;
+            --light-text-color: #6c757d;
+            --border-color: #dee2e6;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        /* Visually hidden but accessible for screen readers */
+        span[data-bbox$=",1,1"] {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: var(--primary-hover-color);
+            text-decoration: underline;
+        }
+        
+        ul, ol {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--surface-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header-top {
+            background-color: #343a40;
+            color: #f8f9fa;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+        
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .header-top a, .header-top span {
+            color: #f8f9fa;
+        }
+
+        .header-top a:hover {
+            color: #cccccc;
+            text-decoration: none;
+        }
+
+        .header-main {
+            padding: 20px 0;
+        }
+        
+        .header-main .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .header-main a[title="one_stop_market_logo"] {
+            flex-shrink: 0;
+        }
+
+        .header-main form {
+            flex-grow: 1;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .header-main input[type="text"] {
+            width: 100%;
+            padding: 10px 45px 10px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 14px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        .header-main input[type="text"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+        
+        .header-main form a {
+            font-size: 13px;
+            margin-top: 5px;
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        .header-main form button[type="submit"] {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 42px;
+            width: 45px;
+            border: none;
+            background-color: transparent;
+            color: var(--secondary-color);
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.2s;
+            border-radius: 0 20px 20px 0;
+        }
+        
+        .header-main form button[type="submit"]:hover {
+            color: var(--primary-color);
+        }
+        
+        .header-actions a {
+            font-size: 24px;
+            color: var(--text-color);
+            position: relative;
+        }
+
+        /* Navigation */
+        .main-nav {
+            background-color: var(--surface-color);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .main-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .main-nav li {
+            position: relative;
+        }
+        
+        .main-nav li span[id] {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        
+        .main-nav li:hover > span {
+             background-color: var(--primary-color);
+             color: var(--surface-color);
+        }
+
+        .main-nav li span[id^="7"], .main-nav li span[id^="9"], .main-nav li span[id^="11"], .main-nav li span[id^="13"], .main-nav li span[id^="15"], .main-nav li span[id^="17"], .main-nav li span[id^="19"], .main-nav li span[id^="21"], .main-nav li span[id^="23"], .main-nav li span[id^="25"], .main-nav li span[id^="27"], .main-nav li span[id^="29"] {
+            padding-left: 0;
+            padding-right: 5px;
+        }
+
+        .main-nav li span[id^="7"]::after, .main-nav li span[id^="9"]::after, .main-nav li span[id^="11"]::after, .main-nav li span[id^="13"]::after, .main-nav li span[id^="15"]::after, .main-nav li span[id^="17"]::after, .main-nav li span[id^="19"]::after, .main-nav li span[id^="21"]::after, .main-nav li span[id^="23"]::after, .main-nav li span[id^="25"]::after, .main-nav li span[id^="27"]::after, .main-nav li span[id^="29"]::after {
+            content: "\f078";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 10px;
+            margin-left: 8px;
+            opacity: 0.7;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 20px 0;
+            font-size: 14px;
+        }
+        
+        .breadcrumbs ul {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .breadcrumbs li:not(:last-child) a::after {
+            content: '/';
+            margin-left: 8px;
+            color: var(--light-text-color);
+        }
+        
+        .breadcrumbs strong {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+        
+        /* Main Content */
+        main .container {
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+
+        main > span[data-bbox="20,295,500,54"] {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 30px;
+        }
+        
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--surface-color);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+        
+        .sidebar-widget > strong {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .sidebar-widget dl dt {
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar-widget dl ol {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .sidebar-widget dl a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-color);
+            font-size: 14px;
+        }
+        
+        .sidebar-widget dl a:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .sidebar-widget dl a span[id*="40"], .sidebar-widget dl a span[id*="43"], .sidebar-widget dl a span[id*="46"], .sidebar-widget dl a span[id*="48"] {
+            color: var(--light-text-color);
+            background-color: var(--background-color);
+            padding: 0 5px;
+            border-radius: 4px;
+        }
+        
+        /* Product Listing */
+        .product-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+        }
+
+        .view-mode a, .view-mode strong {
+            display: inline-flex;
+            width: 36px;
+            height: 36px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            color: var(--secondary-color);
+        }
+        .view-mode strong {
+            background-color: var(--primary-color);
+            color: var(--surface-color);
+            border-color: var(--primary-color);
+        }
+        .view-mode a:first-of-type { border-radius: 4px 0 0 4px; }
+        .view-mode a:last-of-type { border-radius: 0 4px 4px 0; margin-left: -1px; }
+
+        .sort-by { display: flex; align-items: center; gap: 10px; }
+        .sort-by select {
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background-color: var(--surface-color);
+        }
+        .sort-by a {
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--secondary-color);
+        }
+        .sort-by a:hover { background-color: #e9ecef; }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        
+        .product-card {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            aspect-ratio: 1 / 1.25;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-name {
+            font-weight: 600;
+            color: var(--text-color);
+            display: block;
+            margin-bottom: 10px;
+            height: 40px; /* for uniform alignment */
+            overflow: hidden;
+        }
+        .product-name:hover {
+            text-decoration: underline;
+        }
+
+        .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            background-color: var(--primary-color);
+            color: var(--surface-color);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .add-to-cart-btn:hover {
+            background-color: var(--primary-hover-color);
+            text-decoration: none;
+            color: var(--surface-color);
+        }
+
+    </style>
+</head>
+<body data-bbox="0,0,1280,2639">
+    <div data-bbox="0,0,1280,2639">
+        <header data-bbox="0,0,1280,128">
+            <div class="header-top" data-bbox="0,0,1280,40">
+                <div class="container">
+                    <span data-bbox="19,9,28,19">Skip to Content</span>
+                    <ul data-bbox="808,10,452,20">
+                        <li><a id="0" data-bbox="823,10,78,19" href="#">My Account</a></li>
+                        <li><a id="1" data-bbox="916,10,84,19" href="#">My Wish List</a></li>
+                        <li data-label="or" data-bbox="1015,10,58,20"><a id="2" data-bbox="1015,10,58,19" href="#">Sign Out</a></li>
+                        <li><span data-bbox="1103,10,157,19">Welcome, Emma Lopez!</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-main" data-bbox="0,41,1280,87">
+                <div class="container">
+                    <a title="one_stop_market_logo" href="/" data-bbox="20,71,200,27">
+                        <img id="3" title="one_stop_market_logo" data-bbox="20,71,200,27" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjciIHZpZXdCb3g9IjAgMCAyMDAgMjciPgo8dGV4dCB4PSIwIiB5PSIyMiIgZm9udC1mYW1pbHk9IidJbnRlcicsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMwMDdCRkYiPk9uZVN0b3BNYXJrZXQ8L3RleHQ+Cjwvc3ZnPg==" alt="One Stop Market Logo">
+                    </a>
+                    <div data-bbox="947,71,265,57">
+                        <form data-bbox="962,71,250,57">
+                            <div data-bbox="962,71,250,57">
+                                <span data-bbox="960,102,1,1">Search</span>
+                                <div data-bbox="962,71,250,57">
+                                    <input id="5" type="text" placeholder="Search entire store here..." data-bbox="962,71,250,32">
+                                    <a id="6" href="#" data-bbox="962,108,116,19">Advanced Search</a>
+                                </div>
+                            </div>
+                            <button title="Search" type="submit" data-bbox="1180,71,22,32">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <span data-bbox="1201,75,1,1">Search</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="header-actions" data-bbox="1225,71,35,33">
+                        <a id="4" href="#" data-bbox="1225,71,35,33">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span data-bbox="1259,70,1,1">My Cart</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="main-nav" data-bbox="0,128,1280,109">
+            <div class="container">
+                <ul data-bbox="0,128,1280,109">
+                    <li data-bbox="8,128,194,53">
+                        <span id="8" data-bbox="20,145,162,19">Beauty & Personal Care</span>
+                        <span id="7" data-bbox="190,128,12,53"></span>
+                    </li>
+                    <li data-bbox="212,128,162,53">
+                        <span id="10" data-bbox="224,145,130,19">Sports & Outdoors</span>
+                        <span id="9" data-bbox="362,128,12,53"></span>
+                    </li>
+                    <li data-bbox="384,128,209,53">
+                        <span id="12" data-bbox="396,145,177,19">Clothing, Shoes & Jewelry</span>
+                        <span id="11" data-bbox="581,128,12,53"></span>
+                    </li>
+                    <li data-bbox="603,128,145,53">
+                        <span id="14" data-bbox="615,145,113,19">Home & Kitchen</span>
+                        <span id="13" data-bbox="736,128,12,53"></span>
+                    </li>
+                    <li data-bbox="758,128,139,53">
+                        <span id="16" data-bbox="770,145,107,19">Office Products</span>
+                        <span id="15" data-bbox="885,128,12,53"></span>
+                    </li>
+                    <li data-bbox="907,128,229,56">
+                        <span id="18" data-bbox="919,145,197,19">Tools & Home Improvement</span>
+                        <span id="17" data-bbox="1124,128,12,53"></span>
+                    </li>
+                    <li data-bbox="8,184,172,53">
+                        <span id="20" data-bbox="20,201,140,19">Health & Household</span>
+                        <span id="19" data-bbox="168,184,12,53"></span>
+                    </li>
+                    <li data-bbox="190,184,182,53">
+                        <span id="22" data-bbox="202,201,150,19">Patio, Lawn & Garden</span>
+                        <span id="21" data-bbox="360,184,12,53"></span>
+                    </li>
+                    <li data-bbox="382,184,107,53">
+                        <span id="24" data-bbox="394,201,75,19">Electronics</span>
+                        <span id="23" data-bbox="477,184,12,53"></span>
+                    </li>
+                    <li data-bbox="499,184,211,53">
+                        <span id="26" data-bbox="511,201,179,19">Cell Phones & Accessories</span>
+                        <span id="25" data-bbox="698,184,12,53"></span>
+                    </li>
+                    <li data-bbox="720,184,122,53">
+                        <span id="28" data-bbox="732,201,90,19">Video Games</span>
+                        <span id="27" data-bbox="830,184,12,53"></span>
+                    </li>
+                    <li data-bbox="852,184,206,53">
+                        <span id="30" data-bbox="864,201,174,19">Grocery & Gourmet Food</span>
+                        <span id="29" data-bbox="1046,184,12,53"></span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul data-bbox="20,262,1240,18">
+                    <li><a id="31" title="Go to Home Page" data-bbox="20,262,37,16" href="#">Home</a></li>
+                    <li><strong data-bbox="84,262,156,16">Tools & Home Improvement</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <main data-bbox="0,300,1280,2057">
+            <div class="container">
+                <span data-bbox="20,295,500,54">Tools & Home Improvement</span>
+                <div class="main-content-grid" data-bbox="20,384,1240,1973">
+                    <aside class="sidebar">
+                        <div data-bbox="20,384,182,257">
+                            <div class="sidebar-widget" data-bbox="20,430,182,211">
+                                <strong data-bbox="20,430,124,20">Shopping Options</strong>
+                                <dl data-bbox="20,460,182,181">
+                                    <dt data-bbox="20,460,182,15">Category</dt>
+                                    <dd>
+                                        <a href="#" data-bbox="20,485,153,19">Lighting & Ceiling Fans <span id="40" data-bbox="173,485,4,19">2531<span data-bbox="51,504,1,1">item</span></span></a>
+                                    </dd>
+                                    <dt data-bbox="20,550,182,15">Price</dt>
+                                    <dd>
+                                        <ol data-bbox="20,575,182,66">
+                                            <li><a href="#" data-bbox="20,575,36,19"><span id="41" data-bbox="20,575,36,19">$0.00</span> - <span id="42" data-bbox="69,575,52,19">$999.99</span> <span id="43" data-bbox="121,575,4,19">2710<span data-bbox="160,574,1,1">item</span></span></a></li>
+                                            <li><a href="#" data-bbox="20,598,63,19"><span id="44" data-bbox="20,598,63,19">$1,000.00</span> - <span id="45" data-bbox="96,598,63,19">$1,999.99</span> <span id="46" data-bbox="159,598,4,19">7<span data-bbox="174,597,1,1">item</span></span></a></li>
+                                            <li><a href="#" data-bbox="20,621,63,19"><span id="47" data-bbox="20,621,63,19">$3,000.00</span> & Above <span id="48" data-bbox="157,621,4,19">1<span data-bbox="172,620,1,1">item</span></span></a></li>
+                                        </ol>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="sidebar-widget" data-bbox="20,681,207,697">
+                             <div data-bbox="20,681,207,56">
+                                <div data-bbox="20,681,207,21">
+                                    <strong data-bbox="20,678,155,24">Compare Products</strong>
+                                </div>
+                                <div data-bbox="20,717,207,20">You have no items to compare.</div>
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="product-listing" data-bbox="227,384,1033,1973">
+                        <div class="product-toolbar" data-bbox="251,384,1009,40">
+                             <div class="view-mode" data-bbox="261,384,91,40">
+                                <strong title="Grid" data-value="grid" data-bbox="261,384,45,40">
+                                    <i class="fas fa-th"></i>
+                                    <span data-bbox="295,391,1,1">Grid</span>
+                                </strong>
+                                <a id="32" title="List" href="#" data-value="list" data-bbox="306,384,46,40">
+                                    <i class="fas fa-list"></i>
+                                    <span data-bbox="340,391,1,1">List</span>
+                                </a>
+                            </div>
+                            <p data-bbox="372,384,123,34">Items <span data-bbox="413,395,8,19">1</span>-<span data-bbox="426,395,16,19">12</span> of <span data-bbox="463,395,32,19">2718</span></p>
+                            <div class="sort-by" data-bbox="1022,384,228,36">
+                                <label id="33" data-bbox="1022,395,47,19" for="sorter">Sort By</label>
+                                <select id="34" name="sorter" data-value="position" data-text="Position" data-bbox="1080,388,138,32">
+                                    <option value="position" selected="selected">Position</option>
+                                    <option value="name">Product Name</option>
+                                    <option value="price">Price</option>
+                                </select>
+                                <a id="35" title="Set Descending Direction" href="#" data-value="desc" data-bbox="1222,386,28,32">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span data-bbox="1249,385,1,1">Set Descending Direction</span>
+                                </a>
+                            </div>
+                        </div>
+                        <ol class="product-grid" data-bbox="251,464,1009,1749">
+                            <li class="product-card-wrapper">
+                                <div class="product-card">
+                                    <a href="#"><img id="36" data-bbox="251,464,237,296" src="https://picsum.photos/seed/product1/237/296" alt="Product Image 1"></a>
+                                    <div class="product-info">
+                                        <a href="#" class="product-name">Industrial Pendant Light Fixture</a>
+                                        <div class="product-price">$89.99</div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-card-wrapper">
+                                <div class="product-card">
+                                    <a href="#"><img id="37" data-bbox="509,464,237,296" src="https://picsum.photos/seed/product2/237/296" alt="Product Image 2"></a>
+                                     <div class="product-info">
+                                        <a href="#" class="product-name">Smart Dimmable LED Ceiling Light</a>
+                                        <div class="product-price">$124.50</div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-card-wrapper">
+                                <div class="product-card">
+                                     <a href="#"><img id="38" data-bbox="766,464,237,296" src="https://picsum.photos/seed/product3/237/296" alt="Product Image 3"></a>
+                                     <div class="product-info">
+                                        <a href="#" class="product-name">Vintage Farmhouse Wall Sconce</a>
+                                        <div class="product-price">$65.00</div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-card-wrapper">
+                                <div class="product-card">
+                                    <a href="#"><img id="39" data-bbox="1023,464,237,296" src="https://picsum.photos/seed/product4/237/296" alt="Product Image 4"></a>
+                                    <div class="product-info">
+                                        <a href="#" class="product-name">Modern Sputnik Chandelier Light</a>
+                                        <div class="product-price">$210.99</div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </li>
+                             <!-- Add more product cards to fill the page for realism -->
+                            <li class="product-card-wrapper">
+                                <div class="product-card">
+                                    <a href="#"><img src="https://picsum.photos/seed/product5/237/296" alt="Product Image 5"></a>
+                                    <div class="product-info">
+                                        <a href="#" class="product-name">Outdoor Solar Powered LED Lights</a>
+                                        <div class="product-price">$45.99</div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-card-wrapper">
+                                <div class="product-card">
+                                    <a href="#"><img src="https://picsum.photos/seed/product6/237/296" alt="Product Image 6"></a>
+                                    <div class="product-info">
+                                        <a href="#" class="product-name">Recessed Lighting Kit (6-Pack)</a>
+                                        <div class="product-price">$99.00</div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-card-wrapper">
+                                <div class="product-card">
+                                    <a href="#"><img src="https://picsum.photos/seed/product7/237/296" alt="Product Image 7"></a>
+                                    <div class="product-info">
+                                        <a href="#" class="product-name">Under Cabinet LED Lighting Strips</a>
+                                        <div class="product-price">$32.50</div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-card-wrapper">
+                                <div class="product-card">
+                                    <a href="#"><img src="https://picsum.photos/seed/product8/237/296" alt="Product Image 8"></a>
+                                    <div class="product-info">
+                                        <a href="#" class="product-name">Crystal Beaded Flush Mount Light</a>
+                                        <div class="product-price">$155.00</div>
+                                        <button class="add-to-cart-btn">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.boxShadow = '0 8px 16px rgba(0,0,0,0.1)';
+                    card.style.transform = 'translateY(-5px)';
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.boxShadow = 'none';
+                    card.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

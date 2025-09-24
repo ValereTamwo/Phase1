@@ -1,0 +1,259 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_11.html",
+    "raw_html": "<HTML lang=\"en\" data-bbox=\"0,0,1280,720\"><BODY data-bbox=\"0,0,1280,1108\"><DIV data-bbox=\"0,0,88,721\"><IMG id=\"0\" title=\"Magento Admin Panel\" data-bbox=\"27,17,35,41\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNMTAgOTAgVjIwbDIwIDIwIDIwLTIwIDIwIDIwIDIwLTIwIDAgNzBILjcwbDAgLTM1bC0yMCAyMGwtMjAgLTIwbC0yMCAyMFY5MFoiIGZpbGw9IiM0ZjQ2ZTUiLz48L3N2Zz4=\"></IMG><UL data-bbox=\"0,75,88,646\" class=\"sidebar-nav\"><SPAN id=\"1\" data-bbox=\"14,112,60,13\" class=\"sidebar-nav-item\"><I class=\"fas fa-tachometer-alt possible-clickable-element\" data-testid=\"A\"></I><SPAN class=\"possible-clickable-element\" data-testid=\"B\"><text>Dashboard</text></SPAN></SPAN><LI data-bbox=\"0,137,88,62\" class=\"sidebar-nav-item\"><I class=\"fas fa-chart-line possible-clickable-element\" data-testid=\"C\"></I><SPAN id=\"2\" data-bbox=\"30,174,28,13\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Sales</text></SPAN></LI><LI data-bbox=\"-165,92,238,308\"><UL data-bbox=\"-165,92,238,308\"><SPAN data-bbox=\"-150,369,174,19\"><text>Braintree Virtual Terminal</text></SPAN></UL></LI></UL></DIV><LI data-bbox=\"0,199,88,62\" class=\"sidebar-nav-item\"><I class=\"fas fa-tags possible-clickable-element\" data-testid=\"E\"></I><SPAN id=\"3\" data-bbox=\"22,236,44,13\"><text>Catalog</text></SPAN></LI><LI data-bbox=\"-165,92,238,88\"></LI><LI data-bbox=\"0,261,88,62\" class=\"sidebar-nav-item\"><I class=\"fas fa-users possible-clickable-element\" data-testid=\"F\"></I><SPAN id=\"4\" data-bbox=\"14,298,60,13\"><text>Customers</text></SPAN></LI><LI data-bbox=\"0,323,88,62\" class=\"sidebar-nav-item\"><I class=\"fas fa-bullhorn possible-clickable-element\" data-testid=\"G\"></I><SPAN id=\"5\" data-bbox=\"14,360,60,13\"><text>Marketing</text></SPAN></LI><LI data-bbox=\"0,385,88,62\" class=\"sidebar-nav-item\"><I class=\"fas fa-file-alt possible-clickable-element\" data-testid=\"H\"></I><SPAN id=\"6\" data-bbox=\"19,422,50,13\"><text>Content</text></SPAN></LI><LI data-bbox=\"0,447,88,62\" class=\"sidebar-nav-item\"><I class=\"fas fa-chart-pie possible-clickable-element\" data-testid=\"I\"></I><SPAN id=\"7\" data-bbox=\"22,484,44,13\"><text>Reports</text></SPAN></LI><LI data-bbox=\"0,509,88,62\" class=\"sidebar-nav-item\"><I class=\"fas fa-store possible-clickable-element\" data-testid=\"J\"></I><SPAN id=\"8\" data-bbox=\"25,546,38,13\"><text>Stores</text></SPAN></LI><LI data-bbox=\"0,571,88,62\" class=\"sidebar-nav-item\"><I class=\"fas fa-cogs possible-clickable-element\" data-testid=\"K\"></I><SPAN id=\"9\" data-bbox=\"25,608,38,13\"><text>System</text></SPAN></LI><SPAN id=\"10\" data-bbox=\"32,670,24,13\" class=\"sidebar-nav-item\"><I class=\"fas fa-puzzle-piece possible-clickable-element\" data-testid=\"L\"></I><text>Find Partners & Extensions</text></SPAN><DIV data-bbox=\"88,0,1192,1108\"><DIV data-bbox=\"118,0,1132,51\"><DIV data-bbox=\"118,0,1132,51\"><DIV data-bbox=\"119,0,1130,50\"><SPAN id=\"11\" data-bbox=\"1085,15,118,19\"><I class=\"fas fa-exclamation-circle\"></I><text>System Messages</text></SPAN><DIV data-bbox=\"129,0,941,49\"><text>One or more</text><A id=\"12\" data-bbox=\"251,15,133,19\" class=\"possible-clickable-element\" data-testid=\"M\"><text>indexers are invalid</text></A><text>. View details or manage the</text><A id=\"13\" data-bbox=\"500,15,118,19\" class=\"possible-clickable-element\" data-testid=\"N\"><text>Magento cron job</text></A><text>.</text></DIV></DIV></DIV></DIV><HEADER data-bbox=\"88,51,1192,80\"><H1 data-bbox=\"118,82,740,34\"><text>Bestsellers Report</text></H1><LABEL id=\"16\" data-bbox=\"1034,77,50,33\"><I class=\"fas fa-search\"></I></LABEL></HEADER><DIV data-bbox=\"118,143,1192,77\"><DIV data-bbox=\"133,164,178,34\"><SPAN data-bbox=\"133,172,42,18\"><text>Scope:</text></SPAN><DIV data-bbox=\"178,164,124,34\"><BUTTON id=\"17\" type=\"button\" data-bbox=\"185,164,117,34\" class=\"possible-clickable-element\" data-testid=\"O\"><text>All Websites</text></BUTTON></DIV><A id=\"18\" title=\"What is this?\" data-bbox=\"311,169,25,22\" class=\"possible-clickable-element\" data-testid=\"P\"><SPAN data-bbox=\"335,168,1,1\"><I class=\"fas fa-question-circle\"></I></SPAN></A></DIV></DIV><DIV data-bbox=\"118,250,1132,111\"><DIV data-bbox=\"173,268,1037,19\"><text>For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone.</text></DIV><DIV data-bbox=\"173,324,1037,19\"><text>Last updated: Apr 12, 2024, 12:00:01 AM. To refresh last day's</text><A id=\"20\" data-bbox=\"588,324,59,19\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>statistics</text></A><text>click</text><A id=\"21\" data-bbox=\"687,324,31,19\" class=\"possible-clickable-element\" data-testid=\"R\"><text>here</text></A><text>.</text></DIV></DIV><SPAN data-bbox=\"118,381,45,24\"><text>Filter</text></SPAN></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    div|\n    <img| Magento Admin Panel >\n    <\n      ul|\n      <i[A]| >\n      <span[B]| Dashboard >\n      <i[C]| >\n      <span[D]| Sales >\n      <span| Braintree Virtual Terminal >\n    >\n  >\n  <i[E]| >\n  <span| Catalog >\n  <i[F]| >\n  <span| Customers >\n  <i[G]| >\n  <span| Marketing >\n  <i[H]| >\n  <span| Content >\n  <i[I]| >\n  <span| Reports >\n  <i[J]| >\n  <span| Stores >\n  <i[K]| >\n  <span| System >\n  <i[L]| >\n  <text| Find Partners & Extensions >\n  <\n    div|\n    <\n      div|\n      <span| System Messages >\n      <\n        div|\n        <text| One or more >\n        <a[M]| indexers are invalid >\n        <text| . View details or manage the >\n        <a[N]| Magento cron job >\n        <text| . >\n      >\n    >\n    <h1| Bestsellers Report >\n    <\n      div|\n      <span| Scope: >\n      <button[O]| All Websites >\n      <a[P]| What is this? >\n    >\n    <\n      div|\n      <div| For accurate reporting, be sure to refresh lifetime statistics whenever you change the time zone. >\n      <\n        div|\n        <text| Last updated: Apr 12, 2024, 12:00:01 AM. To refresh last day's >\n        <a[Q]| statistics >\n        <text| click >\n        <a[R]| here >\n        <text| . >\n      >\n    >\n    <span| Filter >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 0,
+                "top": 258,
+                "right": 32,
+                "bottom": 278,
+                "width": 32,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 0,
+                "top": 280,
+                "right": 250,
+                "bottom": 317,
+                "width": 250,
+                "height": 37
+            },
+            "tag": "span",
+            "text": "Dashboard"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 28,
+                "top": 349.5,
+                "right": 60,
+                "bottom": 369.5,
+                "width": 32,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 84,
+                "top": 341,
+                "right": 121,
+                "bottom": 378,
+                "width": 37,
+                "height": 37
+            },
+            "tag": "span",
+            "text": " Sales "
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 278,
+                "top": 350,
+                "right": 310,
+                "bottom": 370,
+                "width": 32,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 376.296875,
+                "top": 350,
+                "right": 408.296875,
+                "bottom": 370,
+                "width": 32,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 474.140625,
+                "top": 350,
+                "right": 506.140625,
+                "bottom": 370,
+                "width": 32,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 570.671875,
+                "top": 350,
+                "right": 602.671875,
+                "bottom": 370,
+                "width": 32,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 661.96875,
+                "top": 350,
+                "right": 693.96875,
+                "bottom": 370,
+                "width": 32,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 753.265625,
+                "top": 350,
+                "right": 785.265625,
+                "bottom": 370,
+                "width": 32,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 841.625,
+                "top": 350,
+                "right": 873.625,
+                "bottom": 370,
+                "width": 32,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 932.28125,
+                "top": 350,
+                "right": 964.28125,
+                "bottom": 370,
+                "width": 32,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 1087.09375,
+                "top": 70,
+                "right": 1223.09375,
+                "bottom": 87,
+                "width": 136,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " indexers are invalid "
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 1087.09375,
+                "top": 133,
+                "right": 1214.09375,
+                "bottom": 150,
+                "width": 127,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " Magento cron job "
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 1131.09375,
+                "top": 290,
+                "right": 1228.09375,
+                "bottom": 345.1875,
+                "width": 97,
+                "height": 55.1875
+            },
+            "tag": "button",
+            "text": " All Websites "
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 1244.09375,
+                "top": 303.1875,
+                "right": 1263.09375,
+                "bottom": 331.984375,
+                "width": 19,
+                "height": 28.796875
+            },
+            "tag": "a",
+            "text": "  "
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 1134.09375,
+                "top": 585.1875,
+                "right": 1197.09375,
+                "bottom": 602.1875,
+                "width": 63,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " statistics "
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 1128.09375,
+                "top": 606.1875,
+                "right": 1161.09375,
+                "bottom": 623.1875,
+                "width": 33,
+                "height": 17
+            },
+            "tag": "a",
+            "text": " here "
+        }
+    ]
+}

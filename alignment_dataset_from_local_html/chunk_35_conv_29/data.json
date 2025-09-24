@@ -1,0 +1,455 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_29.html",
+    "raw_html": "<HEADER data-bbox=\"0,0,1280,128\"><DIV data-bbox=\"0,0,1280,40\"><UL data-bbox=\"808,10,452,20\"><A id=\"0\" data-bbox=\"823,10,78,19\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"A\"><text>My Account</text></A><A id=\"1\" data-bbox=\"916,10,84,19\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"B\"><text>My Wish List</text></A><LI data-label=\"or\" data-bbox=\"1015,10,58,20\"><A id=\"2\" data-bbox=\"1015,10,58,19\" href=\"#\" class=\"possible-clickable-element\" data-testid=\"C\"><text>Sign Out</text></A></LI><SPAN data-bbox=\"1103,10,157,19\"><text>Welcome, Emma Lopez!</text></SPAN></UL></DIV><DIV data-bbox=\"0,41,1280,87\"><A title=\"one_stop_market_logo\" href=\"#\" data-bbox=\"20,71,200,27\"><IMG id=\"3\" title=\"one_stop_market_logo\" src=\"https://placehold.co/200x27/003366/FFFFFF?text=OneStopMarket&font=inter\" alt=\"One Stop Market Logo\" data-bbox=\"20,71,200,27\" class=\"possible-clickable-element\" data-testid=\"D\"></IMG></A><DIV data-bbox=\"947,71,265,57\"><FORM data-bbox=\"962,71,250,57\" action=\"#\"><DIV data-bbox=\"962,71,250,57\"><SPAN data-bbox=\"960,102,1,1\"><text>Search</text></SPAN><DIV data-bbox=\"962,71,250,57\"><INPUT id=\"5\" type=\"text\" placeholder=\"Search entire store here...\" data-bbox=\"962,71,250,32\" class=\"possible-clickable-element\" data-testid=\"E\" style=\"\"></INPUT><A id=\"6\" href=\"#\" data-bbox=\"962,108,116,19\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Advanced Search</text></A></DIV></DIV><BUTTON title=\"Search\" type=\"submit\" data-bbox=\"1180,71,22,32\"><I class=\"fas fa-search possible-clickable-element\" data-testid=\"G\"></I></BUTTON></FORM></DIV><DIV data-bbox=\"1225,71,35,33\"><A id=\"4\" href=\"#\" data-bbox=\"1225,71,35,33\"><I class=\"fas fa-shopping-cart possible-clickable-element\" data-testid=\"H\"></I></A></DIV></DIV></HEADER><DIV data-bbox=\"0,128,1280,106\"><UL data-bbox=\"0,128,1280,106\"><LI data-bbox=\"8,128,194,53\"><SPAN id=\"8\" data-bbox=\"20,145,162,19\"><text>Beauty & Personal Care</text><I class=\"fas fa-chevron-down\" style=\"opacity: 0.5; font-size: 0.7em;\"></I></SPAN><SPAN id=\"7\" data-bbox=\"190,128,12,53\" class=\"possible-clickable-element\" data-testid=\"I\"></SPAN></LI><LI data-bbox=\"212,128,162,53\"><SPAN id=\"10\" data-bbox=\"224,145,130,19\"><text>Sports & Outdoors</text><I class=\"fas fa-chevron-down\" style=\"opacity: 0.5; font-size: 0.7em;\"></I></SPAN><SPAN id=\"9\" data-bbox=\"362,128,12,53\" class=\"possible-clickable-element\" data-testid=\"J\"></SPAN></LI><LI data-bbox=\"384,128,209,53\"><SPAN id=\"12\" data-bbox=\"396,145,177,19\"><text>Clothing, Shoes & Jewelry</text><I class=\"fas fa-chevron-down\" style=\"opacity: 0.5; font-size: 0.7em;\"></I></SPAN><SPAN id=\"11\" data-bbox=\"581,128,12,53\" class=\"possible-clickable-element\" data-testid=\"K\"></SPAN></LI><LI data-bbox=\"603,128,145,53\"><SPAN id=\"14\" data-bbox=\"615,145,113,19\"><text>Home & Kitchen</text><I class=\"fas fa-chevron-down\" style=\"opacity: 0.5; font-size: 0.7em;\"></I></SPAN><SPAN id=\"13\" data-bbox=\"736,128,12,53\" class=\"possible-clickable-element\" data-testid=\"L\"></SPAN></LI><LI data-bbox=\"758,128,139,53\"><SPAN id=\"16\" data-bbox=\"770,145,107,19\"><text>Office Products</text><I class=\"fas fa-chevron-down\" style=\"opacity: 0.5; font-size: 0.7em;\"></I></SPAN><SPAN id=\"15\" data-bbox=\"885,128,12,53\" class=\"possible-clickable-element\" data-testid=\"M\"></SPAN></LI><LI data-bbox=\"907,128,229,53\"><SPAN id=\"18\" data-bbox=\"919,145,197,19\"><text>Tools & Home Improvement</text><I class=\"fas fa-chevron-down\" style=\"opacity: 0.5; font-size: 0.7em;\"></I></SPAN><SPAN id=\"17\" data-bbox=\"1124,128,12,53\" class=\"possible-clickable-element\" data-testid=\"N\"></SPAN></LI><LI data-bbox=\"8,181,172,53\"><SPAN id=\"20\" data-bbox=\"20,198,140,19\"><text>Health & Household</text><I class=\"fas fa-chevron-down\" style=\"opacity: 0.5; font-size: 0.7em;\"></I></SPAN><SPAN id=\"19\" data-bbox=\"168,181,12,53\" class=\"possible-clickable-element\" data-testid=\"O\"></SPAN></LI><LI data-bbox=\"190,181,182,53\"><SPAN id=\"22\" data-bbox=\"202,198,150,19\"><text>Patio, Lawn & Garden</text><I class=\"fas fa-chevron-down\" style=\"opacity: 0.5; font-size: 0.7em;\"></I></SPAN><SPAN id=\"21\" data-bbox=\"360,181,12,53\" class=\"possible-clickable-element\" data-testid=\"P\"></SPAN></LI><LI data-bbox=\"382,181,107,53\"><SPAN id=\"24\" data-bbox=\"394,198,75,19\"><text>Electronics</text><I class=\"fas fa-chevron-down\" style=\"opacity: 0.5; font-size: 0.7em;\"></I></SPAN><SPAN id=\"23\" data-bbox=\"477,181,12,53\" class=\"possible-clickable-element\" data-testid=\"Q\"></SPAN></LI><LI data-bbox=\"499,181,211,53\"><SPAN id=\"26\" data-bbox=\"511,198,179,19\"><text>Cell Phones & Accessories</text><I class=\"fas fa-chevron-down\" style=\"opacity: 0.5; font-size: 0.7em;\"></I></SPAN><SPAN id=\"25\" data-bbox=\"698,181,12,53\" class=\"possible-clickable-element\" data-testid=\"R\"></SPAN></LI><LI data-bbox=\"720,181,122,53\"><SPAN id=\"28\" data-bbox=\"732,198,90,19\"><text>Video Games</text><I class=\"fas fa-chevron-down\" style=\"opacity: 0.5; font-size: 0.7em;\"></I></SPAN><SPAN id=\"27\" data-bbox=\"830,181,12,53\" class=\"possible-clickable-element\" data-testid=\"S\"></SPAN></LI><LI data-bbox=\"852,181,206,53\"><SPAN id=\"30\" data-bbox=\"864,198,174,19\"><text>Grocery & Gourmet Food</text><I class=\"fas fa-chevron-down\" style=\"opacity: 0.5; font-size: 0.7em;\"></I></SPAN><SPAN id=\"29\" data-bbox=\"1046,181,12,53\" class=\"possible-clickable-element\" data-testid=\"T\"></SPAN></LI></UL></DIV><ASIDE data-bbox=\"20,259,252,360\"><STRONG data-bbox=\"19,258,21,19\"><text>My Account</text></STRONG><UL data-bbox=\"20,274,252,330\"><A id=\"49\" href=\"#\" data-bbox=\"20,274,252,30\" class=\"possible-clickable-element\" data-testid=\"U\"><text>My Account</text></A><STRONG data-bbox=\"20,307,252,30\"><text>My Orders</text></STRONG><A id=\"50\" href=\"#\" data-bbox=\"20,340,252,30\" class=\"possible-clickable-element\" data-testid=\"V\"><text>My Downloadable Products</text></A><A id=\"51\" href=\"#\" data-bbox=\"20,373,252,30\" class=\"possible-clickable-element\" data-testid=\"W\"><text>My Wish List</text></A><A id=\"52\" href=\"#\" data-bbox=\"20,424,252,30\" class=\"possible-clickable-element\" data-testid=\"X\"><text>Address Book</text></A><A id=\"53\" href=\"#\" data-bbox=\"20,457,252,30\" class=\"possible-clickable-element\" data-testid=\"Y\"><text>Account Information</text></A><A id=\"54\" href=\"#\" data-bbox=\"20,490,252,30\" class=\"possible-clickable-element\" data-testid=\"Z\"><text>Stored Payment Methods</text></A><A id=\"55\" href=\"#\" data-bbox=\"20,541,252,30\" class=\"possible-clickable-element\" data-testid=\"AA\"><text>My Product Reviews</text></A><A id=\"56\" href=\"#\" data-bbox=\"20,574,252,30\" class=\"possible-clickable-element\" data-testid=\"AB\"><text>Newsletter Subscriptions</text></A></UL></ASIDE><SPAN data-bbox=\"321,254,190,54\"><text>My Orders</text></SPAN><SPAN data-bbox=\"628,388,52,19\"><text>$365.42</text></SPAN><SPAN data-bbox=\"628,424,52,19\"><text>$754.99</text></SPAN><SPAN data-bbox=\"628,460,63,19\"><text>$2,004.99</text></SPAN><SPAN data-bbox=\"628,496,63,19\"><text>$1,004.99</text></SPAN><SPAN data-bbox=\"628,532,44,19\"><text>$65.32</text></SPAN><SPAN data-bbox=\"628,568,44,19\"><text>$17.99</text></SPAN><SPAN data-bbox=\"628,604,52,19\"><text>$762.18</text></SPAN><SPAN data-bbox=\"628,640,52,19\"><text>$231.54</text></SPAN><SPAN data-bbox=\"628,676,52,19\"><text>$174.99</text></SPAN><SPAN data-bbox=\"628,712,52,19\"><text>$185.32</text></SPAN><TR data-bbox=\"321,343,939,37\"><TH data-bbox=\"321,343,169,37\"><text>Order #</text></TH><TH data-bbox=\"490,343,128,37\"><text>Date</text></TH><TH data-bbox=\"618,343,180,37\"><text>Order Total</text></TH><TH data-bbox=\"798,343,154,37\"><text>Status</text></TH><TH data-bbox=\"952,343,308,37\"><text>Action</text></TH></TR><TR data-bbox=\"321,380,939,36\"><TD data-bbox=\"321,380,169,36\"><text>000000170</text></TD><TD data-bbox=\"490,380,128,36\"><text>5/17/23</text></TD><TD data-bbox=\"798,380,154,36\"><SPAN class=\"status status-canceled\"><text>Canceled</text></SPAN></TD><TD data-bbox=\"952,380,308,36\"><SPAN id=\"31\" data-bbox=\"962,388,75,19\"><I class=\"far fa-eye possible-clickable-element\" data-testid=\"AC\"></I><text>View Order</text></SPAN><SPAN id=\"32\" data-bbox=\"1056,388,54,19\"><I class=\"fas fa-redo possible-clickable-element\" data-testid=\"AD\"></I><text>Reorder</text></SPAN></TD></TR><TR data-bbox=\"321,416,939,36\"><TD data-bbox=\"321,416,169,36\"><text>000000189</text></TD><TD data-bbox=\"490,416,128,36\"><text>5/2/23</text></TD><TD data-bbox=\"798,416,154,36\"><SPAN class=\"status status-pending\"><text>Pending</text></SPAN></TD><TD data-bbox=\"952,416,308,36\"><SPAN id=\"33\" data-bbox=\"962,424,75,19\"><I class=\"far fa-eye possible-clickable-element\" data-testid=\"AE\"></I><text>View Order</text></SPAN><SPAN id=\"34\" data-bbox=\"1056,424,54,19\"><I class=\"fas fa-redo possible-clickable-element\" data-testid=\"AF\"></I><text>Reorder</text></SPAN></TD></TR>",
+    "parsed_html": "\n<\n  div|\n  <\n    header|\n    <\n      ul|\n      <a[A]| My Account >\n      <a[B]| My Wish List >\n      <a[C]| Sign Out >\n      <span| Welcome, Emma Lopez! >\n    >\n    <\n      div|\n      <\n        a| one_stop_market_logo\n        <img[D]| one_stop_market_logo >\n      >\n      <\n        form|\n        <\n          div|\n          <span| Search >\n          <\n            div|\n            <input[E]| Search entire store here... >\n            <a[F]| Advanced Search >\n          >\n        >\n        <\n          button| Search\n          <i[G]| >\n        >\n      >\n      <i[H]| >\n    >\n  >\n  <\n    ul|\n    <span| Beauty & Personal Care >\n    <span[I]| >\n    <span| Sports & Outdoors >\n    <span[J]| >\n    <span| Clothing, Shoes & Jewelry >\n    <span[K]| >\n    <span| Home & Kitchen >\n    <span[L]| >\n    <span| Office Products >\n    <span[M]| >\n    <span| Tools & Home Improvement >\n    <span[N]| >\n    <span| Health & Household >\n    <span[O]| >\n    <span| Patio, Lawn & Garden >\n    <span[P]| >\n    <span| Electronics >\n    <span[Q]| >\n    <span| Cell Phones & Accessories >\n    <span[R]| >\n    <span| Video Games >\n    <span[S]| >\n    <span| Grocery & Gourmet Food >\n    <span[T]| >\n  >\n  <\n    aside|\n    <strong| My Account >\n    <\n      ul|\n      <a[U]| My Account >\n      <strong| My Orders >\n      <a[V]| My Downloadable Products >\n      <a[W]| My Wish List >\n      <a[X]| Address Book >\n      <a[Y]| Account Information >\n      <a[Z]| Stored Payment Methods >\n      <a[AA]| My Product Reviews >\n      <a[AB]| Newsletter Subscriptions >\n    >\n  >\n  <span| My Orders >\n  <span| $365.42 >\n  <span| $754.99 >\n  <span| $2,004.99 >\n  <span| $1,004.99 >\n  <span| $65.32 >\n  <span| $17.99 >\n  <span| $762.18 >\n  <span| $231.54 >\n  <span| $174.99 >\n  <span| $185.32 >\n  <\n    tr|\n    <th| Order # >\n    <th| Date >\n    <th| Order Total >\n    <th| Status >\n    <th| Action >\n  >\n  <\n    tr|\n    <td| 000000170 >\n    <td| 5/17/23 >\n    <span| Canceled >\n    <\n      td|\n      <i[AC]| >\n      <text| View Order >\n      <i[AD]| >\n      <text| Reorder >\n    >\n  >\n  <\n    tr|\n    <td| 000000189 >\n    <td| 5/2/23 >\n    <span| Pending >\n    <\n      td|\n      <i[AE]| >\n      <text| View Order >\n      <i[AF]| >\n      <text| Reorder >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 32,
+                "top": 10,
+                "right": 112,
+                "bottom": 27,
+                "width": 80,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "My Account"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 136,
+                "top": 10,
+                "right": 220,
+                "bottom": 27,
+                "width": 84,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "My Wish List"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 268,
+                "top": 10,
+                "right": 325,
+                "bottom": 27,
+                "width": 57,
+                "height": 17
+            },
+            "tag": "a",
+            "text": "Sign Out"
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 32,
+                "top": 93.484375,
+                "right": 232,
+                "bottom": 120.484375,
+                "width": 200,
+                "height": 27
+            },
+            "tag": "img",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 474,
+                "top": 84.984375,
+                "right": 974,
+                "bottom": 128.984375,
+                "width": 500,
+                "height": 44
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 474,
+                "top": 134.984375,
+                "right": 581,
+                "bottom": 149.984375,
+                "width": 107,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Advanced Search"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 940,
+                "top": 98.1875,
+                "right": 958,
+                "bottom": 115.78125,
+                "width": 18,
+                "height": 17.59375
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 1216,
+                "top": 92.578125,
+                "right": 1248,
+                "bottom": 120.578125,
+                "width": 32,
+                "height": 28
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 220,
+                "top": 175.578125,
+                "right": 236,
+                "bottom": 207.578125,
+                "width": 16,
+                "height": 32
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 402,
+                "top": 175.578125,
+                "right": 418,
+                "bottom": 207.578125,
+                "width": 16,
+                "height": 32
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 643,
+                "top": 175.578125,
+                "right": 659,
+                "bottom": 207.578125,
+                "width": 16,
+                "height": 32
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 807,
+                "top": 175.578125,
+                "right": 823,
+                "bottom": 207.578125,
+                "width": 16,
+                "height": 32
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 967,
+                "top": 175.578125,
+                "right": 983,
+                "bottom": 207.578125,
+                "width": 16,
+                "height": 32
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 1220,
+                "top": 175.578125,
+                "right": 1236,
+                "bottom": 207.578125,
+                "width": 16,
+                "height": 32
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 192,
+                "top": 223.578125,
+                "right": 208,
+                "bottom": 255.578125,
+                "width": 16,
+                "height": 32
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 398,
+                "top": 223.578125,
+                "right": 414,
+                "bottom": 255.578125,
+                "width": 16,
+                "height": 32
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 524,
+                "top": 223.578125,
+                "right": 540,
+                "bottom": 255.578125,
+                "width": 16,
+                "height": 32
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 767,
+                "top": 223.578125,
+                "right": 783,
+                "bottom": 255.578125,
+                "width": 16,
+                "height": 32
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 911,
+                "top": 223.578125,
+                "right": 927,
+                "bottom": 255.578125,
+                "width": 16,
+                "height": 32
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 1143,
+                "top": 223.578125,
+                "right": 1159,
+                "bottom": 255.578125,
+                "width": 16,
+                "height": 32
+            },
+            "tag": "span",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 0,
+                "top": 283.171875,
+                "right": 90,
+                "bottom": 303.171875,
+                "width": 90,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "My Account"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 0,
+                "top": 334.359375,
+                "right": 209,
+                "bottom": 354.359375,
+                "width": 209,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "My Downloadable Products"
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 0,
+                "top": 359.953125,
+                "right": 96,
+                "bottom": 379.953125,
+                "width": 96,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "My Wish List"
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 0,
+                "top": 385.546875,
+                "right": 106,
+                "bottom": 405.546875,
+                "width": 106,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "Address Book"
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 0,
+                "top": 411.140625,
+                "right": 153,
+                "bottom": 431.140625,
+                "width": 153,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "Account Information"
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 0,
+                "top": 436.734375,
+                "right": 190,
+                "bottom": 456.734375,
+                "width": 190,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "Stored Payment Methods"
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 0,
+                "top": 462.328125,
+                "right": 154,
+                "bottom": 482.328125,
+                "width": 154,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "My Product Reviews"
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 0,
+                "top": 487.921875,
+                "right": 187,
+                "bottom": 507.921875,
+                "width": 187,
+                "height": 20
+            },
+            "tag": "a",
+            "text": "Newsletter Subscriptions"
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 654.984375,
+                "top": 615.96875,
+                "right": 671.984375,
+                "bottom": 631.171875,
+                "width": 17,
+                "height": 15.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 786.984375,
+                "top": 615.96875,
+                "right": 801.984375,
+                "bottom": 631.171875,
+                "width": 15,
+                "height": 15.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 654.984375,
+                "top": 677.4375,
+                "right": 671.984375,
+                "bottom": 692.640625,
+                "width": 17,
+                "height": 15.203125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 786.984375,
+                "top": 677.4375,
+                "right": 801.984375,
+                "bottom": 692.640625,
+                "width": 15,
+                "height": 15.203125
+            },
+            "tag": "i",
+            "text": ""
+        }
+    ]
+}

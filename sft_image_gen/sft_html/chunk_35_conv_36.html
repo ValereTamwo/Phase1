@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenRoutePlanner - Advanced Map Interface</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+        :root {
+            --bg-light: #f8f9fa;
+            --surface: #ffffff;
+            --primary: #007bff;
+            --primary-hover: #0056b3;
+            --text-dark: #212529;
+            --text-medium: #495057;
+            --text-light: #6c757d;
+            --border-color: #dee2e6;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --radius-sm: 0.25rem;
+            --radius-md: 0.5rem;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow: hidden;
+        }
+        
+        body[data-bbox="0,0,1280,55"] { /* A bit of a hack to apply to the whole layout based on the raw fragment */
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+
+        header[data-bbox="0,0,1280,55"] {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            background-color: var(--surface);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            flex-shrink: 0;
+            height: 55px;
+            z-index: 1000;
+        }
+        
+        header source[data-bbox="10,17,0,22"] { display: none; }
+        header img#0[data-bbox="10,13,30,30"] {
+            content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23007bff" width="30" height="30"><path d="M12 2C7.589 2 4 5.589 4 10c0 4.411 8 12 8 12s8-7.589 8-12c0-4.411-3.589-8-8-8zm0 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path></svg>');
+            cursor: pointer;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        header nav a, header nav button {
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            height: 100%;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-medium);
+            border: none;
+            background: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        
+        header nav a:hover, header nav button:hover {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+        
+        nav[data-bbox="178,0,227,55"] > div > div {
+             display: flex;
+             border: 1px solid var(--border-color);
+             border-radius: var(--radius-sm);
+        }
+        nav[data-bbox="178,0,227,55"] a, nav[data-bbox="178,0,227,55"] button {
+             height: 35px;
+        }
+        nav[data-bbox="178,0,227,55"] a { border-right: 1px solid var(--border-color); }
+        button#1 {
+            font-size: 0.7rem;
+        }
+        button#1::before { content: '\\f0d7'; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+        
+        nav[data-bbox="708,0,572,55"] ul {
+            display: flex;
+            list-style: none;
+            margin-right: 20px;
+        }
+        
+        nav[data-bbox="708,0,572,55"] a#10, nav[data-bbox="708,0,572,55"] a#11 {
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 6px 16px;
+            height: auto;
+        }
+        nav[data-bbox="708,0,572,55"] a#11 {
+            background-color: var(--primary);
+            color: white;
+            margin-left: 10px;
+            border-color: var(--primary);
+        }
+        nav[data-bbox="708,0,572,55"] a#11:hover {
+             background-color: var(--primary-hover);
+             color: white;
+        }
+        
+        /* Main Content Layout */
+        div[data-bbox="0,55,1280,665"] {
+            display: flex;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+        
+        /* Left Sidebar */
+        div[data-bbox="0,55,350,665"] {
+            width: 350px;
+            background-color: var(--surface);
+            border-right: 1px solid var(--border-color);
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        
+        form[data-bbox="0,55,350,213"] {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        form div[data-bbox="4,63,342,31"] {
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            position: relative;
+        }
+        form div[data-bbox="4,63,342,31"]::before {
+             content: "Plan a Route";
+        }
+        a[title="Find directions between two points"] {
+            position: absolute;
+            right: 0;
+            top: -2px;
+            color: var(--text-light);
+        }
+        a[title="Find directions between two points"]::before {
+            font-family: 'Font Awesome 6 Free'; font-weight: 900; content: '\\f368';
+        }
+        button#12 {
+            position: absolute;
+            top: 71px;
+            right: 16px;
+            width: 21px; height: 21px;
+            border: none; background: none; color: var(--text-light); cursor: pointer;
+        }
+        button#12::before { font-family: 'Font Awesome 6 Free'; font-weight: 900; content: '\\f079'; }
+        
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px 12px 10px 35px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+        }
+        
+        form > div { position: relative; }
+        form > div::before {
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        div:has(> input#13)::before { content: '\\f111'; font-size: 0.5rem; } /* From */
+        div:has(> input#14)::before { content: '\\f3c5'; } /* To */
+        div:has(> select#15)::before { content: '\\f1b9'; } /* Mode */
+        
+        input#16[type="submit"] {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 45px;
+        }
+        input#16[type="submit"]:hover { background-color: var(--primary-hover); }
+        
+        div[data-bbox="4,182,342,31"] { display: flex; gap: 8px; }
+        select#15 { flex-grow: 1; margin-bottom: 0; }
+        
+        button#17 {
+            width: auto; padding: 8px 16px;
+            border: 1px solid var(--border-color);
+            background: var(--surface);
+            color: var(--text-medium);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        button#17:hover { background-color: var(--bg-light); color: var(--text-dark); }
+        
+        /* Hide welcome message to show directions list */
+        div[data-bbox="0,268,350,302"] { display: none; }
+        
+        div[data-bbox="0,268,350,15900"] { padding: 16px; }
+        
+        div[data-bbox="16,284,318,46"] {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        h2[data-bbox="16,284,297,38"] { font-size: 1.25rem; font-weight: 600; }
+        button#18 {
+            border: none; background: none; font-size: 1.2rem; color: var(--text-light); cursor: pointer;
+        }
+        button#18::before { content: '\\f077'; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+        
+        p[data-bbox="16,330,318,21"] { color: var(--text-medium); font-size: 0.9rem; margin-bottom: 16px; }
+        
+        table[data-bbox="16,367,318,15732"] {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table tr {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        table tr:hover { background-color: #f1f3f5; }
+        table tr td { border: none; padding: 0; }
+        table tr td:nth-child(1) { width: 30px; text-align: center; color: var(--primary); }
+        table tr td:nth-child(2) { flex-grow: 1; padding: 0 8px; line-height: 1.4; }
+        table tr td:nth-child(3) { text-align: right; font-weight: 500; color: var(--text-light); font-size: 0.85rem; padding-right: 5px; }
+        
+        table tr b { font-weight: 600; color: var(--text-dark); margin-right: 5px; }
+        b#42 { display: block; font-weight: 500; color: var(--text-medium); font-size: 0.9em; }
+
+        /* Map Area */
+        div[data-bbox="350,55,930,665"] {
+            flex-grow: 1;
+            position: relative;
+            background: #eaf2f8;
+            background-image:
+                linear-gradient(rgba(200, 210, 220, .5) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(200, 210, 220, .5) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .map-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100%; height: 100%;
+        }
+        path#53 {
+            fill: none;
+            stroke: var(--primary);
+            stroke-width: 5;
+            stroke-opacity: 0.7;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        
+        img#54, img#55 {
+            position: absolute;
+            transform: translate(-50%, -100%);
+            color: var(--primary);
+            font-size: 2.5rem;
+        }
+        img#54::before { content: '\\f3c5'; font-family: "Font Awesome 6 Free"; font-weight: 900; color: #28a745; }
+        img#55::before { content: '\\f11e'; font-family: "Font Awesome 6 Free"; font-weight: 900; color: #dc3545; }
+        img#54[data-bbox="486,326,25,41"] { top: 347px; left: 148px; }
+        img#55[data-bbox="1120,354,25,41"] { top: 375px; left: 782px; }
+
+        /* Map Controls */
+        div[data-bbox="350,55,930,0"] {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        div[data-bbox="350,55,930,0"] > span, div[data-bbox="350,55,930,0"] > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--surface);
+            color: var(--text-dark);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.2s;
+        }
+        div[data-bbox="350,55,930,0"] > span:hover, div[data-bbox="350,55,930,0"] > a:hover {
+            background-color: var(--bg-light);
+            text-decoration: none;
+        }
+        span#56::before { content: '\\f067'; font-family: 'Font Awesome 6 Free'; font-weight: 900; } /* Zoom In */
+        span#57::before { content: '\\f068'; font-family: 'Font Awesome 6 Free'; font-weight: 900; } /* Zoom Out */
+        span#58::before { content: '\\f576'; font-family: 'Font Awesome 6 Free'; font-weight: 900; } /* My Location */
+        span#59::before { content: '\\f0c9'; font-family: 'Font Awesome 6 Free'; font-weight: 900; } /* Layers */
+        span#60::before { content: '\\f044'; font-family: 'Font Awesome 6 Free'; font-weight: 900; } /* Edit */
+        span#61::before { content: '\\f141'; font-family: 'Font Awesome 6 Free'; font-weight: 900; } /* More */
+        a#62::before { content: '\\f059'; font-family: 'Font Awesome 6 Free'; font-weight: 900; } /* Help */
+        a#63::before { content: '\\f085'; font-family: 'Font Awesome 6 Free'; font-weight: 900; } /* Settings */
+        
+        /* Map Footer */
+        div[data-bbox="355,681,90,34"] {
+            position: absolute;
+            bottom: 30px;
+            left: 10px;
+            font-size: 0.8rem;
+            background: rgba(255,255,255,0.7);
+            padding: 5px;
+            border-radius: var(--radius-sm);
+        }
+        div[data-bbox="874,703,406,17"] {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 0.75rem;
+            color: var(--text-medium);
+        }
+        div[data-bbox="874,703,406,17"] a {
+            color: var(--primary);
+            margin: 0 5px;
+        }
+
+    </style>
+</head>
+<body data-bbox="0,0,1280,55">
+    <header data-bbox="0,0,1280,55">
+        <source type="image/svg+xml" data-bbox="10,17,0,22">
+            <img id="0" data-bbox="10,13,30,30">
+        </source>
+        <nav data-bbox="178,0,227,55">
+            <div data-bbox="188,10,207,35">
+                <div data-bbox="188,10,77,35">
+                    <a data-bbox="188,10,50,35" href="#">Edit</a>
+                    <button id="1" type="button" data-bbox="237,10,28,35"></button>
+                </div>
+                <a id="2" data-bbox="264,10,68,35" href="#">History</a>
+                <a id="3" data-bbox="331,10,64,35" href="#">Export</a>
+            </div>
+        </nav>
+        <nav data-bbox="708,0,572,55">
+            <ul data-bbox="722,13,405,27">
+                <li><a id="4" data-bbox="722,13,77,27" href="#">GPS Traces</a></li>
+                <li><a id="5" data-bbox="803,13,82,27" href="#">User Diaries</a></li>
+                <li><a id="6" data-bbox="889,13,87,27" href="#">Communities</a></li>
+                <li><a id="7" data-bbox="980,13,63,27" href="#">Copyright</a></li>
+                <li><a id="8" data-bbox="1047,13,34,27" href="#">Help</a></li>
+                <li><a id="9" data-bbox="1085,13,42,27" href="#">About</a></li>
+            </ul>
+            <div data-bbox="1135,10,135,35">
+                <a id="10" data-bbox="1135,10,63,35" href="#">Log In</a>
+                <a id="11" data-bbox="1197,10,73,35" href="#">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <div data-bbox="0,55,1280,665">
+        <div data-bbox="0,55,350,665">
+            <div data-bbox="0,55,350,213">
+                <form data-bbox="0,55,350,213">
+                    <div data-bbox="4,63,342,31">
+                        <div data-bbox="8,63,288,31">
+                            <div data-bbox="8,63,254,31"></div>
+                        </div>
+                        <a title="Find directions between two points" data-bbox="304,63,38,31" href="#"></a>
+                    </div>
+                    <button id="12" type="button" data-bbox="313,71,21,21"></button>
+                    <div><input id="13" type="text" placeholder="From" data-value="Maid of the Mist, Prospect Point Park Observation Deck, City of Niagara Falls, Niagara County, New York, 14302, United States" data-bbox="37,112,305,31" value="Maid of the Mist, Niagara Falls, NY"></div>
+                    <div><input id="14" type="text" placeholder="To" data-value="Mount Monadnock, Jaffrey, Cheshire County, New Hampshire, United States" data-bbox="37,147,305,31" value="Mount Monadnock, Jaffrey, NH"></div>
+                    <div data-bbox="4,182,342,31">
+                        <select id="15" data-value="2" data-text="Foot (OSRM)" data-bbox="37,182,262,31">
+                            <option value="0">Bicycle (OSRM)</option>
+                            <option value="1">Car (OSRM)</option>
+                            <option value="2" selected>Foot (OSRM)</option>
+                        </select>
+                        <input id="16" value="Go" type="submit" data-bbox="307,182,35,31">
+                    </div>
+                    <button id="17" data-bbox="37,217,132,31" type="button">Reverse Directions</button>
+                </form>
+            </div>
+            <div data-bbox="0,268,350,15900">
+                <div data-bbox="16,284,318,46">
+                    <h2 data-bbox="16,284,297,38">Directions</h2>
+                    <button id="18" type="button" data-bbox="313,284,21,21"></button>
+                </div>
+                <p data-bbox="16,330,318,21">Distance: 651km. Time: 144:50.</p>
+                <table data-bbox="16,367,318,15732">
+                    <tbody>
+                        <tr data-bbox="16,367,318,30">
+                            <td><div id="19" data-bbox="17,372,20,20"><i class="fa-solid fa-arrow-up"></i></div></td>
+                            <td><b id="20" data-bbox="39,373,13,17">1.</b><span>Head northwest on Prospect Street</span></td>
+                            <td id="21" data-bbox="300,367,34,30">20m</td>
+                        </tr>
+                        <tr>
+                            <td><div id="22" data-bbox="17,402,20,20"><i class="fa-solid fa-arrow-turn-right"></i></div></td>
+                            <td><b id="23" data-bbox="39,403,13,17">2.</b><span>Turn right toward Niagara Scenic Pkwy</span></td>
+                            <td id="24" data-bbox="300,397,34,30">150m</td>
+                        </tr>
+                        <tr data-bbox="16,427,318,30">
+                            <td><div id="25" data-bbox="17,432,20,20"><i class="fa-solid fa-arrow-turn-left"></i></div></td>
+                            <td><b id="26" data-bbox="39,433,13,17">3.</b><span>Turn left onto Niagara Scenic Pkwy</span></td>
+                            <td id="27" data-bbox="300,427,34,30">30m</td>
+                        </tr>
+                         <tr>
+                            <td><div id="28" data-bbox="17,462,20,20"><i class="fa-solid fa-road"></i></div></td>
+                            <td><b id="29" data-bbox="39,463,13,17">4.</b><span>Continue onto Robert Moses Pkwy</span></td>
+                            <td id="30" data-bbox="300,457,34,30">2.5km</td>
+                        </tr>
+                        <tr>
+                            <td><div id="31" data-bbox="17,492,20,20"><i class="fa-solid fa-signs-post"></i></div></td>
+                            <td><b id="32" data-bbox="39,493,13,17">5.</b><span>Merge onto I-190 N</span></td>
+                            <td id="33" data-bbox="300,487,34,30">15km</td>
+                        </tr>
+                        <tr data-bbox="16,517,318,30">
+                            <td><div id="34" data-bbox="17,522,20,20"><i class="fa-solid fa-arrow-up"></i></div></td>
+                            <td><b id="35" data-bbox="39,523,13,17">6.</b><span>Continue straight</span></td>
+                            <td id="36" data-bbox="300,517,34,30">30m</td>
+                        </tr>
+                        <tr>
+                            <td><div id="37" data-bbox="17,552,20,20"><i class="fa-solid fa-mountain"></i></div></td>
+                            <td><b id="38" data-bbox="39,553,13,17">7.</b><span>Enter hilly terrain</span></td>
+                            <td id="39" data-bbox="300,547,34,30">450km</td>
+                        </tr>
+                        <tr data-bbox="16,577,318,51">
+                            <td data-bbox="38,577,262,51">
+                                <div id="40" data-bbox="17,592,20,20" style="position: absolute; left: 16px;"><i class="fa-solid fa-location-dot"></i></div>
+                                <div><b id="41" data-bbox="39,583,13,17">8.</b><span>Arrive at destination point of interest</span><b id="42" data-bbox="142,583,119,17">Prospect Point Park Observation Tower</b></div>
+                            </td>
+                            <td id="43" data-bbox="300,577,34,51">80m</td>
+                        </tr>
+                        <tr data-bbox="16,628,318,30">
+                            <td><div id="44" data-bbox="17,633,20,20"><i class="fa-solid fa-arrow-turn-right"></i></div></td>
+                            <td><b id="45" data-bbox="39,634,13,17">9.</b><span>Turn right onto Mountain Rd</span></td>
+                            <td id="46" data-bbox="300,628,34,30">200m</td>
+                        </tr>
+                        <tr data-bbox="16,658,318,30">
+                            <td><div id="47" data-bbox="17,663,20,20"><i class="fa-solid fa-arrow-turn-left"></i></div></td>
+                            <td><b id="48" data-bbox="39,664,21,17">10.</b><span>Turn left onto Poole Rd</span></td>
+                            <td id="49" data-bbox="300,658,34,30">10m</td>
+                        </tr>
+                        <tr data-bbox="16,688,318,30">
+                            <td><div id="50" data-bbox="17,693,20,20"><i class="fa-solid fa-flag-checkered"></i></div></td>
+                            <td><b id="51" data-bbox="39,694,21,17">11.</b><span>Destination will be on the right</span></td>
+                            <td id="52" data-bbox="300,688,34,30">110m</td>
+                        </tr>
+                        <tr data-bbox="16,718,318,30">
+                             <td><i class="fa-solid fa-ellipsis"></i></td>
+                             <td>...</td>
+                             <td data-bbox="300,718,34,30"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div data-bbox="0,268,350,302">
+                <div data-bbox="16,284,318,85">
+                    <h2 data-bbox="16,284,297,77">Welcome to OpenStreetMap!</h2>
+                </div>
+                <div data-bbox="16,369,318,185">
+                    <p data-bbox="16,369,318,69">OpenStreetMap is a map of the world, created by people like you and free to use under an open license.</p>
+                    <p data-bbox="16,454,318,46">Hosting is supported by</p>
+                    <div data-bbox="12,516,326,38"></div>
+                </div>
+            </div>
+        </div>
+        <div data-bbox="350,55,930,665">
+            <svg class="map-overlay" preserveAspectRatio="none">
+                <path id="53" data-bbox="498,367,634,41" d="M 148,347 C 300,450 500,250 782,375"></path>
+            </svg>
+            <img id="54" data-bbox="486,326,25,41">
+            <img id="55" data-bbox="1120,354,25,41">
+            <div data-bbox="350,55,930,0">
+                <span id="56" data-bbox="1250,75,20,20"></span>
+                <span id="57" data-bbox="1250,115,20,20"></span>
+                <span id="58" data-bbox="1250,155,20,20"></span>
+                <span id="59" data-bbox="1250,205,20,20"></span>
+                <span id="60" data-bbox="1250,245,20,20"></span>
+                <span id="61" data-bbox="1250,285,20,20"></span>
+                <a id="62" data-bbox="1240,325,40,40" href="#"></a>
+                <a id="63" data-bbox="1240,375,40,40" href="#"></a>
+            </div>
+            <div data-bbox="355,681,90,34">
+                <div data-bbox="355,681,56,18">50 km</div>
+                <div data-bbox="355,697,90,18">50 mi</div>
+            </div>
+            <div data-bbox="874,703,406,17">
+                © <a id="64" data-bbox="891,704,151,14" href="#">OpenStreetMap contributors</a>
+                <a id="65" data-bbox="1056,704,90,14" href="#">Make a Donation</a>
+                <a id="66" data-bbox="1153,704,122,14" href="#">Website and API terms</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const directionRows = document.querySelectorAll('table[data-bbox="16,367,318,15732"] tr');
+            directionRows.forEach(row => {
+                row.addEventListener('mouseover', () => {
+                    row.style.backgroundColor = '#e9ecef';
+                });
+                row.addEventListener('mouseout', () => {
+                    row.style.backgroundColor = '';
+                });
+            });
+
+            const reverseButton = document.getElementById('17');
+            if(reverseButton) {
+                reverseButton.addEventListener('click', () => {
+                    const fromInput = document.getElementById('13');
+                    const toInput = document.getElementById('14');
+                    if (fromInput && toInput) {
+                        const tempValue = fromInput.value;
+                        fromInput.value = toInput.value;
+                        toInput.value = tempValue;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

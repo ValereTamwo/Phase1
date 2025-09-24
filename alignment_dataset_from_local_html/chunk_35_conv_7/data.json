@@ -1,0 +1,413 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_7.html",
+    "raw_html": "<HTML lang=\"en\" data-bbox=\"0,0,1280,55\"><BODY data-bbox=\"0,0,1280,55\"><HEADER data-bbox=\"0,0,1280,55\"><NAV data-bbox=\"178,0,227,55\"><DIV data-bbox=\"188,10,207,35\"><DIV data-bbox=\"188,10,77,35\"><A id=\"1\" data-bbox=\"188,10,50,35\" class=\"possible-clickable-element\" data-testid=\"A\"><text>Edit</text></A><BUTTON id=\"2\" type=\"button\" data-bbox=\"237,10,28,35\" class=\"possible-clickable-element\" data-testid=\"B\"></BUTTON></DIV><A id=\"3\" data-bbox=\"264,10,68,35\" class=\"possible-clickable-element\" data-testid=\"C\"><text>History</text></A><A id=\"4\" data-bbox=\"331,10,64,35\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Export</text></A></DIV></NAV><NAV data-bbox=\"708,0,572,55\"><UL data-bbox=\"722,13,405,27\"><A id=\"5\" data-bbox=\"722,13,77,27\" class=\"possible-clickable-element\" data-testid=\"E\"><text>GPS Traces</text></A><A id=\"6\" data-bbox=\"803,13,82,27\" class=\"possible-clickable-element\" data-testid=\"F\"><text>User Diaries</text></A><A id=\"7\" data-bbox=\"889,13,87,27\" class=\"possible-clickable-element\" data-testid=\"G\"><text>Communities</text></A><A id=\"8\" data-bbox=\"980,13,63,27\" class=\"possible-clickable-element\" data-testid=\"H\"><text>Copyright</text></A><A id=\"9\" data-bbox=\"1047,13,34,27\" class=\"possible-clickable-element\" data-testid=\"I\"><text>Help</text></A><A id=\"10\" data-bbox=\"1085,13,42,27\" class=\"possible-clickable-element\" data-testid=\"J\"><text>About</text></A></UL><DIV data-bbox=\"1135,10,135,35\"><A id=\"11\" data-bbox=\"1135,10,63,35\" class=\"possible-clickable-element\" data-testid=\"K\"><text>Log In</text></A><A id=\"12\" data-bbox=\"1197,10,73,35\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Sign Up</text></A></DIV></NAV></HEADER><MAIN data-bbox=\"0,55,1280,665\"><DIV class=\"sidebar\" data-bbox=\"0,55,350,665\"><DIV class=\"directions-form\" data-bbox=\"0,55,350,213\"><FORM data-bbox=\"0,55,350,213\"><DIV class=\"input-group\"><INPUT id=\"14\" type=\"text\" placeholder=\"From\" data-value=\"Connecticut Science Center, 250, Columbus Boulevard, Main Street Historic District No. 2, Downtown Hartford, Hartford, Connecticut, 06103, United States\" value=\"Connecticut Science Center\" data-bbox=\"37,112,305,31\" class=\"possible-clickable-element\" data-testid=\"M\" style=\"\"></INPUT></DIV><DIV class=\"input-group\"><INPUT id=\"15\" type=\"text\" placeholder=\"To\" data-value=\"Sport and Medical Sciences Academy, 280, Huyshope Avenue, Coltsville Historic District, Downtown Hartford, Hartford, Connecticut, 06106, United States\" value=\"Sport and Medical Sciences Academy\" data-bbox=\"37,147,305,31\" class=\"possible-clickable-element\" data-testid=\"N\" style=\"\"></INPUT></DIV><DIV data-bbox=\"4,182,342,31\"><SELECT id=\"16\" data-value=\"1\" data-text=\"Car (OSRM)\" data-bbox=\"37,182,262,31\" class=\"possible-clickable-element\" data-testid=\"O\"></SELECT><INPUT id=\"17\" value=\"Go\" type=\"submit\" data-bbox=\"307,182,35,31\" class=\"possible-clickable-element\" data-testid=\"P\" style=\"\"></INPUT></DIV><BUTTON id=\"18\" type=\"button\" data-bbox=\"37,217,132,31\" class=\"possible-clickable-element\" data-testid=\"Q\"><text>Reverse Directions</text></BUTTON></FORM></DIV><DIV class=\"results-header\" data-bbox=\"16,284,318,46\"><H2 data-bbox=\"16,284,297,38\"><text>Directions</text></H2><BUTTON id=\"19\" type=\"button\" data-bbox=\"313,284,21,21\"><I class=\"fa-solid fa-xmark possible-clickable-element\" data-testid=\"R\"></I></BUTTON></DIV><P class=\"results-summary\" data-bbox=\"16,330,318,21\"><text>Distance: 2.7km. Time: 0:04.</text></P><TR data-bbox=\"16,367,318,30\"><DIV id=\"20\" data-bbox=\"17,372,20,20\"><I class=\"fa-solid fa-arrow-up\"></I></DIV><B id=\"21\" data-bbox=\"39,373,13,17\"><text>1.</text></B><text>Head north</text><TD id=\"22\" data-bbox=\"300,367,34,30\"><text>200m</text></TD></TR><TR data-bbox=\"16,397,318,30\"><DIV id=\"23\" data-bbox=\"17,402,20,20\"><I class=\"fa-solid fa-right-long\"></I></DIV><TD data-bbox=\"38,397,262,30\"><B id=\"24\" data-bbox=\"39,403,13,17\"><text>2.</text></B><text>Turn right onto</text><B id=\"25\" data-bbox=\"153,403,25,17\"><text>I 91</text></B></TD><TD id=\"26\" data-bbox=\"300,397,34,30\"><text>50m</text></TD></TR><TR data-bbox=\"16,427,318,51\"><DIV id=\"27\" data-bbox=\"17,442,20,20\"><I class=\"fa-solid fa-arrow-turn-up\"></I></DIV><TD data-bbox=\"38,427,262,51\"><B id=\"28\" data-bbox=\"39,433,13,17\"><text>3.</text></B><text>Merge onto</text><B id=\"29\" data-bbox=\"39,454,74,17\"><text>Capitol Area</text></B></TD><TD id=\"30\" data-bbox=\"300,427,34,51\"><text>400m</text></TD></TR><TR data-bbox=\"16,478,318,30\"><DIV id=\"31\" data-bbox=\"17,483,20,20\"><I class=\"fa-solid fa-road\"></I></DIV><TD data-bbox=\"38,478,262,30\"><B id=\"32\" data-bbox=\"39,484,13,17\"><text>4.</text></B><text>Continue onto</text><B id=\"33\" data-bbox=\"153,484,119,17\"><text>Whitehead Highway</text></B></TD><TD id=\"34\" data-bbox=\"300,478,34,30\"><text>50m</text></TD></TR><TR data-bbox=\"16,508,318,51\"><DIV id=\"35\" data-bbox=\"17,523,20,20\"><I class=\"fa-solid fa-left-long\"></I></DIV><TD data-bbox=\"38,508,262,51\"><B id=\"36\" data-bbox=\"39,514,13,17\"><text>5.</text></B><text>Turn left toward</text><B id=\"37\" data-bbox=\"39,535,112,17\"><text>Convention Center</text></B></TD><TD id=\"38\" data-bbox=\"300,508,34,51\"><text>190m</text></TD></TR></DIV><DIV class=\"map-area\" data-bbox=\"350,55,930,665\"><DIV id=\"58\" data-bbox=\"709,147,25,41\" class=\"map-marker\"><I class=\"fa-solid fa-map-pin\"></I></DIV><DIV id=\"59\" data-bbox=\"904,532,25,41\" class=\"map-marker\"><I class=\"fa-solid fa-map-pin\"></I></DIV><DIV class=\"map-controls\" data-bbox=\"350,55,930,0\"><SPAN id=\"60\" data-bbox=\"1250,75,20,20\" title=\"Zoom In\"><I class=\"fa-solid fa-plus possible-clickable-element\" data-testid=\"S\"></I></SPAN><SPAN id=\"61\" data-bbox=\"1250,115,20,20\" title=\"Zoom Out\"><I class=\"fa-solid fa-minus possible-clickable-element\" data-testid=\"T\"></I></SPAN><SPAN id=\"62\" data-bbox=\"1250,155,20,20\" title=\"Locate Me\"><I class=\"fa-solid fa-location-crosshairs possible-clickable-element\" data-testid=\"U\"></I></SPAN><SPAN id=\"63\" data-bbox=\"1250,205,20,20\" title=\"Layers\"><I class=\"fa-solid fa-layer-group possible-clickable-element\" data-testid=\"V\"></I></SPAN><SPAN id=\"64\" data-bbox=\"1250,245,20,20\" title=\"Map Legend\"><I class=\"fa-solid fa-list possible-clickable-element\" data-testid=\"W\"></I></SPAN><SPAN id=\"65\" data-bbox=\"1250,285,20,20\" title=\"Share\"><I class=\"fa-solid fa-share-nodes possible-clickable-element\" data-testid=\"X\"></I></SPAN><SPAN id=\"66\" data-bbox=\"1250,335,20,20\" title=\"Measure Tool\"><I class=\"fa-solid fa-ruler possible-clickable-element\" data-testid=\"Y\"></I></SPAN><SPAN id=\"67\" data-bbox=\"1250,385,20,20\" title=\"Settings\"><I class=\"fa-solid fa-gear possible-clickable-element\" data-testid=\"Z\"></I></SPAN></DIV><DIV class=\"map-scale\" data-bbox=\"355,681,86,34\"><DIV data-bbox=\"355,681,84,18\"><text>300 m</text></DIV><DIV data-bbox=\"355,697,86,18\"><text>1000 ft</text></DIV></DIV><DIV class=\"map-attribution\" data-bbox=\"874,703,406,17\"><text>©</text><A id=\"68\" data-bbox=\"891,704,151,14\" class=\"possible-clickable-element\" data-testid=\"AA\"><text>OpenStreetMap contributors</text></A><text>|</text><A id=\"69\" data-bbox=\"1056,704,90,14\" class=\"possible-clickable-element\" data-testid=\"AB\"><text>Make a Donation</text></A><text>|</text><A id=\"70\" data-bbox=\"1153,704,122,14\" class=\"possible-clickable-element\" data-testid=\"AC\"><text>Website and API terms</text></A></DIV></DIV></MAIN></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    header|\n    <\n      div|\n      <a[A]| Edit >\n      <button[B]| >\n      <a[C]| History >\n      <a[D]| Export >\n    >\n    <\n      nav|\n      <\n        ul|\n        <a[E]| GPS Traces >\n        <a[F]| User Diaries >\n        <a[G]| Communities >\n        <a[H]| Copyright >\n        <a[I]| Help >\n        <a[J]| About >\n      >\n      <\n        div|\n        <a[K]| Log In >\n        <a[L]| Sign Up >\n      >\n    >\n  >\n  <\n    main|\n    <\n      div|\n      <\n        form|\n        <input[M]| Connecticut Science Center; From >\n        <input[N]| Sport and Medical Sciences Academy; To >\n        <select[O]| >\n        <input[P]| Go >\n        <button[Q]| Reverse Directions >\n      >\n      <h2| Directions >\n      <i[R]| >\n      <p| Distance: 2.7km. Time: 0:04. >\n      <\n        tr|\n        <b| 1. >\n        <text| Head north >\n        <td| 200m >\n      >\n      <\n        tr|\n        <\n          td|\n          <b| 2. >\n          <text| Turn right onto >\n          <b| I 91 >\n        >\n        <td| 50m >\n      >\n      <\n        tr|\n        <\n          td|\n          <b| 3. >\n          <text| Merge onto >\n          <b| Capitol Area >\n        >\n        <td| 400m >\n      >\n      <\n        tr|\n        <\n          td|\n          <b| 4. >\n          <text| Continue onto >\n          <b| Whitehead Highway >\n        >\n        <td| 50m >\n      >\n      <\n        tr|\n        <\n          td|\n          <b| 5. >\n          <text| Turn left toward >\n          <b| Convention Center >\n        >\n        <td| 190m >\n      >\n    >\n    <\n      div|\n      <\n        div|\n        <\n          span| Zoom In\n          <i[S]| >\n        >\n        <\n          span| Zoom Out\n          <i[T]| >\n        >\n        <\n          span| Locate Me\n          <i[U]| >\n        >\n        <\n          span| Layers\n          <i[V]| >\n        >\n        <\n          span| Map Legend\n          <i[W]| >\n        >\n        <\n          span| Share\n          <i[X]| >\n        >\n        <\n          span| Measure Tool\n          <i[Y]| >\n        >\n        <\n          span| Settings\n          <i[Z]| >\n        >\n      >\n      <\n        div|\n        <div| 300 m >\n        <div| 1000 ft >\n      >\n      <\n        div|\n        <text| © >\n        <a[AA]| OpenStreetMap contributors >\n        <text| | >\n        <a[AB]| Make a Donation >\n        <text| | >\n        <a[AC]| Website and API terms >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 293.65625,
+                "top": 0,
+                "right": 343.65625,
+                "bottom": 33,
+                "width": 50,
+                "height": 33
+            },
+            "tag": "a",
+            "text": "Edit"
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 343.65625,
+                "top": 14.5,
+                "right": 347.65625,
+                "bottom": 18.5,
+                "width": 4,
+                "height": 4
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 292.65625,
+                "top": 36,
+                "right": 364.65625,
+                "bottom": 55,
+                "width": 72,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "History"
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 369.65625,
+                "top": 36,
+                "right": 436.65625,
+                "bottom": 55,
+                "width": 67,
+                "height": 19
+            },
+            "tag": "a",
+            "text": "Export"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 570.984375,
+                "top": 0,
+                "right": 667.984375,
+                "bottom": 54,
+                "width": 97,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "GPS Traces"
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 667.984375,
+                "top": 0,
+                "right": 769.984375,
+                "bottom": 54,
+                "width": 102,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "User Diaries"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 769.984375,
+                "top": 0,
+                "right": 876.984375,
+                "bottom": 54,
+                "width": 107,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "Communities"
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 876.984375,
+                "top": 0,
+                "right": 962.984375,
+                "bottom": 54,
+                "width": 86,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "Copyright"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 962.984375,
+                "top": 0,
+                "right": 1013.984375,
+                "bottom": 54,
+                "width": 51,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "Help"
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 1013.984375,
+                "top": 0,
+                "right": 1073.984375,
+                "bottom": 54,
+                "width": 60,
+                "height": 54
+            },
+            "tag": "a",
+            "text": "About"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 1089.984375,
+                "top": 9.5,
+                "right": 1162.984375,
+                "bottom": 44.5,
+                "width": 73,
+                "height": 35
+            },
+            "tag": "a",
+            "text": "Log In"
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 1170.984375,
+                "top": 9.5,
+                "right": 1255.984375,
+                "bottom": 44.5,
+                "width": 85,
+                "height": 35
+            },
+            "tag": "a",
+            "text": "Sign Up"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 16,
+                "top": 71,
+                "right": 333,
+                "bottom": 115,
+                "width": 317,
+                "height": 44
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 16,
+                "top": 127,
+                "right": 333,
+                "bottom": 171,
+                "width": 317,
+                "height": 44
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 16,
+                "top": 183,
+                "right": 276.625,
+                "bottom": 227,
+                "width": 260.625,
+                "height": 44
+            },
+            "tag": "select",
+            "text": "\n                            \n                            \n                            \n                        "
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 284.625,
+                "top": 183,
+                "right": 333,
+                "bottom": 227,
+                "width": 48.375,
+                "height": 44
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 16,
+                "top": 239,
+                "right": 333,
+                "bottom": 258,
+                "width": 317,
+                "height": 19
+            },
+            "tag": "button",
+            "text": "Reverse Directions"
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 321,
+                "top": 278,
+                "right": 333,
+                "bottom": 294,
+                "width": 12,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 1232.5,
+                "top": 87,
+                "right": 1247.5,
+                "bottom": 103,
+                "width": 15,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 1232.5,
+                "top": 128.5,
+                "right": 1247.5,
+                "bottom": 144.5,
+                "width": 15,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 1232,
+                "top": 169.5,
+                "right": 1248,
+                "bottom": 185.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 1231,
+                "top": 210.5,
+                "right": 1249,
+                "bottom": 226.5,
+                "width": 18,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 1232,
+                "top": 251.5,
+                "right": 1248,
+                "bottom": 267.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 1233,
+                "top": 292.5,
+                "right": 1247,
+                "bottom": 308.5,
+                "width": 14,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 1232,
+                "top": 333.5,
+                "right": 1248,
+                "bottom": 349.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 1232,
+                "top": 374.5,
+                "right": 1248,
+                "bottom": 390.5,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 855,
+                "top": 693,
+                "right": 1017,
+                "bottom": 708,
+                "width": 162,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "OpenStreetMap contributors"
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 1027,
+                "top": 693,
+                "right": 1123,
+                "bottom": 708,
+                "width": 96,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Make a Donation"
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 1133,
+                "top": 693,
+                "right": 1260,
+                "bottom": 708,
+                "width": 127,
+                "height": 15
+            },
+            "tag": "a",
+            "text": "Website and API terms"
+        }
+    ]
+}

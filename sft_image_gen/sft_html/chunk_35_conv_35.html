@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --sidebar-bg: #1f2937; /* cool-gray-800 */
+            --sidebar-text: #d1d5db; /* cool-gray-300 */
+            --sidebar-text-hover: #ffffff;
+            --sidebar-active-bg: #374151; /* cool-gray-700 */
+            --main-bg: #f3f4f6; /* cool-gray-100 */
+            --card-bg: #ffffff;
+            --text-primary: #111827; /* cool-gray-900 */
+            --text-secondary: #6b7280; /* cool-gray-500 */
+            --border-color: #e5e7eb; /* cool-gray-200 */
+            --accent-color: #f97316; /* orange-500 */
+            --accent-color-hover: #ea580c; /* orange-600 */
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--main-bg);
+            color: var(--text-primary);
+            display: flex;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color-hover);
+        }
+
+        /* Main Layout */
+        .admin-sidebar {
+            width: 88px;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            transition: width 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .admin-sidebar:hover {
+            width: 240px;
+        }
+
+        .admin-main-wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        /* Sidebar Styling */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 0;
+            height: 75px;
+            flex-shrink: 0;
+        }
+        .logo-container img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .main-nav {
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .main-nav > li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            white-space: nowrap;
+        }
+        .main-nav > li:hover {
+            background-color: var(--sidebar-active-bg);
+            color: var(--sidebar-text-hover);
+        }
+        .main-nav > li > a, .main-nav > li > span {
+            display: flex;
+            align-items: center;
+            padding: 18px 28px;
+            width: 100%;
+            color: inherit;
+        }
+        .main-nav .nav-icon {
+            font-size: 1.2rem;
+            margin-right: 20px;
+            width: 24px;
+            text-align: center;
+        }
+
+        /* Flyout Menus */
+        .flyout-menu {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            min-width: 250px;
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            box-shadow: var(--shadow-lg);
+            border-radius: 0 8px 8px 0;
+            z-index: 1000;
+            padding: 15px 0;
+            border-left: 1px solid var(--border-color);
+        }
+
+        .main-nav > li:hover > .flyout-menu {
+            display: block;
+        }
+
+        .flyout-menu strong {
+            display: block;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .flyout-menu ul {
+            list-style: none;
+        }
+        .flyout-menu ul li a, .flyout-menu ul span {
+            display: block;
+            padding: 8px 20px;
+            color: var(--text-secondary);
+        }
+        .flyout-menu ul li a:hover, .flyout-menu ul span:hover {
+            background-color: var(--main-bg);
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        .admin-header {
+            background-color: var(--card-bg);
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            border-bottom: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        .admin-header h1 {
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .search-container {
+            position: relative;
+        }
+        .search-container input {
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 8px 15px 8px 40px;
+            transition: border-color 0.2s ease;
+            width: 200px;
+        }
+        .search-container input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+        .search-container label {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+        .icon-button {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+        .icon-button:hover {
+            color: var(--text-primary);
+        }
+        .user-account a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        .user-account .avatar {
+            width: 36px;
+            height: 36px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        /* Top Notification Bar */
+        .notification-bar {
+            background-color: #fffbe6;
+            color: #92400e;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #fde68a;
+            font-size: 0.9em;
+        }
+        .notification-bar a {
+            font-weight: 600;
+            color: #92400e;
+        }
+
+        /* Main Content Area */
+        main {
+            padding: 24px;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .scope-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-color-hover);
+        }
+        .btn-secondary {
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+        .btn-secondary:hover {
+            background-color: var(--main-bg);
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .advanced-reporting {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .advanced-reporting header {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 24px;
+        }
+
+        .stat-card h3, .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        .stat-card .amount {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .chart-container .disabled-message {
+            background-color: var(--main-bg);
+            border: 1px dashed var(--border-color);
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+
+        .chart-stats {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        .chart-stats li { text-align: center; }
+        .chart-stats span:first-child {
+            font-weight: 500;
+            color: var(--text-secondary);
+            display: block;
+        }
+        .chart-stats span:last-child, .chart-stats strong {
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        .tabs a {
+            padding: 12px 20px;
+            color: var(--text-secondary);
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+        }
+        .tabs a.active, .tabs a:hover {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .data-table tr { border-bottom: 1px solid var(--border-color); }
+        .data-table tr:last-child { border-bottom: none; }
+        .data-table .table-header { display: flex; justify-content: space-between; padding: 12px 0; }
+        .data-table .table-header span {
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+        .data-table td {
+            padding: 12px 0;
+            color: var(--text-primary);
+        }
+        .data-table tbody tr {
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .data-table tbody tr.hovered, .data-table tbody tr:hover {
+            background-color: var(--main-bg);
+        }
+        .data-table td:nth-child(1) { font-weight: 500; }
+        .data-table td:nth-child(2), .data-table td:nth-child(3) { text-align: right; }
+
+    </style>
+</head>
+
+<body data-bbox="0,0,1280,1618">
+    <div class="admin-sidebar" data-bbox="0,0,88,721">
+        <div class="logo-container">
+            <img id="0" title="Magento Admin Panel" data-bbox="27,17,35,41" src="https://picsum.photos/seed/magento/40/40" alt="Logo">
+        </div>
+        <ul class="main-nav" data-bbox="0,75,88,646">
+            <li>
+                <a href="#"><i class="nav-icon fas fa-tachometer-alt"></i><span id="1" data-text="Dashboard" data-bbox="14,112,60,13">Dashboard</span></a>
+            </li>
+            <li data-bbox="0,137,88,62">
+                <a><i class="nav-icon fas fa-shopping-cart"></i><span id="2" data-text="Sales" data-bbox="30,174,28,13">Sales</span></a>
+                <div class="flyout-menu" data-bbox="-180,0,268,812">
+                    <strong data-text="Sales" data-bbox="-150,20,180,30">Sales</strong>
+                    <ul>
+                        <li data-bbox="-165,92,238,308">
+                            <ul data-bbox="-165,92,238,308">
+                                <li><a href="#"><span data-text="Braintree Virtual Terminal" data-bbox="-150,369,174,19">Braintree Virtual Terminal</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li data-bbox="0,199,88,62">
+                <a><i class="nav-icon fas fa-tags"></i><span id="3" data-text="Catalog" data-bbox="22,236,44,13">Catalog</span></a>
+                <div class="flyout-menu" data-bbox="-180,0,268,812">
+                    <strong data-text="Catalog" data-bbox="-150,20,180,30">Catalog</strong>
+                    <ul data-bbox="-165,92,238,88">
+                        <li data-bbox="-165,92,238,88"></li>
+                    </ul>
+                </div>
+            </li>
+            <li data-bbox="0,261,88,62">
+                <a><i class="nav-icon fas fa-users"></i><span id="4" data-text="Customers" data-bbox="14,298,60,13">Customers</span></a>
+                <div class="flyout-menu" data-bbox="-180,0,268,812">
+                    <strong data-text="Customers" data-bbox="-150,20,180,30">Customers</strong>
+                    <ul data-bbox="-180,92,268,720">
+                         <li><a href="#"><span data-text="Login as Customer Log" data-bbox="-150,192,151,19">Login as Customer Log</span></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li data-bbox="0,323,88,62">
+                <a><i class="nav-icon fas fa-bullhorn"></i><span id="5" data-text="Marketing" data-bbox="14,360,60,13">Marketing</span></a>
+                <div class="flyout-menu" data-bbox="-448,0,536,812">
+                     <strong data-text="Marketing" data-bbox="-418,20,448,30">Marketing</strong>
+                     <ul data-bbox="-448,92,536,720"><ul data-bbox="-180,92,268,417"><li data-bbox="-165,92,238,230"><ul data-bbox="-165,146,238,176"></ul></li><li data-bbox="-165,367,238,142"><ul data-bbox="-165,421,238,88"></ul></li></ul></ul>
+                </div>
+            </li>
+            <li data-bbox="0,385,88,62">
+                <a><i class="nav-icon fas fa-file-alt"></i><span id="6" data-text="Content" data-bbox="19,422,50,13">Content</span></a>
+                <div class="flyout-menu" data-bbox="-180,0,268,812">
+                    <strong data-text="Content" data-bbox="-150,20,180,30">Content</strong>
+                    <ul data-bbox="-180,92,268,720"><li data-bbox="-165,92,238,230"><ul data-bbox="-165,146,238,176"></ul></li><li data-bbox="-165,367,238,98"></li><li data-bbox="-165,510,238,185"><ul data-bbox="-165,563,238,132"></ul></li></ul>
+                </div>
+            </li>
+            <li data-bbox="0,447,88,62">
+                <a><i class="nav-icon fas fa-chart-bar"></i><span id="7" data-text="Reports" data-bbox="22,484,44,13">Reports</span></a>
+                <div class="flyout-menu" data-bbox="-984,0,1072,812">
+                    <strong data-text="Reports" data-bbox="-954,20,984,30">Reports</strong>
+                    <ul data-bbox="-984,92,1072,720"><li data-bbox="-165,92,238,142">
+                        <a href="#"><span data-text="Business Intelligence" data-bbox="-150,103,159,22">Business Intelligence</span></a>
+                        <ul data-bbox="-165,146,238,88"></ul>
+                    </li></ul>
+                </div>
+            </li>
+            <li data-bbox="0,509,88,62">
+                <a><i class="nav-icon fas fa-store"></i><span id="8" data-text="Stores" data-bbox="25,546,38,13">Stores</span></a>
+                <div class="flyout-menu" data-bbox="-448,0,536,812">
+                    <strong data-text="Stores" data-bbox="-418,20,448,30">Stores</strong>
+                    <ul data-bbox="-448,92,536,720"><ul data-bbox="-180,92,268,373"><li data-bbox="-165,92,238,142"><ul data-bbox="-165,146,238,88"></ul></li><li data-bbox="-165,279,238,186"><ul data-bbox="-165,332,238,133"></ul></li></ul></ul>
+                </div>
+            </li>
+            <li data-bbox="0,571,88,62">
+                <a><i class="nav-icon fas fa-cogs"></i><span id="9" data-text="System" data-bbox="25,608,38,13">System</span></a>
+                <div class="flyout-menu" data-bbox="-448,0,536,812">
+                    <strong data-text="System" data-bbox="-418,20,448,30">System</strong>
+                    <ul data-bbox="-448,92,536,720"><ul data-bbox="-180,92,268,559"><li data-bbox="-165,92,238,186"><ul data-bbox="-165,146,238,132"></ul></li><li data-bbox="-165,323,238,98"></li><li data-bbox="-165,466,238,185"><ul data-bbox="-165,519,238,132"><li><a href="#"><span data-text="Manage Encryption Key" data-bbox="-150,620,158,19">Manage Encryption Key</span></a></li></ul></li></ul></ul>
+                </div>
+            </li>
+             <li>
+                <a><i class="nav-icon fas fa-puzzle-piece"></i><span id="10" data-text="Find Partners & Extensions" data-bbox="32,670,24,13">Find Partners & Extensions</span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="admin-main-wrapper" data-bbox="88,0,1192,1618">
+        <div class="notification-bar" data-bbox="118,0,1132,51">
+            <div data-bbox="119,0,1130,50">
+                <div data-bbox="119,0,958,46">
+                    <div data-text="Task Update attributes for 7 selected products: 1 item(s) have been successfully updated." data-bbox="129,0,852,49"><i class="fas fa-check-circle" style="margin-right: 8px;"></i>Task "Update attributes for 7 selected products": 1 item(s) have been successfully updated. <a id="12" data-text="View Details" data-bbox="981,0,81,34" href="#" style="margin-left: 16px;">View Details</a></div>
+                </div>
+                <span data-text=":,11" data-bbox="1077,15,118,19" style="font-weight: 500;"><span id="11" data-text="System Messages" data-bbox="1077,15,118,19">System Messages: 1</span></span>
+            </div>
+        </div>
+        <header class="admin-header" data-bbox="88,51,1192,80">
+            <h1 data-text="Dashboard" data-bbox="118,82,740,34">Dashboard</h1>
+            <div class="header-controls" data-bbox="873,66,377,44">
+                <div class="search-container" data-bbox="1034,77,50,0">
+                    <label id="15" for="search-input" data-bbox="1034,77,50,33"><i class="fas fa-search"></i></label>
+                    <input type="text" id="search-input" placeholder="Search..." data-bbox="1034,77,50,35">
+                </div>
+                <a id="14" title="Notifications" href="#" class="icon-button" data-bbox="1081,77,60,33"><i class="fas fa-bell"></i></a>
+                <div class="user-account" data-bbox="1144,77,106,33">
+                    <a title="My Account" href="#" data-bbox="1144,77,106,33">
+                        <span class="avatar">A</span>
+                        <span id="13" data-text="admin" data-bbox="1185,85,36,18">admin</span>
+                        <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main data-bbox="88,143,1192,1335">
+            <div class="content-header" data-bbox="118,143,1132,77">
+                <div class="scope-selector" data-bbox="133,164,192,34">
+                    <span data-text="Scope:" data-bbox="133,172,42,18">Scope:</span>
+                    <div data-bbox="178,164,138,34">
+                        <button id="16" type="button" data-text="All Store Views" data-bbox="185,164,131,34" class="btn btn-secondary">All Store Views <i class="fas fa-chevron-down" style="margin-left: 8px; font-size: 0.7em;"></i></button>
+                    </div>
+                    <a id="17" title="What is this?" href="#" data-bbox="325,169,25,22" style="color: var(--text-secondary);"><i class="fas fa-question-circle"></i><span data-text="What is this?" data-bbox="349,168,1,1" class="sr-only">What is this?</span></a>
+                </div>
+                <form data-bbox="1105,159,130,45">
+                    <button id="18" title="Reload Data" type="submit" data-bbox="1105,159,130,45" class="btn btn-secondary"><i class="fas fa-sync-alt" style="margin-right: 8px;"></i>Reload Data</button>
+                </form>
+            </div>
+            <section class="card advanced-reporting" data-bbox="118,250,1132,134">
+                <div data-bbox="118,276,833,82">
+                    <header data-text="Advanced Reporting" data-bbox="118,276,833,25">Advanced Reporting</header>
+                    <div data-text="Gain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data." data-bbox="118,311,833,47">Gain new insights and take command of your business' performance, using our dynamic product, order, and customer reports tailored to your customer data.</div>
+                </div>
+                <a title="Go to Advanced Reporting" href="#" class="btn btn-primary" data-bbox="976,295,259,45"><span id="19" data-text="Go to Advanced Reporting" data-bbox="993,306,210,22">Go to Advanced Reporting</span></a>
+            </section>
+            <div class="dashboard-grid" data-bbox="118,414,1132,1034">
+                <div class="left-column" data-bbox="118,414,377,1034">
+                    <div class="card stat-card" data-bbox="118,414,342,58">
+                        <h3 data-text="Lifetime Sales" data-bbox="118,414,342,25">Lifetime Sales</h3>
+                        <span class="amount" data-text="$0.00" data-bbox="118,439,63,32">$0.00</span>
+                    </div>
+                    <div class="card stat-card" data-bbox="118,502,342,57">
+                        <h3 data-text="Average Order" data-bbox="118,502,342,24">Average Order</h3>
+                        <span class="amount" data-text="$0.00" data-bbox="118,526,63,32">$0.00</span>
+                    </div>
+                    <div class="card" data-bbox="118,589,342,256">
+                        <h3 class="card-title" data-text="Last Orders" data-bbox="118,589,342,24">Last Orders</h3>
+                        <table class="data-table" data-bbox="118,613,342,232">
+                            <thead>
+                                <tr data-bbox="118,613,342,38">
+                                    <th><span data-text="Customer" data-bbox="118,622,64,18">Customer</span></th>
+                                    <th><span data-text="Items" data-bbox="325,622,37,18">Items</span></th>
+                                    <th><span data-text="Total" data-bbox="427,622,33,18">Total</span></th>
+                                </tr>
+                            </thead>
+                            <tbody data-bbox="118,651,342,194">
+                                <tr title="http://localhost:7780/admin/sales/order/view/order_id/299/" data-bbox="118,651,342,39">
+                                    <td data-text="Sarah Miller" data-bbox="118,651,197,39">Sarah Miller</td>
+                                    <td data-text="5" data-bbox="315,651,73,39">5</td>
+                                    <td data-text="$0.00" data-bbox="388,651,72,39">$0.00</td>
+                                </tr>
+                                <tr title="http://localhost:7780/admin/sales/order/view/order_id/65/" data-bbox="118,690,342,39">
+                                    <td data-text="Grace Nguyen" data-bbox="118,690,197,39">Grace Nguyen</td>
+                                    <td data-text="4" data-bbox="315,690,73,39">4</td>
+                                    <td data-text="$190.00" data-bbox="388,690,72,39">$190.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="right-column card" data-bbox="495,414,755,486">
+                    <div class="disabled-message" data-text="Chart is disabled. To enable the chart, click,." data-bbox="495,414,755,44">Chart is disabled. To enable the chart, click <a id="20" data-text="here" data-bbox="807,419,31,19" href="#">here</a>.</div>
+                    <ul class="chart-stats" data-bbox="515,468,715,51">
+                        <li data-bbox="515,468,179,51"><span data-text="Revenue" data-bbox="515,468,169,18">Revenue</span><span data-text="$0.00" data-bbox="515,486,63,32">$0.00</span></li>
+                        <li data-bbox="694,468,179,51"><span data-text="Tax" data-bbox="694,468,169,18">Tax</span><span data-text="$0.00" data-bbox="694,486,63,32">$0.00</span></li>
+                        <li data-bbox="873,468,178,51"><span data-text="Shipping" data-bbox="873,468,168,18">Shipping</span><span data-text="$0.00" data-bbox="873,486,63,32">$0.00</span></li>
+                        <li data-bbox="1051,468,179,51"><span data-text="Quantity" data-bbox="1051,468,169,18">Quantity</span><strong data-text="0" data-bbox="1051,486,14,32">0</strong></li>
+                    </ul>
+                    <div class="tabs-container" data-bbox="495,579,755,321">
+                        <ul class="tabs" data-bbox="495,579,755,49">
+                            <li><a href="#" title="Bestsellers" class="active" data-bbox="496,580,110,48"><span id="21" data-text="Bestsellers" data-bbox="514,595,0,19">Bestsellers</span></a></li>
+                            <li><a href="#" title="Most Viewed Products" data-bbox="613,580,189,47"><span id="22" data-text="Most Viewed Products" data-bbox="631,595,0,19">Most Viewed Products</span></a></li>
+                            <li><a href="#" title="New Customers" data-bbox="809,580,146,47"><span id="23" data-text="New Customers" data-bbox="827,595,0,19">New Customers</span></a></li>
+                            <li><a href="#" title="Customers" data-bbox="962,580,110,47"><span id="24" data-text="Customers" data-bbox="980,595,0,19">Customers</span></a></li>
+                        </ul>
+                        <table class="data-table" data-bbox="515,648,715,232">
+                             <thead>
+                                <tr class="table-header" data-bbox="515,648,715,38">
+                                    <th><span data-text="Product" data-bbox="515,657,52,18">Product</span></th>
+                                    <th><span data-text="Price" data-bbox="1090,657,33,18">Price</span></th>
+                                    <th><span data-text="Quantity" data-bbox="1171,657,59,18">Quantity</span></th>
+                                </tr>
+                             </thead>
+                            <tbody data-bbox="515,686,715,193">
+                                <tr title="http://localhost:7780/admin/catalog/product/edit/id/20/" data-bbox="515,686,715,39">
+                                    <td data-text="Quest Lumaflex™ Band" data-bbox="515,686,501,39">Quest Lumaflex™ Band</td>
+                                    <td data-text="$19.00" data-bbox="1016,686,107,39">$19.00</td>
+                                    <td data-text="6" data-bbox="1123,686,107,39">6</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tableRows = document.querySelectorAll('.data-table tbody tr');
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', () => row.classList.add('hovered'));
+                row.addEventListener('mouseleave', () => row.classList.remove('hovered'));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --sidebar-bg: #111827;
+            --sidebar-text: #9CA3AF;
+            --sidebar-text-hover: #FFFFFF;
+            --sidebar-active-bg: #374151;
+            --main-bg: #F9FAFB;
+            --content-bg: #FFFFFF;
+            --border-color: #E5E7EB;
+            --text-primary: #1F2937;
+            --text-secondary: #6B7280;
+            --primary-color: #4F46E5;
+            --primary-color-hover: #4338CA;
+            --danger-color: #EF4444;
+            --success-color: #10B981;
+            --warning-color: #F59E0B;
+            --font-family: 'Inter', sans-serif;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --border-radius: 0.5rem;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--main-bg);
+            color: var(--text-primary);
+            display: flex;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* --- Sidebar --- */
+        div[data-bbox="0,-1,88,721"] {
+            width: 88px;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 20;
+        }
+
+        #0 {
+            content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>');
+            width: 35px;
+            height: 41px;
+            margin-bottom: 30px;
+        }
+
+        div[data-bbox="0,-1,88,721"] > ul {
+            list-style: none;
+            width: 100%;
+        }
+
+        div[data-bbox="0,-1,88,721"] > ul > li,
+        div[data-bbox="0,-1,88,721"] > ul > span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            text-align: center;
+            font-size: 12px;
+            position: relative;
+        }
+        
+        div[data-bbox="0,-1,88,721"] > ul > li:hover,
+        div[data-bbox="0,-1,88,721"] > ul > span:hover,
+        div[data-bbox="0,-1,88,721"] > ul > li.active {
+            background-color: var(--sidebar-active-bg);
+            color: var(--sidebar-text-hover);
+        }
+
+        div[data-bbox="0,-1,88,721"] li span,
+        div[data-bbox="0,-1,88,721"] > ul > span {
+            position: relative;
+            z-index: 1;
+        }
+
+        div[data-bbox="0,-1,88,721"] li span::before,
+        div[data-bbox="0,-1,88,721"] > ul > span::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 20px;
+            width: 100%;
+        }
+
+        span[id="1"]::before { content: "\f0e4"; } /* Dashboard */
+        span[id="2"]::before { content: "\f07a"; } /* Sales */
+        span[id="3"]::before { content: "\f02c"; } /* Catalog */
+        span[id="4"]::before { content: "\f0c0"; } /* Customers */
+        span[id="5"]::before { content: "\f0a1"; } /* Marketing */
+        span[id="6"]::before { content: "\f044"; } /* Content */
+        span[id="7"]::before { content: "\f080"; } /* Reports */
+        span[id="8"]::before { content: "\f54e"; } /* Stores */
+        span[id="9"]::before { content: "\f013"; } /* System */
+        span[id="10"]::before { content: "\f0c6"; } /* Partners */
+
+        /* Flyout Menus */
+        div[data-bbox="0,-1,88,721"] li > div {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: var(--content-bg);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            padding: 1rem;
+            width: 250px;
+            color: var(--text-primary);
+            z-index: 100;
+        }
+
+        div[data-bbox="0,-1,88,721"] li:hover > div {
+            display: block;
+        }
+        
+        li > div strong {
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            display: block;
+        }
+        li > div ul { list-style: none; }
+        li > div ul li, li > div ul span {
+            padding: 0.5rem 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+        li > div ul li:hover, li > div ul span:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- Main Content --- */
+        main[data-bbox="88,-337,1192,1968"] {
+            flex-grow: 1;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+        
+        /* Page Header */
+        div[title="Add Product"] {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 2rem;
+        }
+
+        button {
+            font-family: var(--font-family);
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        button[title="Add Product"] {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0 1.25rem;
+            height: 46px;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+        }
+        
+        button[title="Add Product"]:hover {
+            background-color: var(--primary-color-hover);
+        }
+
+        button[id="12"] {
+            background-color: var(--primary-color);
+            color: white;
+            width: 42px;
+            height: 46px;
+            border-left: 1px solid rgba(255,255,255,0.2);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        button[id="12"]::after {
+            content: "\f0d7";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+        }
+        button[id="12"]:hover {
+            background-color: var(--primary-color-hover);
+        }
+
+        /* --- Filters Section --- */
+        fieldset[data-bbox="98,329,1172,283"] {
+            background-color: var(--content-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        fieldset[data-bbox="98,329,289,99"],
+        fieldset[data-bbox="387,329,289,99"],
+        fieldset[data-bbox="676,329,289,99"],
+        fieldset[data-bbox="965,329,289,99"] {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        fieldset span {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        fieldset div[data-bbox] {
+            position: relative;
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 0.375rem;
+            padding: 0.5rem 0.75rem;
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+        }
+
+        fieldset div span {
+             color: var(--text-secondary);
+        }
+        
+        /* Action bar above table */
+        div[data-bbox="118,81,1132,54"] {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        div[data-bbox="118,81,189,33"] button {
+            background: var(--content-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        div[data-bbox="329,81,197,33"] {
+            color: var(--text-secondary);
+        }
+
+        div[data-bbox="795,76,38,59"] { margin-left: auto; }
+        div[data-bbox="901,76,107,52"], div[data-bbox="1012,81,238,35"] { display: flex; align-items: center; gap: 0.5rem; }
+
+        button[id="16"], button[id="17"], label[id="15"], button[id="18"],
+        div[data-bbox="1133,82,117,33"] button {
+            width: 40px; height: 40px;
+            border-radius: var(--border-radius);
+            background: var(--content-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+        button[id="16"]::after { content: "\f00a"; }
+        button[id="17"]::after { content: "\f0db"; }
+        label[id="15"]::after { content: "\f002"; }
+        button[id="18"]::after { content: "\f0d7"; }
+        button[title="Previous Page"]::after { content: "\f053"; }
+        button[title="Next Page"]::after { content: "\f054"; }
+        input[type="text"][data-value="100"] {
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 0.5rem;
+            width: 60px;
+            text-align: center;
+        }
+
+        /* Active Filters */
+        div[data-bbox="118,134,1132,23"] {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 13px;
+        }
+        
+        div[data-bbox="118,134,1132,23"] > span { font-weight: 500; }
+        
+        li[data-bbox="217,134,217,18"] {
+            display: flex;
+            align-items: center;
+            background: #EDF2F7;
+            padding: 4px 8px;
+            border-radius: 99px;
+        }
+        
+        li[data-bbox="217,134,217,18"] span:first-of-type { color: var(--text-secondary); margin-right: 4px; }
+
+        button[id="19"] {
+            background: transparent;
+            color: var(--text-secondary);
+            width: 18px; height: 17px;
+            margin-left: 8px;
+            font-size: 12px;
+        }
+        button[id="19"]::after { content: "\f00d"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+        
+        button[id="20"] {
+            background: transparent;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        /* Table */
+        div[data-bbox="118,-230,1132,1811"] {
+            background-color: var(--content-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        tr[data-bbox="119,178,1131,79"],
+        tbody tr {
+            display: flex;
+            align-items: center;
+            padding: 0 1.5rem;
+            width: 100%;
+        }
+
+        /* Table Header */
+        tr[data-bbox="119,178,1131,79"] {
+            background-color: #F9FAFB;
+            border-bottom: 1px solid var(--border-color);
+            height: 60px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+        
+        /* Table Body */
+        tbody tr {
+            height: 96px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s ease;
+        }
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+        tbody tr.row-hover {
+            background-color: #F9FAFB;
+        }
+        
+        /* Column sizing and alignment */
+        tr > * {
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+        }
+        
+        /* Checkbox column */
+        div[data-bbox="130,208,31,16"],
+        tbody tr input[type="checkbox"],
+        div[data-bbox="130,-5,31,16"] {
+            flex: 0 0 50px;
+        }
+        tbody tr input[type="checkbox"] { margin-right: auto; }
+        
+        /* ID */
+        span[id="23"], tbody tr div[data-bbox^="182,"] { flex: 0 0 60px; }
+        /* Thumbnail */
+        span[data-bbox^="224,206"], tbody tr img { flex: 0 0 80px; text-align: center; }
+        /* Name */
+        span[id="24"], tbody tr div[data-bbox^="312,"] { flex: 2 1 200px; font-weight: 500; }
+        /* Type */
+        span[id="25"], tbody tr div[data-bbox^="404,"] { flex: 1.5 1 150px; }
+        /* Attr Set */
+        span[id="26"], tbody tr div[data-bbox^="505,"] { flex: 1 1 120px; }
+        /* SKU */
+        span[id="27"], tbody tr div[data-bbox^="585,"] { flex: 1 1 120px; }
+        /* Price */
+        span[id="28"], tbody tr div[data-bbox^="651,"] { flex: 1 1 90px; }
+        /* Qty */
+        span[id="29"], tbody tr div[data-bbox^="717,"] { flex: 1 1 90px; }
+        /* Salable Qty */
+        span[data-bbox^="792,198"], tbody tr li[data-bbox^="793,"] { flex: 1 1 120px; }
+        /* Visibility */
+        span[id="30"], tbody tr div[data-bbox^="872,"] { flex: 1.5 1 150px; }
+        /* Status */
+        span[id="31"], tbody tr div[data-bbox^="966,"] { flex: 1 1 100px; }
+        /* Websites */
+        span[id="32"], tbody tr div[data-bbox^="1038,"] { flex: 1 1 120px; }
+        /* Updated At */
+        span[id="33"], tbody tr div[data-bbox^="1115,"] { flex: 1.5 1 180px; color: var(--text-secondary); }
+        /* Action */
+        span[data-bbox^="1196,206"], tbody tr a[data-bbox^="1206,"] { flex: 0 0 80px; justify-content: center; }
+
+        img[id="36"], img[id="52"], img[id="68"] {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 0.375rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        a[data-bbox^="1206,"] {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        /* Status Badges */
+        div[data-bbox="966,81,51,18"] { /* Disabled */
+            background-color: #FEE2E2;
+            color: #B91C1C;
+            padding: 2px 8px;
+            border-radius: 99px;
+            font-weight: 500;
+            font-size: 12px;
+            display: inline-flex;
+        }
+
+        /* Hide broken table elements */
+        table tr[data-bbox="119,-34,1131,78"] {
+            display: none;
+        }
+
+        div[data-bbox="401,612,849,33"] {
+            padding: 1rem 1.5rem 1.5rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        div[data-bbox="401,612,849,33"] button {
+            padding: 0.6rem 1.25rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+        }
+
+        button[data-bbox="1056,612,75,33"] {
+            background-color: #F3F4F6;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+        button[data-bbox="1056,612,75,33"]::after {
+            content: "Search";
+        }
+        
+        button[data-bbox="1135,612,115,33"] {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        button[data-bbox="1135,612,115,33"]::after {
+            content: "Apply Filters";
+        }
+
+        /* Cleaning up some visually empty/confusing elements */
+        span[data-bbox="1201,349,1,1"],
+        span[data-bbox="1201,396,1,1"],
+        span[data-bbox="152,3,1,1"],
+        label[id="21"], button[id="22"],
+        tr[data-bbox="119,178,1131,79"] input[type="checkbox"] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body data-bbox="0,-480,1280,2252">
+    <div data-bbox="0,-1,88,721">
+        <img id="0" title="Magento Admin Panel" data-bbox="27,16,35,41"> </img>
+        <ul data-bbox="0,74,88,646">
+            <span id="1" data-bbox="14,111,60,13"> Dashboard </span>
+            <li data-bbox="0,136,88,62">
+                <span id="2" data-bbox="30,173,28,13"> Sales </span>
+                <div data-bbox="-180,-1,268,812">
+                    <strong data-bbox="-150,19,180,30"> Sales </strong>
+                    <li data-bbox="-165,91,238,308">
+                        <ul data-bbox="-165,91,238,308">
+                            <span data-bbox="-150,368,174,19"> Braintree Virtual Terminal </span>
+                        </ul>
+                    </li>
+                </div>
+            </li>
+            <li data-bbox="0,198,88,62">
+                <span id="3" data-bbox="22,235,44,13"> Catalog </span>
+                <div data-bbox="-180,-1,268,812">
+                    <strong data-bbox="-150,19,180,30"> Catalog </strong>
+                    <li data-bbox="-165,91,238,88">
+                        <ul data-bbox="-165,91,238,88"></ul>
+                    </li>
+                </div>
+            </li>
+            <li data-bbox="0,260,88,62">
+                <span id="4" data-bbox="14,297,60,13"> Customers </span>
+                <div data-bbox="-180,-1,268,812">
+                    <strong data-bbox="-150,19,180,30"> Customers </strong>
+                    <ul data-bbox="-180,91,268,720">
+                        <span data-bbox="-150,192,151,19"> Login as Customer Log </span>
+                    </ul>
+                </div>
+            </li>
+            <li data-bbox="0,322,88,62">
+                <span id="5" data-bbox="14,359,60,13"> Marketing </span>
+                <div data-bbox="-448,-1,536,812">
+                    <strong data-bbox="-418,19,448,30"> Marketing </strong>
+                    <ul data-bbox="-448,91,536,720">
+                        <ul data-bbox="-180,91,268,417">
+                            <li data-bbox="-165,91,238,230">
+                                <ul data-bbox="-165,145,238,176"></ul>
+                            </li>
+                            <li data-bbox="-165,366,238,142">
+                                <ul data-bbox="-165,420,238,88"></ul>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </li>
+            <li data-bbox="0,384,88,62">
+                <span id="6" data-bbox="19,421,50,13"> Content </span>
+                <div data-bbox="-180,-1,268,812">
+                    <strong data-bbox="-150,19,180,30"> Content </strong>
+                    <ul data-bbox="-180,91,268,720">
+                        <li data-bbox="-165,91,238,230">
+                            <ul data-bbox="-165,145,238,176"></ul>
+                        </li>
+                        <li data-bbox="-165,366,238,98"></li>
+                        <li data-bbox="-165,509,238,186">
+                            <ul data-bbox="-165,563,238,132"></ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li data-bbox="0,446,88,62">
+                <span id="7" data-bbox="22,483,44,13"> Reports </span>
+                <div data-bbox="-984,-1,1072,812">
+                    <strong data-bbox="-954,19,984,30"> Reports </strong>
+                    <ul data-bbox="-984,91,1072,720">
+                        <li data-bbox="-165,91,238,142">
+                            <span data-bbox="-150,103,159,22"> Business Intelligence </span>
+                            <ul data-bbox="-165,145,238,88"></ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li data-bbox="0,508,88,62">
+                <span id="8" data-bbox="25,545,38,13"> Stores </span>
+                <div data-bbox="-448,-1,536,812">
+                    <strong data-bbox="-418,19,448,30"> Stores </strong>
+                    <ul data-bbox="-448,91,536,720">
+                        <ul data-bbox="-180,91,268,373">
+                            <li data-bbox="-165,91,238,142">
+                                <ul data-bbox="-165,145,238,88"></ul>
+                            </li>
+                            <li data-bbox="-165,278,238,186">
+                                <ul data-bbox="-165,332,238,132"></ul>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </li>
+            <li data-bbox="0,570,88,62">
+                <span id="9" data-bbox="25,607,38,13"> System </span>
+                <div data-bbox="-448,-1,536,812">
+                    <strong data-bbox="-418,19,448,30"> System </strong>
+                    <ul data-bbox="-448,91,536,720">
+                        <ul data-bbox="-180,91,268,560">
+                            <li data-bbox="-165,91,238,186">
+                                <ul data-bbox="-165,145,238,132"></ul>
+                            </li>
+                            <li data-bbox="-165,322,238,98"></li>
+                            <li data-bbox="-165,465,238,186">
+                                <ul data-bbox="-165,519,238,132">
+                                    <span data-bbox="-150,619,158,19"> Manage Encryption Key </span>
+                                </ul>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </li>
+            <span id="10" data-bbox="32,669,24,13"> Find Partners & Extensions </span>
+        </ul>
+    </div>
+    <div data-bbox="88,-480,1192,2252">
+        <main data-bbox="88,-337,1192,1968">
+            <div title="Add Product" data-bbox="1091,16,174,46">
+                <button title="Add Product" data-bbox="1091,16,134,46">
+                    <span id="11" data-bbox="1108,27,100,22"> Add Product </span>
+                </button>
+                <button id="12" title="Add Product" data-bbox="1223,16,42,46"> </button>
+            </div>
+            <div data-bbox="118,-230,1132,1811">
+                <fieldset data-bbox="98,329,1172,283">
+                    <fieldset data-bbox="98,329,289,99">
+                        <span data-bbox="118,328,14,18"> ID </span>
+                        <div data-bbox="118,350,249,32">
+                            <span data-bbox="119,356,29,18"> from </span>
+                        </div>
+                        <div data-bbox="118,397,249,31">
+                            <span data-bbox="119,403,13,18"> to </span>
+                        </div>
+                    </fieldset>
+                    <fieldset data-bbox="387,329,289,99">
+                        <span data-bbox="407,328,33,18"> Price </span>
+                        <div data-bbox="407,350,249,32">
+                            <span data-bbox="408,356,29,18"> from </span>
+                        </div>
+                        <div data-bbox="407,397,249,31">
+                            <span data-bbox="408,403,13,18"> to </span>
+                        </div>
+                    </fieldset>
+                    <fieldset data-bbox="676,329,289,99">
+                        <span data-bbox="696,328,59,18"> Quantity </span>
+                        <div data-bbox="696,350,249,32">
+                            <span data-bbox="697,356,29,18"> from </span>
+                        </div>
+                        <div data-bbox="696,397,249,31">
+                            <span data-bbox="697,403,13,18"> to </span>
+                        </div>
+                    </fieldset>
+                    <fieldset data-bbox="965,329,289,99">
+                        <span data-bbox="985,328,104,18"> Last Updated At </span>
+                        <div data-bbox="985,350,249,32">
+                            <span data-bbox="986,356,29,18"> from </span>
+                            <div data-bbox="1047,350,187,32">
+                                <span data-bbox="1201,349,1,1"> undefined </span>
+                            </div>
+                        </div>
+                        <div data-bbox="985,397,249,31">
+                            <span data-bbox="986,403,13,18"> to </span>
+                            <div data-bbox="1047,397,187,31">
+                                <span data-bbox="1201,396,1,1"> undefined </span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div data-bbox="98,454,289,53">
+                        <span data-bbox="118,453,69,18"> Store View </span>
+                    </div>
+                    <div data-bbox="387,454,289,53">
+                        <span data-bbox="407,453,35,18"> Asset </span>
+                        <div data-bbox="407,475,249,32"> </div>
+                    </div>
+                    <div data-bbox="676,454,289,53">
+                        <span data-bbox="696,453,40,18"> Name </span>
+                    </div>
+                    <div data-bbox="965,454,289,53">
+                        <span data-bbox="985,453,31,18"> Type </span>
+                    </div>
+                    <div data-bbox="98,533,289,53">
+                        <span data-bbox="118,532,86,18"> Attribute Set </span>
+                    </div>
+                    <div data-bbox="387,533,289,52">
+                        <span data-bbox="407,532,26,18"> SKU </span>
+                    </div>
+                    <div data-bbox="676,533,289,53">
+                        <span data-bbox="696,532,55,18"> Visibility </span>
+                    </div>
+                    <div data-bbox="965,533,289,53">
+                        <span data-bbox="985,532,42,18"> Status </span>
+                    </div>
+                </fieldset>
+                <div data-bbox="401,612,849,33">
+                    <button type="button" data-bbox="1056,612,75,33"> </button>
+                    <button type="button" data-bbox="1135,612,115,33"> </button>
+                </div>
+                <div data-bbox="118,81,1132,176">
+                    <div data-bbox="118,81,1132,54">
+                        <div data-bbox="118,81,189,33">
+                            <button title="Select Items" data-bbox="118,81,189,33">
+                                <span id="13" data-bbox="133,88,49,19"> Actions </span>
+                            </button>
+                        </div>
+                        <div data-bbox="329,81,197,33"> 16 <span data-bbox="350,88,95,19"> records found </span> <span data-bbox="465,88,56,19"> selected </span> </div>
+                        <div data-bbox="795,76,38,59">
+                            <button id="14" data-bbox="795,76,38,49"> </button> <span data-bbox="818,76,22,21"> 1 </span>
+                        </div>
+                        <div data-bbox="848,76,38,52">
+                            <label id="15" title="Search" data-bbox="848,76,38,52"> </label>
+                        </div>
+                        <div data-bbox="901,76,107,52">
+                            <div data-bbox="901,78,40,48">
+                                <button id="16" type="button" data-bbox="901,78,40,48">
+                                    <span data-bbox="934,91,0,18"> Default View </span>
+                                </button>
+                            </div>
+                            <div data-bbox="956,76,38,52">
+                                <button id="17" type="button" data-bbox="956,76,38,52">
+                                    <span data-bbox="985,89,0,18"> Columns </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div data-bbox="1012,81,238,35">
+                            <div data-bbox="1012,81,87,35">
+                                <input type="text" data-value="100" data-bbox="1028,88,60,21">
+                                <button id="18" type="button" data-bbox="1054,82,44,33">
+                                    <span data-bbox="1067,98,1,1"> Select </span>
+                                </button>
+                            </div>
+                            <div data-bbox="1133,82,117,33">
+                                <button title="Previous Page" type="button" data-bbox="1133,82,44,33"> </button>
+                                <button title="Next Page" type="button" data-bbox="1206,82,44,33"> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-bbox="118,134,1132,23">
+                        <span data-bbox="118,133,76,18"> Active filters: </span>
+                        <li data-bbox="217,134,217,18">
+                            <span data-bbox="217,133,41,18"> Name: </span> <span data-bbox="261,133,147,18"> Ajax Full-Zip Sweatshirt </span>
+                            <button id="19" type="button" data-bbox="416,135,18,17"> </button>
+                        </li>
+                        <button id="20" type="button" data-bbox="1167,134,83,19"> Clear all </button>
+                    </div>
+                    <tr data-bbox="119,178,1131,79">
+                        <div data-bbox="130,208,31,16">
+                            <input type="checkbox" data-value="on" data-bbox="145,209,13,13" data-status="not-checked">
+                            <label id="21" data-bbox="130,209,16,16"> </label>
+                            <button id="22" data-bbox="145,209,16,16"> <span data-bbox="152,216,1,1"> Options </span> </button>
+                        </div>
+                        <span id="23" data-bbox="182,206,21,18"> ID </span> <span data-bbox="224,206,67,18"> Thumbnail </span> <span id="24" data-bbox="312,206,71,18"> Name </span> <span id="25" data-bbox="404,206,80,18"> Type </span> <span id="26" data-bbox="505,198,58,35"> Attribute Set </span> <span id="27" data-bbox="584,206,28,18"> SKU </span> <span id="28" data-bbox="650,206,45,18"> Price </span> <span id="29" data-bbox="716,206,55,18"> Quantity </span> <span data-bbox="792,198,58,35"> Salable Quantity </span> <span id="30" data-bbox="871,206,73,18"> Visibility </span> <span id="31" data-bbox="965,206,51,18"> Status </span> <span id="32" data-bbox="1037,206,57,18"> Websites </span> <span id="33" data-bbox="1115,189,60,53"> Last Updated At </span> <span data-bbox="1196,206,43,18"> Action </span>
+                    </tr>
+                </div>
+                <table data-bbox="118,-35,1132,1606">
+                    <tr data-bbox="119,-34,1131,78">
+                        <div data-bbox="130,-5,31,16">
+                            <input type="checkbox" data-value="on" data-bbox="145,-4,13,13" data-status="not-checked">
+                            <span data-bbox="152,3,1,1"> Options </span>
+                        </div>
+                        <span data-bbox="182,-6,21,17"> ID </span> <span data-bbox="224,-6,67,17"> Thumbnail </span> <span data-bbox="312,-6,71,17"> Name </span> <span data-bbox="404,-6,80,17"> Type </span> <span data-bbox="505,-15,59,35"> Attribute Set </span> <span data-bbox="585,-6,28,17"> SKU </span> <span data-bbox="651,-6,45,17"> Price </span> <span data-bbox="717,-6,55,17"> Quantity </span> <span data-bbox="793,-15,58,35"> Salable Quantity </span> <span data-bbox="872,-6,73,17"> Visibility </span> <span data-bbox="966,-6,51,17"> Status </span> <span data-bbox="1038,-6,56,17"> Websites </span> <span data-bbox="1115,-24,60,53"> Last Updated At </span> <span data-bbox="1196,-6,43,17"> Action </span>
+                    </tr>
+                    <tbody data-bbox="119,44,1131,1527">
+                        <tr data-bbox="119,44,1131,96">
+                            <input value="238" type="checkbox" data-bbox="137,83,13,13" data-status="not-checked">
+                            <div data-bbox="182,81,21,18"> 238 </div>
+                            <div></div>
+                            <div data-bbox="312,72,71,36"> Ajax Full-Zip Sweatshirt </div>
+                            <div data-bbox="404,72,80,36"> Configurable Product </div>
+                            <div data-bbox="505,81,59,18"> Top </div>
+                            <div data-bbox="585,81,45,18"> MH12 </div>
+                            <div data-bbox="651,81,45,18"> $69.00 </div>
+                            <div data-bbox="717,81,55,18"> 0.0000 </div>
+                            <div></div>
+                            <div data-bbox="872,72,73,36"> Catalog, Search </div>
+                            <div data-bbox="966,81,51,18"> Disabled </div>
+                            <div data-bbox="1038,72,56,36"> Main Website </div>
+                            <div data-bbox="1115,55,60,70"> Apr 13, 2024 12:09:18 AM </div>
+                            <a data-bbox="1206,83,23,18"> Edit </a>
+                        </tr>
+                        <tr data-bbox="119,140,1131,95">
+                            <input value="232" type="checkbox" data-bbox="137,178,13,13" data-status="not-checked">
+                            <div data-bbox="182,177,21,17"> 232 </div>
+                            <div></div>
+                            <div data-bbox="312,159,71,53"> Ajax Full-Zip Sweatshirt -L-Blue </div>
+                            <div data-bbox="404,168,80,35"> Simple Product </div>
+                            <div data-bbox="505,177,59,17"> Top </div>
+                            <div data-bbox="585,168,45,35"> MH12-L-Blue </div>
+                            <div data-bbox="651,177,45,17"> $69.00 </div>
+                            <div data-bbox="717,177,55,17"> 100.0000 </div>
+                            <li data-bbox="793,161,58,36">
+                                <strong data-bbox="793,160,50,18"> Default Stock </strong> <span data-bbox="835,178,7,18"> 0 </span>
+                            </li>
+                            <div data-bbox="872,168,73,35"> Not Visible Individually </div>
+                            <div data-bbox="966,177,51,17"> Disabled </div>
+                            <div data-bbox="1038,168,56,35"> Main Website </div>
+                            <div data-bbox="1115,150,60,71"> Apr 13, 2024 12:09:18 AM </div>
+                            <a data-bbox="1206,178,23,18"> Edit </a>
+                        </tr>
+                        <tr data-bbox="119,235,1131,96">
+                            <input id="34" value="233" type="checkbox" data-bbox="137,274,13,13" data-status="checked">
+                            <div id="35" data-bbox="182,272,21,18"> 233 </div>
+                            <img id="36" src="https://picsum.photos/seed/product36/50/50" data-bbox="233,256,50,50">
+                            <div id="37" data-bbox="312,254,71,53"> Ajax Full-Zip Sweatshirt -L-Green </div>
+                            <div id="38" data-bbox="404,263,80,35"> Simple Product </div>
+                            <div id="39" data-bbox="505,272,59,18"> Top </div>
+                            <div id="40" data-bbox="585,254,45,53"> MH12-L-Green </div>
+                            <div id="41" data-bbox="651,272,45,18"> $69.00 </div>
+                            <div id="42" data-bbox="717,272,55,18"> 100.0000 </div>
+                            <li data-bbox="793,257,58,35">
+                                <strong id="43" data-bbox="793,256,50,18"> Default Stock </strong> <span id="44" data-bbox="835,273,7,18"> 0 </span>
+                            </li>
+                            <div id="45" data-bbox="872,263,73,35"> Not Visible Individually </div>
+                            <div id="46" data-bbox="966,272,51,18"> Disabled </div>
+                            <div id="47" data-bbox="1038,263,56,35"> Main Website </div>
+                            <div id="48" data-bbox="1115,245,60,71"> Apr 13, 2024 12:09:18 AM </div>
+                            <a id="49" data-bbox="1206,273,23,18"> Edit </a>
+                        </tr>
+                        <tr data-bbox="119,331,1131,95">
+                            <input id="50" value="234" type="checkbox" data-bbox="137,369,13,13" data-status="not-checked">
+                            <div id="51" data-bbox="182,367,21,18"> 234 </div>
+                            <img id="52" src="https://picsum.photos/seed/product52/50/50" data-bbox="233,351,50,50">
+                            <div id="53" data-bbox="312,350,71,53"> Ajax Full-Zip Sweatshirt -L-Red </div>
+                            <div id="54" data-bbox="404,358,80,36"> Simple Product </div>
+                            <div id="55" data-bbox="505,367,59,18"> Top </div>
+                            <div id="56" data-bbox="585,358,45,36"> MH12-L-Red </div>
+                            <div id="57" data-bbox="651,367,45,18"> $69.00 </div>
+                            <div id="58" data-bbox="717,367,55,18"> 100.0000 </div>
+                            <li data-bbox="793,352,58,35">
+                                <strong id="59" data-bbox="793,351,50,18"> Default Stock </strong> <span id="60" data-bbox="835,369,7,18"> 0 </span>
+                            </li>
+                            <div id="61" data-bbox="872,358,73,36"> Not Visible Individually </div>
+                            <div id="62" data-bbox="966,367,51,18"> Disabled </div>
+                            <div id="63" data-bbox="1038,358,56,36"> Main Website </div>
+                            <div id="64" data-bbox="1115,341,60,71"> Apr 13, 2024 12:09:18 AM </div>
+                            <a id="65" data-bbox="1206,369,23,18"> Edit </a>
+                        </tr>
+                        <tr data-bbox="119,426,1131,96">
+                            <input id="66" value="229" type="checkbox" data-bbox="137,465,13,13" data-status="not-checked">
+                            <div id="67" data-bbox="182,463,21,17"> 229 </div>
+                            <img id="68" src="https://picsum.photos/seed/product68/50/50" data-bbox="233,447,50,50">
+                            <div id="69" data-bbox="312,445,71,53">
+                            </div>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tableRows = document.querySelectorAll('tbody[data-bbox="119,44,1131,1527"] > tr');
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', () => {
+                    row.classList.add('row-hover');
+                });
+                row.addEventListener('mouseleave', () => {
+                    row.classList.remove('row-hover');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap - Interactive Map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #3b82f6;
+            --primary-color-dark: #2563eb;
+            --secondary-color: #10b981;
+            --secondary-color-dark: #059669;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--bg-light);
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: var(--primary-color-dark);
+        }
+
+        h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); }
+        h4 { font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); }
+        p { line-height: 1.6; color: var(--text-secondary); }
+
+        .main-container {
+            display: flex;
+            flex-grow: 1;
+            height: calc(100vh - 55px);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            height: 55px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        header #0 {
+            height: 30px;
+            width: auto;
+            vertical-align: middle;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        header nav a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        header nav a:hover {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        
+        .edit-button-group {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .edit-button-group a, .edit-button-group button {
+            padding: 0 12px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+        }
+
+        .edit-button-group a {
+            border-right: 1px solid var(--border-color);
+        }
+
+        .edit-button-group button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        .user-actions a {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        #12 { /* Sign Up */
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        #12:hover {
+            background-color: var(--primary-color-dark);
+            color: white;
+        }
+        #11 { color: var(--text-primary); }
+
+        .sidebar {
+            width: 350px;
+            flex-shrink: 0;
+            background-color: var(--bg-white);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-search {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .search-form {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+            flex-grow: 1;
+        }
+        
+        #13 {
+             position: absolute;
+             top: -16px;
+             left: 0;
+             font-size: 0.7rem;
+             color: var(--text-secondary);
+             font-weight: 500;
+        }
+
+        #14 { /* Search input */
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        #14:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+
+        #15 { /* Go button */
+            padding: 8px 12px;
+            border: none;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        #15:hover { background-color: var(--secondary-color-dark); }
+        
+        .directions-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 39px;
+            width: 39px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-secondary);
+        }
+
+        .directions-link:hover {
+            background-color: var(--bg-light);
+            color: var(--text-primary);
+        }
+
+        .sidebar-content {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .sidebar-results, .sidebar-welcome { padding: 0 16px; }
+        
+        .hidden { display: none; }
+        
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 24px;
+            margin-bottom: 16px;
+        }
+
+        #17 {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            padding: 4px;
+        }
+
+        h4 a { font-weight: 600; }
+
+        .results-list {
+            list-style: none;
+            margin-top: 24px;
+        }
+
+        .results-list li {
+            padding: 16px 8px;
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .results-list li.hovered, .results-list li:hover { background-color: var(--bg-light); }
+        .results-list li:first-child { border-top: 1px solid var(--border-color); }
+        .results-list li a {
+            display: block;
+            margin-top: 4px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        
+        .more-results-wrapper { padding: 16px 0 24px 0; }
+        #22 {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            font-weight: 600;
+            border-radius: 6px;
+            background-color: var(--bg-light);
+        }
+        #22:hover { background-color: var(--border-color); }
+        
+        .sidebar-welcome h2 { padding-top: 24px; margin-bottom: 16px; line-height: 1.2; }
+        .sidebar-welcome p { margin-bottom: 24px; }
+        
+        .map-container {
+            flex-grow: 1;
+            position: relative;
+            background-color: #d4e3e3;
+            background-image: url('https://a.tile.openstreetmap.org/14/4198/2723.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .map-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .map-controls span {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            cursor: pointer;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .map-controls span:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .map-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 12px 16px;
+            pointer-events: none;
+        }
+
+        .map-scale {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(4px);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: 1px solid rgba(0,0,0,0.1);
+            pointer-events: auto;
+        }
+
+        .map-attribution {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(4px);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            pointer-events: auto;
+        }
+        .map-attribution a { color: var(--primary-color); margin: 0 4px; }
+    </style>
+</head>
+<body data-bbox="0,0,1280,55">
+    <header data-bbox="0,0,1280,55">
+        <source type="image/svg+xml" data-bbox="10,17,0,22">
+            <img id="0" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgOTAuMzY5IDkwLjM2OSI+PHBhdGggZD0iTTQ1LjE4NCAwQzIwLjIzIDAgMCAyMC4yMyAwIDQ1LjE4NGMwIDI0Ljk1MyAyMC4yMyA0NS4xODUgNDUuMTg0IDQ1LjE4NSA5LjEzNyAwIDE3LjU5LTEuODIgMjUuMTA0LTUuMDkzbC04Ljc0Ny0yMS44MjQtOS4zNzcgOC45OC0xMy4wNi0xMi44OTItOC4yNTcgOC4zODIgMy45MDYgOC44NDItNy4yNDcgNS4xNDItMi40Mi0yLjQyIDIuNTQ4LTYuNzExLTUuMDUxLTguNTI5LTcuNTYgNC4zMTUtOS41NjQtMS4yNjYtNC4xMzQtNi44NDItNy4zNi0xLjI0Ny0yLjczMiA2LjA3LTguNDQ2IDYuMTgyLTEuMTE2IDEuODg4LTguOTQ1IDcuMzctOC45NiAyLjM1Mi4zNzQgMS4zMy0xLjUxMyAyLjY2MS0yLjU0NyAyLjU1OC0uNjIyIDEuNTc3IDEuNjIgNC4zODIgMS4xMyA2LjY4Ny0yLjk0NyA1Ljg3NS0yLjI5IDQuOTQtNS4xNjEgNC4wMTgtOC4xNjcgMy4yOC0xMi4wODItMS45MiA3LjY0Ni01LjU1MyA0LjM1NC01LjYxNy0xLjUxOC01LjQ1My00LjM2NS03LjQ1IDQuNTg3LTEuNDQ3IDYuMDIzLTYuNDYzIDUuMDUzLTYuMDIgMS44ODMtLjEzIDQuMTEzIDEuODUzIDYuMzggMy43MzcgMi4yNjYgMS44ODQgMS41MjcgNC4zODMtLjIyIDYuMDY0LTEuNzQ1IDEuNjgxLTYuODU3IDIuMDc2LTguNjgtLjE0LTguMzcyLTEwLjMyNi0xNC40NDYtMTkuOTU0LTE0LjQ0Ni0zMi4xMTcgMC0xOS4zMzQgMTUuNzEzLTM1LjA0NyAzNS4wNDctMzUuMDQ3czM1LjA0NyAxNS43MTMgMzUuMDQ3IDM1LjA0N2MwIDguODgyLTMuMzI2IDE2LjkzNi04Ljg2MyAyMy4wN2wtNy4xODQtMjAuNjQ2IDEwLjU4OC0uNzE4LTYuNTg1LTEwLjQzLTguODQ4IDQuODM2LTMuNjczLTUuNzQ3LTUuMzcyIDYuODQ1IDEwLjQgOS4zMTktMTMuNTIgMTUuNzctMTEuNzc0LTcuMDUtNS45MzYgMTEuMDMgMS42NDIgMS4zMyA4LjAxOC03Ljg5MiAxMC40NSA4Ljg1QzY0LjQxOSA4Ni4zNzcgNTUuNDc3IDkwLjM3IDQ1LjE4NCA5MC4zNyIgZmlsbD0iIzVBRTYwMCIvPjwvc3ZnPg==" data-bbox="10,13,30,30">
+        </source>
+        <nav data-bbox="178,0,227,55">
+            <div data-bbox="188,10,207,35">
+                <div class="edit-button-group" data-bbox="188,10,77,35">
+                    <a id="1" data-bbox="188,10,50,35">Edit</a>
+                    <button id="2" type="button" data-bbox="237,10,28,35"><i class="fas fa-caret-down"></i></button>
+                </div>
+                <a id="3" data-bbox="264,10,68,35">History</a>
+                <a id="4" data-bbox="331,10,64,35">Export</a>
+            </div>
+        </nav>
+        <nav data-bbox="708,0,572,55">
+            <ul data-bbox="722,13,405,27">
+                <a id="5" data-bbox="722,13,77,27">GPS Traces</a>
+                <a id="6" data-bbox="803,13,82,27">User Diaries</a>
+                <a id="7" data-bbox="889,13,87,27">Communities</a>
+                <a id="8" data-bbox="980,13,63,27">Copyright</a>
+                <a id="9" data-bbox="1047,13,34,27">Help</a>
+                <a id="10" data-bbox="1085,13,42,27">About</a>
+            </ul>
+            <div class="user-actions" data-bbox="1135,10,135,35">
+                <a id="11" data-bbox="1135,10,63,35">Log In</a>
+                <a id="12" data-bbox="1197,10,73,35">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    <div class="main-container" data-bbox="0,55,1280,665">
+        <div class="sidebar" data-bbox="0,55,350,665">
+            <div class="sidebar-search" data-bbox="0,55,350,47">
+                <div class="search-form" data-bbox="4,63,342,31">
+                    <div class="search-input-wrapper" data-bbox="8,63,288,31">
+                        <div data-bbox="8,63,254,31">
+                            <a id="13" title="Describe the current location using the search engine" data-bbox="194,69,62,15">Where is this?</a>
+                            <input id="14" type="text" placeholder="Search" data-value="School near Cape Cod Museum of Natural History" data-bbox="8,63,254,31">
+                        </div>
+                        <input id="15" value="Go" type="submit" data-bbox="261,63,35,31">
+                    </div>
+                    <a class="directions-link" title="Find directions between two points" data-bbox="304,63,38,31">
+                        <i id="16" data-bbox="313,69,20,20" class="fas fa-route"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar-content">
+                <div class="sidebar-results" data-bbox="0,102,350,453">
+                    <div class="results-header" data-bbox="16,118,318,47">
+                        <h2 data-bbox="16,118,297,39">Search Results</h2>
+                        <button id="17" type="button" data-bbox="313,118,21,21"><i class="fas fa-times"></i></button>
+                    </div>
+                    <h4 data-bbox="16,165,318,57">Results from <a id="18" data-bbox="157,164,164,30">OpenStreetMap Nominatim</a></h4>
+                    <div data-bbox="0,230,350,293">
+                        <ul class="results-list" data-bbox="0,230,350,239">
+                            <li data-bbox="0,230,350,80">School<a id="19" data-bbox="62,240,258,17">Stony Brook Elementary School, Cape Cod Rail Trail, Brewster, Barnstable County, Massachusetts, 02631, United States</a></li>
+                            <li data-bbox="0,310,350,80">School<a id="20" data-bbox="62,320,217,17">Latham School, 1646, Main Street, Brewster, Barnstable County, Massachusetts, 02631, United States</a></li>
+                            <li data-bbox="0,390,350,79">School<a id="21" data-bbox="62,400,261,17">Eddy Elementary School, Main Street, East Brewster, Brewster, Barnstable County, Massachusetts, 02631, United States</a></li>
+                        </ul>
+                        <div class="more-results-wrapper" data-bbox="0,485,350,38">
+                            <a id="22" data-bbox="118,485,114,38">More results</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-welcome hidden" data-bbox="0,102,350,303">
+                    <div data-bbox="16,118,318,85">
+                        <h2 data-bbox="16,118,297,77">Welcome to OpenStreetMap!</h2>
+                    </div>
+                    <div data-bbox="16,203,318,186">
+                        <p data-bbox="16,203,318,70">OpenStreetMap is a map of the world, created by people like you and free to use under an open license.</p>
+                        <p data-bbox="16,289,318,46">Hosting is supported by</p>
+                        <div data-bbox="12,351,326,38"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-container" data-bbox="350,55,930,665">
+            <div data-bbox="350,55,930,0">
+                <div class="map-controls">
+                    <span id="23" data-bbox="1250,75,20,20"><i class="fas fa-plus"></i></span>
+                    <span id="24" data-bbox="1250,115,20,20"><i class="fas fa-minus"></i></span>
+                    <span id="25" data-bbox="1250,155,20,20"><i class="fas fa-crosshairs"></i></span>
+                    <span id="26" data-bbox="1250,205,20,20"><i class="fas fa-layer-group"></i></span>
+                    <span id="27" data-bbox="1250,245,20,20"><i class="fas fa-list-ul"></i></span>
+                    <span id="28" data-bbox="1250,285,20,20"><i class="fas fa-share-alt"></i></span>
+                    <span id="29" data-bbox="1250,335,20,20"><i class="fas fa-ruler-horizontal"></i></span>
+                    <span id="30" data-bbox="1250,385,20,20"><i class="fas fa-expand"></i></span>
+                </div>
+                <div class="map-footer">
+                    <div class="map-scale" data-bbox="355,681,68,34">
+                        <div data-bbox="355,681,56,18">50 m</div>
+                        <div data-bbox="355,697,68,18">200 ft</div>
+                    </div>
+                    <div class="map-attribution" data-bbox="874,703,406,17">©<a id="31" data-bbox="891,704,151,14">OpenStreetMap contributors</a><a id="32" data-bbox="1056,704,90,14">Make a Donation</a><a id="33" data-bbox="1153,704,122,14">Website and API terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const closeButton = document.getElementById('17');
+        const searchResultsPanel = document.querySelector('.sidebar-results');
+        const welcomePanel = document.querySelector('.sidebar-welcome');
+        const resultItems = document.querySelectorAll('.results-list li');
+
+        // Restore search input value from data-value attribute
+        const searchInput = document.getElementById('14');
+        if (searchInput && searchInput.dataset.value) {
+            searchInput.value = searchInput.dataset.value;
+        }
+
+        if (closeButton && searchResultsPanel && welcomePanel) {
+            closeButton.addEventListener('click', () => {
+                searchResultsPanel.classList.add('hidden');
+                welcomePanel.classList.remove('hidden');
+            });
+        }
+        
+        resultItems.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.classList.add('hovered');
+            });
+            item.addEventListener('mouseout', () => {
+                item.classList.remove('hovered');
+            });
+        });
+    });
+</script>
+</body>
+</html>

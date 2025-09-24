@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" data-bbox="0,-480,1280,720">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders / Magento Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --sidebar-bg: #2d353d;
+            --sidebar-text: #aeb2b7;
+            --sidebar-text-hover: #ffffff;
+            --sidebar-active-bg: #ff5501;
+            --main-bg: #f4f6f8;
+            --panel-bg: #ffffff;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --primary-color: #ff5501;
+            --primary-color-hover: #e04a00;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--main-bg);
+            color: var(--text-primary);
+            display: flex;
+            font-size: 14px;
+        }
+
+        /* --- Main Layout --- */
+        .sidebar {
+            width: 88px;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            margin-left: 88px;
+            padding: 24px 32px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Sidebar Styles --- */
+        .logo {
+            width: 40px;
+            height: auto;
+            margin-bottom: 25px;
+        }
+
+        .nav-list {
+            list-style: none;
+            width: 100%;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--sidebar-text);
+            padding: 15px 0;
+            text-align: center;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--sidebar-text-hover);
+        }
+
+        .nav-link.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .nav-link i {
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .nav-link span {
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .nav-item > div {
+            display: none; /* Hide submenus by default */
+        }
+
+        /* --- Main Content Header --- */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 18px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-color-hover);
+            border-color: var(--primary-color-hover);
+        }
+
+        .btn-secondary {
+            background-color: var(--panel-bg);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #f9fafb;
+        }
+
+        .btn-icon {
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            background: #fff;
+            color: var(--text-secondary);
+            border-radius: 6px;
+        }
+        .btn-icon:hover {
+            background: #f9fafb;
+            color: var(--text-primary);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        /* --- Panel/Card Styles --- */
+        .panel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
+        }
+
+        /* --- Filters Panel --- */
+        .filters-panel {
+            padding: 24px;
+        }
+        
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .form-group .input-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .input-group span {
+            color: var(--text-secondary);
+        }
+
+        .form-control, .select-control {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-control:focus, .select-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(255, 85, 1, 0.1);
+        }
+
+        .date-input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        .date-input-wrapper i {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+        
+        .filter-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 24px;
+        }
+
+        /* --- Table Controls --- */
+        .table-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+        }
+
+        .controls-left, .controls-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .records-found {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .records-found strong {
+            color: var(--text-primary);
+        }
+        .pagination-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .per-page-select {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        #per-page {
+            width: 70px;
+        }
+
+        /* Active Filters */
+        .active-filters {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 24px 16px;
+        }
+        .active-filters strong {
+            font-weight: 500;
+        }
+        .filter-tag {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #eef2ff;
+            color: #4338ca;
+            padding: 4px 8px;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .filter-tag span {
+            color: #6366f1;
+        }
+        .filter-tag button {
+            background: none;
+            border: none;
+            color: #4338ca;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
+        .clear-all-btn {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* --- Data Table --- */
+        .data-grid-wrapper {
+            overflow-x: auto;
+        }
+        .data-grid {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            background: var(--panel-bg);
+        }
+
+        .data-grid th, .data-grid td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        .data-grid thead {
+            background-color: #f9fafb;
+        }
+
+        .data-grid th {
+            font-weight: 600;
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .data-grid tbody tr:hover {
+            background-color: #f9fafb;
+        }
+
+        .data-grid td a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .data-grid td a:hover {
+            text-decoration: underline;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .status-complete {
+            background-color: #def7ec;
+            color: #03543f;
+        }
+        
+        .checkbox-cell {
+            width: 40px;
+            text-align: center;
+        }
+        input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body data-bbox="0,-480,1280,2953">
+    <nav class="sidebar" data-bbox="0,-1,88,721">
+        <svg id="0" title="Magento Admin Panel" data-bbox="27,16,35,41" class="logo" viewBox="0 0 256 309" xmlns="http://www.w3.org/2000/svg"><path d="M128 0l128 74v161l-128 74L0 235V74L128 0z" fill="#f46f25"></path><path d="M128 31l96 55v108l-96 55-96-55V86l96-55z" fill="#fff"></path><path d="M128 42l-24 14 24 14 71-41-71-41-72 41 72 41 24-14-24-14-47 27 47 27v48l-48-28v-48l-24 14v74l72 42 72-42V86l-72-41-24 14zm0 137l-48-28v-47l48 27v48z" fill="#f46f25"></path></svg>
+        <ul class="nav-list" data-bbox="0,74,88,646">
+            <li class="nav-item">
+                <a class="nav-link"><i class="fas fa-tachometer-alt"></i><span id="1" data-text="Dashboard" data-bbox="14,111,60,13">Dashboard</span></a>
+            </li>
+            <li class="nav-item" data-bbox="0,136,88,62">
+                <a class="nav-link active"><i class="fas fa-shopping-cart"></i><span id="2" data-text="Sales" data-bbox="30,173,28,13">Sales</span></a>
+                <div data-bbox="-180,-1,268,812"> <strong data-text="Sales" data-bbox="-150,19,180,30"> Sales </strong> <li data-bbox="-165,91,238,308"> <ul data-bbox="-165,91,238,308"> <span data-text="Braintree Virtual Terminal" data-bbox="-150,368,174,19"> Braintree Virtual Terminal </span> </ul> </li> </div>
+            </li>
+            <li class="nav-item" data-bbox="0,198,88,62">
+                <a class="nav-link"><i class="fas fa-tags"></i><span id="3" data-text="Catalog" data-bbox="22,235,44,13">Catalog</span></a>
+                <div data-bbox="-180,-1,268,812"> <strong data-text="Catalog" data-bbox="-150,19,180,30"> Catalog </strong> <li data-bbox="-165,91,238,88"> <ul data-bbox="-165,91,238,88"> </ul> </li> </div>
+            </li>
+            <li class="nav-item" data-bbox="0,260,88,62">
+                <a class="nav-link"><i class="fas fa-users"></i><span id="4" data-text="Customers" data-bbox="14,297,60,13">Customers</span></a>
+                <div data-bbox="-180,-1,268,812"> <strong data-text="Customers" data-bbox="-150,19,180,30"> Customers </strong> <ul data-bbox="-180,91,268,720"> <span data-text="Login as Customer Log" data-bbox="-150,192,151,19"> Login as Customer Log </span> </ul> </div>
+            </li>
+            <li class="nav-item" data-bbox="0,322,88,62">
+                <a class="nav-link"><i class="fas fa-bullhorn"></i><span id="5" data-text="Marketing" data-bbox="14,359,60,13">Marketing</span></a>
+                <div data-bbox="-448,-1,536,812"> <strong data-text="Marketing" data-bbox="-418,19,448,30"> Marketing </strong> <ul data-bbox="-448,91,536,720"> <ul data-bbox="-180,91,268,417"> <li data-bbox="-165,91,238,230"> <ul data-bbox="-165,145,238,176"> </ul> </li> <li data-bbox="-165,366,238,142"> <ul data-bbox="-165,420,238,88"> </ul> </li> </ul> </ul> </div>
+            </li>
+            <li class="nav-item" data-bbox="0,384,88,62">
+                <a class="nav-link"><i class="fas fa-file-alt"></i><span id="6" data-text="Content" data-bbox="19,421,50,13">Content</span></a>
+                <div data-bbox="-180,-1,268,812"> <strong data-text="Content" data-bbox="-150,19,180,30"> Content </strong> <ul data-bbox="-180,91,268,720"> <li data-bbox="-165,91,238,230"> <ul data-bbox="-165,145,238,176"> </ul> </li> <li data-bbox="-165,366,238,98"> </li> <li data-bbox="-165,509,238,186"> <ul data-bbox="-165,563,238,132"> </ul> </li> </ul> </div>
+            </li>
+            <li class="nav-item" data-bbox="0,446,88,62">
+                <a class="nav-link"><i class="fas fa-chart-bar"></i><span id="7" data-text="Reports" data-bbox="22,483,44,13">Reports</span></a>
+                <div data-bbox="-984,-1,1072,812"> <strong data-text="Reports" data-bbox="-954,19,984,30"> Reports </strong> <ul data-bbox="-984,91,1072,720"> <li data-bbox="-165,91,238,142"> <span data-text="Business Intelligence" data-bbox="-150,103,159,22"> Business Intelligence </span> <ul data-bbox="-165,145,238,88"> </ul> </li> </ul> </div>
+            </li>
+            <li class="nav-item" data-bbox="0,508,88,62">
+                <a class="nav-link"><i class="fas fa-store"></i><span id="8" data-text="Stores" data-bbox="25,545,38,13">Stores</span></a>
+                <div data-bbox="-448,-1,536,812"> <strong data-text="Stores" data-bbox="-418,19,448,30"> Stores </strong> <ul data-bbox="-448,91,536,720"> <ul data-bbox="-180,91,268,373"> <li data-bbox="-165,91,238,142"> <ul data-bbox="-165,145,238,88"> </ul> </li> <li data-bbox="-165,278,238,186"> <ul data-bbox="-165,332,238,132"> </ul> </li> </ul> </ul> </div>
+            </li>
+            <li class="nav-item" data-bbox="0,570,88,62">
+                <a class="nav-link"><i class="fas fa-cogs"></i><span id="9" data-text="System" data-bbox="25,607,38,13">System</span></a>
+                <div data-bbox="-448,-1,536,812"> <strong data-text="System" data-bbox="-418,19,448,30"> System </strong> <ul data-bbox="-448,91,536,720"> <ul data-bbox="-180,91,268,560"> <li data-bbox="-165,91,238,186"> <ul data-bbox="-165,145,238,132"> </ul> </li> <li data-bbox="-165,322,238,98"> </li> <li data-bbox="-165,465,238,186"> <ul data-bbox="-165,519,238,132"> <span data-text="Manage Encryption Key" data-bbox="-150,619,158,19"> Manage Encryption Key </span> </ul> </li> </ul> </ul> </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"><i class="fas fa-puzzle-piece"></i><span id="10" data-text="Find Partners & Extensions" data-bbox="32,669,24,13">Partners</span></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="main-content" data-bbox="88,-480,1192,2953">
+        <header class="page-header">
+            <h1 class="page-title">Orders</h1>
+            <button title="Create New Order" type="button" class="btn btn-primary" data-bbox="1086,16,179,46">
+                <i class="fas fa-plus"></i>
+                <span id="11" data-text="Create New Order" data-bbox="1103,27,145,22">Create New Order</span>
+            </button>
+        </header>
+
+        <main data-bbox="88,-337,1192,2670">
+            <div class="panel filters-panel" data-bbox="118,-230,1132,2513">
+                <fieldset class="filters-grid" data-bbox="98,329,1172,282">
+                    <div class="form-group" data-bbox="98,329,289,99">
+                        <label><span data-text="Purchase Date" data-bbox="118,328,96,18">Purchase Date</span></label>
+                        <div class="input-group" data-bbox="118,350,249,32">
+                            <span data-text="from" data-bbox="119,356,29,18">From</span>
+                            <div class="date-input-wrapper" data-bbox="180,350,187,32">
+                                <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span data-text="undefined" data-bbox="334,349,1,1" style="display:none;"></span>
+                            </div>
+                        </div>
+                        <div class="input-group" data-bbox="118,397,249,31" style="margin-top: 8px;">
+                            <span data-text="to" data-bbox="119,403,13,18">To</span>
+                            <div class="date-input-wrapper" data-bbox="180,397,187,31">
+                                <input type="text" class="form-control" placeholder="MM/DD/YYYY">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span data-text="undefined" data-bbox="334,396,1,1" style="display:none;"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" data-bbox="387,329,289,99">
+                        <label><span data-text="Grand Total (Base)" data-bbox="407,328,118,18">Grand Total (Base)</span></label>
+                        <div class="input-group" data-bbox="407,350,249,32"><span data-text="from" data-bbox="408,356,29,18">From</span><input type="text" class="form-control" placeholder="0.00"></div>
+                        <div class="input-group" data-bbox="407,397,249,31" style="margin-top: 8px;"><span data-text="to" data-bbox="408,403,13,18">To</span><input type="text" class="form-control" placeholder="1000.00"></div>
+                    </div>
+                    <div class="form-group" data-bbox="676,329,289,99">
+                        <label><span data-text="Grand Total (Purchased)" data-bbox="696,328,156,18">Grand Total (Purchased)</span></label>
+                        <div class="input-group" data-bbox="696,350,249,32"><span data-text="from" data-bbox="697,356,29,18">From</span><input type="text" class="form-control" placeholder="0.00"></div>
+                        <div class="input-group" data-bbox="696,397,249,31" style="margin-top: 8px;"><span data-text="to" data-bbox="697,403,13,18">To</span><input type="text" class="form-control" placeholder="1000.00"></div>
+                    </div>
+                    <div class="form-group" data-bbox="968,329,289,53"><label><span data-text="Purchase Point" data-bbox="988,328,99,18">Purchase Point</span></label><input type="text" class="form-control"></div>
+                    <div class="form-group" data-bbox="98,454,289,53"><label><span data-text="ID" data-bbox="118,453,14,18">ID</span></label><input type="text" class="form-control"></div>
+                    <div class="form-group" data-bbox="387,454,289,53"><label><span data-text="Bill-to Name" data-bbox="407,453,82,18">Bill-to Name</span></label><input type="text" class="form-control"></div>
+                    <div class="form-group" data-bbox="676,454,289,53"><label><span data-text="Ship-to Name" data-bbox="696,453,89,18">Ship-to Name</span></label><input type="text" class="form-control"></div>
+                    <div class="form-group" data-bbox="965,454,289,53"><label><span data-text="Status" data-bbox="985,453,42,18">Status</span></label><input type="text" class="form-control"></div>
+                    <div class="form-group" data-bbox="98,533,289,52"><label><span data-text="Braintree Transaction Source" data-bbox="118,532,193,18">Braintree Transaction Source</span></label><input type="text" class="form-control"></div>
+                </fieldset>
+                <div class="filter-actions" data-bbox="401,611,849,33">
+                    <button type="button" class="btn btn-secondary" data-bbox="1056,611,75,33">Reset Filter</button>
+                    <button type="button" class="btn btn-primary" data-bbox="1135,611,115,33">Search</button>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <div class="table-controls" data-bbox="118,81,1132,176">
+                    <div class="controls-left">
+                        <div data-bbox="118,81,189,33">
+                            <button title="Select Items" class="btn btn-secondary"><span id="12" data-text="Actions" data-bbox="133,88,49,19">Actions</span> <i class="fas fa-caret-down" style="margin-left:8px; margin-right:0;"></i></button>
+                        </div>
+                        <div class="records-found" data-text="153" data-bbox="329,81,125,33"><strong>153</strong><span data-text="records found" data-bbox="358,88,95,19"> records found</span></div>
+                    </div>
+                    <div class="controls-right">
+                        <label id="13" title="Search" data-bbox="742,76,38,52" class="btn-icon"><i class="fas fa-search"></i></label>
+                        <button id="14" data-bbox="795,76,38,49" class="btn-icon"><i class="far fa-bookmark"></i><span data-text="1" data-bbox="818,76,22,21" style="display:none;"></span></button>
+                        <div data-bbox="848,76,160,52" class="controls-left">
+                            <button id="15" type="button" data-bbox="848,78,40,48" class="btn-icon"><i class="fas fa-th-large"></i><span data-text="Default View" data-bbox="881,91,0,18" style="display:none;"></span></button>
+                            <button id="16" type="button" data-bbox="903,76,38,52" class="btn-icon"><i class="fas fa-columns"></i><span data-text="Columns" data-bbox="932,89,0,18" style="display:none;"></span></button>
+                            <button id="17" type="button" data-bbox="956,76,38,52" class="btn-icon"><i class="fas fa-file-export"></i><span data-text="Export" data-bbox="985,89,0,18" style="display:none;"></span></button>
+                        </div>
+                        <div class="per-page-select" data-bbox="1012,81,87,35">
+                           <select id="per-page" class="select-control" data-bbox="1028,88,60,21"><option>20</option><option>50</option><option>100</option></select>
+                           <button id="18" type="button" data-bbox="1054,82,44,33" style="display:none;"><span data-text="Select" data-bbox="1067,98,1,1"></span></button>
+                        </div>
+                        <div class="pagination-controls" data-bbox="1133,82,117,33">
+                            <button title="Previous Page" type="button" class="btn-icon" data-bbox="1133,82,44,33"><i class="fas fa-chevron-left"></i></button>
+                            <button id="19" title="Next Page" type="button" class="btn-icon" data-bbox="1206,82,44,33"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="active-filters" data-bbox="118,134,1132,23">
+                    <strong data-text="Active filters:" data-bbox="118,133,76,18">Active filters:</strong>
+                    <div class="filter-tag" data-bbox="217,134,131,18">
+                        <span data-text="Status:" data-bbox="217,133,43,18">Status:</span>
+                        <span data-text="Complete" data-bbox="263,133,59,18">Complete</span>
+                        <button id="20" type="button" data-bbox="330,135,18,17"><i class="fas fa-times-circle"></i></button>
+                    </div>
+                    <button id="21" type="button" data-text="Clear all" data-bbox="1167,134,83,19" class="clear-all-btn">Clear all</button>
+                </div>
+                <div class="data-grid-wrapper">
+                    <table class="data-grid">
+                        <thead data-bbox="119,178,1131,79">
+                            <tr>
+                                <th class="checkbox-cell" data-bbox="130,208,31,16"><input type="checkbox" data-value="on" data-bbox="145,209,13,13" data-status="not-checked"><label id="22" data-bbox="130,209,16,16"></label><button id="23" data-bbox="145,209,16,16" style="display:none;"><span data-text="Options" data-bbox="152,216,1,1"></span></button></th>
+                                <th><span id="24" data-text="ID" data-bbox="182,206,63,18">ID</span></th>
+                                <th><span data-text="Purchase Point" data-bbox="266,198,83,35">Purchase Point</span></th>
+                                <th><span id="25" data-text="Purchase Date" data-bbox="370,198,80,35">Purchase Date</span></th>
+                                <th><span id="26" data-text="Bill-to Name" data-bbox="488,198,73,35">Bill-to Name</span></th>
+                                <th><span id="27" data-text="Ship-to Name" data-bbox="582,198,73,35">Ship-to Name</span></th>
+                                <th><span id="28" data-text="Grand Total (Base)" data-bbox="676,189,68,53">Grand Total (Base)</span></th>
+                                <th><span id="29" data-text="Grand Total (Purchased)" data-bbox="765,198,99,35">Grand Total (Purchased)</span></th>
+                                <th><span id="30" data-text="Status" data-bbox="885,206,58,18">Status</span></th>
+                                <th><span data-text="Action" data-bbox="964,206,48,18">Action</span></th>
+                                <th><span data-text="Allocated sources" data-bbox="1033,198,76,35">Allocated sources</span></th>
+                                <th><span id="31" data-text="Braintree Transaction Source" data-bbox="1130,189,109,53">Braintree Source</span></th>
+                            </tr>
+                        </thead>
+                        <tbody data-bbox="119,11,1131,2262">
+                            <tr data-bbox="119,11,1131,114">
+                                <td class="checkbox-cell"><input value="260" type="checkbox" data-bbox="137,59,13,13" data-status="not-checked"></td>
+                                <td><div data-text="000000260" data-bbox="182,57,63,18">000000260</div></td>
+                                <td><div data-text="Main Website,Main Website Store,Default Store View" data-bbox="266,22,83,88">Main Website</div></td>
+                                <td><div data-text="Jan 8, 2022 2:26:01 AM" data-bbox="370,48,97,36">Jan 8, 2022 2:26:01 AM</div></td>
+                                <td><div data-text="John Lee" data-bbox="488,57,73,18">John Lee</div></td>
+                                <td><div data-text="John Lee" data-bbox="582,57,73,18">John Lee</div></td>
+                                <td><div data-text="$219.00" data-bbox="676,57,68,18">$219.00</div></td>
+                                <td><div data-text="$219.00" data-bbox="765,57,99,18">$219.00</div></td>
+                                <td><div class="status-badge status-complete" data-text="Complete" data-bbox="885,57,58,18">Complete</div></td>
+                                <td><a data-text="View" data-bbox="974,58,28,18" href="#">View</a></td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr data-bbox="119,125,1131,113">
+                                <td class="checkbox-cell"><input value="233" type="checkbox" data-bbox="137,172,13,13" data-status="not-checked"></td>
+                                <td><div data-text="000000233" data-bbox="182,170,63,18">000000233</div></td>
+                                <td><div data-text="Main Website,Main Website Store,Default Store View" data-bbox="266,135,83,88">Main Website</div></td>
+                                <td><div data-text="Jan 9, 2022 7:52:48 AM" data-bbox="370,161,97,36">Jan 9, 2022 7:52:48 AM</div></td>
+                                <td><div data-text="Daniel Jackson" data-bbox="488,161,73,36">Daniel Jackson</div></td>
+                                <td><div data-text="Daniel Jackson" data-bbox="582,161,73,36">Daniel Jackson</div></td>
+                                <td><div data-text="$77.40" data-bbox="676,170,68,18">$77.40</div></td>
+                                <td><div data-text="$77.40" data-bbox="765,170,99,18">$77.40</div></td>
+                                <td><div class="status-badge status-complete" data-text="Complete" data-bbox="885,170,58,18">Complete</div></td>
+                                <td><a data-text="View" data-bbox="974,171,28,18" href="#">View</a></td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr data-bbox="119,238,1131,113">
+                                <td class="checkbox-cell"><input id="32" value="263" type="checkbox" data-bbox="137,285,13,13" data-status="not-checked"></td>
+                                <td><div data-text="000000263" data-bbox="182,283,63,18">000000263</div></td>
+                                <td><div data-text="Main Website,Main Website Store,Default Store View" data-bbox="266,248,83,88">Main Website</div></td>
+                                <td><div data-text="Jan 12, 2022 12:28:28 AM" data-bbox="370,274,97,36">Jan 12, 2022 12:28:28 AM</div></td>
+                                <td><div data-text="John Doe" data-bbox="488,283,73,18">John Doe</div></td>
+                                <td><div data-text="John Doe" data-bbox="582,283,73,18">John Doe</div></td>
+                                <td><div data-text="$136.99" data-bbox="676,283,68,18">$136.99</div></td>
+                                <td><div data-text="$136.99" data-bbox="765,283,99,18">$136.99</div></td>
+                                <td><div class="status-badge status-complete" data-text="Complete" data-bbox="885,283,58,18">Complete</div></td>
+                                <td><a id="33" data-text="View" data-bbox="974,284,28,18" href="#">View</a></td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr data-bbox="119,351,1131,113">
+                                <td class="checkbox-cell"><input id="34" value="247" type="checkbox" data-bbox="137,398,13,13" data-status="not-checked"></td>
+                                <td><div data-text="000000247" data-bbox="182,396,63,18">000000247</div></td>
+                                <td><div data-text="Main Website,Main Website Store,Default Store View" data-bbox="266,361,83,88">Main Website</div></td>
+                                <td><div data-text="Jan 14, 2022 3:23:24 PM" data-bbox="370,387,97,36">Jan 14, 2022 3:23:24 PM</div></td>
+                                <td><div data-text="Jane Smith" data-bbox="488,396,73,18">Jane Smith</div></td>
+                                <td><div data-text="Jane Smith" data-bbox="582,396,73,18">Jane Smith</div></td>
+                                <td><div data-text="$60.00" data-bbox="676,396,68,18">$60.00</div></td>
+                                <td><div data-text="$60.00" data-bbox="765,396,99,18">$60.00</div></td>
+                                <td><div class="status-badge status-complete" data-text="Complete" data-bbox="885,396,58,18">Complete</div></td>
+                                <td><a id="35" data-text="View" data-bbox="974,397,28,18" href="#">View</a></td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr data-bbox="119,464,1131,113">
+                                <td class="checkbox-cell"><input id="36" value="137" type="checkbox" data-bbox="137,511,13,13" data-status="not-checked"></td>
+                                <td><div data-text="000000137">000000137</div></td>
+                                <td>Main Website</td>
+                                <td>Jan 15, 2022 10:11:12 AM</td>
+                                <td>Emily White</td>
+                                <td>Emily White</td>
+                                <td>$150.50</td>
+                                <td>$150.50</td>
+                                <td><span class="status-badge status-complete">Complete</span></td>
+                                <td><a href="#">View</a></td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tableRows = document.querySelectorAll('.data-grid tbody tr');
+
+            tableRows.forEach(row => {
+                row.addEventListener('mouseover', () => {
+                    row.style.backgroundColor = '#f9fafb';
+                });
+                row.addEventListener('mouseout', () => {
+                    row.style.backgroundColor = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

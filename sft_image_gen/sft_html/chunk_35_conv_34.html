@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7f9fc;
+            --bg-tertiary: #f0f2f5;
+            --border-color: #dde1e6;
+            --text-primary: #1d2129;
+            --text-secondary: #606770;
+            --primary-color: #007bff;
+            --primary-hover: #0056b3;
+            --primary-active: #004a99;
+            --danger-color: #e0245e;
+            --success-color: #2ab7ca;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            color: var(--text-primary);
+            background-color: var(--bg-secondary);
+            overflow: hidden;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+        
+        ul {
+            list-style: none;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 55px;
+            background-color: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            flex-shrink: 0;
+            z-index: 100;
+        }
+
+        header source {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        header #0 {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        
+        header nav > div, header nav > ul {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            height: 100%;
+        }
+        
+        header nav a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            padding: 0 4px;
+            display: inline-flex;
+            align-items: center;
+            height: 100%;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        header nav a:hover {
+            color: var(--text-primary);
+            text-decoration: none;
+            border-bottom-color: var(--primary-color);
+        }
+
+        .edit-group {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+        }
+
+        .edit-group a, .edit-group button {
+            height: 35px;
+            border: none;
+            background: none;
+        }
+        
+        .edit-group a {
+            padding: 0 12px;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .edit-group button {
+            padding: 0 8px;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        #11, #12 {
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: var(--border-radius-md);
+            border: 1px solid transparent;
+            height: auto;
+            border-bottom: none;
+        }
+        
+        #11:hover, #12:hover {
+            border-bottom: none;
+        }
+
+        #11 {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+        #11:hover {
+            background-color: #e8eaed;
+        }
+
+        #12 {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        #12:hover {
+            background-color: var(--primary-hover);
+        }
+        
+        /* Main Content Layout */
+        .main-container {
+            display: flex;
+            flex-grow: 1;
+            height: calc(100vh - 55px);
+            position: relative;
+        }
+
+        .sidebar {
+            width: 350px;
+            flex-shrink: 0;
+            background-color: var(--bg-primary);
+            border-right: 1px solid var(--border-color);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        
+        .map-area {
+            flex-grow: 1;
+            position: relative;
+            background-image: url('https://tile.openstreetmap.org/10/512/341.png'), linear-gradient(to bottom, #aec9e4, #c9dde5);
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Sidebar Panels */
+        .panel {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-sm);
+            padding: 1rem;
+        }
+        
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .panel-header h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .panel-header button, .directions-header a {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        
+        .panel-header button:hover, .directions-header a:hover {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+        
+        /* Directions Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .input-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .input-group::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 12px;
+            color: var(--text-secondary);
+        }
+        
+        .from-input::before { content: "\f111"; font-size: 0.5rem; }
+        .to-input::before { content: "\f3c5"; }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px 12px 10px 35px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            font-size: 0.9rem;
+            background-color: var(--bg-secondary);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+
+        .route-options {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .route-options select {
+            flex-grow: 1;
+            padding-left: 12px;
+        }
+        
+        input[type="submit"] {
+            padding: 10px 16px;
+            background-color: var(--success-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #24a2b3;
+        }
+
+        #18 {
+            background: none;
+            border: 1px solid var(--border-color);
+            padding: 8px;
+            border-radius: var(--border-radius-sm);
+            color: var(--text-secondary);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        #18:hover {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+        
+        /* Search Results & Welcome Panel */
+        .results-panel h4 {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+        
+        .results-list li {
+            padding: 12px 8px;
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+        
+        .results-list li::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f3c5";
+            color: var(--danger-color);
+            font-size: 1.1rem;
+        }
+        
+        .results-list li:hover {
+            background-color: var(--bg-tertiary);
+        }
+        
+        .welcome-panel p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        .welcome-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+        
+        .welcome-buttons a {
+            text-align: center;
+            padding: 10px;
+            border-radius: var(--border-radius-md);
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        #24 {
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+        
+        #24:hover {
+            background-color: #e1e4e8;
+            text-decoration: none;
+        }
+        
+        #25 {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        #25:hover {
+            background-color: var(--primary-hover);
+            text-decoration: none;
+        }
+        
+        /* Map Controls & Overlay */
+        .map-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            background-color: var(--bg-primary);
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+        
+        .map-controls span {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        
+        .map-controls span:hover {
+            background-color: var(--bg-tertiary);
+        }
+
+        .map-controls span:first-child { border-radius: 4px 4px 0 0; }
+        .map-controls span:last-child { border-radius: 0 0 4px 4px; }
+        .map-controls span:not(:last-child) { border-bottom: 1px solid var(--border-color); }
+        
+        .map-footer {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            pointer-events: none;
+        }
+
+        .scale-bar {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--text-secondary);
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            color: var(--text-primary);
+            border-radius: var(--border-radius-sm);
+            pointer-events: auto;
+        }
+
+        .attribution {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 4px 8px;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            pointer-events: auto;
+        }
+        
+        .attribution a {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+<body data-bbox="0,0,1280,55">
+    <header data-bbox="0,0,1280,55">
+        <source type="image/svg+xml" data-bbox="10,17,0,22">
+            <img id="0" data-bbox="10,13,30,30" src="https://picsum.photos/seed/maplogo/30" alt="Map Logo">
+        </source>
+        <nav data-bbox="178,0,227,55">
+            <div data-bbox="188,10,207,35">
+                <div data-bbox="188,10,77,35" class="edit-group">
+                    <a id="1" data-bbox="188,10,50,35">Edit</a>
+                    <button id="2" type="button" data-bbox="237,10,28,35"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <a id="3" data-bbox="264,10,68,35">History</a>
+                <a id="4" data-bbox="331,10,64,35">Export</a>
+            </div>
+        </nav>
+        <nav data-bbox="708,0,572,55">
+            <ul data-bbox="722,13,405,27">
+                <a id="5" data-bbox="722,13,77,27">GPS Traces</a>
+                <a id="6" data-bbox="803,13,82,27">User Diaries</a>
+                <a id="7" data-bbox="889,13,87,27">Communities</a>
+                <a id="8" data-bbox="980,13,63,27">Copyright</a>
+                <a id="9" data-bbox="1047,13,34,27">Help</a>
+                <a id="10" data-bbox="1085,13,42,27">About</a>
+            </ul>
+            <div data-bbox="1135,10,135,35">
+                <a id="11" data-bbox="1135,10,63,35">Log In</a>
+                <a id="12" data-bbox="1197,10,73,35">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-container" data-bbox="0,55,1280,665">
+        <div class="sidebar" data-bbox="0,55,350,515">
+            <div class="panel" data-bbox="0,55,350,213">
+                <div class="panel-header directions-header" data-bbox="4,63,342,31">
+                    <div data-bbox="8,63,288,31">
+                        <div data-bbox="8,63,254,31">
+                            <h2 style="font-size: 1.25rem; font-weight: 700;">Directions</h2>
+                        </div>
+                    </div>
+                    <a title="Find directions between two points" data-bbox="304,63,38,31"><i class="fas fa-directions"></i></a>
+                </div>
+                <form data-bbox="0,55,350,213">
+                     <button id="13" type="button" data-bbox="313,71,21,21" style="display:none;"></button>
+                    <div class="input-group from-input">
+                        <input id="14" type="text" placeholder="From" data-value="Lake George" data-bbox="37,112,305,31">
+                    </div>
+                    <div class="input-group to-input">
+                        <input id="15" type="text" placeholder="To" data-bbox="37,147,305,31">
+                    </div>
+                    <div class="route-options" data-bbox="4,182,342,31">
+                        <select id="16" data-value="1" data-text="Car (OSRM)" data-bbox="37,182,262,31">
+                            <option value="0">Bicycle (OSRM)</option>
+                            <option value="1" data-status="selected" selected>Car (OSRM)</option>
+                            <option value="2">Foot (OSRM)</option>
+                        </select>
+                        <input id="17" value="Go" type="submit" data-bbox="307,182,35,31">
+                    </div>
+                    <button id="18" data-bbox="37,217,132,31" type="button"><i class="fas fa-exchange-alt"></i> Reverse Directions</button>
+                </form>
+            </div>
+
+            <div class="panel welcome-panel" data-bbox="0,268,350,302">
+                 <div class="panel-header" data-bbox="16,284,318,85">
+                    <h2 data-bbox="16,284,297,77">Welcome to OpenStreetMap!</h2>
+                    <button id="19" type="button" data-bbox="313,284,21,21"><i class="fas fa-times"></i></button>
+                </div>
+                <div data-bbox="16,369,318,185">
+                    <p data-bbox="16,369,318,69">OpenStreetMap is a map of the world, created by people like you and free to use under an open license.</p>
+                    <p data-bbox="16,454,318,46">Hosting is supported by <a id="20" data-bbox="180,455,27,20">UCL</a>, <a id="21" data-bbox="216,455,39,20">Fastly</a>, <a id="22" data-bbox="264,455,63,20">Bytemark Hosting</a> and other <a id="23" data-bbox="145,478,56,20">partners</a>.</p>
+                    <div class="welcome-buttons" data-bbox="12,516,326,38">
+                        <a id="24" data-bbox="16,516,155,38">Learn More</a>
+                        <a id="25" data-bbox="179,516,155,38">Start Mapping</a>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="panel results-panel" data-bbox="0,102,350,727">
+                 <div class="panel-header" data-bbox="16,118,318,47">
+                    <h2 data-bbox="16,118,297,39">Search Results</h2>
+                </div>
+                <h4 data-bbox="16,165,318,57">Results for "Park"</h4>
+                <div data-bbox="0,230,350,567">
+                    <ul class="results-list" data-bbox="0,230,350,513">
+                        <li data-bbox="0,230,350,80">Lafayette Park</li>
+                        <li data-bbox="0,310,350,80">Golden Gate Park</li>
+                        <li data-bbox="0,390,350,59">Dolores Park</li>
+                        <li data-bbox="0,449,350,59">Washington Square Park</li>
+                        <li data-bbox="0,508,350,59">Presidio National Park</li>
+                        <li data-bbox="0,567,350,59">Buena Vista Park</li>
+                        <li data-bbox="0,626,350,59">Alamo Square Park</li>
+                        <li data-bbox="0,685,350,58">John McLaren Park</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="map-area" data-bbox="0,55,1280,665">
+            <div data-bbox="0,55,1280,0">
+                <div class="map-controls">
+                    <span id="26" data-bbox="1250,75,20,20" title="Zoom In"><i class="fas fa-plus"></i></span>
+                    <span id="27" data-bbox="1250,115,20,20" title="Zoom Out"><i class="fas fa-minus"></i></span>
+                    <span id="28" data-bbox="1250,155,20,20" title="Locate Me"><i class="fas fa-crosshairs"></i></span>
+                    <span id="29" data-bbox="1250,205,20,20" title="Layers"><i class="fas fa-layer-group"></i></span>
+                    <span id="30" data-bbox="1250,245,20,20" title="Map Key"><i class="fas fa-key"></i></span>
+                    <span id="31" data-bbox="1250,285,20,20" title="Query Features"><i class="fas fa-info-circle"></i></span>
+                    <span id="32" data-bbox="1250,335,20,20" title="Share"><i class="fas fa-share-alt"></i></span>
+                    <span id="33" data-bbox="1250,385,20,20" title="Add a Note"><i class="fas fa-map-pin"></i></span>
+                </div>
+                <div class="map-footer">
+                    <div class="scale-bar" data-bbox="5,681,70,34">
+                        <div data-bbox="5,681,69,18">30 m</div>
+                        <div data-bbox="5,697,70,18" style="border-top: 1px solid var(--text-secondary); margin-top: 2px; padding-top: 2px;">100 ft</div>
+                    </div>
+                    <div class="attribution" data-bbox="874,703,406,17">
+                        © <a id="34" data-bbox="891,704,151,14">OpenStreetMap contributors</a> |
+                        <a id="35" data-bbox="1056,704,90,14">Make a Donation</a> |
+                        <a id="36" data-bbox="1153,704,122,14">Website and API terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const interactiveElements = document.querySelectorAll('a, button, li, .map-controls span');
+
+            interactiveElements.forEach(el => {
+                el.style.transition = 'transform 0.1s ease-in-out, box-shadow 0.2s ease';
+                
+                el.addEventListener('mouseenter', () => {
+                   if(el.tagName.toLowerCase() !== 'a') {
+                        el.style.filter = 'brightness(0.95)';
+                   }
+                });
+
+                el.addEventListener('mouseleave', () => {
+                    if(el.tagName.toLowerCase() !== 'a') {
+                         el.style.filter = 'none';
+                    }
+                });
+
+                el.addEventListener('mousedown', () => {
+                    el.style.transform = 'scale(0.98)';
+                });
+                
+                el.addEventListener('mouseup', () => {
+                    el.style.transform = 'scale(1)';
+                });
+            });
+            
+            // Populate "From" input with its data-value for realism
+            const fromInput = document.getElementById('14');
+            if (fromInput && fromInput.dataset.value) {
+                fromInput.value = fromInput.dataset.value;
+            }
+        });
+    </script>
+</body>
+</html>

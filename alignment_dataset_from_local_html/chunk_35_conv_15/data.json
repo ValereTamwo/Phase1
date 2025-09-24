@@ -1,0 +1,637 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_15.html",
+    "raw_html": "<HTML lang=\"en\" data-bbox=\"0,-480,1280,720\"><BODY data-bbox=\"0,-480,1280,2953\"><NAV class=\"sidebar\" data-bbox=\"0,-1,88,721\"><path d=\"M128 0l128 74v161l-128 74L0 235V74L128 0z\" fill=\"#f46f25\"></path><path d=\"M128 31l96 55v108l-96 55-96-55V86l96-55z\" fill=\"#fff\"></path><path d=\"M128 42l-24 14 24 14 71-41-71-41-72 41 72 41 24-14-24-14-47 27 47 27v48l-48-28v-48l-24 14v74l72 42 72-42V86l-72-41-24 14zm0 137l-48-28v-47l48 27v48z\" fill=\"#f46f25\"></path><UL class=\"nav-list\" data-bbox=\"0,74,88,646\"><LI class=\"nav-item\"><A class=\"nav-link\"><I class=\"fas fa-tachometer-alt possible-clickable-element\" data-testid=\"A\"></I><SPAN id=\"1\" data-text=\"Dashboard\" data-bbox=\"14,111,60,13\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Dashboard</text></SPAN></A></LI><LI class=\"nav-item\" data-bbox=\"0,136,88,62\"><A class=\"nav-link active\"><I class=\"fas fa-shopping-cart possible-clickable-element\" data-testid=\"C\"></I><SPAN id=\"2\" data-text=\"Sales\" data-bbox=\"30,173,28,13\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Sales</text></SPAN></A></LI><LI data-bbox=\"-165,91,238,308\"><UL data-bbox=\"-165,91,238,308\"><SPAN data-text=\"Braintree Virtual Terminal\" data-bbox=\"-150,368,174,19\"><text>Braintree Virtual Terminal</text></SPAN></UL></LI><LI class=\"nav-item\" data-bbox=\"0,198,88,62\"><A class=\"nav-link\"><I class=\"fas fa-tags possible-clickable-element\" data-testid=\"E\"></I><SPAN id=\"3\" data-text=\"Catalog\" data-bbox=\"22,235,44,13\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Catalog</text></SPAN></A></LI><LI class=\"nav-item\" data-bbox=\"0,260,88,62\"><A class=\"nav-link\"><I class=\"fas fa-users possible-clickable-element\" data-testid=\"G\"></I><SPAN id=\"4\" data-text=\"Customers\" data-bbox=\"14,297,60,13\" class=\"possible-clickable-element\" data-testid=\"H\"><text>Customers</text></SPAN></A></LI><LI class=\"nav-item\" data-bbox=\"0,322,88,62\"><A class=\"nav-link\"><I class=\"fas fa-bullhorn possible-clickable-element\" data-testid=\"I\"></I><SPAN id=\"5\" data-text=\"Marketing\" data-bbox=\"14,359,60,13\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Marketing</text></SPAN></A></LI><LI class=\"nav-item\" data-bbox=\"0,384,88,62\"><A class=\"nav-link\"><I class=\"fas fa-file-alt possible-clickable-element\" data-testid=\"K\"></I><SPAN id=\"6\" data-text=\"Content\" data-bbox=\"19,421,50,13\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Content</text></SPAN></A></LI><LI class=\"nav-item\" data-bbox=\"0,446,88,62\"><A class=\"nav-link\"><I class=\"fas fa-chart-bar possible-clickable-element\" data-testid=\"M\"></I><SPAN id=\"7\" data-text=\"Reports\" data-bbox=\"22,483,44,13\" class=\"possible-clickable-element\" data-testid=\"N\"><text>Reports</text></SPAN></A></LI><LI class=\"nav-item\" data-bbox=\"0,508,88,62\"><A class=\"nav-link\"><I class=\"fas fa-store possible-clickable-element\" data-testid=\"O\"></I><SPAN id=\"8\" data-text=\"Stores\" data-bbox=\"25,545,38,13\" class=\"possible-clickable-element\" data-testid=\"P\"><text>Stores</text></SPAN></A></LI><I class=\"fas fa-cogs possible-clickable-element\" data-testid=\"Q\"></I></UL></NAV><DIV class=\"main-content\" data-bbox=\"88,-480,1192,2953\"><HEADER class=\"page-header\"><H1 class=\"page-title\"><text>Orders</text></H1><BUTTON title=\"Create New Order\" type=\"button\" class=\"btn btn-primary\" data-bbox=\"1086,16,179,46\"><I class=\"fas fa-plus possible-clickable-element\" data-testid=\"R\"></I><SPAN id=\"11\" data-text=\"Create New Order\" data-bbox=\"1103,27,145,22\" class=\"possible-clickable-element\" data-testid=\"S\"><text>Create New Order</text></SPAN></BUTTON></HEADER><DIV class=\"panel filters-panel\" data-bbox=\"118,-230,1132,2513\"><FIELDSET class=\"filters-grid\" data-bbox=\"98,329,1172,282\"><DIV class=\"form-group\" data-bbox=\"98,329,289,99\"><SPAN data-text=\"Purchase Date\" data-bbox=\"118,328,96,18\"><text>Purchase Date</text></SPAN><DIV class=\"input-group\" data-bbox=\"118,350,249,32\"><SPAN data-text=\"from\" data-bbox=\"119,356,29,18\"><text>From</text></SPAN><DIV class=\"date-input-wrapper\" data-bbox=\"180,350,187,32\"><INPUT type=\"text\" class=\"form-control possible-clickable-element\" placeholder=\"MM/DD/YYYY\" data-testid=\"T\" style=\"\"></INPUT><I class=\"fas fa-calendar-alt\"></I></DIV></DIV><DIV class=\"input-group\" data-bbox=\"118,397,249,31\" style=\"margin-top: 8px;\"><SPAN data-text=\"to\" data-bbox=\"119,403,13,18\"><text>To</text></SPAN><DIV class=\"date-input-wrapper\" data-bbox=\"180,397,187,31\"><INPUT type=\"text\" class=\"form-control possible-clickable-element\" placeholder=\"MM/DD/YYYY\" data-testid=\"U\" style=\"\"></INPUT><I class=\"fas fa-calendar-alt\"></I></DIV></DIV></DIV><DIV class=\"form-group\" data-bbox=\"387,329,289,99\"><SPAN data-text=\"Grand Total (Base)\" data-bbox=\"407,328,118,18\"><text>Grand Total (Base)</text></SPAN><DIV class=\"input-group\" data-bbox=\"407,350,249,32\"><SPAN data-text=\"from\" data-bbox=\"408,356,29,18\"><text>From</text></SPAN><INPUT type=\"text\" class=\"form-control possible-clickable-element\" placeholder=\"0.00\" data-testid=\"V\" style=\"\"></INPUT></DIV><DIV class=\"input-group\" data-bbox=\"407,397,249,31\" style=\"margin-top: 8px;\"><SPAN data-text=\"to\" data-bbox=\"408,403,13,18\"><text>To</text></SPAN><INPUT type=\"text\" class=\"form-control possible-clickable-element\" placeholder=\"1000.00\" data-testid=\"W\" style=\"\"></INPUT></DIV></DIV><DIV class=\"form-group\" data-bbox=\"676,329,289,99\"><SPAN data-text=\"Grand Total (Purchased)\" data-bbox=\"696,328,156,18\"><text>Grand Total (Purchased)</text></SPAN><DIV class=\"input-group\" data-bbox=\"696,350,249,32\"><SPAN data-text=\"from\" data-bbox=\"697,356,29,18\"><text>From</text></SPAN><INPUT type=\"text\" class=\"form-control possible-clickable-element\" placeholder=\"0.00\" data-testid=\"X\" style=\"\"></INPUT></DIV><DIV class=\"input-group\" data-bbox=\"696,397,249,31\" style=\"margin-top: 8px;\"><SPAN data-text=\"to\" data-bbox=\"697,403,13,18\"><text>To</text></SPAN><INPUT type=\"text\" class=\"form-control possible-clickable-element\" placeholder=\"1000.00\" data-testid=\"Y\" style=\"\"></INPUT></DIV></DIV><DIV class=\"form-group\" data-bbox=\"968,329,289,53\"><SPAN data-text=\"Purchase Point\" data-bbox=\"988,328,99,18\"><text>Purchase Point</text></SPAN><INPUT type=\"text\" class=\"form-control possible-clickable-element\" data-testid=\"Z\" style=\"\"></INPUT></DIV><DIV class=\"form-group\" data-bbox=\"98,454,289,53\"><SPAN data-text=\"ID\" data-bbox=\"118,453,14,18\"><text>ID</text></SPAN><INPUT type=\"text\" class=\"form-control possible-clickable-element\" data-testid=\"AA\" style=\"\"></INPUT></DIV><DIV class=\"form-group\" data-bbox=\"387,454,289,53\"><SPAN data-text=\"Bill-to Name\" data-bbox=\"407,453,82,18\"><text>Bill-to Name</text></SPAN><INPUT type=\"text\" class=\"form-control possible-clickable-element\" data-testid=\"AB\" style=\"\"></INPUT></DIV><DIV class=\"form-group\" data-bbox=\"676,454,289,53\"><SPAN data-text=\"Ship-to Name\" data-bbox=\"696,453,89,18\"><text>Ship-to Name</text></SPAN><INPUT type=\"text\" class=\"form-control possible-clickable-element\" data-testid=\"AC\" style=\"\"></INPUT></DIV><DIV class=\"form-group\" data-bbox=\"965,454,289,53\"><SPAN data-text=\"Status\" data-bbox=\"985,453,42,18\"><text>Status</text></SPAN><INPUT type=\"text\" class=\"form-control possible-clickable-element\" data-testid=\"AD\" style=\"\"></INPUT></DIV><DIV class=\"form-group\" data-bbox=\"98,533,289,52\"><SPAN data-text=\"Braintree Transaction Source\" data-bbox=\"118,532,193,18\"><text>Braintree Transaction Source</text></SPAN><INPUT type=\"text\" class=\"form-control possible-clickable-element\" data-testid=\"AE\" style=\"\"></INPUT></DIV></FIELDSET><DIV class=\"filter-actions\" data-bbox=\"401,611,849,33\"><BUTTON type=\"button\" class=\"btn btn-secondary possible-clickable-element\" data-bbox=\"1056,611,75,33\" data-testid=\"AF\"><text>Reset Filter</text></BUTTON><BUTTON type=\"button\" class=\"btn btn-primary possible-clickable-element\" data-bbox=\"1135,611,115,33\" data-testid=\"AG\"><text>Search</text></BUTTON></DIV></DIV><DIV class=\"table-controls\" data-bbox=\"118,81,1132,176\"><DIV class=\"controls-left\"><DIV data-bbox=\"118,81,189,33\"><BUTTON title=\"Select Items\" class=\"btn btn-secondary\"><SPAN id=\"12\" data-text=\"Actions\" data-bbox=\"133,88,49,19\" class=\"possible-clickable-element\" data-testid=\"AH\"><text>Actions</text></SPAN><I class=\"fas fa-caret-down possible-clickable-element\" style=\"margin-left:8px; margin-right:0;\" data-testid=\"AI\"></I></BUTTON></DIV><DIV class=\"records-found\" data-text=\"153\" data-bbox=\"329,81,125,33\"><text>153</text><SPAN data-text=\"records found\" data-bbox=\"358,88,95,19\"><text>records found</text></SPAN></DIV></DIV><DIV class=\"controls-right\"><LABEL id=\"13\" title=\"Search\" data-bbox=\"742,76,38,52\" class=\"btn-icon\"><I class=\"fas fa-search\"></I></LABEL><BUTTON id=\"14\" data-bbox=\"795,76,38,49\" class=\"btn-icon possible-clickable-element\" data-testid=\"AJ\"><I class=\"far fa-bookmark\"></I></BUTTON><DIV data-bbox=\"848,76,160,52\" class=\"controls-left\"><BUTTON id=\"15\" type=\"button\" data-bbox=\"848,78,40,48\" class=\"btn-icon possible-clickable-element\" data-testid=\"AK\"><I class=\"fas fa-th-large\"></I></BUTTON><BUTTON id=\"16\" type=\"button\" data-bbox=\"903,76,38,52\" class=\"btn-icon possible-clickable-element\" data-testid=\"AL\"><I class=\"fas fa-columns\"></I></BUTTON><BUTTON id=\"17\" type=\"button\" data-bbox=\"956,76,38,52\" class=\"btn-icon possible-clickable-element\" data-testid=\"AM\"><I class=\"fas fa-file-export\"></I></BUTTON></DIV><DIV class=\"per-page-select\" data-bbox=\"1012,81,87,35\"><SELECT id=\"per-page\" class=\"select-control possible-clickable-element\" data-bbox=\"1028,88,60,21\" data-testid=\"AN\"></SELECT></DIV><DIV class=\"pagination-controls\" data-bbox=\"1133,82,117,33\"><BUTTON title=\"Previous Page\" type=\"button\" class=\"btn-icon possible-clickable-element\" data-bbox=\"1133,82,44,33\" data-testid=\"AO\"><I class=\"fas fa-chevron-left\"></I></BUTTON><BUTTON id=\"19\" title=\"Next Page\" type=\"button\" class=\"btn-icon possible-clickable-element\" data-bbox=\"1206,82,44,33\" data-testid=\"AP\"><I class=\"fas fa-chevron-right\"></I></BUTTON></DIV></DIV></DIV><DIV class=\"active-filters\" data-bbox=\"118,134,1132,23\"><STRONG data-text=\"Active filters:\" data-bbox=\"118,133,76,18\"><text>Active filters:</text></STRONG><DIV class=\"filter-tag\" data-bbox=\"217,134,131,18\"><SPAN data-text=\"Status:\" data-bbox=\"217,133,43,18\"><text>Status:</text></SPAN><SPAN data-text=\"Complete\" data-bbox=\"263,133,59,18\"><text>Complete</text></SPAN><BUTTON id=\"20\" type=\"button\" data-bbox=\"330,135,18,17\"><I class=\"fas fa-times-circle possible-clickable-element\" data-testid=\"AQ\"></I></BUTTON></DIV><BUTTON id=\"21\" type=\"button\" data-text=\"Clear all\" data-bbox=\"1167,134,83,19\" class=\"clear-all-btn possible-clickable-element\" data-testid=\"AR\"><text>Clear all</text></BUTTON></DIV><THEAD data-bbox=\"119,178,1131,79\"><TH class=\"checkbox-cell\" data-bbox=\"130,208,31,16\"><INPUT type=\"checkbox\" data-value=\"on\" data-bbox=\"145,209,13,13\" data-status=\"not-checked\" class=\"possible-clickable-element\" data-testid=\"AS\" style=\"\"></INPUT></TH><SPAN id=\"24\" data-text=\"ID\" data-bbox=\"182,206,63,18\"><text>ID</text></SPAN><SPAN data-text=\"Purchase Point\" data-bbox=\"266,198,83,35\"><text>Purchase Point</text></SPAN><SPAN id=\"25\" data-text=\"Purchase Date\" data-bbox=\"370,198,80,35\"><text>Purchase Date</text></SPAN><SPAN id=\"26\" data-text=\"Bill-to Name\" data-bbox=\"488,198,73,35\"><text>Bill-to Name</text></SPAN><SPAN id=\"27\" data-text=\"Ship-to Name\" data-bbox=\"582,198,73,35\"><text>Ship-to Name</text></SPAN><SPAN id=\"28\" data-text=\"Grand Total (Base)\" data-bbox=\"676,189,68,53\"><text>Grand Total (Base)</text></SPAN><SPAN id=\"29\" data-text=\"Grand Total (Purchased)\" data-bbox=\"765,198,99,35\"><text>Grand Total (Purchased)</text></SPAN><SPAN id=\"30\" data-text=\"Status\" data-bbox=\"885,206,58,18\"><text>Status</text></SPAN><SPAN data-text=\"Action\" data-bbox=\"964,206,48,18\"><text>Action</text></SPAN><SPAN data-text=\"Allocated sources\" data-bbox=\"1033,198,76,35\"><text>Allocated sources</text></SPAN><SPAN id=\"31\" data-text=\"Braintree Transaction Source\" data-bbox=\"1130,189,109,53\"><text>Braintree Source</text></SPAN></THEAD></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    ul|\n    <i[A]| >\n    <span[B]| Dashboard >\n    <i[C]| >\n    <span[D]| Sales >\n    <span| Braintree Virtual Terminal >\n    <i[E]| >\n    <span[F]| Catalog >\n    <i[G]| >\n    <span[H]| Customers >\n    <i[I]| >\n    <span[J]| Marketing >\n    <i[K]| >\n    <span[L]| Content >\n    <i[M]| >\n    <span[N]| Reports >\n    <i[O]| >\n    <span[P]| Stores >\n    <i[Q]| >\n  >\n  <\n    div|\n    <\n      header|\n      <h1| Orders >\n      <\n        button| Create New Order\n        <i[R]| >\n        <span[S]| Create New Order >\n      >\n    >\n    <\n      div|\n      <\n        fieldset|\n        <\n          div|\n          <span| Purchase Date >\n          <\n            div|\n            <span| From >\n            <input[T]| MM/DD/YYYY >\n          >\n          <\n            div|\n            <span| To >\n            <input[U]| MM/DD/YYYY >\n          >\n        >\n        <\n          div|\n          <span| Grand Total (Base) >\n          <\n            div|\n            <span| From >\n            <input[V]| 0.00 >\n          >\n          <\n            div|\n            <span| To >\n            <input[W]| 1000.00 >\n          >\n        >\n        <\n          div|\n          <span| Grand Total (Purchased) >\n          <\n            div|\n            <span| From >\n            <input[X]| 0.00 >\n          >\n          <\n            div|\n            <span| To >\n            <input[Y]| 1000.00 >\n          >\n        >\n        <span| Purchase Point >\n        <input[Z]| >\n        <span| ID >\n        <input[AA]| >\n        <span| Bill-to Name >\n        <input[AB]| >\n        <span| Ship-to Name >\n        <input[AC]| >\n        <span| Status >\n        <input[AD]| >\n        <span| Braintree Transaction Source >\n        <input[AE]| >\n      >\n      <\n        div|\n        <button[AF]| Reset Filter >\n        <button[AG]| Search >\n      >\n    >\n    <\n      div|\n      <\n        div|\n        <\n          button| Select Items\n          <span[AH]| Actions >\n          <i[AI]| >\n        >\n        <\n          div|\n          <text| 153 >\n          <span| records found >\n        >\n      >\n      <\n        div|\n        <label| Search >\n        <button[AJ]| >\n        <button[AK]| >\n        <button[AL]| >\n        <button[AM]| >\n        <select[AN]| >\n        <\n          div|\n          <button[AO]| Previous Page >\n          <button[AP]| Next Page >\n        >\n      >\n    >\n    <\n      div|\n      <strong| Active filters: >\n      <\n        div|\n        <span| Status: >\n        <span| Complete >\n        <i[AQ]| >\n      >\n      <button[AR]| Clear all >\n    >\n    <\n      thead|\n      <input[AS]| >\n      <span| ID >\n      <span| Purchase Point >\n      <span| Purchase Date >\n      <span| Bill-to Name >\n      <span| Ship-to Name >\n      <span| Grand Total (Base) >\n      <span| Grand Total (Purchased) >\n      <span| Status >\n      <span| Action >\n      <span| Allocated sources >\n      <span| Braintree Source >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 33,
+                "top": 60,
+                "right": 55,
+                "bottom": 82,
+                "width": 22,
+                "height": 22
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 13,
+                "top": 88,
+                "right": 75,
+                "bottom": 103,
+                "width": 62,
+                "height": 15
+            },
+            "tag": "span",
+            "text": "Dashboard"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 31.5,
+                "top": 133,
+                "right": 56.5,
+                "bottom": 155,
+                "width": 25,
+                "height": 22
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 28.5,
+                "top": 161,
+                "right": 59.5,
+                "bottom": 176,
+                "width": 31,
+                "height": 15
+            },
+            "tag": "span",
+            "text": "Sales"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 33,
+                "top": 257,
+                "right": 55,
+                "bottom": 279,
+                "width": 22,
+                "height": 22
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 22,
+                "top": 285,
+                "right": 66,
+                "bottom": 300,
+                "width": 44,
+                "height": 15
+            },
+            "tag": "span",
+            "text": "Catalog"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 30,
+                "top": 330,
+                "right": 58,
+                "bottom": 352,
+                "width": 28,
+                "height": 22
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 13,
+                "top": 358,
+                "right": 75,
+                "bottom": 373,
+                "width": 62,
+                "height": 15
+            },
+            "tag": "span",
+            "text": "Customers"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 33,
+                "top": 403,
+                "right": 55,
+                "bottom": 425,
+                "width": 22,
+                "height": 22
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 15,
+                "top": 431,
+                "right": 73,
+                "bottom": 446,
+                "width": 58,
+                "height": 15
+            },
+            "tag": "span",
+            "text": "Marketing"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 35.5,
+                "top": 476,
+                "right": 52.5,
+                "bottom": 498,
+                "width": 17,
+                "height": 22
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 21.5,
+                "top": 504,
+                "right": 66.5,
+                "bottom": 519,
+                "width": 45,
+                "height": 15
+            },
+            "tag": "span",
+            "text": "Content"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 33,
+                "top": 549,
+                "right": 55,
+                "bottom": 571,
+                "width": 22,
+                "height": 22
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 22,
+                "top": 577,
+                "right": 66,
+                "bottom": 592,
+                "width": 44,
+                "height": 15
+            },
+            "tag": "span",
+            "text": "Reports"
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 31.5,
+                "top": 622,
+                "right": 56.5,
+                "bottom": 644,
+                "width": 25,
+                "height": 22
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 25.5,
+                "top": 650,
+                "right": 62.5,
+                "bottom": 665,
+                "width": 37,
+                "height": 15
+            },
+            "tag": "span",
+            "text": "Stores"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 30,
+                "top": 695,
+                "right": 58,
+                "bottom": 717,
+                "width": 28,
+                "height": 22
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 1111.21875,
+                "top": 36,
+                "right": 1124.21875,
+                "bottom": 50,
+                "width": 13,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 1132.21875,
+                "top": 35,
+                "right": 1250.5,
+                "bottom": 51,
+                "width": 118.28125,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Create New Order"
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 190,
+                "top": 138,
+                "right": 405.875,
+                "bottom": 172,
+                "width": 215.875,
+                "height": 34
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 173,
+                "top": 180,
+                "right": 405.875,
+                "bottom": 214,
+                "width": 232.875,
+                "height": 34
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 468.875,
+                "top": 138,
+                "right": 684.75,
+                "bottom": 172,
+                "width": 215.875,
+                "height": 34
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 451.875,
+                "top": 180,
+                "right": 684.75,
+                "bottom": 214,
+                "width": 232.875,
+                "height": 34
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 747.75,
+                "top": 138,
+                "right": 963.625,
+                "bottom": 172,
+                "width": 215.875,
+                "height": 34
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 730.75,
+                "top": 180,
+                "right": 963.625,
+                "bottom": 214,
+                "width": 232.875,
+                "height": 34
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 983.625,
+                "top": 138,
+                "right": 1242.5,
+                "bottom": 172,
+                "width": 258.875,
+                "height": 34
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 147,
+                "top": 259,
+                "right": 405.875,
+                "bottom": 293,
+                "width": 258.875,
+                "height": 34
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 425.875,
+                "top": 259,
+                "right": 684.75,
+                "bottom": 293,
+                "width": 258.875,
+                "height": 34
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 704.75,
+                "top": 259,
+                "right": 963.625,
+                "bottom": 293,
+                "width": 258.875,
+                "height": 34
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 983.625,
+                "top": 259,
+                "right": 1242.5,
+                "bottom": 293,
+                "width": 258.875,
+                "height": 34
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 147,
+                "top": 338,
+                "right": 405.875,
+                "bottom": 372,
+                "width": 258.875,
+                "height": 34
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 1033.546875,
+                "top": 423,
+                "right": 1147.796875,
+                "bottom": 461,
+                "width": 114.25,
+                "height": 38
+            },
+            "tag": "button",
+            "text": "Reset Filter"
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 1159.796875,
+                "top": 423,
+                "right": 1244.5,
+                "bottom": 461,
+                "width": 84.703125,
+                "height": 38
+            },
+            "tag": "button",
+            "text": "Search"
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 164,
+                "top": 538,
+                "right": 215.34375,
+                "bottom": 554,
+                "width": 51.34375,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Actions"
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 223.34375,
+                "top": 539,
+                "right": 232.34375,
+                "bottom": 553,
+                "width": 9,
+                "height": 14
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 911.5,
+                "top": 529.5,
+                "right": 939.5,
+                "bottom": 562.5,
+                "width": 28,
+                "height": 33
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AK",
+            "rects": {
+                "left": 955.5,
+                "top": 529.5,
+                "right": 986.5,
+                "bottom": 562.5,
+                "width": 31,
+                "height": 33
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AL",
+            "rects": {
+                "left": 1002.5,
+                "top": 529.5,
+                "right": 1033.5,
+                "bottom": 562.5,
+                "width": 31,
+                "height": 33
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AM",
+            "rects": {
+                "left": 1049.5,
+                "top": 529.5,
+                "right": 1082.5,
+                "bottom": 562.5,
+                "width": 33,
+                "height": 33
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AN",
+            "rects": {
+                "left": 1098.5,
+                "top": 528,
+                "right": 1168.5,
+                "bottom": 564,
+                "width": 70,
+                "height": 36
+            },
+            "tag": "select",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AO",
+            "rects": {
+                "left": 1184.5,
+                "top": 529.5,
+                "right": 1210.5,
+                "bottom": 562.5,
+                "width": 26,
+                "height": 33
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AP",
+            "rects": {
+                "left": 1218.5,
+                "top": 529.5,
+                "right": 1244.5,
+                "bottom": 562.5,
+                "width": 26,
+                "height": 33
+            },
+            "tag": "button",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AQ",
+            "rects": {
+                "left": 362,
+                "top": 585.828125,
+                "right": 375,
+                "bottom": 599.15625,
+                "width": 13,
+                "height": 13.328125
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AR",
+            "rects": {
+                "left": 395,
+                "top": 585,
+                "right": 446.875,
+                "bottom": 600,
+                "width": 51.875,
+                "height": 15
+            },
+            "tag": "button",
+            "text": "Clear all"
+        },
+        {
+            "keep": true,
+            "id": "AS",
+            "rects": {
+                "left": 137,
+                "top": 645,
+                "right": 153,
+                "bottom": 661,
+                "width": 16,
+                "height": 16
+            },
+            "tag": "input",
+            "text": ""
+        }
+    ]
+}

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" data-bbox="0,0,1280,720">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postmill - All Forums</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #4F46E5;
+            --primary-hover: #4338CA;
+            --secondary-color: #6B7280;
+            --background-color: #F8F9FA;
+            --surface-color: #FFFFFF;
+            --border-color: #E5E7EB;
+            --text-color: #1F2937;
+            --text-light: #4B5563;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .page-header {
+            background-color: var(--surface-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1280px;
+            margin: 0 auto;
+            height: 64px;
+        }
+
+        .header-left, .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        #0 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .main-nav ul a {
+            font-weight: 500;
+            color: var(--text-light);
+            padding: 0.5rem 0.25rem;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .main-nav ul a:hover {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .search-form {
+            position: relative;
+        }
+
+        .search-form::before {
+            content: "\f002";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary-color);
+        }
+
+        #4 {
+            background-color: #F3F4F6;
+            border: 1px solid transparent;
+            border-radius: 20px;
+            padding: 0.5rem 1rem 0.5rem 2.5rem;
+            width: 250px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        #4:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background-color: var(--surface-color);
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-actions > li, .user-actions > a {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-link {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            padding: 0.5rem;
+            transition: color 0.2s ease;
+        }
+        .icon-link:hover {
+            color: var(--text-color);
+        }
+
+        .submit-link {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+        .submit-link:hover {
+            background-color: var(--primary-hover);
+            color: white;
+        }
+
+        .user-menu button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 8px;
+            transition: background-color 0.2s ease;
+        }
+        
+        .user-menu button:hover {
+            background-color: #F3F4F6;
+        }
+
+        .user-menu button i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .user-menu button strong {
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        main {
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .content-card {
+            background: var(--surface-color);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+        }
+        
+        .page-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-tabs a {
+            padding: 0.75rem 1rem;
+            margin-bottom: -1px;
+            font-weight: 500;
+            color: var(--text-light);
+            border-bottom: 2px solid transparent;
+        }
+        
+        .page-tabs a.active, .page-tabs a:hover {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .forums-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .forum-category h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .forum-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .forum-list li a {
+            display: block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .forum-list li a:hover {
+            background-color: #F3F4F6;
+            color: var(--primary-hover);
+        }
+    </style>
+</head>
+<body data-bbox="0,0,1280,913">
+    <nav data-bbox="0,0,1280,0" class="page-header">
+        <div data-bbox="90,0,1100,52" class="header-content">
+            <div class="header-left">
+                <b id="0" data-bbox="120,16,58,19">Postmill</b>
+                <div data-bbox="194,0,148,52" class="main-nav">
+                    <ul data-bbox="194,0,148,52">
+                        <li><a id="1" href="#" data-bbox="194,0,86,52">Forums</a></li>
+                        <li><a id="2" href="#" data-bbox="280,0,62,52">Wiki</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-center">
+                 <form data-bbox="455,0,236,52" class="search-form">
+                    <input id="4" type="search" placeholder="Search Postmill" data-bbox="462,8,222,37">
+                </form>
+            </div>
+            <div class="header-right">
+                <ul data-bbox="804,0,372,52" class="user-actions">
+                    <li>
+                        <a href="#" title="Notifications (0)" data-bbox="804,0,48,52" class="icon-link">
+                            <i id="5" data-bbox="820,19,16,13" class="fas fa-bell"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submit-link">
+                            <i id="6" data-bbox="870,18,12,13" class="fas fa-plus"></i>
+                            <span id="7" data-bbox="888,16,51,19">Submit</span>
+                        </a>
+                    </li>
+                    <li data-bbox="955,0,221,52" class="user-menu">
+                        <button type="button" data-bbox="955,0,221,52">
+                            <i id="8" data-bbox="973,18,12,14" class="fas fa-user-circle"></i>
+                            <strong id="9" data-bbox="991,16,157,19">MarvelsGrantMan136</strong>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main data-bbox="90,66,1100,798">
+        <div class="content-card">
+            <ul data-bbox="104,80,1072,35" class="page-tabs">
+                <li><a id="11" href="#" data-bbox="104,80,69,35" class="active">Forums</a></li>
+                <li><a id="12" href="#" data-bbox="173,80,51,35">Tags</a></li>
+                <li><a id="13" href="#" data-bbox="224,80,98,35">Alphabetical</a></li>
+            </ul>
+            <h1 data-bbox="104,129,1072,42">All forums</h1>
+            <div data-bbox="104,185,1072,665" class="forums-grid">
+                <div data-bbox="104,185,203,172" class="forum-category">
+                    <h2 data-bbox="104,185,203,32">A</h2>
+                    <ul data-bbox="104,231,203,126" class="forum-list">
+                        <li><a id="14" href="#" data-bbox="104,233,61,16">allentown</a></li>
+                        <li><a id="15" href="#" data-bbox="104,254,71,16">arlingtonva</a></li>
+                        <li><a id="16" href="#" data-bbox="104,275,19,16">Art</a></li>
+                        <li><a id="17" href="#" data-bbox="104,296,63,16">AskReddit</a></li>
+                        <li><a id="18" href="#" data-bbox="104,317,68,16">askscience</a></li>
+                        <li><a id="19" href="#" data-bbox="104,338,30,16">aww</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="104,371,203,150" class="forum-category">
+                    <h2 data-bbox="104,371,203,31">B</h2>
+                    <ul data-bbox="104,416,203,105" class="forum-list">
+                        <li><a id="20" href="#" data-bbox="104,418,59,16">baltimore</a></li>
+                        <li><a id="21" href="#" data-bbox="104,439,38,16">books</a></li>
+                        <li><a id="22" href="#" data-bbox="104,460,44,16">boston</a></li>
+                        <li><a id="23" href="#" data-bbox="104,481,83,16">BridgeportCT</a></li>
+                        <li><a id="24" href="#" data-bbox="104,502,77,16">BuyItForLife</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="104,535,203,172" class="forum-category">
+                    <h2 data-bbox="104,535,203,32">C</h2>
+                    <ul data-bbox="104,581,203,126" class="forum-list">
+                        <li><a id="25" href="#" data-bbox="104,583,89,16">CambridgeMA</a></li>
+                        <li><a id="26" href="#" data-bbox="104,604,80,16">ColumbiaMD</a></li>
+                        <li><a id="27" href="#" data-bbox="104,625,75,16">Connecticut</a></li>
+                        <li><a id="28" href="#" data-bbox="104,646,55,16">consoles</a></li>
+                        <li><a id="29" href="#" data-bbox="104,667,116,16">coolgithubprojects</a></li>
+                        <li><a id="30" href="#" data-bbox="104,688,41,16">creepy</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="321,185,203,88" class="forum-category">
+                    <h2 data-bbox="321,185,203,32">E</h2>
+                    <ul data-bbox="321,231,203,42" class="forum-list">
+                        <li><a id="31" href="#" data-bbox="321,233,64,16">EarthPorn</a></li>
+                        <li><a id="32" href="#" data-bbox="321,254,101,16">explainlikeimfive</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="321,287,203,108" class="forum-category">
+                    <h2 data-bbox="321,287,203,31">F</h2>
+                    <ul data-bbox="321,332,203,63" class="forum-list">
+                        <li><a id="33" href="#" data-bbox="321,334,29,16">food</a></li>
+                        <li><a id="34" href="#" data-bbox="321,355,36,16">funny</a></li>
+                        <li><a id="35" href="#" data-bbox="321,376,68,16">Futurology</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="321,409,203,130" class="forum-category">
+                    <h2 data-bbox="321,409,203,32">G</h2>
+                    <ul data-bbox="321,455,203,84" class="forum-list">
+                        <li><a id="36" href="#" data-bbox="321,457,51,16">gadgets</a></li>
+                        <li><a id="37" href="#" data-bbox="321,478,47,16">gaming</a></li>
+                        <li><a id="38" href="#" data-bbox="321,499,85,16">GetMotivated</a></li>
+                        <li><a id="39" href="#" data-bbox="321,520,23,16">gifs</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="321,553,203,108" class="forum-category">
+                    <h2 data-bbox="321,553,203,31">H</h2>
+                    <ul data-bbox="321,598,203,63" class="forum-list">
+                        <li><a id="40" href="#" data-bbox="321,600,54,16">Hartford</a></li>
+                        <li><a id="41" href="#" data-bbox="321,621,77,16">headphones</a></li>
+                        <li><a id="42" href="#" data-bbox="321,642,43,16">history</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="321,675,203,109" class="forum-category">
+                    <h2 data-bbox="321,675,203,32">I</h2>
+                </div>
+                <div class="forum-category">
+                    <h2>J</h2>
+                     <ul data-bbox="538,185,204,42" class="forum-list">
+                        <li><a id="43" href="#" data-bbox="538,187,58,16">jerseycity</a></li>
+                        <li><a id="44" href="#" data-bbox="538,208,37,16">Jokes</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="538,241,204,130" class="forum-category">
+                    <h2 data-bbox="538,241,204,32">L</h2>
+                    <ul data-bbox="538,287,204,84" class="forum-list">
+                        <li><a id="45" href="#" data-bbox="538,289,60,16">lakewood</a></li>
+                        <li><a id="46" href="#" data-bbox="538,310,71,16">LifeProTips</a></li>
+                        <li><a id="47" href="#" data-bbox="538,331,69,16">listentothis</a></li>
+                        <li><a id="48" href="#" data-bbox="538,352,61,16">LowellMA</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="538,385,204,255" class="forum-category">
+                    <h2 data-bbox="538,385,204,31">M</h2>
+                    <ul data-bbox="538,430,204,210" class="forum-list">
+                        <li><a id="49" href="#" data-bbox="538,432,108,16">MachineLearning</a></li>
+                        <li><a id="50" href="#" data-bbox="538,453,38,16">Maine</a></li>
+                        <li><a id="51" href="#" data-bbox="538,474,94,16">ManchesterNH</a></li>
+                        <li><a id="52" href="#" data-bbox="538,495,96,16">massachusetts</a></li>
+                        <li><a id="53" href="#" data-bbox="538,516,138,16">MechanicalKeyboards</a></li>
+                        <li><a id="54" href="#" data-bbox="538,537,45,16">memes</a></li>
+                        <li><a id="55" href="#" data-bbox="538,558,102,16">mildlyinteresting</a></li>
+                        <li><a id="56" href="#" data-bbox="538,579,49,16">monitor</a></li>
+                        <li><a id="57" href="#" data-bbox="538,600,44,16">movies</a></li>
+                        <li><a id="58" href="#" data-bbox="538,621,37,16">Music</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="538,654,204,196" class="forum-category">
+                    <h2 data-bbox="538,654,204,32">N</h2>
+                    <ul data-bbox="538,700,204,150" class="forum-list">
+                        <li><a id="59" href="#" data-bbox="538,702,48,16">Newark</a></li>
+                        <li><a id="60" href="#" data-bbox="756,187,22,16">nyc</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="756,220,203,67" class="forum-category">
+                    <h2 data-bbox="756,220,203,32">O</h2>
+                    <ul class="forum-list">
+                        <li><a id="61" href="#" data-bbox="756,268,91,16">OldSchoolCool</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="756,301,203,234" class="forum-category">
+                    <h2 data-bbox="756,301,203,31">P</h2>
+                    <ul data-bbox="756,346,203,189" class="forum-list">
+                        <li><a id="62" href="#" data-bbox="756,348,57,16">Paterson</a></li>
+                        <li><a id="63" href="#" data-bbox="756,369,83,16">Pennsylvania</a></li>
+                        <li><a id="64" href="#" data-bbox="756,390,100,16">personalfinance</a></li>
+                        <li><a id="65" href="#" data-bbox="756,411,75,16">philadelphia</a></li>
+                        <li><a id="66" href="#" data-bbox="756,432,68,16">philosophy</a></li>
+                        <li><a id="67" href="#" data-bbox="756,453,111,16">photoshopbattles</a></li>
+                        <li><a id="68" href="#" data-bbox="756,474,25,16">pics</a></li>
+                        <li><a id="69" href="#" data-bbox="756,495,65,16">pittsburgh</a></li>
+                        <li><a id="70" href="#" data-bbox="756,516,68,16">providence</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="756,549,203,109" class="forum-category">
+                    <h2 data-bbox="756,549,203,32">R</h2>
+                    <ul data-bbox="756,595,203,63" class="forum-list">
+                        <li><a id="71" href="#" data-bbox="756,597,119,16">relationship_advice</a></li>
+                        <li><a id="72" href="#" data-bbox="756,618,78,16">RhodeIsland</a></li>
+                        <li><a id="73" href="#" data-bbox="756,639,20,16">rva</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="756,672,203,178" class="forum-category">
+                    <h2 data-bbox="756,672,203,31">S</h2>
+                    <ul data-bbox="756,717,203,133" class="forum-list">
+                        <li><a href="#" data-bbox="756,719,46,16">science</a></li>
+                        <li><a id="74" href="#" data-bbox="973,187,76,16">StamfordCT</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="973,220,203,130" class="forum-category">
+                    <h2 data-bbox="973,220,203,32">T</h2>
+                    <ul data-bbox="973,266,203,84" class="forum-list">
+                        <li><a id="75" href="#" data-bbox="973,268,69,16">technology</a></li>
+                        <li><a id="76" href="#" data-bbox="973,289,58,16">television</a></li>
+                        <li><a id="77" href="#" data-bbox="973,310,21,16">tifu</a></li>
+                        <li><a id="78" href="#" data-bbox="973,331,85,16">todayilearned</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="973,364,203,66" class="forum-category">
+                    <h2 data-bbox="973,364,203,31">U</h2>
+                    <ul class="forum-list">
+                        <li><a id="79" href="#" data-bbox="973,411,87,16">UpliftingNews</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="973,444,203,88" class="forum-category">
+                    <h2 data-bbox="973,444,203,32">V</h2>
+                    <ul data-bbox="973,490,203,42" class="forum-list">
+                        <li><a id="80" href="#" data-bbox="973,492,52,16">vermont</a></li>
+                        <li><a id="81" href="#" data-bbox="973,513,40,16">videos</a></li>
+                    </ul>
+                </div>
+                <div data-bbox="973,546,203,192" class="forum-category">
+                    <h2 data-bbox="973,546,203,31">W</h2>
+                    <ul data-bbox="973,591,203,147" class="forum-list">
+                        <li><a id="82" href="#" data-bbox="973,593,88,16">wallstreetbets</a></li>
+                        <li><a id="83" href="#" data-bbox="973,614,75,16">Washington</a></li>
+                        <li><a id="84" href="#" data-bbox="973,635,89,16">washingtondc</a></li>
+                        <li><a id="85" href="#" data-bbox="973,656,82,16">WaterburyCT</a></li>
+                        <li><a id="86" href="#" data-bbox="973,677,84,16">WorcesterMA</a></li>
+                        <li><a id="87" href="#" data-bbox="973,698,68,16">worldnews</a></li>
+                        <li><a href="#" data-bbox="973,719,98,16">WritingPrompts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.page-tabs a');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    
+                    tabs.forEach(t => t.classList.remove('active'));
+                    
+                    tab.classList.add('active');
+                });
+            });
+
+            console.log('Postmill UI script loaded successfully.');
+        });
+    </script>
+</body>
+</html>

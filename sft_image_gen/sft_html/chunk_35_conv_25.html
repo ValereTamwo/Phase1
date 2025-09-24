@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap Directions</title>
+    <script src="https://kit.fontawesome.com/9d2c698113.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #0078FF;
+            --primary-hover: #0056b3;
+            --background-light: #f8f9fa;
+            --background-white: #ffffff;
+            --border-color: #dee2e6;
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --radius-sm: 4px;
+            --radius-md: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+        }
+        
+        button {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            background: none;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 55px;
+            background-color: var(--background-white);
+            border-bottom: 1px solid var(--border-color);
+            flex-shrink: 0;
+            z-index: 100;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-wrapper img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        
+        header nav a {
+            padding: 0 15px;
+            font-weight: 500;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            height: 100%;
+            border-bottom: 2px solid transparent;
+        }
+        
+        header nav a:hover {
+            color: var(--text-dark);
+            background-color: var(--background-light);
+        }
+
+        .edit-group {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+        }
+
+        .edit-group a {
+            border: none;
+        }
+        
+        .edit-group button {
+            padding: 0 12px;
+            border-left: 1px solid var(--border-color);
+            height: 35px;
+            color: var(--text-light);
+        }
+        
+        .edit-group button:hover {
+            background-color: var(--background-light);
+        }
+
+        .user-actions a {
+            border: 1px solid transparent;
+            border-radius: var(--radius-sm);
+            padding: 8px 16px;
+            height: auto;
+            margin-left: 8px;
+        }
+        
+        .user-actions a[data-bbox="1197,10,73,35"] { /* Sign Up */
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .user-actions a[data-bbox="1197,10,73,35"]:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+        }
+
+        /* Main Content Layout */
+        .main-content {
+            display: flex;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 350px;
+            flex-shrink: 0;
+            background-color: var(--background-white);
+            box-shadow: var(--shadow-md);
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        /* Sidebar Panels */
+        .sidebar > div {
+            padding: 16px;
+        }
+
+        .directions-form {
+            background-color: var(--background-light);
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .form-header a {
+            color: var(--text-light);
+            font-size: 20px;
+        }
+        
+        form {
+            position: relative;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px 12px 10px 35px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        input[type="text"]::placeholder {
+            color: #999;
+        }
+        
+        form > button[type="button"] {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+        
+        .input-wrapper:nth-of-type(1)::before { content: "\f111"; font-size: 8px; } /* From dot */
+        .input-wrapper:nth-of-type(2)::before { content: "\f3c5"; } /* To pin */
+
+        .form-footer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        select {
+            flex-grow: 1;
+            padding-left: 12px;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+
+        input[type="submit"] {
+            padding: 10px 14px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: var(--primary-hover);
+        }
+        
+        button[data-bbox="37,217,132,31"] {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: var(--background-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+        }
+
+        button[data-bbox="37,217,132,31"]:hover {
+            background-color: #f1f3f5;
+        }
+
+        .directions-panel h2, .welcome-panel h2 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .directions-panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .directions-panel-header button {
+            font-size: 16px;
+            color: var(--text-light);
+            transition: transform 0.3s ease;
+        }
+        .directions-panel-header button.rotated {
+            transform: rotate(180deg);
+        }
+
+        .directions-summary {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .directions-table {
+            width: 100%;
+            border-collapse: collapse;
+            transition: all 0.3s ease;
+        }
+        
+        .directions-table.collapsed {
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            margin-top: -16px;
+        }
+
+        .directions-table tr {
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        
+        .directions-table tr.row-hover {
+            background-color: #e9f2ff;
+        }
+        
+        .directions-table td {
+            padding: 12px 4px;
+            vertical-align: middle;
+        }
+
+        .direction-icon {
+            text-align: center;
+            width: 30px;
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+        
+        .direction-details {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .direction-details b:first-child {
+            margin-right: 8px;
+        }
+
+        .direction-details b:last-child {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .distance {
+            text-align: right;
+            font-weight: 500;
+            color: var(--text-light);
+            white-space: nowrap;
+        }
+        
+        /* Welcome Panel */
+        .welcome-panel p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .sponsors-logo {
+            height: 38px;
+            background: url('https://via.placeholder.com/326x38/EFEFEF/AAAAAA?text=Sponsor+Logos') no-repeat center center;
+            background-size: contain;
+        }
+        
+
+        /* Map Area */
+        .map-area {
+            flex-grow: 1;
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1563604620-928422731518?q=80&w=1280&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .map-marker {
+            position: absolute;
+            transform: translate(-50%, -100%);
+            width: 25px;
+            height: 41px;
+        }
+
+        .map-controls {
+            position: absolute;
+            right: 15px;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: var(--background-white);
+            border-radius: var(--radius-md);
+            padding: 5px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .map-controls span, .map-controls a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-dark);
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+        }
+
+        .map-controls span:hover, .map-controls a:hover {
+            background-color: var(--background-light);
+            color: var(--primary-color);
+        }
+
+        .map-scale {
+            position: absolute;
+            bottom: 30px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 4px 8px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid #bbb;
+        }
+        
+        .map-scale div:first-child {
+            border-bottom: 1px solid #555;
+            padding-bottom: 2px;
+        }
+
+        .map-attribution {
+            position: absolute;
+            bottom: 12px;
+            right: 10px;
+            font-size: 12px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 2px 6px;
+            border-radius: 2px;
+        }
+        
+        .map-attribution a {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body data-bbox="0,0,1280,55">
+    <header data-bbox="0,0,1280,55">
+        <div class="logo-wrapper" data-bbox="10,17,0,22">
+            <img id="0" src="https://www.openstreetmap.org/assets/osm_logo_256-c42880757823ee248967586fe5f29d2f623e59046d1fdf8a3c9071c0b396e987.png" alt="OpenStreetMap Logo" data-bbox="10,13,30,30">
+        </div>
+        <nav data-bbox="178,0,227,55">
+            <div data-bbox="188,10,207,35">
+                <div class="edit-group" data-bbox="188,10,77,35">
+                    <a data-bbox="188,10,50,35">Edit</a>
+                    <button id="1" type="button" data-bbox="237,10,28,35"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <a id="2" data-bbox="264,10,68,35">History</a>
+                <a id="3" data-bbox="331,10,64,35">Export</a>
+            </div>
+        </nav>
+        <nav data-bbox="708,0,572,55">
+            <ul data-bbox="722,13,405,27">
+                <li><a id="4" data-bbox="722,13,77,27">GPS Traces</a></li>
+                <li><a id="5" data-bbox="803,13,82,27">User Diaries</a></li>
+                <li><a id="6" data-bbox="889,13,87,27">Communities</a></li>
+                <li><a id="7" data-bbox="980,13,63,27">Copyright</a></li>
+                <li><a id="8" data-bbox="1047,13,34,27">Help</a></li>
+                <li><a id="9" data-bbox="1085,13,42,27">About</a></li>
+            </ul>
+            <div class="user-actions" data-bbox="1135,10,135,35">
+                <a id="10" data-bbox="1135,10,63,35">Log In</a>
+                <a id="11" data-bbox="1197,10,73,35">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    <div class="main-content" data-bbox="0,55,1280,665">
+        <div class="sidebar" data-bbox="0,55,350,665">
+            <div class="directions-form" data-bbox="0,55,350,213">
+                <div class="form-header" data-bbox="4,63,342,31">
+                    <div data-bbox="8,63,288,31">
+                        <div data-bbox="8,63,254,31"></div>
+                    </div>
+                    <a title="Find directions between two points" data-bbox="304,63,38,31"><i class="fas fa-directions"></i></a>
+                </div>
+                <form data-bbox="0,55,350,213">
+                    <div class="input-wrapper">
+                         <input id="13" type="text" placeholder="From" value="Kancamagus Highway, Livermore, Lincoln, Grafton County, New Hampshire, United States" data-value="Kancamagus Highway, Livermore, Lincoln, Grafton County, New Hampshire, United States" data-bbox="37,112,305,31">
+                    </div>
+                    <div class="input-wrapper">
+                         <input id="14" type="text" placeholder="To" value="Mount Washington, Coös County, New Hampshire, United States" data-value="Mount Washington, CoÃ¶s County, New Hampshire, United States" data-bbox="37,147,305,31">
+                    </div>
+                    <button id="12" type="button" data-bbox="313,71,21,21"><i class="fas fa-times"></i></button>
+                    <div class="form-footer" data-bbox="4,182,342,31">
+                        <select id="15" data-value="0" data-text="Bicycle (OSRM)" data-bbox="37,182,262,31">
+                            <option value="0">Bicycle (OSRM)</option>
+                            <option value="1" selected>Car (OSRM)</option>
+                            <option value="2">Foot (OSRM)</option>
+                        </select>
+                        <input id="16" value="Go" type="submit" data-bbox="307,182,35,31">
+                    </div>
+                    <button id="17" type="button" data-bbox="37,217,132,31">Reverse Directions</button>
+                </form>
+            </div>
+            <div class="directions-panel" data-bbox="0,268,350,912">
+                <div class="directions-panel-header" data-bbox="16,284,318,46">
+                    <h2 data-bbox="16,284,297,38">Directions</h2>
+                    <button id="18" type="button" data-bbox="313,284,21,21"><i class="fas fa-chevron-up"></i></button>
+                </div>
+                <p class="directions-summary" data-bbox="16,330,318,21">Distance: 56km. Time: 4:17.</p>
+                <table class="directions-table" data-bbox="16,367,318,744">
+                    <tr data-bbox="16,367,318,51">
+                        <td><div class="direction-icon" id="19" data-bbox="17,383,20,20"><i class="fas fa-map-marker-alt"></i></div></td>
+                        <td class="direction-details" data-bbox="38,367,262,51">
+                            <b id="20" data-bbox="39,373,13,17">1.</b>
+                            <b id="21" data-bbox="109,373,160,17">Kancamagus Highway (NH 112)</b>
+                        </td>
+                        <td class="distance" id="22" data-bbox="300,367,34,51">5km</td>
+                    </tr>
+                    <tr data-bbox="16,418,318,30">
+                        <td><div class="direction-icon" id="23" data-bbox="17,423,20,20"><i class="fas fa-arrow-up"></i></div></td>
+                        <td class="direction-details" data-bbox="38,418,262,30">
+                            <b id="24" data-bbox="39,424,13,17">2.</b>
+                            <b id="25" data-bbox="142,424,107,17">Sawyer River Trail</b>
+                        </td>
+                        <td class="distance" id="26" data-bbox="300,418,34,30">1000m</td>
+                    </tr>
+                    <tr data-bbox="16,448,318,30">
+                         <td><div class="direction-icon" id="27" data-bbox="17,453,20,20"><i class="fas fa-arrow-left"></i></div></td>
+                        <td class="direction-details"><b id="28" data-bbox="39,454,13,17">3.</b></td>
+                        <td class="distance" id="29" data-bbox="300,448,34,30">1000m</td>
+                    </tr>
+                    <tr data-bbox="16,478,318,30">
+                        <td><div class="direction-icon" id="30" data-bbox="17,483,20,20"><i class="fas fa-arrow-right"></i></div></td>
+                        <td class="direction-details"><b id="31" data-bbox="39,484,13,17">4.</b></td>
+                        <td class="distance" id="32" data-bbox="300,478,34,30">6km</td>
+                    </tr>
+                    <tr data-bbox="16,508,318,30">
+                        <td><div class="direction-icon" id="33" data-bbox="17,513,20,20"><i class="fas fa-arrow-up"></i></div></td>
+                        <td class="direction-details"><b id="34" data-bbox="39,514,13,17">5.</b></td>
+                        <td class="distance" id="35" data-bbox="300,508,34,30">1.5km</td>
+                    </tr>
+                    <tr data-bbox="16,538,318,51">
+                        <td><div class="direction-icon" id="36" data-bbox="17,553,20,20"><i class="fas fa-arrow-right"></i></div></td>
+                        <td class="direction-details" data-bbox="38,538,262,51">
+                            <b id="37" data-bbox="39,544,13,17">6.</b>
+                            <b id="38" data-bbox="149,544,148,17">Brunel Trail / Rob Brook Road</b>
+                        </td>
+                        <td class="distance" id="39" data-bbox="300,538,34,51">150m</td>
+                    </tr>
+                    <tr data-bbox="16,589,318,30">
+                        <td><div class="direction-icon" id="40" data-bbox="17,594,20,20"><i class="fas fa-arrow-left"></i></div></td>
+                        <td class="direction-details"><b id="41" data-bbox="39,595,13,17">7.</b></td>
+                        <td class="distance" id="42" data-bbox="300,589,34,30">800m</td>
+                    </tr>
+                    <tr data-bbox="16,619,318,30">
+                        <td><div class="direction-icon" id="43" data-bbox="17,624,20,20"><i class="fas fa-arrow-up"></i></div></td>
+                        <td class="direction-details"><b id="44" data-bbox="39,625,13,17">8.</b></td>
+                        <td class="distance" id="45" data-bbox="300,619,34,30">800m</td>
+                    </tr>
+                    <tr data-bbox="16,649,318,51">
+                        <td><div class="direction-icon" id="46" data-bbox="17,664,20,20"><i class="fas fa-arrow-right"></i></div></td>
+                        <td class="direction-details"><b id="47" data-bbox="39,655,13,17">9.</b></td>
+                        <td class="distance" id="48" data-bbox="300,649,34,51">300m</td>
+                    </tr>
+                    <tr data-bbox="16,700,318,30">
+                        <td><div class="direction-icon" id="49" data-bbox="17,705,20,20"><i class="fas fa-flag-checkered"></i></div></td>
+                        <td class="direction-details" data-bbox="38,700,262,30">
+                            <b id="50" data-bbox="39,706,21,17">10.</b>
+                            <b id="51" data-bbox="150,706,69,17">Brunel Trail</b>
+                        </td>
+                        <td class="distance" id="52" data-bbox="300,700,34,30">1400m</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="welcome-panel" data-bbox="0,268,350,302">
+                <div data-bbox="16,284,318,85">
+                    <h2 data-bbox="16,284,297,77">Welcome to OpenStreetMap!</h2>
+                </div>
+                <div data-bbox="16,369,318,185">
+                    <p data-bbox="16,369,318,69">OpenStreetMap is a map of the world, created by people like you and free to use under an open license.</p>
+                    <p data-bbox="16,454,318,46">Hosting is supported by</p>
+                    <div class="sponsors-logo" data-bbox="12,516,326,38"></div>
+                </div>
+            </div>
+        </div>
+        <div class="map-area" data-bbox="350,55,930,665">
+            <img id="53" class="map-marker" src="https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png" style="left: 315px; top: 593px;" data-bbox="665,593,25,41">
+            <img id="54" class="map-marker" src="https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png" style="left: 591px; top: 96px;" data-bbox="941,96,25,41">
+            <div class="map-controls" data-bbox="350,55,930,0">
+                <span id="55" data-bbox="1250,75,20,20"><i class="fas fa-plus"></i></span>
+                <span id="56" data-bbox="1250,115,20,20"><i class="fas fa-minus"></i></span>
+                <span id="57" data-bbox="1250,155,20,20"><i class="fas fa-layer-group"></i></span>
+                <span id="58" data-bbox="1250,205,20,20"><i class="fas fa-ruler-horizontal"></i></span>
+                <span id="59" data-bbox="1250,245,20,20"><i class="fas fa-share-alt"></i></span>
+                <span id="60" data-bbox="1250,285,20,20"><i class="fas fa-crosshairs"></i></span>
+                <a id="61" data-bbox="1240,325,40,40"><i class="fas fa-map-marked-alt"></i></a>
+                <a id="62" data-bbox="1240,375,40,40"><i class="fas fa-info-circle"></i></a>
+            </div>
+            <div class="map-scale" data-bbox="355,681,91,34">
+                <div data-bbox="355,681,91,18">5 km</div>
+                <div data-bbox="355,697,88,18">3 mi</div>
+            </div>
+            <div class="map-attribution" data-bbox="874,703,406,17">©
+                <a id="63" data-bbox="891,704,151,14">OpenStreetMap contributors</a>
+                <a id="64" data-bbox="1056,704,90,14">Make a Donation</a>
+                <a id="65" data-bbox="1153,704,122,14">Website and API terms</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Interactive hover for direction steps
+            const directionRows = document.querySelectorAll('.directions-table tr');
+            directionRows.forEach(row => {
+                row.addEventListener('mouseover', () => {
+                    row.classList.add('row-hover');
+                });
+                row.addEventListener('mouseout', () => {
+                    row.classList.remove('row-hover');
+                });
+            });
+
+            // Toggle for directions panel
+            const toggleButton = document.getElementById('18');
+            const directionsTable = document.querySelector('.directions-table');
+            if (toggleButton && directionsTable) {
+                toggleButton.addEventListener('click', () => {
+                    directionsTable.classList.toggle('collapsed');
+                    toggleButton.classList.toggle('rotated');
+                });
+            }
+
+            // Hide the welcome panel if directions are shown.
+            // This is an assumption based on typical UI patterns.
+            const directionsPanel = document.querySelector('.directions-panel');
+            const welcomePanel = document.querySelector('.welcome-panel');
+            if(directionsPanel && welcomePanel) {
+                welcomePanel.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magento Admin - Edit Address</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+        :root {
+            --primary-color: #ff5722; /* Magento Orange */
+            --primary-color-dark: #e64a19;
+            --sidebar-bg: #2d3e50;
+            --sidebar-text: #ecf0f1;
+            --sidebar-text-hover: #ffffff;
+            --sidebar-hover-bg: #34495e;
+            --body-bg: #f4f7fa;
+            --text-color: #34495e;
+            --panel-bg: #ffffff;
+            --border-color: #dfe3e8;
+            --input-border-focus: #ff784d;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.07);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--body-bg);
+            color: var(--text-color);
+            font-size: 14px;
+            line-height: 1.5;
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 88px;
+            background-color: var(--sidebar-bg);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            transition: width 0.3s ease;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            padding: 16px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo-container img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .main-nav {
+            list-style: none;
+            overflow-y: auto;
+            overflow-x: hidden;
+            flex-grow: 1;
+        }
+
+        .main-nav li {
+            position: relative;
+        }
+
+        .main-nav a {
+            color: var(--sidebar-text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            padding: 15px 5px;
+            height: 62px;
+            text-align: center;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        
+        .main-nav a .nav-icon {
+            font-size: 20px;
+            margin-bottom: 5px;
+            width: 24px;
+            text-align: center;
+        }
+        
+        .main-nav a span {
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .main-nav a:hover, .main-nav li:hover > a {
+            background-color: var(--sidebar-hover-bg);
+            color: var(--sidebar-text-hover);
+        }
+
+        .nav-footer {
+            padding-bottom: 20px;
+        }
+        
+        /* Flyout Menu */
+        .flyout-menu {
+            display: none;
+            position: absolute;
+            left: 88px;
+            top: 0;
+            min-width: 220px;
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-lg);
+            border-radius: 0 8px 8px 0;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        .main-nav li:hover > .flyout-menu {
+            display: block;
+        }
+
+        .flyout-menu strong {
+            display: block;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-color);
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 5px;
+        }
+
+        .flyout-menu ul {
+            list-style: none;
+        }
+        
+        .flyout-menu li, .flyout-menu > span {
+            display: block;
+        }
+
+        .flyout-menu a, .flyout-menu span {
+            display: block;
+            padding: 8px 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .flyout-menu a:hover, .flyout-menu span:hover {
+            background-color: var(--body-bg);
+            color: var(--primary-color);
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 32px;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+        
+        .page-header h1 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .action-buttons button {
+            padding: 10px 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-color: var(--panel-bg);
+            margin-left: 10px;
+        }
+        
+        .action-buttons button.primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        .action-buttons button.primary:hover {
+            background-color: var(--primary-color-dark);
+            border-color: var(--primary-color-dark);
+        }
+        
+        .action-buttons button:hover {
+            border-color: #b5bac1;
+            background-color: #f8f9fa;
+        }
+        
+        /* Form Panel */
+        .form-panel {
+            background-color: var(--panel-bg);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+        
+        .form-panel-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .form-panel-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .form-panel-body {
+            padding: 24px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 20px 30px;
+        }
+
+        .form-group {
+            grid-column: 1 / -1;
+            display: contents;
+        }
+        
+        .form-group > label,
+        .form-group > span {
+            font-weight: 500;
+            text-align: right;
+            padding-top: 8px;
+        }
+        
+        .form-group > label.required::after {
+            content: '*';
+            color: #d9534f;
+            margin-left: 4px;
+        }
+
+        .form-group .input-wrapper {
+            max-width: 450px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: var(--input-border-focus);
+            box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.15);
+        }
+        
+        .street-address-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        /* JS-driven hover effect */
+        .js-hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+    </style>
+</head>
+
+<body data-bbox="0,-480,1280,1480">
+
+    <nav class="sidebar" data-bbox="0,-1,88,721">
+        <div class="logo-container">
+             <img id="0" title="Magento Admin Panel" data-bbox="27,16,35,41" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2VjZjBmMSIgd2lkdGg9IjQ4cHgiIGhlaWdodD0iNDhweCI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMiAyTDIgN3YxMGwxMCA1IDEwLTVWN2wtMTAtNXptOC42IDcuN0wxMiAxMy45di02LjJsOC42IDQuOHptLTkuOCA5LjVMNCAxNS4ybDgtNC4yIDggNC4yLTguMiA0LjV6bS0uOC01LjRsLTggNC4yVjkuMWw4LTQuMnY2LjN6Ii8+PC9zdmc+">
+        </div>
+        <ul class="main-nav" data-bbox="0,74,88,646">
+            <li><a href="#"><i class="nav-icon fas fa-tachometer-alt"></i><span id="1" data-bbox="14,111,60,13">Dashboard</span></a></li>
+            <li data-bbox="0,136,88,62">
+                <a href="#"><i class="nav-icon fas fa-chart-line"></i><span id="2" data-bbox="30,173,28,13">Sales</span></a>
+                <div class="flyout-menu" data-bbox="-180,-1,268,812">
+                    <strong data-bbox="-150,19,180,30">Sales</strong>
+                    <ul data-bbox="-165,91,238,308">
+                       <li data-bbox="-165,91,238,308"><a href="#"><span data-bbox="-150,368,174,19">Braintree Virtual Terminal</span></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li data-bbox="0,198,88,62">
+                <a href="#"><i class="nav-icon fas fa-tags"></i><span id="3" data-bbox="22,235,44,13">Catalog</span></a>
+                <div class="flyout-menu" data-bbox="-180,-1,268,812">
+                    <strong data-bbox="-150,19,180,30">Catalog</strong>
+                    <ul data-bbox="-165,91,238,88"><li><a href="#">Products</a></li><li><a href="#">Categories</a></li></ul>
+                </div>
+            </li>
+            <li data-bbox="0,260,88,62">
+                <a href="#"><i class="nav-icon fas fa-users"></i><span id="4" data-bbox="14,297,60,13">Customers</span></a>
+                <div class="flyout-menu" data-bbox="-180,-1,268,812">
+                    <strong data-bbox="-150,19,180,30">Customers</strong>
+                    <ul data-bbox="-180,91,268,720"><li><a href="#"><span data-bbox="-150,192,151,19">Login as Customer Log</span></a></li></ul>
+                </div>
+            </li>
+            <li data-bbox="0,322,88,62">
+                <a href="#"><i class="nav-icon fas fa-bullhorn"></i><span id="5" data-bbox="14,359,60,13">Marketing</span></a>
+                <div class="flyout-menu" data-bbox="-448,-1,536,812">
+                    <strong data-bbox="-418,19,448,30">Marketing</strong>
+                    <ul data-bbox="-448,91,536,720"><ul data-bbox="-180,91,268,417"><li data-bbox="-165,91,238,230"><ul data-bbox="-165,145,238,176"><li><a href="#">Promotions</a></li></ul></li><li data-bbox="-165,366,238,142"><ul data-bbox="-165,420,238,88"><li><a href="#">Communications</a></li></ul></li></ul></ul>
+                </div>
+            </li>
+            <li data-bbox="0,384,88,62">
+                <a href="#"><i class="nav-icon fas fa-file-alt"></i><span id="6" data-bbox="19,421,50,13">Content</span></a>
+                <div class="flyout-menu" data-bbox="-180,-1,268,812">
+                    <strong data-bbox="-150,19,180,30">Content</strong>
+                    <ul data-bbox="-180,91,268,720"><li data-bbox="-165,91,238,230"><ul data-bbox="-165,145,238,176"><li><a href="#">Elements</a></li></ul></li><li data-bbox="-165,366,238,98"></li><li data-bbox="-165,509,238,186"><ul data-bbox="-165,563,238,132"><li><a href="#">Design</a></li></ul></li></ul>
+                </div>
+            </li>
+            <li data-bbox="0,446,88,62">
+                <a href="#"><i class="nav-icon fas fa-chart-pie"></i><span id="7" data-bbox="22,483,44,13">Reports</span></a>
+                <div class="flyout-menu" data-bbox="-984,-1,1072,812">
+                    <strong data-bbox="-954,19,984,30">Reports</strong>
+                    <ul data-bbox="-984,91,1072,720"><li data-bbox="-165,91,238,142"><a href="#"><span data-bbox="-150,103,159,22">Business Intelligence</span></a><ul data-bbox="-165,145,238,88"></ul></li></ul>
+                </div>
+            </li>
+            <li data-bbox="0,508,88,62">
+                <a href="#"><i class="nav-icon fas fa-store"></i><span id="8" data-bbox="25,545,38,13">Stores</span></a>
+                <div class="flyout-menu" data-bbox="-448,-1,536,812">
+                    <strong data-bbox="-418,19,448,30">Stores</strong>
+                    <ul data-bbox="-448,91,536,720"><ul data-bbox="-180,91,268,373"><li data-bbox="-165,91,238,142"><ul data-bbox="-165,145,238,88"><li><a href="#">Settings</a></li></ul></li><li data-bbox="-165,278,238,186"><ul data-bbox="-165,332,238,132"><li><a href="#">Attributes</a></li></ul></li></ul></ul>
+                </div>
+            </li>
+            <li data-bbox="0,570,88,62">
+                <a href="#"><i class="nav-icon fas fa-cogs"></i><span id="9" data-bbox="25,607,38,13">System</span></a>
+                <div class="flyout-menu" data-bbox="-448,-1,536,812">
+                    <strong data-bbox="-418,19,448,30">System</strong>
+                    <ul data-bbox="-448,91,536,720"><ul data-bbox="-180,91,268,560"><li data-bbox="-165,91,238,186"><ul data-bbox="-165,145,238,132"><li><a href="#">Data Transfer</a></li></ul></li><li data-bbox="-165,322,238,98"></li><li data-bbox="-165,465,238,186"><ul data-bbox="-165,519,238,132"><li><a href="#"><span data-bbox="-150,619,158,19">Manage Encryption Key</span></a></li></ul></li></ul></ul>
+                </div>
+            </li>
+             <li class="nav-footer"><a href="#"><i class="nav-icon fas fa-puzzle-piece"></i><span id="10" data-bbox="32,669,24,13">Find Partners & Extensions</span></a></li>
+        </ul>
+    </nav>
+    
+    <div class="main-content-wrapper" data-bbox="88,-480,1192,1480">
+        <main class="main-content" data-bbox="88,-337,1192,1197">
+            <header class="page-header">
+                <h1>Edit Billing Address</h1>
+                <div class="action-buttons" data-bbox="852,16,413,46">
+                    <button title="Back" type="button" data-bbox="865,16,102,46"><span id="11" data-bbox="911,27,39,22">Back</span></button>
+                    <button title="Reset" type="button" data-bbox="980,16,78,46"><span id="12" data-bbox="997,27,44,22">Reset</span></button>
+                    <button title="Save Order Address" type="button" class="primary" data-bbox="1071,16,194,46"><span id="13" data-bbox="1088,27,160,22">Save Order Address</span></button>
+                </div>
+            </header>
+
+            <div class="content-body" data-bbox="118,-230,1132,1030">
+                <div class="form-panel" data-bbox="118,-155,1132,955">
+                    <div class="form-panel-header">
+                        <h2>Address Information</h2>
+                    </div>
+                    <div class="form-panel-body">
+                        <form data-bbox="118,-100,1132,900" class="form-grid">
+                            
+                            <div class="form-group" data-bbox="88,26,1162,33">
+                                <label for="middle-name"><span data-bbox="244,35,135,17">Middle Name/Initial</span></label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="middle-name" data-bbox="409,26,551,33">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group" data-bbox="88,89,1162,33">
+                                <label class="required" for="15" id="14" data-bbox="118,89,261,32"><span data-bbox="306,98,73,17">Last Name</span></label>
+                                <div class="input-wrapper">
+                                    <input id="15" value="Lee" type="text" data-bbox="409,89,551,33">
+                                </div>
+                            </div>
+
+                            <div class="form-group" data-bbox="88,152,1162,33">
+                                <label for="17" id="16" data-bbox="118,152,261,32"><span data-bbox="296,161,83,17">Name Suffix</span></label>
+                                <div class="input-wrapper">
+                                    <input id="17" type="text" data-bbox="409,152,551,33">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group" data-bbox="88,215,1162,33">
+                                <label for="19" id="18" data-bbox="118,215,261,32"><span data-bbox="314,224,65,17">Company</span></label>
+                                <div class="input-wrapper">
+                                    <input id="19" type="text" data-bbox="409,215,551,33">
+                                </div>
+                            </div>
+
+                            <div class="form-group" data-bbox="88,278,1162,81">
+                                <label class="required" for="20"><span data-bbox="278,287,101,17">Street Address</span></label>
+                                <div class="input-wrapper street-address-inputs" data-bbox="409,278,551,81">
+                                    <input id="20" value="557 Cypress Road" type="text" data-value="411 Peach Ridge" data-bbox="409,278,551,33">
+                                    <input id="21" type="text" data-bbox="409,326,551,33">
+                                </div>
+                            </div>
+
+                            <div class="form-group" data-bbox="88,389,1162,33">
+                                <label class="required" for="23" id="22" data-bbox="118,389,261,32"><span data-bbox="323,398,56,17">Country</span></label>
+                                <div class="input-wrapper">
+                                    <select id="23" data-value="US" data-text="United States" data-bbox="409,389,329,33">
+                                        <option value="AF">Afghanistan</option> <option value="AL">Albania</option> <option value="DZ">Algeria</option> <option value="AS">American Samoa</option> <option value="AD">Andorra</option> <option value="AO">Angola</option> <option value="AI">Anguilla</option> <option value="AQ">Antarctica</option> <option value="AG">Antigua & Barbuda</option> <option value="AR">Argentina</option> <option value="AM">Armenia</option> <option value="AW">Aruba</option> <option value="AU">Australia</option> <option value="AT">Austria</option> <option value="AZ">Azerbaijan</option> <option value="BS">Bahamas</option> <option value="BH">Bahrain</option> <option value="BD">Bangladesh</option> <option value="BB">Barbados</option> <option value="BY">Belarus</option> <option value="BE">Belgium</option> <option value="BZ">Belize</option> <option value="BJ">Benin</option> <option value="BM">Bermuda</option> <option value="BT">Bhutan</option> <option value="BO">Bolivia</option> <option value="BA">Bosnia & Herzegovina</option> <option value="BW">Botswana</option> <option value="BV">Bouvet Island</option> <option value="BR">Brazil</option> <option value="IO">British Indian Ocean Territory</option> <option value="VG">British Virgin Islands</option> <option value="BN">Brunei</option> <option value="BG">Bulgaria</option> <option value="BF">Burkina Faso</option> <option value="BI">Burundi</option> <option value="KH">Cambodia</option> <option value="CM">Cameroon</option> <option value="CA">Canada</option> <option value="CV">Cape Verde</option> <option value="BQ">Caribbean Netherlands</option> <option value="KY">Cayman Islands</option> <option value="CF">Central African Republic</option> <option value="TD">Chad</option> <option value="CL">Chile</option> <option value="CN">China</option> <option value="CX">Christmas Island</option> <option value="CC">Cocos (Keeling) Islands</option> <option value="CO">Colombia</option> <option value="KM">Comoros</option> <option value="CG">Congo - Brazzaville</option> <option value="CD">Congo - Kinshasa</option> <option value="CK">Cook Islands</option> <option value="CR">Costa Rica</option> <option value="HR">Croatia</option> <option value="CU">Cuba</option> <option value="CW">Curaçao</option> <option value="CY">Cyprus</option> <option value="CZ">Czechia</option> <option value="CI">Côte d’Ivoire</option> <option value="DK">Denmark</option> <option value="DJ">Djibouti</option> <option value="DM">Dominica</option> <option value="DO">Dominican Republic</option> <option value="EC">Ecuador</option> <option value="EG">Egypt</option> <option value="SV">El Salvador</option> <option value="GQ">Equatorial Guinea</option> <option value="ER">Eritrea</option> <option value="EE">Estonia</option> <option value="SZ">Eswatini</option> <option value="ET">Ethiopia</option> <option value="FK">Falkland Islands</option> <option value="FO">Faroe Islands</option> <option value="FJ">Fiji</option> <option value="FI">Finland</option> <option value="FR">France</option> <option value="GF">French Guiana</option> <option value="PF">French Polynesia</option> <option value="TF">French Southern Territories</option> <option value="GA">Gabon</option> <option value="GM">Gambia</option> <option value="GE">Georgia</option> <option value="DE">Germany</option> <option value="GH">Ghana</option> <option value="GI">Gibraltar</option> <option value="GR">Greece</option> <option value="GL">Greenland</option> <option value="GD">Grenada</option> <option value="GP">Guadeloupe</option> <option value="GU">Guam</option> <option value="GT">Guatemala</option> <option value="GG">Guernsey</option> <option value="GN">Guinea</option> <option value="GW">Guinea-Bissau</option> <option value="GY">Guyana</option> <option value="HT">Haiti</option> <option value="HM">Heard & McDonald Islands</option> <option value="HN">Honduras</option> <option value="HK">Hong Kong SAR China</option> <option value="HU">Hungary</option> <option value="IS">Iceland</option> <option value="IN">India</option> <option value="ID">Indonesia</option> <option value="IR">Iran</option> <option value="IQ">Iraq</option> <option value="IE">Ireland</option> <option value="IM">Isle of Man</option> <option value="IL">Israel</option> <option value="IT">Italy</option> <option value="JM">Jamaica</option> <option value="JP">Japan</option> <option value="JE">Jersey</option> <option value="JO">Jordan</option> <option value="KZ">Kazakhstan</option> <option value="KE">Kenya</option> <option value="KI">Kiribati</option> <option value="XK">Kosovo</option> <option value="KW">Kuwait</option> <option value="KG">Kyrgyzstan</option> <option value="LA">Laos</option> <option value="LV">Latvia</option> <option value="LB">Lebanon</option> <option value="LS">Lesotho</option> <option value="LR">Liberia</option> <option value="LY">Libya</option> <option value="LI">Liechtenstein</option> <option value="LT">Lithuania</option> <option value="LU">Luxembourg</option> <option value="MO">Macao SAR China</option> <option value="MG">Madagascar</option> <option value="MW">Malawi</option> <option value="MY">Malaysia</option> <option value="MV">Maldives</option> <option value="ML">Mali</option> <option value="MT">Malta</option> <option value="MH">Marshall Islands</option> <option value="MQ">Martinique</option> <option value="MR">Mauritania</option> <option value="MU">Mauritius</option> <option value="YT">Mayotte</option> <option value="MX">Mexico</option> <option value="FM">Micronesia</option> <option value="MD">Moldova</option> <option value="MC">Monaco</option> <option value="MN">Mongolia</option> <option value="ME">Montenegro</option> <option value="MS">Montserrat</option> <option value="MA">Morocco</option> <option value="MZ">Mozambique</option> <option value="MM">Myanmar (Burma)</option> <option value="NA">Namibia</option> <option value="NR">Nauru</option> <option value="NP">Nepal</option> <option value="NL">Netherlands</option> <option value="NC">New Caledonia</option> <option value="NZ">New Zealand</option> <option value="NI">Nicaragua</option> <option value="NE">Niger</option> <option value="NG">Nigeria</option> <option value="NU">Niue</option> <option value="NF">Norfolk Island</option> <option value="KP">North Korea</option> <option value="MK">North Macedonia</option> <option value="MP">Northern Mariana Islands</option> <option value="NO">Norway</option> <option value="OM">Oman</option> <option value="PK">Pakistan</option> <option value="PW">Palau</option> <option value="PS">Palestinian Territories</option> <option value="PA">Panama</option> <option value="PG">Papua New Guinea</option> <option value="PY">Paraguay</option> <option value="PE">Peru</option> <option value="PH">Philippines</option> <option value="PN">Pitcairn Islands</option> <option value="PL">Poland</option> <option value="PT">Portugal</option> <option value="QA">Qatar</option> <option value="RO">Romania</option> <option value="RU">Russia</option> <option value="RW">Rwanda</option> <option value="RE">Réunion</option> <option value="WS">Samoa</option> <option value="SM">San Marino</option> <option value="SA">Saudi Arabia</option> <option value="SN">Senegal</option> <option value="RS">Serbia</option>
+                                        <option value="US">United States</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set default country based on data attribute
+            const countrySelect = document.getElementById('23');
+            if (countrySelect && countrySelect.dataset.value) {
+                countrySelect.value = countrySelect.dataset.value;
+            }
+
+            // Add subtle hover effect to buttons
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', () => button.classList.add('js-hover'));
+                button.addEventListener('mouseleave', () => button.classList.remove('js-hover'));
+            });
+        });
+    </script>
+</body>
+</html>

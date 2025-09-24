@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postmill - A List of Forums</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #4A90E2;
+            --primary-hover-color: #357ABD;
+            --background-color: #F7F9FC;
+            --content-bg-color: #FFFFFF;
+            --text-primary: #1A1A1A;
+            --text-secondary: #6B7280;
+            --border-color: #E5E7EB;
+            --success-color: #10B981;
+            --success-bg-color: #E7F8F2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-hover-color);
+        }
+
+        button {
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Navigation */
+        .main-header {
+            background-color: var(--content-bg-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 20px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-header > div {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #0 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .header-nav ul, .header-actions ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        .header-nav ul a {
+            font-weight: 500;
+            color: var(--text-secondary);
+            padding: 20px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .header-nav ul a:hover {
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .search-form {
+            position: relative;
+            flex-grow: 1;
+            max-width: 300px;
+            margin: 0 2rem;
+        }
+        
+        #4 {
+            width: 100%;
+            padding: 10px 15px 10px 40px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            background-color: var(--background-color);
+            font-size: 0.9rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        #4:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+        }
+
+        .search-form::before {
+            content: "\f002";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .header-actions .icon-link {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            position: relative;
+        }
+        
+        .header-actions .icon-link:hover {
+            color: var(--text-primary);
+        }
+
+        .submit-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--primary-hover-color);
+        }
+        
+        .submit-btn i {
+            font-size: 0.9rem;
+        }
+        
+        .user-menu button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: transparent;
+            border-radius: 8px;
+            padding: 6px;
+        }
+        
+        .user-menu button:hover {
+            background-color: var(--background-color);
+        }
+        
+        .user-menu i {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        #9 {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+        
+        .sub-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+        
+        .sub-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        .sub-nav a, .sub-nav button {
+            color: var(--text-secondary);
+            font-weight: 500;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            font-size: 1rem;
+        }
+        
+        .sub-nav a.active, .sub-nav button.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .sub-nav button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        #17 {
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--content-bg-color);
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        #17:hover {
+            background-color: var(--primary-hover-color);
+        }
+        
+        .forum-list-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .forum-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            background-color: var(--content-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .forum-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .forum-details {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .forum-details::before {
+            content: 'f/';
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            align-self: flex-start;
+            margin-top: -2px;
+        }
+
+        .forum-info a {
+            display: block;
+            color: var(--text-primary);
+        }
+        
+        .forum-info b:first-of-type {
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: block;
+        }
+        .forum-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .forum-actions {
+            text-align: right;
+        }
+        
+        .subscribe-btn {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--primary-color);
+            border-radius: 20px;
+            overflow: hidden;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .subscribe-text-wrapper {
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: var(--content-bg-color);
+        }
+        
+        .subscriber-count {
+            padding: 8px 16px;
+            color: var(--primary-color);
+            background-color: var(--content-bg-color);
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .subscribe-btn.subscribed {
+             border-color: var(--success-color);
+        }
+
+        .subscribe-btn.subscribed .subscribe-text-wrapper {
+            background-color: var(--success-color);
+        }
+
+        .subscribe-btn.subscribed .subscriber-count {
+            color: var(--success-color);
+        }
+
+        .forum-actions p {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+    </style>
+</head>
+<body data-bbox="0,0,1280,2731">
+    <header class="main-header" data-bbox="0,0,1280,0">
+        <div data-bbox="90,0,1100,52">
+            <b id="0" data-bbox="120,16,58,19">Postmill</b>
+            <nav class="header-nav" data-bbox="194,0,148,52">
+                <ul data-bbox="194,0,148,52">
+                    <li><a id="1" href="#" data-bbox="194,0,86,52">Forums</a></li>
+                    <li><a id="2" href="#" data-bbox="280,0,62,52">Wiki</a></li>
+                </ul>
+            </nav>
+            <form class="search-form" data-bbox="455,0,236,52">
+                <input id="4" type="search" placeholder="Search..." data-bbox="462,8,222,37">
+            </form>
+            <div class="header-actions">
+                <ul data-bbox="804,0,372,52">
+                    <li>
+                        <a href="#" title="Notifications (0)" class="icon-link" data-bbox="804,0,48,52">
+                            <i id="5" class="fa-regular fa-bell" data-bbox="820,19,16,13"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="submit-btn">
+                            <i id="6" class="fa-solid fa-plus" data-bbox="870,18,12,13"></i>
+                            <span id="7" data-bbox="888,16,51,19">Submit</span>
+                        </a>
+                    </li>
+                    <li data-bbox="955,0,221,52" class="user-menu">
+                        <button type="button" data-bbox="955,0,221,52">
+                            <i id="8" class="fa-solid fa-user-circle" data-bbox="973,18,12,14"></i>
+                            <strong id="9" data-bbox="991,16,157,19">MarvelsGrantMan136</strong>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main data-bbox="90,66,1100,2616" class="container">
+        <nav data-bbox="90,80,1086,49" class="sub-nav">
+            <ul data-bbox="104,80,218,35">
+                <li><a id="11" href="#" class="active" data-bbox="104,80,69,35">Forums</a></li>
+                <li><a id="12" href="#" data-bbox="173,80,51,35">Tags</a></li>
+                <li><a id="13" href="#" data-bbox="224,80,98,35">Alphabetical</a></li>
+            </ul>
+            <li data-bbox="336,80,128,35">
+                <button type="button" data-bbox="336,80,128,35">
+                    <i id="14" class="fa-solid fa-sort" data-bbox="347,90,14,14"></i>
+                    <span id="15" data-bbox="364,89,79,16">Submissions</span>
+                </button>
+            </li>
+        </nav>
+        <div data-bbox="90,129,1086,56" class="page-header">
+            <h1 data-bbox="104,129,944,42">List of forums</h1>
+            <a id="17" href="#" data-bbox="1062,129,114,37">Create forum</a>
+        </div>
+        <div data-bbox="104,185,1072,2432" class="forum-list-container">
+            <article data-bbox="97,186,1079,103" class="forum-item">
+                <div data-bbox="104,200,890,68" class="forum-details">
+                    <div class="forum-info">
+                        <a href="#" data-bbox="104,200,0,0">
+                            <b id="18" data-bbox="121,202,65,16">AskReddit</b>
+                        </a>
+                        <p data-bbox="104,247,890,21">Where the most thought-provoking questions are asked and answered.</p>
+                    </div>
+                </div>
+                <div data-bbox="994,202,182,72" class="forum-actions">
+                    <form data-bbox="1001,202,175,37">
+                        <button class="subscribe-btn" data-bbox="1001,202,175,37">
+                            <span data-bbox="1001,202,109,37" class="subscribe-text-wrapper">
+                                <span id="20" class="subscribe-text" data-bbox="1024,212,63,16">Subscribe</span>
+                            </span>
+                            <b id="21" data-bbox="1112,202,64,37" class="subscriber-count">10,041</b>
+                        </button>
+                    </form>
+                    <p data-bbox="1027,246,124,21">10,041 submissions</p>
+                </div>
+            </article>
+            <article data-bbox="97,282,1079,105" class="forum-item">
+                <div data-bbox="104,297,890,69" class="forum-details">
+                    <div class="forum-info">
+                        <a href="#" data-bbox="104,297,0,0">
+                            <b id="22" data-bbox="121,299,125,16">relationship_advice</b>
+                        </a>
+                        <p data-bbox="104,345,890,21">A community for asking for and giving advice on relationships.</p>
+                    </div>
+                </div>
+                <div data-bbox="994,299,182,72" class="forum-actions">
+                    <form data-bbox="1001,299,175,37">
+                        <button class="subscribe-btn" data-bbox="1001,299,175,37">
+                            <span data-bbox="1001,299,109,37" class="subscribe-text-wrapper">
+                                <span id="24" class="subscribe-text" data-bbox="1024,309,63,16">Subscribe</span>
+                            </span>
+                            <b id="25" data-bbox="1112,299,64,37" class="subscriber-count">5,718</b>
+                        </button>
+                    </form>
+                    <p data-bbox="1031,343,116,21">5,718 submissions</p>
+                </div>
+            </article>
+            <article data-bbox="97,380,1079,104" class="forum-item">
+                <div data-bbox="104,395,890,68" class="forum-details">
+                    <div class="forum-info">
+                        <a href="#" data-bbox="104,395,0,0">
+                            <b id="26" data-bbox="121,397,68,16">worldnews</b>
+                        </a>
+                        <p data-bbox="104,442,890,21">A place for major news from around the world, excluding US-internal news.</p>
+                    </div>
+                </div>
+                <div data-bbox="994,396,182,72" class="forum-actions">
+                    <form data-bbox="1001,396,175,37">
+                        <button class="subscribe-btn" data-bbox="1001,396,175,37">
+                            <span data-bbox="1001,396,109,37" class="subscribe-text-wrapper">
+                                <span id="28" class="subscribe-text" data-bbox="1024,406,63,16">Subscribe</span>
+                            </span>
+                            <b id="29" data-bbox="1112,396,64,37" class="subscriber-count">3,464</b>
+                        </button>
+                    </form>
+                    <p data-bbox="1031,440,116,21">3,464 submissions</p>
+                </div>
+            </article>
+            <article data-bbox="97,477,1079,104" class="forum-item">
+                <div data-bbox="104,492,890,68" class="forum-details">
+                    <div class="forum-info">
+                        <a href="#" data-bbox="104,492,0,0">
+                            <b id="30" data-bbox="121,494,33,16">news</b>
+                        </a>
+                        <p data-bbox="104,539,890,21">All the latest news and current events from the US and around the world.</p>
+                    </div>
+                </div>
+                <div data-bbox="994,493,182,72" class="forum-actions">
+                    <form data-bbox="1001,493,175,37">
+                        <button class="subscribe-btn" data-bbox="1001,493,175,37">
+                            <span data-bbox="1001,493,109,37" class="subscribe-text-wrapper">
+                                <span id="32" class="subscribe-text" data-bbox="1024,503,63,16">Subscribe</span>
+                            </span>
+                            <b id="33" data-bbox="1112,493,64,37" class="subscriber-count">3,322</b>
+                        </button>
+                    </form>
+                    <p data-bbox="1031,537,116,21">3,322 submissions</p>
+                </div>
+            </article>
+            <article data-bbox="97,574,1079,104" class="forum-item">
+                <div data-bbox="104,589,890,68" class="forum-details">
+                    <div class="forum-info">
+                        <a href="#" data-bbox="104,589,0,0">
+                            <b id="34" data-bbox="121,591,46,16">movies</b>
+                        </a>
+                        <p data-bbox="104,636,890,21">The go-to place for discussions and news about movies.</p>
+                    </div>
+                </div>
+                <div data-bbox="994,591,182,72" class="forum-actions">
+                    <form data-bbox="1001,591,175,37">
+                        <button class="subscribe-btn" data-bbox="1001,591,175,37">
+                            <span data-bbox="1001,591,109,37" class="subscribe-text-wrapper">
+                                <span id="36" class="subscribe-text" data-bbox="1024,601,63,16">Subscribe</span>
+                            </span>
+                            <b id="37" data-bbox="1112,591,64,37" class="subscriber-count">3,261</b>
+                        </button>
+                    </form>
+                    <p data-bbox="1031,635,116,21">3,261 submissions</p>
+                </div>
+            </article>
+            <article data-bbox="97,671,1079,105" class="forum-item">
+                <div data-bbox="104,686,890,69" class="forum-details">
+                    <div class="forum-info">
+                        <a href="#" data-bbox="104,686,0,0">
+                            <b id="38" data-bbox="121,688,47,16">memes</b>
+                        </a>
+                        <p>Your daily dose of fun and relatable memes.</p>
+                    </div>
+                </div>
+                <div data-bbox="994,688,182,72" class="forum-actions">
+                    <form data-bbox="1001,688,175,37">
+                        <button class="subscribe-btn" data-bbox="1001,688,175,37">
+                            <span data-bbox="1001,688,109,37" class="subscribe-text-wrapper">
+                                <span id="39" class="subscribe-text" data-bbox="1024,698,63,16">Subscribe</span>
+                            </span>
+                            <b id="40" data-bbox="1112,688,64,37" class="subscriber-count">2,987</b>
+                        </button>
+                    </form>
+                    <p>2,987 submissions</p>
+                </div>
+            </article>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const subscribeButtons = document.querySelectorAll('.subscribe-btn');
+
+            subscribeButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    button.classList.toggle('subscribed');
+                    
+                    const textSpan = button.querySelector('.subscribe-text');
+                    const countEl = button.querySelector('.subscriber-count');
+                    let count = parseInt(countEl.textContent.replace(/,/g, ''));
+
+                    if (button.classList.contains('subscribed')) {
+                        textSpan.textContent = 'Subscribed';
+                        countEl.textContent = (count + 1).toLocaleString();
+                    } else {
+                        textSpan.textContent = 'Subscribe';
+                        countEl.textContent = (count - 1).toLocaleString();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

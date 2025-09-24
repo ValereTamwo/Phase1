@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postmill - List of Forums</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary-color: #0079D3;
+            --primary-hover: #0064b0;
+            --secondary-color: #DAE0E6;
+            --background-color: #F4F6F9;
+            --card-background: #FFFFFF;
+            --text-primary: #1c1c1c;
+            --text-secondary: #7c7c7c;
+            --border-color: #e0e0e0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Navigation */
+        .header-nav {
+            background-color: var(--card-background);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-nav .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .main-nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .main-nav-links a {
+            padding: 0.75rem 0.5rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.2s ease;
+        }
+        .main-nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .search-form {
+            flex-grow: 1;
+            position: relative;
+        }
+        
+        .search-form .search-input {
+            width: 100%;
+            padding: 0.6rem 1rem 0.6rem 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            background-color: var(--background-color);
+            font-size: 0.9rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .search-form .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 121, 211, 0.2);
+        }
+
+        .search-form::before {
+            content: "\f002";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .user-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .icon-btn {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            padding: 0.5rem;
+            transition: color 0.2s ease;
+        }
+        .icon-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .submit-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease;
+        }
+        .submit-btn:hover {
+            background-color: var(--primary-hover);
+        }
+        .submit-btn i {
+            font-size: 0.9rem;
+        }
+
+        .user-profile-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 0.4rem 0.8rem;
+            transition: border-color 0.2s ease;
+        }
+        .user-profile-btn:hover {
+            border-color: var(--text-primary);
+        }
+        .user-profile-btn strong {
+            font-weight: 600;
+        }
+        .user-profile-btn i {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        /* Main Content */
+        .content-nav {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .content-nav ul {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .content-nav a, .content-nav button {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .content-nav a:hover, .content-nav button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .filter-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .create-forum-btn {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 20px;
+            transition: background-color 0.2s ease;
+            box-shadow: var(--shadow);
+        }
+        .create-forum-btn:hover {
+            background-color: var(--primary-hover);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Forum List */
+        .forum-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .forum-card {
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .forum-card.interactive-hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .forum-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .forum-info a {
+            color: var(--text-primary);
+        }
+        
+        .forum-title-wrapper {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .forum-prefix {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .forum-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .forum-info a:hover .forum-title {
+            color: var(--primary-color);
+        }
+
+        .forum-description {
+            color: var(--text-secondary);
+            max-width: 60ch;
+        }
+
+        .forum-actions {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            text-align: right;
+        }
+        
+        .subscribe-btn {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--primary-color);
+            border-radius: 20px;
+            overflow: hidden;
+            font-weight: 600;
+        }
+        
+        .subscribe-btn .subscribe-text {
+            padding: 0.5rem 1.2rem;
+            color: var(--primary-color);
+            transition: background-color 0.2s, color 0.2s;
+        }
+        
+        .subscribe-btn:hover .subscribe-text {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .subscribe-btn .subscriber-count {
+            padding: 0.5rem 1rem;
+            background-color: var(--secondary-color);
+            color: var(--text-secondary);
+            border-left: 1px solid var(--border-color);
+        }
+        
+        .submission-count {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body data-bbox="0,0,1280,2731">
+    <nav data-bbox="0,0,1280,0" class="header-nav">
+        <div data-bbox="90,0,1100,52" class="nav-content">
+            <b id="0" data-bbox="120,16,58,19" class="logo">Postmill</b>
+            <div data-bbox="194,0,148,52">
+                <ul data-bbox="194,0,148,52" class="main-nav-links">
+                    <li><a id="1" data-bbox="194,0,86,52" href="#">Forums</a></li>
+                    <li><a id="2" data-bbox="280,0,62,52" href="#">Wiki</a></li>
+                </ul>
+            </div>
+            <form data-bbox="455,0,236,52" class="search-form">
+                <input id="4" type="search" data-bbox="462,8,222,37" class="search-input" placeholder="Search Postmill">
+            </form>
+            <div class="user-controls">
+                <ul data-bbox="804,0,372,52" style="display: flex; align-items: center; gap: 0.75rem;">
+                    <a title="Notifications (0)" data-bbox="804,0,48,52" class="icon-btn">
+                        <i id="5" data-bbox="820,19,16,13" class="fas fa-bell"></i>
+                    </a>
+                    <a href="#" class="submit-btn">
+                        <i id="6" data-bbox="870,18,12,13" class="fas fa-plus"></i>
+                        <span id="7" data-bbox="888,16,51,19">Submit</span>
+                    </a>
+                    <li data-bbox="955,0,221,52">
+                        <button type="button" data-bbox="955,0,221,52" class="user-profile-btn">
+                            <i id="8" data-bbox="973,18,12,14" class="fas fa-user-circle"></i>
+                            <strong id="9" data-bbox="991,16,157,19">MarvelsGrantMan136</strong>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main data-bbox="90,66,1100,2616" class="container">
+        <nav data-bbox="90,80,1086,49" class="content-nav">
+            <ul data-bbox="104,80,218,35">
+                <li><a id="11" data-bbox="104,80,69,35" href="#">Forums</a></li>
+                <li><a id="12" data-bbox="173,80,51,35" href="#">Tags</a></li>
+                <li><a id="13" data-bbox="224,80,98,35" href="#">Alphabetical</a></li>
+            </ul>
+            <li data-bbox="336,80,128,35">
+                <button type="button" data-bbox="336,80,128,35" class="filter-btn">
+                    <span id="15" data-bbox="364,89,79,16">Submissions</span>
+                    <i id="14" data-bbox="347,90,14,14" class="fas fa-chevron-down"></i>
+                </button>
+            </li>
+        </nav>
+        <div data-bbox="90,129,1086,56" class="page-header">
+            <h1 data-bbox="104,129,944,42">List of forums</h1>
+            <a id="17" data-bbox="1062,129,114,37" href="#" class="create-forum-btn">Create forum</a>
+        </div>
+        <div data-bbox="104,185,1072,2432" class="forum-list">
+            <article data-bbox="97,186,1079,103" class="forum-card">
+                <div data-bbox="104,200,890,68" class="forum-info">
+                    <a data-bbox="104,200,0,0" href="#">
+                        <div class="forum-title-wrapper">
+                           <b id="18" data-bbox="121,202,65,16" class="forum-prefix">f/AskReddit</b>
+                           <b id="19" data-bbox="104,221,890,26" class="forum-title">AskReddit</b>
+                        </div>
+                        <p data-bbox="104,247,890,21" class="forum-description">A place to ask and answer thought-provoking questions.</p>
+                    </a>
+                </div>
+                <div data-bbox="994,202,182,72" class="forum-actions">
+                    <p data-bbox="1027,246,124,21" class="submission-count">10,041 submissions</p>
+                    <form data-bbox="1001,202,175,37">
+                        <button data-bbox="1001,202,175,37" class="subscribe-btn">
+                            <span data-bbox="1001,202,109,37" class="subscribe-text">
+                                <span id="20" data-bbox="1024,212,63,16">Subscribe</span>
+                            </span>
+                            <b id="21" data-bbox="1112,202,64,37" class="subscriber-count">0</b>
+                        </button>
+                    </form>
+                </div>
+            </article>
+            <article data-bbox="97,282,1079,105" class="forum-card">
+                <div data-bbox="104,297,890,69" class="forum-info">
+                    <a data-bbox="104,297,0,0" href="#">
+                       <div class="forum-title-wrapper">
+                           <b id="22" data-bbox="121,299,125,16" class="forum-prefix">f/relationship_advice</b>
+                           <b id="23" data-bbox="104,318,890,27" class="forum-title">relationship_advice</b>
+                        </div>
+                        <p data-bbox="104,345,890,21" class="forum-description">Need help with your relationship? This is the place to ask.</p>
+                    </a>
+                </div>
+                <div data-bbox="994,299,182,72" class="forum-actions">
+                    <p data-bbox="1031,343,116,21" class="submission-count">5,718 submissions</p>
+                     <form data-bbox="1001,299,175,37">
+                        <button data-bbox="1001,299,175,37" class="subscribe-btn">
+                            <span data-bbox="1001,299,109,37" class="subscribe-text">
+                                <span id="24" data-bbox="1024,309,63,16">Subscribe</span>
+                            </span>
+                            <b id="25" data-bbox="1112,299,64,37" class="subscriber-count">0</b>
+                        </button>
+                    </form>
+                </div>
+            </article>
+            <article data-bbox="97,380,1079,104" class="forum-card">
+                <div data-bbox="104,395,890,68" class="forum-info">
+                    <a data-bbox="104,395,0,0" href="#">
+                        <div class="forum-title-wrapper">
+                            <b id="26" data-bbox="121,397,68,16" class="forum-prefix">f/worldnews</b>
+                            <b id="27" data-bbox="104,416,890,26" class="forum-title">worldnews</b>
+                        </div>
+                        <p data-bbox="104,442,890,21" class="forum-description">A place for major news from around the world, excluding US-internal news.</p>
+                    </a>
+                </div>
+                <div data-bbox="994,396,182,72" class="forum-actions">
+                    <p data-bbox="1031,440,116,21" class="submission-count">3,464 submissions</p>
+                    <form data-bbox="1001,396,175,37">
+                        <button data-bbox="1001,396,175,37" class="subscribe-btn">
+                            <span data-bbox="1001,396,109,37" class="subscribe-text">
+                                <span id="28" data-bbox="1024,406,63,16">Subscribe</span>
+                            </span>
+                            <b id="29" data-bbox="1112,396,64,37" class="subscriber-count">0</b>
+                        </button>
+                    </form>
+                </div>
+            </article>
+            <article data-bbox="97,477,1079,104" class="forum-card">
+                <div data-bbox="104,492,890,68" class="forum-info">
+                    <a data-bbox="104,492,0,0" href="#">
+                        <div class="forum-title-wrapper">
+                            <b id="30" data-bbox="121,494,33,16" class="forum-prefix">f/news</b>
+                            <b id="31" data-bbox="104,513,890,26" class="forum-title">news</b>
+                        </div>
+                        <p data-bbox="104,539,890,21" class="forum-description">All the latest news and current events.</p>
+                    </a>
+                </div>
+                <div data-bbox="994,493,182,72" class="forum-actions">
+                    <p data-bbox="1031,537,116,21" class="submission-count">3,322 submissions</p>
+                    <form data-bbox="1001,493,175,37">
+                        <button data-bbox="1001,493,175,37" class="subscribe-btn">
+                            <span data-bbox="1001,493,109,37" class="subscribe-text">
+                                <span id="32" data-bbox="1024,503,63,16">Subscribe</span>
+                            </span>
+                            <b id="33" data-bbox="1112,493,64,37" class="subscriber-count">0</b>
+                        </button>
+                    </form>
+                </div>
+            </article>
+            <article data-bbox="97,574,1079,104" class="forum-card">
+                <div data-bbox="104,589,890,68" class="forum-info">
+                    <a data-bbox="104,589,0,0" href="#">
+                        <div class="forum-title-wrapper">
+                            <b id="34" data-bbox="121,591,46,16" class="forum-prefix">f/movies</b>
+                            <b id="35" data-bbox="104,610,890,26" class="forum-title">movies</b>
+                        </div>
+                        <p data-bbox="104,636,890,21" class="forum-description">The go-to place for movie news and discussion.</p>
+                    </a>
+                </div>
+                <div data-bbox="994,591,182,72" class="forum-actions">
+                    <p data-bbox="1031,635,116,21" class="submission-count">3,261 submissions</p>
+                    <form data-bbox="1001,591,175,37">
+                        <button data-bbox="1001,591,175,37" class="subscribe-btn">
+                            <span data-bbox="1001,591,109,37" class="subscribe-text">
+                                <span id="36" data-bbox="1024,601,63,16">Subscribe</span>
+                            </span>
+                            <b id="37" data-bbox="1112,591,64,37" class="subscriber-count">0</b>
+                        </button>
+                    </form>
+                </div>
+            </article>
+            <article data-bbox="97,671,1079,105" class="forum-card">
+                <div data-bbox="104,686,890,69" class="forum-info">
+                    <a data-bbox="104,686,0,0" href="#">
+                        <div class="forum-title-wrapper">
+                            <b id="38" data-bbox="121,688,47,16" class="forum-title">memes</b>
+                        </div>
+                         <p class="forum-description">The best place for memes and viral videos.</p>
+                    </a>
+                </div>
+                <div data-bbox="994,688,182,72" class="forum-actions">
+                    <p class="submission-count">2,998 submissions</p>
+                    <form data-bbox="1001,688,175,37">
+                        <button data-bbox="1001,688,175,37" class="subscribe-btn">
+                            <span data-bbox="1001,688,109,37" class="subscribe-text">
+                                <span id="39" data-bbox="1024,698,63,16">Subscribe</span>
+                            </span>
+                            <b id="40" data-bbox="1112,688,64,37" class="subscriber-count">0</b>
+                        </button>
+                    </form>
+                </div>
+            </article>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const forumCards = document.querySelectorAll('.forum-card');
+
+            forumCards.forEach(card => {
+                card.addEventListener('mouseover', () => {
+                    card.classList.add('interactive-hover');
+                });
+                card.addEventListener('mouseout', () => {
+                    card.classList.remove('interactive-hover');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

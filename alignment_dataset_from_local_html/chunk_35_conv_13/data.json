@@ -1,0 +1,511 @@
+{
+    "source_url": "file:///home/franck/Documents/M2%20-%20RESEARCH/Cookies%20Enforcemement%20By%20GDPR/LlmBasedNav/Phase1/sft_html/chunk_35_conv_13.html",
+    "raw_html": "<HTML lang=\"en\"><BODY data-bbox=\"0,-480,1280,1480\"><NAV class=\"sidebar\" data-bbox=\"0,-1,88,721\"><DIV class=\"logo-container\"><IMG id=\"0\" title=\"Magento Admin Panel\" data-bbox=\"27,16,35,41\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2VjZjBmMSIgd2lkdGg9IjQ4cHgiIGhlaWdodD0iNDhweCI+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMiAyTDIgN3YxMGwxMCA1IDEwLTVWN2wtMTAtNXptOC42IDcuN0wxMiAxMy45di02LjJsOC42IDQuOHptLTkuOCA5LjVMNCAxNS4ybDgtNC4yIDggNC4yLTguMiA0LjV6bS0uOC01LjRsLTggNC4yVjkuMWw4LTQuMnY2LjN6Ii8+PC9zdmc+\"></IMG></DIV><UL class=\"main-nav\" data-bbox=\"0,74,88,646\"><A href=\"#\"><I class=\"nav-icon fas fa-tachometer-alt possible-clickable-element\" data-testid=\"A\"></I><SPAN id=\"1\" data-bbox=\"14,111,60,13\" class=\"possible-clickable-element\" data-testid=\"B\"><text>Dashboard</text></SPAN></A><LI data-bbox=\"0,136,88,62\"><A href=\"#\"><I class=\"nav-icon fas fa-chart-line possible-clickable-element\" data-testid=\"C\"></I><SPAN id=\"2\" data-bbox=\"30,173,28,13\" class=\"possible-clickable-element\" data-testid=\"D\"><text>Sales</text></SPAN></A></LI><LI data-bbox=\"0,198,88,62\"><A href=\"#\"><I class=\"nav-icon fas fa-tags possible-clickable-element\" data-testid=\"E\"></I><SPAN id=\"3\" data-bbox=\"22,235,44,13\" class=\"possible-clickable-element\" data-testid=\"F\"><text>Catalog</text></SPAN></A></LI><LI data-bbox=\"0,260,88,62\"><A href=\"#\"><I class=\"nav-icon fas fa-users possible-clickable-element\" data-testid=\"G\"></I><SPAN id=\"4\" data-bbox=\"14,297,60,13\" class=\"possible-clickable-element\" data-testid=\"H\"><text>Customers</text></SPAN></A></LI><LI data-bbox=\"0,322,88,62\"><A href=\"#\"><I class=\"nav-icon fas fa-bullhorn possible-clickable-element\" data-testid=\"I\"></I><SPAN id=\"5\" data-bbox=\"14,359,60,13\" class=\"possible-clickable-element\" data-testid=\"J\"><text>Marketing</text></SPAN></A></LI><LI data-bbox=\"0,384,88,62\"><A href=\"#\"><I class=\"nav-icon fas fa-file-alt possible-clickable-element\" data-testid=\"K\"></I><SPAN id=\"6\" data-bbox=\"19,421,50,13\" class=\"possible-clickable-element\" data-testid=\"L\"><text>Content</text></SPAN></A></LI><LI data-bbox=\"0,446,88,62\"><A href=\"#\"><I class=\"nav-icon fas fa-chart-pie possible-clickable-element\" data-testid=\"M\"></I><SPAN id=\"7\" data-bbox=\"22,483,44,13\" class=\"possible-clickable-element\" data-testid=\"N\"><text>Reports</text></SPAN></A></LI><LI data-bbox=\"0,508,88,62\"><A href=\"#\"><I class=\"nav-icon fas fa-store possible-clickable-element\" data-testid=\"O\"></I><SPAN id=\"8\" data-bbox=\"25,545,38,13\" class=\"possible-clickable-element\" data-testid=\"P\"><text>Stores</text></SPAN></A></LI><LI data-bbox=\"0,570,88,62\"><A href=\"#\"><I class=\"nav-icon fas fa-cogs possible-clickable-element\" data-testid=\"Q\"></I><SPAN id=\"9\" data-bbox=\"25,607,38,13\" class=\"possible-clickable-element\" data-testid=\"R\"><text>System</text></SPAN></A></LI><LI class=\"nav-footer\"><A href=\"#\"><I class=\"nav-icon fas fa-puzzle-piece possible-clickable-element\" data-testid=\"S\"></I><SPAN id=\"10\" data-bbox=\"32,669,24,13\" class=\"possible-clickable-element\" data-testid=\"T\"><text>Find Partners & Extensions</text></SPAN></A></LI></UL></NAV><DIV class=\"main-content-wrapper\" data-bbox=\"88,-480,1192,1480\"><MAIN class=\"main-content\" data-bbox=\"88,-337,1192,1197\"><HEADER class=\"page-header\"><text>Edit Billing Address</text><DIV class=\"action-buttons\" data-bbox=\"852,16,413,46\"><BUTTON title=\"Back\" type=\"button\" data-bbox=\"865,16,102,46\"><SPAN id=\"11\" data-bbox=\"911,27,39,22\" class=\"possible-clickable-element\" data-testid=\"U\"><text>Back</text></SPAN></BUTTON><BUTTON title=\"Reset\" type=\"button\" data-bbox=\"980,16,78,46\"><SPAN id=\"12\" data-bbox=\"997,27,44,22\" class=\"possible-clickable-element\" data-testid=\"V\"><text>Reset</text></SPAN></BUTTON><BUTTON title=\"Save Order Address\" type=\"button\" class=\"primary\" data-bbox=\"1071,16,194,46\"><SPAN id=\"13\" data-bbox=\"1088,27,160,22\" class=\"possible-clickable-element\" data-testid=\"W\"><text>Save Order Address</text></SPAN></BUTTON></DIV></HEADER><DIV class=\"content-body\" data-bbox=\"118,-230,1132,1030\"><DIV class=\"form-panel\" data-bbox=\"118,-155,1132,955\"><DIV class=\"form-panel-header\"><text>Address Information</text></DIV><DIV class=\"form-panel-body\"><FORM data-bbox=\"118,-100,1132,900\" class=\"form-grid\"><LABEL for=\"middle-name\" class=\"possible-clickable-element\" data-testid=\"X\"><SPAN data-bbox=\"244,35,135,17\"><text>Middle Name/Initial</text></SPAN></LABEL><DIV class=\"input-wrapper\"><INPUT type=\"text\" id=\"middle-name\" data-bbox=\"409,26,551,33\" class=\"possible-clickable-element\" data-testid=\"Y\" style=\"document.addEventListener('DOMContentLoaded', () => { // Set default country based on data attribute const countrySelect = document.getElementById('23'); if (countrySelect && countrySelect.dataset.value) { countrySelect.value = countrySelect.dataset.value; } // Add subtle hover effect to buttons const buttons = document.querySelectorAll('button'); buttons.forEach(button => { button.addEventListener('mouseenter', () => button.classList.add('js-hover')); button.addEventListener('mouseleave', () => button.classList.remove('js-hover')); }); });\"></INPUT></DIV><LABEL class=\"required possible-clickable-element\" for=\"15\" id=\"14\" data-bbox=\"118,89,261,32\" data-testid=\"Z\"><SPAN data-bbox=\"306,98,73,17\"><text>Last Name</text></SPAN></LABEL><DIV class=\"input-wrapper\"><INPUT id=\"15\" value=\"Lee\" type=\"text\" data-bbox=\"409,89,551,33\" class=\"possible-clickable-element\" data-testid=\"AA\" style=\"document.addEventListener('DOMContentLoaded', () => { // Set default country based on data attribute const countrySelect = document.getElementById('23'); if (countrySelect && countrySelect.dataset.value) { countrySelect.value = countrySelect.dataset.value; } // Add subtle hover effect to buttons const buttons = document.querySelectorAll('button'); buttons.forEach(button => { button.addEventListener('mouseenter', () => button.classList.add('js-hover')); button.addEventListener('mouseleave', () => button.classList.remove('js-hover')); }); });\"></INPUT></DIV><LABEL for=\"17\" id=\"16\" data-bbox=\"118,152,261,32\" class=\"possible-clickable-element\" data-testid=\"AB\"><SPAN data-bbox=\"296,161,83,17\"><text>Name Suffix</text></SPAN></LABEL><DIV class=\"input-wrapper\"><INPUT id=\"17\" type=\"text\" data-bbox=\"409,152,551,33\" class=\"possible-clickable-element\" data-testid=\"AC\" style=\"document.addEventListener('DOMContentLoaded', () => { // Set default country based on data attribute const countrySelect = document.getElementById('23'); if (countrySelect && countrySelect.dataset.value) { countrySelect.value = countrySelect.dataset.value; } // Add subtle hover effect to buttons const buttons = document.querySelectorAll('button'); buttons.forEach(button => { button.addEventListener('mouseenter', () => button.classList.add('js-hover')); button.addEventListener('mouseleave', () => button.classList.remove('js-hover')); }); });\"></INPUT></DIV><LABEL for=\"19\" id=\"18\" data-bbox=\"118,215,261,32\" class=\"possible-clickable-element\" data-testid=\"AD\"><SPAN data-bbox=\"314,224,65,17\"><text>Company</text></SPAN></LABEL><DIV class=\"input-wrapper\"><INPUT id=\"19\" type=\"text\" data-bbox=\"409,215,551,33\" class=\"possible-clickable-element\" data-testid=\"AE\" style=\"document.addEventListener('DOMContentLoaded', () => { // Set default country based on data attribute const countrySelect = document.getElementById('23'); if (countrySelect && countrySelect.dataset.value) { countrySelect.value = countrySelect.dataset.value; } // Add subtle hover effect to buttons const buttons = document.querySelectorAll('button'); buttons.forEach(button => { button.addEventListener('mouseenter', () => button.classList.add('js-hover')); button.addEventListener('mouseleave', () => button.classList.remove('js-hover')); }); });\"></INPUT></DIV><LABEL class=\"required possible-clickable-element\" for=\"20\" data-testid=\"AF\"><SPAN data-bbox=\"278,287,101,17\"><text>Street Address</text></SPAN></LABEL><DIV class=\"input-wrapper street-address-inputs\" data-bbox=\"409,278,551,81\"><INPUT id=\"20\" value=\"557 Cypress Road\" type=\"text\" data-value=\"411 Peach Ridge\" data-bbox=\"409,278,551,33\" class=\"possible-clickable-element\" data-testid=\"AG\" style=\"document.addEventListener('DOMContentLoaded', () => { // Set default country based on data attribute const countrySelect = document.getElementById('23'); if (countrySelect && countrySelect.dataset.value) { countrySelect.value = countrySelect.dataset.value; } // Add subtle hover effect to buttons const buttons = document.querySelectorAll('button'); buttons.forEach(button => { button.addEventListener('mouseenter', () => button.classList.add('js-hover')); button.addEventListener('mouseleave', () => button.classList.remove('js-hover')); }); });\"></INPUT><INPUT id=\"21\" type=\"text\" data-bbox=\"409,326,551,33\" class=\"possible-clickable-element\" data-testid=\"AH\" style=\"document.addEventListener('DOMContentLoaded', () => { // Set default country based on data attribute const countrySelect = document.getElementById('23'); if (countrySelect && countrySelect.dataset.value) { countrySelect.value = countrySelect.dataset.value; } // Add subtle hover effect to buttons const buttons = document.querySelectorAll('button'); buttons.forEach(button => { button.addEventListener('mouseenter', () => button.classList.add('js-hover')); button.addEventListener('mouseleave', () => button.classList.remove('js-hover')); }); });\"></INPUT></DIV><LABEL class=\"required possible-clickable-element\" for=\"23\" id=\"22\" data-bbox=\"118,389,261,32\" data-testid=\"AI\"><SPAN data-bbox=\"323,398,56,17\"><text>Country</text></SPAN></LABEL><DIV class=\"input-wrapper\"><SELECT id=\"23\" data-value=\"US\" data-text=\"United States\" data-bbox=\"409,389,329,33\" class=\"possible-clickable-element\" data-testid=\"AJ\"></SELECT></DIV></FORM></DIV></DIV></DIV></MAIN></DIV></BODY></HTML>",
+    "parsed_html": "\n<\n  body|\n  <\n    nav|\n    <img| Magento Admin Panel >\n    <\n      ul|\n      <i[A]| >\n      <span[B]| Dashboard >\n      <i[C]| >\n      <span[D]| Sales >\n      <i[E]| >\n      <span[F]| Catalog >\n      <i[G]| >\n      <span[H]| Customers >\n      <i[I]| >\n      <span[J]| Marketing >\n      <i[K]| >\n      <span[L]| Content >\n      <i[M]| >\n      <span[N]| Reports >\n      <i[O]| >\n      <span[P]| Stores >\n      <i[Q]| >\n      <span[R]| System >\n      <i[S]| >\n      <span[T]| Find Partners & Extensions >\n    >\n  >\n  <\n    main|\n    <\n      header|\n      <text| Edit Billing Address >\n      <\n        div|\n        <\n          button| Back\n          <span[U]| Back >\n        >\n        <\n          button| Reset\n          <span[V]| Reset >\n        >\n        <\n          button| Save Order Address\n          <span[W]| Save Order Address >\n        >\n      >\n    >\n    <\n      div|\n      <div| Address Information >\n      <\n        form|\n        <\n          label[X]|\n          <span| Middle Name/Initial >\n        >\n        <input[Y]| >\n        <\n          label[Z]|\n          <span| Last Name >\n        >\n        <input[AA]| Lee >\n        <\n          label[AB]|\n          <span| Name Suffix >\n        >\n        <input[AC]| >\n        <\n          label[AD]|\n          <span| Company >\n        >\n        <input[AE]| >\n        <\n          label[AF]|\n          <span| Street Address >\n        >\n        <input[AG]| 557 Cypress Road >\n        <input[AH]| >\n        <\n          label[AI]|\n          <span| Country >\n        >\n        <select[AJ]| >\n      >\n    >\n  >\n>",
+    "items": [
+        {
+            "keep": true,
+            "id": "A",
+            "rects": {
+                "left": 32,
+                "top": 82.25,
+                "right": 56,
+                "bottom": 102.25,
+                "width": 24,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "B",
+            "rects": {
+                "left": 15,
+                "top": 107.25,
+                "right": 73,
+                "bottom": 123.75,
+                "width": 58,
+                "height": 16.5
+            },
+            "tag": "span",
+            "text": "Dashboard"
+        },
+        {
+            "keep": true,
+            "id": "C",
+            "rects": {
+                "left": 32,
+                "top": 144.25,
+                "right": 56,
+                "bottom": 164.25,
+                "width": 24,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "D",
+            "rects": {
+                "left": 30,
+                "top": 169.25,
+                "right": 58,
+                "bottom": 185.75,
+                "width": 28,
+                "height": 16.5
+            },
+            "tag": "span",
+            "text": "Sales"
+        },
+        {
+            "keep": true,
+            "id": "E",
+            "rects": {
+                "left": 32,
+                "top": 206.25,
+                "right": 56,
+                "bottom": 226.25,
+                "width": 24,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "F",
+            "rects": {
+                "left": 23.5,
+                "top": 231.25,
+                "right": 64.5,
+                "bottom": 247.75,
+                "width": 41,
+                "height": 16.5
+            },
+            "tag": "span",
+            "text": "Catalog"
+        },
+        {
+            "keep": true,
+            "id": "G",
+            "rects": {
+                "left": 32,
+                "top": 268.25,
+                "right": 56,
+                "bottom": 288.25,
+                "width": 24,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "H",
+            "rects": {
+                "left": 15,
+                "top": 293.25,
+                "right": 73,
+                "bottom": 309.75,
+                "width": 58,
+                "height": 16.5
+            },
+            "tag": "span",
+            "text": "Customers"
+        },
+        {
+            "keep": true,
+            "id": "I",
+            "rects": {
+                "left": 32,
+                "top": 330.25,
+                "right": 56,
+                "bottom": 350.25,
+                "width": 24,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "J",
+            "rects": {
+                "left": 17.5,
+                "top": 355.25,
+                "right": 70.5,
+                "bottom": 371.75,
+                "width": 53,
+                "height": 16.5
+            },
+            "tag": "span",
+            "text": "Marketing"
+        },
+        {
+            "keep": true,
+            "id": "K",
+            "rects": {
+                "left": 32,
+                "top": 392.25,
+                "right": 56,
+                "bottom": 412.25,
+                "width": 24,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "L",
+            "rects": {
+                "left": 22.5,
+                "top": 417.25,
+                "right": 65.5,
+                "bottom": 433.75,
+                "width": 43,
+                "height": 16.5
+            },
+            "tag": "span",
+            "text": "Content"
+        },
+        {
+            "keep": true,
+            "id": "M",
+            "rects": {
+                "left": 32,
+                "top": 454.25,
+                "right": 56,
+                "bottom": 474.25,
+                "width": 24,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "N",
+            "rects": {
+                "left": 23.5,
+                "top": 479.25,
+                "right": 64.5,
+                "bottom": 495.75,
+                "width": 41,
+                "height": 16.5
+            },
+            "tag": "span",
+            "text": "Reports"
+        },
+        {
+            "keep": true,
+            "id": "O",
+            "rects": {
+                "left": 32,
+                "top": 516.25,
+                "right": 56,
+                "bottom": 536.25,
+                "width": 24,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "P",
+            "rects": {
+                "left": 27,
+                "top": 541.25,
+                "right": 61,
+                "bottom": 557.75,
+                "width": 34,
+                "height": 16.5
+            },
+            "tag": "span",
+            "text": "Stores"
+        },
+        {
+            "keep": true,
+            "id": "Q",
+            "rects": {
+                "left": 32,
+                "top": 578.25,
+                "right": 56,
+                "bottom": 598.25,
+                "width": 24,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "R",
+            "rects": {
+                "left": 24.5,
+                "top": 603.25,
+                "right": 63.5,
+                "bottom": 619.75,
+                "width": 39,
+                "height": 16.5
+            },
+            "tag": "span",
+            "text": "System"
+        },
+        {
+            "keep": true,
+            "id": "S",
+            "rects": {
+                "left": 32,
+                "top": 632,
+                "right": 56,
+                "bottom": 652,
+                "width": 24,
+                "height": 20
+            },
+            "tag": "i",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "T",
+            "rects": {
+                "left": 5,
+                "top": 657,
+                "right": 83,
+                "bottom": 690,
+                "width": 78,
+                "height": 33
+            },
+            "tag": "span",
+            "text": "Find Partners & Extensions"
+        },
+        {
+            "keep": true,
+            "id": "U",
+            "rects": {
+                "left": 419,
+                "top": 45,
+                "right": 452.46875,
+                "bottom": 61,
+                "width": 33.46875,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Back"
+        },
+        {
+            "keep": true,
+            "id": "V",
+            "rects": {
+                "left": 508.46875,
+                "top": 45,
+                "right": 546.609375,
+                "bottom": 61,
+                "width": 38.140625,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Reset"
+        },
+        {
+            "keep": true,
+            "id": "W",
+            "rects": {
+                "left": 602.609375,
+                "top": 45,
+                "right": 736.71875,
+                "bottom": 61,
+                "width": 134.109375,
+                "height": 16
+            },
+            "tag": "span",
+            "text": "Save Order Address"
+        },
+        {
+            "keep": true,
+            "id": "X",
+            "rects": {
+                "left": 145,
+                "top": 199,
+                "right": 345,
+                "bottom": 238,
+                "width": 200,
+                "height": 39
+            },
+            "tag": "label",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Y",
+            "rects": {
+                "left": 375,
+                "top": 199,
+                "right": 732.71875,
+                "bottom": 238,
+                "width": 357.71875,
+                "height": 39
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "Z",
+            "rects": {
+                "left": 145,
+                "top": 258,
+                "right": 345,
+                "bottom": 297,
+                "width": 200,
+                "height": 39
+            },
+            "tag": "label",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AA",
+            "rects": {
+                "left": 375,
+                "top": 258,
+                "right": 732.71875,
+                "bottom": 297,
+                "width": 357.71875,
+                "height": 39
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AB",
+            "rects": {
+                "left": 145,
+                "top": 317,
+                "right": 345,
+                "bottom": 356,
+                "width": 200,
+                "height": 39
+            },
+            "tag": "label",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AC",
+            "rects": {
+                "left": 375,
+                "top": 317,
+                "right": 732.71875,
+                "bottom": 356,
+                "width": 357.71875,
+                "height": 39
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AD",
+            "rects": {
+                "left": 145,
+                "top": 376,
+                "right": 345,
+                "bottom": 415,
+                "width": 200,
+                "height": 39
+            },
+            "tag": "label",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AE",
+            "rects": {
+                "left": 375,
+                "top": 376,
+                "right": 732.71875,
+                "bottom": 415,
+                "width": 357.71875,
+                "height": 39
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AF",
+            "rects": {
+                "left": 145,
+                "top": 435,
+                "right": 345,
+                "bottom": 521,
+                "width": 200,
+                "height": 86
+            },
+            "tag": "label",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AG",
+            "rects": {
+                "left": 375,
+                "top": 435,
+                "right": 732.71875,
+                "bottom": 474,
+                "width": 357.71875,
+                "height": 39
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AH",
+            "rects": {
+                "left": 375,
+                "top": 482,
+                "right": 732.71875,
+                "bottom": 521,
+                "width": 357.71875,
+                "height": 39
+            },
+            "tag": "input",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AI",
+            "rects": {
+                "left": 145,
+                "top": 541,
+                "right": 345,
+                "bottom": 582,
+                "width": 200,
+                "height": 41
+            },
+            "tag": "label",
+            "text": ""
+        },
+        {
+            "keep": true,
+            "id": "AJ",
+            "rects": {
+                "left": 375,
+                "top": 541,
+                "right": 732.71875,
+                "bottom": 582,
+                "width": 357.71875,
+                "height": 41
+            },
+            "tag": "select",
+            "text": "\n                                                                                                                                                                                                                                   \n                                        \n                                    "
+        }
+    ]
+}
